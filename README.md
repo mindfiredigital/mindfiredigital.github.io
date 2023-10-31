@@ -28,6 +28,7 @@ To set up the project locally for development and testing:
 ### Installation
 
 - Clone the repository:
+
   - **Using Https**
 
     ```
@@ -38,6 +39,7 @@ To set up the project locally for development and testing:
     ```
     git clone git@github.com:mindfiredigital/mindfiredigital.github.io.git
     ```
+
 - Navigate to the project directory:
   ```
   cd your-project-directory
@@ -73,4 +75,4 @@ For detailed instructions on how to contribute, please refer to the [Contributio
   ```
 - Commit the changes. [Commit message's convetions](https://gitlab.mindfire.co.in/mindfire-foss/open-source-guidelines/-/blob/main/contribution-guidelines/commit-messages.md)
 - Push the changes to the remote repository.
-- Create a pull request to merge the changes from the `deployment-branch` into the main or master branch. [Pull request conventions](https://gitlab.mindfire.co.in/mindfire-foss/open-source-guidelines/-/blob/main/contribution-guidelines/pull-requests.md)
+- Create a pull request to merge the changes from the `deployment-branch` into the main branch. [Pull request conventions](https://gitlab.mindfire.co.in/mindfire-foss/open-source-guidelines/-/blob/main/contribution-guidelines/pull-requests.md)
