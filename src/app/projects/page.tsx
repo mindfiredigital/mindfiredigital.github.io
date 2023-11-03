@@ -3,7 +3,8 @@ import Link from "next/link";
 import projectsImage from "../../../public/images/projects.webp";
 import ProjectGrid from "./components/ProjectGrid";
 
-export default function ProjectsPage() {
+export default function ProjectsPage({ searchParams }: any) {
+  console.log({ searchParams });
   return (
     <>
       <section className="bg-slate-50">
@@ -34,7 +35,11 @@ export default function ProjectsPage() {
           />
         </div>
       </section>
-      <ProjectGrid />
+      <ProjectGrid
+        filterParams={{
+          languages: searchParams?.languages ?? [],
+        }}
+      />
     </>
   );
 }

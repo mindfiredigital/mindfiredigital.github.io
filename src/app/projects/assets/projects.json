@@ -3,12 +3,14 @@
     "title": "react canvas editor",
     "shortDescription": "Multipage document editing in React with Canvas.",
     "githubUrl": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentationUrl": "https://mindfiredigital.github.io/react-canvas-editor"
+    "documentationUrl": "https://mindfiredigital.github.io/react-canvas-editor",
+    "languages": ["javascript"]
   },
   {
     "title": "canvas editor",
     "shortDescription": "A Canvas Editor project builds upon the canvas-editor-plugin.",
     "githubUrl": "https://github.com/mindfiredigital/canvas-editor",
-    "documentationUrl": "https://mindfiredigital.github.io/canvas-editor"
+    "documentationUrl": "https://mindfiredigital.github.io/canvas-editor",
+    "languages": ["java"]
   }
 ]

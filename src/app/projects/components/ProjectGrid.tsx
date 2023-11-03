@@ -1,9 +1,27 @@
 import React from "react";
 import projectData from "../assets/projects.json";
 import ProjectCard from "./ProjectCard";
-export default function ProjectGrid() {
+import ProjectFilteration from "./ProjectFilteration";
+
+interface ProjectFilteration {
+  languages: string[];
+}
+interface ProjectGridProps {
+  filterParams: ProjectFilteration;
+}
+
+export default function ProjectGrid({ filterParams }: ProjectGridProps) {
+  let filteredProjects = projectData;
+  if (filterParams.languages.length > 0) {
+    filteredProjects = projectData.filter(({ languages }) => {
+      return filterParams.languages.some((language) =>
+        languages.includes(language)
+      );
+    });
+  }
   return (
     <section className="py-28 mb-28" id="all-projects">
+      <ProjectFilteration />
       <h2 className="tracking-wider text-3xl font-medium capitalize text-mindfire-text-black  text-center">
         all Projects
       </h2>
