@@ -1,0 +1,33 @@
+name: Continuous Integration Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: "Build Mindfire FOSS application"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node_version: latest
+          cache: npm
+
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "Build application"
+        run: npm run build
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github-actions
+          message: "build: build application"
