@@ -30,3 +30,4 @@ jobs:
         with:
           default_author: github_actions
           message: "build: build application"
+          fetch: false
