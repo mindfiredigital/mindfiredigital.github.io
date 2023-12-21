@@ -3,19 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 interface Props {
   title: string;
-  projectData: {
-    title: string;
-    shortDescription: string;
-    githubUrl?: string | undefined;
-    documentationUrl?: string | undefined;
-    id?: number | undefined;
-    Summary?: string | undefined;
-    project_type?: string | undefined;
-    contributors?: string[] | undefined;
-    project_goal?: string | undefined;
-    target_users?: string | undefined;
-    risk?: string | undefined;
-  }[];
+  projectData: Project[];
 }
 
 export default function ProjectGrid({ title, projectData }: Props) {
@@ -26,14 +14,20 @@ export default function ProjectGrid({ title, projectData }: Props) {
       </h2>
       <div className='mt-12 px-4 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
         {projectData.map(
-          ({ title, shortDescription, githubUrl, documentationUrl }, index) => {
+          ({
+            title,
+            short_description,
+            github_repository_link,
+            documentation_link,
+            id,
+          }) => {
             return (
               <ProjectCard
-                key={index}
+                key={id}
                 title={title}
-                shortDescription={shortDescription}
-                githubUrl={githubUrl}
-                documentationUrl={documentationUrl}
+                shortDescription={short_description}
+                githubUrl={github_repository_link}
+                documentationUrl={documentation_link}
               />
             );
           }

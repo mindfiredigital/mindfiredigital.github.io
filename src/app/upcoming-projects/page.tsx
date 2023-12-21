@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import projectsImage from "../../../public/images/projects.webp";
 import ProjectGrid from "../projects/components/ProjectGrid";
-import upcomingProjectData from "../projects/assets/upcomingProjects.json";
 import meta from "../../metadata/metadata.json";
 
 export const metadata: Metadata = {
@@ -41,7 +40,40 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProjectsPage() {
+async function getUpcomingProjects() {
+  const query = `query getCurrentProjects {
+    foss_projects(filter: {project_type: { _eq: "upcoming" }}) {
+      id,
+      title,
+      short_description,
+      github_repository_link,
+      documentation_link,
+      project_type
+    }
+  }`;
+
+  try {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+    const response = await fetch("https://directus.ourgoalplan.co.in/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: query,
+      }),
+    });
+
+    const { data } = await response.json();
+
+    return data.foss_projects;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default async function ProjectsPage() {
+  const upcomingProjects: Project[] = await getUpcomingProjects();
+
   return (
     <>
       <section className='bg-slate-50'>
@@ -73,10 +105,7 @@ export default function ProjectsPage() {
         </div>
       </section>
       <div id='upcoming-projects' className='mb-20'>
-        <ProjectGrid
-          title='Upcoming Projects'
-          projectData={upcomingProjectData}
-        />
+        <ProjectGrid title='Upcoming Projects' projectData={upcomingProjects} />
       </div>
     </>
   );
