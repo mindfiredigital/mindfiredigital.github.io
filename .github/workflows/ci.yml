@@ -37,7 +37,7 @@ jobs:
 
       - name: Fetch branches and create gh-pages branch
         run: |
-          git fetch origin
+          git fetch origin --all
       
       - name: Copy to temp-directory
         run: |
