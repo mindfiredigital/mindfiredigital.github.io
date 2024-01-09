@@ -43,6 +43,8 @@ jobs:
         run: |
           mkdir /tmp/temp-directory
           cp -r .next/* /tmp/temp-directory/
+          git branch
+          git status
           git branch -D gh-pages
           git checkout --orphan gh-pages
           ls
