@@ -44,13 +44,14 @@ jobs:
           mkdir /tmp/temp-directory
           cp -r .next/* /tmp/temp-directory/
           git checkout gh-pages
-          cp -r /tmp/temp-directory/ .
-          git add temp-directory/
-          git commit -m "Copy main-folder to gh-pages branch"
-          echo 'Done'
+          ls
+          # cp -r /tmp/temp-directory/ .
+          # git add temp-directory/
+          # git commit -m "Copy main-folder to gh-pages branch"
+          # echo 'Done'
       
-      - name: Push to gh-pages
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git push origin gh-pages
+      # - name: Push to gh-pages
+      #   env:
+      #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     git push origin gh-pages
