@@ -44,6 +44,7 @@ jobs:
           mkdir /tmp/temp-directory
           cp -r .next/* /tmp/temp-directory/
           git checkout gh-pages
+          git rm -r --ignore-unmatch .
           ls
           # cp -r /tmp/temp-directory/ .
           # git add temp-directory/
