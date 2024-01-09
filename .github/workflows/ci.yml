@@ -45,11 +45,9 @@ jobs:
           cp -r .next/* /tmp/temp-directory/
           git checkout gh-pages
           git rm -rf .
-          ls
           cp -r /tmp/temp-directory/ .
           git add temp-directory/
           git commit -m "Copy main-folder to gh-pages branch"
-          echo 'Done'
       
       - name: Push to gh-pages
         env:
