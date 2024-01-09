@@ -35,7 +35,7 @@ jobs:
           message: 'build: build application'
           fetch: false
 
-      - name: Fetch branches and create gh-pages branch
+      - name: Fetch branches and Create gh-pages branch
         run: |
           git fetch origin
       
