@@ -37,12 +37,13 @@ jobs:
 
       - name: Fetch branches and create gh-pages branch
         run: |
-          git fetch origin --all
+          git fetch origin
       
       - name: Copy to temp-directory
         run: |
           mkdir /tmp/temp-directory
           cp -r .next/* /tmp/temp-directory/
+          git fetch origin gh-pages
           git branch
           git status
           git branch -D gh-pages
