@@ -32,13 +32,7 @@ const Contributors = () => {
                       src={contributor.avatar_url}
                       alt={`Contributor ${contributor.login}`}
                     />
-                    <h5 className='text-xl font-medium text-gray-900 text-center'>
-                      {contributor.login}
-                    </h5>
-                    <p className='text-sm text-gray-500 text-center'>
-                      Contributions: {contributor.contributions}
-                    </p>
-                    <div className='flex justify-center mt-4'>
+                    <div className='flex justify-center items-center gap-2 mt-4 '>
                       <Link href={contributor.html_url!} target='_blank'>
                         <Image
                           src={github}
@@ -47,7 +41,13 @@ const Contributors = () => {
                           alt='github_img'
                         />
                       </Link>
+                      <h5 className='text-xl font-medium text-gray-900 text-center'>
+                        {contributor.login}
+                      </h5>
                     </div>
+                    <p className='text-sm text-gray-500 text-center'>
+                      Contributions: {contributor.contributions}
+                    </p>
                   </div>
                 </div>
               ))}
