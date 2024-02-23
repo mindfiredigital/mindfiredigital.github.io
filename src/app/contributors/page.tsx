@@ -46,9 +46,11 @@ const Contributors = () => {
                           quality={75}
                         />
                       </Link>
-                      <h5 className='text-xl font-medium text-gray-900 text-center'>
-                        {contributor.login}
-                      </h5>
+                      <Link href={contributor.html_url!} target='_blank'>
+                        <h5 className='text-xl font-medium text-gray-900 text-center'>
+                          {contributor.login}
+                        </h5>
+                      </Link>
                     </div>
                     <footer>
                       <div className='grid grid-cols-3 divide-x'>
