@@ -42,6 +42,8 @@ const Contributors = () => {
                           height={20}
                           width={20}
                           alt='github_img'
+                          loading='lazy'
+                          quality={75}
                         />
                       </Link>
                       <h5 className='text-xl font-medium text-gray-900 text-center'>
@@ -56,7 +58,10 @@ const Contributors = () => {
                               src={contributorImg}
                               height={20}
                               width={20}
-                              alt='github_img'
+                              alt='contributor'
+                              loading='lazy'
+                              quality={75}
+                              title='Contributor'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
@@ -69,7 +74,10 @@ const Contributors = () => {
                               src={prImg}
                               height={20}
                               width={20}
-                              alt='github_img'
+                              alt='pull request'
+                              loading='lazy'
+                              quality={75}
+                              title='Pull request'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
@@ -82,7 +90,10 @@ const Contributors = () => {
                               src={issueImg}
                               height={20}
                               width={20}
-                              alt='github_img'
+                              alt='issue'
+                              loading='lazy'
+                              quality={75}
+                              title='Git issue'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
