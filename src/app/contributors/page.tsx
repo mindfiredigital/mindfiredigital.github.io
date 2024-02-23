@@ -46,9 +46,11 @@ const Contributors = () => {
                           quality={75}
                         />
                       </Link>
-                      <h5 className='text-xl font-medium text-gray-900 text-center'>
-                        {contributor.login}
-                      </h5>
+                      <Link href={contributor.html_url!} target='_blank'>
+                        <h5 className='text-xl font-medium text-gray-900 text-center'>
+                          {contributor.login}
+                        </h5>
+                      </Link>
                     </div>
                     <footer>
                       <div className='grid grid-cols-3 divide-x'>
@@ -61,7 +63,7 @@ const Contributors = () => {
                               alt='contributor'
                               loading='lazy'
                               quality={75}
-                              title='Contributor'
+                              title='Contributions'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
@@ -77,11 +79,11 @@ const Contributors = () => {
                               alt='pull request'
                               loading='lazy'
                               quality={75}
-                              title='Pull request'
+                              title='Pull Requests'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
-                            {contributor.contributions / 2}
+                            {Math.floor(contributor.contributions / 2)}
                           </p>
                         </div>
                         <div className='flex justify-center items-center gap-1 mt-4 '>
@@ -93,11 +95,11 @@ const Contributors = () => {
                               alt='issue'
                               loading='lazy'
                               quality={75}
-                              title='Git issue'
+                              title='Issues'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
-                            {contributor.contributions / 4}
+                            {Math.floor(contributor.contributions / 4)}
                           </p>
                         </div>
                       </div>
