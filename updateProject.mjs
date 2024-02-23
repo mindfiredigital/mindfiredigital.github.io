@@ -6,206 +6,190 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function getCurrentProjects() {
-  const query = `query getCurrentProjects {
-      foss_projects(filter: {project_type: { _eq: "current" }}) {
-        id,
-        title,
-        short_description,
-        github_repository_link,
-        documentation_link,
-        project_type,
-        date_created,
-        date_updated,
-        status,
-      }
-    }`;
-
-  try {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
-    const response = await fetch("https://directus.ourgoalplan.co.in/graphql", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: query,
-      }),
-    });
-
-    if (response.ok) {
-      const { data } = await response.json();
-      data.foss_projects.forEach((entry) => {
-        entry.id = parseInt(entry.id);
-        entry.shortDescription = entry.short_description;
-        entry.githubUrl = entry.github_repository_link;
-        entry.documentationUrl = entry.documentation_link;
-
-        delete entry.short_description;
-        delete entry.github_repository_link;
-        delete entry.documentation_link;
-      });
-
-      const projectsJsonPath = path.join(
-        __dirname,
-        "src/app/projects/assets/projects.json"
-      );
-
-      fs.writeFileSync(
-        projectsJsonPath,
-        JSON.stringify(data.foss_projects, null, 2)
-      );
-
-      console.log("Projects updated successfully.");
-    } else {
-      console.log("API is not available. Using existing JSON.");
-    }
-  } catch (error) {
-    console.log(error);
+// Function to fetch data from an API endpoint
+async function fetchData(url, options) {
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    throw new Error(`Request failed with status: ${response.status}`);
   }
+  return await response.json();
 }
 
-async function getUpcomingProjects() {
-  const query = `query getUpcomingProjects {
-        foss_projects(filter: {project_type: { _eq: "upcoming" }}) {
-          id,
-          title,
-          short_description,
-          github_repository_link,
-          documentation_link,
-          project_type,
-          date_created,
-          date_updated,
-          status,
-        }
-      }`;
-
-  try {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
-    const response = await fetch("https://directus.ourgoalplan.co.in/graphql", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: query,
-      }),
-    });
-
-    if (response.ok) {
-      const { data } = await response.json();
-      data.foss_projects.forEach((entry) => {
-        entry.id = parseInt(entry.id);
-        entry.shortDescription = entry.short_description;
-        entry.githubUrl = entry.github_repository_link;
-        entry.documentationUrl = entry.documentation_link;
-
-        delete entry.short_description;
-        delete entry.github_repository_link;
-        delete entry.documentation_link;
-      });
-
-      const projectsJsonPath = path.join(
-        __dirname,
-        "src/app/projects/assets/upcomingProjects.json"
-      );
-
-      fs.writeFileSync(
-        projectsJsonPath,
-        JSON.stringify(data.foss_projects, null, 2)
-      );
-
-      console.log("Upcoming projects updated successfully.");
-    } else {
-      console.log("API is not available. Using existing JSON.");
-    }
-  } catch (error) {
-    console.log(error);
-  }
+// Function to fetch collaborators from GitHub
+async function fetchCollaborators(url, githubToken) {
+  const options = {
+    headers: {
+      Authorization: `token ${githubToken}`,
+      Accept: "application/vnd.github.v3+json",
+    },
+  };
+  return await fetchData(url, options);
 }
 
-//get list of contributors from github repo
-async function getContributorsList() {
-  const githubApiUrl = "https://api.github.com/users/mindfiredigital/repos";
+// Function to get collaborators of a repository
+async function getCollaborators(repoData, githubToken) {
+  if (repoData.fork && repoData.parent?.contributors_url) {
+    // If the repository is a fork and has a parent, fetch collaborators from both
+    const [c1, c2] = await Promise.all([
+      fetchCollaborators(repoData.contributors_url, githubToken),
+      fetchCollaborators(repoData.parent.contributors_url, githubToken),
+    ]);
+    // Filter out collaborators from the repository who are also in the parent
+    return c1.filter(
+      (collab1) => !c2.some((collab2) => collab1.login === collab2.login)
+    );
+  }
+  // Otherwise, fetch collaborators directly from the repository
+  return fetchCollaborators(repoData.contributors_url, githubToken);
+}
+
+// Main function to update projects data
+async function updateProjects() {
   const githubToken = process.env.GITHUB_TOKEN;
-  console.log("my github token", githubToken);
 
   try {
-    const github_response = await fetch(githubApiUrl, {
-      method: "GET",
-      headers: {
-        Authorization: `token ${githubToken}`,
-        Accept: "application/vnd.github.v3+json",
-      },
-    });
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+    // Fetch data for current projects and upcoming projects
+    const [currentProjectsData, upcomingProjectsData, repositories] =
+      await Promise.all([
+        // Fetch current projects data
+        fetchData("https://directus.ourgoalplan.co.in/graphql", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: `query getCurrentProjects {
+            foss_projects(filter: {project_type: { _eq: "current" }}) {
+              id,
+              title,
+              short_description,
+              github_repository_link,
+              documentation_link,
+              project_type,
+              date_created,
+              date_updated,
+              status,
+            }
+          }`,
+          }),
+        }),
+        // Fetch upcoming projects data
+        fetchData("https://directus.ourgoalplan.co.in/graphql", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: `query getUpcomingProjects {
+            foss_projects(filter: {project_type: { _eq: "upcoming" }}) {
+              id,
+              title,
+              short_description,
+              github_repository_link,
+              documentation_link,
+              project_type,
+              date_created,
+              date_updated,
+              status,
+            }
+          }`,
+          }),
+        }),
+        // Fetch repositories data from GitHub
+        fetchData("https://api.github.com/users/mindfiredigital/repos", {
+          headers: {
+            Authorization: `token ${githubToken}`,
+            Accept: "application/vnd.github.v3+json",
+          },
+        }),
+      ]);
 
-    if (!github_response.ok) {
-      throw new Error(
-        `Failed to fetch repositories. Status: ${github_response.status}`
-      );
-    }
-    const repositories = await github_response.json();
+    // Process and write data for current projects
+    const currentProjects = currentProjectsData.data.foss_projects.map(
+      (entry) => ({
+        ...entry,
+        id: parseInt(entry.id),
+        shortDescription: entry.short_description,
+        githubUrl: entry.github_repository_link,
+        documentationUrl: entry.documentation_link,
+      })
+    );
+    fs.writeFileSync(
+      path.join(__dirname, "src/app/projects/assets/projects.json"),
+      JSON.stringify(currentProjects, null, 2)
+    );
+    console.log("Current projects updated successfully.");
+
+    // Process and write data for upcoming projects
+    const upcomingProjects = upcomingProjectsData.data.foss_projects.map(
+      (entry) => ({
+        ...entry,
+        id: parseInt(entry.id),
+        shortDescription: entry.short_description,
+        githubUrl: entry.github_repository_link,
+        documentationUrl: entry.documentation_link,
+      })
+    );
+    fs.writeFileSync(
+      path.join(__dirname, "src/app/projects/assets/upcomingProjects.json"),
+      JSON.stringify(upcomingProjects, null, 2)
+    );
+    console.log("Upcoming projects updated successfully.");
+
+    // Fetch and process contributors data for repositories
     const repoNames = repositories.map((repo) => repo.name);
-
     const contributorsObject = {};
     for (const repoName of repoNames) {
-      const repoContributorsUrl = `https://api.github.com/repos/mindfiredigital/${repoName}/contributors`;
-
-      const contributorsResponse = await fetch(repoContributorsUrl, {
-        method: "GET",
-        headers: {
-          Authorization: `token ${githubToken}`,
-          Accept: "application/vnd.github.v3+json",
-        },
-      });
-
-      if (!contributorsResponse.ok) {
-        console.error(
-          `Failed to fetch contributors for ${repoName}. Status: ${contributorsResponse.status}`
-        );
-        continue;
-      }
-
-      const contributors = await contributorsResponse.json();
-      contributorsObject[repoName] = contributors;
+      const repoData = await fetchData(
+        `https://api.github.com/repos/mindfiredigital/${repoName}`,
+        {
+          headers: {
+            Authorization: `token ${githubToken}`,
+            Accept: "application/vnd.github.v3+json",
+          },
+        }
+      );
+      contributorsObject[repoName] = await getCollaborators(
+        repoData,
+        githubToken
+      );
     }
-    let contributionsMap = {};
 
-    for (let repo in contributorsObject) {
-      contributorsObject[repo].forEach((contributor) => {
-        const { login, contributions, id, avatar_url, html_url } = contributor;
-        if (contributionsMap.hasOwnProperty(login)) {
-          contributionsMap[login].contributions += contributions;
-        } else {
+    // Aggregate contributor from contributors
+    const contributionsMap = {};
+
+    for (const repo in contributorsObject) {
+      if (contributorsObject.hasOwnProperty(repo)) {
+        contributorsObject[repo].forEach((contributor) => {
+          if (contributor.login === "github-actions[bot]") {
+            // Skip processing GitHub Actions bot contributions
+            return;
+          }
+          const { login, contributions, id, avatar_url, html_url } =
+            contributor;
+          // Update contributions map
           contributionsMap[login] = {
             id,
-            contributions,
+            contributions:
+              (contributionsMap[login]?.contributions || 0) + contributions,
             html_url,
             avatar_url,
             login,
           };
-        }
-      });
+        });
+      }
     }
-    let sortedContributions = Object.fromEntries(
-      Object.entries(contributionsMap).sort(
-        ([, a], [, b]) => b.contributions - a.contributions
-      )
-    );
 
-    const projectsJsonPath = path.join(
-      __dirname,
-      "src/app/projects/assets/contributors.json"
+    // Sort contributions and write data to file
+    const sortedContributions = Object.values(contributionsMap).sort(
+      (a, b) => b.contributions - a.contributions
     );
-
     fs.writeFileSync(
-      projectsJsonPath,
+      path.join(__dirname, "src/app/projects/assets/contributors.json"),
       JSON.stringify(sortedContributions, null, 2)
     );
     console.log("Contributors list updated successfully.");
   } catch (error) {
-    console.log(error);
+    console.error("An error occurred:", error);
   }
 }
 
-getCurrentProjects();
-getUpcomingProjects();
-getContributorsList();
+// Call the main function
+updateProjects();
