@@ -83,7 +83,7 @@ const Contributors = () => {
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
-                            {contributor.contributions / 2}
+                            {Math.floor(contributor.contributions / 2)}
                           </p>
                         </div>
                         <div className='flex justify-center items-center gap-1 mt-4 '>
@@ -99,7 +99,7 @@ const Contributors = () => {
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
-                            {contributor.contributions / 4}
+                            {Math.floor(contributor.contributions / 4)}
                           </p>
                         </div>
                       </div>
