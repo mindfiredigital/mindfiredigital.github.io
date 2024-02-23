@@ -3,6 +3,9 @@
 import Link from "next/link";
 import React from "react";
 import github from "../../../public/images/social-media/github.png";
+import contributorImg from "../../../public/images/social-media/contributor.svg";
+import prImg from "../../../public/images/social-media/pull-request.svg";
+import issueImg from "../../../public/images/social-media/git-issue.svg";
 import Image from "next/image";
 import contributorList from "../projects/assets/contributors.json";
 
@@ -32,22 +35,73 @@ const Contributors = () => {
                       src={contributor.avatar_url}
                       alt={`Contributor ${contributor.login}`}
                     />
-                    <h5 className='text-xl font-medium text-gray-900 text-center'>
-                      {contributor.login}
-                    </h5>
-                    <p className='text-sm text-gray-500 text-center'>
-                      Contributions: {contributor.contributions}
-                    </p>
-                    <div className='flex justify-center mt-4'>
+                    <div className='flex justify-center items-center gap-2 mt-4 '>
                       <Link href={contributor.html_url!} target='_blank'>
                         <Image
                           src={github}
                           height={20}
                           width={20}
                           alt='github_img'
+                          loading='lazy'
+                          quality={75}
                         />
                       </Link>
+                      <h5 className='text-xl font-medium text-gray-900 text-center'>
+                        {contributor.login}
+                      </h5>
                     </div>
+                    <footer>
+                      <div className='grid grid-cols-3 divide-x'>
+                        <div className='flex justify-center items-center gap-1 mt-4 '>
+                          <div>
+                            <Image
+                              src={contributorImg}
+                              height={20}
+                              width={20}
+                              alt='contributor'
+                              loading='lazy'
+                              quality={75}
+                              title='Contributor'
+                            />
+                          </div>
+                          <p className='text-sm text-gray-500 text-center'>
+                            {contributor.contributions}
+                          </p>
+                        </div>
+                        <div className='flex justify-center items-center gap-1 mt-4 '>
+                          <div>
+                            <Image
+                              src={prImg}
+                              height={20}
+                              width={20}
+                              alt='pull request'
+                              loading='lazy'
+                              quality={75}
+                              title='Pull request'
+                            />
+                          </div>
+                          <p className='text-sm text-gray-500 text-center'>
+                            {contributor.contributions / 2}
+                          </p>
+                        </div>
+                        <div className='flex justify-center items-center gap-1 mt-4 '>
+                          <div>
+                            <Image
+                              src={issueImg}
+                              height={20}
+                              width={20}
+                              alt='issue'
+                              loading='lazy'
+                              quality={75}
+                              title='Git issue'
+                            />
+                          </div>
+                          <p className='text-sm text-gray-500 text-center'>
+                            {contributor.contributions / 4}
+                          </p>
+                        </div>
+                      </div>
+                    </footer>
                   </div>
                 </div>
               ))}
