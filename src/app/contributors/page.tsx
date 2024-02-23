@@ -61,7 +61,7 @@ const Contributors = () => {
                               alt='contributor'
                               loading='lazy'
                               quality={75}
-                              title='Contributor'
+                              title='Contributions'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
@@ -77,7 +77,7 @@ const Contributors = () => {
                               alt='pull request'
                               loading='lazy'
                               quality={75}
-                              title='Pull request'
+                              title='Pull Requests'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
@@ -93,7 +93,7 @@ const Contributors = () => {
                               alt='issue'
                               loading='lazy'
                               quality={75}
-                              title='Git issue'
+                              title='Issues'
                             />
                           </div>
                           <p className='text-sm text-gray-500 text-center'>
