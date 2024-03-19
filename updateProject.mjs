@@ -45,9 +45,7 @@ async function getCollaborators(repoData, githubToken) {
 
 // Main function to update projects data
 async function updateProjects() {
-  // const githubToken = process.env.GITHUB_TOKEN;
-  const githubToken =
-    "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";
+  const githubToken = process.env.GITHUB_TOKEN;
 
   try {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
@@ -223,11 +221,10 @@ async function fetchDownloadStats(packageName, period) {
 
 // Function to calculate average downloads from the statistics
 function calculateAverageDownloads(stats) {
-  const totalDownloads = stats.downloads.reduce(
+  return stats.downloads.reduce(
     (accumulator, download) => accumulator + download.downloads,
     0
   );
-  return totalDownloads / stats.downloads.length;
 }
 
 // Function to fetch and process statistics for a package and period
@@ -240,16 +237,7 @@ async function getStats(packageName, period) {
     if (!stats || !stats.package) return 0;
 
     // Calculate average downloads
-    const averageDownloads = calculateAverageDownloads(stats);
-
-    switch (period) {
-      case "last-day":
-        return averageDownloads;
-      case "last-week":
-        return averageDownloads * 7;
-      default:
-        return averageDownloads * 365;
-    }
+    return calculateAverageDownloads(stats);
   } catch (error) {
     // Log and handle errors
     console.error(`${packageName} not present`);
@@ -259,26 +247,29 @@ async function getStats(packageName, period) {
 
 // Function to fetch and aggregate statistics for all packages and periods
 async function getAllStats(npmPackages) {
-  const statsMap = {};
+  const statsMap = [];
 
   // Fetch stats for each package and period
   await Promise.all(
     npmPackages.map(async (packageName) => {
       try {
         // Fetch stats for different periods
-        const [dayStats, weekStats, yearStats] = await Promise.all([
+        const [dayStats, weekStats, yearStats, totalStats] = await Promise.all([
           getStats(packageName, "last-day"),
           getStats(packageName, "last-week"),
           getStats(packageName, "last-year"),
+          getStats(packageName, "1000-01-01:3000-01-01"),
         ]);
 
         // If any stats exist, add to the map
         if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
-          statsMap[packageName] = {
-            day: Math.ceil(dayStats),
-            week: Math.ceil(weekStats),
-            year: Math.ceil(yearStats),
-          };
+          statsMap.push({
+            name: packageName,
+            day: dayStats,
+            week: weekStats,
+            year: yearStats,
+            total: totalStats,
+          });
         }
       } catch (error) {
         // Log and handle errors
