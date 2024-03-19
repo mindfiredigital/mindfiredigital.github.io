@@ -17,6 +17,7 @@
     "update-projects": "node updateProject.mjs"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "clsx": "^2.0.0",
     "i": "^0.3.7",
     "next": "13.5.4",
