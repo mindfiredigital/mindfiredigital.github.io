@@ -11,6 +11,13 @@ import { Fragment, useState } from "react";
 
 const Stats = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [npmPackage, setNpmPackage] = useState({
+    name: "fmdapi-node-weaver",
+    day: 0,
+    week: 3,
+    year: 70,
+    total: 70,
+  });
 
   function closeModal() {
     setIsOpen(false);
@@ -29,39 +36,45 @@ const Stats = () => {
             key={stats.name}
             className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md hover:scale-105'
           >
-            <h3 className='font-semibold mb-2 capitalize indent-8 text-mindfire-text-red'>
-              {stats.name.replaceAll("-", " ")}
-            </h3>
-            <div>
+            <div className='flex flex-row items-start justify-between'>
               <div>
-                <Link
-                  href={`https://www.npmjs.com/package/@mindfiredigital/${stats.name}`}
-                  target='_blank'
-                >
-                  <Image
-                    src={npm}
-                    height={20}
-                    width={20}
-                    alt='npm_img'
-                    loading='lazy'
-                    quality={75}
-                  />
-                </Link>
+                <h3 className='font-semibold mb-2 capitalize indent-8 text-mindfire-text-red'>
+                  {stats.name.replaceAll("-", " ")}
+                </h3>
               </div>
-              <div>
-                <button
-                  className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center'
-                  onClick={openModal}
-                >
-                  <Image
-                    src={expand}
-                    height={20}
-                    width={20}
-                    alt='expand_img'
-                    loading='lazy'
-                    quality={75}
-                  />
-                </button>
+              <div className='flex flex-row items-center'>
+                <div>
+                  <Link
+                    href={`https://www.npmjs.com/package/@mindfiredigital/${stats.name}`}
+                    target='_blank'
+                  >
+                    <Image
+                      src={npm}
+                      height={20}
+                      width={20}
+                      alt='npm_img'
+                      loading='lazy'
+                      quality={75}
+                    />
+                  </Link>
+                </div>
+                <div>
+                  <button
+                    className='font-bold py-2 px-4 rounded inline-flex items-center'
+                    onClick={() => {
+                      openModal(), setNpmPackage(stats);
+                    }}
+                  >
+                    <Image
+                      src={expand}
+                      height={20}
+                      width={20}
+                      alt='expand_img'
+                      loading='lazy'
+                      quality={75}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
             <div className='flex flex-col items-center'>
@@ -135,23 +148,50 @@ const Stats = () => {
                     as='h3'
                     className='text-lg font-medium leading-6 text-gray-900'
                   >
-                    Payment successful
+                    {npmPackage.name.replaceAll("-", " ")}
                   </Dialog.Title>
-                  <div className='mt-2'>
-                    <p className='text-sm text-gray-500'>
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
-
-                  <div className='mt-4'>
-                    <button
-                      type='button'
-                      className='inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
-                      onClick={closeModal}
-                    >
-                      Got it, thanks!
-                    </button>
+                  <div key={npmPackage.name}>
+                    <div className='flex flex-col items-start'>
+                      <h5 className='text-mindfire-text-black'>Downloads</h5>
+                      <div className='flex flex-row justify-center'>
+                        <div className='flex flex-col items-center'>
+                          <div>
+                            <h6 className='text-mindfire-text-black'>
+                              {npmPackage.day}
+                            </h6>
+                          </div>
+                          <div>
+                            <p className='text-slate-500 uppercase text-xs'>
+                              Daily
+                            </p>
+                          </div>
+                        </div>
+                        <div className='flex flex-col items-center'>
+                          <div>
+                            <h6 className='text-mindfire-text-black'>
+                              {npmPackage.week}
+                            </h6>
+                          </div>
+                          <div>
+                            <p className='text-slate-500 uppercase text-xs'>
+                              Weekly
+                            </p>
+                          </div>
+                        </div>
+                        <div className='flex flex-col items-center'>
+                          <div>
+                            <h6 className='text-mindfire-text-black'>
+                              {npmPackage.year}
+                            </h6>
+                          </div>
+                          <div>
+                            <p className='text-slate-500 uppercase text-xs'>
+                              Yearly
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
