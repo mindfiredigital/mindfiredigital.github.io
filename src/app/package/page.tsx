@@ -146,14 +146,17 @@ const Stats = () => {
                 <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                   <Dialog.Title
                     as='h3'
-                    className='text-lg font-medium leading-6 text-gray-900'
+                    className='text-lg font-large leading-6 text-gray-900 capitalize text-center mb-4'
                   >
                     {npmPackage.name.replaceAll("-", " ")}
                   </Dialog.Title>
-                  <div key={npmPackage.name}>
-                    <div className='flex flex-col items-start'>
+                  <div
+                    key={npmPackage.name}
+                    className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md'
+                  >
+                    <div className='flex flex-col items-center'>
                       <h5 className='text-mindfire-text-black'>Downloads</h5>
-                      <div className='flex flex-row justify-center'>
+                      <div className='flex flex-row justify-around w-full'>
                         <div className='flex flex-col items-center'>
                           <div>
                             <h6 className='text-mindfire-text-black'>
