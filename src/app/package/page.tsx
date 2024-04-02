@@ -10,16 +10,19 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import moment from "moment";
 
-type stats = {
-  downloads: download[];
-};
+// type stats = {
+//   downloads: download[];
+// };
 
-type download = {
-  downloads: number;
-  day: string;
-};
+// type download = {
+//   downloads: number;
+//   day: string;
+// };
 
 const Stats = () => {
+  const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
+  const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
+  const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [npmPackage, setNpmPackage] = useState({
     name: "fmdapi-node-weaver",
@@ -37,34 +40,133 @@ const Stats = () => {
     setIsOpen(true);
   }
 
-  const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
-  const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
-  const [count, setCount] = useState(0);
-  async function fetchDownloadStats() {
-    const url = `https://api.npmjs.org/downloads/range/${startDate}:${endDate}/@mindfiredigital/${npmPackage.name}`;
-    const response = await fetch(url);
+  // Function to fetch download statistics for a given package and period
+  // async function fetchDownloadStats(packageName: string, period: string) {
+  //   const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
+  //   const response = await fetch(url);
 
-    if (!response.ok) {
-      console.log(
-        `Failed to fetch download stats for ${npmPackage.name} (${startDate}:${endDate}): ${response.statusText}`
-      );
+  //   if (!response.ok) {
+  //     console.log(
+  //       `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
+  //     );
+  //   }
+
+  //   const data = await response.json();
+  //   return data;
+  // }
+
+  // // Function to calculate average downloads from the statistics
+  // function calculateAverageDownloads(stats: stats) {
+  //   return stats.downloads.reduce(
+  //     (accumulator, download) => accumulator + download.downloads,
+  //     0
+  //   );
+  // }
+
+  // // Function to fetch and process statistics for a package and period
+  // async function getStats(packageName: string, period: string) {
+  //   try {
+  //     // Fetch download statistics
+  //     const stats = await fetchDownloadStats(packageName, period);
+
+  //     // Check if stats exist
+  //     if (!stats || !stats.package) return 0;
+
+  //     // Calculate average downloads
+  //     const count = calculateAverageDownloads(stats);
+  //     console.log(count);
+  //   } catch (error) {
+  //     // Log and handle errors
+  //     console.error(`${packageName} not present`);
+  //     return null;
+  //   }
+  // }
+  function handleChange(
+    event: React.ChangeEvent<HTMLSelectElement>,
+    _package: {
+      name: string;
+      day: number;
+      week: number;
+      year: number;
+      total: number;
     }
+  ) {
+    console.log(event.target.value);
+    console.log(_package);
 
-    const data = await response.json();
-    return data;
+    // const range = getDateRange(event.target.value as string);
+    // getStats(_package.name, `${range?.start}:${range?.end}`);
   }
 
-  function calculateAverageDownloads(stats: stats) {
-    return stats.downloads.reduce(
-      (accumulator: number, download: download) =>
-        accumulator + download.downloads,
-      0
-    );
-  }
+  // function formatDate(date: Date) {
+  //   const year = date.getFullYear();
+  //   const month = String(date.getMonth() + 1).padStart(2, "0");
+  //   const day = String(date.getDate()).padStart(2, "0");
+  //   return `${year}-${month}-${day}`;
+  // }
+
+  // function getDateRange(range: string) {
+  //   const currentDate = new Date();
+  //   const currentYear = currentDate.getFullYear();
+  //   const currentMonth = currentDate.getMonth();
+  //   const currentDay = currentDate.getDate();
+
+  //   switch (range.toLowerCase()) {
+  //     case "today":
+  //       return {
+  //         start: formatDate(new Date(currentYear, currentMonth, currentDay)),
+  //         end: formatDate(new Date(currentYear, currentMonth, currentDay)),
+  //       };
+  //     case "yesterday":
+  //       const yesterdayDate = new Date(
+  //         currentYear,
+  //         currentMonth,
+  //         currentDay - 1
+  //       );
+  //       return {
+  //         start: formatDate(yesterdayDate),
+  //         end: formatDate(yesterdayDate),
+  //       };
+  //     case "last month":
+  //       const lastMonthStartDate = new Date(currentYear, currentMonth - 1, 1);
+  //       const lastMonthEndDate = new Date(currentYear, currentMonth, 0);
+  //       return {
+  //         start: formatDate(lastMonthStartDate),
+  //         end: formatDate(lastMonthEndDate),
+  //       };
+  //     case "last quarter":
+  //       const quarterStartMonth = Math.floor(currentMonth / 3) * 3; // Get the start month of the current quarter
+  //       const lastQuarterStartDate = new Date(
+  //         currentYear,
+  //         quarterStartMonth - 3,
+  //         1
+  //       );
+  //       const lastQuarterEndDate = new Date(currentYear, quarterStartMonth, 0);
+  //       return {
+  //         start: formatDate(lastQuarterStartDate),
+  //         end: formatDate(lastQuarterEndDate),
+  //       };
+  //     case "this year":
+  //       const thisYearStartDate = new Date(currentYear, 0, 1);
+  //       return {
+  //         start: formatDate(thisYearStartDate),
+  //         end: formatDate(currentDate),
+  //       };
+  //     case "this month":
+  //       const thisMonthStartDate = new Date(currentYear, currentMonth, 1);
+  //       return {
+  //         start: formatDate(thisMonthStartDate),
+  //         end: formatDate(currentDate),
+  //       };
+  //     default:
+  //       return null;
+  //   }
+  // }
 
   const generateChart = async () => {
-    const stats = await fetchDownloadStats();
-    setCount(calculateAverageDownloads(stats));
+    // const stats = await fetchDownloadStats();
+    // setCount(calculateAverageDownloads(stats));
+    setCount(0);
   };
 
   return (
@@ -119,6 +221,30 @@ const Stats = () => {
               </div>
             </div>
             <div className='flex flex-col items-center'>
+              <form className='max-w-sm mx-auto'>
+                <label
+                  htmlFor='range'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                >
+                  Select an option
+                </label>
+                <select
+                  id='range'
+                  className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                  onChange={(e) => {
+                    handleChange(e, stats);
+                  }}
+                >
+                  <option selected>Range</option>
+                  <option value='Today'>Today</option>
+                  <option value='Yesterday'>Yesterday</option>
+                  <option value='Last month'>Last month</option>
+                  <option value='last quarter'>last quarter</option>
+                  <option value='this year'>this year </option>
+                  <option value='total'>Total Year</option>
+                  <option value='this month'>this month</option>
+                </select>
+              </form>
               <h5 className='text-mindfire-text-black'>Downloads</h5>
               <div className='flex justify-around w-full'>
                 <div className='flex flex-col items-center'>
