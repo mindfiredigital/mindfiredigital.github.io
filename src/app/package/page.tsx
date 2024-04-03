@@ -10,14 +10,14 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import moment from "moment";
 
-// type stats = {
-//   downloads: download[];
-// };
+type stats = {
+  downloads: download[];
+};
 
-// type download = {
-//   downloads: number;
-//   day: string;
-// };
+type download = {
+  downloads: number;
+  day: string;
+};
 
 const Stats = () => {
   const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
@@ -31,7 +31,7 @@ const Stats = () => {
     year: 70,
     total: 70,
   });
-
+  const [packages, setPackages] = useState(statsList);
   function closeModal() {
     setIsOpen(false);
   }
@@ -41,46 +41,45 @@ const Stats = () => {
   }
 
   // Function to fetch download statistics for a given package and period
-  // async function fetchDownloadStats(packageName: string, period: string) {
-  //   const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
-  //   const response = await fetch(url);
+  async function fetchDownloadStats(packageName: string, period: string) {
+    const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
+    const response = await fetch(url);
 
-  //   if (!response.ok) {
-  //     console.log(
-  //       `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
-  //     );
-  //   }
+    if (!response.ok) {
+      console.log(
+        `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
+      );
+    }
 
-  //   const data = await response.json();
-  //   return data;
-  // }
+    const data = await response.json();
+    return data;
+  }
 
-  // // Function to calculate average downloads from the statistics
-  // function calculateAverageDownloads(stats: stats) {
-  //   return stats.downloads.reduce(
-  //     (accumulator, download) => accumulator + download.downloads,
-  //     0
-  //   );
-  // }
+  // Function to calculate average downloads from the statistics
+  function calculateDownloads(stats: stats): number {
+    return stats.downloads.reduce(
+      (accumulator, download) => accumulator + download.downloads,
+      0
+    );
+  }
 
-  // // Function to fetch and process statistics for a package and period
-  // async function getStats(packageName: string, period: string) {
-  //   try {
-  //     // Fetch download statistics
-  //     const stats = await fetchDownloadStats(packageName, period);
+  // Function to fetch and process statistics for a package and period
+  async function getStats(packageName: string, period: string) {
+    try {
+      // Fetch download statistics
+      const stats = await fetchDownloadStats(packageName, period);
 
-  //     // Check if stats exist
-  //     if (!stats || !stats.package) return 0;
+      // Check if stats exist
+      if (!stats || !stats.package) return 0;
 
-  //     // Calculate average downloads
-  //     const count = calculateAverageDownloads(stats);
-  //     console.log(count);
-  //   } catch (error) {
-  //     // Log and handle errors
-  //     console.error(`${packageName} not present`);
-  //     return null;
-  //   }
-  // }
+      // Calculate average downloads
+      return stats;
+    } catch (error) {
+      // Log and handle errors
+      console.error(`${packageName} not present`);
+      return 0;
+    }
+  }
   function handleChange(
     event: React.ChangeEvent<HTMLSelectElement>,
     _package: {
@@ -91,77 +90,97 @@ const Stats = () => {
       total: number;
     }
   ) {
-    console.log(event.target.value);
-    console.log(_package);
-
-    // const range = getDateRange(event.target.value as string);
-    // getStats(_package.name, `${range?.start}:${range?.end}`);
+    const range: { start: string; end: string } = getDateRange(
+      event.target.value as string
+    );
+    let count: number;
+    getStats(_package.name, `${range?.start}:${range?.end}`).then((res) => {
+      count = calculateDownloads(res);
+      console.log(count);
+      setPackages(
+        packages.map((npmPackage) => {
+          if (npmPackage.name === _package.name) {
+            npmPackage.total = count;
+          }
+          return npmPackage;
+        })
+      );
+    });
   }
 
-  // function formatDate(date: Date) {
-  //   const year = date.getFullYear();
-  //   const month = String(date.getMonth() + 1).padStart(2, "0");
-  //   const day = String(date.getDate()).padStart(2, "0");
-  //   return `${year}-${month}-${day}`;
-  // }
+  function formatDate(date: Date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
 
-  // function getDateRange(range: string) {
-  //   const currentDate = new Date();
-  //   const currentYear = currentDate.getFullYear();
-  //   const currentMonth = currentDate.getMonth();
-  //   const currentDay = currentDate.getDate();
+  function getDateRange(range: string) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+    const currentDay = currentDate.getDate();
 
-  //   switch (range.toLowerCase()) {
-  //     case "today":
-  //       return {
-  //         start: formatDate(new Date(currentYear, currentMonth, currentDay)),
-  //         end: formatDate(new Date(currentYear, currentMonth, currentDay)),
-  //       };
-  //     case "yesterday":
-  //       const yesterdayDate = new Date(
-  //         currentYear,
-  //         currentMonth,
-  //         currentDay - 1
-  //       );
-  //       return {
-  //         start: formatDate(yesterdayDate),
-  //         end: formatDate(yesterdayDate),
-  //       };
-  //     case "last month":
-  //       const lastMonthStartDate = new Date(currentYear, currentMonth - 1, 1);
-  //       const lastMonthEndDate = new Date(currentYear, currentMonth, 0);
-  //       return {
-  //         start: formatDate(lastMonthStartDate),
-  //         end: formatDate(lastMonthEndDate),
-  //       };
-  //     case "last quarter":
-  //       const quarterStartMonth = Math.floor(currentMonth / 3) * 3; // Get the start month of the current quarter
-  //       const lastQuarterStartDate = new Date(
-  //         currentYear,
-  //         quarterStartMonth - 3,
-  //         1
-  //       );
-  //       const lastQuarterEndDate = new Date(currentYear, quarterStartMonth, 0);
-  //       return {
-  //         start: formatDate(lastQuarterStartDate),
-  //         end: formatDate(lastQuarterEndDate),
-  //       };
-  //     case "this year":
-  //       const thisYearStartDate = new Date(currentYear, 0, 1);
-  //       return {
-  //         start: formatDate(thisYearStartDate),
-  //         end: formatDate(currentDate),
-  //       };
-  //     case "this month":
-  //       const thisMonthStartDate = new Date(currentYear, currentMonth, 1);
-  //       return {
-  //         start: formatDate(thisMonthStartDate),
-  //         end: formatDate(currentDate),
-  //       };
-  //     default:
-  //       return null;
-  //   }
-  // }
+    switch (range.toLowerCase()) {
+      case "today": {
+        return {
+          start: formatDate(new Date(currentYear, currentMonth, currentDay)),
+          end: formatDate(new Date(currentYear, currentMonth, currentDay)),
+        };
+      }
+      case "yesterday": {
+        const yesterdayDate = new Date(
+          currentYear,
+          currentMonth,
+          currentDay - 1
+        );
+        return {
+          start: formatDate(yesterdayDate),
+          end: formatDate(yesterdayDate),
+        };
+      }
+      case "last month": {
+        const lastMonthStartDate = new Date(currentYear, currentMonth - 1, 1);
+        const lastMonthEndDate = new Date(currentYear, currentMonth, 0);
+        return {
+          start: formatDate(lastMonthStartDate),
+          end: formatDate(lastMonthEndDate),
+        };
+      }
+      case "last quarter": {
+        const quarterStartMonth = Math.floor(currentMonth / 3) * 3; // Get the start month of the current quarter
+        const lastQuarterStartDate = new Date(
+          currentYear,
+          quarterStartMonth - 3,
+          1
+        );
+        const lastQuarterEndDate = new Date(currentYear, quarterStartMonth, 0);
+        return {
+          start: formatDate(lastQuarterStartDate),
+          end: formatDate(lastQuarterEndDate),
+        };
+      }
+      case "this year": {
+        const thisYearStartDate = new Date(currentYear, 0, 1);
+        return {
+          start: formatDate(thisYearStartDate),
+          end: formatDate(currentDate),
+        };
+      }
+      case "this month": {
+        const thisMonthStartDate = new Date(currentYear, currentMonth, 1);
+        return {
+          start: formatDate(thisMonthStartDate),
+          end: formatDate(currentDate),
+        };
+      }
+      default:
+        return {
+          start: "1000-01-01",
+          end: "3000-01-01",
+        };
+    }
+  }
 
   const generateChart = async () => {
     // const stats = await fetchDownloadStats();
@@ -173,21 +192,21 @@ const Stats = () => {
     <div className='container mx-auto'>
       <h1 className='text-3xl font-bold mb-4'>Download Statistics</h1>
       <div className='grid grid-cols-3 gap-4'>
-        {statsList.map((stats) => (
+        {packages.map((_package) => (
           <div
-            key={stats.name}
+            key={_package.name}
             className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md hover:scale-105'
           >
             <div className='flex flex-row items-start justify-between'>
               <div>
                 <h3 className='font-semibold mb-2 capitalize indent-8 text-mindfire-text-red'>
-                  {stats.name.replaceAll("-", " ")}
+                  {_package.name.replaceAll("-", " ")}
                 </h3>
               </div>
               <div className='flex flex-row items-center'>
                 <div>
                   <Link
-                    href={`https://www.npmjs.com/package/@mindfiredigital/${stats.name}`}
+                    href={`https://www.npmjs.com/package/@mindfiredigital/${_package.name}`}
                     target='_blank'
                   >
                     <Image
@@ -205,7 +224,7 @@ const Stats = () => {
                     className='font-bold py-2 px-4 rounded inline-flex items-center'
                     onClick={() => {
                       openModal();
-                      setNpmPackage(stats);
+                      setNpmPackage(_package);
                     }}
                   >
                     <Image
@@ -232,7 +251,7 @@ const Stats = () => {
                   id='range'
                   className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                   onChange={(e) => {
-                    handleChange(e, stats);
+                    handleChange(e, _package);
                   }}
                 >
                   <option selected>Range</option>
@@ -249,7 +268,9 @@ const Stats = () => {
               <div className='flex justify-around w-full'>
                 <div className='flex flex-col items-center'>
                   <div>
-                    <h6 className='text-mindfire-text-black'>{stats.total}</h6>
+                    <h6 className='text-mindfire-text-black'>
+                      {_package.total}
+                    </h6>
                   </div>
                   <div>
                     <p className='text-slate-500 uppercase text-xs'>Total</p>
