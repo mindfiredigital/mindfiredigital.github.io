@@ -93,9 +93,8 @@ const Stats = () => {
     const range: { start: string; end: string } = getDateRange(
       event.target.value as string
     );
-    let count: number;
     getStats(_package.name, `${range?.start}:${range?.end}`).then((res) => {
-      count = calculateDownloads(res);
+      const count = calculateDownloads(res);
       console.log(count);
       setPackages(
         packages.map((npmPackage) => {
@@ -183,9 +182,11 @@ const Stats = () => {
   }
 
   const generateChart = async () => {
-    // const stats = await fetchDownloadStats();
-    // setCount(calculateAverageDownloads(stats));
-    setCount(0);
+    const stats = await fetchDownloadStats(
+      npmPackage.name,
+      `${startDate}:${endDate}`
+    );
+    setCount(calculateDownloads(stats));
   };
 
   return (
