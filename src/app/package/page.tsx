@@ -256,7 +256,7 @@ const Stats = () => {
                     <option value='Last month'>Last month</option>
                     <option value='last quarter'>last quarter</option>
                     <option value='this year'>this year </option>
-                    <option value='total'>Total Year</option>
+                    <option value='total'>Total</option>
                     <option value='this month'>this month</option>
                   </select>
                 </form>
