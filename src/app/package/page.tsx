@@ -190,13 +190,13 @@ const Stats = () => {
   };
 
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto flex flex-col gap-4 items-center'>
       <h1 className='text-3xl font-bold mb-4'>Download Statistics</h1>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
         {packages.map((_package) => (
           <div
             key={_package.name}
-            className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md hover:scale-105'
+            className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md w-80 hover:scale-105'
           >
             <div className='flex flex-row items-start justify-between'>
               <div>
@@ -241,31 +241,26 @@ const Stats = () => {
               </div>
             </div>
             <div className='flex flex-col items-center'>
-              <form className='max-w-sm mx-auto'>
-                <label
-                  htmlFor='range'
-                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
-                >
-                  Select an option
-                </label>
-                <select
-                  id='range'
-                  className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                  onChange={(e) => {
-                    handleChange(e, _package);
-                  }}
-                >
-                  <option selected>Range</option>
-                  <option value='Today'>Today</option>
-                  <option value='Yesterday'>Yesterday</option>
-                  <option value='Last month'>Last month</option>
-                  <option value='last quarter'>last quarter</option>
-                  <option value='this year'>this year </option>
-                  <option value='total'>Total Year</option>
-                  <option value='this month'>this month</option>
-                </select>
-              </form>
-              <h5 className='text-mindfire-text-black'>Downloads</h5>
+              <div className='mb-4'>
+                <form className='max-w-sm'>
+                  <select
+                    id='range'
+                    className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1'
+                    onChange={(e) => {
+                      handleChange(e, _package);
+                    }}
+                  >
+                    <option selected>Range</option>
+                    <option value='Today'>Today</option>
+                    <option value='Yesterday'>Yesterday</option>
+                    <option value='Last month'>Last month</option>
+                    <option value='last quarter'>last quarter</option>
+                    <option value='this year'>this year </option>
+                    <option value='total'>Total Year</option>
+                    <option value='this month'>this month</option>
+                  </select>
+                </form>
+              </div>
               <div className='flex justify-around w-full'>
                 <div className='flex flex-col items-center'>
                   <div>
@@ -274,7 +269,9 @@ const Stats = () => {
                     </h6>
                   </div>
                   <div>
-                    <p className='text-slate-500 uppercase text-xs'>Total</p>
+                    <p className='text-slate-500 uppercase text-xs'>
+                      Total Downloads
+                    </p>
                   </div>
                 </div>
               </div>
