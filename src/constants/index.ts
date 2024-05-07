@@ -27,6 +27,10 @@ const navigations: Navigation[] = [
     path: ["/contributors"],
   },
   {
+    name: "Package",
+    path: ["/package"],
+  },
+  {
     name: "GitHub",
     path: ["https://github.com/mindfiredigital"],
     target: "_blank",
