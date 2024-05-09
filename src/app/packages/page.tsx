@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, Fragment } from "react";
 import statsList from "../projects/assets/stats.json";
-// import packageList from "../projects/assets/packages.json";
 import Link from "next/link";
 import npm from "../../../public/images/social-media/npm-svgrepo-com.svg";
 import filter from "../../../public/images/social-media/bx-filter-alt.svg";
@@ -35,6 +34,7 @@ const Stats = () => {
     year: 70,
     total: 70,
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [packages, setPackages] = useState(statsList);
   // const [allPackage, setAllPackage] = useState(packageList);
 
@@ -105,7 +105,7 @@ const Stats = () => {
     );
     getStats(_package.name, `${range?.start}:${range?.end}`).then((res) => {
       const count = calculateDownloads(res);
-      console.log(count);
+      // console.log(count);
 
       packages.map((npmPackage) => {
         if (npmPackage.name === _package.name) {
