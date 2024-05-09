@@ -37,6 +37,7 @@ jobs:
           git restore src/app/projects/assets/upcomingProjects.json
           git restore src/app/projects/assets/projects.json
           git restore src/app/projects/assets/contributors.json
+          git restore src/app/projects/assets/stats.json
 
       - name: 'Fetch branches'
         run: git fetch origin
