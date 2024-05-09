@@ -451,7 +451,7 @@ const Stats = () => {
                           <div className='flex flex-col items-center mt-4'>
                             <div className='flex justify-around w-full'>
                               <div className='flex flex-col items-center'>
-                                <div className='flex flex-row items-center'>
+                                <div className='flex flex-row items-center space-x-1'>
                                   <Image
                                     src={download}
                                     height={20}
@@ -461,14 +461,14 @@ const Stats = () => {
                                     quality={75}
                                   />
                                   <div>
-                                    <h6 className='text-mindfire-text-black font-semibold'>
+                                    <h6 className='text-mindfire-text-black font-semibold text-xl'>
                                       {count}
                                     </h6>
                                   </div>
                                 </div>
-                                <div className='mt-2'>
-                                  <p className='text-mindfire-text-black text-xm font-bold'>
-                                    Total Downloads
+                                <div className='mt-2 ml-2'>
+                                  <p className='text-mindfire-text-black text-xm'>
+                                    Downloads
                                   </p>
                                 </div>
                               </div>
@@ -479,7 +479,7 @@ const Stats = () => {
                         <div className='flex flex-col items-center mt-4'>
                           <div className='flex justify-around w-full'>
                             <div className='flex flex-col items-center'>
-                              <div className='flex flex-row items-center'>
+                              <div className='flex flex-row items-center space-x-1'>
                                 <Image
                                   src={download}
                                   height={20}
@@ -489,14 +489,14 @@ const Stats = () => {
                                   quality={75}
                                 />
                                 <div>
-                                  <h6 className='text-mindfire-text-black font-semibold'>
+                                  <h6 className='text-mindfire-text-black font-semibold text-xl'>
                                     {count}
                                   </h6>
                                 </div>
                               </div>
-                              <div className='mt-2'>
-                                <p className='text-mindfire-text-black text-xm font-bold'>
-                                  Total Downloads
+                              <div className='mt-2 ml-2'>
+                                <p className='text-mindfire-text-black text-xm'>
+                                  Downloads
                                 </p>
                               </div>
                             </div>
