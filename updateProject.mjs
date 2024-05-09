@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // updateProjects.mjs
 import fs from "fs";
 import path from "path";
@@ -156,6 +157,7 @@ async function updateProjects() {
     const contributionsMap = {};
 
     for (const repo in contributorsObject) {
+      // eslint-disable-next-line no-prototype-builtins
       if (contributorsObject.hasOwnProperty(repo)) {
         contributorsObject[repo].forEach((contributor) => {
           if (contributor.login === "github-actions[bot]") {
