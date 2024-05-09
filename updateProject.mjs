@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // updateProjects.mjs
 import fs from "fs";
 import path from "path";
@@ -156,6 +157,7 @@ async function updateProjects() {
     const contributionsMap = {};
 
     for (const repo in contributorsObject) {
+      // eslint-disable-next-line no-prototype-builtins
       if (contributorsObject.hasOwnProperty(repo)) {
         contributorsObject[repo].forEach((contributor) => {
           if (contributor.login === "github-actions[bot]") {
@@ -186,9 +188,99 @@ async function updateProjects() {
       JSON.stringify(sortedContributions, null, 2)
     );
     console.log("Contributors list updated successfully.");
+
+    getAllStats(repoNames)
+      .then((statsMap) => {
+        fs.writeFileSync(
+          path.join(__dirname, "src/app/projects/assets/stats.json"),
+          JSON.stringify(statsMap, null, 2)
+        );
+
+        console.log("Status list updated successfully.");
+      })
+      .catch((error) => {
+        console.error("Error fetching stats:", error);
+      });
   } catch (error) {
     console.error("An error occurred:", error);
   }
+}
+
+// Function to fetch download statistics for a given package and period
+async function fetchDownloadStats(packageName, period) {
+  const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    console.log(
+      `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
+    );
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+// Function to calculate average downloads from the statistics
+function calculateAverageDownloads(stats) {
+  return stats.downloads.reduce(
+    (accumulator, download) => accumulator + download.downloads,
+    0
+  );
+}
+
+// Function to fetch and process statistics for a package and period
+async function getStats(packageName, period) {
+  try {
+    // Fetch download statistics
+    const stats = await fetchDownloadStats(packageName, period);
+
+    // Check if stats exist
+    if (!stats || !stats.package) return 0;
+
+    // Calculate average downloads
+    return calculateAverageDownloads(stats);
+  } catch (error) {
+    // Log and handle errors
+    console.error(`${packageName} not present`);
+    return null;
+  }
+}
+
+// Function to fetch and aggregate statistics for all packages and periods
+async function getAllStats(npmPackages) {
+  const statsMap = [];
+
+  // Fetch stats for each package and period
+  await Promise.all(
+    npmPackages.map(async (packageName) => {
+      try {
+        // Fetch stats for different periods
+        const [dayStats, weekStats, yearStats, totalStats] = await Promise.all([
+          getStats(packageName, "last-day"),
+          getStats(packageName, "last-week"),
+          getStats(packageName, "last-year"),
+          getStats(packageName, "1000-01-01:3000-01-01"),
+        ]);
+
+        // If any stats exist, add to the map
+        if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
+          statsMap.push({
+            name: packageName,
+            day: dayStats,
+            week: weekStats,
+            year: yearStats,
+            total: totalStats,
+          });
+        }
+      } catch (error) {
+        // Log and handle errors
+        console.error(`Error fetching stats for ${packageName}:`, error);
+      }
+    })
+  );
+
+  return statsMap;
 }
 
 // Call the main function
