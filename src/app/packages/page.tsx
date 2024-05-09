@@ -228,7 +228,7 @@ const Stats = () => {
           >
             <div className='flex flex-row items-start justify-between'>
               <div className=''>
-                <h3 className='font-semibold mb-2 ml-2 indent-8 text-mindfire-text-black uppercase'>
+                <h3 className='font-semibold mb-2 ml-2 indent-8 text-mindfire-text-black capitalize'>
                   {package_list.name.replaceAll("-", " ")}
                 </h3>
               </div>
