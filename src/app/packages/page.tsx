@@ -227,7 +227,7 @@ const Stats = () => {
     <section className='bg-slate-50'>
       <div className='container mx-auto flex flex-col gap-4 items-center'>
         <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black mt-10'>
-          Download Statistics
+          Our Packages
         </h1>
         <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center'>
           Elevate your projects with Mindfire&apos;s game-changing open-source
