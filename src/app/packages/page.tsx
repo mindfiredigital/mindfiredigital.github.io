@@ -40,12 +40,18 @@ const Stats = () => {
 
   function closeModal() {
     setIsOpen(false);
-    setCount(0);
     setSelectedRange(false);
   }
 
+  useEffect(() => {
+    if (npmPackage) {
+      setCount(npmPackage.total); // Open the modal when npmPackage is updated
+    }
+  }, [npmPackage]);
+
   function openModal() {
     setIsOpen(true);
+    setCount(npmPackage.total);
   }
 
   // Function to fetch download statistics for a given package and period
@@ -250,8 +256,8 @@ const Stats = () => {
                     <button
                       className='font-bold px-2 py-1 rounded inline-flex items-center'
                       onClick={() => {
-                        openModal();
                         setNpmPackage(package_list);
+                        openModal();
                       }}
                       title='Filter'
                     >
@@ -396,7 +402,6 @@ const Stats = () => {
                             className='bg-gray-50 border text-gray-900 text-sm rounded-lg  block w-full p-1 appearance-none outline-none'
                             onChange={(e) => handleChange(e, npmPackage)}
                           >
-                            <option value='filter'>Filter</option>
                             <option value='total'>Total</option>
                             <option value='Today'>Today</option>
                             <option value='Yesterday'>Yesterday</option>
@@ -404,7 +409,6 @@ const Stats = () => {
                             <option value='this month'>This month</option>
                             <option value='last quarter'>Last quarter</option>
                             <option value='this year'>This year</option>
-
                             <option value='custom'>Custom Range</option>
                           </select>
                           <div className='absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none'>
