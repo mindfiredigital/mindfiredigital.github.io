@@ -230,8 +230,8 @@ const Stats = () => {
           Download Statistics
         </h1>
         <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center'>
-          We are a dynamic group of individuals who are passionate about what we
-          do.
+          Elevate your projects with Mindfire&apos;s game-changing open-source
+          packages.
         </p>
         <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
           {packages.map((package_list) => (
