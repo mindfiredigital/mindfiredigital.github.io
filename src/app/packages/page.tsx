@@ -23,7 +23,7 @@ type download = {
 const Stats = () => {
   const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
   const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
-
+  const [loading, setLoading] = useState(false); // State to track loading status
   const [count, setCount] = useState(0);
   const [selectedRange, setSelectedRange] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +50,7 @@ const Stats = () => {
 
   // Function to fetch download statistics for a given package and period
   async function fetchDownloadStats(packageName: string, period: string) {
+    setLoading(true);
     const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
     const response = await fetch(url);
 
@@ -57,9 +58,11 @@ const Stats = () => {
       console.log(
         `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
       );
+      setLoading(false);
     }
 
     const data = await response.json();
+    setLoading(false);
     return data;
   }
 
@@ -103,13 +106,16 @@ const Stats = () => {
     const range: { start: string; end: string } = getDateRange(
       event.target.value as string
     );
+
     getStats(_package.name, `${range?.start}:${range?.end}`).then((res) => {
+      setLoading(true);
       const count = calculateDownloads(res);
       // console.log(count);
 
       packages.map((npmPackage) => {
         if (npmPackage.name === _package.name) {
           setCount(count);
+          setLoading(false);
         }
         return npmPackage;
       });
@@ -468,9 +474,22 @@ const Stats = () => {
                                       quality={75}
                                     />
                                     <div>
-                                      <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                                        {count}
-                                      </h6>
+                                      {loading ? (
+                                        // Render loading indicator while count is being fetched
+                                        <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
+                                          <svg
+                                            className='animate-spin h-5 w-5 mr-3 ...'
+                                            viewBox='0 0 24 24'
+                                          >
+                                            {" "}
+                                          </svg>
+                                        </div>
+                                      ) : (
+                                        // Render count when it is available
+                                        <h6 className='text-mindfire-text-black font-semibold text-xl'>
+                                          {count}
+                                        </h6>
+                                      )}
                                     </div>
                                   </div>
                                   <div className='mt-2 ml-2'>
@@ -496,9 +515,22 @@ const Stats = () => {
                                     quality={75}
                                   />
                                   <div>
-                                    <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                                      {count}
-                                    </h6>
+                                    {loading ? (
+                                      // Render loading indicator while count is being fetched
+                                      <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
+                                        <svg
+                                          className='animate-spin h-5 w-5 mr-3 ...'
+                                          viewBox='0 0 24 24'
+                                        >
+                                          {" "}
+                                        </svg>
+                                      </div>
+                                    ) : (
+                                      // Render count when it is available
+                                      <h6 className='text-mindfire-text-black font-semibold text-xl'>
+                                        {count}
+                                      </h6>
+                                    )}
                                   </div>
                                 </div>
                                 <div className='mt-2 ml-2'>
