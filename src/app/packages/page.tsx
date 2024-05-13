@@ -36,7 +36,6 @@ const Stats = () => {
   });
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [packages, setPackages] = useState(statsList);
-  // const [allPackage, setAllPackage] = useState(packageList);
 
   function closeModal() {
     setIsOpen(false);
