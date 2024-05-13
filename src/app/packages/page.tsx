@@ -36,7 +36,6 @@ const Stats = () => {
   });
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [packages, setPackages] = useState(statsList);
-  // const [allPackage, setAllPackage] = useState(packageList);
 
   function closeModal() {
     setIsOpen(false);
@@ -45,7 +44,7 @@ const Stats = () => {
 
   useEffect(() => {
     if (npmPackage) {
-      setCount(npmPackage.total); // Open the modal when npmPackage is updated
+      setCount(npmPackage.total); //update total count when npmPackage is updated
     }
   }, [npmPackage]);
 
@@ -371,7 +370,7 @@ const Stats = () => {
                           className='h-6 w-6'
                           fill='none'
                           viewBox='0 0 24 24'
-                          stroke='red'
+                          stroke='black'
                         >
                           <path
                             strokeLinecap='round'
