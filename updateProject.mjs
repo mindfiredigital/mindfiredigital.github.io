@@ -221,6 +221,39 @@ async function fetchDownloadStats(packageName, period) {
   return data;
 }
 
+// Function to fetch download statistics for a PyPI package
+async function fetchPypiDownloadStats(packageName) {
+  const url = `https://pypistats.org/api/packages/${packageName}/recent`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    console.log(
+      `Failed to fetch download stats for ${packageName}: ${response.statusText}`
+    );
+    return null;
+  }
+
+  const data = await response.json();
+  return data.data;
+}
+
+// Function to fetch and process statistics for a PyPI package
+async function getPypiStats(packageName) {
+  try {
+    const stats = await fetchPypiDownloadStats(packageName);
+    if (!stats) return null;
+
+    return {
+      last_day: stats.last_day,
+      last_week: stats.last_week,
+      last_month: stats.last_month,
+    };
+  } catch (error) {
+    console.error(`Error fetching PyPI stats for ${packageName}:`, error);
+    return null;
+  }
+}
+
 // Function to calculate average downloads from the statistics
 function calculateAverageDownloads(stats) {
   return stats.downloads.reduce(
@@ -253,29 +286,40 @@ async function getAllStats(npmPackages) {
 
   // Fetch stats for each package and period
   await Promise.all(
-    npmPackages.map(async (packageName) => {
+    npmPackages.map(async (packageData) => {
       try {
-        // Fetch stats for different periods
-        const [dayStats, weekStats, yearStats, totalStats] = await Promise.all([
-          getStats(packageName, "last-day"),
-          getStats(packageName, "last-week"),
-          getStats(packageName, "last-year"),
-          getStats(packageName, "1000-01-01:3000-01-01"),
-        ]);
+        let stats;
+        if (packageData.type === "npm") {
+          const [dayStats, weekStats, yearStats, totalStats] =
+            await Promise.all([
+              getStats(packageData.name, "last-day"),
+              getStats(packageData.name, "last-week"),
+              getStats(packageData.name, "last-year"),
+              getStats(packageData.name, "1000-01-01:3000-01-01"),
+            ]);
 
-        // If any stats exist, add to the map
-        if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
-          statsMap.push({
-            name: packageName,
+          stats = {
+            name: packageData.name,
+            type: "npm",
             day: dayStats,
             week: weekStats,
             year: yearStats,
             total: totalStats,
-          });
+          };
+        } else if (packageData.type === "pypi") {
+          const pypiStats = await getPypiStats(packageData.name);
+          stats = {
+            name: packageData.name,
+            type: "pypi",
+            ...pypiStats,
+          };
+        }
+
+        if (stats) {
+          statsMap.push(stats);
         }
       } catch (error) {
-        // Log and handle errors
-        console.error(`Error fetching stats for ${packageName}:`, error);
+        console.error(`Error fetching stats for ${packageData.name}:`, error);
       }
     })
   );
