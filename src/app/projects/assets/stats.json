@@ -19,5 +19,12 @@
     "week": 7,
     "year": 1063,
     "total": 1063
+  },
+  {
+    "name": "neo-pusher",
+    "type": "pypi",
+    "last_day": 1,
+    "last_week": 70,
+    "last_month": 1000
   }
 ]
