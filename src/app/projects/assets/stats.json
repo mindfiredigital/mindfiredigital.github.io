@@ -1,6 +1,7 @@
 [
   {
     "name": "fmdapi-node-weaver",
+    "type":"npm",
     "day": 0,
     "week": 3,
     "year": 70,
@@ -8,6 +9,7 @@
   },
   {
     "name": "react-canvas-editor",
+     "type":"npm",
     "day": 1,
     "week": 22,
     "year": 947,
@@ -15,6 +17,7 @@
   },
   {
     "name": "canvas-editor",
+    "type":"npm",
     "day": 0,
     "week": 7,
     "year": 1063,
