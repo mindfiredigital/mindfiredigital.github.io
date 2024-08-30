@@ -35,7 +35,14 @@ const Stats = () => {
   const [count, setCount] = useState(0);
   const [selectedRange, setSelectedRange] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
+  const [selectedPackage, setSelectedPackage] = useState<Package>({
+    name: "fmdapi-node-weaver",
+    type: "npm",
+    day: 0,
+    week: 3,
+    year: 70,
+    total: 70,
+  });
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [packages, setPackages] = useState<Package[]>(statsList as Package[]);
 
@@ -47,9 +54,9 @@ const Stats = () => {
   useEffect(() => {
     if (selectedPackage) {
       setCount(
-        selectedPackage?.type === "npm"
+        selectedPackage.type === "npm"
           ? selectedPackage.total || 0
-          : selectedPackage?.last_month || 0
+          : selectedPackage.last_month || 0
       ); //update total count when npmPackage is updated
     }
   }, [selectedPackage]);
@@ -57,9 +64,9 @@ const Stats = () => {
   function openModal() {
     setIsOpen(true);
     setCount(
-      selectedPackage?.type === "npm"
+      selectedPackage.type === "npm"
         ? selectedPackage.total || 0
-        : selectedPackage?.last_month || 0
+        : selectedPackage.last_month || 0
     );
   }
 
@@ -198,9 +205,9 @@ const Stats = () => {
       }
     }
   }
-
+  console.log("selecyed package 1", selectedPackage);
   const generateChart = async () => {
-    if (selectedPackage?.type === "npm") {
+    if (selectedPackage.type === "npm") {
       const stats = await fetchNpmStats(
         selectedPackage.name,
         `${startDate}:${endDate}`
@@ -208,9 +215,12 @@ const Stats = () => {
       setCount(calculateDownloads(stats));
     }
   };
+  console.log("selecyed package 2", selectedPackage);
 
   useEffect(() => {
-    if (selectedRange && selectedPackage?.type === "npm") {
+    console.log("selecyed package 3", selectedPackage);
+
+    if (selectedRange && selectedPackage.type === "npm") {
       generateChart();
     }
   }, [startDate, endDate, selectedRange, selectedPackage]);
@@ -378,7 +388,7 @@ const Stats = () => {
                       as='h1'
                       className='text-lg font-large leading-6 text-gray-900 capitalize text-center mb-4 font-extrabold'
                     >
-                      {selectedPackage?.name.replaceAll("-", " ")}
+                      {selectedPackage.name.replaceAll("-", " ")}
                     </Dialog.Title>
                     <div className='border p-4 rounded bg-white flex flex-col justify-stretch'>
                       <div className='mb-4 flex justify-center items-center'>
@@ -386,7 +396,7 @@ const Stats = () => {
                           Select
                         </p>
                         <div className='relative inline-block w-32'>
-                          {selectedPackage?.type === "npm" ? (
+                          {selectedPackage.type === "npm" ? (
                             <select
                               id='range'
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
@@ -406,13 +416,13 @@ const Stats = () => {
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
                               onChange={handleChange}
                             >
-                              <option value={selectedPackage?.last_day}>
+                              <option value={selectedPackage.last_day}>
                                 Yesterday
                               </option>
-                              <option value={selectedPackage?.last_week}>
+                              <option value={selectedPackage.last_week}>
                                 Last week
                               </option>
-                              <option value={selectedPackage?.last_month}>
+                              <option value={selectedPackage.last_month}>
                                 Last month
                               </option>
                             </select>
@@ -437,7 +447,7 @@ const Stats = () => {
                       </div>
 
                       <div className='flex flex-col items-center'>
-                        {selectedRange && selectedPackage?.type === "npm" ? (
+                        {selectedRange && selectedPackage.type === "npm" ? (
                           <div className='container bg-white'>
                             <div className='flex ml-6 mb-4'>
                               <div className='mr-1'>
