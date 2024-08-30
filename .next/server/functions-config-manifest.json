@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "functions": {
+    "/about": {},
+    "/current-projects": {},
+    "/join-us": {},
+    "/projects": {},
+    "/upcoming-projects": {}
+  }
+}

@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/home/runner/work/mindfiredigital.github.io/mindfiredigital.github.io/src/app/layout":["static/media/120a5a1920781bd0-s.p.woff2","static/media/6ebb97b5c9fa4e03-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

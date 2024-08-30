@@ -1,0 +1,16 @@
+{
+  "/_not-found": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/contributors/page": "/contributors",
+  "/cookie-policy/page": "/cookie-policy",
+  "/github/page": "/github",
+  "/packages/page": "/packages",
+  "/terms-of-use/page": "/terms-of-use",
+  "/privacy-policy/page": "/privacy-policy",
+  "/join-us/page": "/join-us",
+  "/current-projects/page": "/current-projects",
+  "/about/page": "/about",
+  "/upcoming-projects/page": "/upcoming-projects",
+  "/projects/page": "/projects"
+}
