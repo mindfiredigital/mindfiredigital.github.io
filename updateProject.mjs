@@ -244,9 +244,9 @@ async function getPypiStats(packageName) {
     if (!stats) return null;
 
     return {
-      last_day: stats.last_day,
-      last_week: stats.last_week,
-      last_month: stats.last_month,
+      last_day: stats.data.last_day,
+      last_week: stats.data.last_week,
+      last_month: stats.data.last_month,
     };
   } catch (error) {
     console.error(`Error fetching PyPI stats for ${packageName}:`, error);
