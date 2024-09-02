@@ -4,7 +4,6 @@ import React, { useEffect, useState, Fragment } from "react";
 import statsList from "../projects/assets/stats.json";
 import Link from "next/link";
 import npm from "../../../public/images/social-media/npm-svgrepo-com.svg";
-import pypi from "../../../public/images/social-media/pypi-svg.svg";
 import filter from "../../../public/images/social-media/bx-filter-alt.svg";
 import download from "../../../public/images/bxs-download.svg";
 import github from "../../../public/images/bxl-github.svg";
@@ -12,39 +11,31 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import moment from "moment";
 
-type Package = {
-  name: string;
-  type: "npm" | "pypi";
-  day?: number;
-  week?: number;
-  year?: number;
-  total?: number;
-  last_day?: number;
-  last_week?: number;
-  last_month?: number;
+type stats = {
+  downloads: download[];
 };
 
-type NpmStats = {
-  downloads: { downloads: number; day: string }[];
+type download = {
+  downloads: number;
+  day: string;
 };
 
 const Stats = () => {
   const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
   const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // State to track loading status
   const [count, setCount] = useState(0);
   const [selectedRange, setSelectedRange] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<Package>({
+  const [npmPackage, setNpmPackage] = useState({
     name: "fmdapi-node-weaver",
-    type: "npm",
     day: 0,
     week: 3,
     year: 70,
     total: 70,
   });
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [packages, setPackages] = useState<Package[]>(statsList as Package[]);
+  const [packages, setPackages] = useState(statsList);
 
   function closeModal() {
     setIsOpen(false);
@@ -52,28 +43,18 @@ const Stats = () => {
   }
 
   useEffect(() => {
-    if (selectedPackage) {
-      setCount(
-        selectedPackage.type === "npm"
-          ? selectedPackage.total || 0
-          : selectedPackage.last_month || 0
-      ); //update total count when npmPackage is updated
+    if (npmPackage) {
+      setCount(npmPackage.total); //update total count when npmPackage is updated
     }
-  }, [selectedPackage]);
+  }, [npmPackage]);
 
   function openModal() {
     setIsOpen(true);
-    setCount(
-      selectedPackage.type === "npm"
-        ? selectedPackage.total || 0
-        : selectedPackage.last_month || 0
-    );
+    setCount(npmPackage.total);
   }
 
-  async function fetchNpmStats(
-    packageName: string,
-    period: string
-  ): Promise<NpmStats> {
+  // Function to fetch download statistics for a given package and period
+  async function fetchDownloadStats(packageName: string, period: string) {
     setLoading(true);
     const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
     const response = await fetch(url);
@@ -83,7 +64,6 @@ const Stats = () => {
         `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
       );
       setLoading(false);
-      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data = await response.json();
@@ -91,37 +71,67 @@ const Stats = () => {
     return data;
   }
 
-  function calculateDownloads(stats: NpmStats): number {
+  function calculateDownloads(stats: stats): number {
     if (!stats || !stats.downloads) {
-      return 0;
+      return 0; // Return 0 if stats or stats.downloads is undefined
     }
     return stats.downloads.reduce(
-      (acc, download) => acc + download.downloads,
+      (accumulator, download) => accumulator + download.downloads,
       0
     );
   }
 
-  function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    if (!selectedPackage) return;
+  // Function to fetch and process statistics for a package and period
+  async function getStats(packageName: string, period: string) {
+    try {
+      // Fetch download statistics
+      const stats = await fetchDownloadStats(packageName, period);
 
-    const range = getDateRange(event.target.value);
+      // Check if stats exist
+      if (!stats || !stats.package) return 0;
 
-    if (selectedPackage.type === "npm") {
-      fetchNpmStats(selectedPackage.name, `${range.start}:${range.end}`).then(
-        (res) => {
-          setLoading(true);
-          const count = calculateDownloads(res);
+      // Calculate average downloads
+      return stats;
+    } catch (error) {
+      // Log and handle errors
+      console.error(`${packageName} not present`);
+      return 0;
+    }
+  }
+  function handleChange(
+    event: React.ChangeEvent<HTMLSelectElement>,
+    _package: {
+      name: string;
+      day: number;
+      week: number;
+      year: number;
+      total: number;
+    }
+  ) {
+    const range: { start: string; end: string } = getDateRange(
+      event.target.value as string
+    );
+
+    getStats(_package.name, `${range?.start}:${range?.end}`).then((res) => {
+      setLoading(true);
+      const count = calculateDownloads(res);
+      // console.log(count);
+
+      packages.map((npmPackage) => {
+        if (npmPackage.name === _package.name) {
           setCount(count);
           setLoading(false);
         }
-      );
-    } else if (selectedPackage.type === "pypi") {
-      setCount(Number(event.target.value) || 0);
-    }
+        return npmPackage;
+      });
+    });
   }
 
   function formatDate(date: Date) {
-    return date.toISOString().split("T")[0];
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
   }
 
   function getDateRange(range: string) {
@@ -131,12 +141,13 @@ const Stats = () => {
     const currentDay = currentDate.getDate();
 
     switch (range.toLowerCase()) {
-      case "today":
+      case "today": {
         setSelectedRange(false);
         return {
           start: formatDate(new Date(currentYear, currentMonth, currentDay)),
           end: formatDate(new Date(currentYear, currentMonth, currentDay)),
         };
+      }
       case "yesterday": {
         setSelectedRange(false);
         const yesterdayDate = new Date(
@@ -158,17 +169,9 @@ const Stats = () => {
           end: formatDate(lastMonthEndDate),
         };
       }
-      case "this month": {
-        setSelectedRange(false);
-        const thisMonthStartDate = new Date(currentYear, currentMonth, 1);
-        return {
-          start: formatDate(thisMonthStartDate),
-          end: formatDate(currentDate),
-        };
-      }
       case "last quarter": {
         setSelectedRange(false);
-        const quarterStartMonth = Math.floor(currentMonth / 3) * 3;
+        const quarterStartMonth = Math.floor(currentMonth / 3) * 3; // Get the start month of the current quarter
         const lastQuarterStartDate = new Date(
           currentYear,
           quarterStartMonth - 3,
@@ -188,6 +191,14 @@ const Stats = () => {
           end: formatDate(currentDate),
         };
       }
+      case "this month": {
+        setSelectedRange(false);
+        const thisMonthStartDate = new Date(currentYear, currentMonth, 1);
+        return {
+          start: formatDate(thisMonthStartDate),
+          end: formatDate(currentDate),
+        };
+      }
       case "custom": {
         setSelectedRange(true);
         setCount(0);
@@ -196,34 +207,26 @@ const Stats = () => {
           end: formatDate(new Date(currentYear, currentMonth, currentDay)),
         };
       }
-      default: {
+      default:
         setSelectedRange(false);
         return {
           start: "1000-01-01",
           end: "3000-01-01",
         };
-      }
     }
   }
-  console.log("selecyed package 1", selectedPackage);
+
   const generateChart = async () => {
-    if (selectedPackage.type === "npm") {
-      const stats = await fetchNpmStats(
-        selectedPackage.name,
-        `${startDate}:${endDate}`
-      );
-      setCount(calculateDownloads(stats));
-    }
+    const stats = await fetchDownloadStats(
+      npmPackage.name,
+      `${startDate}:${endDate}`
+    );
+    setCount(calculateDownloads(stats));
   };
-  console.log("selecyed package 2", selectedPackage);
 
   useEffect(() => {
-    console.log("selecyed package 3", selectedPackage);
-
-    if (selectedRange && selectedPackage.type === "npm") {
-      generateChart();
-    }
-  }, [startDate, endDate, selectedRange, selectedPackage]);
+    generateChart();
+  }, [startDate, endDate]);
 
   return (
     <section className='bg-slate-50'>
@@ -235,16 +238,16 @@ const Stats = () => {
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
-        <div className='flex flex-col gap-4 flex-wrap lg:flex-row justify-center'>
-          {packages.map((package_item) => (
+        <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
+          {packages.map((package_list) => (
             <div
-              key={package_item.name}
+              key={package_list.name}
               className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md w-80 hover:scale-105'
             >
               <div className='flex flex-row items-start justify-between'>
                 <div>
                   <h3 className='font-semibold mb-2 ml-2 text-mindfire-text-black capitalize'>
-                    {package_item.name.replaceAll("-", " ")}
+                    {package_list.name.replaceAll("-", " ")}
                   </h3>
                 </div>
                 <div className='flex flex-row'>
@@ -252,7 +255,7 @@ const Stats = () => {
                     <button
                       className='font-bold px-2 py-1 rounded inline-flex items-center'
                       onClick={() => {
-                        setSelectedPackage(package_item);
+                        setNpmPackage(package_list);
                         openModal();
                       }}
                       title='Filter'
@@ -283,9 +286,7 @@ const Stats = () => {
                       />
                       <div>
                         <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                          {package_item.type === "pypi"
-                            ? package_item.last_month
-                            : package_item.total}
+                          {package_list.total}
                         </h6>
                       </div>
                     </div>
@@ -297,19 +298,15 @@ const Stats = () => {
                 <div className='mt-8 mr-1 flex flex-row items-center space-x-1'>
                   <div>
                     <Link
-                      href={
-                        package_item.type === "npm"
-                          ? `https://www.npmjs.com/package/@mindfiredigital/${package_item.name}`
-                          : `https://pypi.org/project/${package_item.name}/`
-                      }
+                      href={`https://www.npmjs.com/package/@mindfiredigital/${package_list.name}`}
                       target='_blank'
                       title='View Package'
                     >
                       <Image
-                        src={package_item.type === "pypi" ? pypi : npm}
+                        src={npm}
                         height={35}
                         width={35}
-                        alt='package_img'
+                        alt='npm_img'
                         loading='lazy'
                         quality={75}
                       />
@@ -317,7 +314,7 @@ const Stats = () => {
                   </div>
                   <div>
                     <Link
-                      href={`https://github.com/mindfiredigital/${package_item.name}`}
+                      href={`https://github.com/mindfiredigital/${package_list.name}`}
                       target='_blank'
                       title='Github'
                     >
@@ -325,7 +322,7 @@ const Stats = () => {
                         src={github}
                         height={30}
                         width={30}
-                        alt='github_img'
+                        alt='npm_img'
                         loading='lazy'
                         quality={75}
                       />
@@ -388,45 +385,31 @@ const Stats = () => {
                       as='h1'
                       className='text-lg font-large leading-6 text-gray-900 capitalize text-center mb-4 font-extrabold'
                     >
-                      {selectedPackage.name.replaceAll("-", " ")}
+                      {npmPackage.name.replaceAll("-", " ")}
                     </Dialog.Title>
-                    <div className='border p-4 rounded bg-white flex flex-col justify-stretch'>
+                    <div
+                      key={npmPackage.name}
+                      className='border p-4 rounded bg-white flex flex-col justify-stretch'
+                    >
                       <div className='mb-4 flex justify-center items-center'>
                         <p className='text-mindfire-text-black text-xm font-bold mr-2'>
                           Select
                         </p>
                         <div className='relative inline-block w-32'>
-                          {selectedPackage.type === "npm" ? (
-                            <select
-                              id='range'
-                              className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
-                              onChange={handleChange}
-                            >
-                              <option value='Today'>Today</option>
-                              <option value='Yesterday'>Yesterday</option>
-                              <option value='Last month'>Last month</option>
-                              <option value='this month'>This month</option>
-                              <option value='last quarter'>Last quarter</option>
-                              <option value='this year'>This year</option>
-                              <option value='custom'>Custom Range</option>
-                            </select>
-                          ) : (
-                            <select
-                              id='range'
-                              className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
-                              onChange={handleChange}
-                            >
-                              <option value={selectedPackage.last_day}>
-                                Yesterday
-                              </option>
-                              <option value={selectedPackage.last_week}>
-                                Last week
-                              </option>
-                              <option value={selectedPackage.last_month}>
-                                Last month
-                              </option>
-                            </select>
-                          )}
+                          <select
+                            id='range'
+                            className='bg-gray-50 border text-gray-900 text-sm rounded-lg  block w-full p-1 appearance-none outline-none'
+                            onChange={(e) => handleChange(e, npmPackage)}
+                          >
+                            <option value='total'>Total</option>
+                            <option value='Today'>Today</option>
+                            <option value='Yesterday'>Yesterday</option>
+                            <option value='Last month'>Last month</option>
+                            <option value='this month'>This month</option>
+                            <option value='last quarter'>Last quarter</option>
+                            <option value='this year'>This year</option>
+                            <option value='custom'>Custom Range</option>
+                          </select>
                           <div className='absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none'>
                             <svg
                               className='w-4 h-4 fill-current text-gray-500'
@@ -447,8 +430,8 @@ const Stats = () => {
                       </div>
 
                       <div className='flex flex-col items-center'>
-                        {selectedRange && selectedPackage.type === "npm" ? (
-                          <div className='container bg-white'>
+                        {selectedRange === true ? (
+                          <div className='container  bg-white'>
                             <div className='flex ml-6 mb-4'>
                               <div className='mr-1'>
                                 <label
@@ -481,45 +464,87 @@ const Stats = () => {
                                 />
                               </div>
                             </div>
-                          </div>
-                        ) : null}
-                        <div className='flex flex-col items-center mt-4'>
-                          <div className='flex justify-around w-full'>
-                            <div className='flex flex-col items-center'>
-                              <div className='flex flex-row items-center space-x-1'>
-                                <Image
-                                  src={download}
-                                  height={20}
-                                  width={20}
-                                  alt='expand_img'
-                                  loading='lazy'
-                                  quality={75}
-                                />
-                                <div>
-                                  {loading ? (
-                                    <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
-                                      <svg
-                                        className='animate-spin h-5 w-5 mr-3 ...'
-                                        viewBox='0 0 24 24'
-                                      >
-                                        {" "}
-                                      </svg>
+                            <div className='flex flex-col items-center mt-4'>
+                              <div className='flex justify-around w-full'>
+                                <div className='flex flex-col items-center'>
+                                  <div className='flex flex-row items-center space-x-1'>
+                                    <Image
+                                      src={download}
+                                      height={20}
+                                      width={20}
+                                      alt='expand_img'
+                                      loading='lazy'
+                                      quality={75}
+                                    />
+                                    <div>
+                                      {loading ? (
+                                        // Render loading indicator while count is being fetched
+                                        <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
+                                          <svg
+                                            className='animate-spin h-5 w-5 mr-3 ...'
+                                            viewBox='0 0 24 24'
+                                          >
+                                            {" "}
+                                          </svg>
+                                        </div>
+                                      ) : (
+                                        // Render count when it is available
+                                        <h6 className='text-mindfire-text-black font-semibold text-xl'>
+                                          {count}
+                                        </h6>
+                                      )}
                                     </div>
-                                  ) : (
-                                    <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                                      {count}
-                                    </h6>
-                                  )}
+                                  </div>
+                                  <div className='mt-2 ml-2'>
+                                    <p className='text-mindfire-text-black text-xm'>
+                                      Downloads
+                                    </p>
+                                  </div>
                                 </div>
-                              </div>
-                              <div className='mt-2 ml-2'>
-                                <p className='text-mindfire-text-black text-xm'>
-                                  Downloads
-                                </p>
                               </div>
                             </div>
                           </div>
-                        </div>
+                        ) : (
+                          <div className='flex flex-col items-center mt-4'>
+                            <div className='flex justify-around w-full'>
+                              <div className='flex flex-col items-center'>
+                                <div className='flex flex-row items-center space-x-1'>
+                                  <Image
+                                    src={download}
+                                    height={20}
+                                    width={20}
+                                    alt='expand_img'
+                                    loading='lazy'
+                                    quality={75}
+                                  />
+                                  <div>
+                                    {loading ? (
+                                      // Render loading indicator while count is being fetched
+                                      <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
+                                        <svg
+                                          className='animate-spin h-5 w-5 mr-3 ...'
+                                          viewBox='0 0 24 24'
+                                        >
+                                          {" "}
+                                        </svg>
+                                      </div>
+                                    ) : (
+                                      // Render count when it is available
+                                      <h6 className='text-mindfire-text-black font-semibold text-xl'>
+                                        {count}
+                                      </h6>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className='mt-2 ml-2'>
+                                  <p className='text-mindfire-text-black text-xm'>
+                                    Downloads
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </Dialog.Panel>
