@@ -188,8 +188,13 @@ async function updateProjects() {
       JSON.stringify(sortedContributions, null, 2)
     );
     console.log("Contributors list updated successfully.");
-
-    getAllStats(repoNames)
+    const npmPackages = [
+      "fmdapi-node-weaver",
+      "react-canvas-editor",
+      "canvas-editor",
+    ];
+    const pypiPackages = ["neo-pusher"];
+    getAllStats(npmPackages, pypiPackages)
       .then((statsMap) => {
         fs.writeFileSync(
           path.join(__dirname, "src/app/projects/assets/stats.json"),
@@ -221,6 +226,22 @@ async function fetchDownloadStats(packageName, period) {
   return data;
 }
 
+// Function to fetch PyPI download statistics for a given package
+async function fetchPyPIDownloadStats(packageName) {
+  const url = `https://pypistats.org/api/packages/${packageName}/recent`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    console.log(
+      `Failed to fetch download stats for ${packageName} (PyPI): ${response.statusText}`
+    );
+    return null;
+  }
+
+  const data = await response.json();
+  return data.data; // { last_day, last_week, last_month }
+}
+
 // Function to calculate average downloads from the statistics
 function calculateAverageDownloads(stats) {
   return stats.downloads.reduce(
@@ -229,8 +250,8 @@ function calculateAverageDownloads(stats) {
   );
 }
 
-// Function to fetch and process statistics for a package and period
-async function getStats(packageName, period) {
+// Function to fetch and process statistics for a package and period (npm)
+async function getNpmStats(packageName, period) {
   try {
     // Fetch download statistics
     const stats = await fetchDownloadStats(packageName, period);
@@ -247,26 +268,25 @@ async function getStats(packageName, period) {
   }
 }
 
-// Function to fetch and aggregate statistics for all packages and periods
-async function getAllStats(npmPackages) {
+// Function to fetch and aggregate statistics for all npm and PyPI packages
+async function getAllStats(npmPackages, pypiPackages) {
   const statsMap = [];
 
-  // Fetch stats for each package and period
+  // Fetch stats for npm packages
   await Promise.all(
     npmPackages.map(async (packageName) => {
       try {
-        // Fetch stats for different periods
         const [dayStats, weekStats, yearStats, totalStats] = await Promise.all([
-          getStats(packageName, "last-day"),
-          getStats(packageName, "last-week"),
-          getStats(packageName, "last-year"),
-          getStats(packageName, "1000-01-01:3000-01-01"),
+          getNpmStats(packageName, "last-day"),
+          getNpmStats(packageName, "last-week"),
+          getNpmStats(packageName, "last-year"),
+          getNpmStats(packageName, "1000-01-01:3000-01-01"),
         ]);
 
-        // If any stats exist, add to the map
         if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
           statsMap.push({
             name: packageName,
+            type: "npm",
             day: dayStats,
             week: weekStats,
             year: yearStats,
@@ -274,8 +294,29 @@ async function getAllStats(npmPackages) {
           });
         }
       } catch (error) {
-        // Log and handle errors
         console.error(`Error fetching stats for ${packageName}:`, error);
+      }
+    })
+  );
+
+  // Fetch stats for PyPI packages
+  await Promise.all(
+    pypiPackages.map(async (packageName) => {
+      try {
+        const stats = await fetchPyPIDownloadStats(packageName);
+
+        if (stats) {
+          statsMap.push({
+            name: packageName,
+            type: "pypi",
+            last_day: stats.last_day,
+            last_week: stats.last_week,
+            last_month: stats.last_month,
+            total: stats.last_month,
+          });
+        }
+      } catch (error) {
+        console.error(`Error fetching stats for ${packageName} (PyPI):`, error);
       }
     })
   );
