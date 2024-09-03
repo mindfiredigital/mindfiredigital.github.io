@@ -192,6 +192,7 @@ async function updateProjects() {
       "fmdapi-node-weaver",
       "react-canvas-editor",
       "canvas-editor",
+      "react-text-igniter",
     ];
     const pypiPackages = ["neo-pusher"];
     getAllStats(npmPackages, pypiPackages)

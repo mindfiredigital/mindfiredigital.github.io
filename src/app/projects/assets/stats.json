@@ -30,5 +30,13 @@
     "last_week": 935,
     "last_month": 1011,
     "total": 1011
+  },
+  {
+    "name": "react-text-igniter",
+    "type": "npm",
+    "day": 1,
+    "week": 1,
+    "year": 1,
+    "total": 1
   }
 ]
