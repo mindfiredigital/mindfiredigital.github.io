@@ -8,20 +8,20 @@
     "total": 94
   },
   {
-    "name": "react-text-igniter",
-    "type": "npm",
-    "day": 72,
-    "week": 230,
-    "year": 230,
-    "total": 230
-  },
-  {
     "name": "canvas-editor",
     "type": "npm",
     "day": 1,
     "week": 19,
     "year": 1426,
     "total": 1426
+  },
+  {
+    "name": "react-text-igniter",
+    "type": "npm",
+    "day": 72,
+    "week": 230,
+    "year": 230,
+    "total": 230
   },
   {
     "name": "react-canvas-editor",

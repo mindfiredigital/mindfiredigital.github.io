@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fetch data from an API endpoint
@@ -227,7 +228,7 @@ async function updateProjects() {
           JSON.stringify(statsMap, null, 2)
         );
 
-        console.log("Status list updated successfully.");
+        console.log("Stats list updated successfully.");
       })
       .catch((error) => {
         console.error("Error fetching stats:", error);
