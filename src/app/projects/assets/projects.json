@@ -110,5 +110,33 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android"
+  },
+  {
+    "id": 15,
+    "title": "neo-pusher",
+    "short_description": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
+    "github_repository_link": "https://github.com/mindfiredigital/neo-pusher",
+    "documentation_link": "https://pypi.org/project/neo-pusher/",
+    "project_type": "current",
+    "date_created": "2024-08-28T11:26:33.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
+    "githubUrl": "https://github.com/mindfiredigital/neo-pusher",
+    "documentationUrl": "https://pypi.org/project/neo-pusher/"
+  },
+  {
+    "id": 16,
+    "title": "react-text-igniter",
+    "short_description": "A powerful and intuitive HTML Editor built with React.js.",
+    "github_repository_link": "https://github.com/mindfiredigital/react-text-igniter",
+    "documentation_link": "https://github.com/mindfiredigital/react-text-igniter",
+    "project_type": "current",
+    "date_created": "2024-09-03T11:15:08.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A powerful and intuitive HTML Editor built with React.js.",
+    "githubUrl": "https://github.com/mindfiredigital/react-text-igniter",
+    "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter"
   }
 ]
