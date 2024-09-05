@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
-// updateProjects.mjs
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fetch data from an API endpoint
@@ -331,6 +330,7 @@ async function getAllStats(npmPackages, pypiPackages) {
     pypiPackages.map(async (packageName) => {
       try {
         const stats = await fetchPyPIDownloadStats(packageName);
+        const totalDownloads = await fetchTotalDownloads(packageName);
 
         if (stats) {
           statsMap.push({
@@ -339,7 +339,7 @@ async function getAllStats(npmPackages, pypiPackages) {
             last_day: stats.last_day,
             last_week: stats.last_week,
             last_month: stats.last_month,
-            total: stats.last_month,
+            total: totalDownloads || stats.last_month,
           });
         }
       } catch (error) {

@@ -1,19 +1,11 @@
 [
   {
-    "name": "react-canvas-editor",
+    "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
-    "week": 32,
-    "year": 1514,
-    "total": 1514
-  },
-  {
-    "name": "canvas-editor",
-    "type": "npm",
-    "day": 1,
-    "week": 19,
-    "year": 1426,
-    "total": 1426
+    "week": 1,
+    "year": 94,
+    "total": 94
   },
   {
     "name": "react-text-igniter",
@@ -24,12 +16,20 @@
     "total": 230
   },
   {
-    "name": "fmdapi-node-weaver",
+    "name": "canvas-editor",
+    "type": "npm",
+    "day": 1,
+    "week": 19,
+    "year": 1426,
+    "total": 1426
+  },
+  {
+    "name": "react-canvas-editor",
     "type": "npm",
     "day": 0,
-    "week": 1,
-    "year": 94,
-    "total": 94
+    "week": 32,
+    "year": 1514,
+    "total": 1514
   },
   {
     "name": "neo-pusher",
@@ -37,6 +37,6 @@
     "last_day": 14,
     "last_week": 376,
     "last_month": 1341,
-    "total": 1341
+    "total": 3633
   }
 ]

@@ -53,21 +53,13 @@ const Stats = () => {
 
   useEffect(() => {
     if (selectedPackage) {
-      setCount(
-        selectedPackage.type === "npm"
-          ? selectedPackage.total || 0
-          : selectedPackage.last_month || 0
-      ); //update total count when npmPackage is updated
+      setCount(selectedPackage.total || 0); //update total count when npmPackage is updated
     }
   }, [selectedPackage]);
 
   function openModal() {
     setIsOpen(true);
-    setCount(
-      selectedPackage.type === "npm"
-        ? selectedPackage.total || 0
-        : selectedPackage.last_month || 0
-    );
+    setCount(selectedPackage.total || 0);
   }
 
   async function fetchNpmStats(
@@ -279,9 +271,7 @@ const Stats = () => {
                       />
                       <div>
                         <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                          {package_item.type === "pypi"
-                            ? package_item.last_month
-                            : package_item.total}
+                          {package_item.total}
                         </h6>
                       </div>
                     </div>
@@ -398,6 +388,9 @@ const Stats = () => {
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
                               onChange={handleChange}
                             >
+                              <option value={selectedPackage.total}>
+                                Total
+                              </option>
                               <option value='Today'>Today</option>
                               <option value='Yesterday'>Yesterday</option>
                               <option value='Last month'>Last month</option>
@@ -412,6 +405,9 @@ const Stats = () => {
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
                               onChange={handleChange}
                             >
+                              <option value={selectedPackage.total}>
+                                Total
+                              </option>
                               <option value={selectedPackage.last_month}>
                                 Last month
                               </option>
