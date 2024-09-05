@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-// updateProjects.mjs
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -228,7 +228,7 @@ async function updateProjects() {
           JSON.stringify(statsMap, null, 2)
         );
 
-        console.log("Status list updated successfully.");
+        console.log("Stats list updated successfully.");
       })
       .catch((error) => {
         console.error("Error fetching stats:", error);
@@ -331,6 +331,7 @@ async function getAllStats(npmPackages, pypiPackages) {
     pypiPackages.map(async (packageName) => {
       try {
         const stats = await fetchPyPIDownloadStats(packageName);
+        const totalDownloads = await fetchTotalDownloads(packageName);
 
         if (stats) {
           statsMap.push({
@@ -339,7 +340,7 @@ async function getAllStats(npmPackages, pypiPackages) {
             last_day: stats.last_day,
             last_week: stats.last_week,
             last_month: stats.last_month,
-            total: stats.last_month,
+            total: totalDownloads || stats.last_month,
           });
         }
       } catch (error) {
