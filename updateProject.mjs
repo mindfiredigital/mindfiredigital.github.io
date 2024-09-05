@@ -6,7 +6,6 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Function to fetch data from an API endpoint
 async function fetchData(url, options) {
   const response = await fetch(url, options);
@@ -24,11 +23,29 @@ async function fetchCollaborators(url, githubToken) {
       Accept: "application/vnd.github.v3+json",
     },
   };
-  return await fetchData(url, options);
+  try {
+    const data = await fetchData(url, options);
+    // New: Check if the response is an array (valid collaborators data)
+    if (Array.isArray(data)) {
+      return data;
+    } else {
+      console.log(`No collaborators found or invalid response for URL: ${url}`);
+      return [];
+    }
+  } catch (error) {
+    console.error(`Error fetching collaborators from ${url}:`, error.message);
+    return [];
+  }
 }
 
 // Function to get collaborators of a repository
 async function getCollaborators(repoData, githubToken) {
+  // Check if contributors_url exists
+  if (!repoData.contributors_url) {
+    console.log(`No contributors URL found for repository: ${repoData.name}`);
+    return [];
+  }
+
   if (repoData.fork && repoData.parent?.contributors_url) {
     // If the repository is a fork and has a parent, fetch collaborators from both
     const [c1, c2] = await Promise.all([
@@ -138,19 +155,28 @@ async function updateProjects() {
     const repoNames = repositories.map((repo) => repo.name);
     const contributorsObject = {};
     for (const repoName of repoNames) {
-      const repoData = await fetchData(
-        `https://api.github.com/repos/mindfiredigital/${repoName}`,
-        {
-          headers: {
-            Authorization: `token ${githubToken}`,
-            Accept: "application/vnd.github.v3+json",
-          },
+      try {
+        const repoData = await fetchData(
+          `https://api.github.com/repos/mindfiredigital/${repoName}`,
+          {
+            headers: {
+              Authorization: `token ${githubToken}`,
+              Accept: "application/vnd.github.v3+json",
+            },
+          }
+        );
+        const contributors = await getCollaborators(repoData, githubToken);
+        if (contributors.length > 0) {
+          contributorsObject[repoName] = contributors;
+        } else {
+          console.log(`No contributors found for repository: ${repoName}`);
         }
-      );
-      contributorsObject[repoName] = await getCollaborators(
-        repoData,
-        githubToken
-      );
+      } catch (error) {
+        console.error(
+          `Error processing repository ${repoName}:`,
+          error.message
+        );
+      }
     }
 
     // Aggregate contributor from contributors
