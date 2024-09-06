@@ -2,40 +2,40 @@
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "last_day": 14,
-    "last_week": 376,
-    "last_month": 1341,
-    "total": 3633
+    "last_day": 136,
+    "last_week": 466,
+    "last_month": 1477,
+    "total": 3951
   },
   {
     "name": "react-canvas-editor",
     "type": "npm",
-    "day": 0,
+    "day": 1,
     "week": 32,
-    "year": 1514,
-    "total": 1514
+    "year": 1515,
+    "total": 1515
   },
   {
     "name": "canvas-editor",
     "type": "npm",
     "day": 1,
     "week": 19,
-    "year": 1426,
-    "total": 1426
+    "year": 1427,
+    "total": 1427
   },
   {
     "name": "react-text-igniter",
     "type": "npm",
-    "day": 72,
-    "week": 230,
-    "year": 230,
-    "total": 230
+    "day": 133,
+    "week": 363,
+    "year": 363,
+    "total": 363
   },
   {
     "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
-    "week": 1,
+    "week": 0,
     "year": 94,
     "total": 94
   }

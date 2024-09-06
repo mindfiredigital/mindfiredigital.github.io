@@ -348,7 +348,7 @@ async function getAllStats(npmPackages, pypiPackages) {
       }
     })
   );
-
+  statsMap.sort((a, b) => b.total - a.total);
   return statsMap;
 }
 
