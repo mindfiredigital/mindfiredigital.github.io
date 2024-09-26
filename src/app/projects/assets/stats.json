@@ -1,42 +1,50 @@
 [
   {
+    "name": "eslint-plugin-hub",
+    "type": "npm",
+    "day": 7,
+    "week": 19757,
+    "year": 19757,
+    "total": 19757
+  },
+  {
     "name": "neo-pusher",
     "type": "pypi",
-    "last_day": 136,
-    "last_week": 466,
-    "last_month": 1477,
-    "total": 3951
+    "last_day": 0,
+    "last_week": 17,
+    "last_month": 1451,
+    "total": 5212
   },
   {
     "name": "react-canvas-editor",
     "type": "npm",
     "day": 1,
-    "week": 32,
-    "year": 1515,
-    "total": 1515
+    "week": 3,
+    "year": 1526,
+    "total": 1526
   },
   {
     "name": "canvas-editor",
     "type": "npm",
-    "day": 1,
-    "week": 19,
-    "year": 1427,
-    "total": 1427
+    "day": 0,
+    "week": 0,
+    "year": 1444,
+    "total": 1444
   },
   {
     "name": "react-text-igniter",
     "type": "npm",
-    "day": 133,
-    "week": 363,
-    "year": 363,
-    "total": 363
+    "day": 0,
+    "week": 1,
+    "year": 1189,
+    "total": 1189
   },
   {
     "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
     "week": 0,
-    "year": 94,
-    "total": 94
+    "year": 96,
+    "total": 96
   }
 ]
