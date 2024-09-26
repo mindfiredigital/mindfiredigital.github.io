@@ -15,7 +15,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "pre-commit": "npm run check-format && npm run check-lint && npm run check-types",
     "update-projects": "node updateProject.mjs",
-    "pypi-check": "node check.mjs"
+    "pypi-check": "node pypiTotalStats.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
