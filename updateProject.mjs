@@ -220,6 +220,7 @@ async function updateProjects() {
       "canvas-editor",
       "react-text-igniter",
       "eslint-plugin-hub",
+      "textigniterjs",
     ];
     const pypiPackages = ["neo-pusher"];
     getAllStats(npmPackages, pypiPackages)
