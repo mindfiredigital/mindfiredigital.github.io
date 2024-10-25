@@ -2,49 +2,57 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 7,
-    "week": 19757,
-    "year": 19757,
-    "total": 19757
+    "day": 2,
+    "week": 3024,
+    "year": 37349,
+    "total": 37349
   },
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "last_day": 0,
-    "last_week": 17,
-    "last_month": 1451,
-    "total": 5212
-  },
-  {
-    "name": "react-canvas-editor",
-    "type": "npm",
-    "day": 1,
-    "week": 3,
-    "year": 1526,
-    "total": 1526
+    "last_day": 5,
+    "last_week": 165,
+    "last_month": 992,
+    "total": 6628
   },
   {
     "name": "canvas-editor",
     "type": "npm",
+    "day": 1,
+    "week": 2,
+    "year": 1379,
+    "total": 1654
+  },
+  {
+    "name": "react-canvas-editor",
+    "type": "npm",
     "day": 0,
-    "week": 0,
-    "year": 1444,
-    "total": 1444
+    "week": 9,
+    "year": 1536,
+    "total": 1536
   },
   {
     "name": "react-text-igniter",
     "type": "npm",
+    "day": 1,
+    "week": 34,
+    "year": 1230,
+    "total": 1230
+  },
+  {
+    "name": "textigniterjs",
+    "type": "npm",
     "day": 0,
-    "week": 1,
-    "year": 1189,
-    "total": 1189
+    "week": 6,
+    "year": 299,
+    "total": 299
   },
   {
     "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
-    "week": 0,
-    "year": 96,
-    "total": 96
+    "week": 1,
+    "year": 98,
+    "total": 98
   }
 ]

@@ -82,5 +82,19 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
     "documentationUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit"
+  },
+  {
+    "id": 17,
+    "title": "SQLRAG",
+    "short_description": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
+    "github_repository_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "documentation_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "project_type": "upcoming",
+    "date_created": "2024-10-01T08:02:59.000Z",
+    "date_updated": null,
+    "status": "draft",
+    "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
+    "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
+    "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/"
   }
 ]
