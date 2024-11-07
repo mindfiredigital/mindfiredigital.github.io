@@ -1,24 +1,18 @@
 import axios from "axios";
-import * as cheerio from "cheerio";
 
 export async function fetchTotalDownloads(packageName) {
-  const url = `https://www.pepy.tech/projects/${packageName}`;
+  const url = `https://pypistats.org/api/packages/${packageName}/overall`;
 
   try {
     const { data } = await axios.get(url);
-    const $ = cheerio.load(data);
-    const totalDownloadsText = $(
-      '.MuiPaper-root[data-cy="summary"] .MuiGrid-item:nth-of-type(4)'
-    )
-      .text()
-      .trim();
-    const totalDownloads = parseInt(
-      totalDownloadsText.replace(/[^\d]/g, ""),
-      10
+    // Sum total downloads from all platforms (overall)
+    const totalDownloads = data.data.reduce(
+      (sum, entry) => sum + entry.downloads,
+      0
     );
-    return totalDownloads || 0;
+    return totalDownloads;
   } catch (error) {
-    console.error(`Error fetching data for ${packageName}:`, error);
+    console.error(`Error fetching download data for ${packageName}:`, error);
     return 0;
   }
 }
