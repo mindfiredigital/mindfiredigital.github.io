@@ -223,104 +223,108 @@ const Stats = () => {
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
-        <div className='flex flex-col gap-4 flex-wrap lg:flex-row justify-center'>
-          {packages.map((package_item) => (
-            <div
-              key={package_item.name}
-              className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md w-80 hover:scale-105'
-            >
-              <div className='flex flex-row items-start justify-between'>
-                <div>
-                  <h3 className='font-semibold mb-2 ml-2 text-mindfire-text-black capitalize'>
-                    {package_item.name.replaceAll("-", " ")}
-                  </h3>
-                </div>
-                <div className='flex flex-row'>
+        <div className='lg:mx-36 md:mx-24 sm:mx-20 '>
+          <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
+            {packages.map((package_item) => (
+              <div
+                key={package_item.name}
+                className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md w-80 hover:scale-105'
+              >
+                <div className='flex flex-row items-start justify-between'>
                   <div>
-                    <button
-                      className='font-bold px-2 py-1 rounded inline-flex items-center'
-                      onClick={() => {
-                        setSelectedPackage(package_item);
-                        openModal();
-                      }}
-                      title='Filter'
-                    >
-                      <Image
-                        src={filter}
-                        height={20}
-                        width={20}
-                        alt='expand_img'
-                        loading='lazy'
-                        quality={75}
-                      />
-                    </button>
+                    <h3 className='font-semibold mb-2 ml-2 text-mindfire-text-black capitalize'>
+                      {package_item.name.replaceAll("-", " ")}
+                    </h3>
+                  </div>
+                  <div className='flex flex-row'>
+                    <div>
+                      <button
+                        className='font-bold px-2 py-1 rounded inline-flex items-center'
+                        onClick={() => {
+                          setSelectedPackage(package_item);
+                          openModal();
+                        }}
+                        title='Filter'
+                      >
+                        <Image
+                          src={filter}
+                          height={20}
+                          width={20}
+                          alt='expand_img'
+                          loading='lazy'
+                          quality={75}
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='flex flex-row items-center mt-4'>
-                <div className='flex justify-around w-full'>
-                  <div className='flex flex-col mr-auto ml-2'>
-                    <div className='flex flex-row items-center space-x-1'>
-                      <Image
-                        src={download}
-                        height={20}
-                        width={20}
-                        alt='expand_img'
-                        loading='lazy'
-                        quality={75}
-                      />
-                      <div>
-                        <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                          {package_item.total}
-                        </h6>
+                <div className='flex flex-row items-center mt-4'>
+                  <div className='flex justify-around w-full'>
+                    <div className='flex flex-col mr-auto ml-2'>
+                      <div className='flex flex-row items-center space-x-1'>
+                        <Image
+                          src={download}
+                          height={20}
+                          width={20}
+                          alt='expand_img'
+                          loading='lazy'
+                          quality={75}
+                        />
+                        <div>
+                          <h6 className='text-mindfire-text-black font-semibold text-xl'>
+                            {new Intl.NumberFormat("en-US").format(
+                              package_item.total ?? 0
+                            )}
+                          </h6>
+                        </div>
+                      </div>
+                      <div className='mt-2'>
+                        <p className='text-gray-500 text-xm'>Downloads</p>
                       </div>
                     </div>
-                    <div className='mt-2'>
-                      <p className='text-gray-500 text-xm'>Downloads</p>
+                  </div>
+                  <div className='mt-8 mr-1 flex flex-row items-center space-x-1'>
+                    <div>
+                      <Link
+                        href={
+                          package_item.type === "npm"
+                            ? `https://www.npmjs.com/package/@mindfiredigital/${package_item.name}`
+                            : `https://pypi.org/project/${package_item.name}/`
+                        }
+                        target='_blank'
+                        title='View Package'
+                      >
+                        <Image
+                          src={package_item.type === "pypi" ? pypi : npm}
+                          height={35}
+                          width={35}
+                          alt='package_img'
+                          loading='lazy'
+                          quality={75}
+                        />
+                      </Link>
+                    </div>
+                    <div>
+                      <Link
+                        href={`https://github.com/mindfiredigital/${package_item.name}`}
+                        target='_blank'
+                        title='Github'
+                      >
+                        <Image
+                          src={github}
+                          height={30}
+                          width={30}
+                          alt='github_img'
+                          loading='lazy'
+                          quality={75}
+                        />
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <div className='mt-8 mr-1 flex flex-row items-center space-x-1'>
-                  <div>
-                    <Link
-                      href={
-                        package_item.type === "npm"
-                          ? `https://www.npmjs.com/package/@mindfiredigital/${package_item.name}`
-                          : `https://pypi.org/project/${package_item.name}/`
-                      }
-                      target='_blank'
-                      title='View Package'
-                    >
-                      <Image
-                        src={package_item.type === "pypi" ? pypi : npm}
-                        height={35}
-                        width={35}
-                        alt='package_img'
-                        loading='lazy'
-                        quality={75}
-                      />
-                    </Link>
-                  </div>
-                  <div>
-                    <Link
-                      href={`https://github.com/mindfiredigital/${package_item.name}`}
-                      target='_blank'
-                      title='Github'
-                    >
-                      <Image
-                        src={github}
-                        height={30}
-                        width={30}
-                        alt='github_img'
-                        loading='lazy'
-                        quality={75}
-                      />
-                    </Link>
-                  </div>
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <Transition appear show={isOpen} as={Fragment}>
@@ -499,7 +503,9 @@ const Stats = () => {
                                     </div>
                                   ) : (
                                     <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                                      {count}
+                                      {new Intl.NumberFormat("en-US").format(
+                                        count
+                                      )}
                                     </h6>
                                   )}
                                 </div>
