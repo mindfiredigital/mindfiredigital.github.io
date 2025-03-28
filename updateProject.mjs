@@ -217,12 +217,17 @@ async function updateProjects() {
     const npmPackages = [
       "fmdapi-node-weaver",
       "react-canvas-editor",
+      "angular-canvas-editor",
       "canvas-editor",
       "react-text-igniter",
       "eslint-plugin-hub",
       "textigniterjs",
+      "pivothead",
+      "page-builder-core",
+      "page-builder-react",
+      "page-builder-web-component",
     ];
-    const pypiPackages = ["neo-pusher"];
+    const pypiPackages = ["neo-pusher", "sqlrag"];
     getAllStats(npmPackages, pypiPackages)
       .then((statsMap) => {
         fs.writeFileSync(
