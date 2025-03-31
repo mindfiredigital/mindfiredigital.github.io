@@ -223,7 +223,7 @@ async function updateProjects() {
       "eslint-plugin-hub",
       "textigniterjs",
       "pivothead",
-      "page-builder-core",
+      "page-builder",
       "page-builder-react",
       "page-builder-web-component",
     ];
