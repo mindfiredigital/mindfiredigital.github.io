@@ -193,15 +193,57 @@ async function updateProjects() {
           const { login, contributions, id, avatar_url, html_url } =
             contributor;
           // Update contributions map
-          contributionsMap[login] = {
-            id,
-            contributions:
-              (contributionsMap[login]?.contributions || 0) + contributions,
-            html_url,
-            avatar_url,
-            login,
-          };
+          if (!contributionsMap[login]) {
+            contributionsMap[login] = {
+              id,
+              contributions: contributions,
+              html_url,
+              avatar_url,
+              login,
+              totalPRs: 0,
+              totalIssues: 0,
+            };
+          } else {
+            contributionsMap[login].contributions += contributions;
+          }
         });
+      }
+    }
+
+    // Fetch Pull Requests and Issues for each contributor
+    for (const login in contributionsMap) {
+      try {
+        // Fetch total PRs for the contributor across all repos
+        const pullRequestsResponse = await fetchData(
+          `https://api.github.com/search/issues?q=type:pr+author:${login}+org:mindfiredigital`,
+          {
+            headers: {
+              Authorization: `token ${githubToken}`,
+              Accept: "application/vnd.github.v3+json",
+            },
+          }
+        );
+
+        // Fetch total issues for the contributor across all repos
+        const issuesResponse = await fetchData(
+          `https://api.github.com/search/issues?q=type:issue+author:${login}+org:mindfiredigital`,
+          {
+            headers: {
+              Authorization: `token ${githubToken}`,
+              Accept: "application/vnd.github.v3+json",
+            },
+          }
+        );
+
+        contributionsMap[login].totalPRs =
+          pullRequestsResponse.total_count || 0;
+        contributionsMap[login].totalIssues = issuesResponse.total_count || 0;
+
+        // Add a small delay to avoid hitting rate limits
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      } catch (error) {
+        console.error(`Error fetching PRs/Issues for ${login}:`, error.message);
+        // If there's an error, we'll keep the default values of 0
       }
     }
 
@@ -244,7 +286,6 @@ async function updateProjects() {
     console.error("An error occurred:", error);
   }
 }
-
 // Function to fetch download statistics for a given package and period
 async function fetchDownloadStats(packageName, period) {
   const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
