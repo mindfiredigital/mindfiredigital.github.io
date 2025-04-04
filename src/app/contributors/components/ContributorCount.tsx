@@ -43,7 +43,7 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
           height={20}
           width={20}
           alt='github_contributors'
-          className='mb-[7px]'
+          className='animate-bounce mb-[7px]'
         />
       </div>
       <BorderBeam
