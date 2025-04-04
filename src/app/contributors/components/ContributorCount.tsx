@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import github from "../../../../public/images/social-media/github.png";
+import github from "../../../../public/images/social-media/gitprofile.png";
 import { BorderBeam } from "./BorderBeam";
 
 interface ContributorCountProps {
@@ -40,10 +40,10 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
 
         <Image
           src={github}
-          height={28}
-          width={28}
+          height={20}
+          width={20}
           alt='github_contributors'
-          className='animate-pulse'
+          className='mb-[7px]'
         />
       </div>
       <BorderBeam
