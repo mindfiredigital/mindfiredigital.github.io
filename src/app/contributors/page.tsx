@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import React from "react";
 import github from "../../../public/images/social-media/github.png";
@@ -8,16 +6,21 @@ import prImg from "../../../public/images/social-media/pull-request.svg";
 import issueImg from "../../../public/images/social-media/git-issue.svg";
 import Image from "next/image";
 import contributorList from "../projects/assets/contributors.json";
+import ContributorCount from "./components/ContributorCount";
 
 const Contributors = () => {
   const contributorsArray = Object.values(contributorList);
+
   return (
     <>
       <section className='bg-slate-50'>
         <div className='container mx-auto text-center'>
-          <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black mt-10'>
-            Our Contributors
-          </h1>
+          <div className='flex items-center justify-center gap-4 mt-10'>
+            <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+              Our Contributors
+            </h1>
+            <ContributorCount totalContributors={contributorsArray.length} />
+          </div>
           <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10'>
             We’re a dynamic group of individuals who are passionate about what
             we do.
