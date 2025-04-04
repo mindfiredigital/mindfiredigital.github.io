@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import github from "../../../../public/images/social-media/github.png";
+import { BorderBeam } from "./BorderBeam";
 
 interface ContributorCountProps {
   totalContributors: number;
@@ -30,16 +31,25 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
   }, [totalContributors]);
 
   return (
-    <div className='flex items-center gap-3 bg-white rounded-full shadow-lg py-2 px-4 hover:shadow-xl transition-shadow duration-300'>
-      <span className='text-2xl font-bold bg-gradient-to-r from-mindfire-orange to-orange-500 bg-clip-text text-black'>
-        {count}
-      </span>
-      <Image
-        src={github}
-        height={28}
-        width={28}
-        alt='github_contributors'
-        className='animate-pulse'
+    <div className='relative rounded-full'>
+      {/* Actual content */}
+      <div className='relative flex items-center gap-3 bg-white/90 border border-gray-200 backdrop-blur-sm rounded-full shadow-lg py-2 px-4 hover:shadow-xl transition-shadow duration-300'>
+        <span className='text-3xl font-bold bg-gradient-to-r from-mindfire-text-red to-orange-500 bg-clip-text text-transparent'>
+          {count}
+        </span>
+
+        <Image
+          src={github}
+          height={28}
+          width={28}
+          alt='github_contributors'
+          className='animate-pulse'
+        />
+      </div>
+      <BorderBeam
+        duration={4}
+        size={50}
+        className='from-transparent via-mindfire-text-red to-transparent'
       />
     </div>
   );

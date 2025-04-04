@@ -49,6 +49,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.0",
+    "motion": "^12.6.3",
     "postcss": "^8",
     "prettier": "^3.1.1",
     "serve": "^14.2.1",
