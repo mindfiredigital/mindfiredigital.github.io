@@ -1,0 +1,48 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import github from "../../../../public/images/social-media/github.png";
+
+interface ContributorCountProps {
+  totalContributors: number;
+}
+
+const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = totalContributors / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= totalContributors) {
+        setCount(totalContributors);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [totalContributors]);
+
+  return (
+    <div className='flex items-center gap-3 bg-white rounded-full shadow-lg py-2 px-4 hover:shadow-xl transition-shadow duration-300'>
+      <span className='text-2xl font-bold bg-gradient-to-r from-mindfire-orange to-orange-500 bg-clip-text text-black'>
+        {count}
+      </span>
+      <Image
+        src={github}
+        height={28}
+        width={28}
+        alt='github_contributors'
+        className='animate-pulse'
+      />
+    </div>
+  );
+};
+
+export default ContributorCount;
