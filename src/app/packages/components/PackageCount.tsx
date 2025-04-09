@@ -13,7 +13,7 @@ const PackageCount = ({ totalPackages }: PackageCountProps) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const duration = 1000; // 1 second
+    const duration = 800; // 1 second
     const steps = 60;
     const increment = totalPackages / steps;
     let current = 0;
