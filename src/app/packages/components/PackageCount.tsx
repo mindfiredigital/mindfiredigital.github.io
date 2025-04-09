@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import npm from "../../../../public/images/social-media/fire.gif";
+import npm from "../../../../public/images/social-media/package.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 
 interface PackageCountProps {
@@ -41,7 +41,7 @@ const PackageCount = ({ totalPackages }: PackageCountProps) => {
           height={30}
           width={30}
           alt='total_packages'
-          className='rounded-3xl'
+          className='rounded-3xl animate-bounce'
         />
       </div>
       <BorderBeam
