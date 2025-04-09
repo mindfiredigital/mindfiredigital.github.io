@@ -215,24 +215,45 @@ async function updateProjects() {
     );
     console.log("Contributors list updated successfully.");
     const npmPackages = [
-      "fmdapi-node-weaver",
-      "react-canvas-editor",
-      "angular-canvas-editor",
-      "canvas-editor",
-      "react-text-igniter",
-      "eslint-plugin-hub",
-      "textigniterjs",
-      "pivothead",
-      "page-builder",
-      "page-builder-react",
-      "page-builder-web-component",
+      { name: "fmdapi-node-weaver", title: "FMDAPI Node Weaver" },
+      { name: "react-canvas-editor", title: "Canvas Editor (React)" },
+      { name: "angular-canvas-editor", title: "Canvas Editor (Angular)" },
+      { name: "canvas-editor", title: "Canvas Editor" },
+      { name: "react-text-igniter", title: "Text Igniter (React)" },
+      { name: "eslint-plugin-hub", title: "ESLint Plugin Hub" },
+      { name: "textigniterjs", title: "Text Igniter JS" },
+      { name: "pivothead", title: "Pivot Head" },
+      { name: "page-builder", title: "Page Builder" },
+      { name: "page-builder-react", title: "Page Builder (React)" },
+      {
+        name: "page-builder-web-component",
+        title: "Page Builder (Web Component)",
+      },
     ];
-    const pypiPackages = ["neo-pusher", "sqlrag"];
-    getAllStats(npmPackages, pypiPackages)
+    const pypiPackages = [
+      { name: "neo-pusher", title: "Neo Pusher" },
+      { name: "sqlrag", title: "SQL RAG" },
+    ];
+    getAllStats(
+      npmPackages.map((p) => p.name),
+      pypiPackages.map((p) => p.name)
+    )
       .then((statsMap) => {
+        // Add titles to the stats map
+        const statsWithTitles = Object.entries(statsMap).reduce(
+          (acc, [key, value]) => {
+            const npmPackage = npmPackages.find((p) => p.name === key);
+            const pypiPackage = pypiPackages.find((p) => p.name === key);
+            const title = npmPackage?.title || pypiPackage?.title || key;
+            acc[key] = { ...value, title };
+            return acc;
+          },
+          {}
+        );
+
         fs.writeFileSync(
           path.join(__dirname, "src/app/projects/assets/stats.json"),
-          JSON.stringify(statsMap, null, 2)
+          JSON.stringify(statsWithTitles, null, 2)
         );
 
         console.log("Stats list updated successfully.");
@@ -304,7 +325,7 @@ async function getNpmStats(packageName, period) {
 
 // Function to fetch and aggregate statistics for all npm and PyPI packages
 async function getAllStats(npmPackages, pypiPackages) {
-  const statsMap = [];
+  const statsMap = {};
 
   // Fetch stats for npm packages
   await Promise.all(
@@ -318,14 +339,14 @@ async function getAllStats(npmPackages, pypiPackages) {
         ]);
 
         if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
-          statsMap.push({
+          statsMap[packageName] = {
             name: packageName,
             type: "npm",
             day: dayStats,
             week: weekStats,
             year: yearStats,
             total: totalStats,
-          });
+          };
         }
       } catch (error) {
         console.error(`Error fetching stats for ${packageName}:`, error);
@@ -341,22 +362,27 @@ async function getAllStats(npmPackages, pypiPackages) {
         const totalDownloads = await fetchTotalDownloads(packageName);
 
         if (stats) {
-          statsMap.push({
+          statsMap[packageName] = {
             name: packageName,
             type: "pypi",
             last_day: stats.last_day,
             last_week: stats.last_week,
             last_month: stats.last_month,
             total: totalDownloads || stats.last_month,
-          });
+          };
         }
       } catch (error) {
         console.error(`Error fetching stats for ${packageName} (PyPI):`, error);
       }
     })
   );
-  statsMap.sort((a, b) => b.total - a.total);
-  return statsMap;
+  const sortedStatsMap = Object.values(statsMap).sort(
+    (a, b) => b.total - a.total
+  );
+  return sortedStatsMap.reduce(
+    (acc, value) => ({ ...acc, [value.name]: value }),
+    {}
+  );
 }
 
 // Call the main function
