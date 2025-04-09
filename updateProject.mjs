@@ -239,17 +239,13 @@ async function updateProjects() {
       pypiPackages.map((p) => p.name)
     )
       .then((statsMap) => {
-        // Add titles to the stats map
-        const statsWithTitles = Object.entries(statsMap).reduce(
-          (acc, [key, value]) => {
-            const npmPackage = npmPackages.find((p) => p.name === key);
-            const pypiPackage = pypiPackages.find((p) => p.name === key);
-            const title = npmPackage?.title || pypiPackage?.title || key;
-            acc[key] = { ...value, title };
-            return acc;
-          },
-          {}
-        );
+        // Add titles to the stats array
+        const statsWithTitles = Object.values(statsMap).map((value) => {
+          const npmPackage = npmPackages.find((p) => p.name === value.name);
+          const pypiPackage = pypiPackages.find((p) => p.name === value.name);
+          const title = npmPackage?.title || pypiPackage?.title || value.name;
+          return { ...value, title };
+        }).sort((a, b) => b.total - a.total);
 
         fs.writeFileSync(
           path.join(__dirname, "src/app/projects/assets/stats.json"),
@@ -376,13 +372,8 @@ async function getAllStats(npmPackages, pypiPackages) {
       }
     })
   );
-  const sortedStatsMap = Object.values(statsMap).sort(
-    (a, b) => b.total - a.total
-  );
-  return sortedStatsMap.reduce(
-    (acc, value) => ({ ...acc, [value.name]: value }),
-    {}
-  );
+
+  return Object.values(statsMap);
 }
 
 // Call the main function
