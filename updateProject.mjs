@@ -240,12 +240,14 @@ async function updateProjects() {
     )
       .then((statsMap) => {
         // Add titles to the stats array
-        const statsWithTitles = Object.values(statsMap).map((value) => {
-          const npmPackage = npmPackages.find((p) => p.name === value.name);
-          const pypiPackage = pypiPackages.find((p) => p.name === value.name);
-          const title = npmPackage?.title || pypiPackage?.title || value.name;
-          return { ...value, title };
-        }).sort((a, b) => b.total - a.total);
+        const statsWithTitles = Object.values(statsMap)
+          .map((value) => {
+            const npmPackage = npmPackages.find((p) => p.name === value.name);
+            const pypiPackage = pypiPackages.find((p) => p.name === value.name);
+            const title = npmPackage?.title || pypiPackage?.title || value.name;
+            return { ...value, title };
+          })
+          .sort((a, b) => b.total - a.total);
 
         fs.writeFileSync(
           path.join(__dirname, "src/app/projects/assets/stats.json"),
