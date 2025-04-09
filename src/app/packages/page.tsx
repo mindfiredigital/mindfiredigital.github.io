@@ -15,6 +15,7 @@ import PackageCount from "./components/PackageCount";
 
 type Package = {
   name: string;
+  title: string;
   type: "npm" | "pypi";
   day?: number;
   week?: number;
@@ -38,6 +39,7 @@ const Stats = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<Package>({
     name: "fmdapi-node-weaver",
+    title: "FMD API Node Weaver",
     type: "npm",
     day: 0,
     week: 3,
@@ -237,7 +239,7 @@ const Stats = () => {
                 <div className='flex flex-row items-start justify-between'>
                   <div>
                     <h3 className='font-semibold mb-2 ml-2 text-mindfire-text-black capitalize'>
-                      {package_item.name.replaceAll("-", " ")}
+                      {package_item.title}
                     </h3>
                   </div>
                   <div className='flex flex-row'>
@@ -382,7 +384,7 @@ const Stats = () => {
                       as='h1'
                       className='text-lg font-large leading-6 text-gray-900 capitalize text-center mb-4 font-extrabold'
                     >
-                      {selectedPackage.name.replaceAll("-", " ")}
+                      {selectedPackage.title}
                     </Dialog.Title>
                     <div className='border p-4 rounded bg-white flex flex-col justify-stretch'>
                       <div className='mb-4 flex justify-center items-center'>
