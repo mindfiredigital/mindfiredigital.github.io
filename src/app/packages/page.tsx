@@ -11,6 +11,7 @@ import github from "../../../public/images/bxl-github.svg";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import moment from "moment";
+import PackageCount from "./components/PackageCount";
 
 type Package = {
   name: string;
@@ -216,9 +217,12 @@ const Stats = () => {
   return (
     <section className='bg-slate-50'>
       <div className='container mx-auto flex flex-col gap-4 items-center'>
-        <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black mt-10'>
-          Our Packages
-        </h1>
+        <div className='flex items-center gap-4 mt-10'>
+          <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+            Our Packages
+          </h1>
+          <PackageCount totalPackages={packages.length} />
+        </div>
         <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center'>
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
