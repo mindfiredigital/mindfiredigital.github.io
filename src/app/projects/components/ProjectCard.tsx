@@ -25,7 +25,7 @@ export default function ProjectCard({
   tags,
 }: Props) {
   return (
-    <div className='border-2 p-8 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70'>
+    <div className='border-2 p-8 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full'>
       <div className='flex justify-between items-start'>
         <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black capitalize'>
           {title}
@@ -41,11 +41,11 @@ export default function ProjectCard({
         {shortDescription}
       </p>
       {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
-        <div className='flex flex-wrap gap-2 mt-4'>
+        <div className='flex flex-wrap gap-2 mt-4 max-w-full'>
           {tags.map((tag, index) => (
             <span
               key={index}
-              className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500'
+              className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate'
             >
               {tag}
             </span>

@@ -61,6 +61,42 @@ async function getCollaborators(repoData, githubToken) {
   return fetchCollaborators(repoData.contributors_url, githubToken);
 }
 
+// Function to get repository data including topics
+async function getRepoData(owner, repo) {
+  if (!owner || !repo) return null;
+  try {
+    const [repoResponse, topicsResponse] = await Promise.all([
+      fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      }),
+      fetch(`https://api.github.com/repos/${owner}/${repo}/topics`, {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Accept: "application/vnd.github.mercy-preview+json",
+        },
+      }),
+    ]);
+
+    if (!repoResponse.ok || !topicsResponse.ok) {
+      console.error(`Failed to fetch data for ${owner}/${repo}`);
+      return null;
+    }
+
+    const repoData = await repoResponse.json();
+    const topicsData = await topicsResponse.json();
+
+    return {
+      ...repoData,
+      topics: topicsData.names || [],
+    };
+  } catch (error) {
+    console.error(`Error fetching repo data for ${owner}/${repo}:`, error);
+    return null;
+  }
+}
+
 // Main function to update projects data
 async function updateProjects() {
   const githubToken = process.env.GITHUB_TOKEN;
@@ -122,32 +158,13 @@ async function updateProjects() {
     // Process and write data for current projects
     const currentProjects = await Promise.all(
       currentProjectsData.data.foss_projects.map(async (entry) => {
-        // Find matching repository from GitHub data
         const repoUrl = entry.github_repository_link;
-        const repoName = repoUrl ? repoUrl.split("/").pop() : null;
-        const repoData = repositories.find((repo) => repo.name === repoName);
+        const [owner, repo] =
+          repoUrl && repoUrl !== "NA"
+            ? repoUrl.replace("https://github.com/", "").split("/")
+            : [null, null];
 
-        // Get repository tags
-        let tags = [];
-        if (repoData) {
-          try {
-            const tagsResponse = await fetchData(
-              `https://api.github.com/repos/mindfiredigital/${repoName}/tags`,
-              {
-                headers: {
-                  Authorization: `token ${githubToken}`,
-                  Accept: "application/vnd.github.v3+json",
-                },
-              }
-            );
-            tags = tagsResponse.map((tag) => tag.name);
-          } catch (error) {
-            console.error(
-              `Error fetching tags for ${repoName}:`,
-              error.message
-            );
-          }
-        }
+        const repoData = await getRepoData(owner, repo);
 
         return {
           ...entry,
@@ -156,7 +173,7 @@ async function updateProjects() {
           githubUrl: entry.github_repository_link,
           documentationUrl: entry.documentation_link,
           stars: repoData ? repoData.stargazers_count : 0,
-          tags: tags,
+          tags: repoData ? repoData.topics.slice(0, 5) : [],
         };
       })
     );
@@ -187,15 +204,7 @@ async function updateProjects() {
     const contributorsObject = {};
     for (const repoName of repoNames) {
       try {
-        const repoData = await fetchData(
-          `https://api.github.com/repos/mindfiredigital/${repoName}`,
-          {
-            headers: {
-              Authorization: `token ${githubToken}`,
-              Accept: "application/vnd.github.v3+json",
-            },
-          }
-        );
+        const repoData = await getRepoData("mindfiredigital", repoName);
         const contributors = await getCollaborators(repoData, githubToken);
         if (contributors.length > 0) {
           contributorsObject[repoName] = contributors;
