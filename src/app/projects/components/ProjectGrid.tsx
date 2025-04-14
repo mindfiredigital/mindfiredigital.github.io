@@ -22,6 +22,10 @@ interface Props {
 }
 
 export default function ProjectGrid({ title, projectData }: Props) {
+  const sortedProjects = [...projectData].sort(
+    (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
+  );
+
   return (
     <section className='mt-20' id='all-projects'>
       <div className='flex justify-center items-center gap-4'>
@@ -31,7 +35,7 @@ export default function ProjectGrid({ title, projectData }: Props) {
         <ProjectCount totalProjects={projectData.length} />
       </div>
       <div className='mt-12 px-4 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
-        {projectData.map(
+        {sortedProjects.map(
           (
             {
               title: projectTitle,
