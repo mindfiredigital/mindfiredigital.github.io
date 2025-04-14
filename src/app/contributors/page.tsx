@@ -33,15 +33,19 @@ const Contributors = () => {
             <h2 className='text-2xl font-medium text-gray-800 mb-6'>
               Top Contributors
             </h2>
+            <p className='text-xl text-mf-light-grey tracking-wide mb-2'>
+              Meet our top six contributors — the people who help turn ideas
+              into impact.
+            </p>
             <TopContributors contributors={sortedContributors} />
           </div>
 
           {/* All Contributors Section */}
-          <div className='mt-16 flex flex-col items-center justify-center'>
-            <h2 className='text-2xl font-medium text-gray-800 mb-8'>
+          <div className='mt-12 flex flex-col items-center justify-center'>
+            <h2 className='text-2xl font-medium text-gray-800 mb-6'>
               All Contributors
             </h2>
-            <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10'>
+            <p className='text-xl text-mf-light-grey tracking-wide mb-10'>
               We’re a dynamic group of individuals who are passionate about what
               we do.
             </p>
