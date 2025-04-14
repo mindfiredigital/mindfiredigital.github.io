@@ -120,13 +120,44 @@ async function updateProjects() {
       ]);
 
     // Process and write data for current projects
-    const currentProjects = currentProjectsData.data.foss_projects.map(
-      (entry) => ({
-        ...entry,
-        id: parseInt(entry.id),
-        shortDescription: entry.short_description,
-        githubUrl: entry.github_repository_link,
-        documentationUrl: entry.documentation_link,
+    const currentProjects = await Promise.all(
+      currentProjectsData.data.foss_projects.map(async (entry) => {
+        // Find matching repository from GitHub data
+        const repoUrl = entry.github_repository_link;
+        const repoName = repoUrl ? repoUrl.split("/").pop() : null;
+        const repoData = repositories.find((repo) => repo.name === repoName);
+
+        // Get repository tags
+        let tags = [];
+        if (repoData) {
+          try {
+            const tagsResponse = await fetchData(
+              `https://api.github.com/repos/mindfiredigital/${repoName}/tags`,
+              {
+                headers: {
+                  Authorization: `token ${githubToken}`,
+                  Accept: "application/vnd.github.v3+json",
+                },
+              }
+            );
+            tags = tagsResponse.map((tag) => tag.name);
+          } catch (error) {
+            console.error(
+              `Error fetching tags for ${repoName}:`,
+              error.message
+            );
+          }
+        }
+
+        return {
+          ...entry,
+          id: parseInt(entry.id),
+          shortDescription: entry.short_description,
+          githubUrl: entry.github_repository_link,
+          documentationUrl: entry.documentation_link,
+          stars: repoData ? repoData.stargazers_count : 0,
+          tags: tags,
+        };
       })
     );
     fs.writeFileSync(
