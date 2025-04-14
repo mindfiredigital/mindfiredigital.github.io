@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React from "react";
-import {useState} from 'react';
+import { useState } from "react";
 import github from "../../../../public/images/social-media/github.png";
 import docs from "../../../../public/images/social-media/docs.svg";
 import Image from "next/image";
@@ -28,7 +28,7 @@ export default function ProjectCard({
 }: Props) {
   const [showAllTags, setShowAllTags] = useState(false);
   const [expandDescription, setExpandDescription] = useState(false);
-  
+
   return (
     <div className='border-2 p-8 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-64 flex flex-col relative'>
       {/* Top content section */}
@@ -44,44 +44,52 @@ export default function ProjectCard({
             </div>
           )}
         </div>
-        
+
         {/*Description that expands on click */}
-        <div 
-          className={`mb-3 relative cursor-pointer ${expandDescription ? 'max-h-[72px] overflow-y-auto' : ''}`}
+        <div
+          className={`mb-3 relative cursor-pointer ${
+            expandDescription ? "max-h-[72px] overflow-y-auto" : ""
+          }`}
           onClick={() => setExpandDescription(!expandDescription)}
         >
-          <p className={`text-mf-dark tracking-wide leading-6 ${expandDescription ? '' : 'line-clamp-3'}`}>
+          <p
+            className={`text-mf-dark tracking-wide leading-6 ${
+              expandDescription ? "" : "line-clamp-3"
+            }`}
+          >
             {shortDescription}
           </p>
           {expandDescription && (
-            <span className="text-xs text-blue-500 mt-1 block">less</span>
+            <span className='text-xs text-blue-500 mt-1 block'>less</span>
           )}
         </div>
-        
+
         {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
           <div className='mb-2'>
-            <div className={`flex gap-2 max-w-full ${showAllTags ? 'overflow-x-auto pb-2' : 'overflow-hidden'}`}>
-              {showAllTags ? (
-                tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate flex-shrink-0'
-                  >
-                    {tag}
-                  </span>
-                ))
-              ) : (
-                tags.slice(0, 2).map((tag, index) => (
-                  <span
-                    key={index}
-                    className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate max-w-[100px]'
-                  >
-                    {tag}
-                  </span>
-                ))
-              )}
+            <div
+              className={`flex gap-2 max-w-full ${
+                showAllTags ? "overflow-x-auto pb-2" : "overflow-hidden"
+              }`}
+            >
+              {showAllTags
+                ? tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate flex-shrink-0'
+                    >
+                      {tag}
+                    </span>
+                  ))
+                : tags.slice(0, 2).map((tag, index) => (
+                    <span
+                      key={index}
+                      className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate max-w-[100px]'
+                    >
+                      {tag}
+                    </span>
+                  ))}
               {!showAllTags && tags.length > 2 && (
-                <button 
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAllTags(true);
@@ -92,7 +100,7 @@ export default function ProjectCard({
                 </button>
               )}
               {showAllTags && (
-                <button 
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAllTags(false);
@@ -106,7 +114,7 @@ export default function ProjectCard({
           </div>
         )}
       </div>
-      
+
       {/* Footer section  */}
       {parentTitle !== "Upcoming Projects" &&
         (githubUrl || documentationUrl) &&
@@ -136,7 +144,12 @@ export default function ProjectCard({
                   target='_blank'
                   className='flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors'
                 >
-                  <Image src={docs} height={20} width={20} alt='Documentation' />
+                  <Image
+                    src={docs}
+                    height={20}
+                    width={20}
+                    alt='Documentation'
+                  />
                   <span className='text-sm text-gray-600'>Docs</span>
                 </Link>
               )}
@@ -145,5 +158,4 @@ export default function ProjectCard({
         )}
     </div>
   );
-
 }
