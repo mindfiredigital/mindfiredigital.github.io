@@ -50,7 +50,7 @@ const Contributors = () => {
             <h2 className='text-2xl font-medium text-gray-800 mb-6'>
               Top Active Contributors
             </h2>
-            <p className='text-xl text-mf-light-grey tracking-wide mb-2'>
+            <p className='text-xl text-mf-light-grey tracking-wide mb-2 flex flex-wrap'>
               Meet our top six contributors — the people who help turn ideas
               into impact.
             </p>
@@ -58,7 +58,7 @@ const Contributors = () => {
           </div>
 
           {/* All Contributors Section */}
-          <div className='mt-12 flex flex-col items-center justify-center'>
+          <div className='mt-6 flex flex-col items-center justify-center'>
             <h2 className='text-2xl font-medium text-gray-800 mb-6'>
               All Contributors
             </h2>

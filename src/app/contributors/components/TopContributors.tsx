@@ -25,33 +25,35 @@ const TopContributors = ({ contributors }: TopContributorsProps) => {
   };
 
   return (
-    <div className='relative items-center max-w-5xl mx-auto px-4 py-8'>
+    <div className='relative items-center justify-center max-w-xl md:max-w-5xl px-2 sm:px-4 py-6'>
+      {/* Title for mobile visibility */}
       {/* Contributors scroll container */}
-      <div className='flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-px-6 px-8'>
+      <div className='flex gap-2 sm:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-2 sm:px-8 -mx-2 sm:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
         {contributors.slice(0, 6).map((contributor) => (
           <Link
             key={contributor.login}
             href={contributor.html_url}
             target='_blank'
-            className='flex-shrink-0 snap-center group'
+            className='flex-shrink-0 snap-center group w-[100px] sm:w-auto mx-1 sm:mx-0'
           >
-            <div className='flex flex-col items-center gap-2'>
-              {/* Avatar with gradient border */}
-              <div className='p-1 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
+            <div className='flex flex-col items-center gap-1 sm:gap-2'>
+              {/* Avatar with gradient border - smaller on mobile */}
+              <div className='p-0.5 sm:p-1 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
                 <div className='p-0.5 rounded-full bg-white'>
-                  <div className='relative w-20 h-20 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
+                  <div className='relative w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
                     <Image
                       src={contributor.avatar_url}
                       alt={contributor.login}
                       fill
                       className='object-cover'
+                      sizes='(max-width: 640px) 56px, 80px'
                     />
                   </div>
                 </div>
               </div>
-              {/* Username and contributions */}
-              <div className='text-center'>
-                <p className='font-medium text-sm text-gray-800 truncate max-w-[100px]'>
+              {/* Username and contributions - adjusted for mobile */}
+              <div className='text-center w-full'>
+                <p className='font-medium text-xs sm:text-sm text-gray-800 truncate max-w-[90px] sm:max-w-[100px]'>
                   {contributor.login}
                 </p>
                 <p className='text-xs text-gray-500'>
