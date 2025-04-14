@@ -87,6 +87,7 @@ bun start:build
 ## List of Contributors
 
 - [lakinmindfire](https://github.com/lakinmindfire)
+- [anandmindfire](https://github.com/anandmindfire)
 - [VershalaTandon](https://github.com/VershalaTandon)
 - [prashant-mindfire](https://github.com/prashant-mindfire)
 - [aryanxorian](https://github.com/aryanxorian)
