@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectCount from "./ProjectCount";
 
 interface Props {
   title: string;
@@ -15,15 +16,20 @@ interface Props {
     project_goal?: string | undefined;
     target_users?: string | undefined;
     risk?: string | undefined;
+    stars?: number;
+    tags?: string[];
   }[];
 }
 
 export default function ProjectGrid({ title, projectData }: Props) {
   return (
     <section className='mt-20' id='all-projects'>
-      <h2 className='tracking-wider text-3xl font-medium capitalize text-mindfire-text-black  text-center'>
-        {title}
-      </h2>
+      <div className='flex justify-center items-center gap-4'>
+        <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+          {title}
+        </h1>
+        <ProjectCount totalProjects={projectData.length} />
+      </div>
       <div className='mt-12 px-4 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
         {projectData.map(
           (
@@ -32,6 +38,8 @@ export default function ProjectGrid({ title, projectData }: Props) {
               shortDescription,
               githubUrl,
               documentationUrl,
+              stars,
+              tags,
             },
             index
           ) => {
@@ -43,6 +51,8 @@ export default function ProjectGrid({ title, projectData }: Props) {
                 shortDescription={shortDescription}
                 githubUrl={githubUrl}
                 documentationUrl={documentationUrl}
+                stars={stars}
+                tags={tags}
               />
             );
           }

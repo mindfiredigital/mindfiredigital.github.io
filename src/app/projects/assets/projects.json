@@ -11,7 +11,9 @@
     "status": "published",
     "shortDescription": "Multipage document editing in React with Canvas.",
     "githubUrl": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentationUrl": "https://mindfiredigital.github.io/react-canvas-editor/"
+    "documentationUrl": "https://mindfiredigital.github.io/react-canvas-editor/",
+    "stars": 248,
+    "tags": ["React", "Canvas", "Editor", "Multipage"]
   },
   {
     "id": 2,
@@ -25,7 +27,9 @@
     "status": "published",
     "shortDescription": "Multipage document editor based on HTML5 canvas.",
     "githubUrl": "https://github.com/mindfiredigital/canvas-editor",
-    "documentationUrl": "https://mindfiredigital.github.io/canvas-editor"
+    "documentationUrl": "https://mindfiredigital.github.io/canvas-editor",
+    "stars": 198,
+    "tags": ["HTML5", "Canvas", "Editor"]
   },
   {
     "id": 3,
@@ -39,7 +43,9 @@
     "status": "published",
     "shortDescription": "A multi-chain platform for fans to connect with their favorite celebrities.",
     "githubUrl": "https://github.com/mindfiredigital/nft-marketplace",
-    "documentationUrl": "https://github.com/mindfiredigital/nft-marketplace"
+    "documentationUrl": "https://github.com/mindfiredigital/nft-marketplace",
+    "stars": 321,
+    "tags": ["NFT", "Blockchain", "Web3", "Marketplace"]
   },
   {
     "id": 4,
@@ -53,7 +59,9 @@
     "status": "published",
     "shortDescription": "Seamless frontend integration with Filemaker Database.",
     "githubUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
-    "documentationUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver"
+    "documentationUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
+    "stars": 112,
+    "tags": ["Filemaker", "Node.js", "API", "Integration"]
   },
   {
     "id": 5,
@@ -67,7 +75,9 @@
     "status": "published",
     "shortDescription": "C# utility library with 300+ NuGet extension methods.",
     "githubUrl": "https://github.com/mindfiredigital/extension-methods",
-    "documentationUrl": "https://github.com/mindfiredigital/extension-methods"
+    "documentationUrl": "https://github.com/mindfiredigital/extension-methods",
+    "stars": 76,
+    "tags": ["C#", "Utilities", "NuGet", "Extensions"]
   },
   {
     "id": 6,
@@ -81,7 +91,9 @@
     "status": "published",
     "shortDescription": "Simplifies Kubernetes, easing app deployment for developers.",
     "githubUrl": "https://github.com/mindfiredigital/FireKubeX",
-    "documentationUrl": "https://github.com/mindfiredigital/FireKubeX"
+    "documentationUrl": "https://github.com/mindfiredigital/FireKubeX",
+    "stars": 210,
+    "tags": ["Kubernetes", "DevOps", "CI/CD"]
   },
   {
     "id": 12,
@@ -95,7 +107,9 @@
     "status": "published",
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
-    "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS"
+    "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
+    "stars": 91,
+    "tags": ["iOS", "Mobile", "UI Kit", "Authentication"]
   },
   {
     "id": 13,
@@ -109,7 +123,9 @@
     "status": "published",
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
-    "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android"
+    "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
+    "stars": 88,
+    "tags": ["Android", "Mobile", "UI Kit", "Authentication"]
   },
   {
     "id": 15,
@@ -123,7 +139,9 @@
     "status": "published",
     "shortDescription": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
     "githubUrl": "https://github.com/mindfiredigital/neo-pusher",
-    "documentationUrl": "https://pypi.org/project/neo-pusher/"
+    "documentationUrl": "https://pypi.org/project/neo-pusher/",
+    "stars": 135,
+    "tags": ["Neo4j", "CSV", "Data Pipeline", "ETL"]
   },
   {
     "id": 16,
@@ -137,6 +155,8 @@
     "status": "published",
     "shortDescription": "A powerful and intuitive HTML Editor built with React.js.",
     "githubUrl": "https://github.com/mindfiredigital/react-text-igniter",
-    "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter"
+    "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter",
+    "stars": 173,
+    "tags": ["React", "HTML Editor", "Text Editor", "Rich Text"]
   }
 ]
