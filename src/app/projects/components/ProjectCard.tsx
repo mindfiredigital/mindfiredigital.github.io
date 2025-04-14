@@ -44,33 +44,34 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/* Description that expands on click */}
-        {shortDescription.length > 120 ? (
-          <div
-            className={`mb-3 relative cursor-pointer ${
-              expandDescription ? "max-h-[72px] overflow-y-auto" : ""
+        {/* Description section with fixed height */}
+        <div
+          className={`mb-3 relative cursor-pointer ${
+            expandDescription ? "max-h-[72px] overflow-y-auto" : ""
+          }`}
+          onClick={() => {
+            if (shortDescription.length > 120)
+              setExpandDescription(!expandDescription);
+          }}
+          style={{
+            minHeight: expandDescription ? "auto" : "4.1rem",
+          }}
+        >
+          <p
+            className={`text-mf-dark tracking-wide leading-6 ${
+              expandDescription ? "" : "line-clamp-2"
             }`}
-            onClick={() => setExpandDescription(!expandDescription)}
           >
-            <p
-              className={`text-mf-dark tracking-wide leading-6 ${
-                expandDescription ? "" : "line-clamp-2"
-              }`}
-            >
-              {shortDescription}
-            </p>
+            {shortDescription}
+          </p>
+
+          {/* Only show toggle if the content is long */}
+          {shortDescription.length > 120 && (
             <span className='text-xs text-blue-500 mt-1 block'>
               {expandDescription ? "less" : "more"}
             </span>
-          </div>
-        ) : (
-          <div className='mb-3'>
-            <p className='text-mf-dark tracking-wide leading-6'>
-              {shortDescription}
-            </p>
-            <span className='text-xs mt-1 block opacity-0'>less</span>
-          </div>
-        )}
+          )}
+        </div>
 
         {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
           <div className='mt-1'>
