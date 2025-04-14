@@ -9,6 +9,7 @@ interface Contributor {
   avatar_url: string;
   html_url: string;
   contributions: number;
+  lastActiveDays: number | null;
 }
 
 interface TopContributorsProps {
@@ -16,8 +17,15 @@ interface TopContributorsProps {
 }
 
 const TopContributors = ({ contributors }: TopContributorsProps) => {
+  const getLastActiveText = (days: number | null): string => {
+    if (days === null) return "No recent activity";
+    if (days === 0) return "Active today";
+    if (days === 1) return "Active yesterday";
+    return `Active ${days} days ago`;
+  };
+
   return (
-    <div className='relative  items-center max-w-5xl mx-auto px-4 py-8'>
+    <div className='relative items-center max-w-5xl mx-auto px-4 py-8'>
       {/* Contributors scroll container */}
       <div className='flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-px-6 px-8'>
         {contributors.slice(0, 6).map((contributor) => (
@@ -48,6 +56,9 @@ const TopContributors = ({ contributors }: TopContributorsProps) => {
                 </p>
                 <p className='text-xs text-gray-500'>
                   {contributor.contributions} contributions
+                </p>
+                <p className='text-xs text-gray-400'>
+                  {getLastActiveText(contributor.lastActiveDays)}
                 </p>
               </div>
             </div>

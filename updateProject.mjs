@@ -97,6 +97,54 @@ async function getRepoData(owner, repo) {
   }
 }
 
+// Function to get the last contribution date for a user in the organization
+async function getLastContributionDate(username) {
+  if (!username) return null;
+  try {
+    const response = await fetch(
+      `https://api.github.com/users/${username}/events/public`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error(`Failed to fetch events for ${username}`);
+      return null;
+    }
+
+    const events = await response.json();
+    const orgEvents = events.filter(
+      (event) => event.org?.login === "mindfiredigital"
+    );
+
+    if (orgEvents.length > 0) {
+      const lastEvent = orgEvents[0];
+      const lastActiveDate = new Date(lastEvent.created_at);
+      const now = new Date();
+      const diffTime = Math.abs(now - lastActiveDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays;
+    }
+
+    return null;
+  } catch (error) {
+    console.error(`Error fetching events for ${username}:`, error);
+    return null;
+  }
+}
+
+// Function to get contributor data including last active days
+async function getContributorData(contributor) {
+  const lastActiveDays = await getLastContributionDate(contributor.login);
+  return {
+    ...contributor,
+    lastActiveDays,
+  };
+}
+
 // Main function to update projects data
 async function updateProjects() {
   const githubToken = process.env.GITHUB_TOKEN;
@@ -210,17 +258,22 @@ async function updateProjects() {
         const repoData = await getRepoData("mindfiredigital", repoName);
         const contributors = await getCollaborators(repoData, githubToken);
         if (contributors.length > 0) {
-          contributorsObject[repoName] = contributors;
-        } else {
-          console.log(`No contributors found for repository: ${repoName}`);
+          // Get last active days for each contributor
+          const contributorsWithActivity = await Promise.all(
+            contributors.map(getContributorData)
+          );
+          contributorsObject[repoName] = contributorsWithActivity;
         }
       } catch (error) {
-        console.error(
-          `Error processing repository ${repoName}:`,
-          error.message
-        );
+        console.error(`Error processing contributors for ${repoName}:`, error);
       }
     }
+
+    // Write contributors data to file
+    fs.writeFileSync(
+      path.join(__dirname, "src/app/projects/assets/contributors.json"),
+      JSON.stringify(contributorsObject, null, 2)
+    );
 
     // Aggregate contributor from contributors
     const contributionsMap = {};
@@ -243,6 +296,7 @@ async function updateProjects() {
             html_url,
             avatar_url,
             login,
+            lastActiveDays: contributor.lastActiveDays,
           };
         });
       }

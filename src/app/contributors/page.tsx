@@ -9,11 +9,28 @@ import contributorList from "../projects/assets/contributors.json";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
 
-const Contributors = () => {
-  const contributorsArray = Object.values(contributorList);
+interface Contributor {
+  id: number;
+  contributions: number;
+  html_url: string;
+  avatar_url: string;
+  login: string;
+  lastActiveDays: number | null;
+}
 
-  // Sort contributors by contributions for top contributors section
-  const sortedContributors = [...contributorsArray].sort(
+const Contributors = () => {
+  const contributorsArray = Object.values(contributorList) as Contributor[];
+
+  // Filter and sort contributors for top section (active in last 30 days)
+  const activeTopContributors = [...contributorsArray]
+    .filter(
+      (contributor) =>
+        contributor.lastActiveDays === null || contributor.lastActiveDays <= 30
+    )
+    .sort((a, b) => b.contributions - a.contributions);
+
+  // Sort all contributors by contributions for the main grid
+  const sortedAllContributors = [...contributorsArray].sort(
     (a, b) => b.contributions - a.contributions
   );
 
@@ -31,13 +48,13 @@ const Contributors = () => {
           {/* Top Contributors Section */}
           <div className='mt-12 flex flex-col items-center justify-center'>
             <h2 className='text-2xl font-medium text-gray-800 mb-6'>
-              Top Contributors
+              Top Active Contributors
             </h2>
             <p className='text-xl text-mf-light-grey tracking-wide mb-2'>
               Meet our top six contributors — the people who help turn ideas
               into impact.
             </p>
-            <TopContributors contributors={sortedContributors} />
+            <TopContributors contributors={activeTopContributors} />
           </div>
 
           {/* All Contributors Section */}
@@ -46,12 +63,12 @@ const Contributors = () => {
               All Contributors
             </h2>
             <p className='text-xl text-mf-light-grey tracking-wide mb-10'>
-              We’re a dynamic group of individuals who are passionate about what
-              we do.
+              We&apos;re a dynamic group of individuals who are passionate about
+              what we do.
             </p>
             {contributorsArray ? (
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-                {contributorsArray.map((contributor) => (
+                {sortedAllContributors.map((contributor) => (
                   <div
                     key={contributor.id}
                     className='bg-white border border-gray-200 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105'
