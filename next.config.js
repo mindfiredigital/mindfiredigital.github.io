@@ -12,15 +12,25 @@
 const { PHASE_PRODUCTION_BUILD } = require("next/constants");
 
 module.exports = (phase, { defaultConfig }) => {
+  const images = {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
+  };
+
   if (phase === PHASE_PRODUCTION_BUILD) {
     return {
-      images: {
-        unoptimized: true,
-      },
+      images,
       output: "export",
       distDir: "build"
     };
   }
 
-  return {};
+  return {
+    images,
+  };
 };
