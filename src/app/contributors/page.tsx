@@ -25,7 +25,7 @@ const Contributors = () => {
   const activeTopContributors = [...contributorsArray]
     .filter(
       (contributor) =>
-        contributor.lastActiveDays === null || contributor.lastActiveDays <= 30
+        contributor.lastActiveDays !== null && contributor.lastActiveDays <= 30
     )
     .sort((a, b) => b.contributions - a.contributions);
 
