@@ -101,32 +101,67 @@ async function getRepoData(owner, repo) {
 async function getLastContributionDate(username) {
   if (!username) return null;
   try {
-    const response = await fetch(
-      `https://api.github.com/users/${username}/events/public`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        },
-      }
-    );
+    // Fetch all available events with pagination to ensure we get the most recent
+    let allEvents = [];
+    let page = 1;
+    let hasMoreEvents = true;
 
-    if (!response.ok) {
-      console.error(`Failed to fetch events for ${username}`);
-      return null;
+    while (hasMoreEvents && page <= 3) {
+      // Check up to 3 pages of events
+      const response = await fetch(
+        `https://api.github.com/users/${username}/events?per_page=100&page=${page}`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        console.error(
+          `Failed to fetch events for ${username}: ${response.status}`
+        );
+        break;
+      }
+
+      const events = await response.json();
+      if (events.length === 0) {
+        hasMoreEvents = false;
+      } else {
+        allEvents = [...allEvents, ...events];
+        page++;
+      }
     }
 
-    const events = await response.json();
-    const orgEvents = events.filter(
+    // Filter for events specific to your organization
+    const orgEvents = allEvents.filter(
       (event) => event.org?.login === "mindfiredigital"
     );
 
     if (orgEvents.length > 0) {
+      // Sort events by date to ensure we get the most recent one
+      orgEvents.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
       const lastEvent = orgEvents[0];
+
+      // Get date strings in YYYY-MM-DD format for precise day calculation
       const lastActiveDate = new Date(lastEvent.created_at);
+      const lastActiveDateStr = lastActiveDate.toISOString().split("T")[0];
+
       const now = new Date();
-      const diffTime = Math.abs(now - lastActiveDate);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      return diffDays;
+      const todayStr = now.toISOString().split("T")[0];
+
+      // If the activity was today, return 0 days
+      if (lastActiveDateStr === todayStr) {
+        return 0;
+      }
+
+      // Calculate exact days between dates
+      const date1 = new Date(lastActiveDateStr);
+      const date2 = new Date(todayStr);
+      const timeDiff = date2.getTime() - date1.getTime();
+      const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+      return daysDiff;
     }
 
     return null;
@@ -135,7 +170,6 @@ async function getLastContributionDate(username) {
     return null;
   }
 }
-
 // Function to get contributor data including last active days
 async function getContributorData(contributor) {
   const lastActiveDays = await getLastContributionDate(contributor.login);
