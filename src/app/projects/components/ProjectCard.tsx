@@ -26,15 +26,14 @@ export default function ProjectCard({
   stars,
   tags,
 }: Props) {
-  const [showAllTags, setShowAllTags] = useState(false);
   const [expandDescription, setExpandDescription] = useState(false);
 
   return (
-    <div className='border-2 p-8 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-64 flex flex-col relative'>
+    <div className='border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-64 flex flex-col relative'>
       {/* Top content section */}
       <div className='flex-1 flex flex-col overflow-hidden'>
         <div className='flex justify-between items-start mb-3'>
-          <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black capitalize truncate pr-2'>
+          <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black capitalize pr-2'>
             {title}
           </h3>
           {parentTitle !== "Upcoming Projects" && stars !== undefined && (
@@ -45,71 +44,45 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/*Description that expands on click */}
-        <div
-          className={`mb-3 relative cursor-pointer ${
-            expandDescription ? "max-h-[72px] overflow-y-auto" : ""
-          }`}
-          onClick={() => setExpandDescription(!expandDescription)}
-        >
-          <p
-            className={`text-mf-dark tracking-wide leading-6 ${
-              expandDescription ? "" : "line-clamp-3"
+        {/* Description that expands on click */}
+        {shortDescription.length > 120 ? (
+          <div
+            className={`mb-3 relative cursor-pointer ${
+              expandDescription ? "max-h-[72px] overflow-y-auto" : ""
             }`}
+            onClick={() => setExpandDescription(!expandDescription)}
           >
-            {shortDescription}
-          </p>
-          {expandDescription && (
-            <span className='text-xs text-blue-500 mt-1 block'>less</span>
-          )}
-        </div>
-
-        {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
-          <div className='mb-2'>
-            <div
-              className={`flex gap-2 max-w-full ${
-                showAllTags ? "overflow-x-auto pb-2" : "overflow-hidden"
+            <p
+              className={`text-mf-dark tracking-wide leading-6 ${
+                expandDescription ? "" : "line-clamp-2"
               }`}
             >
-              {showAllTags
-                ? tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate flex-shrink-0'
-                    >
-                      {tag}
-                    </span>
-                  ))
-                : tags.slice(0, 2).map((tag, index) => (
-                    <span
-                      key={index}
-                      className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate max-w-[100px]'
-                    >
-                      {tag}
-                    </span>
-                  ))}
-              {!showAllTags && tags.length > 2 && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowAllTags(true);
-                  }}
-                  className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 cursor-pointer'
+              {shortDescription}
+            </p>
+            <span className='text-xs text-blue-500 mt-1 block'>
+              {expandDescription ? "less" : "more"}
+            </span>
+          </div>
+        ) : (
+          <div className='mb-3'>
+            <p className='text-mf-dark tracking-wide leading-6'>
+              {shortDescription}
+            </p>
+            <span className='text-xs mt-1 block opacity-0'>less</span>
+          </div>
+        )}
+
+        {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
+          <div className='mt-1'>
+            <div className={`flex gap-2 max-w-full overflow-x-auto pb-2' `}>
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate flex-shrink-0'
                 >
-                  +{tags.length - 2} more
-                </button>
-              )}
-              {showAllTags && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowAllTags(false);
-                  }}
-                  className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 cursor-pointer flex-shrink-0'
-                >
-                  Show less
-                </button>
-              )}
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         )}
@@ -119,9 +92,9 @@ export default function ProjectCard({
       {parentTitle !== "Upcoming Projects" &&
         (githubUrl || documentationUrl) &&
         (githubUrl !== "NA" || documentationUrl !== "NA") && (
-          <div className='absolute bottom-0 left-0 right-0 mx-8'>
-            <div className='border-t-2 my-2'></div>
-            <div className='flex gap-4 justify-center my-2'>
+          <div className='mt-2'>
+            <div className='border-t-2'></div>
+            <div className='flex gap-4 justify-center mt-2'>
               {githubUrl && githubUrl !== "NA" && (
                 <Link
                   href={githubUrl}
