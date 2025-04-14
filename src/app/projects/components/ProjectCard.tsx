@@ -29,13 +29,13 @@ export default function ProjectCard({
   const [expandDescription, setExpandDescription] = useState(false);
 
   return (
-    <div className='border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-64 flex flex-col relative'>
-      {/* Top content section */}
+    <div className='border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-80 flex flex-col relative'>
       <div className='flex-1 flex flex-col overflow-hidden'>
-        <div className='flex justify-between items-start mb-3'>
-          <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black capitalize pr-2'>
+        <div className='flex justify-between items-start mb-2 h-[60px]'>
+          <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black line-clamp-2 capitalize pr-2 overflow-hidden'>
             {title}
           </h3>
+
           {parentTitle !== "Upcoming Projects" && stars !== undefined && (
             <div className='flex items-center gap-1 bg-gray-100 rounded-full p-1 flex-shrink-0'>
               <AiFillStar className='text-yellow-400' />
@@ -44,28 +44,26 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/* Description section with fixed height */}
+        {/* Description - fixed height with toggleable expansion */}
         <div
-          className={`mb-3 relative cursor-pointer ${
-            expandDescription ? "max-h-[72px] overflow-y-auto" : ""
-          }`}
+          className={`relative cursor-pointer transition-all duration-300 h-[90px] ${
+            expandDescription
+              ? "max-h-[90px] overflow-y-auto"
+              : "max-h-[5.5rem] overflow-hidden"
+          } mb-4`}
           onClick={() => {
             if (shortDescription.length > 120)
               setExpandDescription(!expandDescription);
           }}
-          style={{
-            minHeight: expandDescription ? "auto" : "4.1rem",
-          }}
         >
           <p
             className={`text-mf-dark tracking-wide leading-6 ${
-              expandDescription ? "" : "line-clamp-2"
+              expandDescription ? "" : "line-clamp-3"
             }`}
           >
             {shortDescription}
           </p>
-
-          {/* Only show toggle if the content is long */}
+          {/* Show toggle outside the paragraph */}
           {shortDescription.length > 120 && (
             <span className='text-xs text-blue-500 mt-1 block'>
               {expandDescription ? "less" : "more"}
@@ -73,9 +71,10 @@ export default function ProjectCard({
           )}
         </div>
 
+        {/* Tags section - fixed height + horizontal scroll if overflow */}
         {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
-          <div className='mt-1'>
-            <div className={`flex gap-2 max-w-full overflow-x-auto pb-2' `}>
+          <div className='h-[2.5rem]'>
+            <div className='flex gap-2 max-w-full overflow-x-auto pb-1'>
               {tags.map((tag, index) => (
                 <span
                   key={index}
