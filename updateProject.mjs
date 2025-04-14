@@ -112,7 +112,10 @@ async function updateProjects() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             query: `query getCurrentProjects {
-            foss_projects(filter: {project_type: { _eq: "current" }}) {
+            foss_projects(filter: { _and: [
+              { project_type: { _eq: "current" }},
+              { status: { _eq: "published" }}
+            ]}) {
               id,
               title,
               short_description,
