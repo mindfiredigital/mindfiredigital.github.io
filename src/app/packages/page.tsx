@@ -225,7 +225,7 @@ const Stats = () => {
           </h1>
           <PackageCount totalPackages={packages.length} />
         </div>
-        <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center'>
+        <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center px-4'>
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
