@@ -106,8 +106,8 @@ async function getLastContributionDate(username) {
     let page = 1;
     let hasMoreEvents = true;
 
-    while (hasMoreEvents && page <= 3) {
-      // Check up to 3 pages of events
+    while (hasMoreEvents && page <= 5) {
+      // Check up to 5 pages of events
       const response = await fetch(
         `https://api.github.com/users/${username}/events?per_page=100&page=${page}`,
         {
