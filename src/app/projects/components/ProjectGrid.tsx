@@ -34,7 +34,7 @@ export default function ProjectGrid({ title, projectData }: Props) {
         </h1>
         <ProjectCount totalProjects={projectData.length} />
       </div>
-      <div className='mt-12 px-4 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
+      <div className='mt-12 px-8 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
         {sortedProjects.map(
           (
             {

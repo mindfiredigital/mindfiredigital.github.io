@@ -65,7 +65,7 @@ export default function ProjectCard({
           </p>
           {/* Show toggle outside the paragraph */}
           {shortDescription.length > 120 && (
-            <span className='text-xs text-blue-500 mt-1 block'>
+            <span className='text-xs text-mindfire-text-red mt-1 block'>
               {expandDescription ? "less" : "more"}
             </span>
           )}
