@@ -1,16 +1,6 @@
 import { cn } from "@/app/utils";
 import React from "react";
-
-interface Props {
-  title: string;
-  description: string;
-  className?: string;
-  children?: React.ReactNode;
-  data?: Array<{
-    title: string;
-    description: string;
-  }>;
-}
+import { Aboutprops } from "@/types";
 
 const AboutSegmentSection = ({
   title,
@@ -18,7 +8,7 @@ const AboutSegmentSection = ({
   data,
   className,
   children,
-}: Props) => {
+}: Aboutprops) => {
   return (
     <section className={cn("mt-[6rem] max-w-7xl mx-auto px-6", className)}>
       <h3 className='tracking-wider text-3xl font-medium capitalize text-mindfire-text-black  text-center'>

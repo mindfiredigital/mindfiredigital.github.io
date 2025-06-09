@@ -1,17 +1,6 @@
-import { StaticImageData } from "next/image";
 import redirectIcon from "../../public/images/social-media/maximize.png";
-interface Navigation {
-  name: string;
-  path: string[];
-  target?: string;
-  icon?: string | StaticImageData;
-  iconAlt?: string;
-}
-
-interface SectionData {
-  title: string;
-  description: string;
-}
+import { Navigation } from "@/types";
+import { SectionData } from "@/types";
 
 const navigations: Navigation[] = [
   {

@@ -8,15 +8,7 @@ import Image from "next/image";
 import contributorList from "../projects/assets/contributors.json";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
-
-interface Contributor {
-  id: number;
-  contributions: number;
-  html_url: string;
-  avatar_url: string;
-  login: string;
-  lastActiveDays: number | null;
-}
+import { Contributor } from "@/types";
 
 const Contributors = () => {
   const contributorsArray = Object.values(contributorList) as Contributor[];

@@ -4,10 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import project from "../../../../public/images/social-media/project.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
-
-interface ProjectCountProps {
-  totalProjects: number;
-}
+import { ProjectCountProps } from "@/types";
 
 const ProjectCount = ({ totalProjects }: ProjectCountProps) => {
   const [count, setCount] = useState(0);

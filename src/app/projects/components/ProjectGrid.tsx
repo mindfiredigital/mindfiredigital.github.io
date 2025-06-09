@@ -1,27 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectCount from "./ProjectCount";
+import { ProjectGridProps } from "@/types";
 
-interface Props {
-  title: string;
-  projectData: {
-    title: string;
-    shortDescription: string;
-    githubUrl?: string | undefined;
-    documentationUrl?: string | undefined;
-    id?: number | undefined;
-    Summary?: string | undefined;
-    project_type?: string | undefined;
-    contributors?: string[] | undefined;
-    project_goal?: string | undefined;
-    target_users?: string | undefined;
-    risk?: string | undefined;
-    stars?: number;
-    tags?: string[];
-  }[];
-}
-
-export default function ProjectGrid({ title, projectData }: Props) {
+export default function ProjectGrid({ title, projectData }: ProjectGridProps) {
   const sortedProjects = [...projectData].sort(
     (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
   );
