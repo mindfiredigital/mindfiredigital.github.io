@@ -6,16 +6,7 @@ import github from "../../../../public/images/social-media/github.png";
 import docs from "../../../../public/images/social-media/docs.svg";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
-
-interface Props {
-  title: string;
-  parentTitle: string;
-  shortDescription: string;
-  githubUrl?: string;
-  documentationUrl?: string;
-  stars?: number;
-  tags?: string[];
-}
+import { ProjectProps } from "@/types";
 
 export default function ProjectCard({
   title,
@@ -25,7 +16,7 @@ export default function ProjectCard({
   parentTitle,
   stars,
   tags,
-}: Props) {
+}: ProjectProps) {
   const [expandDescription, setExpandDescription] = useState(false);
 
   return (

@@ -4,10 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import npm from "../../../../public/images/social-media/package.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
-
-interface PackageCountProps {
-  totalPackages: number;
-}
+import { PackageCountProps } from "@/types";
 
 const PackageCount = ({ totalPackages }: PackageCountProps) => {
   const [count, setCount] = useState(0);

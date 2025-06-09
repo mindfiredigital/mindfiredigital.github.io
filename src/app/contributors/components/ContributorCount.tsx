@@ -4,10 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import github from "../../../../public/images/social-media/gitprofile.png";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
-
-interface ContributorCountProps {
-  totalContributors: number;
-}
+import { ContributorCountProps } from "@/types";
 
 const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
   const [count, setCount] = useState(0);

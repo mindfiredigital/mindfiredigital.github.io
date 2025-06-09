@@ -3,18 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-interface Contributor {
-  login: string;
-  avatar_url: string;
-  html_url: string;
-  contributions: number;
-  lastActiveDays: number | null;
-}
-
-interface TopContributorsProps {
-  contributors: Contributor[];
-}
+import { TopContributorsProps } from "@/types";
 
 const TopContributors = ({ contributors }: TopContributorsProps) => {
   const getLastActiveText = (days: number | null): string => {
