@@ -1,31 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import npm from "../../../../public/images/social-media/package.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 import { PackageCountProps } from "@/types";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
 const PackageCount = ({ totalPackages }: PackageCountProps) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const duration = 800; // 1 second
-    const steps = 60;
-    const increment = totalPackages / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= totalPackages) {
-        setCount(totalPackages);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [totalPackages]);
+  const count = useAnimatedCounter(totalPackages);
 
   return (
     <div className='relative rounded-full'>
@@ -37,6 +19,7 @@ const PackageCount = ({ totalPackages }: PackageCountProps) => {
           src={npm}
           height={30}
           width={30}
+          loading='lazy'
           alt='total_packages'
           className='rounded-3xl animate-bounce'
         />
