@@ -1,8 +1,15 @@
-/* eslint-disable no-undef */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
+import { getAllStats } from "./updatePackages.mjs";
+
+const githubToken = process.env.GITHUB_TOKEN
+  ? process.env.GITHUB_TOKEN
+  : "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";
+
+const AuthHeader = githubToken
+  ? `Bearer ${githubToken}`
+  : `Bearer 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`;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -68,12 +75,12 @@ async function getRepoData(owner, repo) {
     const [repoResponse, topicsResponse] = await Promise.all([
       fetch(`https://api.github.com/repos/${owner}/${repo}`, {
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: AuthHeader,
         },
       }),
       fetch(`https://api.github.com/repos/${owner}/${repo}/topics`, {
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: AuthHeader,
           Accept: "application/vnd.github.mercy-preview+json",
         },
       }),
@@ -112,7 +119,7 @@ async function getLastContributionDate(username) {
         `https://api.github.com/users/${username}/events?per_page=100&page=${page}`,
         {
           headers: {
-            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+            Authorization: AuthHeader,
           },
         }
       );
@@ -181,8 +188,6 @@ async function getContributorData(contributor) {
 
 // Main function to update projects data
 async function updateProjects() {
-  const githubToken = process.env.GITHUB_TOKEN;
-
   try {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
     // Fetch data for current projects and upcoming projects
@@ -345,6 +350,7 @@ async function updateProjects() {
       JSON.stringify(sortedContributions, null, 2)
     );
     console.log("Contributors list updated successfully.");
+
     const npmPackages = [
       { name: "fmdapi-node-weaver", title: "FMDAPI Node Weaver" },
       { name: "react-canvas-editor", title: "Canvas Editor (React)" },
@@ -365,6 +371,7 @@ async function updateProjects() {
       { name: "neo-pusher", title: "Neo Pusher" },
       { name: "sqlrag", title: "SQL RAG" },
     ];
+
     getAllStats(
       npmPackages.map((p) => p.name),
       pypiPackages.map((p) => p.name)
@@ -393,120 +400,6 @@ async function updateProjects() {
   } catch (error) {
     console.error("An error occurred:", error);
   }
-}
-
-// Function to fetch download statistics for a given package and period
-async function fetchDownloadStats(packageName, period) {
-  const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    console.log(
-      `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
-    );
-  }
-
-  const data = await response.json();
-  return data;
-}
-
-// Function to fetch PyPI download statistics for a given package
-async function fetchPyPIDownloadStats(packageName) {
-  const url = `https://pypistats.org/api/packages/${packageName}/recent`;
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    console.log(
-      `Failed to fetch download stats for ${packageName} (PyPI): ${response.statusText}`
-    );
-    return null;
-  }
-
-  const data = await response.json();
-  return data.data; // { last_day, last_week, last_month }
-}
-
-// Function to calculate average downloads from the statistics
-function calculateAverageDownloads(stats) {
-  return stats.downloads.reduce(
-    (accumulator, download) => accumulator + download.downloads,
-    0
-  );
-}
-
-// Function to fetch and process statistics for a package and period (npm)
-async function getNpmStats(packageName, period) {
-  try {
-    // Fetch download statistics
-    const stats = await fetchDownloadStats(packageName, period);
-
-    // Check if stats exist
-    if (!stats || !stats.package) return 0;
-
-    // Calculate average downloads
-    return calculateAverageDownloads(stats);
-  } catch (error) {
-    // Log and handle errors
-    console.error(`${packageName} not present`);
-    return null;
-  }
-}
-
-// Function to fetch and aggregate statistics for all npm and PyPI packages
-async function getAllStats(npmPackages, pypiPackages) {
-  const statsMap = {};
-
-  // Fetch stats for npm packages
-  await Promise.all(
-    npmPackages.map(async (packageName) => {
-      try {
-        const [dayStats, weekStats, yearStats, totalStats] = await Promise.all([
-          getNpmStats(packageName, "last-day"),
-          getNpmStats(packageName, "last-week"),
-          getNpmStats(packageName, "last-year"),
-          getNpmStats(packageName, "1000-01-01:3000-01-01"),
-        ]);
-
-        if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
-          statsMap[packageName] = {
-            name: packageName,
-            type: "npm",
-            day: dayStats,
-            week: weekStats,
-            year: yearStats,
-            total: totalStats,
-          };
-        }
-      } catch (error) {
-        console.error(`Error fetching stats for ${packageName}:`, error);
-      }
-    })
-  );
-
-  // Fetch stats for PyPI packages
-  await Promise.all(
-    pypiPackages.map(async (packageName) => {
-      try {
-        const stats = await fetchPyPIDownloadStats(packageName);
-        const totalDownloads = await fetchTotalDownloads(packageName);
-
-        if (stats) {
-          statsMap[packageName] = {
-            name: packageName,
-            type: "pypi",
-            last_day: stats.last_day,
-            last_week: stats.last_week,
-            last_month: stats.last_month,
-            total: totalDownloads || stats.last_month,
-          };
-        }
-      } catch (error) {
-        console.error(`Error fetching stats for ${packageName} (PyPI):`, error);
-      }
-    })
-  );
-
-  return Object.values(statsMap);
 }
 
 // Call the main function

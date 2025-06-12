@@ -8,7 +8,7 @@
     "project_type": "upcoming",
     "date_created": "2023-12-20T10:39:55.000Z",
     "date_updated": null,
-    "status": "draft",
+    "status": "disabled",
     "shortDescription": "The ultimate guide for SSR implementation",
     "githubUrl": "NA",
     "documentationUrl": "NA"
@@ -22,7 +22,7 @@
     "project_type": "upcoming",
     "date_created": "2023-12-20T10:40:36.000Z",
     "date_updated": null,
-    "status": "draft",
+    "status": "disabled",
     "shortDescription": "Benchmarking performance with iframes and web components",
     "githubUrl": "https://github.com/mindfiredigital/IframeVsWebComponents",
     "documentationUrl": "https://github.com/mindfiredigital/IframeVsWebComponents"
@@ -42,20 +42,6 @@
     "documentationUrl": "NA"
   },
   {
-    "id": 10,
-    "title": "Angular Canvas Editor",
-    "short_description": "Multipage document editing in Angular with Canvas",
-    "github_repository_link": "NA",
-    "documentation_link": "NA",
-    "project_type": "upcoming",
-    "date_created": "2023-12-20T10:41:28.000Z",
-    "date_updated": null,
-    "status": "draft",
-    "shortDescription": "Multipage document editing in Angular with Canvas",
-    "githubUrl": "NA",
-    "documentationUrl": "NA"
-  },
-  {
     "id": 11,
     "title": "EHRConnect",
     "short_description": "Seamlessly connect with any EHR",
@@ -70,31 +56,31 @@
     "documentationUrl": "NA"
   },
   {
-    "id": 14,
-    "title": "QuickLaunchReactNativeKit",
-    "short_description": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
-    "github_repository_link": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
-    "documentation_link": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
+    "id": 23,
+    "title": "Ignix UI",
+    "short_description": "A modern, high-performance animated component library",
+    "github_repository_link": "https://github.com/mindfiredigital/ignix-ui/",
+    "documentation_link": "https://github.com/mindfiredigital/ignix-ui/",
     "project_type": "upcoming",
-    "date_created": "2024-02-29T10:55:14.000Z",
+    "date_created": "2025-04-10T16:16:21.000Z",
     "date_updated": null,
-    "status": "draft",
-    "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
-    "githubUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
-    "documentationUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit"
+    "status": "published",
+    "shortDescription": "A modern, high-performance animated component library",
+    "githubUrl": "https://github.com/mindfiredigital/ignix-ui/",
+    "documentationUrl": "https://github.com/mindfiredigital/ignix-ui/"
   },
   {
-    "id": 17,
-    "title": "SQLRAG",
-    "short_description": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
-    "github_repository_link": "https://github.com/mindfiredigital/SQLRAG/",
-    "documentation_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "id": 24,
+    "title": "FileMaker List View Addon",
+    "short_description": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
+    "github_repository_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "documentation_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
     "project_type": "upcoming",
-    "date_created": "2024-10-01T08:02:59.000Z",
+    "date_created": "2025-04-10T16:21:24.000Z",
     "date_updated": null,
-    "status": "draft",
-    "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
-    "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
-    "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/"
+    "status": "published",
+    "shortDescription": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
+    "githubUrl": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "documentationUrl": "https://github.com/mindfiredigital/filemaker-listview-addon"
   }
 ]
