@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "React Canvas Editor",
-    "short_description": "Multipage document editing in React with Canvas.",
-    "github_repository_link": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentation_link": "https://mindfiredigital.github.io/react-canvas-editor/",
-    "project_type": "current",
-    "date_created": "2023-12-20T10:32:42.000Z",
-    "date_updated": null,
-    "status": "published",
-    "shortDescription": "Multipage document editing in React with Canvas.",
-    "githubUrl": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentationUrl": "https://mindfiredigital.github.io/react-canvas-editor/",
-    "stars": 248,
-    "tags": ["React", "Canvas", "Editor", "Multipage"]
-  },
-  {
     "id": 2,
     "title": "Canvas Editor",
     "short_description": "Multipage document editor based on HTML5 canvas.",
@@ -28,8 +12,8 @@
     "shortDescription": "Multipage document editor based on HTML5 canvas.",
     "githubUrl": "https://github.com/mindfiredigital/canvas-editor",
     "documentationUrl": "https://mindfiredigital.github.io/canvas-editor",
-    "stars": 198,
-    "tags": ["HTML5", "Canvas", "Editor"]
+    "stars": 5,
+    "tags": []
   },
   {
     "id": 3,
@@ -44,8 +28,8 @@
     "shortDescription": "A multi-chain platform for fans to connect with their favorite celebrities.",
     "githubUrl": "https://github.com/mindfiredigital/nft-marketplace",
     "documentationUrl": "https://github.com/mindfiredigital/nft-marketplace",
-    "stars": 321,
-    "tags": ["NFT", "Blockchain", "Web3", "Marketplace"]
+    "stars": 2,
+    "tags": ["bitcoin", "blockchain", "cryptocurrency", "ecommerce", "etherum"]
   },
   {
     "id": 4,
@@ -60,8 +44,8 @@
     "shortDescription": "Seamless frontend integration with Filemaker Database.",
     "githubUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
     "documentationUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
-    "stars": 112,
-    "tags": ["Filemaker", "Node.js", "API", "Integration"]
+    "stars": 2,
+    "tags": []
   },
   {
     "id": 5,
@@ -76,8 +60,8 @@
     "shortDescription": "C# utility library with 300+ NuGet extension methods.",
     "githubUrl": "https://github.com/mindfiredigital/extension-methods",
     "documentationUrl": "https://github.com/mindfiredigital/extension-methods",
-    "stars": 76,
-    "tags": ["C#", "Utilities", "NuGet", "Extensions"]
+    "stars": 12,
+    "tags": ["csharp", "csharp-library", "extension-methods"]
   },
   {
     "id": 6,
@@ -92,8 +76,8 @@
     "shortDescription": "Simplifies Kubernetes, easing app deployment for developers.",
     "githubUrl": "https://github.com/mindfiredigital/FireKubeX",
     "documentationUrl": "https://github.com/mindfiredigital/FireKubeX",
-    "stars": 210,
-    "tags": ["Kubernetes", "DevOps", "CI/CD"]
+    "stars": 1,
+    "tags": ["automation", "bash-script", "docker", "k3s", "kubernetes"]
   },
   {
     "id": 12,
@@ -108,8 +92,8 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
-    "stars": 91,
-    "tags": ["iOS", "Mobile", "UI Kit", "Authentication"]
+    "stars": 4,
+    "tags": ["coding", "developers", "foss", "ios", "mindfire"]
   },
   {
     "id": 13,
@@ -124,8 +108,30 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
-    "stars": 88,
-    "tags": ["Android", "Mobile", "UI Kit", "Authentication"]
+    "stars": 1,
+    "tags": ["andr", "ios", "kotlin", "mobile", "swift"]
+  },
+  {
+    "id": 14,
+    "title": "QuickLaunchReactNativeKit",
+    "short_description": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
+    "github_repository_link": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
+    "documentation_link": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
+    "project_type": "current",
+    "date_created": "2024-02-29T10:55:14.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
+    "githubUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
+    "documentationUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
+    "stars": 2,
+    "tags": [
+      "mobile-app",
+      "mobile-development",
+      "mobileapp-development",
+      "react",
+      "react-native"
+    ]
   },
   {
     "id": 15,
@@ -140,8 +146,14 @@
     "shortDescription": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
     "githubUrl": "https://github.com/mindfiredigital/neo-pusher",
     "documentationUrl": "https://pypi.org/project/neo-pusher/",
-    "stars": 135,
-    "tags": ["Neo4j", "CSV", "Data Pipeline", "ETL"]
+    "stars": 5,
+    "tags": [
+      "datascience",
+      "machine-learning",
+      "mindfiredigital",
+      "neo4j",
+      "python"
+    ]
   },
   {
     "id": 16,
@@ -156,7 +168,141 @@
     "shortDescription": "A powerful and intuitive HTML Editor built with React.js.",
     "githubUrl": "https://github.com/mindfiredigital/react-text-igniter",
     "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter",
-    "stars": 173,
-    "tags": ["React", "HTML Editor", "Text Editor", "Rich Text"]
+    "stars": 10,
+    "tags": ["editor", "html", "htmleditor", "javascript", "npm"]
+  },
+  {
+    "id": 17,
+    "title": "SQLRAG",
+    "short_description": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
+    "github_repository_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "documentation_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "project_type": "current",
+    "date_created": "2024-10-01T08:02:59.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
+    "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
+    "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/",
+    "stars": 7,
+    "tags": ["agent", "ai", "huggingface", "javascript", "langchain"]
+  },
+  {
+    "id": 18,
+    "title": "ESLint Plugin Hub",
+    "short_description": "A collection of custom ESLint rules to enforce coding standards and best practices in your projects.",
+    "github_repository_link": "https://github.com/mindfiredigital/eslint-plugin-hub",
+    "documentation_link": "https://mindfiredigital.github.io/eslint-plugin-hub/",
+    "project_type": "current",
+    "date_created": "2025-04-03T12:17:32.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A collection of custom ESLint rules to enforce coding standards and best practices in your projects.",
+    "githubUrl": "https://github.com/mindfiredigital/eslint-plugin-hub",
+    "documentationUrl": "https://mindfiredigital.github.io/eslint-plugin-hub/",
+    "stars": 15,
+    "tags": [
+      "angular",
+      "codereview",
+      "eslint",
+      "eslint-config",
+      "eslint-plugin"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Page Builder",
+    "short_description": "An npm package for building responsive web pages with a drag-and-drop UI",
+    "github_repository_link": "https://github.com/mindfiredigital/page-builder",
+    "documentation_link": "https://github.com/mindfiredigital/page-builder",
+    "project_type": "current",
+    "date_created": "2025-04-03T12:28:59.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "An npm package for building responsive web pages with a drag-and-drop UI",
+    "githubUrl": "https://github.com/mindfiredigital/page-builder",
+    "documentationUrl": "https://github.com/mindfiredigital/page-builder",
+    "stars": 7,
+    "tags": []
+  },
+  {
+    "id": 20,
+    "title": "Pivothead",
+    "short_description": "A headless table library with built-in filters, sorting, and export.",
+    "github_repository_link": "https://github.com/mindfiredigital/PivotHead",
+    "documentation_link": "https://mindfiredigital.github.io/PivotHead/",
+    "project_type": "current",
+    "date_created": "2025-04-03T12:29:44.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A headless table library with built-in filters, sorting, and export.",
+    "githubUrl": "https://github.com/mindfiredigital/PivotHead",
+    "documentationUrl": "https://mindfiredigital.github.io/PivotHead/",
+    "stars": 5,
+    "tags": ["headless", "pivot-grid", "pivot-tables", "table"]
+  },
+  {
+    "id": 21,
+    "title": "OpenRecap",
+    "short_description": "Transforming meeting discussions into actionable recaps.",
+    "github_repository_link": "https://github.com/mindfiredigital/OpenRecap",
+    "documentation_link": "https://github.com/mindfiredigital/OpenRecap",
+    "project_type": "current",
+    "date_created": "2025-04-10T14:58:21.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Transforming meeting discussions into actionable recaps.",
+    "githubUrl": "https://github.com/mindfiredigital/OpenRecap",
+    "documentationUrl": "https://github.com/mindfiredigital/OpenRecap",
+    "stars": 1,
+    "tags": ["ai", "datascience", "langchain", "llamma", "ml"]
+  },
+  {
+    "id": 22,
+    "title": "Document Editor",
+    "short_description": "A cross-framework wrapper (React & Angular) for building multi-page document editors with HTML5 Canvas.",
+    "github_repository_link": "https://github.com/mindfiredigital/document-editor",
+    "documentation_link": "https://mindfiredigital.github.io/document-editor/",
+    "project_type": "current",
+    "date_created": "2025-04-10T15:24:26.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A cross-framework wrapper (React & Angular) for building multi-page document editors with HTML5 Canvas.",
+    "githubUrl": "https://github.com/mindfiredigital/document-editor",
+    "documentationUrl": "https://mindfiredigital.github.io/document-editor/",
+    "stars": 4,
+    "tags": ["angular", "document", "document-editor", "editor", "eslint"]
+  },
+  {
+    "id": 25,
+    "title": "DeepScanBot",
+    "short_description": "DeepScanBot allows you to crawl websites with various configurations, including crawl depth, timeout settings, proxy support, and output options.",
+    "github_repository_link": "https://github.com/mindfiredigital/DeepScanBot",
+    "documentation_link": "https://github.com/mindfiredigital/DeepScanBot",
+    "project_type": "current",
+    "date_created": "2025-04-10T17:14:40.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "DeepScanBot allows you to crawl websites with various configurations, including crawl depth, timeout settings, proxy support, and output options.",
+    "githubUrl": "https://github.com/mindfiredigital/DeepScanBot",
+    "documentationUrl": "https://github.com/mindfiredigital/DeepScanBot",
+    "stars": 1,
+    "tags": ["bot", "crawl", "crawler", "go", "golang"]
+  },
+  {
+    "id": 26,
+    "title": "AIHealthCounsellor",
+    "short_description": "An interactive, voice-enabled AI system providing real-time mental health support and counseling.",
+    "github_repository_link": "https://github.com/mindfiredigital/AIHealthCounsellor",
+    "documentation_link": "https://github.com/mindfiredigital/AIHealthCounsellor",
+    "project_type": "current",
+    "date_created": "2025-04-11T06:26:26.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "An interactive, voice-enabled AI system providing real-time mental health support and counseling.",
+    "githubUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
+    "documentationUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
+    "stars": 0,
+    "tags": ["ai", "ml"]
   }
 ]

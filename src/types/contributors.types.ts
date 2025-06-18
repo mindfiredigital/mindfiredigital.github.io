@@ -5,6 +5,8 @@ export interface Contributor {
   avatar_url: string;
   login: string;
   lastActiveDays: number | null;
+  pullRequestCount: number;
+  issueCount: number;
 }
 
 export interface ContributorCountProps {
