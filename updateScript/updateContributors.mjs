@@ -169,41 +169,6 @@ async function getLastContributionDate(username) {
   }
 }
 
-async function branchExists(owner, repo, branch, token) {
-  const res = await fetch(`${gitBaseUrl}/${owner}/${repo}/branches/${branch}`, {
-    headers: { Authorization: `token ${token}` },
-  });
-  return res.ok;
-}
-
-async function fetchDevContributorsIfExists(owner, repo, token) {
-  // Check if "dev" or "development" branch exists
-  const devExists = await branchExists(owner, repo, "dev", token);
-  const developmentExists = await branchExists(
-    owner,
-    repo,
-    "development",
-    token
-  );
-
-  if (devExists) {
-    return fetchContributorsFromBranchExcludingParent(
-      owner,
-      repo,
-      "dev",
-      token
-    );
-  } else if (developmentExists) {
-    return fetchContributorsFromBranchExcludingParent(
-      owner,
-      repo,
-      "development",
-      token
-    );
-  }
-  return []; // If neither branch exists, return an empty array
-}
-
 async function fetchContributorsFromRepo(owner, repo, token) {
   const contributors = new Set();
   let page = 1;
@@ -296,19 +261,7 @@ async function fetchContributorsFromBranchExcludingParent(
   return Object.values(contributors);
 }
 
-function mergeContributors(main, dev) {
-  const all = {};
-
-  for (const contributor of [...main, ...dev]) {
-    if (!all[contributor.login]) {
-      all[contributor.login] = contributor;
-    }
-  }
-
-  return Object.values(all);
-}
-
-export async function getCollaboratorsWithDefaultAndDev(owner, repo, token) {
+export async function getCollaboratorsWithDefault(owner, repo, token) {
   const defaultBranch = await fetchDefaultBranch(owner, repo, token);
 
   const defaultBranchContributors =
@@ -319,22 +272,10 @@ export async function getCollaboratorsWithDefaultAndDev(owner, repo, token) {
       token
     );
 
-  const devContributors = await fetchDevContributorsIfExists(
-    owner,
-    repo,
-    token
-  );
-
-  // merge and make unique
-  const allContributors = mergeContributors(
-    defaultBranchContributors,
-    devContributors
-  );
-
   // augment with pull and issue count
 
   return Promise.all(
-    allContributors.map(async (collab) => {
+    defaultBranchContributors.map(async (collab) => {
       const pullRequestCount = await fetchPullRequestCount(
         owner,
         repo,
