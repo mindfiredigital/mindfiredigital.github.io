@@ -119,7 +119,7 @@ const Contributors = () => {
                               />
                             </div>
                             <p className='text-sm text-gray-500 text-center'>
-                              {Math.floor(contributor.contributions / 2)}
+                              {contributor.pullRequestCount}
                             </p>
                           </div>
                           <div className='flex justify-center items-center gap-1 mt-4 '>
@@ -135,7 +135,7 @@ const Contributors = () => {
                               />
                             </div>
                             <p className='text-sm text-gray-500 text-center'>
-                              {Math.floor(contributor.contributions / 4)}
+                              {contributor.issueCount}
                             </p>
                           </div>
                         </div>

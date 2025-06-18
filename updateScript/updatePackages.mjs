@@ -1,4 +1,5 @@
-import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
+import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
+import { fetchData } from "./config.mjs";
 
 // Function to fetch and aggregate statistics for all npm and PyPI packages
 export async function getAllStats(npmPackages, pypiPackages) {
@@ -57,6 +58,21 @@ export async function getAllStats(npmPackages, pypiPackages) {
   return Object.values(statsMap);
 }
 
+// Function to fetch PyPI download statistics for a given package
+async function fetchPyPIDownloadStats(packageName) {
+  const url = `https://pypistats.org/api/packages/${packageName}/recent`;
+
+  try {
+    const data = await fetchData(url); // Already parsed JSON
+    return data.data; // { last_day, last_week, last_month }
+  } catch (error) {
+    console.log(
+      `Failed to fetch download stats for ${packageName} (PyPI): ${error.message}`
+    );
+    return null;
+  }
+}
+
 // Function to fetch and process statistics for a package and period (npm)
 async function getNpmStats(packageName, period) {
   try {
@@ -78,32 +94,16 @@ async function getNpmStats(packageName, period) {
 // Function to fetch download statistics for a given package and period
 async function fetchDownloadStats(packageName, period) {
   const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
-  const response = await fetch(url);
 
-  if (!response.ok) {
+  try {
+    const data = await fetchData(url); // Already parsed JSON
+    return data;
+  } catch (error) {
     console.log(
-      `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
-    );
-  }
-
-  const data = await response.json();
-  return data;
-}
-
-// Function to fetch PyPI download statistics for a given package
-async function fetchPyPIDownloadStats(packageName) {
-  const url = `https://pypistats.org/api/packages/${packageName}/recent`;
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    console.log(
-      `Failed to fetch download stats for ${packageName} (PyPI): ${response.statusText}`
+      `Failed to fetch download stats for ${packageName} (${period}): ${error.message}`
     );
     return null;
   }
-
-  const data = await response.json();
-  return data.data; // { last_day, last_week, last_month }
 }
 
 // Function to calculate average downloads from the statistics
