@@ -12,27 +12,34 @@ async function fetchDefaultBranch(owner, repo, token) {
 async function fetchPullRequestCount(owner, repo, author, token) {
   const defaultBranch = await fetchDefaultBranch(owner, repo, token);
   let page = 1;
-  let perPage = 100;
+  const perPage = 100;
   let total = 0;
   let more = true;
 
   while (more) {
-    const url = `${gitBaseUrl}/${owner}/${repo}/pulls?state=all&per_page=${perPage}&page=${page}`;
+    const url = `${gitBaseUrl}/${owner}/${repo}/pulls?state=closed&per_page=${perPage}&page=${page}`;
     const pullRequests = await fetchData(url, {
       headers: { Authorization: `token ${token}` },
     });
 
-    total += pullRequests.filter(
-      (pr) =>
-        pr.user?.login === author &&
-        (pr.base?.ref === defaultBranch ||
-          pr.base?.ref === "dev" ||
-          pr.base?.ref === "development")
-    ).length;
+    for (const pr of pullRequests) {
+      if (pr.user?.login === author && pr.base?.ref === defaultBranch) {
+        // Fetch full PR details to check if it was merged
+        const prDetailUrl = `${gitBaseUrl}/${owner}/${repo}/pulls/${pr.number}`;
+        const prDetails = await fetchData(prDetailUrl, {
+          headers: { Authorization: `token ${token}` },
+        });
+
+        if (prDetails.merged_at) {
+          total++;
+        }
+      }
+    }
 
     more = pullRequests.length === perPage;
     page++;
   }
+
   return total;
 }
 
