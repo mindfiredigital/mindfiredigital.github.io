@@ -2,7 +2,7 @@
 import { getAllStats } from "./updatePackages.mjs";
 import {
   getContributorData,
-  getCollaboratorsWithDefaultAndDev,
+  getCollaboratorsWithDefault,
 } from "./updateContributors.mjs";
 import { gitBaseUrl, gitOwner, githubToken, pathForJson } from "./config.mjs";
 import {
@@ -177,7 +177,7 @@ async function updateProjects() {
     const contributorsObject = {};
     for (const repoName of repoNames) {
       try {
-        const contributorsWithBot = await getCollaboratorsWithDefaultAndDev(
+        const contributorsWithBot = await getCollaboratorsWithDefault(
           gitOwner, // owner
           repoName, // repository name
           githubToken
