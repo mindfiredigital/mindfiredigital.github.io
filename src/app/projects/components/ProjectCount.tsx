@@ -1,34 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import project from "../../../../public/images/social-media/project.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
-
-interface ProjectCountProps {
-  totalProjects: number;
-}
+import { ProjectCountProps } from "@/types";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
 const ProjectCount = ({ totalProjects }: ProjectCountProps) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const duration = 800;
-    const steps = 60;
-    const increment = totalProjects / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= totalProjects) {
-        setCount(totalProjects);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [totalProjects]);
+  const duration = 800;
+  const count = useAnimatedCounter(totalProjects, duration);
 
   return (
     <div className='relative rounded-full'>

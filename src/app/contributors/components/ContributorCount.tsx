@@ -1,34 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import github from "../../../../public/images/social-media/gitprofile.png";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
-
-interface ContributorCountProps {
-  totalContributors: number;
-}
+import { ContributorCountProps } from "@/types";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
 const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = totalContributors / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= totalContributors) {
-        setCount(totalContributors);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [totalContributors]);
+  const count = useAnimatedCounter(totalContributors);
 
   return (
     <div className='relative rounded-full'>
@@ -43,6 +22,7 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
           height={20}
           width={20}
           alt='github_contributors'
+          loading='lazy'
           className='animate-bounce mb-[7px]'
         />
       </div>

@@ -1,9 +1,5 @@
 import React from "react";
-interface IconProps {
-  height: string;
-  width: string;
-  className: string;
-}
+import { IconProps } from "@/types";
 
 const ExternalRedirectIcon = ({ height, width }: IconProps) => {
   return (

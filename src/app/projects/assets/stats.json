@@ -2,57 +2,118 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 8,
-    "week": 6133,
-    "year": 55460,
-    "total": 55460
+    "day": 5,
+    "week": 43,
+    "year": 63044,
+    "total": 63044,
+    "title": "ESLint Plugin Hub"
   },
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "last_day": 10,
-    "last_week": 83,
-    "last_month": 1001,
-    "total": 7743
+    "last_day": 0,
+    "last_week": 13,
+    "last_month": 58,
+    "total": 8542,
+    "title": "Neo Pusher"
   },
   {
-    "name": "canvas-editor",
-    "type": "npm",
-    "day": 0,
-    "week": 4,
-    "year": 1164,
-    "total": 1690
-  },
-  {
-    "name": "react-canvas-editor",
-    "type": "npm",
-    "day": 0,
-    "week": 2,
-    "year": 1207,
-    "total": 1546
-  },
-  {
-    "name": "react-text-igniter",
-    "type": "npm",
-    "day": 0,
-    "week": 27,
-    "year": 1496,
-    "total": 1496
+    "name": "sqlrag",
+    "type": "pypi",
+    "last_day": 0,
+    "last_week": 6,
+    "last_month": 12,
+    "total": 4241,
+    "title": "SQL RAG"
   },
   {
     "name": "textigniterjs",
     "type": "npm",
     "day": 0,
+    "week": 6,
+    "year": 1966,
+    "total": 1966,
+    "title": "Text Igniter JS"
+  },
+  {
+    "name": "react-text-igniter",
+    "type": "npm",
+    "day": 0,
+    "week": 2,
+    "year": 1842,
+    "total": 1842,
+    "title": "Text Igniter (React)"
+  },
+  {
+    "name": "canvas-editor",
+    "type": "npm",
+    "day": 3,
+    "week": 17,
+    "year": 1100,
+    "total": 1827,
+    "title": "Canvas Editor"
+  },
+  {
+    "name": "react-canvas-editor",
+    "type": "npm",
+    "day": 1,
+    "week": 14,
+    "year": 715,
+    "total": 1667,
+    "title": "Canvas Editor (React)"
+  },
+  {
+    "name": "page-builder-react",
+    "type": "npm",
+    "day": 1,
+    "week": 12,
+    "year": 935,
+    "total": 935,
+    "title": "Page Builder (React)"
+  },
+  {
+    "name": "pivothead",
+    "type": "npm",
+    "day": 2,
+    "week": 20,
+    "year": 878,
+    "total": 878,
+    "title": "Pivot Head"
+  },
+  {
+    "name": "angular-canvas-editor",
+    "type": "npm",
+    "day": 0,
     "week": 1,
-    "year": 305,
-    "total": 305
+    "year": 674,
+    "total": 674,
+    "title": "Canvas Editor (Angular)"
+  },
+  {
+    "name": "page-builder-web-component",
+    "type": "npm",
+    "day": 0,
+    "week": 5,
+    "year": 430,
+    "total": 430,
+    "title": "Page Builder (Web Component)"
+  },
+  {
+    "name": "page-builder",
+    "type": "npm",
+    "day": 0,
+    "week": 8,
+    "year": 304,
+    "total": 304,
+    "title": "Page Builder"
   },
   {
     "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
     "week": 1,
-    "year": 100,
-    "total": 100
+    "year": 59,
+    "total": 139,
+    "title": "FMDAPI Node Weaver"
   }
 ]
