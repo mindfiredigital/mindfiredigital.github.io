@@ -25,7 +25,7 @@ export const npmPackages = [
     name: "page-builder-web-component",
     title: "Page Builder (Web Component)",
   },
-  { name: "ignix-ui", title: "Ignix Ui" },
+  { name: "ignix-ui", title: "Ignix UI" },
 ];
 export const pypiPackages = [
   { name: "neo-pusher", title: "Neo Pusher" },
