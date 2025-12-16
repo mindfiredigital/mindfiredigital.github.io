@@ -19,6 +19,8 @@ export const npmPackages = [
   { name: "eslint-plugin-hub", title: "ESLint Plugin Hub" },
   { name: "textigniterjs", title: "Text Igniter JS" },
   { name: "pivothead", title: "Pivot Head" },
+  { name: "pivothead-react", title: "Pivot Head (React)" },
+  { name: "pivothead-web-component", title: "Pivot Head (Web Component)" },
   { name: "page-builder", title: "Page Builder" },
   { name: "page-builder-react", title: "Page Builder (React)" },
   {
