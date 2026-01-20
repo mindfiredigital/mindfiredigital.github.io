@@ -18,3 +18,13 @@ export type Package = {
 export type NpmStats = {
   downloads: { downloads: number; day: string }[];
 };
+
+export type GroupedPackage = {
+  id: string; // unique identifier for the group
+  baseTitle: string; // e.g., "Canvas Editor", "Page Builder"
+  isMonorepo: boolean;
+  githubRepo: string; // repo name for GitHub link
+  packages: Package[]; // array of packages in this group
+  totalDownloads: number; // combined downloads across all packages
+  type: "npm" | "pypi"; // primary type (or mixed if needed)
+};

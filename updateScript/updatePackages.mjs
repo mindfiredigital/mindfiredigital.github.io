@@ -2,7 +2,7 @@ import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
 import { fetchData } from "./config.mjs";
 
 // Helper function to delay execution
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Queue manager with concurrency control
 class RequestQueue {
@@ -35,12 +35,12 @@ class RequestQueue {
       reject(error);
     } finally {
       this.running--;
-      
+
       // Add delay before processing next request
       if (this.queue.length > 0) {
         await delay(this.delayBetweenRequests);
       }
-      
+
       this.process();
     }
   }
@@ -57,25 +57,29 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
       return data;
     } catch (error) {
       // Check if it's a rate limit error
-      const errorMessage = error.message?.toLowerCase() || '';
-      const isRateLimit = 
-        error.status === 429 || 
-        errorMessage.includes('429') || 
-        errorMessage.includes('too many requests') ||
-        errorMessage.includes('rate limit') ||
-        errorMessage.includes('cloudflare');
-      
+      const errorMessage = error.message?.toLowerCase() || "";
+      const isRateLimit =
+        error.status === 429 ||
+        errorMessage.includes("429") ||
+        errorMessage.includes("too many requests") ||
+        errorMessage.includes("rate limit") ||
+        errorMessage.includes("cloudflare");
+
       if (isRateLimit && attempt < maxRetries - 1) {
         // Exponential backoff with jitter
         const baseWait = initialDelay * Math.pow(2, attempt);
         const jitter = Math.random() * 1000;
         const waitTime = baseWait + jitter;
-        
-        console.log(`⏳ Rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1}/${maxRetries - 1}`);
+
+        console.log(
+          `⏳ Rate limited. Waiting ${Math.round(
+            waitTime / 1000
+          )}s before retry ${attempt + 1}/${maxRetries - 1}`
+        );
         await delay(waitTime);
         continue;
       }
-      
+
       if (attempt === maxRetries - 1) {
         console.error(`❌ Failed after ${maxRetries} attempts`);
       }
@@ -92,22 +96,31 @@ async function queuedNpmFetch(url) {
 // Function to fetch and aggregate statistics for all npm and PyPI packages
 export async function getAllStats(npmPackages, pypiPackages) {
   const statsMap = {};
-  
-  console.log(`📊 Fetching stats for ${npmPackages.length} npm packages and ${pypiPackages.length} PyPI packages...`);
-  console.log(`⚙️  Using queue with concurrency=1 and 1000ms delay between requests\n`);
-  
+
+  console.log(
+    `📊 Fetching stats for ${npmPackages.length} npm packages and ${pypiPackages.length} PyPI packages...`
+  );
+  console.log(
+    `⚙️  Using queue with concurrency=1 and 1000ms delay between requests\n`
+  );
+
   // Process npm packages sequentially through the queue
   let completed = 0;
   for (const packageName of npmPackages) {
     try {
-      console.log(`[${completed + 1}/${npmPackages.length}] Processing ${packageName}...`);
-      
+      console.log(
+        `[${completed + 1}/${npmPackages.length}] Processing ${packageName}...`
+      );
+
       // Fetch all stats for this package sequentially through the queue
       const dayStats = await getNpmStats(packageName, "last-day");
       const weekStats = await getNpmStats(packageName, "last-week");
       const yearStats = await getNpmStats(packageName, "last-year");
-      const totalStats = await getNpmStats(packageName, "1000-01-01:3000-01-01");
-      
+      const totalStats = await getNpmStats(
+        packageName,
+        "1000-01-01:3000-01-01"
+      );
+
       if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
         statsMap[packageName] = {
           name: packageName,
@@ -117,18 +130,23 @@ export async function getAllStats(npmPackages, pypiPackages) {
           year: yearStats,
           total: totalStats,
         };
-        console.log(`✅ ${packageName}: day=${dayStats}, week=${weekStats}, year=${yearStats}, total=${totalStats}`);
+        console.log(
+          `✅ ${packageName}: day=${dayStats}, week=${weekStats}, year=${yearStats}, total=${totalStats}`
+        );
       } else {
         console.log(`⚠️  ${packageName}: No downloads recorded`);
       }
-      
+
       completed++;
     } catch (error) {
-      console.error(`❌ Error fetching stats for ${packageName}:`, error.message);
+      console.error(
+        `❌ Error fetching stats for ${packageName}:`,
+        error.message
+      );
       completed++;
     }
   }
-  
+
   // Fetch stats for PyPI packages (parallel is ok, different API)
   console.log(`\n📊 Fetching PyPI stats...`);
   await Promise.all(
@@ -136,7 +154,7 @@ export async function getAllStats(npmPackages, pypiPackages) {
       try {
         const stats = await fetchPyPIDownloadStats(packageName);
         const totalDownloads = await fetchTotalDownloads(packageName);
-        
+
         if (stats) {
           statsMap[packageName] = {
             name: packageName,
@@ -146,22 +164,31 @@ export async function getAllStats(npmPackages, pypiPackages) {
             last_month: stats.last_month,
             total: totalDownloads || stats.last_month,
           };
-          console.log(`✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}`);
+          console.log(
+            `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}`
+          );
         }
       } catch (error) {
-        console.error(`❌ Error fetching stats for ${packageName} (PyPI):`, error.message);
+        console.error(
+          `❌ Error fetching stats for ${packageName} (PyPI):`,
+          error.message
+        );
       }
     })
   );
-  
-  console.log(`\n🎉 Completed! Retrieved stats for ${Object.keys(statsMap).length} packages.`);
+
+  console.log(
+    `\n🎉 Completed! Retrieved stats for ${
+      Object.keys(statsMap).length
+    } packages.`
+  );
   return Object.values(statsMap);
 }
 
 // Function to fetch PyPI download statistics for a given package
 async function fetchPyPIDownloadStats(packageName) {
   const url = `https://pypistats.org/api/packages/${packageName}/recent`;
-  
+
   try {
     const data = await fetchWithRetry(url, 3, 1000);
     return data.data;
@@ -177,9 +204,9 @@ async function fetchPyPIDownloadStats(packageName) {
 async function getNpmStats(packageName, period) {
   try {
     const stats = await fetchDownloadStats(packageName, period);
-    
+
     if (!stats || !stats.package) return 0;
-    
+
     return calculateAverageDownloads(stats);
   } catch (error) {
     console.error(`${packageName} not available for period ${period}`);
@@ -190,7 +217,7 @@ async function getNpmStats(packageName, period) {
 // Function to fetch download statistics for a given package and period
 async function fetchDownloadStats(packageName, period) {
   const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
-  
+
   try {
     // Use queued fetch to ensure proper rate limiting
     const data = await queuedNpmFetch(url);
@@ -208,7 +235,7 @@ function calculateAverageDownloads(stats) {
   if (!stats.downloads || !Array.isArray(stats.downloads)) {
     return 0;
   }
-  
+
   return stats.downloads.reduce(
     (accumulator, download) => accumulator + download.downloads,
     0
