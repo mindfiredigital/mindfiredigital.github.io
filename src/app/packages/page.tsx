@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Link from "next/link";
 import npm from "../../../public/images/social-media/npm-svgrepo-com.svg";
 import pypi from "../../../public/images/social-media/pypi-svg.svg";
@@ -11,6 +11,8 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import PackageCount from "./components/PackageCount";
 import { usePackageStats } from "@/hooks/usePackageStats";
+import { groupPackages, getFrameworkName } from "../utils";
+import { GroupedPackage } from "@/types";
 
 const Stats = () => {
   const {
@@ -30,6 +32,18 @@ const Stats = () => {
     selectedRange,
   } = usePackageStats();
 
+  const [showPackagesModal, setShowPackagesModal] = useState(false);
+  const [selectedGroup, setSelectedGroup] = useState<GroupedPackage | null>(
+    null
+  );
+
+  const groupedPackages = groupPackages(packages);
+
+  const handleViewAllPackages = (group: GroupedPackage) => {
+    setSelectedGroup(group);
+    setShowPackagesModal(true);
+  };
+
   return (
     <section className='bg-slate-50'>
       <div className='container mx-auto flex flex-col gap-4 items-center'>
@@ -43,25 +57,30 @@ const Stats = () => {
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
-        <div className='lg:mx-36 md:mx-24 sm:mx-20 '>
+        <div className='lg:mx-36 md:mx-24 sm:mx-20'>
           <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
-            {packages.map((package_item) => (
+            {groupedPackages.map((group) => (
               <div
-                key={package_item.name}
-                className='border p-4 rounded bg-white flex flex-col justify-stretch drop-shadow-md w-80 hover:scale-105'
+                key={group.id}
+                className='border p-4 rounded bg-white flex flex-col justify-between drop-shadow-md w-80 h-64 hover:scale-105 transition-transform'
               >
                 <div className='flex flex-row items-start justify-between'>
-                  <div>
+                  <div className='flex-1'>
                     <h3 className='font-semibold mb-2 ml-2 text-mindfire-text-black capitalize'>
-                      {package_item.title}
+                      {group.baseTitle}
                     </h3>
+                    {group.isMonorepo && (
+                      <span className='ml-2 inline-block bg-gradient-to-r from-mindfire-text-red to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>
+                        Monorepo
+                      </span>
+                    )}
                   </div>
                   <div className='flex flex-row'>
-                    <div>
+                    {!group.isMonorepo && (
                       <button
                         className='font-bold px-2 py-1 rounded inline-flex items-center'
                         onClick={() => {
-                          setSelectedPackage(package_item);
+                          setSelectedPackage(group.packages[0]);
                           openModal();
                         }}
                         title='Filter'
@@ -70,14 +89,15 @@ const Stats = () => {
                           src={filter}
                           height={20}
                           width={20}
-                          alt='expand_img'
+                          alt='filter'
                           loading='lazy'
                           quality={75}
                         />
                       </button>
-                    </div>
+                    )}
                   </div>
                 </div>
+
                 <div className='flex flex-row items-center mt-4'>
                   <div className='flex justify-around w-full'>
                     <div className='flex flex-col mr-auto ml-2'>
@@ -86,55 +106,58 @@ const Stats = () => {
                           src={download}
                           height={20}
                           width={20}
-                          alt='expand_img'
+                          alt='downloads'
                           loading='lazy'
                           quality={75}
                         />
                         <div>
                           <h6 className='text-mindfire-text-black font-semibold text-xl'>
                             {new Intl.NumberFormat("en-US").format(
-                              package_item.total ?? 0
+                              group.totalDownloads
                             )}
                           </h6>
                         </div>
                       </div>
                       <div className='mt-2'>
-                        <p className='text-gray-500 text-xm'>Downloads</p>
+                        <p className='text-gray-500 text-xs'>Total Downloads</p>
                       </div>
                     </div>
                   </div>
+
                   <div className='mt-8 mr-1 flex flex-row items-center space-x-1'>
+                    {!group.isMonorepo && (
+                      <div>
+                        <Link
+                          href={
+                            group.packages[0].type === "npm"
+                              ? `https://www.npmjs.com/package/@mindfiredigital/${group.packages[0].name}`
+                              : `https://pypi.org/project/${group.packages[0].name}/`
+                          }
+                          target='_blank'
+                          title='View Package'
+                        >
+                          <Image
+                            src={group.packages[0].type === "pypi" ? pypi : npm}
+                            height={35}
+                            width={35}
+                            alt='package'
+                            loading='lazy'
+                            quality={75}
+                          />
+                        </Link>
+                      </div>
+                    )}
                     <div>
                       <Link
-                        href={
-                          package_item.type === "npm"
-                            ? `https://www.npmjs.com/package/@mindfiredigital/${package_item.name}`
-                            : `https://pypi.org/project/${package_item.name}/`
-                        }
+                        href={`https://github.com/mindfiredigital/${group.githubRepo}`}
                         target='_blank'
-                        title='View Package'
-                      >
-                        <Image
-                          src={package_item.type === "pypi" ? pypi : npm}
-                          height={35}
-                          width={35}
-                          alt='package_img'
-                          loading='lazy'
-                          quality={75}
-                        />
-                      </Link>
-                    </div>
-                    <div>
-                      <Link
-                        href={`https://github.com/mindfiredigital/${package_item.name}`}
-                        target='_blank'
-                        title='Github'
+                        title='GitHub'
                       >
                         <Image
                           src={github}
                           height={30}
                           width={30}
-                          alt='github_img'
+                          alt='github'
                           loading='lazy'
                           quality={75}
                         />
@@ -142,11 +165,36 @@ const Stats = () => {
                     </div>
                   </div>
                 </div>
+
+                {group.isMonorepo && (
+                  <div className='mt-4'>
+                    <button
+                      onClick={() => handleViewAllPackages(group)}
+                      className='w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'
+                    >
+                      View All Packages
+                      <svg
+                        className='w-4 h-4'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M19 9l-7 7-7-7'
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
 
+        {/* Filter Modal (existing) */}
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <Transition.Child
@@ -307,7 +355,7 @@ const Stats = () => {
                                   src={download}
                                   height={20}
                                   width={20}
-                                  alt='expand_img'
+                                  alt='downloads'
                                   loading='lazy'
                                   quality={75}
                                 />
@@ -315,11 +363,9 @@ const Stats = () => {
                                   {loading ? (
                                     <div className='flex justify-center items-center w-5 h-5 border border-t-4 border-gray-700 rounded-full animate-spin'>
                                       <svg
-                                        className='animate-spin h-5 w-5 mr-3 ...'
+                                        className='animate-spin h-5 w-5 mr-3'
                                         viewBox='0 0 24 24'
-                                      >
-                                        {" "}
-                                      </svg>
+                                      />
                                     </div>
                                   ) : (
                                     <h6 className='text-mindfire-text-black font-semibold text-xl'>
@@ -340,6 +386,155 @@ const Stats = () => {
                         </div>
                       </div>
                     </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+
+        {/* View All Packages Modal (NEW) */}
+        <Transition appear show={showPackagesModal} as={Fragment}>
+          <Dialog
+            as='div'
+            className='relative z-10'
+            onClose={() => setShowPackagesModal(false)}
+          >
+            <Transition.Child
+              as={Fragment}
+              enter='ease-out duration-300'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+            >
+              <div className='fixed inset-0 bg-black/25' />
+            </Transition.Child>
+
+            <div className='fixed inset-0 overflow-y-auto'>
+              <div className='flex min-h-full items-center justify-center p-4 text-center'>
+                <Transition.Child
+                  as={Fragment}
+                  enter='ease-out duration-300'
+                  enterFrom='opacity-0 scale-95'
+                  enterTo='opacity-100 scale-100'
+                  leave='ease-in duration-200'
+                  leaveFrom='opacity-100 scale-100'
+                  leaveTo='opacity-0 scale-95'
+                >
+                  <Dialog.Panel className='w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                    <div className='absolute right-2 top-2'>
+                      <button
+                        onClick={() => setShowPackagesModal(false)}
+                        className='text-gray-500 hover:text-gray-700 focus:outline-none'
+                      >
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className='h-6 w-6'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='black'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M6 18L18 6M6 6l12 12'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    {selectedGroup && (
+                      <>
+                        <Dialog.Title
+                          as='h1'
+                          className='text-2xl font-bold text-gray-900 text-center mb-6'
+                        >
+                          {selectedGroup.baseTitle}
+                        </Dialog.Title>
+
+                        <h2 className='text-lg font-semibold mb-4 text-gray-800'>
+                          Available Packages
+                        </h2>
+
+                        <div className='space-y-3 max-h-96 overflow-y-auto'>
+                          {selectedGroup.packages.map((pkg) => (
+                            <div
+                              key={pkg.name}
+                              className='border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow bg-gray-50'
+                            >
+                              <div className='flex items-center justify-between'>
+                                <div className='flex-1'>
+                                  <div className='flex items-center gap-2 mb-2'>
+                                    <span className='inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-semibold'>
+                                      {getFrameworkName(pkg.title)}
+                                    </span>
+                                    <h3 className='font-semibold text-gray-900'>
+                                      {pkg.title}
+                                    </h3>
+                                  </div>
+                                  <div className='flex items-center gap-2 text-sm text-gray-600'>
+                                    <Image
+                                      src={download}
+                                      height={16}
+                                      width={16}
+                                      alt='downloads'
+                                      loading='lazy'
+                                      quality={75}
+                                    />
+                                    <span className='font-semibold'>
+                                      {new Intl.NumberFormat("en-US").format(
+                                        pkg.total || 0
+                                      )}
+                                    </span>
+                                    <span>downloads</span>
+                                  </div>
+                                </div>
+
+                                <div className='flex items-center gap-3'>
+                                  <Link
+                                    href={
+                                      pkg.type === "npm"
+                                        ? `https://www.npmjs.com/package/@mindfiredigital/${pkg.name}`
+                                        : `https://pypi.org/project/${pkg.name}/`
+                                    }
+                                    target='_blank'
+                                    title='View Package'
+                                    className='hover:opacity-75 transition-opacity'
+                                  >
+                                    <Image
+                                      src={pkg.type === "pypi" ? pypi : npm}
+                                      height={35}
+                                      width={35}
+                                      alt='package'
+                                      loading='lazy'
+                                      quality={75}
+                                    />
+                                  </Link>
+                                  <Link
+                                    href={`https://github.com/mindfiredigital/${selectedGroup.githubRepo}`}
+                                    target='_blank'
+                                    title='GitHub'
+                                    className='hover:opacity-75 transition-opacity'
+                                  >
+                                    <Image
+                                      src={github}
+                                      height={30}
+                                      width={30}
+                                      alt='github'
+                                      loading='lazy'
+                                      quality={75}
+                                    />
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </Dialog.Panel>
                 </Transition.Child>
               </div>
