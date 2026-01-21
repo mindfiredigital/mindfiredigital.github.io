@@ -57,12 +57,13 @@ const Stats = () => {
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
-        <div className='lg:mx-36 md:mx-24 sm:mx-20'>
-          <div className='flex flex-col gap-4 flex-wrap lg:flex-row'>
+
+        <div className='lg:mx-36 md:mx-24 sm:mx-20 w-full'>
+          <div className='flex flex-row flex-wrap justify-center gap-6 max-w-7xl mx-auto'>
             {groupedPackages.map((group) => (
               <div
                 key={group.id}
-                className='border p-4 rounded bg-white flex flex-col justify-between drop-shadow-md w-80 h-64 hover:scale-105 transition-transform'
+                className='border p-4 rounded bg-white flex flex-col justify-between drop-shadow-md w-80 h-48 hover:scale-105 transition-transform'
               >
                 <div className='flex flex-row items-start justify-between'>
                   <div className='flex-1'>
@@ -75,56 +76,73 @@ const Stats = () => {
                       </span>
                     )}
                   </div>
-                  <div className='flex flex-row'>
-                    {!group.isMonorepo && (
-                      <button
-                        className='font-bold px-2 py-1 rounded inline-flex items-center'
-                        onClick={() => {
-                          setSelectedPackage(group.packages[0]);
-                          openModal();
-                        }}
-                        title='Filter'
-                      >
-                        <Image
-                          src={filter}
-                          height={20}
-                          width={20}
-                          alt='filter'
-                          loading='lazy'
-                          quality={75}
-                        />
-                      </button>
-                    )}
+
+                  <div className='flex flex-col items-end'>
+                    <div className='flex flex-row items-center space-x-1'>
+                      <Image
+                        src={download}
+                        height={18}
+                        width={18}
+                        alt='downloads'
+                        loading='lazy'
+                        quality={75}
+                      />
+                      <h6 className='text-mindfire-text-black font-semibold text-lg'>
+                        {new Intl.NumberFormat("en-US").format(
+                          group.totalDownloads
+                        )}
+                      </h6>
+                    </div>
+                    <p className='text-gray-500 text-xs mt-1 text-right'>
+                      Total Downloads
+                    </p>
                   </div>
                 </div>
 
-                <div className='flex flex-row items-center mt-4'>
-                  <div className='flex justify-around w-full'>
-                    <div className='flex flex-col mr-auto ml-2'>
-                      <div className='flex flex-row items-center space-x-1'>
-                        <Image
-                          src={download}
-                          height={20}
-                          width={20}
-                          alt='downloads'
-                          loading='lazy'
-                          quality={75}
-                        />
-                        <div>
-                          <h6 className='text-mindfire-text-black font-semibold text-xl'>
-                            {new Intl.NumberFormat("en-US").format(
-                              group.totalDownloads
-                            )}
-                          </h6>
-                        </div>
-                      </div>
-                      <div className='mt-2'>
-                        <p className='text-gray-500 text-xs'>Total Downloads</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className='flex flex-row items-center justify-between mt-auto'>
+                  {!group.isMonorepo && (
+                    <button
+                      className='font-bold px-2 py-1 rounded inline-flex items-center hover:bg-gray-100 transition-colors'
+                      onClick={() => {
+                        setSelectedPackage(group.packages[0]);
+                        openModal();
+                      }}
+                      title='Filter'
+                    >
+                      <Image
+                        src={filter}
+                        height={20}
+                        width={20}
+                        alt='filter'
+                        loading='lazy'
+                        quality={75}
+                      />
+                    </button>
+                  )}
 
-                  <div className='mt-8 mr-1 flex flex-row items-center space-x-1'>
+                  {group.isMonorepo && (
+                    <button
+                      onClick={() => handleViewAllPackages(group)}
+                      className='flex-1 mr-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'
+                    >
+                      View All Packages
+                      <svg
+                        className='w-4 h-4'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M19 9l-7 7-7-7'
+                        />
+                      </svg>
+                    </button>
+                  )}
+
+                  <div className='flex flex-row items-center space-x-2 ml-auto'>
                     {!group.isMonorepo && (
                       <div>
                         <Link
@@ -165,36 +183,15 @@ const Stats = () => {
                     </div>
                   </div>
                 </div>
-
-                {group.isMonorepo && (
-                  <div className='mt-4'>
-                    <button
-                      onClick={() => handleViewAllPackages(group)}
-                      className='w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'
-                    >
-                      View All Packages
-                      <svg
-                        className='w-4 h-4'
-                        fill='none'
-                        stroke='currentColor'
-                        viewBox='0 0 24 24'
-                      >
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          strokeWidth={2}
-                          d='M19 9l-7 7-7-7'
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                )}
               </div>
             ))}
+
+            <div className='w-80 h-0 border-0 p-0 m-0'></div>
+            <div className='w-80 h-0 border-0 p-0 m-0'></div>
+            <div className='w-80 h-0 border-0 p-0 m-0'></div>
           </div>
         </div>
 
-        {/* Filter Modal (existing) */}
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <Transition.Child
@@ -393,7 +390,6 @@ const Stats = () => {
           </Dialog>
         </Transition>
 
-        {/* View All Packages Modal (NEW) */}
         <Transition appear show={showPackagesModal} as={Fragment}>
           <Dialog
             as='div'
