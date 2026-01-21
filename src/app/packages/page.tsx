@@ -458,7 +458,6 @@ const Stats = () => {
                         <h2 className='text-lg font-semibold mb-4 text-gray-800'>
                           Available Packages
                         </h2>
-
                         <div className='space-y-3 max-h-96 overflow-y-auto'>
                           {selectedGroup.packages.map((pkg) => (
                             <div
@@ -494,6 +493,24 @@ const Stats = () => {
                                 </div>
 
                                 <div className='flex items-center gap-3'>
+                                  <button
+                                    className='font-bold px-2 py-1 rounded inline-flex items-center hover:bg-gray-200 transition-colors'
+                                    onClick={() => {
+                                      setSelectedPackage(pkg);
+                                      setShowPackagesModal(false);
+                                      openModal();
+                                    }}
+                                    title='Filter'
+                                  >
+                                    <Image
+                                      src={filter}
+                                      height={20}
+                                      width={20}
+                                      alt='filter'
+                                      loading='lazy'
+                                      quality={75}
+                                    />
+                                  </button>
                                   <Link
                                     href={
                                       pkg.type === "npm"
