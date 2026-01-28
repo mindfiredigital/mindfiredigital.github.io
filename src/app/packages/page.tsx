@@ -1,18 +1,23 @@
 "use client";
 
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Link from "next/link";
-import npm from "../../../public/images/social-media/npm-svgrepo-com.svg";
-import pypi from "../../../public/images/social-media/pypi-svg.svg";
-import filter from "../../../public/images/social-media/bx-filter-alt.svg";
-import download from "../../../public/images/bxs-download.svg";
-import github from "../../../public/images/bxl-github.svg";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import PackageCount from "./components/PackageCount";
 import { usePackageStats } from "@/hooks/usePackageStats";
 import { groupPackages, getFrameworkName } from "../utils";
-import { GroupedPackage } from "@/types";
+import { GroupedPackage, ProjectGroupedData } from "@/types";
+
+// Import images
+import npm from "../../../public/images/social-media/npm-svgrepo-com.svg";
+import pypi from "../../../public/images/social-media/pypi-svg.svg";
+import filter from "../../../public/images/social-media/bx-filter-alt.svg";
+import download from "../../../public/images/bxs-download.svg";
+import github from "../../../public/images/bxl-github.svg";
+
+// Import the JSON file
+import projectsGroupedData from "../projects/assets/projects_grouped.json";
 
 const Stats = () => {
   const {
@@ -36,8 +41,18 @@ const Stats = () => {
   const [selectedGroup, setSelectedGroup] = useState<GroupedPackage | null>(
     null
   );
+  const [groupedPackages, setGroupedPackages] = useState<GroupedPackage[]>([]);
 
-  const groupedPackages = groupPackages(packages);
+  // Group packages when packages data changes
+  useEffect(() => {
+    if (packages.length > 0) {
+      const grouped = groupPackages(
+        packages,
+        projectsGroupedData as ProjectGroupedData[]
+      );
+      setGroupedPackages(grouped);
+    }
+  }, [packages]);
 
   const handleViewAllPackages = (group: GroupedPackage) => {
     setSelectedGroup(group);
@@ -143,55 +158,44 @@ const Stats = () => {
                   )}
 
                   <div className='flex flex-row items-center space-x-2 ml-auto'>
-                    {!group.isMonorepo && (
-                      <div>
-                        <Link
-                          href={
-                            group.packages[0].type === "npm"
-                              ? `https://www.npmjs.com/package/@mindfiredigital/${group.packages[0].name}`
-                              : `https://pypi.org/project/${group.packages[0].name}/`
-                          }
-                          target='_blank'
-                          title='View Package'
-                        >
-                          <Image
-                            src={group.packages[0].type === "pypi" ? pypi : npm}
-                            height={35}
-                            width={35}
-                            alt='package'
-                            loading='lazy'
-                            quality={75}
-                          />
-                        </Link>
-                      </div>
-                    )}
-                    <div>
+                    {!group.isMonorepo && group.packages[0]?.url && (
                       <Link
-                        href={`https://github.com/mindfiredigital/${group.githubRepo}`}
+                        href={group.packages[0].url}
                         target='_blank'
-                        title='GitHub'
+                        title='View Package'
                       >
                         <Image
-                          src={github}
-                          height={30}
-                          width={30}
-                          alt='github'
+                          src={group.packages[0].type === "pypi" ? pypi : npm}
+                          height={35}
+                          width={35}
+                          alt='package'
                           loading='lazy'
                           quality={75}
                         />
                       </Link>
-                    </div>
+                    )}
+                    <Link
+                      href={`https://github.com/mindfiredigital/${group.githubRepo}`}
+                      target='_blank'
+                      title='GitHub'
+                    >
+                      <Image
+                        src={github}
+                        height={30}
+                        width={30}
+                        alt='github'
+                        loading='lazy'
+                        quality={75}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
-
-            <div className='w-80 h-0 border-0 p-0 m-0'></div>
-            <div className='w-80 h-0 border-0 p-0 m-0'></div>
-            <div className='w-80 h-0 border-0 p-0 m-0'></div>
           </div>
         </div>
 
+        {/* Package Stats Modal */}
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <Transition.Child
@@ -243,7 +247,7 @@ const Stats = () => {
                       as='h1'
                       className='text-lg font-large leading-6 text-gray-900 capitalize text-center mb-4 font-extrabold'
                     >
-                      {selectedPackage.title}
+                      {selectedPackage?.title}
                     </Dialog.Title>
                     <div className='border p-4 rounded bg-white flex flex-col justify-stretch'>
                       <div className='mb-4 flex justify-center items-center'>
@@ -251,7 +255,7 @@ const Stats = () => {
                           Select
                         </p>
                         <div className='relative inline-block w-32'>
-                          {selectedPackage.type === "npm" ? (
+                          {selectedPackage?.type === "npm" ? (
                             <select
                               id='range'
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
@@ -274,16 +278,16 @@ const Stats = () => {
                               className='bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-1 appearance-none outline-none'
                               onChange={handleChange}
                             >
-                              <option value={selectedPackage.total}>
+                              <option value={selectedPackage?.total}>
                                 Total
                               </option>
-                              <option value={selectedPackage.last_month}>
+                              <option value={selectedPackage?.last_month}>
                                 Last month
                               </option>
-                              <option value={selectedPackage.last_day}>
+                              <option value={selectedPackage?.last_day}>
                                 Yesterday
                               </option>
-                              <option value={selectedPackage.last_week}>
+                              <option value={selectedPackage?.last_week}>
                                 Last week
                               </option>
                             </select>
@@ -308,7 +312,7 @@ const Stats = () => {
                       </div>
 
                       <div className='flex flex-col items-center'>
-                        {selectedRange && selectedPackage.type === "npm" ? (
+                        {selectedRange && selectedPackage?.type === "npm" && (
                           <div className='container bg-white'>
                             <div className='flex ml-6 mb-4'>
                               <div className='mr-1'>
@@ -343,7 +347,7 @@ const Stats = () => {
                               </div>
                             </div>
                           </div>
-                        ) : null}
+                        )}
                         <div className='flex flex-col items-center mt-4'>
                           <div className='flex justify-around w-full'>
                             <div className='flex flex-col items-center'>
@@ -390,10 +394,11 @@ const Stats = () => {
           </Dialog>
         </Transition>
 
+        {/* Monorepo Packages Modal */}
         <Transition appear show={showPackagesModal} as={Fragment}>
           <Dialog
             as='div'
-            className='relative z-10'
+            className='relative z-50'
             onClose={() => setShowPackagesModal(false)}
           >
             <Transition.Child
@@ -405,7 +410,7 @@ const Stats = () => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <div className='fixed inset-0 bg-black/25' />
+              <div className='fixed inset-0 bg-black bg-opacity-25' />
             </Transition.Child>
 
             <div className='fixed inset-0 overflow-y-auto'>
@@ -507,25 +512,23 @@ const Stats = () => {
                                       quality={75}
                                     />
                                   </button>
-                                  <Link
-                                    href={
-                                      pkg.type === "npm"
-                                        ? `https://www.npmjs.com/package/@mindfiredigital/${pkg.name}`
-                                        : `https://pypi.org/project/${pkg.name}/`
-                                    }
-                                    target='_blank'
-                                    title='View Package'
-                                    className='hover:opacity-75 transition-opacity'
-                                  >
-                                    <Image
-                                      src={pkg.type === "pypi" ? pypi : npm}
-                                      height={35}
-                                      width={35}
-                                      alt='package'
-                                      loading='lazy'
-                                      quality={75}
-                                    />
-                                  </Link>
+                                  {pkg.url && (
+                                    <Link
+                                      href={pkg.url}
+                                      target='_blank'
+                                      title='View Package'
+                                      className='hover:opacity-75 transition-opacity'
+                                    >
+                                      <Image
+                                        src={pkg.type === "pypi" ? pypi : npm}
+                                        height={35}
+                                        width={35}
+                                        alt='package'
+                                        loading='lazy'
+                                        quality={75}
+                                      />
+                                    </Link>
+                                  )}
                                   <Link
                                     href={`https://github.com/mindfiredigital/${selectedGroup.githubRepo}`}
                                     target='_blank'

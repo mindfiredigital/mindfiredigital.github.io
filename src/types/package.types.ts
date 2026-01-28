@@ -13,6 +13,7 @@ export type Package = {
   last_day?: number;
   last_week?: number;
   last_month?: number;
+  url: string;
 };
 
 export type NpmStats = {
@@ -20,11 +21,26 @@ export type NpmStats = {
 };
 
 export type GroupedPackage = {
-  id: string; // unique identifier for the group
-  baseTitle: string; // e.g., "Canvas Editor", "Page Builder"
+  id: string;
+  baseTitle: string;
   isMonorepo: boolean;
-  githubRepo: string; // repo name for GitHub link
-  packages: Package[]; // array of packages in this group
-  totalDownloads: number; // combined downloads across all packages
-  type: "npm" | "pypi"; // primary type (or mixed if needed)
+  githubRepo: string;
+  packages: Package[];
+  totalDownloads: number;
+  type: "npm" | "pypi";
+};
+
+// NEW: Type for projects_grouped.json structure
+export type ProjectGroupedData = {
+  id: string;
+  title: string;
+  isMonoRepo: boolean;
+  repoUrl?: string;
+  packages: {
+    name: string;
+    title?: string;
+    type: string;
+    url: string;
+    status: "published" | "draft";
+  }[];
 };

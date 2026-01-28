@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { Package, NpmStats } from "@/types";
-import statsList from "../app/projects/assets/stats.json";
+import packagesList from "../app/projects/assets/packages.json"; // ← CHANGED from stats.json
 
 export function usePackageStats() {
   const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
@@ -18,9 +18,11 @@ export function usePackageStats() {
     week: 3,
     year: 70,
     total: 70,
+    url: "",
   });
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [packages, setPackages] = useState<Package[]>(statsList as Package[]);
+
+  // ← CHANGED: Load from packages.json instead of stats.json
+  const [packages] = useState<Package[]>(packagesList as Package[]);
 
   function openModal() {
     setIsOpen(true);
@@ -167,6 +169,7 @@ export function usePackageStats() {
       }
     }
   }
+
   const generateChart = async () => {
     if (selectedPackage.type === "npm") {
       const stats = await fetchNpmStats(
@@ -179,7 +182,7 @@ export function usePackageStats() {
 
   useEffect(() => {
     if (selectedPackage) {
-      setCount(selectedPackage.total || 0); //update total count when npmPackage is updated
+      setCount(selectedPackage.total || 0);
     }
   }, [selectedPackage]);
 

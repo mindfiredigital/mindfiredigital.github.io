@@ -1,81 +1,132 @@
-import { Package, GroupedPackage } from "@/types";
+import { Package, GroupedPackage, ProjectGroupedData } from "@/types";
 
 /**
- * Groups packages by their base repository name
- * Identifies monorepos by detecting multiple packages with similar names
+ * Groups packages by project using projects_grouped.json structure
+ * Matches packages with their download stats from packages.json
  */
-export function groupPackages(packages: Package[]): GroupedPackage[] {
-  const groups = new Map<string, Package[]>();
+export function groupPackages(
+  packages: Package[],
+  projectsGrouped: ProjectGroupedData[]
+): GroupedPackage[] {
+  // Create maps for efficient matching
+  const packageByName = new Map<string, Package>();
+  const packageByUrl = new Map<string, Package>();
 
-  // Define repo groupings based on naming patterns
-  const repoMappings: Record<string, string> = {
-    "canvas-editor": "canvas-editor",
-    "react-canvas-editor": "canvas-editor",
-    "angular-canvas-editor": "canvas-editor",
-    "page-builder": "page-builder",
-    "page-builder-react": "page-builder",
-    "page-builder-web-component": "page-builder",
-    textigniterjs: "text-igniter",
-    "react-text-igniter": "text-igniter",
-  };
-
-  // Group packages by their base repo
   packages.forEach((pkg) => {
-    const repoKey = repoMappings[pkg.name] || pkg.name;
+    packageByName.set(pkg.name.toLowerCase().trim(), pkg);
 
-    if (!groups.has(repoKey)) {
-      groups.set(repoKey, []);
+    if (pkg.url) {
+      packageByUrl.set(pkg.url.toLowerCase().trim(), pkg);
     }
-    groups.get(repoKey)!.push(pkg);
   });
 
-  // Convert groups to GroupedPackage array
-  const groupedPackages: GroupedPackage[] = Array.from(groups.entries()).map(
-    ([repoKey, pkgs]) => {
-      const isMonorepo = pkgs.length > 1;
-      const totalDownloads = pkgs.reduce(
+  // Transform projects into grouped packages
+  const groupedPackages: GroupedPackage[] = projectsGrouped
+    .filter((project) => project.packages && project.packages.length > 0)
+    .map((project) => {
+      // Match published packages with their stats
+      const packagesWithStats = project.packages
+        .filter((pkg) => pkg.status === "published")
+        .map((pkg) => {
+          // Strategy 1: Match by URL (most reliable)
+          if (pkg.url) {
+            const stats = packageByUrl.get(pkg.url.toLowerCase().trim());
+            if (stats) return stats;
+          }
+
+          // Strategy 2: Match by name
+          const stats = packageByName.get(pkg.name.toLowerCase().trim());
+          if (stats) return stats;
+
+          // Strategy 3: Extract package name from URL and match
+          if (pkg.url) {
+            const extractedName = extractPackageNameFromUrl(pkg.url);
+            if (extractedName) {
+              const stats = packageByName.get(extractedName.toLowerCase());
+              if (stats) return stats;
+            }
+          }
+
+          return null;
+        })
+        .filter((pkg): pkg is Package => pkg !== null);
+
+      // Calculate total downloads
+      const totalDownloads = packagesWithStats.reduce(
         (sum, pkg) => sum + (pkg.total || 0),
         0
       );
 
-      // Get base title (remove framework suffixes)
-      const baseTitle = getBaseTitle(pkgs[0].title);
+      // Determine if it's a monorepo
+      const isMonorepo =
+        project.isMonoRepo ||
+        project.packages.filter((p) => p.status === "published").length > 1;
 
       return {
-        id: repoKey,
-        baseTitle,
+        id: project.id,
+        baseTitle: project.title,
         isMonorepo,
-        githubRepo: repoKey,
-        packages: pkgs,
+        githubRepo: generateGithubRepoName(project.title),
+        packages: packagesWithStats,
         totalDownloads,
-        type: pkgs[0].type,
+        type: packagesWithStats[0]?.type || "npm",
       };
-    }
-  );
+    })
+    .filter((group) => group.packages.length > 0);
 
   // Sort by total downloads (descending)
   return groupedPackages.sort((a, b) => b.totalDownloads - a.totalDownloads);
 }
 
 /**
- * Removes framework-specific suffixes from package titles
+ * Extract package name from NPM or PyPI URL
  */
-function getBaseTitle(title: string): string {
+function extractPackageNameFromUrl(url: string): string | null {
+  if (!url) return null;
+
+  // NPM: https://www.npmjs.com/package/@mindfiredigital/react-canvas-editor
+  const npmMatch = url.match(/\/package\/@mindfiredigital\/(.+?)(?:\/|$)/);
+  if (npmMatch) return npmMatch[1];
+
+  // PyPI: https://pypi.org/project/sqlrag/
+  const pypiMatch = url.match(/\/project\/(.+?)(?:\/|$)/);
+  if (pypiMatch) return pypiMatch[1];
+
+  return null;
+}
+
+/**
+ * Generates a GitHub repository name from a project title
+ */
+function generateGithubRepoName(title: string): string {
   return title
-    .replace(/\s*\(React\)$/i, "")
-    .replace(/\s*\(Angular\)$/i, "")
-    .replace(/\s*\(Web Component\)$/i, "")
-    .replace(/\s*\(Vue\)$/i, "")
-    .replace(/\s*JS$/i, "")
-    .trim();
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
 }
 
 /**
  * Extracts the framework name from a package title
  */
 export function getFrameworkName(title: string): string {
+  const lowerTitle = title.toLowerCase();
+
+  if (lowerTitle.includes("react")) return "React";
+  if (lowerTitle.includes("angular")) return "Angular";
+  if (lowerTitle.includes("vue")) return "Vue";
+  if (
+    lowerTitle.includes("web component") ||
+    lowerTitle.includes("webcomponent")
+  )
+    return "Web Component";
+  if (lowerTitle.includes("core")) return "Core";
+  if (lowerTitle.includes("cli")) return "CLI";
+  if (lowerTitle.includes("analytics")) return "Analytics";
+
   const match = title.match(/\((.*?)\)/);
   if (match) return match[1];
+
   if (title.toLowerCase().includes("js")) return "JavaScript";
+
   return "Core";
 }

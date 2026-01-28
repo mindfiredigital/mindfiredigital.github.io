@@ -1,5 +1,5 @@
 import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
-import { fetchData } from "./config.mjs";
+import { fetchData, writeJsonToFile } from "./config.mjs";
 
 // Helper function to delay execution
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -241,3 +241,74 @@ function calculateAverageDownloads(stats) {
     0
   );
 }
+
+async function updatePackages() {
+  const query = `
+    query getCurrentProjects {
+      foss_projects(filter: { _and: [{ project_type: { _eq: "current" }}, { status: { _eq: "published" }}]}) {
+        id
+        title
+        is_mono_repo
+        packages {
+          package_name
+          package_type
+          package_url
+          status
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await fetchData(
+      "https://directus.ourgoalplan.co.in/graphql",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+      }
+    );
+
+    const projects = response.data.foss_projects;
+
+    // Flatten the packages from all projects into a single list if needed
+    const allPackages = projects.flatMap((project) =>
+      project.packages.map((pkg) => ({
+        name: pkg.package_name,
+        title: pkg.package_name, // Or map to your desired title format
+        type: pkg.package_type,
+        url: pkg.package_url,
+        projectTitle: project.title,
+      }))
+    );
+
+    // Save to the assets folder
+    writeJsonToFile("../src/app/projects/assets/packages.json", allPackages);
+
+    const projectData = projects.map((project) => ({
+      id: project.id,
+      title: project.title,
+      description: project.short_description,
+      isMonoRepo: project.is_mono_repo,
+      repoUrl: project.github_repository_link,
+      // We keep the packages nested inside the project
+      packages: project.packages.map((pkg) => ({
+        name: pkg.package_name,
+        type: pkg.package_type,
+        url: pkg.package_url,
+        status: pkg.status,
+      })),
+    }));
+
+    writeJsonToFile(
+      "../src/app/projects/assets/projects_grouped.json",
+      projectData
+    );
+
+    console.log("Successfully updated packages.json");
+  } catch (error) {
+    console.error("Failed to update packages:", error);
+  }
+}
+
+updatePackages();
