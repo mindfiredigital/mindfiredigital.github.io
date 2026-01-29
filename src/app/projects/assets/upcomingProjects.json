@@ -31,15 +31,15 @@
     "id": 9,
     "title": "FMDAPI Python Weaver",
     "short_description": "Seamless frontend integration with Filemaker Database",
-    "github_repository_link": "NA",
-    "documentation_link": "NA",
+    "github_repository_link": "https://github.com/mindfiredigital/python-fm-dapi-weaver",
+    "documentation_link": "NAhttps://github.com/mindfiredigital/python-fm-dapi-weaver/blob/dev/readme.md",
     "project_type": "upcoming",
     "date_created": "2023-12-20T10:41:05.000Z",
     "date_updated": null,
     "status": "draft",
     "shortDescription": "Seamless frontend integration with Filemaker Database",
-    "githubUrl": "NA",
-    "documentationUrl": "NA"
+    "githubUrl": "https://github.com/mindfiredigital/python-fm-dapi-weaver",
+    "documentationUrl": "NAhttps://github.com/mindfiredigital/python-fm-dapi-weaver/blob/dev/readme.md"
   },
   {
     "id": 11,
@@ -54,33 +54,5 @@
     "shortDescription": "Seamlessly connect with any EHR",
     "githubUrl": "NA",
     "documentationUrl": "NA"
-  },
-  {
-    "id": 23,
-    "title": "Ignix UI",
-    "short_description": "A modern, high-performance animated component library",
-    "github_repository_link": "https://github.com/mindfiredigital/ignix-ui/",
-    "documentation_link": "https://github.com/mindfiredigital/ignix-ui/",
-    "project_type": "upcoming",
-    "date_created": "2025-04-10T16:16:21.000Z",
-    "date_updated": null,
-    "status": "published",
-    "shortDescription": "A modern, high-performance animated component library",
-    "githubUrl": "https://github.com/mindfiredigital/ignix-ui/",
-    "documentationUrl": "https://github.com/mindfiredigital/ignix-ui/"
-  },
-  {
-    "id": 24,
-    "title": "FileMaker List View Addon",
-    "short_description": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
-    "github_repository_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
-    "documentation_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
-    "project_type": "upcoming",
-    "date_created": "2025-04-10T16:21:24.000Z",
-    "date_updated": null,
-    "status": "published",
-    "shortDescription": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
-    "githubUrl": "https://github.com/mindfiredigital/filemaker-listview-addon",
-    "documentationUrl": "https://github.com/mindfiredigital/filemaker-listview-addon"
   }
 ]
