@@ -1,7 +1,20 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { Package, NpmStats } from "@/types";
-import packagesList from "../app/projects/assets/packages.json"; // ← CHANGED from stats.json
+import packagesList from "../app/projects/assets/packages.json";
+import statsData from "../app/projects/assets/stats.json";
+
+// Helper to extract package name from URL
+function extractPackageNameFromUrl(url: string): string | null {
+  if (!url) return null;
+  const npmMatch = url.match(/\/package\/@mindfiredigital\/(.+?)(?:\/|$)/);
+  if (npmMatch) return npmMatch[1];
+  const pypiMatch = url.match(/\/project\/(.+?)(?:\/|$)/);
+  if (pypiMatch) return pypiMatch[1];
+  const nugetMatch = url.match(/nuget\.org\/packages\/(.+?)(?:\/|$)/);
+  if (nugetMatch) return nugetMatch[1];
+  return null;
+}
 
 export function usePackageStats() {
   const [startDate, setStartDate] = useState(moment().format("YYYY-MM-DD"));
@@ -19,10 +32,59 @@ export function usePackageStats() {
     year: 70,
     total: 70,
     url: "",
+    status: "",
   });
 
-  // ← CHANGED: Load from packages.json instead of stats.json
-  const [packages] = useState<Package[]>(packagesList as Package[]);
+  // Merge packages.json with stats.json
+  const [packages] = useState<Package[]>(() => {
+    const statsByUrl = new Map<string, Package>();
+    const statsByName = new Map<string, Package>();
+
+    (statsData as Package[]).forEach((stat) => {
+      // Index by URL
+      if (stat.url) {
+        statsByUrl.set(stat.url.toLowerCase().trim(), stat);
+      }
+      // Index by package name from URL
+      if (stat.url) {
+        const pkgName = extractPackageNameFromUrl(stat.url);
+        if (pkgName) {
+          statsByName.set(pkgName.toLowerCase(), stat);
+        }
+      }
+      // Index by name field
+      statsByName.set(stat.name.toLowerCase().trim(), stat);
+    });
+
+    return (packagesList as Package[]).map((pkg) => {
+      // Try matching by URL first
+      let stats = statsByUrl.get(pkg.url?.toLowerCase().trim() || "");
+
+      // Try matching by extracted package name from URL
+      if (!stats && pkg.url) {
+        const pkgName = extractPackageNameFromUrl(pkg.url);
+        if (pkgName) {
+          stats = statsByName.get(pkgName.toLowerCase());
+        }
+      }
+
+      // Try matching by name
+      if (!stats) {
+        stats = statsByName.get(pkg.name.toLowerCase().trim());
+      }
+
+      return {
+        ...pkg,
+        day: stats?.day || 0,
+        week: stats?.week || 0,
+        year: stats?.year || 0,
+        total: stats?.total || 0,
+        last_day: stats?.last_day || 0,
+        last_week: stats?.last_week || 0,
+        last_month: stats?.last_month || 0,
+      };
+    });
+  });
 
   function openModal() {
     setIsOpen(true);
@@ -40,19 +102,26 @@ export function usePackageStats() {
   ): Promise<NpmStats> {
     setLoading(true);
     const url = `https://api.npmjs.org/downloads/range/${period}/@mindfiredigital/${packageName}`;
-    const response = await fetch(url);
 
-    if (!response.ok) {
-      console.log(
-        `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
-      );
+    try {
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        console.log(
+          `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
+        );
+        setLoading(false);
+        return { downloads: [] }; // ← RETURN EMPTY instead of throwing
+      }
+
+      const data = await response.json();
       setLoading(false);
-      throw new Error(`HTTP error! status: ${response.status}`);
+      return data;
+    } catch (error) {
+      console.error(`Error fetching stats for ${packageName}:`, error);
+      setLoading(false);
+      return { downloads: [] }; // ← RETURN EMPTY on error
     }
-
-    const data = await response.json();
-    setLoading(false);
-    return data;
   }
 
   function calculateDownloads(stats: NpmStats): number {
@@ -71,15 +140,19 @@ export function usePackageStats() {
     const range = getDateRange(event.target.value);
 
     if (selectedPackage.type === "npm") {
-      fetchNpmStats(selectedPackage.name, `${range.start}:${range.end}`).then(
-        (res) => {
-          setLoading(true);
-          const count = calculateDownloads(res);
-          setCount(count);
-          setLoading(false);
-        }
-      );
-    } else if (selectedPackage.type === "pypi") {
+      const pkgName =
+        extractPackageNameFromUrl(selectedPackage.url || "") ||
+        selectedPackage.name;
+
+      fetchNpmStats(pkgName, `${range.start}:${range.end}`).then((res) => {
+        const count = calculateDownloads(res);
+        setCount(count);
+      });
+    }
+    // Update this block to include nuget
+    else if (
+      ["pypi", "pypi", "nuget"].includes(selectedPackage.type.toLowerCase())
+    ) {
       setCount(Number(event.target.value) || 0);
     }
   }
@@ -172,10 +245,10 @@ export function usePackageStats() {
 
   const generateChart = async () => {
     if (selectedPackage.type === "npm") {
-      const stats = await fetchNpmStats(
-        selectedPackage.name,
-        `${startDate}:${endDate}`
-      );
+      const pkgName =
+        extractPackageNameFromUrl(selectedPackage.url || "") ||
+        selectedPackage.name;
+      const stats = await fetchNpmStats(pkgName, `${startDate}:${endDate}`);
       setCount(calculateDownloads(stats));
     }
   };

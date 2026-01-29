@@ -5,7 +5,7 @@ export interface PackageCountProps {
 export type Package = {
   name: string;
   title: string;
-  type: "npm" | "pypi";
+  type: "npm" | "pypi" | "Nuget";
   day?: number;
   week?: number;
   year?: number;
@@ -14,6 +14,7 @@ export type Package = {
   last_week?: number;
   last_month?: number;
   url: string;
+  status: string;
 };
 
 export type NpmStats = {
@@ -27,7 +28,7 @@ export type GroupedPackage = {
   githubRepo: string;
   packages: Package[];
   totalDownloads: number;
-  type: "npm" | "pypi";
+  type: "npm" | "pypi" | "Nuget";
 };
 
 // NEW: Type for projects_grouped.json structure

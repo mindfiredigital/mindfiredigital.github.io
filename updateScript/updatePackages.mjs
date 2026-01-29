@@ -279,6 +279,7 @@ async function updatePackages() {
         type: pkg.package_type,
         url: pkg.package_url,
         projectTitle: project.title,
+        status: pkg.status,
       }))
     );
 

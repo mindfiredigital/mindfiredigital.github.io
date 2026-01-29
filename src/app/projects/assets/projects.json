@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "React Canvas Editor",
-    "short_description": "Multipage document editing in React with Canvas.",
-    "github_repository_link": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentation_link": "https://github.com/mindfiredigital/react-canvas-editor/blob/main/README.md",
-    "project_type": "current",
-    "date_created": "2023-12-20T10:32:42.000Z",
-    "date_updated": null,
-    "status": "published",
-    "shortDescription": "Multipage document editing in React with Canvas.",
-    "githubUrl": "https://github.com/mindfiredigital/react-canvas-editor",
-    "documentationUrl": "https://github.com/mindfiredigital/react-canvas-editor/blob/main/README.md",
-    "stars": 49,
-    "tags": ["canvas2d", "document", "documenteditor", "editor", "javascript"]
-  },
-  {
     "id": 2,
     "title": "Canvas Editor",
     "short_description": "Multipage document editor based on HTML5 canvas.",

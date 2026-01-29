@@ -15,8 +15,8 @@ import pypi from "../../../public/images/social-media/pypi-svg.svg";
 import filter from "../../../public/images/social-media/bx-filter-alt.svg";
 import download from "../../../public/images/bxs-download.svg";
 import github from "../../../public/images/bxl-github.svg";
+import nuget from "../../../public/images/social-media/nuget-svgrepo-com.png";
 
-// Import the JSON file
 import projectsGroupedData from "../projects/assets/projects_grouped.json";
 
 const Stats = () => {
@@ -43,7 +43,6 @@ const Stats = () => {
   );
   const [groupedPackages, setGroupedPackages] = useState<GroupedPackage[]>([]);
 
-  // Group packages when packages data changes
   useEffect(() => {
     if (packages.length > 0) {
       const grouped = groupPackages(
@@ -66,7 +65,11 @@ const Stats = () => {
           <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
             Our Packages
           </h1>
-          <PackageCount totalPackages={packages.length} />
+          <PackageCount
+            totalPackages={
+              packages.filter((pkg) => pkg.status === "published").length
+            }
+          />
         </div>
         <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center px-4'>
           Elevate your projects with Mindfire&apos;s game-changing open-source
@@ -165,7 +168,13 @@ const Stats = () => {
                         title='View Package'
                       >
                         <Image
-                          src={group.packages[0].type === "pypi" ? pypi : npm}
+                          src={
+                            group.packages[0].type.toLowerCase() === "pypi"
+                              ? pypi
+                              : group.packages[0].type === "Nuget"
+                                ? nuget
+                                : npm
+                          }
                           height={35}
                           width={35}
                           alt='package'
