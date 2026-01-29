@@ -112,21 +112,24 @@ async function getLastContributionDate(username) {
     let hasMoreEvents = true;
 
     while (hasMoreEvents && page <= 5) {
+      const url = `https://api.github.com/users/${username}/events?per_page=100&page=${page}`;
       // Check up to 5 pages of events
-      const response = await fetch(
-        `https://api.github.com/users/${username}/events?per_page=100&page=${page}`,
-        {
-          headers: {
-            Authorization: `Bearer ${githubToken}`,
-          },
-        }
-      );
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${githubToken}`,
+        },
+      });
 
       if (!response.ok) {
+        const errorDetails = await response.json().catch(() => ({}));
         console.error(
-          `Failed to fetch events for ${username}: ${response.status}`
+          `Full Error for ${url}:`,
+          JSON.stringify(errorDetails, null, 2)
         );
-        break;
+
+        throw new Error(
+          `HTTP ${response.status}: ${errorDetails.message || "Unknown Error"}`
+        );
       }
 
       const events = await response.json();
