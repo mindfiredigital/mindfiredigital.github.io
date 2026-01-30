@@ -70,7 +70,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Copy build artifacts from main to gh-pages branch"
+            git commit -m "chore: Copy build artifacts from main to gh-pages branch"
             git push origin gh-pages
           fi
 
