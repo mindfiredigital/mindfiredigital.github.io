@@ -5,43 +5,12 @@
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "Canvas Editor",
+        "name": "canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/canvas-editor",
         "status": "published"
       }
     ]
-  },
-  {
-    "id": "3",
-    "title": "NFT Marketplace",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "4",
-    "title": "FMDAPI Node Weaver",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "5",
-    "title": "Extension Methods",
-    "isMonoRepo": false,
-    "packages": [
-      {
-        "name": "Extension Methods",
-        "type": "nuget",
-        "url": "https://www.nuget.org/packages/Extension.Methods",
-        "status": "draft"
-      }
-    ]
-  },
-  {
-    "id": "6",
-    "title": "FireKubeX",
-    "isMonoRepo": false,
-    "packages": []
   },
   {
     "id": "10",
@@ -57,30 +26,12 @@
     ]
   },
   {
-    "id": "12",
-    "title": "MobileQuickLaunchKit-iOS",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "13",
-    "title": "MobileQuickLaunchKit-Android",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "14",
-    "title": "QuickLaunchReactNativeKit",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
     "id": "15",
     "title": "neo-pusher",
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "Neo Pusher",
+        "name": "neo-pusher",
         "type": "PyPi",
         "url": "https://pypi.org/project/neo-pusher/",
         "status": "published"
@@ -102,11 +53,11 @@
   },
   {
     "id": "17",
-    "title": "SQLRAG",
+    "title": "sqlrag",
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "SQLRAG",
+        "name": "sqlrag",
         "type": "PyPi",
         "url": "https://pypi.org/project/sqlrag/",
         "status": "published"
@@ -119,7 +70,7 @@
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "ESLint Plugin Hub",
+        "name": "eslint-plugin-hub",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/eslint-plugin-hub",
         "status": "published"
@@ -132,25 +83,25 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "Page Builder Web Component",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
-        "status": "published"
-      },
-      {
-        "name": "Page Builder React",
+        "name": "page-builder-react",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
         "status": "published"
       },
       {
-        "name": "Page Builder Core",
+        "name": "page-builder-web-component",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
+        "status": "published"
+      },
+      {
+        "name": "page-builder-core",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
         "status": "published"
       },
       {
-        "name": "Page Builder Angular",
+        "name": "page-builder-angular",
         "type": "npm",
         "url": "https://www.npmjs.com/~mindfire",
         "status": "draft"
@@ -163,37 +114,37 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "PivotHead Web Component",
+        "name": "pivothead-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-web-component",
         "status": "published"
       },
       {
-        "name": "PivotHead Vue",
+        "name": "pivothead-vue",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-vue",
         "status": "published"
       },
       {
-        "name": "PivotHead React",
+        "name": "pivothead-react",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-react",
         "status": "published"
       },
       {
-        "name": "PivotHead Core",
+        "name": "pivothead",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead",
         "status": "published"
       },
       {
-        "name": "PivotHead Angular",
+        "name": "pivothead-angular",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-angular",
         "status": "published"
       },
       {
-        "name": "PivotHead Analytics",
+        "name": "pivothead-analytics",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-analytics",
         "status": "published"
@@ -201,30 +152,24 @@
     ]
   },
   {
-    "id": "21",
-    "title": "OpenRecap",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
     "id": "22",
     "title": "Document Editor",
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "WebComponent Canvas Editor",
+        "name": "web-component-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/~mindfire",
         "status": "draft"
       },
       {
-        "name": "React Canvas Editor",
+        "name": "react-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/react-canvas-editor",
         "status": "published"
       },
       {
-        "name": "Angular Canvas Editor",
+        "name": "angular-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
         "status": "published"
@@ -237,13 +182,13 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "Ignix UI",
+        "name": "ignix-ui",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-ui",
         "status": "published"
       },
       {
-        "name": "Ignix CLI",
+        "name": "ignix-cli",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
         "status": "published"
@@ -251,36 +196,12 @@
     ]
   },
   {
-    "id": "24",
-    "title": "FileMaker List View Addon",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "25",
-    "title": "DeepScanBot",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "26",
-    "title": "AIHealthCounsellor",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
-    "id": "27",
-    "title": "Multi Cloud Monorepo Boilerplate",
-    "isMonoRepo": false,
-    "packages": []
-  },
-  {
     "id": "31",
     "title": "Next.js Fortress",
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "Next.js Fortress",
+        "name": "nextjs-fortress",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/nextjs-fortress",
         "status": "published"
@@ -293,7 +214,7 @@
     "isMonoRepo": false,
     "packages": [
       {
-        "name": "MonoDog",
+        "name": "monodog",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/monodog",
         "status": "published"
@@ -306,25 +227,25 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "TextIgniter Web Component",
+        "name": "textigniter-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
         "status": "published"
       },
       {
-        "name": "TextIgniter React",
+        "name": "textigniter-react",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-react",
         "status": "published"
       },
       {
-        "name": "TextIgniter Core",
+        "name": "textigniter",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniterjs",
         "status": "published"
       },
       {
-        "name": "TextIgniter Angular",
+        "name": "textigniter-angular",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
         "status": "published"

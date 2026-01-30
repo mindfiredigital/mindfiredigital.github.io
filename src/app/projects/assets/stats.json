@@ -2,118 +2,199 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 5,
-    "week": 43,
-    "year": 63044,
-    "total": 63044,
-    "title": "ESLint Plugin Hub"
+    "day": 19,
+    "week": 80,
+    "year": 52949,
+    "total": 109264,
+    "title": "eslint-plugin-hub"
   },
   {
-    "name": "neo-pusher",
-    "type": "pypi",
-    "last_day": 0,
-    "last_week": 13,
-    "last_month": 58,
-    "total": 8542,
-    "title": "Neo Pusher"
-  },
-  {
-    "name": "sqlrag",
-    "type": "pypi",
-    "last_day": 0,
-    "last_week": 6,
-    "last_month": 12,
-    "total": 4241,
-    "title": "SQL RAG"
-  },
-  {
-    "name": "textigniterjs",
+    "name": "page-builder-react",
     "type": "npm",
-    "day": 0,
-    "week": 6,
-    "year": 1966,
-    "total": 1966,
-    "title": "Text Igniter JS"
+    "day": 5,
+    "week": 21,
+    "year": 3967,
+    "total": 3967,
+    "title": "page-builder-react"
+  },
+  {
+    "name": "pivothead",
+    "type": "npm",
+    "day": 3,
+    "week": 49,
+    "year": 2727,
+    "total": 2727,
+    "title": "pivothead"
   },
   {
     "name": "react-text-igniter",
     "type": "npm",
     "day": 0,
-    "week": 2,
-    "year": 1842,
-    "total": 1842,
-    "title": "Text Igniter (React)"
-  },
-  {
-    "name": "canvas-editor",
-    "type": "npm",
-    "day": 3,
-    "week": 17,
-    "year": 1100,
-    "total": 1827,
-    "title": "Canvas Editor"
-  },
-  {
-    "name": "react-canvas-editor",
-    "type": "npm",
-    "day": 1,
-    "week": 14,
-    "year": 715,
-    "total": 1667,
-    "title": "Canvas Editor (React)"
-  },
-  {
-    "name": "page-builder-react",
-    "type": "npm",
-    "day": 1,
-    "week": 12,
-    "year": 935,
-    "total": 935,
-    "title": "Page Builder (React)"
-  },
-  {
-    "name": "pivothead",
-    "type": "npm",
-    "day": 2,
-    "week": 20,
-    "year": 878,
-    "total": 878,
-    "title": "Pivot Head"
-  },
-  {
-    "name": "angular-canvas-editor",
-    "type": "npm",
-    "day": 0,
-    "week": 1,
-    "year": 674,
-    "total": 674,
-    "title": "Canvas Editor (Angular)"
+    "week": 8,
+    "year": 804,
+    "total": 2450,
+    "title": "react-text-igniter"
   },
   {
     "name": "page-builder-web-component",
     "type": "npm",
-    "day": 0,
-    "week": 5,
-    "year": 430,
-    "total": 430,
-    "title": "Page Builder (Web Component)"
+    "day": 2,
+    "week": 11,
+    "year": 2306,
+    "total": 2306,
+    "title": "page-builder-web-component"
   },
   {
-    "name": "page-builder",
+    "name": "canvas-editor",
     "type": "npm",
-    "day": 0,
-    "week": 8,
-    "year": 304,
-    "total": 304,
-    "title": "Page Builder"
+    "day": 1,
+    "week": 14,
+    "year": 1752,
+    "total": 2151,
+    "title": "canvas-editor"
   },
   {
-    "name": "fmdapi-node-weaver",
+    "name": "page-builder-core",
     "type": "npm",
-    "day": 0,
+    "day": 1,
+    "week": 6,
+    "year": 1135,
+    "total": 1533,
+    "title": "page-builder-core"
+  },
+  {
+    "name": "react-canvas-editor",
+    "type": "npm",
+    "day": 3,
+    "week": 24,
+    "year": 1111,
+    "total": 1300,
+    "title": "react-canvas-editor"
+  },
+  {
+    "name": "nextjs-fortress",
+    "type": "npm",
+    "day": 8,
+    "week": 64,
+    "year": 959,
+    "total": 959,
+    "title": "nextjs-fortress"
+  },
+  {
+    "name": "ignix-cli",
+    "type": "npm",
+    "day": 1,
     "week": 1,
-    "year": 59,
-    "total": 139,
-    "title": "FMDAPI Node Weaver"
+    "year": 797,
+    "total": 797,
+    "title": "ignix-cli"
+  },
+  {
+    "name": "angular-canvas-editor",
+    "type": "npm",
+    "day": 1,
+    "week": 1,
+    "year": 783,
+    "total": 783,
+    "title": "angular-canvas-editor"
+  },
+  {
+    "name": "ignix-ui",
+    "type": "npm",
+    "day": 0,
+    "week": 0,
+    "year": 737,
+    "total": 737,
+    "title": "ignix-ui"
+  },
+  {
+    "name": "pivothead-web-component",
+    "type": "npm",
+    "day": 2,
+    "week": 26,
+    "year": 633,
+    "total": 633,
+    "title": "pivothead-web-component"
+  },
+  {
+    "name": "pivothead-react",
+    "type": "npm",
+    "day": 2,
+    "week": 16,
+    "year": 588,
+    "total": 588,
+    "title": "pivothead-react"
+  },
+  {
+    "name": "pivothead-vue",
+    "type": "npm",
+    "day": 2,
+    "week": 20,
+    "year": 369,
+    "total": 369,
+    "title": "pivothead-vue"
+  },
+  {
+    "name": "textigniter-angular",
+    "type": "npm",
+    "day": 0,
+    "week": 0,
+    "year": 269,
+    "total": 269,
+    "title": "textigniter-angular"
+  },
+  {
+    "name": "monodog",
+    "type": "npm",
+    "day": 2,
+    "week": 35,
+    "year": 160,
+    "total": 160,
+    "title": "monodog"
+  },
+  {
+    "name": "textigniter",
+    "type": "npm",
+    "day": 0,
+    "week": 4,
+    "year": 131,
+    "total": 131,
+    "title": "textigniter"
+  },
+  {
+    "name": "textigniter-web-component",
+    "type": "npm",
+    "day": 0,
+    "week": 0,
+    "year": 112,
+    "total": 112,
+    "title": "textigniter-web-component"
+  },
+  {
+    "name": "textigniter-react",
+    "type": "npm",
+    "day": 0,
+    "week": 0,
+    "year": 103,
+    "total": 103,
+    "title": "textigniter-react"
+  },
+  {
+    "name": "pivothead-angular",
+    "type": "npm",
+    "day": 1,
+    "week": 1,
+    "year": 91,
+    "total": 91,
+    "title": "pivothead-angular"
+  },
+  {
+    "name": "pivothead-analytics",
+    "type": "npm",
+    "day": 3,
+    "week": 13,
+    "year": 34,
+    "total": 34,
+    "title": "pivothead-analytics"
   }
 ]
