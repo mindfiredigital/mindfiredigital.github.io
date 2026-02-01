@@ -187,8 +187,6 @@ export async function getAllStats(npmPackages, pypiPackages) {
 
 // Function to fetch PyPI download statistics for a given package
 async function fetchPyPIDownloadStats(packageName) {
-  console.log("Package name ", packageName);
-
   const url = `https://pypistats.org/api/packages/${packageName}/recent`;
 
   try {
