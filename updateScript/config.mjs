@@ -11,7 +11,7 @@ export const gitBaseUrl = "https://api.github.com/repos";
 export const pathForJson = "../src/app/projects/assets";
 export const gitOwner = "mindfiredigital";
 
-export const npmPackages = packagesData.filter((pkg) => pkg.type === "npM");
+export const npmPackages = packagesData.filter((pkg) => pkg.type === "npm");
 export const pypiPackages = packagesData.filter((pkg) => pkg.type === "PyPi");
 
 export function writeJsonToFile(relativePath, data) {
