@@ -190,7 +190,7 @@ async function fetchPyPIDownloadStats(packageName) {
   const url = `https://pypistats.org/api/packages/${packageName}/recent`;
   try {
     const data = await fetchWithRetry(url, 3, 1000);
-    console.log("fetch data ", data);
+
     return data.data;
   } catch (error) {
     console.log(
