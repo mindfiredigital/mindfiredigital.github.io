@@ -12,7 +12,7 @@ export const pathForJson = "../src/app/projects/assets";
 export const gitOwner = "mindfiredigital";
 
 export const npmPackages = packagesData.filter((pkg) => pkg.type === "npm");
-export const pypiPackages = packagesData.filter((pkg) => pkg.type === "pypi");
+export const pypiPackages = packagesData.filter((pkg) => pkg.type === "PyPi");
 
 export function writeJsonToFile(relativePath, data) {
   const fullPath = path.join(__dirname, relativePath);
