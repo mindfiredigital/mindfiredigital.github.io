@@ -159,9 +159,9 @@ export async function getAllStats(npmPackages, pypiPackages) {
           statsMap[packageName] = {
             name: packageName,
             type: "pypi",
-            last_day: stats.last_day,
-            last_week: stats.last_week,
-            last_month: stats.last_month,
+            day: stats.last_day || 0,
+            week: stats.last_week || 0,
+            year: (stats.last_month || 0) * 12,
             total: totalDownloads || stats.last_month,
           };
           console.log(
@@ -188,7 +188,6 @@ export async function getAllStats(npmPackages, pypiPackages) {
 // Function to fetch PyPI download statistics for a given package
 async function fetchPyPIDownloadStats(packageName) {
   const url = `https://pypistats.org/api/packages/${packageName}/recent`;
-
   try {
     const data = await fetchWithRetry(url, 3, 1000);
     return data.data;
