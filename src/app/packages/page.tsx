@@ -77,7 +77,7 @@ const Stats = () => {
         </p>
 
         <div className='w-full'>
-          <div className='mt-12 px-8 grid gap-6 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
+          <div className='mt-12 px-8 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
             {groupedPackages.map((group) => (
               <div
                 key={group.id}
