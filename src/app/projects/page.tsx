@@ -13,31 +13,7 @@ import projectData from "./assets/projects.json";
 import upcomingProjectData from "./assets/upcomingProjects.json";
 import contributorsData from "./assets/contributors.json";
 import contributorMapping from "./assets/contributor-mapping.json";
-
-// Define the Interface to match your JSON exactly
-interface Project {
-  id: number;
-  title: string;
-  short_description: string;
-  github_repository_link: string;
-  documentation_link: string;
-  project_type: string;
-  stars?: number;
-  tags?: string[];
-  // If the JSON doesn't have it yet, we mark it optional
-  contributors?: number;
-}
-
-interface Filters {
-  tags: string[];
-  technologies: string[];
-  starRange: string;
-  contributorRange: string;
-  selectedContributor: string[];
-  sortBy: string;
-}
-
-type ContributorMap = Record<string, number[]>;
+import { Project, Filters, ContributorMap } from "../../types";
 
 export default function ProjectsPage() {
   const [filters, setFilters] = useState<Filters>({
