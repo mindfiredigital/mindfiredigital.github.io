@@ -278,8 +278,14 @@ export default function ProjectsPage() {
           {/* Main container with sidebar and projects */}
           <div className='flex flex-col lg:flex-row gap-6'>
             {/* Sidebar Filters */}
-            <aside className='lg:w-72 flex-shrink-0'>
-              <div className='sticky top-4'>
+            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4'>
+              {" "}
+              {/* Added sticky to aside */}
+              <div className='max-h-[calc(100vh-2rem)] overflow-y-auto pr-2 custom-scrollbar'>
+                {/* 1. max-h: Sets height to viewport height minus some margin 
+                2. overflow-y-auto: Enables independent scrolling
+                3. custom-scrollbar: Optional class for styling
+              */}
                 <FilterSidebar
                   allTags={allTags}
                   allTechnologies={allTechnologies}
