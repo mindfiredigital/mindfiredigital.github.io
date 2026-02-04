@@ -15,6 +15,7 @@ interface Filters {
   starRange: string;
   contributorRange: string;
   selectedContributor: string[];
+  sortBy: string;
 }
 
 interface FilterSidebarProps {
@@ -43,6 +44,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   onMobileToggle,
 }) => {
   const [expandedSections, setExpandedSections] = useState({
+    sortBy: true,
     tags: true,
     technology: true,
     stars: true,
@@ -86,6 +88,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
       ? filters.selectedContributor.filter((c) => c !== login)
       : [...filters.selectedContributor, login];
     onFilterChange({ selectedContributor: newSelectedContributors });
+  };
+
+  const handleSortByChange = (sortBy: string) => {
+    onFilterChange({ sortBy });
   };
 
   const filteredContributors = contributors.filter((contributor) =>
@@ -169,145 +175,38 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
           </div>
         </div>
 
-        {/* Tags Filter */}
+        {/* Sort By Filter - NEW - Placed at the top */}
         <div className='mb-5 border-b border-gray-200 pb-4'>
           <button
-            onClick={() => toggleSection("tags")}
+            onClick={() => toggleSection("sortBy")}
             className='flex items-center justify-between w-full text-left py-1'
           >
-            <h4 className='text-sm font-semibold text-gray-900'>Tags</h4>
-            {expandedSections.tags ? (
+            <h4 className='text-sm font-semibold text-gray-900'>Sort By</h4>
+            {expandedSections.sortBy ? (
               <ChevronUp className='w-4 h-4 text-gray-500' />
             ) : (
               <ChevronDown className='w-4 h-4 text-gray-500' />
             )}
           </button>
-          {expandedSections.tags && (
-            <div className='mt-3 space-y-2 max-h-48 overflow-y-auto pr-1'>
-              {allTags.map((tag) => (
-                <label
-                  key={tag}
-                  className='flex items-center cursor-pointer group'
-                >
-                  <input
-                    type='checkbox'
-                    checked={filters.tags.includes(tag)}
-                    onChange={() => handleTagToggle(tag)}
-                    className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
-                  />
-                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
-                    {tag}
-                  </span>
-                </label>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Technology Filter */}
-        <div className='mb-5 border-b border-gray-200 pb-4'>
-          <button
-            onClick={() => toggleSection("technology")}
-            className='flex items-center justify-between w-full text-left py-1'
-          >
-            <h4 className='text-sm font-semibold text-gray-900'>Technology</h4>
-            {expandedSections.technology ? (
-              <ChevronUp className='w-4 h-4 text-gray-500' />
-            ) : (
-              <ChevronDown className='w-4 h-4 text-gray-500' />
-            )}
-          </button>
-          {expandedSections.technology && (
-            <div className='mt-3 space-y-2 max-h-48 overflow-y-auto pr-1'>
-              {allTechnologies.map((tech) => (
-                <label
-                  key={tech}
-                  className='flex items-center cursor-pointer group'
-                >
-                  <input
-                    type='checkbox'
-                    checked={filters.technologies.includes(tech)}
-                    onChange={() => handleTechnologyToggle(tech)}
-                    className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
-                  />
-                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
-                    {tech}
-                  </span>
-                </label>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Stars Filter */}
-        <div className='mb-5 border-b border-gray-200 pb-4'>
-          <button
-            onClick={() => toggleSection("stars")}
-            className='flex items-center justify-between w-full text-left py-1'
-          >
-            <h4 className='text-sm font-semibold text-gray-900'>Stars</h4>
-            {expandedSections.stars ? (
-              <ChevronUp className='w-4 h-4 text-gray-500' />
-            ) : (
-              <ChevronDown className='w-4 h-4 text-gray-500' />
-            )}
-          </button>
-          {expandedSections.stars && (
+          {expandedSections.sortBy && (
             <div className='mt-3 space-y-2'>
-              {["all", "10+", "50+", "100+", "500+"].map((range) => (
+              {["stars", "name"].map((sortOption) => (
                 <label
-                  key={range}
+                  key={sortOption}
                   className='flex items-center cursor-pointer group'
                 >
                   <input
                     type='radio'
-                    name='starRange'
-                    value={range}
-                    checked={filters.starRange === range}
-                    onChange={() => handleStarRangeChange(range)}
+                    name='sortBy'
+                    value={sortOption}
+                    checked={filters.sortBy === sortOption}
+                    onChange={() => handleSortByChange(sortOption)}
                     className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
                   />
                   <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
-                    {range === "all" ? "All" : `${range}`}
-                  </span>
-                </label>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Contributors Count Filter */}
-        <div className='mb-5 border-b border-gray-200 pb-4'>
-          <button
-            onClick={() => toggleSection("contributors")}
-            className='flex items-center justify-between w-full text-left py-1'
-          >
-            <h4 className='text-sm font-semibold text-gray-900'>
-              Contributors Count
-            </h4>
-            {expandedSections.contributors ? (
-              <ChevronUp className='w-4 h-4 text-gray-500' />
-            ) : (
-              <ChevronDown className='w-4 h-4 text-gray-500' />
-            )}
-          </button>
-          {expandedSections.contributors && (
-            <div className='mt-3 space-y-2'>
-              {["all", "5+", "10+", "20+", "50+"].map((range) => (
-                <label
-                  key={range}
-                  className='flex items-center cursor-pointer group'
-                >
-                  <input
-                    type='radio'
-                    name='contributorRange'
-                    value={range}
-                    checked={filters.contributorRange === range}
-                    onChange={() => handleContributorRangeChange(range)}
-                    className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
-                  />
-                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
-                    {range === "all" ? "All" : `${range}`}
+                    {sortOption === "stars"
+                      ? "Stars (High to Low)"
+                      : "Name (A to Z)"}
                   </span>
                 </label>
               ))}
@@ -316,7 +215,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         </div>
 
         {/* Contributors List */}
-        <div>
+        <div className='mb-5 border-b border-gray-200 pb-4'>
           <button
             onClick={() => toggleSection("contributorList")}
             className='flex items-center justify-between w-full text-left py-1'
@@ -403,9 +302,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     <img
                       src={contributor.avatar_url}
                       alt={contributor.login}
-                      className='w-7 h-7 rounded-full flex-shrink-0'
+                      className='w-8 h-8 rounded-full flex-shrink-0'
                     />
-                    <div className='flex-1 text-left overflow-hidden min-w-0'>
+                    <div className='flex-1 min-w-0'>
                       <p className='text-xs font-medium text-gray-900 truncate'>
                         {contributor.login}
                       </p>
@@ -417,10 +316,156 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 ))}
                 {filteredContributors.length > 50 && (
                   <p className='text-[10px] text-gray-500 text-center py-2'>
-                    Showing top 50 contributors
+                    Showing first 50 contributors
                   </p>
                 )}
               </div>
+            </div>
+          )}
+        </div>
+
+        {/* Stars Filter */}
+        <div className='mb-5 border-b border-gray-200 pb-4'>
+          <button
+            onClick={() => toggleSection("stars")}
+            className='flex items-center justify-between w-full text-left py-1'
+          >
+            <h4 className='text-sm font-semibold text-gray-900'>Stars</h4>
+            {expandedSections.stars ? (
+              <ChevronUp className='w-4 h-4 text-gray-500' />
+            ) : (
+              <ChevronDown className='w-4 h-4 text-gray-500' />
+            )}
+          </button>
+          {expandedSections.stars && (
+            <div className='mt-3 space-y-2'>
+              {["all", "10+", "50+", "100+", "500+"].map((range) => (
+                <label
+                  key={range}
+                  className='flex items-center cursor-pointer group'
+                >
+                  <input
+                    type='radio'
+                    name='starRange'
+                    value={range}
+                    checked={filters.starRange === range}
+                    onChange={() => handleStarRangeChange(range)}
+                    className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
+                  />
+                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+                    {range === "all" ? "All" : `${range}`}
+                  </span>
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Contributors Count Filter */}
+        <div className='mb-5 border-b border-gray-200 pb-4'>
+          <button
+            onClick={() => toggleSection("contributors")}
+            className='flex items-center justify-between w-full text-left py-1'
+          >
+            <h4 className='text-sm font-semibold text-gray-900'>
+              Contributors Count
+            </h4>
+            {expandedSections.contributors ? (
+              <ChevronUp className='w-4 h-4 text-gray-500' />
+            ) : (
+              <ChevronDown className='w-4 h-4 text-gray-500' />
+            )}
+          </button>
+          {expandedSections.contributors && (
+            <div className='mt-3 space-y-2'>
+              {["all", "5+", "10+", "20+", "50+"].map((range) => (
+                <label
+                  key={range}
+                  className='flex items-center cursor-pointer group'
+                >
+                  <input
+                    type='radio'
+                    name='contributorRange'
+                    value={range}
+                    checked={filters.contributorRange === range}
+                    onChange={() => handleContributorRangeChange(range)}
+                    className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
+                  />
+                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+                    {range === "all" ? "All" : `${range}`}
+                  </span>
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Technology Filter */}
+        <div className='mb-5 border-b border-gray-200 pb-4'>
+          <button
+            onClick={() => toggleSection("technology")}
+            className='flex items-center justify-between w-full text-left py-1'
+          >
+            <h4 className='text-sm font-semibold text-gray-900'>Technology</h4>
+            {expandedSections.technology ? (
+              <ChevronUp className='w-4 h-4 text-gray-500' />
+            ) : (
+              <ChevronDown className='w-4 h-4 text-gray-500' />
+            )}
+          </button>
+          {expandedSections.technology && (
+            <div className='mt-3 space-y-2 max-h-48 overflow-y-auto pr-1'>
+              {allTechnologies.map((tech) => (
+                <label
+                  key={tech}
+                  className='flex items-center cursor-pointer group'
+                >
+                  <input
+                    type='checkbox'
+                    checked={filters.technologies.includes(tech)}
+                    onChange={() => handleTechnologyToggle(tech)}
+                    className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
+                  />
+                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+                    {tech}
+                  </span>
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Tags Filter */}
+        <div className='mb-5 border-b border-gray-200 pb-4'>
+          <button
+            onClick={() => toggleSection("tags")}
+            className='flex items-center justify-between w-full text-left py-1'
+          >
+            <h4 className='text-sm font-semibold text-gray-900'>Tags</h4>
+            {expandedSections.tags ? (
+              <ChevronUp className='w-4 h-4 text-gray-500' />
+            ) : (
+              <ChevronDown className='w-4 h-4 text-gray-500' />
+            )}
+          </button>
+          {expandedSections.tags && (
+            <div className='mt-3 space-y-2 max-h-48 overflow-y-auto pr-1'>
+              {allTags.map((tag) => (
+                <label
+                  key={tag}
+                  className='flex items-center cursor-pointer group'
+                >
+                  <input
+                    type='checkbox'
+                    checked={filters.tags.includes(tag)}
+                    onChange={() => handleTagToggle(tag)}
+                    className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
+                  />
+                  <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+                    {tag}
+                  </span>
+                </label>
+              ))}
             </div>
           )}
         </div>

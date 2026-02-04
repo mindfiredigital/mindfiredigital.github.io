@@ -34,6 +34,7 @@ interface Filters {
   starRange: string;
   contributorRange: string;
   selectedContributor: string[];
+  sortBy: string;
 }
 
 type ContributorMap = Record<string, number[]>;
@@ -45,6 +46,7 @@ export default function ProjectsPage() {
     starRange: "all",
     contributorRange: "all",
     selectedContributor: [],
+    sortBy: "stars",
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
@@ -160,16 +162,24 @@ export default function ProjectsPage() {
   }, [filters, searchQuery, typedMapping]);
 
   const sortedCurrentProjects = useMemo(() => {
-    return [...filteredCurrentProjects].sort(
-      (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
-    );
-  }, [filteredCurrentProjects]);
+    const sorted = [...filteredCurrentProjects];
+    if (filters.sortBy === "stars") {
+      return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+    } else if (filters.sortBy === "name") {
+      return sorted.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    return sorted;
+  }, [filteredCurrentProjects, filters.sortBy]);
 
   const sortedUpcomingProjects = useMemo(() => {
-    return [...filteredUpcomingProjects].sort(
-      (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
-    );
-  }, [filteredUpcomingProjects]);
+    const sorted = [...filteredUpcomingProjects];
+    if (filters.sortBy === "stars") {
+      return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+    } else if (filters.sortBy === "name") {
+      return sorted.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    return sorted;
+  }, [filteredUpcomingProjects, filters.sortBy]);
 
   const handleFilterChange = (newFilters: Partial<Filters>) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
@@ -182,6 +192,7 @@ export default function ProjectsPage() {
       starRange: "all",
       contributorRange: "all",
       selectedContributor: [],
+      sortBy: "stars",
     });
     setSearchQuery("");
   };
