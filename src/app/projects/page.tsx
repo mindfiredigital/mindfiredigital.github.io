@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
@@ -10,6 +10,7 @@ import projectsImage from "../../../public/images/projects.webp";
 
 // Static Assets
 import projectData from "./assets/projects.json";
+import upcomingProjectData from "./assets/upcomingProjects.json";
 import contributorsData from "./assets/contributors.json";
 import contributorMapping from "./assets/contributor-mapping.json";
 
@@ -50,12 +51,18 @@ export default function ProjectsPage() {
 
   const typedMapping = contributorMapping as ContributorMap;
 
-  // 1. Extract unique tags and technologies
+  // 1. Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
     const tagsSet = new Set<string>();
     const techSet = new Set<string>();
 
-    (projectData as Project[]).forEach((project) => {
+    // Combine both project arrays
+    const allProjects = [
+      ...(projectData as Project[]),
+      ...(upcomingProjectData as Project[]),
+    ];
+
+    allProjects.forEach((project) => {
       project.tags?.forEach((tag) => {
         const lowerTag = tag.toLowerCase();
         if (
@@ -88,8 +95,8 @@ export default function ProjectsPage() {
   }, []);
 
   // 2. Filter projects using STATIC mapping
-  const filteredProjects = useMemo(() => {
-    return (projectData as Project[]).filter((project) => {
+  const filterProjects = (projects: Project[]) => {
+    return projects.filter((project) => {
       // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
@@ -142,13 +149,27 @@ export default function ProjectsPage() {
 
       return true;
     });
+  };
+
+  const filteredCurrentProjects = useMemo(() => {
+    return filterProjects(projectData as Project[]);
   }, [filters, searchQuery, typedMapping]);
 
-  const sortedProjects = useMemo(() => {
-    return [...filteredProjects].sort(
+  const filteredUpcomingProjects = useMemo(() => {
+    return filterProjects(upcomingProjectData as Project[]);
+  }, [filters, searchQuery, typedMapping]);
+
+  const sortedCurrentProjects = useMemo(() => {
+    return [...filteredCurrentProjects].sort(
       (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
     );
-  }, [filteredProjects]);
+  }, [filteredCurrentProjects]);
+
+  const sortedUpcomingProjects = useMemo(() => {
+    return [...filteredUpcomingProjects].sort(
+      (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
+    );
+  }, [filteredUpcomingProjects]);
 
   const handleFilterChange = (newFilters: Partial<Filters>) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
@@ -165,6 +186,24 @@ export default function ProjectsPage() {
     setSearchQuery("");
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  // Handle scroll on page load if there's a hash in the URL
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove the '#' character
+    if (hash) {
+      // Small delay to ensure the DOM is fully rendered
+      setTimeout(() => {
+        scrollToSection(hash);
+      }, 100);
+    }
+  }, []);
+
   return (
     <>
       <section className='bg-slate-50'>
@@ -178,7 +217,7 @@ export default function ProjectsPage() {
             </p>
             <div className='flex flex-wrap items-start gap-6 mt-10'>
               <Link
-                href='#all-projects'
+                href='#current-projects'
                 className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
               >
                 Browse Projects
@@ -196,17 +235,10 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8' id='all-projects'>
+      <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
-          <div className='flex justify-center items-center gap-4 mb-8'>
-            <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
-              Current Projects
-            </h2>
-            <ProjectCount totalProjects={sortedProjects.length} />
-          </div>
-
           <div className='flex flex-col lg:flex-row gap-6'>
-            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4'>
+            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4 lg:self-start'>
               <FilterSidebar
                 allTags={allTags}
                 allTechnologies={allTechnologies}
@@ -224,27 +256,71 @@ export default function ProjectsPage() {
             </aside>
 
             <main className='flex-1 min-w-0'>
-              {sortedProjects.length === 0 ? (
-                <div className='text-center py-12'>
-                  <p className='text-lg text-gray-500'>No projects found.</p>
+              {/* Current Projects Section */}
+              <div id='current-projects' className='mb-16'>
+                <div className='flex justify-center items-center gap-4 mb-8'>
+                  <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
+                    Current Projects
+                  </h2>
+                  <ProjectCount totalProjects={sortedCurrentProjects.length} />
                 </div>
-              ) : (
-                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
-                  {sortedProjects.map((project) => (
-                    <ProjectCard
-                      key={project.id}
-                      title={project.title}
-                      // Pass parentTitle manually to fix the component error
-                      parentTitle='Current Projects'
-                      shortDescription={project.short_description}
-                      githubUrl={project.github_repository_link}
-                      documentationUrl={project.documentation_link}
-                      stars={project.stars || 0}
-                      tags={project.tags || []}
-                    />
-                  ))}
+
+                {sortedCurrentProjects.length === 0 ? (
+                  <div className='text-center py-12'>
+                    <p className='text-lg text-gray-500'>
+                      No current projects found.
+                    </p>
+                  </div>
+                ) : (
+                  <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                    {sortedCurrentProjects.map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        title={project.title}
+                        parentTitle='Current Projects'
+                        shortDescription={project.short_description}
+                        githubUrl={project.github_repository_link}
+                        documentationUrl={project.documentation_link}
+                        stars={project.stars || 0}
+                        tags={project.tags || []}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Upcoming Projects Section */}
+              <div id='upcoming-projects' className='mb-16'>
+                <div className='flex justify-center items-center gap-4 mb-8'>
+                  <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
+                    Upcoming Projects
+                  </h2>
+                  <ProjectCount totalProjects={sortedUpcomingProjects.length} />
                 </div>
-              )}
+
+                {sortedUpcomingProjects.length === 0 ? (
+                  <div className='text-center py-12'>
+                    <p className='text-lg text-gray-500'>
+                      No upcoming projects found.
+                    </p>
+                  </div>
+                ) : (
+                  <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                    {sortedUpcomingProjects.map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        title={project.title}
+                        parentTitle='Upcoming Projects'
+                        shortDescription={project.short_description}
+                        githubUrl={project.github_repository_link}
+                        documentationUrl={project.documentation_link}
+                        stars={project.stars || 0}
+                        tags={project.tags || []}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
             </main>
           </div>
         </div>
