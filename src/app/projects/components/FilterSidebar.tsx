@@ -94,6 +94,11 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
     onFilterChange({ sortBy });
   };
 
+  // NEW: Function to clear all selected contributors
+  const handleClearAllContributors = () => {
+    onFilterChange({ selectedContributor: [] });
+  };
+
   const filteredContributors = contributors.filter((contributor) =>
     contributor.login.toLowerCase().includes(contributorSearch.toLowerCase())
   );
@@ -248,9 +253,20 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
               {/* Selected Contributors Display */}
               {filters.selectedContributor.length > 0 && (
                 <div className='mb-3 p-2 bg-red-50 rounded-md border border-red-200'>
-                  <p className='text-[10px] text-gray-600 mb-1.5 font-medium'>
-                    Selected:
-                  </p>
+                  <div className='flex items-center justify-between mb-1.5'>
+                    <p className='text-[10px] text-gray-600 font-medium'>
+                      Selected:
+                    </p>
+                    {/* NEW: Clear All Button */}
+                    <button
+                      onClick={handleClearAllContributors}
+                      className='text-[10px] text-mf-red hover:text-red-800 font-medium flex items-center gap-0.5'
+                      title='Clear all selected contributors'
+                    >
+                      <X className='w-3 h-3' />
+                      Clear All
+                    </button>
+                  </div>
                   <div className='flex flex-wrap gap-1.5'>
                     {filters.selectedContributor.map((login) => {
                       const contributor = contributors.find(
