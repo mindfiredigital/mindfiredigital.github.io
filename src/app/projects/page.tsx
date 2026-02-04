@@ -15,7 +15,7 @@ interface Filters {
   technologies: string[];
   starRange: string;
   contributorRange: string;
-  selectedContributor: string;
+  selectedContributor: string[];
 }
 
 interface GitHubContributor {
@@ -32,20 +32,25 @@ export default function ProjectsPage() {
     technologies: [],
     starRange: "all",
     contributorRange: "all",
-    selectedContributor: "",
+    selectedContributor: [],
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [contributorProjectMap, setContributorProjectMap] = useState<{
     [key: string]: number[];
   }>({});
+  const [isLoadingContributors, setIsLoadingContributors] = useState(false);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   // Fetch contributor-project mapping from GitHub repos
   useEffect(() => {
     async function fetchContributorMapping() {
+      if (Object.keys(contributorProjectMap).length > 0) return; // Already loaded
+
+      setIsLoadingContributors(true);
       const mapping: { [key: string]: number[] } = {};
 
-      // Parse GitHub URLs and create a mapping
-      for (const project of projectData) {
+      // Batch fetch with Promise.all for faster loading
+      const fetchPromises = projectData.map(async (project) => {
         const match = project.githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
         if (match) {
           const [, owner, repo] = match;
@@ -61,27 +66,34 @@ export default function ProjectsPage() {
 
             if (response.ok) {
               const contributors: GitHubContributor[] = await response.json();
-              contributors.forEach((contrib: GitHubContributor) => {
-                if (!mapping[contrib.login]) {
-                  mapping[contrib.login] = [];
-                }
-                mapping[contrib.login].push(project.id);
-              });
+              return { projectId: project.id, contributors };
             }
           } catch (error) {
             console.error(`Failed to fetch contributors for ${project.title}`);
           }
         }
-      }
+        return null;
+      });
+
+      const results = await Promise.all(fetchPromises);
+
+      results.forEach((result) => {
+        if (result) {
+          result.contributors.forEach((contrib: GitHubContributor) => {
+            if (!mapping[contrib.login]) {
+              mapping[contrib.login] = [];
+            }
+            mapping[contrib.login].push(result.projectId);
+          });
+        }
+      });
 
       setContributorProjectMap(mapping);
+      setIsLoadingContributors(false);
     }
 
-    // Only fetch if we don't have the mapping yet
-    if (Object.keys(contributorProjectMap).length === 0) {
-      fetchContributorMapping();
-    }
-  }, []);
+    fetchContributorMapping();
+  }, []); // Empty dependency array - only run once
 
   // Extract unique tags and technologies from projects
   const { allTags, allTechnologies } = useMemo(() => {
@@ -201,11 +213,15 @@ export default function ProjectsPage() {
         }
       }
 
-      // Selected contributor filter - now actually works!
-      if (filters.selectedContributor) {
-        const projectIds =
-          contributorProjectMap[filters.selectedContributor] || [];
-        if (!projectIds.includes(project.id)) return false;
+      // Selected contributors filter - supports multiple contributors
+      if (filters.selectedContributor.length > 0) {
+        const hasAllContributors = filters.selectedContributor.every(
+          (contributor) => {
+            const projectIds = contributorProjectMap[contributor] || [];
+            return projectIds.includes(project.id);
+          }
+        );
+        if (!hasAllContributors) return false;
       }
 
       return true;
@@ -229,9 +245,13 @@ export default function ProjectsPage() {
       technologies: [],
       starRange: "all",
       contributorRange: "all",
-      selectedContributor: "",
+      selectedContributor: [],
     });
     setSearchQuery("");
+  };
+
+  const toggleMobileFilter = () => {
+    setIsMobileFilterOpen((prev) => !prev);
   };
 
   return (
@@ -275,28 +295,31 @@ export default function ProjectsPage() {
             <ProjectCount totalProjects={sortedProjects.length} />
           </div>
 
+          {/* Loading indicator */}
+          {isLoadingContributors && (
+            <div className='text-center mb-4'>
+              <p className='text-sm text-gray-500'>
+                Loading contributor data...
+              </p>
+            </div>
+          )}
+
           {/* Main container with sidebar and projects */}
           <div className='flex flex-col lg:flex-row gap-6'>
             {/* Sidebar Filters */}
             <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4'>
-              {" "}
-              {/* Added sticky to aside */}
-              <div className='max-h-[calc(100vh-2rem)] overflow-y-auto pr-2 custom-scrollbar'>
-                {/* 1. max-h: Sets height to viewport height minus some margin 
-                2. overflow-y-auto: Enables independent scrolling
-                3. custom-scrollbar: Optional class for styling
-              */}
-                <FilterSidebar
-                  allTags={allTags}
-                  allTechnologies={allTechnologies}
-                  contributors={contributorsData}
-                  filters={filters}
-                  onFilterChange={handleFilterChange}
-                  onReset={handleResetFilters}
-                  searchQuery={searchQuery}
-                  onSearchChange={setSearchQuery}
-                />
-              </div>
+              <FilterSidebar
+                allTags={allTags}
+                allTechnologies={allTechnologies}
+                contributors={contributorsData}
+                filters={filters}
+                onFilterChange={handleFilterChange}
+                onReset={handleResetFilters}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                isMobileOpen={isMobileFilterOpen}
+                onMobileToggle={toggleMobileFilter}
+              />
             </aside>
 
             {/* Projects Grid */}
@@ -314,7 +337,7 @@ export default function ProjectsPage() {
                   </button>
                 </div>
               ) : (
-                <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
                   {sortedProjects.map((project) => (
                     <ProjectCard
                       key={project.id}
