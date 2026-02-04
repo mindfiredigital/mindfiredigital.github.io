@@ -1,14 +1,31 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
 import ProjectCount from "./components/ProjectCount";
 import FilterSidebar from "./components/FilterSidebar";
 import projectsImage from "../../../public/images/projects.webp";
+
+// Static Assets
 import projectData from "./assets/projects.json";
 import contributorsData from "./assets/contributors.json";
+import contributorMapping from "./assets/contributor-mapping.json";
+
+// Define the Interface to match your JSON exactly
+interface Project {
+  id: number;
+  title: string;
+  short_description: string;
+  github_repository_link: string;
+  documentation_link: string;
+  project_type: string;
+  stars?: number;
+  tags?: string[];
+  // If the JSON doesn't have it yet, we mark it optional
+  contributors?: number;
+}
 
 interface Filters {
   tags: string[];
@@ -18,13 +35,7 @@ interface Filters {
   selectedContributor: string[];
 }
 
-interface GitHubContributor {
-  login: string;
-  id: number;
-  avatar_url: string;
-  html_url: string;
-  contributions: number;
-}
+type ContributorMap = Record<string, number[]>;
 
 export default function ProjectsPage() {
   const [filters, setFilters] = useState<Filters>({
@@ -35,75 +46,18 @@ export default function ProjectsPage() {
     selectedContributor: [],
   });
   const [searchQuery, setSearchQuery] = useState("");
-  const [contributorProjectMap, setContributorProjectMap] = useState<{
-    [key: string]: number[];
-  }>({});
-  const [isLoadingContributors, setIsLoadingContributors] = useState(false);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  // Fetch contributor-project mapping from GitHub repos
-  useEffect(() => {
-    async function fetchContributorMapping() {
-      if (Object.keys(contributorProjectMap).length > 0) return; // Already loaded
+  const typedMapping = contributorMapping as ContributorMap;
 
-      setIsLoadingContributors(true);
-      const mapping: { [key: string]: number[] } = {};
-
-      // Batch fetch with Promise.all for faster loading
-      const fetchPromises = projectData.map(async (project) => {
-        const match = project.githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
-        if (match) {
-          const [, owner, repo] = match;
-          try {
-            const response = await fetch(
-              `https://api.github.com/repos/${owner}/${repo}/contributors?per_page=100`,
-              {
-                headers: {
-                  Accept: "application/vnd.github.v3+json",
-                },
-              }
-            );
-
-            if (response.ok) {
-              const contributors: GitHubContributor[] = await response.json();
-              return { projectId: project.id, contributors };
-            }
-          } catch (error) {
-            console.error(`Failed to fetch contributors for ${project.title}`);
-          }
-        }
-        return null;
-      });
-
-      const results = await Promise.all(fetchPromises);
-
-      results.forEach((result) => {
-        if (result) {
-          result.contributors.forEach((contrib: GitHubContributor) => {
-            if (!mapping[contrib.login]) {
-              mapping[contrib.login] = [];
-            }
-            mapping[contrib.login].push(result.projectId);
-          });
-        }
-      });
-
-      setContributorProjectMap(mapping);
-      setIsLoadingContributors(false);
-    }
-
-    fetchContributorMapping();
-  }, []); // Empty dependency array - only run once
-
-  // Extract unique tags and technologies from projects
+  // 1. Extract unique tags and technologies
   const { allTags, allTechnologies } = useMemo(() => {
     const tagsSet = new Set<string>();
     const techSet = new Set<string>();
 
-    projectData.forEach((project) => {
+    (projectData as Project[]).forEach((project) => {
       project.tags?.forEach((tag) => {
         const lowerTag = tag.toLowerCase();
-        // Categorize tags
         if (
           [
             "react",
@@ -133,27 +87,19 @@ export default function ProjectsPage() {
     };
   }, []);
 
-  // Calculate contributor count per project
-  const projectsWithContributors = useMemo(() => {
-    return projectData.map((project) => ({
-      ...project,
-      contributors: Math.floor(Math.random() * 50) + 1,
-    }));
-  }, []);
-
-  // Filter projects
+  // 2. Filter projects using STATIC mapping
   const filteredProjects = useMemo(() => {
-    return projectsWithContributors.filter((project) => {
+    return (projectData as Project[]).filter((project) => {
       // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         const matchesSearch =
           project.title.toLowerCase().includes(query) ||
-          project.shortDescription.toLowerCase().includes(query);
+          project.short_description.toLowerCase().includes(query);
         if (!matchesSearch) return false;
       }
 
-      // Tags filter
+      // Tags/Tech filters...
       if (filters.tags.length > 0) {
         const hasTag = filters.tags.some(
           (tag) =>
@@ -164,7 +110,6 @@ export default function ProjectsPage() {
         if (!hasTag) return false;
       }
 
-      // Technologies filter
       if (filters.technologies.length > 0) {
         const hasTech = filters.technologies.some(
           (tech) =>
@@ -175,49 +120,20 @@ export default function ProjectsPage() {
         if (!hasTech) return false;
       }
 
-      // Star range filter
+      // Star range
       if (filters.starRange !== "all") {
         const stars = project.stars || 0;
-        switch (filters.starRange) {
-          case "10+":
-            if (stars < 10) return false;
-            break;
-          case "50+":
-            if (stars < 50) return false;
-            break;
-          case "100+":
-            if (stars < 100) return false;
-            break;
-          case "500+":
-            if (stars < 500) return false;
-            break;
-        }
+        if (filters.starRange === "10+" && stars < 10) return false;
+        if (filters.starRange === "50+" && stars < 50) return false;
+        if (filters.starRange === "100+" && stars < 100) return false;
+        if (filters.starRange === "500+" && stars < 500) return false;
       }
 
-      // Contributor range filter
-      if (filters.contributorRange !== "all") {
-        const contribs = project.contributors || 0;
-        switch (filters.contributorRange) {
-          case "5+":
-            if (contribs < 5) return false;
-            break;
-          case "10+":
-            if (contribs < 10) return false;
-            break;
-          case "20+":
-            if (contribs < 20) return false;
-            break;
-          case "50+":
-            if (contribs < 50) return false;
-            break;
-        }
-      }
-
-      // Selected contributors filter - supports multiple contributors
+      // STATIC Contributor Filter
       if (filters.selectedContributor.length > 0) {
         const hasAllContributors = filters.selectedContributor.every(
-          (contributor) => {
-            const projectIds = contributorProjectMap[contributor] || [];
+          (login) => {
+            const projectIds = typedMapping[login] || [];
             return projectIds.includes(project.id);
           }
         );
@@ -226,9 +142,8 @@ export default function ProjectsPage() {
 
       return true;
     });
-  }, [projectsWithContributors, filters, searchQuery, contributorProjectMap]);
+  }, [filters, searchQuery, typedMapping]);
 
-  // Sort by stars
   const sortedProjects = useMemo(() => {
     return [...filteredProjects].sort(
       (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
@@ -248,10 +163,6 @@ export default function ProjectsPage() {
       selectedContributor: [],
     });
     setSearchQuery("");
-  };
-
-  const toggleMobileFilter = () => {
-    setIsMobileFilterOpen((prev) => !prev);
   };
 
   return (
@@ -276,7 +187,7 @@ export default function ProjectsPage() {
           </div>
           <Image
             src={projectsImage}
-            alt='group-of-people-gathered-around-wooden-table'
+            alt='projects'
             className='max-lg:w-full object-contain'
             height='500'
             width='600'
@@ -287,7 +198,6 @@ export default function ProjectsPage() {
 
       <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8' id='all-projects'>
         <div className='max-w-7xl mx-auto'>
-          {/* Header with project count */}
           <div className='flex justify-center items-center gap-4 mb-8'>
             <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
               Current Projects
@@ -295,18 +205,7 @@ export default function ProjectsPage() {
             <ProjectCount totalProjects={sortedProjects.length} />
           </div>
 
-          {/* Loading indicator */}
-          {isLoadingContributors && (
-            <div className='text-center mb-4'>
-              <p className='text-sm text-gray-500'>
-                Loading contributor data...
-              </p>
-            </div>
-          )}
-
-          {/* Main container with sidebar and projects */}
           <div className='flex flex-col lg:flex-row gap-6'>
-            {/* Sidebar Filters */}
             <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4'>
               <FilterSidebar
                 allTags={allTags}
@@ -318,23 +217,16 @@ export default function ProjectsPage() {
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
                 isMobileOpen={isMobileFilterOpen}
-                onMobileToggle={toggleMobileFilter}
+                onMobileToggle={() =>
+                  setIsMobileFilterOpen(!isMobileFilterOpen)
+                }
               />
             </aside>
 
-            {/* Projects Grid */}
             <main className='flex-1 min-w-0'>
               {sortedProjects.length === 0 ? (
                 <div className='text-center py-12'>
-                  <p className='text-lg text-gray-500'>
-                    No projects found matching your filters.
-                  </p>
-                  <button
-                    onClick={handleResetFilters}
-                    className='mt-4 text-sm text-mf-red hover:underline'
-                  >
-                    Reset Filters
-                  </button>
+                  <p className='text-lg text-gray-500'>No projects found.</p>
                 </div>
               ) : (
                 <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
@@ -342,12 +234,13 @@ export default function ProjectsPage() {
                     <ProjectCard
                       key={project.id}
                       title={project.title}
+                      // Pass parentTitle manually to fix the component error
                       parentTitle='Current Projects'
-                      shortDescription={project.shortDescription}
-                      githubUrl={project.githubUrl}
-                      documentationUrl={project.documentationUrl}
-                      stars={project.stars}
-                      tags={project.tags}
+                      shortDescription={project.short_description}
+                      githubUrl={project.github_repository_link}
+                      documentationUrl={project.documentation_link}
+                      stars={project.stars || 0}
+                      tags={project.tags || []}
                     />
                   ))}
                 </div>
