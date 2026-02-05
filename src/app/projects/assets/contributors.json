@@ -15,7 +15,7 @@
     "html_url": "https://github.com/deepakyadav-01",
     "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
     "login": "deepakyadav-01",
-    "lastActiveDays": 3,
+    "lastActiveDays": 4,
     "pullRequestCount": 179,
     "issueCount": 38
   },
@@ -31,13 +31,23 @@
   },
   {
     "id": 80667930,
-    "contributions": 272,
+    "contributions": 275,
     "html_url": "https://github.com/lakinmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
     "login": "lakinmindfire",
-    "lastActiveDays": 1,
-    "pullRequestCount": 54,
-    "issueCount": 25
+    "lastActiveDays": 0,
+    "pullRequestCount": 55,
+    "issueCount": 32
+  },
+  {
+    "id": 193932396,
+    "contributions": 187,
+    "html_url": "https://github.com/ParasMindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
+    "login": "ParasMindfire",
+    "lastActiveDays": null,
+    "pullRequestCount": 29,
+    "issueCount": 40
   },
   {
     "id": 121153274,
@@ -58,16 +68,6 @@
     "lastActiveDays": null,
     "pullRequestCount": 8,
     "issueCount": 44
-  },
-  {
-    "id": 193932396,
-    "contributions": 179,
-    "html_url": "https://github.com/ParasMindfire",
-    "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
-    "login": "ParasMindfire",
-    "lastActiveDays": null,
-    "pullRequestCount": 29,
-    "issueCount": 40
   },
   {
     "id": 217167363,
@@ -155,7 +155,7 @@
     "html_url": "https://github.com/sanghamitradash021",
     "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
     "login": "sanghamitradash021",
-    "lastActiveDays": 6,
+    "lastActiveDays": 7,
     "pullRequestCount": 0,
     "issueCount": 13
   },
@@ -165,7 +165,7 @@
     "html_url": "https://github.com/SandipMF",
     "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
     "login": "SandipMF",
-    "lastActiveDays": 1,
+    "lastActiveDays": 2,
     "pullRequestCount": 0,
     "issueCount": 19
   },
@@ -175,7 +175,7 @@
     "html_url": "https://github.com/SsagarikaR",
     "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
     "login": "SsagarikaR",
-    "lastActiveDays": 24,
+    "lastActiveDays": 25,
     "pullRequestCount": 0,
     "issueCount": 10
   },
@@ -185,7 +185,7 @@
     "html_url": "https://github.com/manojkmfsi",
     "avatar_url": "https://avatars.githubusercontent.com/u/134362545?v=4",
     "login": "manojkmfsi",
-    "lastActiveDays": 0,
+    "lastActiveDays": 1,
     "pullRequestCount": 1,
     "issueCount": 0
   },
@@ -245,9 +245,9 @@
     "html_url": "https://github.com/NikhilMeshram01",
     "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
     "login": "NikhilMeshram01",
-    "lastActiveDays": 2,
+    "lastActiveDays": 0,
     "pullRequestCount": 2,
-    "issueCount": 11
+    "issueCount": 12
   },
   {
     "id": 180177757,
@@ -355,7 +355,7 @@
     "html_url": "https://github.com/biswalom22",
     "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
     "login": "biswalom22",
-    "lastActiveDays": 15,
+    "lastActiveDays": 16,
     "pullRequestCount": 8,
     "issueCount": 0
   },
@@ -545,7 +545,7 @@
     "html_url": "https://github.com/sanobery",
     "avatar_url": "https://avatars.githubusercontent.com/u/117646878?v=4",
     "login": "sanobery",
-    "lastActiveDays": 0,
+    "lastActiveDays": 1,
     "pullRequestCount": 0,
     "issueCount": 17
   },
@@ -665,7 +665,7 @@
     "html_url": "https://github.com/alokrajmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/225856934?v=4",
     "login": "alokrajmindfire",
-    "lastActiveDays": 22,
+    "lastActiveDays": 23,
     "pullRequestCount": 0,
     "issueCount": 0
   },
@@ -755,7 +755,7 @@
     "html_url": "https://github.com/yogeshsmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
     "login": "yogeshsmindfire",
-    "lastActiveDays": 27,
+    "lastActiveDays": 1,
     "pullRequestCount": 1,
     "issueCount": 0
   },
