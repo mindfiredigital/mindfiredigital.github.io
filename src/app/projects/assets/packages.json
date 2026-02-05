@@ -8,6 +8,14 @@
     "status": "published"
   },
   {
+    "name": "Extension Methods",
+    "title": "Extension Methods",
+    "type": "nuget",
+    "url": "https://www.nuget.org/packages/Extension.Methods",
+    "projectTitle": "Extension Methods",
+    "status": "draft"
+  },
+  {
     "name": "Angular Canvas Editor",
     "title": "Angular Canvas Editor",
     "type": "npm",
@@ -48,18 +56,18 @@
     "status": "published"
   },
   {
-    "name": "page-builder-react",
-    "title": "page-builder-react",
-    "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
-    "projectTitle": "Page Builder",
-    "status": "published"
-  },
-  {
     "name": "page-builder-web-component",
     "title": "page-builder-web-component",
     "type": "npm",
     "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
+    "projectTitle": "Page Builder",
+    "status": "published"
+  },
+  {
+    "name": "page-builder-react",
+    "title": "page-builder-react",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
     "projectTitle": "Page Builder",
     "status": "published"
   },
@@ -166,6 +174,30 @@
     "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
     "projectTitle": "Ignix UI",
     "status": "published"
+  },
+  {
+    "name": "Multi-Agent Knowledge Graph Chatbot",
+    "title": "Multi-Agent Knowledge Graph Chatbot",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Multi-Agent Knowledge Graph Chatbot",
+    "status": "draft"
+  },
+  {
+    "name": "Smart-CodeGen-ML-Agent",
+    "title": "Smart-CodeGen-ML-Agent",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Smart-CodeGen-ML-Agent",
+    "status": "draft"
+  },
+  {
+    "name": "AUTOTEST",
+    "title": "AUTOTEST",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "AUTOTEST",
+    "status": "draft"
   },
   {
     "name": "nextjs-fortress",

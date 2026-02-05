@@ -13,6 +13,37 @@
     ]
   },
   {
+    "id": "3",
+    "title": "NFT Marketplace",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "4",
+    "title": "FMDAPI Node Weaver",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "5",
+    "title": "Extension Methods",
+    "isMonoRepo": false,
+    "packages": [
+      {
+        "name": "Extension Methods",
+        "type": "nuget",
+        "url": "https://www.nuget.org/packages/Extension.Methods",
+        "status": "draft"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "FireKubeX",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
     "id": "10",
     "title": "Angular Canvas Editor",
     "isMonoRepo": false,
@@ -24,6 +55,24 @@
         "status": "published"
       }
     ]
+  },
+  {
+    "id": "12",
+    "title": "MobileQuickLaunchKit-iOS",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "13",
+    "title": "MobileQuickLaunchKit-Android",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "14",
+    "title": "QuickLaunchReactNativeKit",
+    "isMonoRepo": false,
+    "packages": []
   },
   {
     "id": "15",
@@ -83,15 +132,15 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "page-builder-react",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
-        "status": "published"
-      },
-      {
         "name": "page-builder-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
+        "status": "published"
+      },
+      {
+        "name": "page-builder-react",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
         "status": "published"
       },
       {
@@ -152,6 +201,12 @@
     ]
   },
   {
+    "id": "21",
+    "title": "OpenRecap",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
     "id": "22",
     "title": "Document Editor",
     "isMonoRepo": true,
@@ -192,6 +247,69 @@
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
         "status": "published"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "FileMaker List View Addon",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "25",
+    "title": "DeepScanBot",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "26",
+    "title": "AIHealthCounsellor",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "27",
+    "title": "Multi Cloud Monorepo Boilerplate",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "28",
+    "title": "Multi-Agent Knowledge Graph Chatbot",
+    "isMonoRepo": false,
+    "packages": [
+      {
+        "name": "Multi-Agent Knowledge Graph Chatbot",
+        "type": "PyPi",
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Smart-CodeGen-ML-Agent",
+    "isMonoRepo": false,
+    "packages": [
+      {
+        "name": "Smart-CodeGen-ML-Agent",
+        "type": "PyPi",
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "AUTOTEST",
+    "isMonoRepo": false,
+    "packages": [
+      {
+        "name": "AUTOTEST",
+        "type": "PyPi",
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
       }
     ]
   },
