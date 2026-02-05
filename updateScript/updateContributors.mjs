@@ -1,5 +1,12 @@
 import { gitBaseUrl, gitOwner, githubToken } from "./config.mjs";
 import { fetchData } from "./config.mjs";
+import fs from "fs";
+import path from "path";
+import axios from "axios";
+
+const PROJECTS_PATH = "./src/app/projects/assets/projects.json";
+const MAPPING_PATH = "./src/app/projects/assets/contributor-mapping.json";
+const TOKEN = process.env.GITHUB_TOKEN; // Use GITHUB_TOKEN from env (set in CI or .env.local)
 
 async function fetchDefaultBranch(owner, repo, token) {
   const repoDetails = await fetchData(`${gitBaseUrl}/${owner}/${repo}`, {
@@ -315,3 +322,39 @@ export async function getContributorData(contributor) {
     lastActiveDays,
   };
 }
+
+async function generateMapping() {
+  const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
+  const mapping = {};
+
+  console.log("🚀 Generating contributor-to-project mapping...");
+
+  for (const project of projects) {
+    // Extract owner and repo from githubUrl
+    const match = project.githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
+    if (match) {
+      const [, owner, repo] = match;
+      try {
+        const res = await axios.get(
+          `https://api.github.com/repos/${owner}/${repo}/contributors`,
+          { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
+        );
+
+        res.data.forEach((contributor) => {
+          if (!mapping[contributor.login]) mapping[contributor.login] = [];
+          mapping[contributor.login].push(project.id);
+        });
+        console.log(`✅ Synced: ${project.title}`);
+      } catch (e) {
+        console.error(
+          `❌ Failed: ${project.title} (Rate limit or invalid URL)`
+        );
+      }
+    }
+  }
+
+  fs.writeFileSync(MAPPING_PATH, JSON.stringify(mapping, null, 2));
+  console.log("✨ Mapping saved to contributor-mapping.json");
+}
+
+generateMapping();

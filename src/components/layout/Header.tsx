@@ -7,11 +7,25 @@ import Image from "next/image";
 import Link from "next/link";
 import mindfireFossLogo from "../../../public/images/mindfire_foss_logo.png";
 import ExternalRedirectIcon from "../shared/icons/ExternalRedirectIcon";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/app/utils";
 
 const Header = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleProjectScroll = (sectionId: string) => {
+    // If we're already on the projects page, just scroll
+    if (pathname === "/projects") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // Navigate to projects page with the hash
+      router.push(`/projects#${sectionId}`);
+    }
+  };
 
   return (
     <Disclosure as='header' className='bg-white sticky top-0 z-50'>
@@ -70,18 +84,22 @@ const Header = () => {
                           aria-orientation='vertical'
                           aria-labelledby='menu-button'
                         >
-                          <Link
-                            className='block px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
-                            href={`${navigation.path[1]}#current-projects`}
+                          <button
+                            onClick={() =>
+                              handleProjectScroll("current-projects")
+                            }
+                            className='block w-full text-left px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
                           >
                             Current Projects
-                          </Link>
-                          <Link
-                            className='block px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
-                            href={`${navigation.path[2]}#upcoming-projects`}
+                          </button>
+                          <button
+                            onClick={() =>
+                              handleProjectScroll("upcoming-projects")
+                            }
+                            className='block w-full text-left px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
                           >
                             Upcoming Projects
-                          </Link>
+                          </button>
                         </div>
                       </div>
                     ) : (
@@ -134,20 +152,24 @@ const Header = () => {
                       </Link>
                       <ul className='ml-4 mt-2 flex flex-col gap-2'>
                         <li>
-                          <Link
-                            href={`${navigation.path[1]}#current-projects`}
-                            className='text-gray-700 hover:text-mf-red'
+                          <button
+                            onClick={() =>
+                              handleProjectScroll("current-projects")
+                            }
+                            className='text-gray-700 hover:text-mf-red text-left'
                           >
                             Current Projects
-                          </Link>
+                          </button>
                         </li>
                         <li>
-                          <Link
-                            href={`${navigation.path[2]}#upcoming-projects`}
-                            className='text-gray-700 hover:text-mf-red'
+                          <button
+                            onClick={() =>
+                              handleProjectScroll("upcoming-projects")
+                            }
+                            className='text-gray-700 hover:text-mf-red text-left'
                           >
                             Upcoming Projects
-                          </Link>
+                          </button>
                         </li>
                       </ul>
                     </div>
