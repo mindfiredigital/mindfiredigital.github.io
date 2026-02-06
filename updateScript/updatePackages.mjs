@@ -149,11 +149,12 @@ export async function getAllStats(npmPackages, pypiPackages) {
 
   // Fetch stats for PyPI packages (parallel is ok, different API)
   console.log(`\n📊 Fetching PyPI stats...`);
+  // In the PyPI section, change to:
   await Promise.all(
     pypiPackages.map(async (packageName) => {
       try {
         const stats = await fetchPyPIDownloadStats(packageName);
-        const totalDownloads = await fetchTotalDownloads(packageName);
+        const totalDownloads = await fetchTotalDownloads(packageName); // This now gets all-time from pepy.tech
 
         if (stats) {
           statsMap[packageName] = {
@@ -161,11 +162,12 @@ export async function getAllStats(npmPackages, pypiPackages) {
             type: "pypi",
             day: stats.last_day || 0,
             week: stats.last_week || 0,
-            year: (stats.last_month || 0) * 12,
-            total: totalDownloads || stats.last_month,
+            month: stats.last_month || 0,
+            year: 0, // pepy.tech doesn't provide yearly, only all-time
+            total: totalDownloads, // ALL-TIME downloads from pepy.tech
           };
           console.log(
-            `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}`
+            `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}, total=${totalDownloads}`
           );
         }
       } catch (error) {

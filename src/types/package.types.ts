@@ -9,6 +9,7 @@ export type Package = {
   day?: number;
   week?: number;
   year?: number;
+  month?: number;
   total?: number;
   last_day?: number;
   last_week?: number;
