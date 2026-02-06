@@ -139,12 +139,36 @@ export default function ProjectsPage() {
 
   const sortedCurrentProjects = useMemo(() => {
     const sorted = [...filteredCurrentProjects];
-    if (filters.sortBy === "stars") {
-      return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
-    } else if (filters.sortBy === "name") {
-      return sorted.sort((a, b) => a.title.localeCompare(b.title));
+
+    switch (filters.sortBy) {
+      case "activity":
+        return sorted.sort((a, b) => {
+          const dateA = new Date(a.lastPushedAt || 0).getTime();
+          const dateB = new Date(b.lastPushedAt || 0).getTime();
+
+          console.log("date ", dateB - dateA);
+
+          return dateB - dateA; // Most recent push first
+        });
+      case "stars":
+        return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+      case "name":
+        return sorted.sort((a, b) => a.title.localeCompare(b.title));
+      case "newest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(b.date_created).getTime() -
+            new Date(a.date_created).getTime()
+        );
+      case "oldest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(a.date_created).getTime() -
+            new Date(b.date_created).getTime()
+        );
+      default:
+        return sorted;
     }
-    return sorted;
   }, [filteredCurrentProjects, filters.sortBy]);
 
   const sortedUpcomingProjects = useMemo(() => {
@@ -224,8 +248,19 @@ export default function ProjectsPage() {
 
       <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
-          <div className='flex flex-col lg:flex-row gap-6'>
-            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4 lg:self-start'>
+          {/* Move headings OUTSIDE the flex container */}
+          <div id='current-projects' className='mb-8'>
+            <div className='flex justify-center items-center gap-4'>
+              <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
+                Current Projects
+              </h2>
+              <ProjectCount totalProjects={sortedCurrentProjects.length} />
+            </div>
+          </div>
+
+          <div className='flex flex-col lg:flex-row gap-6 items-start'>
+            {/* Sticky Sidebar - now aligns with cards */}
+            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4 lg:self-start lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto'>
               <FilterSidebar
                 allTags={allTags}
                 allTechnologies={allTechnologies}
@@ -242,16 +277,10 @@ export default function ProjectsPage() {
               />
             </aside>
 
+            {/* Main Content Area - Cards */}
             <main className='flex-1 min-w-0'>
-              {/* Current Projects Section */}
-              <div id='current-projects' className='mb-16'>
-                <div className='flex justify-center items-center gap-4 mb-8'>
-                  <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
-                    Current Projects
-                  </h2>
-                  <ProjectCount totalProjects={sortedCurrentProjects.length} />
-                </div>
-
+              {/* Current Projects Grid */}
+              <div className='mb-16'>
                 {sortedCurrentProjects.length === 0 ? (
                   <div className='text-center py-12'>
                     <p className='text-lg text-gray-500'>
@@ -275,39 +304,48 @@ export default function ProjectsPage() {
                   </div>
                 )}
               </div>
+            </main>
+          </div>
 
-              {/* Upcoming Projects Section */}
-              <div id='upcoming-projects' className='mb-16'>
-                <div className='flex justify-center items-center gap-4 mb-8'>
-                  <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
-                    Upcoming Projects
-                  </h2>
-                  <ProjectCount totalProjects={sortedUpcomingProjects.length} />
+          {/* Upcoming Projects Section - Full Width Heading */}
+          <div id='upcoming-projects' className='mt-16 mb-8'>
+            <div className='flex justify-center items-center gap-4'>
+              <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
+                Upcoming Projects
+              </h2>
+              <ProjectCount totalProjects={sortedUpcomingProjects.length} />
+            </div>
+          </div>
+
+          {/* Upcoming Projects Grid - aligned with sidebar */}
+          <div className='flex flex-col lg:flex-row gap-6 items-start'>
+            {/* Spacer to match sidebar width */}
+            <div className='lg:w-72 flex-shrink-0'></div>
+
+            {/* Upcoming Projects Content */}
+            <main className='flex-1 min-w-0'>
+              {sortedUpcomingProjects.length === 0 ? (
+                <div className='text-center py-12'>
+                  <p className='text-lg text-gray-500'>
+                    No upcoming projects found.
+                  </p>
                 </div>
-
-                {sortedUpcomingProjects.length === 0 ? (
-                  <div className='text-center py-12'>
-                    <p className='text-lg text-gray-500'>
-                      No upcoming projects found.
-                    </p>
-                  </div>
-                ) : (
-                  <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
-                    {sortedUpcomingProjects.map((project) => (
-                      <ProjectCard
-                        key={project.id}
-                        title={project.title}
-                        parentTitle='Upcoming Projects'
-                        shortDescription={project.short_description}
-                        githubUrl={project.github_repository_link}
-                        documentationUrl={project.documentation_link}
-                        stars={project.stars || 0}
-                        tags={project.tags || []}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
+              ) : (
+                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                  {sortedUpcomingProjects.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      title={project.title}
+                      parentTitle='Upcoming Projects'
+                      shortDescription={project.short_description}
+                      githubUrl={project.github_repository_link}
+                      documentationUrl={project.documentation_link}
+                      stars={project.stars || 0}
+                      tags={project.tags || []}
+                    />
+                  ))}
+                </div>
+              )}
             </main>
           </div>
         </div>

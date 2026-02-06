@@ -78,6 +78,7 @@ export function usePackageStats() {
         day: stats?.day || 0,
         week: stats?.week || 0,
         year: stats?.year || 0,
+        month: stats?.month || 0,
         total: stats?.total || 0,
         last_day: stats?.last_day || 0,
         last_week: stats?.last_week || 0,

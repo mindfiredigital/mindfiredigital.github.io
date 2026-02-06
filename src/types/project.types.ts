@@ -43,6 +43,9 @@ export interface Project {
   tags?: string[];
   // If the JSON doesn't have it yet, we mark it optional
   contributors?: number;
+  date_created: string; // Use string for ISO timestamps from JSON
+  date_updated?: string | null;
+  lastPushedAt?: string;
 }
 
 export interface Filters {

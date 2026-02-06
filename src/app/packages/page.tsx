@@ -290,13 +290,13 @@ const Stats = () => {
                               <option value={selectedPackage?.total}>
                                 Total
                               </option>
-                              <option value={selectedPackage?.last_month}>
+                              <option value={selectedPackage?.month}>
                                 Last month
                               </option>
-                              <option value={selectedPackage?.last_day}>
+                              <option value={selectedPackage?.day}>
                                 Yesterday
                               </option>
-                              <option value={selectedPackage?.last_week}>
+                              <option value={selectedPackage?.week}>
                                 Last week
                               </option>
                             </select>
