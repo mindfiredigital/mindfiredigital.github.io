@@ -153,6 +153,7 @@ async function updateProjects() {
           documentationUrl: entry.documentation_link,
           stars: repoData ? repoData.stargazers_count : 0,
           tags: repoData ? repoData.topics.slice(0, 5) : [],
+          lastPushedAt: repoData ? repoData.pushed_at : entry.date_created,
         };
       })
     );

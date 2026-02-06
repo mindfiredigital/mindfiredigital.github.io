@@ -139,12 +139,36 @@ export default function ProjectsPage() {
 
   const sortedCurrentProjects = useMemo(() => {
     const sorted = [...filteredCurrentProjects];
-    if (filters.sortBy === "stars") {
-      return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
-    } else if (filters.sortBy === "name") {
-      return sorted.sort((a, b) => a.title.localeCompare(b.title));
+
+    switch (filters.sortBy) {
+      case "activity":
+        return sorted.sort((a, b) => {
+          const dateA = new Date(a.lastPushedAt || 0).getTime();
+          const dateB = new Date(b.lastPushedAt || 0).getTime();
+
+          console.log("date ", dateB - dateA);
+
+          return dateB - dateA; // Most recent push first
+        });
+      case "stars":
+        return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+      case "name":
+        return sorted.sort((a, b) => a.title.localeCompare(b.title));
+      case "newest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(b.date_created).getTime() -
+            new Date(a.date_created).getTime()
+        );
+      case "oldest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(a.date_created).getTime() -
+            new Date(b.date_created).getTime()
+        );
+      default:
+        return sorted;
     }
-    return sorted;
   }, [filteredCurrentProjects, filters.sortBy]);
 
   const sortedUpcomingProjects = useMemo(() => {

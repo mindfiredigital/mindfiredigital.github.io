@@ -172,23 +172,27 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
             </button>
             {expandedSections.sortBy && (
               <div className='mt-3 space-y-2'>
-                {["stars", "name"].map((sortOption) => (
+                {[
+                  { id: "activity", label: "Most Active (Recent Commits)" },
+                  { id: "stars", label: "Stars (Highest to Lowest)" },
+                  { id: "newest", label: "Recently Created" },
+                  { id: "oldest", label: "Oldest Projects" },
+                  { id: "name", label: "Name (A to Z)" },
+                ].map((option) => (
                   <label
-                    key={sortOption}
+                    key={option.id}
                     className='flex items-center cursor-pointer group'
                   >
                     <input
                       type='radio'
                       name='sortBy'
-                      value={sortOption}
-                      checked={filters.sortBy === sortOption}
-                      onChange={() => handleSortByChange(sortOption)}
+                      value={option.id}
+                      checked={filters.sortBy === option.id}
+                      onChange={() => handleSortByChange(option.id)}
                       className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
                     />
                     <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
-                      {sortOption === "stars"
-                        ? "Stars (High to Low)"
-                        : "Name (A to Z)"}
+                      {option.label}
                     </span>
                   </label>
                 ))}
