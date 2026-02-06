@@ -20,7 +20,11 @@ export default function ProjectCard({
   const [expandDescription, setExpandDescription] = useState(false);
 
   return (
-    <div className='border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full h-80 flex flex-col relative'>
+    <div
+      className={`border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full flex flex-col relative ${
+        parentTitle === "Upcoming Projects" ? "h-52" : "h-80"
+      }`}
+    >
       <div className='flex-1 flex flex-col overflow-hidden'>
         <div className='flex justify-between items-start mb-2 h-[60px]'>
           <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black line-clamp-2 capitalize pr-2 overflow-hidden'>
@@ -37,11 +41,11 @@ export default function ProjectCard({
 
         {/* Description - fixed height with toggleable expansion */}
         <div
-          className={`relative cursor-pointer transition-all duration-300 h-[90px] ${
+          className={`relative cursor-pointer transition-all duration-300 ${
             expandDescription
               ? "max-h-[90px] overflow-y-auto"
               : "max-h-[5.5rem] overflow-hidden"
-          } mb-4`}
+          } ${parentTitle === "Upcoming Projects" ? "mb-2" : "mb-4"}`}
           onClick={() => {
             if (shortDescription.length > 120)
               setExpandDescription(!expandDescription);
@@ -54,13 +58,17 @@ export default function ProjectCard({
           >
             {shortDescription}
           </p>
-          {/* Show toggle outside the paragraph */}
-          {shortDescription.length > 120 && (
-            <span className='text-xs text-mindfire-text-red mt-1 block'>
-              {expandDescription ? "less" : "more"}
-            </span>
-          )}
         </div>
+
+        {/* Show toggle outside the description div - now clickable */}
+        {shortDescription.length > 120 && (
+          <span
+            className='text-xs text-mindfire-text-red block -mt-2 mb-2 cursor-pointer'
+            onClick={() => setExpandDescription(!expandDescription)}
+          >
+            {expandDescription ? "less" : "more"}
+          </span>
+        )}
 
         {/* Tags section - fixed height + horizontal scroll if overflow */}
         {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
