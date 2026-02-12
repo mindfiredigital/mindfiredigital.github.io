@@ -2,145 +2,219 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 8,
-    "week": 127,
-    "year": 53181,
-    "total": 109520,
-    "title": "ESLint Plugin Hub"
-  },
-  {
-    "name": "page-builder-react",
-    "type": "npm",
-    "day": 1,
-    "week": 26,
-    "year": 3830,
-    "total": 4003,
-    "title": "Page Builder (React)"
+    "day": 39,
+    "week": 168,
+    "year": 53094,
+    "total": 109432,
+    "title": "eslint-plugin-hub"
   },
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "last_day": 0,
-    "last_week": 10,
-    "last_month": 77,
-    "total": 3605,
-    "title": "Neo Pusher"
+    "day": 0,
+    "week": 5,
+    "month": 110,
+    "year": 0,
+    "total": 20000,
+    "title": "neo-pusher"
+  },
+  {
+    "name": "sqlrag",
+    "type": "pypi",
+    "day": 0,
+    "week": 13,
+    "month": 72,
+    "year": 0,
+    "total": 7000,
+    "title": "sqlrag"
+  },
+  {
+    "name": "page-builder-react",
+    "type": "npm",
+    "day": 18,
+    "week": 28,
+    "year": 3822,
+    "total": 3995,
+    "title": "page-builder-react"
   },
   {
     "name": "pivothead",
     "type": "npm",
-    "day": 4,
-    "week": 35,
-    "year": 2802,
-    "total": 2802,
-    "title": "Pivot Head"
+    "day": 19,
+    "week": 59,
+    "year": 2786,
+    "total": 2786,
+    "title": "pivothead"
   },
   {
     "name": "react-text-igniter",
     "type": "npm",
-    "day": 1,
-    "week": 20,
-    "year": 811,
-    "total": 2485,
-    "title": "Text Igniter (React)"
-  },
-  {
-    "name": "textigniterjs",
-    "type": "npm",
-    "day": 0,
-    "week": 17,
-    "year": 1570,
-    "total": 2464,
-    "title": "Text Igniter JS"
-  },
-  {
-    "name": "page-builder",
-    "type": "npm",
-    "day": 4,
-    "week": 25,
-    "year": 2421,
-    "total": 2421,
-    "title": "Page Builder"
+    "day": 11,
+    "week": 26,
+    "year": 804,
+    "total": 2476,
+    "title": "react-text-igniter"
   },
   {
     "name": "page-builder-web-component",
     "type": "npm",
-    "day": 2,
-    "week": 16,
-    "year": 2330,
-    "total": 2330,
-    "title": "Page Builder (Web Component)"
+    "day": 7,
+    "week": 15,
+    "year": 2321,
+    "total": 2321,
+    "title": "page-builder-web-component"
   },
   {
     "name": "canvas-editor",
     "type": "npm",
-    "day": 0,
+    "day": 9,
+    "week": 21,
+    "year": 1759,
+    "total": 2157,
+    "title": "canvas-editor"
+  },
+  {
+    "name": "page-builder-core",
+    "type": "npm",
+    "day": 12,
     "week": 19,
-    "year": 1706,
-    "total": 2165,
-    "title": "Canvas Editor"
+    "year": 937,
+    "total": 1552,
+    "title": "page-builder-core"
   },
   {
     "name": "react-canvas-editor",
     "type": "npm",
     "day": 0,
-    "week": 19,
-    "year": 1123,
-    "total": 1319,
-    "title": "Canvas Editor (React)"
+    "week": 20,
+    "year": 1112,
+    "total": 1303,
+    "title": "react-canvas-editor"
   },
   {
-    "name": "sqlrag",
-    "type": "pypi",
-    "last_day": 0,
-    "last_week": 1,
-    "last_month": 26,
-    "total": 1148,
-    "title": "SQL RAG"
+    "name": "nextjs-fortress",
+    "type": "npm",
+    "day": 3,
+    "week": 29,
+    "year": 988,
+    "total": 988,
+    "title": "nextjs-fortress"
+  },
+  {
+    "name": "ignix-cli",
+    "type": "npm",
+    "day": 4,
+    "week": 11,
+    "year": 808,
+    "total": 808,
+    "title": "ignix-cli"
   },
   {
     "name": "angular-canvas-editor",
     "type": "npm",
-    "day": 0,
-    "week": 36,
-    "year": 654,
-    "total": 821,
-    "title": "Canvas Editor (Angular)"
+    "day": 20,
+    "week": 22,
+    "year": 805,
+    "total": 805,
+    "title": "angular-canvas-editor"
   },
   {
     "name": "ignix-ui",
     "type": "npm",
-    "day": 0,
-    "week": 1,
+    "day": 1,
+    "week": 5,
     "year": 742,
     "total": 742,
-    "title": "Ignix UI"
+    "title": "ignix-ui"
   },
   {
     "name": "pivothead-web-component",
     "type": "npm",
-    "day": 0,
-    "week": 13,
-    "year": 661,
-    "total": 661,
-    "title": "Pivot Head (Web Component)"
+    "day": 9,
+    "week": 24,
+    "year": 657,
+    "total": 657,
+    "title": "pivothead-web-component"
   },
   {
     "name": "pivothead-react",
     "type": "npm",
-    "day": 1,
-    "week": 15,
-    "year": 616,
-    "total": 616,
-    "title": "Pivot Head (React)"
+    "day": 5,
+    "week": 18,
+    "year": 606,
+    "total": 606,
+    "title": "pivothead-react"
   },
   {
-    "name": "fmdapi-node-weaver",
+    "name": "pivothead-vue",
+    "type": "npm",
+    "day": 6,
+    "week": 16,
+    "year": 385,
+    "total": 385,
+    "title": "pivothead-vue"
+  },
+  {
+    "name": "textigniter-angular",
     "type": "npm",
     "day": 0,
-    "week": 15,
-    "year": 128,
-    "total": 155,
-    "title": "FMDAPI Node Weaver"
+    "week": 3,
+    "year": 272,
+    "total": 272,
+    "title": "textigniter-angular"
+  },
+  {
+    "name": "monodog",
+    "type": "npm",
+    "day": 7,
+    "week": 96,
+    "year": 256,
+    "total": 256,
+    "title": "monodog"
+  },
+  {
+    "name": "textigniter",
+    "type": "npm",
+    "day": 1,
+    "week": 4,
+    "year": 135,
+    "total": 135,
+    "title": "textigniter"
+  },
+  {
+    "name": "textigniter-web-component",
+    "type": "npm",
+    "day": 0,
+    "week": 7,
+    "year": 119,
+    "total": 119,
+    "title": "textigniter-web-component"
+  },
+  {
+    "name": "textigniter-react",
+    "type": "npm",
+    "day": 1,
+    "week": 3,
+    "year": 106,
+    "total": 106,
+    "title": "textigniter-react"
+  },
+  {
+    "name": "pivothead-angular",
+    "type": "npm",
+    "day": 0,
+    "week": 1,
+    "year": 92,
+    "total": 92,
+    "title": "pivothead-angular"
+  },
+  {
+    "name": "pivothead-analytics",
+    "type": "npm",
+    "day": 0,
+    "week": 5,
+    "year": 39,
+    "total": 39,
+    "title": "pivothead-analytics"
   }
 ]

@@ -40,6 +40,9 @@ jobs:
           git restore src/app/projects/assets/projects.json
           git restore src/app/projects/assets/contributors.json
           git restore src/app/projects/assets/stats.json
+          git restore src/app/projects/assets/packages.json
+          git restore src/app/projects/assets/projects_grouped.json
+          git restore src/app/projects/assets/contributor-mapping.json
 
       - name: 'Fetch branches'
         run: git fetch origin
@@ -61,18 +64,23 @@ jobs:
           shopt -s dotglob
           cp -r /tmp/temp-directory/* .
           shopt -u dotglob
-          git add . -f 
-          git commit -m "Copy build artifacts from main to gh-pages branch"
 
-      - name: Push to gh-pages
+      - name: 'Commit and push to gh-pages if changes exist'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin gh-pages
+          git add . -f
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: Copy build artifacts from main to gh-pages branch"
+            git push origin gh-pages
+          fi
 
       - name: 'Switch back to main branch'
         run: |
           git checkout main 
+          
   create-github-release:
     name: Create Github release document
     runs-on: ubuntu-latest

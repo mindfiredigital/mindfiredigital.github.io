@@ -1,5 +1,12 @@
 import { gitBaseUrl, gitOwner, githubToken } from "./config.mjs";
 import { fetchData } from "./config.mjs";
+import fs from "fs";
+import path from "path";
+import axios from "axios";
+
+const PROJECTS_PATH = "./src/app/projects/assets/projects.json";
+const MAPPING_PATH = "./src/app/projects/assets/contributor-mapping.json";
+const TOKEN = process.env.GITHUB_TOKEN; // Use GITHUB_TOKEN from env (set in CI or .env.local)
 
 async function fetchDefaultBranch(owner, repo, token) {
   const repoDetails = await fetchData(`${gitBaseUrl}/${owner}/${repo}`, {
@@ -112,21 +119,24 @@ async function getLastContributionDate(username) {
     let hasMoreEvents = true;
 
     while (hasMoreEvents && page <= 5) {
+      const url = `https://api.github.com/users/${username}/events?per_page=100&page=${page}`;
       // Check up to 5 pages of events
-      const response = await fetch(
-        `https://api.github.com/users/${username}/events?per_page=100&page=${page}`,
-        {
-          headers: {
-            Authorization: `Bearer ${githubToken}`,
-          },
-        }
-      );
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${githubToken}`,
+        },
+      });
 
       if (!response.ok) {
+        const errorDetails = await response.json().catch(() => ({}));
         console.error(
-          `Failed to fetch events for ${username}: ${response.status}`
+          `Full Error for ${url}:`,
+          JSON.stringify(errorDetails, null, 2)
         );
-        break;
+
+        throw new Error(
+          `HTTP ${response.status}: ${errorDetails.message || "Unknown Error"}`
+        );
       }
 
       const events = await response.json();
@@ -312,3 +322,39 @@ export async function getContributorData(contributor) {
     lastActiveDays,
   };
 }
+
+async function generateMapping() {
+  const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
+  const mapping = {};
+
+  console.log("🚀 Generating contributor-to-project mapping...");
+
+  for (const project of projects) {
+    // Extract owner and repo from githubUrl
+    const match = project.githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
+    if (match) {
+      const [, owner, repo] = match;
+      try {
+        const res = await axios.get(
+          `https://api.github.com/repos/${owner}/${repo}/contributors`,
+          { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
+        );
+
+        res.data.forEach((contributor) => {
+          if (!mapping[contributor.login]) mapping[contributor.login] = [];
+          mapping[contributor.login].push(project.id);
+        });
+        console.log(`✅ Synced: ${project.title}`);
+      } catch (e) {
+        console.error(
+          `❌ Failed: ${project.title} (Rate limit or invalid URL)`
+        );
+      }
+    }
+  }
+
+  fs.writeFileSync(MAPPING_PATH, JSON.stringify(mapping, null, 2));
+  console.log("✨ Mapping saved to contributor-mapping.json");
+}
+
+generateMapping();

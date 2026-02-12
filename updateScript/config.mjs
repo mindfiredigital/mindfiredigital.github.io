@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import packagesData from "../src/app/projects/assets/packages.json" with { type: "json" };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,29 +11,8 @@ export const gitBaseUrl = "https://api.github.com/repos";
 export const pathForJson = "../src/app/projects/assets";
 export const gitOwner = "mindfiredigital";
 
-export const npmPackages = [
-  { name: "fmdapi-node-weaver", title: "FMDAPI Node Weaver" },
-  { name: "react-canvas-editor", title: "Canvas Editor (React)" },
-  { name: "angular-canvas-editor", title: "Canvas Editor (Angular)" },
-  { name: "canvas-editor", title: "Canvas Editor" },
-  { name: "react-text-igniter", title: "Text Igniter (React)" },
-  { name: "eslint-plugin-hub", title: "ESLint Plugin Hub" },
-  { name: "textigniterjs", title: "Text Igniter JS" },
-  { name: "pivothead", title: "Pivot Head" },
-  { name: "pivothead-react", title: "Pivot Head (React)" },
-  { name: "pivothead-web-component", title: "Pivot Head (Web Component)" },
-  { name: "page-builder", title: "Page Builder" },
-  { name: "page-builder-react", title: "Page Builder (React)" },
-  {
-    name: "page-builder-web-component",
-    title: "Page Builder (Web Component)",
-  },
-  { name: "ignix-ui", title: "Ignix UI" },
-];
-export const pypiPackages = [
-  { name: "neo-pusher", title: "Neo Pusher" },
-  { name: "sqlrag", title: "SQL RAG" },
-];
+export const npmPackages = packagesData.filter((pkg) => pkg.type === "npm");
+export const pypiPackages = packagesData.filter((pkg) => pkg.type === "PyPi");
 
 export function writeJsonToFile(relativePath, data) {
   const fullPath = path.join(__dirname, relativePath);

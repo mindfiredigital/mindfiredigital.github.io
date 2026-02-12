@@ -1,0 +1,250 @@
+[
+  {
+    "name": "canvas-editor",
+    "title": "canvas-editor",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/canvas-editor",
+    "projectTitle": "Canvas Editor",
+    "status": "published"
+  },
+  {
+    "name": "Extension Methods",
+    "title": "Extension Methods",
+    "type": "nuget",
+    "url": "https://www.nuget.org/packages/Extension.Methods",
+    "projectTitle": "Extension Methods",
+    "status": "draft"
+  },
+  {
+    "name": "Angular Canvas Editor",
+    "title": "Angular Canvas Editor",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
+    "projectTitle": "Angular Canvas Editor",
+    "status": "published"
+  },
+  {
+    "name": "neo-pusher",
+    "title": "neo-pusher",
+    "type": "PyPi",
+    "url": "https://pypi.org/project/neo-pusher/",
+    "projectTitle": "neo-pusher",
+    "status": "published"
+  },
+  {
+    "name": "react-text-igniter",
+    "title": "react-text-igniter",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/react-text-igniter",
+    "projectTitle": "react-text-igniter",
+    "status": "published"
+  },
+  {
+    "name": "sqlrag",
+    "title": "sqlrag",
+    "type": "PyPi",
+    "url": "https://pypi.org/project/sqlrag/",
+    "projectTitle": "sqlrag",
+    "status": "published"
+  },
+  {
+    "name": "eslint-plugin-hub",
+    "title": "eslint-plugin-hub",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/eslint-plugin-hub",
+    "projectTitle": "ESLint Plugin Hub",
+    "status": "published"
+  },
+  {
+    "name": "page-builder-web-component",
+    "title": "page-builder-web-component",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
+    "projectTitle": "Page Builder",
+    "status": "published"
+  },
+  {
+    "name": "page-builder-react",
+    "title": "page-builder-react",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
+    "projectTitle": "Page Builder",
+    "status": "published"
+  },
+  {
+    "name": "page-builder-core",
+    "title": "page-builder-core",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
+    "projectTitle": "Page Builder",
+    "status": "published"
+  },
+  {
+    "name": "page-builder-angular",
+    "title": "page-builder-angular",
+    "type": "npm",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Page Builder",
+    "status": "draft"
+  },
+  {
+    "name": "pivothead-web-component",
+    "title": "pivothead-web-component",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-web-component",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "pivothead-vue",
+    "title": "pivothead-vue",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-vue",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "pivothead-react",
+    "title": "pivothead-react",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-react",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "pivothead",
+    "title": "pivothead",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "pivothead-angular",
+    "title": "pivothead-angular",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-angular",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "pivothead-analytics",
+    "title": "pivothead-analytics",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-analytics",
+    "projectTitle": "Pivothead",
+    "status": "published"
+  },
+  {
+    "name": "web-component-canvas-editor",
+    "title": "web-component-canvas-editor",
+    "type": "npm",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Document Editor",
+    "status": "draft"
+  },
+  {
+    "name": "react-canvas-editor",
+    "title": "react-canvas-editor",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/react-canvas-editor",
+    "projectTitle": "Document Editor",
+    "status": "published"
+  },
+  {
+    "name": "angular-canvas-editor",
+    "title": "angular-canvas-editor",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
+    "projectTitle": "Document Editor",
+    "status": "published"
+  },
+  {
+    "name": "ignix-ui",
+    "title": "ignix-ui",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-ui",
+    "projectTitle": "Ignix UI",
+    "status": "published"
+  },
+  {
+    "name": "ignix-cli",
+    "title": "ignix-cli",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
+    "projectTitle": "Ignix UI",
+    "status": "published"
+  },
+  {
+    "name": "Multi-Agent Knowledge Graph Chatbot",
+    "title": "Multi-Agent Knowledge Graph Chatbot",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Multi-Agent Knowledge Graph Chatbot",
+    "status": "draft"
+  },
+  {
+    "name": "Smart-CodeGen-ML-Agent",
+    "title": "Smart-CodeGen-ML-Agent",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "Smart-CodeGen-ML-Agent",
+    "status": "draft"
+  },
+  {
+    "name": "AUTOTEST",
+    "title": "AUTOTEST",
+    "type": "PyPi",
+    "url": "https://www.npmjs.com/~mindfire",
+    "projectTitle": "AUTOTEST",
+    "status": "draft"
+  },
+  {
+    "name": "nextjs-fortress",
+    "title": "nextjs-fortress",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/nextjs-fortress",
+    "projectTitle": "Next.js Fortress",
+    "status": "published"
+  },
+  {
+    "name": "monodog",
+    "title": "monodog",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/monodog",
+    "projectTitle": "MonoDog",
+    "status": "published"
+  },
+  {
+    "name": "textigniter-web-component",
+    "title": "textigniter-web-component",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
+    "projectTitle": "TextIgniter",
+    "status": "published"
+  },
+  {
+    "name": "textigniter-react",
+    "title": "textigniter-react",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-react",
+    "projectTitle": "TextIgniter",
+    "status": "published"
+  },
+  {
+    "name": "textigniter",
+    "title": "textigniter",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/textigniterjs",
+    "projectTitle": "TextIgniter",
+    "status": "published"
+  },
+  {
+    "name": "textigniter-angular",
+    "title": "textigniter-angular",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
+    "projectTitle": "TextIgniter",
+    "status": "published"
+  }
+]

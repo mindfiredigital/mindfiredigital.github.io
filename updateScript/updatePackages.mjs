@@ -1,5 +1,5 @@
 import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
-import { fetchData } from "./config.mjs";
+import { fetchData, writeJsonToFile } from "./config.mjs";
 
 // Helper function to delay execution
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -149,23 +149,25 @@ export async function getAllStats(npmPackages, pypiPackages) {
 
   // Fetch stats for PyPI packages (parallel is ok, different API)
   console.log(`\n📊 Fetching PyPI stats...`);
+  // In the PyPI section, change to:
   await Promise.all(
     pypiPackages.map(async (packageName) => {
       try {
         const stats = await fetchPyPIDownloadStats(packageName);
-        const totalDownloads = await fetchTotalDownloads(packageName);
+        const totalDownloads = await fetchTotalDownloads(packageName); // This now gets all-time from pepy.tech
 
         if (stats) {
           statsMap[packageName] = {
             name: packageName,
             type: "pypi",
-            last_day: stats.last_day,
-            last_week: stats.last_week,
-            last_month: stats.last_month,
-            total: totalDownloads || stats.last_month,
+            day: stats.last_day || 0,
+            week: stats.last_week || 0,
+            month: stats.last_month || 0,
+            year: 0, // pepy.tech doesn't provide yearly, only all-time
+            total: totalDownloads, // ALL-TIME downloads from pepy.tech
           };
           console.log(
-            `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}`
+            `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}, total=${totalDownloads}`
           );
         }
       } catch (error) {
@@ -188,7 +190,6 @@ export async function getAllStats(npmPackages, pypiPackages) {
 // Function to fetch PyPI download statistics for a given package
 async function fetchPyPIDownloadStats(packageName) {
   const url = `https://pypistats.org/api/packages/${packageName}/recent`;
-
   try {
     const data = await fetchWithRetry(url, 3, 1000);
     return data.data;
@@ -241,3 +242,75 @@ function calculateAverageDownloads(stats) {
     0
   );
 }
+
+async function updatePackages() {
+  const query = `
+    query getCurrentProjects {
+      foss_projects(filter: { _and: [{ project_type: { _eq: "current" }}, { status: { _eq: "published" }}]}) {
+        id
+        title
+        is_mono_repo
+        packages {
+          package_name
+          package_type
+          package_url
+          status
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await fetchData(
+      "https://directus.ourgoalplan.co.in/graphql",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+      }
+    );
+
+    const projects = response.data.foss_projects;
+
+    // Flatten the packages from all projects into a single list if needed
+    const allPackages = projects.flatMap((project) =>
+      project.packages.map((pkg) => ({
+        name: pkg.package_name,
+        title: pkg.package_name, // Or map to your desired title format
+        type: pkg.package_type,
+        url: pkg.package_url,
+        projectTitle: project.title,
+        status: pkg.status,
+      }))
+    );
+
+    // Save to the assets folder
+    writeJsonToFile("../src/app/projects/assets/packages.json", allPackages);
+
+    const projectData = projects.map((project) => ({
+      id: project.id,
+      title: project.title,
+      description: project.short_description,
+      isMonoRepo: project.is_mono_repo,
+      repoUrl: project.github_repository_link,
+      // We keep the packages nested inside the project
+      packages: project.packages.map((pkg) => ({
+        name: pkg.package_name,
+        type: pkg.package_type,
+        url: pkg.package_url,
+        status: pkg.status,
+      })),
+    }));
+
+    writeJsonToFile(
+      "../src/app/projects/assets/projects_grouped.json",
+      projectData
+    );
+
+    console.log("Successfully updated packages.json");
+  } catch (error) {
+    console.error("Failed to update packages:", error);
+  }
+}
+
+updatePackages();
