@@ -12,7 +12,7 @@
     "shortDescription": "Multipage document editor based on HTML5 canvas.",
     "githubUrl": "https://github.com/mindfiredigital/canvas-editor",
     "documentationUrl": "https://mindfiredigital.github.io/canvas-editor",
-    "stars": 5,
+    "stars": 20,
     "tags": []
   },
   {
@@ -28,7 +28,7 @@
     "shortDescription": "A multi-chain platform for fans to connect with their favorite celebrities.",
     "githubUrl": "https://github.com/mindfiredigital/nft-marketplace",
     "documentationUrl": "https://github.com/mindfiredigital/nft-marketplace",
-    "stars": 2,
+    "stars": 11,
     "tags": ["bitcoin", "blockchain", "cryptocurrency", "ecommerce", "etherum"]
   },
   {
@@ -44,7 +44,7 @@
     "shortDescription": "Seamless frontend integration with Filemaker Database.",
     "githubUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
     "documentationUrl": "https://github.com/mindfiredigital/fmdapi-node-weaver",
-    "stars": 2,
+    "stars": 11,
     "tags": []
   },
   {
@@ -52,15 +52,15 @@
     "title": "Extension Methods",
     "short_description": "C# utility library with 300+ NuGet extension methods.",
     "github_repository_link": "https://github.com/mindfiredigital/extension-methods",
-    "documentation_link": "https://github.com/mindfiredigital/extension-methods",
+    "documentation_link": "https://github.com/mindfiredigital/extension-methods/blob/master/README.md",
     "project_type": "current",
     "date_created": "2023-12-20T10:38:02.000Z",
     "date_updated": null,
     "status": "published",
     "shortDescription": "C# utility library with 300+ NuGet extension methods.",
     "githubUrl": "https://github.com/mindfiredigital/extension-methods",
-    "documentationUrl": "https://github.com/mindfiredigital/extension-methods",
-    "stars": 12,
+    "documentationUrl": "https://github.com/mindfiredigital/extension-methods/blob/master/README.md",
+    "stars": 26,
     "tags": ["csharp", "csharp-library", "extension-methods"]
   },
   {
@@ -76,8 +76,24 @@
     "shortDescription": "Simplifies Kubernetes, easing app deployment for developers.",
     "githubUrl": "https://github.com/mindfiredigital/FireKubeX",
     "documentationUrl": "https://github.com/mindfiredigital/FireKubeX",
-    "stars": 1,
+    "stars": 11,
     "tags": ["automation", "bash-script", "docker", "k3s", "kubernetes"]
+  },
+  {
+    "id": 10,
+    "title": "Angular Canvas Editor",
+    "short_description": "Multipage document editing in Angular with Canvas",
+    "github_repository_link": "https://github.com/mindfiredigital/angular-canvas-document-editor",
+    "documentation_link": "https://github.com/mindfiredigital/angular-canvas-document-editor/blob/main/README.md",
+    "project_type": "current",
+    "date_created": "2023-12-20T10:41:28.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Multipage document editing in Angular with Canvas",
+    "githubUrl": "https://github.com/mindfiredigital/angular-canvas-document-editor",
+    "documentationUrl": "https://github.com/mindfiredigital/angular-canvas-document-editor/blob/main/README.md",
+    "stars": 13,
+    "tags": []
   },
   {
     "id": 12,
@@ -92,7 +108,7 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
-    "stars": 4,
+    "stars": 15,
     "tags": ["coding", "developers", "foss", "ios", "mindfire"]
   },
   {
@@ -108,7 +124,7 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
-    "stars": 1,
+    "stars": 11,
     "tags": ["andr", "ios", "kotlin", "mobile", "swift"]
   },
   {
@@ -124,7 +140,7 @@
     "shortDescription": "Simplifies mobile development with pre-built features like login, signup, and settings. Developers integrate efficiently, leveraging diverse themes.",
     "githubUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
     "documentationUrl": "https://github.com/mindfiredigital/QuickLaunchReactNativeKit",
-    "stars": 2,
+    "stars": 13,
     "tags": [
       "mobile-app",
       "mobile-development",
@@ -138,15 +154,15 @@
     "title": "neo-pusher",
     "short_description": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
     "github_repository_link": "https://github.com/mindfiredigital/neo-pusher",
-    "documentation_link": "https://pypi.org/project/neo-pusher/",
+    "documentation_link": "https://github.com/mindfiredigital/neo-pusher/blob/dev/README.md",
     "project_type": "current",
     "date_created": "2024-08-28T11:26:33.000Z",
     "date_updated": null,
     "status": "published",
     "shortDescription": "Automates CSV to Neo4j data transfer with schema generation, preprocessing, and insertion. Streamlines database integration, ensuring data consistency and efficiency.",
     "githubUrl": "https://github.com/mindfiredigital/neo-pusher",
-    "documentationUrl": "https://pypi.org/project/neo-pusher/",
-    "stars": 5,
+    "documentationUrl": "https://github.com/mindfiredigital/neo-pusher/blob/dev/README.md",
+    "stars": 18,
     "tags": [
       "datascience",
       "machine-learning",
@@ -168,23 +184,23 @@
     "shortDescription": "A powerful and intuitive HTML Editor built with React.js.",
     "githubUrl": "https://github.com/mindfiredigital/react-text-igniter",
     "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter",
-    "stars": 10,
+    "stars": 23,
     "tags": ["editor", "html", "htmleditor", "javascript", "npm"]
   },
   {
     "id": 17,
-    "title": "SQLRAG",
+    "title": "sqlrag",
     "short_description": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
     "github_repository_link": "https://github.com/mindfiredigital/SQLRAG/",
-    "documentation_link": "https://github.com/mindfiredigital/SQLRAG/",
+    "documentation_link": "https://github.com/mindfiredigital/SQLRAG/blob/main/README.md",
     "project_type": "current",
     "date_created": "2024-10-01T08:02:59.000Z",
     "date_updated": null,
     "status": "published",
     "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
     "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
-    "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/",
-    "stars": 7,
+    "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/blob/main/README.md",
+    "stars": 18,
     "tags": ["agent", "ai", "huggingface", "javascript", "langchain"]
   },
   {
@@ -200,7 +216,7 @@
     "shortDescription": "A collection of custom ESLint rules to enforce coding standards and best practices in your projects.",
     "githubUrl": "https://github.com/mindfiredigital/eslint-plugin-hub",
     "documentationUrl": "https://mindfiredigital.github.io/eslint-plugin-hub/",
-    "stars": 15,
+    "stars": 41,
     "tags": [
       "angular",
       "codereview",
@@ -222,7 +238,7 @@
     "shortDescription": "An npm package for building responsive web pages with a drag-and-drop UI",
     "githubUrl": "https://github.com/mindfiredigital/page-builder",
     "documentationUrl": "https://github.com/mindfiredigital/page-builder",
-    "stars": 7,
+    "stars": 42,
     "tags": []
   },
   {
@@ -238,7 +254,7 @@
     "shortDescription": "A headless table library with built-in filters, sorting, and export.",
     "githubUrl": "https://github.com/mindfiredigital/PivotHead",
     "documentationUrl": "https://mindfiredigital.github.io/PivotHead/",
-    "stars": 5,
+    "stars": 29,
     "tags": ["headless", "pivot-grid", "pivot-tables", "table"]
   },
   {
@@ -254,7 +270,7 @@
     "shortDescription": "Transforming meeting discussions into actionable recaps.",
     "githubUrl": "https://github.com/mindfiredigital/OpenRecap",
     "documentationUrl": "https://github.com/mindfiredigital/OpenRecap",
-    "stars": 1,
+    "stars": 14,
     "tags": ["ai", "datascience", "langchain", "llamma", "ml"]
   },
   {
@@ -270,8 +286,40 @@
     "shortDescription": "A cross-framework wrapper (React & Angular) for building multi-page document editors with HTML5 Canvas.",
     "githubUrl": "https://github.com/mindfiredigital/document-editor",
     "documentationUrl": "https://mindfiredigital.github.io/document-editor/",
-    "stars": 4,
+    "stars": 19,
     "tags": ["angular", "document", "document-editor", "editor", "eslint"]
+  },
+  {
+    "id": 23,
+    "title": "Ignix UI",
+    "short_description": "Build stunning UIs faster with our powerful & versatile components library.",
+    "github_repository_link": "https://github.com/mindfiredigital/ignix-ui/",
+    "documentation_link": "https://mindfiredigital.github.io/ignix-ui/",
+    "project_type": "current",
+    "date_created": "2025-04-10T16:16:21.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Build stunning UIs faster with our powerful & versatile components library.",
+    "githubUrl": "https://github.com/mindfiredigital/ignix-ui/",
+    "documentationUrl": "https://mindfiredigital.github.io/ignix-ui/",
+    "stars": 52,
+    "tags": ["component", "radix", "radix-ui", "react", "shadcn"]
+  },
+  {
+    "id": 24,
+    "title": "FileMaker List View Addon",
+    "short_description": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
+    "github_repository_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "documentation_link": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "project_type": "current",
+    "date_created": "2025-04-10T16:21:24.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A JavaScript powered list view add-on for FileMaker with search, sort, and column reordering via Web Viewer.",
+    "githubUrl": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "documentationUrl": "https://github.com/mindfiredigital/filemaker-listview-addon",
+    "stars": 12,
+    "tags": []
   },
   {
     "id": 25,
@@ -286,7 +334,7 @@
     "shortDescription": "DeepScanBot allows you to crawl websites with various configurations, including crawl depth, timeout settings, proxy support, and output options.",
     "githubUrl": "https://github.com/mindfiredigital/DeepScanBot",
     "documentationUrl": "https://github.com/mindfiredigital/DeepScanBot",
-    "stars": 1,
+    "stars": 11,
     "tags": ["bot", "crawl", "crawler", "go", "golang"]
   },
   {
@@ -302,7 +350,125 @@
     "shortDescription": "An interactive, voice-enabled AI system providing real-time mental health support and counseling.",
     "githubUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
     "documentationUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
-    "stars": 0,
+    "stars": 9,
     "tags": ["ai", "ml"]
+  },
+  {
+    "id": 27,
+    "title": "Multi Cloud Monorepo Boilerplate",
+    "short_description": "A JavaScript-based monorepo boilerplate for bundling serverless functions with PNPM, Webpack, and Babel—optimized for multi-cloud deployment and lean CI/CD builds.",
+    "github_repository_link": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
+    "documentation_link": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
+    "project_type": "current",
+    "date_created": "2025-09-04T14:39:55.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A JavaScript-based monorepo boilerplate for bundling serverless functions with PNPM, Webpack, and Babel—optimized for multi-cloud deployment and lean CI/CD builds.",
+    "githubUrl": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
+    "documentationUrl": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
+    "stars": 11,
+    "tags": ["aws", "azure", "boilerplate", "boilerplate-template", "cloud"]
+  },
+  {
+    "id": 28,
+    "title": "Multi-Agent Knowledge Graph Chatbot",
+    "short_description": "Now enhanced with multi-tenant support, enabling multiple specialized agents to collaborate over shared knowledge graphs while maintaining strict tenant isolation. This architecture delivers more accurate, context-aware responses and supports scalable, real-world deployments.",
+    "github_repository_link": "https://github.com/mindfiredigital/Multi-Agent-Knowledge-Graph-Chatbot",
+    "documentation_link": "https://github.com/mindfiredigital/Multi-Agent-Knowledge-Graph-Chatbot",
+    "project_type": "current",
+    "date_created": "2025-12-16T11:35:50.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Now enhanced with multi-tenant support, enabling multiple specialized agents to collaborate over shared knowledge graphs while maintaining strict tenant isolation. This architecture delivers more accurate, context-aware responses and supports scalable, real-world deployments.",
+    "githubUrl": "https://github.com/mindfiredigital/Multi-Agent-Knowledge-Graph-Chatbot",
+    "documentationUrl": "https://github.com/mindfiredigital/Multi-Agent-Knowledge-Graph-Chatbot",
+    "stars": 13,
+    "tags": []
+  },
+  {
+    "id": 29,
+    "title": "Smart-CodeGen-ML-Agent",
+    "short_description": "A Python library that automates machine-learning workflows by generating executable code directly from natural-language queries and operating on CSV datasets without manual boilerplate. This significantly reduces setup time and accelerates experimentation for data and ML teams.",
+    "github_repository_link": "https://github.com/mindfiredigital/Smart-CodeGen-ML-Agent",
+    "documentation_link": "https://github.com/mindfiredigital/Smart-CodeGen-ML-Agent",
+    "project_type": "current",
+    "date_created": "2025-12-16T11:36:19.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A Python library that automates machine-learning workflows by generating executable code directly from natural-language queries and operating on CSV datasets without manual boilerplate. This significantly reduces setup time and accelerates experimentation for data and ML teams.",
+    "githubUrl": "https://github.com/mindfiredigital/Smart-CodeGen-ML-Agent",
+    "documentationUrl": "https://github.com/mindfiredigital/Smart-CodeGen-ML-Agent",
+    "stars": 16,
+    "tags": []
+  },
+  {
+    "id": 30,
+    "title": "AUTOTEST",
+    "short_description": "A new GenAI-powered test automation command-line tool that analyzes live web pages, automatically derives test cases, and generates production-ready Python Selenium scripts—designed to reduce manual QA effort and speed up test coverage. The team has now started working on a web-based product.",
+    "github_repository_link": "https://github.com/mindfiredigital/AUTOTEST",
+    "documentation_link": "https://github.com/mindfiredigital/AUTOTEST",
+    "project_type": "current",
+    "date_created": "2025-12-16T11:36:46.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A new GenAI-powered test automation command-line tool that analyzes live web pages, automatically derives test cases, and generates production-ready Python Selenium scripts—designed to reduce manual QA effort and speed up test coverage. The team has now started working on a web-based product.",
+    "githubUrl": "https://github.com/mindfiredigital/AUTOTEST",
+    "documentationUrl": "https://github.com/mindfiredigital/AUTOTEST",
+    "stars": 32,
+    "tags": [
+      "automation-testing",
+      "chromium",
+      "cypress",
+      "endtoendtesting",
+      "llm"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Next.js Fortress",
+    "short_description": "nextjs-fortress is an open-source security middleware for Next.js applications designed to help protect users against known vulnerabilities and strengthen request validation. It acts as a security validation layer that can be added to Next.js projects to enforce checks and mitigate attack vectors (including protection for issues such as CVE-2025-55182 and similar threats).",
+    "github_repository_link": "https://github.com/mindfiredigital/nextjs-fortress",
+    "documentation_link": "https://mindfiredigital.github.io/nextjs-fortress/",
+    "project_type": "current",
+    "date_created": "2026-01-27T06:27:32.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "nextjs-fortress is an open-source security middleware for Next.js applications designed to help protect users against known vulnerabilities and strengthen request validation. It acts as a security validation layer that can be added to Next.js projects to enforce checks and mitigate attack vectors (including protection for issues such as CVE-2025-55182 and similar threats).",
+    "githubUrl": "https://github.com/mindfiredigital/nextjs-fortress",
+    "documentationUrl": "https://mindfiredigital.github.io/nextjs-fortress/",
+    "stars": 56,
+    "tags": ["framework", "middleware", "nextjs", "security", "validation"]
+  },
+  {
+    "id": 32,
+    "title": "MonoDog",
+    "short_description": "Monodog provides developers with a centralized visual interface to track workspace health, analyze package dependencies, and view Git histories across all individual modules in a single view. By automating the oversight of complex repo structures, it replaces manual CLI checks with a streamlined UI that monitors build statuses and security vulnerabilities in real-time.",
+    "github_repository_link": "https://github.com/mindfiredigital/MonoDog",
+    "documentation_link": "https://github.com/mindfiredigital/MonoDog/blob/main/README.md",
+    "project_type": "current",
+    "date_created": "2026-01-27T07:35:47.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Monodog provides developers with a centralized visual interface to track workspace health, analyze package dependencies, and view Git histories across all individual modules in a single view. By automating the oversight of complex repo structures, it replaces manual CLI checks with a streamlined UI that monitors build statuses and security vulnerabilities in real-time.",
+    "githubUrl": "https://github.com/mindfiredigital/MonoDog",
+    "documentationUrl": "https://github.com/mindfiredigital/MonoDog/blob/main/README.md",
+    "stars": 17,
+    "tags": []
+  },
+  {
+    "id": 33,
+    "title": "TextIgniter",
+    "short_description": "TextIgniterJS is a lightweight, powerful, and intuitive HTML editor library built in TypeScript that provides rich-text editing features developers can integrate into web projects. It offers common editor capabilities like bold, italic, underline, lists, tables, hyperlinks, image insertion, and lets you retrieve editor content as HTML or JSON for use in your app UI or workflows.",
+    "github_repository_link": "https://github.com/mindfiredigital/TextIgniterJS",
+    "documentation_link": "https://github.com/mindfiredigital/TextIgniterJS/blob/main/README.md",
+    "project_type": "current",
+    "date_created": "2026-01-27T09:34:17.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "TextIgniterJS is a lightweight, powerful, and intuitive HTML editor library built in TypeScript that provides rich-text editing features developers can integrate into web projects. It offers common editor capabilities like bold, italic, underline, lists, tables, hyperlinks, image insertion, and lets you retrieve editor content as HTML or JSON for use in your app UI or workflows.",
+    "githubUrl": "https://github.com/mindfiredigital/TextIgniterJS",
+    "documentationUrl": "https://github.com/mindfiredigital/TextIgniterJS/blob/main/README.md",
+    "stars": 36,
+    "tags": []
   }
 ]

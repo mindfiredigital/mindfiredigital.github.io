@@ -2,118 +2,145 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 5,
-    "week": 43,
-    "year": 63044,
-    "total": 63044,
+    "day": 8,
+    "week": 127,
+    "year": 53181,
+    "total": 109520,
     "title": "ESLint Plugin Hub"
-  },
-  {
-    "name": "neo-pusher",
-    "type": "pypi",
-    "last_day": 0,
-    "last_week": 13,
-    "last_month": 58,
-    "total": 8542,
-    "title": "Neo Pusher"
-  },
-  {
-    "name": "sqlrag",
-    "type": "pypi",
-    "last_day": 0,
-    "last_week": 6,
-    "last_month": 12,
-    "total": 4241,
-    "title": "SQL RAG"
-  },
-  {
-    "name": "textigniterjs",
-    "type": "npm",
-    "day": 0,
-    "week": 6,
-    "year": 1966,
-    "total": 1966,
-    "title": "Text Igniter JS"
-  },
-  {
-    "name": "react-text-igniter",
-    "type": "npm",
-    "day": 0,
-    "week": 2,
-    "year": 1842,
-    "total": 1842,
-    "title": "Text Igniter (React)"
-  },
-  {
-    "name": "canvas-editor",
-    "type": "npm",
-    "day": 3,
-    "week": 17,
-    "year": 1100,
-    "total": 1827,
-    "title": "Canvas Editor"
-  },
-  {
-    "name": "react-canvas-editor",
-    "type": "npm",
-    "day": 1,
-    "week": 14,
-    "year": 715,
-    "total": 1667,
-    "title": "Canvas Editor (React)"
   },
   {
     "name": "page-builder-react",
     "type": "npm",
     "day": 1,
-    "week": 12,
-    "year": 935,
-    "total": 935,
+    "week": 26,
+    "year": 3830,
+    "total": 4003,
     "title": "Page Builder (React)"
+  },
+  {
+    "name": "neo-pusher",
+    "type": "pypi",
+    "last_day": 0,
+    "last_week": 10,
+    "last_month": 77,
+    "total": 3605,
+    "title": "Neo Pusher"
   },
   {
     "name": "pivothead",
     "type": "npm",
-    "day": 2,
-    "week": 20,
-    "year": 878,
-    "total": 878,
+    "day": 4,
+    "week": 35,
+    "year": 2802,
+    "total": 2802,
     "title": "Pivot Head"
+  },
+  {
+    "name": "react-text-igniter",
+    "type": "npm",
+    "day": 1,
+    "week": 20,
+    "year": 811,
+    "total": 2485,
+    "title": "Text Igniter (React)"
+  },
+  {
+    "name": "textigniterjs",
+    "type": "npm",
+    "day": 0,
+    "week": 17,
+    "year": 1570,
+    "total": 2464,
+    "title": "Text Igniter JS"
+  },
+  {
+    "name": "page-builder",
+    "type": "npm",
+    "day": 4,
+    "week": 25,
+    "year": 2421,
+    "total": 2421,
+    "title": "Page Builder"
+  },
+  {
+    "name": "page-builder-web-component",
+    "type": "npm",
+    "day": 2,
+    "week": 16,
+    "year": 2330,
+    "total": 2330,
+    "title": "Page Builder (Web Component)"
+  },
+  {
+    "name": "canvas-editor",
+    "type": "npm",
+    "day": 0,
+    "week": 19,
+    "year": 1706,
+    "total": 2165,
+    "title": "Canvas Editor"
+  },
+  {
+    "name": "react-canvas-editor",
+    "type": "npm",
+    "day": 0,
+    "week": 19,
+    "year": 1123,
+    "total": 1319,
+    "title": "Canvas Editor (React)"
+  },
+  {
+    "name": "sqlrag",
+    "type": "pypi",
+    "last_day": 0,
+    "last_week": 1,
+    "last_month": 26,
+    "total": 1148,
+    "title": "SQL RAG"
   },
   {
     "name": "angular-canvas-editor",
     "type": "npm",
     "day": 0,
-    "week": 1,
-    "year": 674,
-    "total": 674,
+    "week": 36,
+    "year": 654,
+    "total": 821,
     "title": "Canvas Editor (Angular)"
   },
   {
-    "name": "page-builder-web-component",
+    "name": "ignix-ui",
     "type": "npm",
     "day": 0,
-    "week": 5,
-    "year": 430,
-    "total": 430,
-    "title": "Page Builder (Web Component)"
+    "week": 1,
+    "year": 742,
+    "total": 742,
+    "title": "Ignix UI"
   },
   {
-    "name": "page-builder",
+    "name": "pivothead-web-component",
     "type": "npm",
     "day": 0,
-    "week": 8,
-    "year": 304,
-    "total": 304,
-    "title": "Page Builder"
+    "week": 13,
+    "year": 661,
+    "total": 661,
+    "title": "Pivot Head (Web Component)"
+  },
+  {
+    "name": "pivothead-react",
+    "type": "npm",
+    "day": 1,
+    "week": 15,
+    "year": 616,
+    "total": 616,
+    "title": "Pivot Head (React)"
   },
   {
     "name": "fmdapi-node-weaver",
     "type": "npm",
     "day": 0,
-    "week": 1,
-    "year": 59,
-    "total": 139,
+    "week": 15,
+    "year": 128,
+    "total": 155,
     "title": "FMDAPI Node Weaver"
   }
 ]

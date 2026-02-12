@@ -1,0 +1,2672 @@
+{
+  "generated_at": "2026-02-12T11:52:52.825Z",
+  "scoring_formula": {
+    "description": "Total_Score = Code_Score + Community_Score + Quality_Score",
+    "code_formula": "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
+    "community_formula": "(ΣIssues × 2) [cap: 10/month] + (ΣComments × 1) [cap: 20/month]",
+    "quality_formula": "Impact_bonuses + Tests + Docs + Mentor + Zero_revisions"
+  },
+  "scoring_weights": {
+    "PR_MERGED_BASE": 5,
+    "COMMIT": 2,
+    "PR_REVIEW_GIVEN": 3,
+    "CODE_REVIEW_COMMENT": 1,
+    "COMPLEXITY_MULTIPLIER": {
+      "small": 1,
+      "medium": 1.3,
+      "large": 1.7
+    },
+    "ISSUE_OPENED": 2,
+    "ISSUE_COMMENT": 1,
+    "HAS_TESTS": 2,
+    "HAS_DOCS": 2,
+    "FIRST_TIME_MENTOR": 5,
+    "ZERO_REVISIONS": 3,
+    "IMPACT_BONUS": {
+      "low": 0,
+      "medium": 3,
+      "high": 7,
+      "critical": 10
+    },
+    "CAPS": {
+      "ISSUES_PER_MONTH": 10,
+      "ISSUE_COMMENTS_PER_MONTH": 20
+    }
+  },
+  "summary": {
+    "total_contributors": 14,
+    "total_commits": 473,
+    "total_prs": 184,
+    "total_pr_reviews": 22,
+    "total_issues": 12,
+    "avg_score": 201,
+    "avg_code_score": 159,
+    "avg_community_score": 5,
+    "avg_quality_score": 37
+  },
+  "leaderboard": [
+    {
+      "rank": 1,
+      "username": "lakinmindfire",
+      "id": 80667930,
+      "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
+      "html_url": "https://github.com/lakinmindfire",
+      "totalCommits": 178,
+      "totalPRs": 55,
+      "totalPRReviewsGiven": 16,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 11,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.24,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 23,
+        "medium": 16,
+        "large": 16
+      },
+      "total_score": 948,
+      "code_score": 759,
+      "community_score": 22,
+      "quality_score": 167,
+      "score_breakdown": {
+        "pr_score": 355,
+        "commits_score": 356,
+        "pr_reviews_score": 48,
+        "code_comments_score": 0,
+        "issues_opened_score": 22,
+        "issue_comments_score": 0,
+        "tests_score": 0,
+        "docs_score": 2,
+        "mentor_score": 0,
+        "zero_revisions_score": 165,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 11,
+        "issues_total": 11,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 178,
+          "prs": [
+            {
+              "number": 208,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 14,
+              "additions": 346,
+              "deletions": 259,
+              "reviews_count": 0
+            },
+            {
+              "number": 206,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 204,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 87,
+              "deletions": 76,
+              "reviews_count": 0
+            },
+            {
+              "number": 202,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 13,
+              "additions": 1622,
+              "deletions": 198,
+              "reviews_count": 0
+            },
+            {
+              "number": 157,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 96,
+              "deletions": 90,
+              "reviews_count": 0
+            },
+            {
+              "number": 155,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 50,
+              "deletions": 42,
+              "reviews_count": 0
+            },
+            {
+              "number": 153,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 85,
+              "deletions": 41,
+              "reviews_count": 0
+            },
+            {
+              "number": 151,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 43,
+              "deletions": 34,
+              "reviews_count": 0
+            },
+            {
+              "number": 149,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 29,
+              "deletions": 29,
+              "reviews_count": 0
+            },
+            {
+              "number": 147,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 20,
+              "deletions": 20,
+              "reviews_count": 0
+            },
+            {
+              "number": 145,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 361,
+              "deletions": 30,
+              "reviews_count": 0
+            },
+            {
+              "number": 143,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 173,
+              "deletions": 61,
+              "reviews_count": 0
+            },
+            {
+              "number": 139,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 224,
+              "deletions": 201,
+              "reviews_count": 0
+            },
+            {
+              "number": 137,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 203,
+              "deletions": 232,
+              "reviews_count": 0
+            },
+            {
+              "number": 134,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 30,
+              "deletions": 20,
+              "reviews_count": 0
+            },
+            {
+              "number": 132,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 129,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 302,
+              "deletions": 208,
+              "reviews_count": 0
+            },
+            {
+              "number": 127,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 125,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 8,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 123,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 42,
+              "deletions": 10,
+              "reviews_count": 0
+            },
+            {
+              "number": 121,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 2,
+              "additions": 256,
+              "deletions": 246,
+              "reviews_count": 0
+            },
+            {
+              "number": 119,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 117,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 1038,
+              "deletions": 31,
+              "reviews_count": 0
+            },
+            {
+              "number": 113,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 8,
+              "reviews_count": 0
+            },
+            {
+              "number": 111,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 78,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 104,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 102,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 100,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 181,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 97,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 36,
+              "deletions": 6,
+              "reviews_count": 0
+            },
+            {
+              "number": 95,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 93,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 18,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 91,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 15,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 89,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 20,
+              "deletions": 14,
+              "reviews_count": 0
+            },
+            {
+              "number": 87,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 85,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 5,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 83,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 8,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 81,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 130,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 79,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 6,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 77,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 7,
+              "deletions": 13,
+              "reviews_count": 0
+            },
+            {
+              "number": 75,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 19,
+              "deletions": 12,
+              "reviews_count": 0
+            },
+            {
+              "number": 73,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 20,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 69,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 44,
+              "additions": 91,
+              "deletions": 89,
+              "reviews_count": 0
+            },
+            {
+              "number": 67,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 65,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 42,
+              "additions": 12879,
+              "deletions": 11074,
+              "reviews_count": 0
+            },
+            {
+              "number": 59,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 57,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 46,
+              "additions": 326,
+              "deletions": 229,
+              "reviews_count": 0
+            },
+            {
+              "number": 55,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 38,
+              "additions": 67,
+              "deletions": 67,
+              "reviews_count": 0
+            },
+            {
+              "number": 53,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 77,
+              "deletions": 78,
+              "reviews_count": 0
+            },
+            {
+              "number": 52,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 43,
+              "additions": 233,
+              "deletions": 122,
+              "reviews_count": 0
+            },
+            {
+              "number": 49,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 137,
+              "deletions": 120,
+              "reviews_count": 0
+            },
+            {
+              "number": 48,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 48,
+              "additions": 264,
+              "deletions": 108,
+              "reviews_count": 0
+            },
+            {
+              "number": 44,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 11,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 40,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 38,
+              "additions": 329,
+              "deletions": 107,
+              "reviews_count": 0
+            },
+            {
+              "number": 35,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 25,
+              "additions": 130,
+              "deletions": 80,
+              "reviews_count": 0
+            },
+            {
+              "number": 32,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 32,
+              "additions": 61,
+              "deletions": 61,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 16,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 60,
+              "author": "lakinmindfire",
+              "title": "Implement husky along with commitlint , prettify etc for dev enviornment",
+              "created_at": "2023-12-08T12:01:50Z",
+              "comments": 0
+            },
+            {
+              "number": 10,
+              "author": "lakinmindfire",
+              "title": "Add meta tags for SEO purpose",
+              "created_at": "2023-11-24T10:52:51Z",
+              "comments": 0
+            },
+            {
+              "number": 7,
+              "author": "lakinmindfire",
+              "title": "Include standard opensource files",
+              "created_at": "2023-11-22T08:56:22Z",
+              "comments": 1
+            },
+            {
+              "number": 6,
+              "author": "lakinmindfire",
+              "title": "Add filter to projects page",
+              "created_at": "2023-11-22T08:54:52Z",
+              "comments": 0
+            },
+            {
+              "number": 8,
+              "author": "lakinmindfire",
+              "title": "Add NFT repo to project list",
+              "created_at": "2023-11-22T10:48:18Z",
+              "comments": 0
+            },
+            {
+              "number": 61,
+              "author": "lakinmindfire",
+              "title": "Implement automatic changelog generator ",
+              "created_at": "2023-12-08T12:05:03Z",
+              "comments": 0
+            },
+            {
+              "number": 43,
+              "author": "lakinmindfire",
+              "title": "Add submenus under projects ",
+              "created_at": "2023-12-06T11:28:43Z",
+              "comments": 1
+            },
+            {
+              "number": 37,
+              "author": "lakinmindfire",
+              "title": "Add proper title and descriptions for SEO ",
+              "created_at": "2023-12-06T09:29:20Z",
+              "comments": 1
+            },
+            {
+              "number": 18,
+              "author": "lakinmindfire",
+              "title": "Add \"Coming Soon\" section under projects page .",
+              "created_at": "2023-12-01T09:06:54Z",
+              "comments": 0
+            },
+            {
+              "number": 17,
+              "author": "lakinmindfire",
+              "title": "Update Readme of official repo ",
+              "created_at": "2023-12-01T09:01:00Z",
+              "comments": 2
+            },
+            {
+              "number": 9,
+              "author": "lakinmindfire",
+              "title": "Add filemaker repo to project list",
+              "created_at": "2023-11-23T04:03:26Z",
+              "comments": 0
+            }
+          ],
+          "issue_comments_given": 0,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 55,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 2,
+      "username": "anandmindfire",
+      "id": 155735575,
+      "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
+      "html_url": "https://github.com/anandmindfire",
+      "totalCommits": 98,
+      "totalPRs": 36,
+      "totalPRReviewsGiven": 1,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 2.72,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 20,
+        "medium": 7,
+        "large": 9
+      },
+      "total_score": 533,
+      "code_score": 421,
+      "community_score": 4,
+      "quality_score": 108,
+      "score_breakdown": {
+        "pr_score": 222,
+        "commits_score": 196,
+        "pr_reviews_score": 3,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 108,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 98,
+          "prs": [
+            {
+              "number": 200,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 198,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 121,
+              "deletions": 104,
+              "reviews_count": 0
+            },
+            {
+              "number": 196,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 251,
+              "deletions": 455,
+              "reviews_count": 0
+            },
+            {
+              "number": 194,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 192,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 190,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 1725,
+              "deletions": 341,
+              "reviews_count": 0
+            },
+            {
+              "number": 188,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 187,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 102,
+              "deletions": 30,
+              "reviews_count": 0
+            },
+            {
+              "number": 186,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 64,
+              "deletions": 35,
+              "reviews_count": 0
+            },
+            {
+              "number": 185,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 184,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 183,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 36,
+              "additions": 2028,
+              "deletions": 1204,
+              "reviews_count": 0
+            },
+            {
+              "number": 178,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 4,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 176,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 163,
+              "deletions": 71,
+              "reviews_count": 0
+            },
+            {
+              "number": 174,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 15,
+              "deletions": 16,
+              "reviews_count": 0
+            },
+            {
+              "number": 172,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 423,
+              "deletions": 228,
+              "reviews_count": 0
+            },
+            {
+              "number": 170,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 50,
+              "deletions": 35,
+              "reviews_count": 0
+            },
+            {
+              "number": 169,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 111,
+              "deletions": 51,
+              "reviews_count": 0
+            },
+            {
+              "number": 167,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 47,
+              "deletions": 38,
+              "reviews_count": 0
+            },
+            {
+              "number": 166,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 216,
+              "deletions": 36,
+              "reviews_count": 0
+            },
+            {
+              "number": 165,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 11,
+              "deletions": 18,
+              "reviews_count": 0
+            },
+            {
+              "number": 164,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 51,
+              "deletions": 23,
+              "reviews_count": 0
+            },
+            {
+              "number": 163,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 65,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 162,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 231,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 161,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 9,
+              "deletions": 50,
+              "reviews_count": 0
+            },
+            {
+              "number": 160,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 7,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 159,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 158,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 7,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 156,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 96,
+              "deletions": 90,
+              "reviews_count": 0
+            },
+            {
+              "number": 154,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 50,
+              "deletions": 42,
+              "reviews_count": 0
+            },
+            {
+              "number": 126,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 124,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 8,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 122,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 42,
+              "deletions": 10,
+              "reviews_count": 0
+            },
+            {
+              "number": 120,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 2,
+              "additions": 256,
+              "deletions": 246,
+              "reviews_count": 0
+            },
+            {
+              "number": 118,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 116,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 527,
+              "deletions": 436,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 1,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 36,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 3,
+      "username": "praliptarajoo",
+      "id": 42381761,
+      "avatar_url": "https://avatars.githubusercontent.com/u/42381761?v=4",
+      "html_url": "https://github.com/praliptarajoo",
+      "totalCommits": 20,
+      "totalPRs": 17,
+      "totalPRReviewsGiven": 2,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 1.18,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 13,
+        "medium": 4,
+        "large": 0
+      },
+      "total_score": 192,
+      "code_score": 137,
+      "community_score": 4,
+      "quality_score": 51,
+      "score_breakdown": {
+        "pr_score": 91,
+        "commits_score": 40,
+        "pr_reviews_score": 6,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 6,
+        "mentor_score": 0,
+        "zero_revisions_score": 45,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 20,
+          "prs": [
+            {
+              "number": 108,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 2
+            },
+            {
+              "number": 103,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 101,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 99,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 181,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 96,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 38,
+              "deletions": 6,
+              "reviews_count": 0
+            },
+            {
+              "number": 94,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 92,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 18,
+              "deletions": 1,
+              "reviews_count": 1
+            },
+            {
+              "number": 90,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 15,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 88,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 20,
+              "deletions": 14,
+              "reviews_count": 0
+            },
+            {
+              "number": 86,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 84,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 5,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 82,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 8,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 80,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 130,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 78,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 6,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 76,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 7,
+              "deletions": 13,
+              "reviews_count": 0
+            },
+            {
+              "number": 74,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 19,
+              "deletions": 12,
+              "reviews_count": 0
+            },
+            {
+              "number": 72,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 20,
+              "deletions": 0,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 2,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 3,
+            "first_time_mentor": 0,
+            "zero_revisions": 15,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 4,
+      "username": "ParasMindfire",
+      "id": 193932396,
+      "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
+      "html_url": "https://github.com/ParasMindfire",
+      "totalCommits": 34,
+      "totalPRs": 10,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 3.4,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 4,
+        "medium": 3,
+        "large": 3
+      },
+      "total_score": 166,
+      "code_score": 133,
+      "community_score": 6,
+      "quality_score": 27,
+      "score_breakdown": {
+        "pr_score": 65,
+        "commits_score": 68,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 27,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 34,
+          "prs": [
+            {
+              "number": 207,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 14,
+              "additions": 346,
+              "deletions": 259,
+              "reviews_count": 0
+            },
+            {
+              "number": 205,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 203,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 87,
+              "deletions": 76,
+              "reviews_count": 0
+            },
+            {
+              "number": 201,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 13,
+              "additions": 1622,
+              "deletions": 198,
+              "reviews_count": 0
+            },
+            {
+              "number": 199,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 197,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 121,
+              "deletions": 104,
+              "reviews_count": 0
+            },
+            {
+              "number": 195,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 251,
+              "deletions": 455,
+              "reviews_count": 0
+            },
+            {
+              "number": 193,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 191,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 5,
+              "reviews_count": 1
+            },
+            {
+              "number": 189,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 1725,
+              "deletions": 341,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 209,
+              "author": "ParasMindfire",
+              "title": "RFC: New Contribution Tracking & Scoring System",
+              "created_at": "2026-02-12T06:52:58Z",
+              "comments": 0
+            }
+          ],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 9,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 5,
+      "username": "ArnabKMindfire",
+      "id": 103591425,
+      "avatar_url": "https://avatars.githubusercontent.com/u/103591425?v=4",
+      "html_url": "https://github.com/ArnabKMindfire",
+      "totalCommits": 25,
+      "totalPRs": 11,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 2.27,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 5,
+        "medium": 1,
+        "large": 5
+      },
+      "total_score": 166,
+      "code_score": 124,
+      "community_score": 4,
+      "quality_score": 38,
+      "score_breakdown": {
+        "pr_score": 74,
+        "commits_score": 50,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 8,
+        "mentor_score": 0,
+        "zero_revisions_score": 30,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 25,
+          "prs": [
+            {
+              "number": 68,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 44,
+              "additions": 91,
+              "deletions": 89,
+              "reviews_count": 0
+            },
+            {
+              "number": 66,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 64,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 33,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 62,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 12846,
+              "deletions": 11074,
+              "reviews_count": 0
+            },
+            {
+              "number": 54,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 38,
+              "additions": 67,
+              "deletions": 67,
+              "reviews_count": 0
+            },
+            {
+              "number": 50,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 43,
+              "additions": 233,
+              "deletions": 122,
+              "reviews_count": 0
+            },
+            {
+              "number": 46,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 48,
+              "additions": 264,
+              "deletions": 108,
+              "reviews_count": 0
+            },
+            {
+              "number": 42,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 41,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 11,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 39,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 21,
+              "deletions": 33,
+              "reviews_count": 0
+            },
+            {
+              "number": 36,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 222,
+              "deletions": 0,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 4,
+            "first_time_mentor": 0,
+            "zero_revisions": 10,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 6,
+      "username": "VershalaT",
+      "id": 134675427,
+      "avatar_url": "https://avatars.githubusercontent.com/u/134675427?v=4",
+      "html_url": "https://github.com/VershalaT",
+      "totalCommits": 1,
+      "totalPRs": 14,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 0.07,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 0,
+        "large": 12
+      },
+      "total_score": 150,
+      "code_score": 114,
+      "community_score": 4,
+      "quality_score": 32,
+      "score_breakdown": {
+        "pr_score": 112,
+        "commits_score": 2,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 2,
+        "mentor_score": 0,
+        "zero_revisions_score": 30,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 1,
+          "prs": [
+            {
+              "number": 58,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 56,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 46,
+              "additions": 326,
+              "deletions": 229,
+              "reviews_count": 0
+            },
+            {
+              "number": 51,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 77,
+              "deletions": 78,
+              "reviews_count": 0
+            },
+            {
+              "number": 47,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 137,
+              "deletions": 120,
+              "reviews_count": 0
+            },
+            {
+              "number": 38,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 33,
+              "additions": 99,
+              "deletions": 87,
+              "reviews_count": 0
+            },
+            {
+              "number": 30,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 22,
+              "deletions": 21,
+              "reviews_count": 1
+            },
+            {
+              "number": 29,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 22,
+              "deletions": 21,
+              "reviews_count": 0
+            },
+            {
+              "number": 28,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 21,
+              "additions": 20,
+              "deletions": 36,
+              "reviews_count": 1
+            },
+            {
+              "number": 27,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 21,
+              "additions": 20,
+              "deletions": 36,
+              "reviews_count": 0
+            },
+            {
+              "number": 26,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 34,
+              "additions": 90,
+              "deletions": 69,
+              "reviews_count": 1
+            },
+            {
+              "number": 25,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 34,
+              "additions": 90,
+              "deletions": 69,
+              "reviews_count": 0
+            },
+            {
+              "number": 21,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 19,
+              "additions": 18,
+              "deletions": 18,
+              "reviews_count": 0
+            },
+            {
+              "number": 20,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 24,
+              "deletions": 9,
+              "reviews_count": 0
+            },
+            {
+              "number": 19,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 249,
+              "deletions": 136,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 10,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 7,
+      "username": "deepakyadav-01",
+      "id": 155735643,
+      "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
+      "html_url": "https://github.com/deepakyadav-01",
+      "totalCommits": 13,
+      "totalPRs": 12,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 1.08,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 10,
+        "large": 0
+      },
+      "total_score": 141,
+      "code_score": 101,
+      "community_score": 4,
+      "quality_score": 36,
+      "score_breakdown": {
+        "pr_score": 75,
+        "commits_score": 26,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 36,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 13,
+          "prs": [
+            {
+              "number": 152,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 85,
+              "deletions": 41,
+              "reviews_count": 0
+            },
+            {
+              "number": 150,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 43,
+              "deletions": 34,
+              "reviews_count": 0
+            },
+            {
+              "number": 148,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 29,
+              "deletions": 29,
+              "reviews_count": 0
+            },
+            {
+              "number": 146,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 20,
+              "deletions": 20,
+              "reviews_count": 0
+            },
+            {
+              "number": 144,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 361,
+              "deletions": 30,
+              "reviews_count": 0
+            },
+            {
+              "number": 140,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 9,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 142,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 173,
+              "deletions": 61,
+              "reviews_count": 0
+            },
+            {
+              "number": 138,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 224,
+              "deletions": 201,
+              "reviews_count": 0
+            },
+            {
+              "number": 136,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 203,
+              "deletions": 232,
+              "reviews_count": 0
+            },
+            {
+              "number": 133,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 30,
+              "deletions": 20,
+              "reviews_count": 0
+            },
+            {
+              "number": 131,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 128,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 302,
+              "deletions": 208,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 12,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 8,
+      "username": "aryanxorian",
+      "id": 29296038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/29296038?v=4",
+      "html_url": "https://github.com/aryanxorian",
+      "totalCommits": 13,
+      "totalPRs": 9,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 1.44,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 1,
+        "large": 6
+      },
+      "total_score": 116,
+      "code_score": 94,
+      "community_score": 4,
+      "quality_score": 18,
+      "score_breakdown": {
+        "pr_score": 68,
+        "commits_score": 26,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 4,
+        "docs_score": 2,
+        "mentor_score": 0,
+        "zero_revisions_score": 12,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 13,
+          "prs": [
+            {
+              "number": 34,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 25,
+              "additions": 130,
+              "deletions": 80,
+              "reviews_count": 0
+            },
+            {
+              "number": 16,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 47,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 31,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 32,
+              "additions": 61,
+              "deletions": 61,
+              "reviews_count": 0
+            },
+            {
+              "number": 24,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 14,
+              "additions": 35,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 23,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 34,
+              "additions": 133,
+              "deletions": 111,
+              "reviews_count": 1
+            },
+            {
+              "number": 15,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 20,
+              "deletions": 20,
+              "reviews_count": 1
+            },
+            {
+              "number": 14,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 32,
+              "additions": 126,
+              "deletions": 110,
+              "reviews_count": 1
+            },
+            {
+              "number": 13,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 12,
+              "deletions": 0,
+              "reviews_count": 1
+            },
+            {
+              "number": 11,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 45,
+              "deletions": 0,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 2,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 4,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 9,
+      "username": "ashutosh-jena-mindfire",
+      "id": 116242186,
+      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
+      "html_url": "https://github.com/ashutosh-jena-mindfire",
+      "totalCommits": 24,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 1,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 4.8,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 1,
+        "large": 3
+      },
+      "total_score": 104,
+      "code_score": 88,
+      "community_score": 4,
+      "quality_score": 12,
+      "score_breakdown": {
+        "pr_score": 37,
+        "commits_score": 48,
+        "pr_reviews_score": 3,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 12,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 24,
+          "prs": [
+            {
+              "number": 114,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 945,
+              "deletions": 29,
+              "reviews_count": 0
+            },
+            {
+              "number": 112,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 8,
+              "reviews_count": 0
+            },
+            {
+              "number": 110,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 233,
+              "deletions": 177,
+              "reviews_count": 0
+            },
+            {
+              "number": 107,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 97,
+              "deletions": 59,
+              "reviews_count": 2
+            },
+            {
+              "number": 105,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 1,
+              "additions": 122,
+              "deletions": 176,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 1,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 4,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 6
+    },
+    {
+      "rank": 10,
+      "username": "prashant-mindfire",
+      "id": 148045555,
+      "avatar_url": "https://avatars.githubusercontent.com/u/148045555?v=4",
+      "html_url": "https://github.com/prashant-mindfire",
+      "totalCommits": 18,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 3.6,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 0,
+        "large": 3
+      },
+      "total_score": 80,
+      "code_score": 72,
+      "community_score": 4,
+      "quality_score": 4,
+      "score_breakdown": {
+        "pr_score": 36,
+        "commits_score": 36,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 4,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 18,
+          "prs": [
+            {
+              "number": 5,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 26,
+              "additions": 46,
+              "deletions": 46,
+              "reviews_count": 1
+            },
+            {
+              "number": 4,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 75,
+              "additions": 809,
+              "deletions": 99,
+              "reviews_count": 1
+            },
+            {
+              "number": 3,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 1
+            },
+            {
+              "number": 2,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 1
+            },
+            {
+              "number": 1,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 60,
+              "additions": 147,
+              "deletions": 7,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 2,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 11,
+      "username": "ayusmanmindfire",
+      "id": 182596903,
+      "avatar_url": "https://avatars.githubusercontent.com/u/182596903?v=4",
+      "html_url": "https://github.com/ayusmanmindfire",
+      "totalCommits": 8,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 1.6,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 2,
+        "large": 1
+      },
+      "total_score": 67,
+      "code_score": 48,
+      "community_score": 4,
+      "quality_score": 15,
+      "score_breakdown": {
+        "pr_score": 32,
+        "commits_score": 16,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 15,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 8,
+          "prs": [
+            {
+              "number": 177,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 4,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 175,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 179,
+              "deletions": 85,
+              "reviews_count": 0
+            },
+            {
+              "number": 173,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 15,
+              "deletions": 16,
+              "reviews_count": 0
+            },
+            {
+              "number": 171,
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 34,
+              "deletions": 56,
+              "reviews_count": 0
+            },
+            {
+              "number": 168,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 2,
+              "additions": 112,
+              "deletions": 51,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 5,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 12,
+      "username": "rohitrg96",
+      "id": 190622750,
+      "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
+      "html_url": "https://github.com/rohitrg96",
+      "totalCommits": 9,
+      "totalPRs": 4,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 2.25,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 3
+      },
+      "total_score": 66,
+      "code_score": 50,
+      "community_score": 4,
+      "quality_score": 12,
+      "score_breakdown": {
+        "pr_score": 32,
+        "commits_score": 18,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 12,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 9,
+          "prs": [
+            {
+              "number": 182,
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 90,
+              "deletions": 182,
+              "reviews_count": 0
+            },
+            {
+              "number": 181,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 12,
+              "additions": 1597,
+              "deletions": 698,
+              "reviews_count": 0
+            },
+            {
+              "number": 180,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10,
+              "additions": 375,
+              "deletions": 356,
+              "reviews_count": 0
+            },
+            {
+              "number": 179,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 21,
+              "additions": 148,
+              "deletions": 150,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 4,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 3
+    },
+    {
+      "rank": 13,
+      "username": "VershalaTandon",
+      "id": 63102290,
+      "avatar_url": "https://avatars.githubusercontent.com/u/63102290?v=4",
+      "html_url": "https://github.com/VershalaTandon",
+      "totalCommits": 25,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 54,
+      "code_score": 50,
+      "community_score": 4,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 50,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 25,
+          "prs": [],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 14,
+      "username": "avishekthapamindfire0822",
+      "id": 123073226,
+      "avatar_url": "https://avatars.githubusercontent.com/u/123073226?v=4",
+      "html_url": "https://github.com/avishekthapamindfire0822",
+      "totalCommits": 7,
+      "totalPRs": 1,
+      "totalPRReviewsGiven": 2,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 7,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 1
+      },
+      "total_score": 33,
+      "code_score": 29,
+      "community_score": 4,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 9,
+        "commits_score": 14,
+        "pr_reviews_score": 6,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 4,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 4,
+        "issue_comments_total": 4
+      },
+      "projects": ["Mindfire Digital Website"],
+      "byProject": {
+        "Mindfire Digital Website": {
+          "commits": 7,
+          "prs": [
+            {
+              "number": 22,
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 38,
+              "additions": 193,
+              "deletions": 159,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 2,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": 4,
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    }
+  ]
+}
