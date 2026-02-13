@@ -13,11 +13,6 @@ import { Contributor, ContributorFilters, TopScorer } from "@/types";
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
 
-  // Top active contributors for the hero section (unchanged)
-  const activeTopContributors = [...contributorsArray]
-    .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 30)
-    .sort((a, b) => b.contributions - a.contributions);
-
   // Leaderboard data — use ALL scorers, no slice
   const topScorers = leaderboardData.leaderboard as TopScorer[];
 
@@ -122,13 +117,16 @@ export default function Contributors() {
           {/* Top Contributors strip */}
           <div className='mt-12 flex flex-col items-center justify-center'>
             <h2 className='text-2xl font-medium text-gray-800 mb-6'>
-              Top Active Contributors
+              Our Top Contributors
             </h2>
             <p className='text-xl text-mf-light-grey tracking-wide mb-2 flex flex-wrap'>
               Meet our top contributors — the people who help turn ideas into
               impact.
             </p>
-            <TopContributors contributors={activeTopContributors} />
+            <TopContributors
+              contributors={contributorsArray}
+              topScorers={topScorers}
+            />
           </div>
         </div>
 
@@ -143,7 +141,7 @@ export default function Contributors() {
 
           <div className='flex gap-6 px-4'>
             {/* Desktop Sidebar */}
-            <aside className='hidden lg:block w-64 flex-shrink-0'>
+            <aside className='hidden lg:block w-64 flex-shrink-0 sticky top-4 self-start'>
               <ContributorFilterSidebar
                 filters={filters}
                 onFilterChange={handleFilterChange}
