@@ -85,13 +85,7 @@ export default function TopScorersPanel({
   if (top10.length === 0) return null;
 
   return (
-    /*
-      h-full fills the fixed container height (calc(100vh - navbar)).
-      flex-col + overflow-y-auto on the scroll region lets header stay
-      pinned while the body scrolls.
-    */
     <div className='h-full flex flex-col rounded-2xl border border-gray-100 shadow-lg bg-white overflow-hidden'>
-      {/* ── Header — never scrolls ── */}
       <div className='relative px-5 pt-4 pb-3 border-b border-gray-100 flex-shrink-0'>
         <div
           className='absolute inset-0 pointer-events-none'
@@ -125,18 +119,10 @@ export default function TopScorersPanel({
               Top {top10.length} Contributors
             </p>
           </div>
-          <div className='ml-auto flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 border border-red-100 flex-shrink-0'>
-            <span className='w-1.5 h-1.5 rounded-full bg-mf-red animate-pulse' />
-            <span className='text-[10px] font-bold text-mf-red uppercase tracking-wide'>
-              Live
-            </span>
-          </div>
         </div>
       </div>
 
-      {/* ── Scrollable body ── */}
       <div className='flex-1 overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-200 [&::-webkit-scrollbar-track]:bg-transparent'>
-        {/* Podium */}
         <div className='relative px-4 pt-4 pb-1'>
           <div
             className='absolute inset-0 pointer-events-none'
@@ -226,7 +212,6 @@ export default function TopScorersPanel({
           <div className='h-0.5 mt-1 rounded-full bg-gradient-to-r from-transparent via-gray-200 to-transparent' />
         </div>
 
-        {/* Collapsible ranks 4–10 */}
         {rest.length > 0 && (
           <>
             <button
@@ -265,7 +250,6 @@ export default function TopScorersPanel({
               </div>
             </button>
 
-            {/* grid-rows trick: 0fr → 1fr animates height without knowing content height */}
             <div
               className='grid transition-all duration-300 ease-in-out'
               style={{ gridTemplateRows: restOpen ? "1fr" : "0fr" }}
@@ -319,7 +303,6 @@ export default function TopScorersPanel({
         )}
       </div>
 
-      {/* ── Footer — never scrolls ── */}
       <div className='px-5 py-2.5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0'>
         <p className='text-[10px] text-center text-gray-400 font-medium uppercase tracking-wider'>
           Click any contributor to view full profile

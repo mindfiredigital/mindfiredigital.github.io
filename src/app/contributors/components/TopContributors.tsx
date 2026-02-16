@@ -83,10 +83,8 @@ const TopContributors = ({
   }, [groups.length]);
 
   return (
-    <div className='relative max-w-xl md:max-w-5xl w-full px-2 sm:px-4 py-6 flex flex-col items-center'>
-      {/* Viewport — clips the sliding track */}
+    <div className='relative w-full px-2 sm:px-4 py-6 flex flex-col items-center overflow-hidden'>
       <div className='w-full overflow-hidden'>
-        {/* Track — all groups side by side, translateX shifts them */}
         <div
           className='flex'
           style={{
@@ -101,30 +99,28 @@ const TopContributors = ({
               className='flex flex-col items-center'
               style={{ width: `${100 / groups.length}%` }}
             >
-              {/* Label */}
               <p className='text-sm font-semibold text-mindfire-text-red tracking-wide uppercase mb-4'>
                 {group.label}
               </p>
 
-              {/* Contributors — original UI completely unchanged */}
-              <div className='flex justify-center gap-2 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 px-2 sm:px-8 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
+              <div className='flex justify-center gap-2 sm:gap-6 w-full flex-wrap sm:flex-nowrap pb-4 px-2 sm:px-8'>
                 {group.items.map((contributor) => (
                   <Link
                     key={contributor.login}
                     href={contributor.html_url}
                     target='_blank'
-                    className='flex-shrink-0 snap-center group w-[100px] sm:w-auto mx-1 sm:mx-0'
+                    className='flex-shrink-0 group w-[90px] sm:w-auto'
                   >
                     <div className='flex flex-col items-center gap-1 sm:gap-2'>
                       <div className='p-0.5 sm:p-1 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
                         <div className='p-0.5 rounded-full bg-white'>
-                          <div className='relative w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
+                          <div className='relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
                             <Image
                               src={contributor.avatar_url}
                               alt={contributor.login}
                               fill
                               className='object-cover'
-                              sizes='(max-width: 640px) 56px, 80px'
+                              sizes='(max-width: 640px) 56px, 64px'
                             />
                           </div>
                         </div>
@@ -133,7 +129,7 @@ const TopContributors = ({
                         <p className='font-medium text-xs sm:text-sm text-gray-800 truncate max-w-[90px] sm:max-w-[100px]'>
                           {contributor.login}
                         </p>
-                        <p className='text-xs text-gray-500'>
+                        <p className='text-xs text-gray-500 truncate max-w-[90px]'>
                           {contributor.stat}
                         </p>
                       </div>
@@ -146,7 +142,6 @@ const TopContributors = ({
         </div>
       </div>
 
-      {/* Dot indicators */}
       <div className='flex gap-1.5 mt-1'>
         {groups.map((_, i) => (
           <button

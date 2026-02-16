@@ -89,118 +89,117 @@ export default function Contributors() {
 
   return (
     <>
-      <section className='bg-slate-50 min-h-screen'>
-        {/* ── Fixed Hall of Fame panel — desktop only ── */}
-        <div className='hidden lg:block fixed top-[4.5rem] right-0 w-72 xl:w-80 h-[calc(100vh-4.5rem)] z-30 pr-4 xl:pr-6 pt-4'>
-          <TopScorersPanel
-            topScorers={topScorers}
-            onViewDetails={setSelectedContributor}
-          />
-        </div>
-
-        {/* ── Main content — full width, right-padded on desktop to clear panel ── */}
-        <div className='lg:pr-[19rem] xl:pr-[22rem]'>
-          {/* Page heading — truly full-width centred */}
-          <div className='flex items-center justify-center gap-4 pt-10 px-4'>
-            <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-              Our Contributors
-            </h1>
-            <ContributorCount totalContributors={contributorsArray.length} />
-          </div>
-
-          {/* Sub-heading */}
-          <div className='mt-6 text-center px-4'>
-            <h2 className='text-2xl font-medium text-gray-800 mb-3'>
-              Our Top Contributors
-            </h2>
-            <p className='text-xl text-mf-light-grey tracking-wide'>
-              Meet our top contributors — the people who help turn ideas into
-              impact.
-            </p>
-          </div>
-
-          {/* Carousel — centred in full remaining width */}
-          <div className='mt-8 flex justify-center px-4'>
-            <TopContributors
-              contributors={contributorsArray}
-              topScorers={topScorers}
+      <section className='bg-slate-50 min-h-screen overflow-x-hidden'>
+        <div
+          className='flex w-full overflow-hidden'
+          style={{ height: "calc(100vh - 4.5rem)", maxWidth: "100vw" }}
+        >
+          <aside className='hidden lg:flex flex-col w-64 flex-shrink-0 border-r border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
+            <ContributorFilterSidebar
+              filters={filters}
+              onFilterChange={handleFilterChange}
+              onReset={handleReset}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              isMobileOpen={isMobileFilterOpen}
+              onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
             />
-          </div>
+          </aside>
 
-          {/* Scoring system — directly below carousel */}
-          <div className='mt-4 px-4 pb-2 max-w-3xl mx-auto'>
-            <ScoringSystem />
-          </div>
+          <main className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'>
+            <div className='flex flex-col items-center text-center pt-10 px-6'>
+              <div className='flex items-center justify-center gap-4'>
+                <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+                  Our Contributors
+                </h1>
+                <ContributorCount
+                  totalContributors={contributorsArray.length}
+                />
+              </div>
 
-          {/* Mobile panel — shows below scoring on small screens */}
-          <div className='lg:hidden px-4 mt-6 pb-4'>
+              <div className='mt-6'>
+                <h2 className='text-2xl font-medium text-gray-800 mb-3'>
+                  Our Top Contributors
+                </h2>
+                <p className='text-xl text-mf-light-grey tracking-wide'>
+                  Meet our top contributors — the people who help turn ideas
+                  into impact.
+                </p>
+              </div>
+
+              <div className='mt-8 w-full flex justify-center'>
+                <TopContributors
+                  contributors={contributorsArray}
+                  topScorers={topScorers}
+                />
+              </div>
+
+              <div className='mt-4 pb-2 w-full max-w-3xl'>
+                <ScoringSystem />
+              </div>
+            </div>
+
+            <div className='lg:hidden px-4 mt-6'>
+              <TopScorersPanel
+                topScorers={topScorers}
+                onViewDetails={setSelectedContributor}
+              />
+            </div>
+
+            <div className='lg:hidden'>
+              <ContributorFilterSidebar
+                filters={filters}
+                onFilterChange={handleFilterChange}
+                onReset={handleReset}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                isMobileOpen={isMobileFilterOpen}
+                onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
+              />
+            </div>
+
+            <div className='mt-12 pb-16 px-6'>
+              <div className='flex items-center justify-center gap-4 mb-8'>
+                <h2 className='text-3xl font-medium text-gray-800'>
+                  Leaderboard
+                </h2>
+                <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
+                  {filteredAndSorted.length} of {topScorers.length}
+                </span>
+              </div>
+
+              {filteredAndSorted.length > 0 ? (
+                <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+                  {filteredAndSorted.map((contributor, index) => (
+                    <ContributorCard
+                      key={contributor.id}
+                      contributor={contributor}
+                      displayRank={index + 1}
+                      onViewDetails={setSelectedContributor}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className='flex flex-col justify-center items-center h-64 gap-3'>
+                  <p className='text-xl text-mf-light-grey tracking-wide'>
+                    No contributors found.
+                  </p>
+                  <button
+                    onClick={handleReset}
+                    className='text-sm text-mf-red hover:underline font-medium'
+                  >
+                    Clear filters
+                  </button>
+                </div>
+              )}
+            </div>
+          </main>
+
+          <div className='hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-l border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
             <TopScorersPanel
               topScorers={topScorers}
               onViewDetails={setSelectedContributor}
             />
-          </div>
-
-          {/* ── Leaderboard ── */}
-          <div className='mt-8 pb-16 px-4'>
-            <div className='flex items-center justify-center gap-4 mb-8'>
-              <h2 className='text-3xl font-medium text-gray-800'>
-                Leaderboard
-              </h2>
-              <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
-                {filteredAndSorted.length} of {topScorers.length}
-              </span>
-            </div>
-
-            <div className='flex gap-6'>
-              <aside className='hidden lg:block w-64 flex-shrink-0 sticky top-4 self-start'>
-                <ContributorFilterSidebar
-                  filters={filters}
-                  onFilterChange={handleFilterChange}
-                  onReset={handleReset}
-                  searchQuery={searchQuery}
-                  onSearchChange={setSearchQuery}
-                  isMobileOpen={isMobileFilterOpen}
-                  onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
-                />
-              </aside>
-              <div className='lg:hidden'>
-                <ContributorFilterSidebar
-                  filters={filters}
-                  onFilterChange={handleFilterChange}
-                  onReset={handleReset}
-                  searchQuery={searchQuery}
-                  onSearchChange={setSearchQuery}
-                  isMobileOpen={isMobileFilterOpen}
-                  onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
-                />
-              </div>
-              <main className='flex-1 min-w-0'>
-                {filteredAndSorted.length > 0 ? (
-                  <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                    {filteredAndSorted.map((contributor, index) => (
-                      <ContributorCard
-                        key={contributor.id}
-                        contributor={contributor}
-                        displayRank={index + 1}
-                        onViewDetails={setSelectedContributor}
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <div className='flex flex-col justify-center items-center h-64 gap-3'>
-                    <p className='text-xl text-mf-light-grey tracking-wide'>
-                      No contributors found.
-                    </p>
-                    <button
-                      onClick={handleReset}
-                      className='text-sm text-mf-red hover:underline font-medium'
-                    >
-                      Clear filters
-                    </button>
-                  </div>
-                )}
-              </main>
-            </div>
           </div>
         </div>
       </section>

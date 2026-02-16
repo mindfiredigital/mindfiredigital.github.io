@@ -143,7 +143,6 @@ const ScoringSystem = () => {
               </div>
             </div>
 
-            {/* Community Score */}
             <div className='bg-violet-50 border border-violet-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-violet-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-violet-400 inline-block' />
@@ -174,7 +173,6 @@ const ScoringSystem = () => {
             </div>
           </div>
 
-          {/* Complexity multiplier table */}
           <div>
             <h4 className='text-xs font-bold text-gray-600 uppercase tracking-wider mb-3 text-center'>
               PR Complexity Multipliers
