@@ -111,13 +111,11 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center p-4'>
-      {/* Backdrop */}
       <div
         className='absolute inset-0 bg-black bg-opacity-50'
         onClick={onClose}
       />
 
-      {/* Modal */}
       <div className='relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto z-10'>
         {/* Header */}
         <div className='sticky top-0 bg-white z-10 px-6 pt-6 pb-4 border-b border-gray-100'>
@@ -129,7 +127,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
           </button>
 
           <div className='flex items-center gap-4'>
-            {/* Avatar with gradient ring */}
             <div className='relative flex-shrink-0'>
               <div className='p-0.5 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
                 <div className='p-0.5 rounded-full bg-white'>
@@ -160,7 +157,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   {badge.label}
                 </span>
               </div>
-              {/* GitHub link — icon + text */}
               <a
                 href={contributor.html_url}
                 target='_blank'
@@ -176,7 +172,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
         </div>
 
         <div className='p-6 space-y-6'>
-          {/* Score Summary Tiles */}
           <div className='grid grid-cols-2 sm:grid-cols-4 gap-3'>
             {[
               {
@@ -212,7 +207,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             ))}
           </div>
 
-          {/* Score Composition Bars (moved from card) */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               Score Composition
@@ -253,7 +247,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
-          {/* Activity Stats */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               Activity
@@ -307,7 +300,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
-          {/* PR Complexity */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               PR Complexity Breakdown
@@ -359,7 +351,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
-          {/* Score Breakdown Bars */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               Score Breakdown
@@ -387,7 +378,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
-          {/* Projects */}
           {contributor.projects && contributor.projects.length > 0 && (
             <div>
               <h3 className='text-sm font-semibold text-gray-700 mb-3'>
