@@ -90,18 +90,6 @@ export default function Contributors() {
   return (
     <>
       <section className='bg-slate-50 min-h-screen'>
-        {/*
-          ═══════════════════════════════════════════════════════════════
-          LAYOUT STRATEGY
-          ───────────────────────────────────────────────────────────────
-          The panel is fixed to the right edge of the viewport so it
-          never steals width from the main content column.
-          The main content uses the full 100vw and centres naturally.
-          A right padding equal to the panel width is added to the
-          carousel + scoring wrappers so text doesn't slide under panel.
-          ═══════════════════════════════════════════════════════════════
-        */}
-
         {/* ── Fixed Hall of Fame panel — desktop only ── */}
         <div className='hidden lg:block fixed top-[4.5rem] right-0 w-72 xl:w-80 h-[calc(100vh-4.5rem)] z-30 pr-4 xl:pr-6 pt-4'>
           <TopScorersPanel
