@@ -17,18 +17,27 @@ interface DisplayContributor {
   stat: string;
 }
 
-const getLastActiveText = (days: number | null): string => {
-  if (days === null) return "No recent activity";
-  if (days === 0) return "Active today";
-  if (days === 1) return "Active yesterday";
-  return `Active ${days} days ago`;
-};
-
 function buildGroups(
   contributors: Contributor[],
   topScorers: TopScorer[]
-): { label: string; items: DisplayContributor[] }[] {
-  const recentlyActive = [...contributors]
+): { label: string; icon: string; items: DisplayContributor[] }[] {
+  const activeThisWeek = [...contributors]
+    .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 7)
+    .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))
+    .slice(0, 6)
+    .map((c) => ({
+      login: c.login,
+      avatar_url: c.avatar_url,
+      html_url: c.html_url,
+      stat:
+        c.lastActiveDays === 0
+          ? "Active today"
+          : c.lastActiveDays === 1
+            ? "Active yesterday"
+            : `Active ${c.lastActiveDays}d ago`,
+    }));
+
+  const activeThisMonth = [...contributors]
     .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 30)
     .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))
     .slice(0, 6)
@@ -36,33 +45,38 @@ function buildGroups(
       login: c.login,
       avatar_url: c.avatar_url,
       html_url: c.html_url,
-      stat: getLastActiveText(c.lastActiveDays),
+      stat: `Active ${c.lastActiveDays}d ago`,
     }));
 
-  const topByScore = [...topScorers]
-    .sort((a, b) => b.total_score - a.total_score)
+  const topByCommits = [...topScorers]
+    .sort((a, b) => b.totalCommits - a.totalCommits)
     .slice(0, 6)
     .map((s) => ({
       login: s.username,
       avatar_url: s.avatar_url,
       html_url: s.html_url,
-      stat: `${s.total_score.toLocaleString()} pts`,
-    }));
-
-  const topByPRs = [...topScorers]
-    .sort((a, b) => b.totalPRs - a.totalPRs)
-    .slice(0, 6)
-    .map((s) => ({
-      login: s.username,
-      avatar_url: s.avatar_url,
-      html_url: s.html_url,
-      stat: `${s.totalPRs} pull requests`,
+      stat: `${s.totalCommits} commits`,
     }));
 
   return [
-    { label: "Top Active Contributors", items: recentlyActive },
-    { label: "Top Contributors by Score", items: topByScore },
-    { label: "Top Contributors by PRs", items: topByPRs },
+    {
+      label: "Active This Week",
+      icon: "",
+      items:
+        activeThisWeek.length > 0
+          ? activeThisWeek
+          : activeThisMonth.slice(0, 6),
+    },
+    {
+      label: "Active This Month",
+      icon: "",
+      items: activeThisMonth,
+    },
+    {
+      label: "Top by Commits",
+      icon: "",
+      items: topByCommits,
+    },
   ];
 }
 
@@ -99,11 +113,12 @@ const TopContributors = ({
               className='flex flex-col items-center'
               style={{ width: `${100 / groups.length}%` }}
             >
-              <p className='text-sm font-semibold text-mindfire-text-red tracking-wide uppercase mb-4'>
+              <p className='text-sm font-semibold text-mindfire-text-red tracking-wide uppercase mb-4 flex items-center gap-1.5'>
+                <span>{group.icon}</span>
                 {group.label}
               </p>
 
-              <div className='flex justify-center gap-2 sm:gap-6 w-full flex-wrap sm:flex-nowrap pb-4 px-2 sm:px-8'>
+              <div className='flex justify-center gap-2 sm:gap-5 w-full flex-wrap sm:flex-nowrap pb-4 px-2 sm:px-6'>
                 {group.items.map((contributor) => (
                   <Link
                     key={contributor.login}
@@ -136,6 +151,12 @@ const TopContributors = ({
                     </div>
                   </Link>
                 ))}
+
+                {group.items.length === 0 && (
+                  <p className='text-sm text-gray-400 py-8'>
+                    No contributors found
+                  </p>
+                )}
               </div>
             </div>
           ))}

@@ -112,9 +112,7 @@ export default function Contributors() {
                 <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
                   Our Contributors
                 </h1>
-                <ContributorCount
-                  totalContributors={contributorsArray.length}
-                />
+                <ContributorCount totalContributors={topScorers.length} />
               </div>
 
               <div className='mt-6'>
