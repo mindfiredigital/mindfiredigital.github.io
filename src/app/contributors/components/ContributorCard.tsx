@@ -73,13 +73,11 @@ export default function ContributorCard({
         ${isTopThree ? "shadow-md" : "shadow-sm"}
       `}
     >
-      {/* Top stripe for top-3 */}
       {isTopThree && (
         <div className={`h-0.5 w-full bg-gradient-to-r ${rs.scoreGradient}`} />
       )}
 
       <div className='p-5 flex flex-col flex-1'>
-        {/* Header row */}
         <div className='flex items-start justify-between mb-4'>
           <div className='flex items-center gap-3'>
             <div className='relative flex-shrink-0'>
@@ -93,7 +91,6 @@ export default function ContributorCard({
               )}
             </div>
             <div className='min-w-0'>
-              {/* Clickable username → GitHub */}
               <a
                 href={contributor.html_url}
                 target='_blank'
@@ -110,7 +107,6 @@ export default function ContributorCard({
             </div>
           </div>
 
-          {/* Rank badge */}
           <div
             className={`flex items-center gap-1 px-2 py-1 rounded-lg border text-xs font-bold ${rs.badge} flex-shrink-0`}
           >
@@ -119,7 +115,6 @@ export default function ContributorCard({
           </div>
         </div>
 
-        {/* Total Score — prominent */}
         <div className='mb-4'>
           <div className='flex items-baseline gap-1.5'>
             <span
@@ -134,10 +129,8 @@ export default function ContributorCard({
           </p>
         </div>
 
-        {/* Spacer */}
         <div className='flex-1' />
 
-        {/* Stats row */}
         <div className='flex items-center justify-between pt-3.5 border-t border-gray-100 mb-3'>
           {[
             {
@@ -179,7 +172,6 @@ export default function ContributorCard({
           ))}
         </div>
 
-        {/* CTA */}
         <button
           onClick={() => onViewDetails(contributor)}
           className='w-full flex items-center justify-center gap-1.5 py-2 rounded-xl
