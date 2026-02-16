@@ -38,7 +38,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
 
   return (
     <>
-      {/* Mobile Filter Button */}
       <button
         onClick={onMobileToggle}
         className='lg:hidden fixed bottom-6 right-6 z-40 bg-mf-red text-white px-5 py-3 rounded-full shadow-lg hover:bg-red-700 transition-colors flex items-center gap-2'
@@ -52,7 +51,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
         )}
       </button>
 
-      {/* Mobile Overlay */}
       {isMobileOpen && (
         <div
           className='lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40'
@@ -60,7 +58,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
         />
       )}
 
-      {/* Filter Sidebar */}
       <div
         className={`
           fixed lg:static inset-y-0 left-0 z-50 lg:z-auto
@@ -77,7 +74,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           flex flex-col
         `}
       >
-        {/* Mobile Close */}
         <button
           onClick={onMobileToggle}
           className='lg:hidden absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10 p-1 rounded-full hover:bg-gray-100 transition-colors'
@@ -85,7 +81,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           <X className='w-5 h-5' />
         </button>
 
-        {/* Header */}
         <div className='p-5 pb-4 border-b border-gray-100'>
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center gap-2'>
@@ -105,7 +100,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             )}
           </div>
 
-          {/* Search */}
           <div className='relative'>
             <Search className='absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-3.5 h-3.5' />
             <input
@@ -126,9 +120,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           </div>
         </div>
 
-        {/* Filter Content */}
         <div className='overflow-y-auto flex-1 p-4 space-y-1'>
-          {/* Sort By */}
           <FilterSection
             title='Sort By'
             expanded={expandedSections.sortBy}
@@ -151,7 +143,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             />
           </FilterSection>
 
-          {/* Activity */}
           <FilterSection
             title='Last Active'
             expanded={expandedSections.activity}
@@ -171,7 +162,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             />
           </FilterSection>
 
-          {/* Score Range */}
           <FilterSection
             title='Min Total Score'
             expanded={expandedSections.scoreRange}
@@ -196,8 +186,6 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
     </>
   );
 };
-
-/* ── Reusable sub-components ── */
 
 function FilterSection({
   title,
