@@ -54,27 +54,6 @@ const getRankStyles = (rank: number) => {
   };
 };
 
-const SCORE_BARS = [
-  {
-    key: "code_score" as const,
-    label: "Code",
-    color: "bg-blue-400",
-    track: "bg-blue-100",
-  },
-  {
-    key: "quality_score" as const,
-    label: "Quality",
-    color: "bg-emerald-400",
-    track: "bg-emerald-100",
-  },
-  {
-    key: "community_score" as const,
-    label: "Community",
-    color: "bg-violet-400",
-    track: "bg-violet-100",
-  },
-];
-
 export default function ContributorCard({
   contributor,
   displayRank,
@@ -103,21 +82,27 @@ export default function ContributorCard({
         {/* Header row */}
         <div className='flex items-start justify-between mb-4'>
           <div className='flex items-center gap-3'>
-            <div className='relative'>
+            <div className='relative flex-shrink-0'>
               <img
                 src={contributor.avatar_url}
                 alt={contributor.username}
                 className='w-11 h-11 rounded-full ring-2 ring-gray-100 object-cover'
               />
-              {/* Online-style activity dot — only for rank ≤3 */}
               {isTopThree && (
                 <span className='absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-white rounded-full' />
               )}
             </div>
             <div className='min-w-0'>
-              <h3 className='font-bold text-sm text-gray-900 truncate max-w-[130px] leading-tight'>
+              {/* Clickable username → GitHub */}
+              <a
+                href={contributor.html_url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='font-bold text-sm text-gray-900 truncate max-w-[130px] leading-tight block hover:text-mf-red transition-colors duration-150'
+                title={`@${contributor.username} on GitHub`}
+              >
                 {contributor.username}
-              </h3>
+              </a>
               <p className='text-[11px] text-gray-400 mt-0.5'>
                 {contributor.projectsWorkingOn} project
                 {contributor.projectsWorkingOn !== 1 ? "s" : ""}
@@ -134,9 +119,9 @@ export default function ContributorCard({
           </div>
         </div>
 
-        {/* Score + sub-bars */}
+        {/* Total Score — prominent */}
         <div className='mb-4'>
-          <div className='flex items-baseline gap-1.5 mb-3'>
+          <div className='flex items-baseline gap-1.5'>
             <span
               className={`text-3xl font-black bg-gradient-to-r ${rs.scoreGradient} bg-clip-text text-transparent leading-none`}
             >
@@ -144,36 +129,9 @@ export default function ContributorCard({
             </span>
             <span className='text-xs text-gray-400 font-medium'>pts</span>
           </div>
-
-          <div className='space-y-2'>
-            {SCORE_BARS.map((bar) => {
-              const pct =
-                contributor.total_score > 0
-                  ? Math.min(
-                      (contributor[bar.key] / contributor.total_score) * 100,
-                      100
-                    )
-                  : 0;
-              return (
-                <div key={bar.key} className='flex items-center gap-2'>
-                  <span className='text-[10px] text-gray-400 w-14 flex-shrink-0 font-medium'>
-                    {bar.label}
-                  </span>
-                  <div
-                    className={`flex-1 ${bar.track} rounded-full h-1.5 overflow-hidden`}
-                  >
-                    <div
-                      className={`${bar.color} h-full rounded-full transition-all duration-700`}
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                  <span className='text-[10px] text-gray-500 w-7 text-right font-semibold tabular-nums'>
-                    {contributor[bar.key]}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
+          <p className='text-[10px] text-gray-400 mt-1 uppercase tracking-wide font-medium'>
+            Total Score
+          </p>
         </div>
 
         {/* Spacer */}

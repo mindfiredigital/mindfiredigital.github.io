@@ -9,6 +9,7 @@ import {
   Eye,
   AlertCircle,
   MessageSquare,
+  Github,
 } from "lucide-react";
 import { TopScorer } from "@/types";
 
@@ -16,6 +17,33 @@ interface ContributorModalProps {
   contributor: TopScorer | null;
   onClose: () => void;
 }
+
+const SCORE_BARS = [
+  {
+    key: "code_score" as const,
+    label: "Code",
+    color: "bg-blue-400",
+    track: "bg-blue-100",
+    textColor: "text-blue-700",
+    bgColor: "bg-blue-50 border-blue-200",
+  },
+  {
+    key: "quality_score" as const,
+    label: "Quality",
+    color: "bg-emerald-400",
+    track: "bg-emerald-100",
+    textColor: "text-emerald-700",
+    bgColor: "bg-emerald-50 border-emerald-200",
+  },
+  {
+    key: "community_score" as const,
+    label: "Community",
+    color: "bg-violet-400",
+    track: "bg-violet-100",
+    textColor: "text-violet-700",
+    bgColor: "bg-violet-50 border-violet-200",
+  },
+];
 
 const ContributorModal: React.FC<ContributorModalProps> = ({
   contributor,
@@ -101,12 +129,17 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
           </button>
 
           <div className='flex items-center gap-4'>
-            <div className='relative'>
-              <img
-                src={contributor.avatar_url}
-                alt={contributor.username}
-                className='w-16 h-16 rounded-full shadow-md'
-              />
+            {/* Avatar with gradient ring */}
+            <div className='relative flex-shrink-0'>
+              <div className='p-0.5 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
+                <div className='p-0.5 rounded-full bg-white'>
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.username}
+                    className='w-16 h-16 rounded-full object-cover'
+                  />
+                </div>
+              </div>
               <span
                 className={`absolute -bottom-1 -right-1 text-xs font-bold px-1.5 py-0.5 rounded-full border ${badge.color}`}
               >
@@ -115,8 +148,9 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   : badge.label}
               </span>
             </div>
+
             <div>
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-2 flex-wrap'>
                 <h2 className='text-xl font-bold text-gray-900'>
                   {contributor.username}
                 </h2>
@@ -126,13 +160,16 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   {badge.label}
                 </span>
               </div>
+              {/* GitHub link — icon + text */}
               <a
                 href={contributor.html_url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-sm text-mf-red hover:underline flex items-center gap-1 mt-0.5'
+                className='inline-flex items-center gap-1.5 mt-1.5 text-sm font-medium text-gray-500 hover:text-mf-red transition-colors group'
               >
-                View on GitHub <ExternalLink className='w-3 h-3' />
+                <Github className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                <span>View GitHub Profile</span>
+                <ExternalLink className='w-3 h-3' />
               </a>
             </div>
           </div>
@@ -173,6 +210,47 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                 <p className='text-xs mt-0.5 opacity-80'>{tile.label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Score Composition Bars (moved from card) */}
+          <div>
+            <h3 className='text-sm font-semibold text-gray-700 mb-3'>
+              Score Composition
+            </h3>
+            <div className='space-y-2.5'>
+              {SCORE_BARS.map((bar) => {
+                const pct =
+                  contributor.total_score > 0
+                    ? Math.min(
+                        (contributor[bar.key] / contributor.total_score) * 100,
+                        100
+                      )
+                    : 0;
+                return (
+                  <div key={bar.key} className='flex items-center gap-3'>
+                    <span
+                      className={`text-xs font-semibold w-20 flex-shrink-0 ${bar.textColor}`}
+                    >
+                      {bar.label}
+                    </span>
+                    <div
+                      className={`flex-1 ${bar.track} rounded-full h-2 overflow-hidden`}
+                    >
+                      <div
+                        className={`${bar.color} h-full rounded-full transition-all duration-700`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <span className='text-xs font-bold text-gray-700 w-10 text-right tabular-nums'>
+                      {contributor[bar.key]}
+                    </span>
+                    <span className='text-[10px] text-gray-400 w-8 text-right tabular-nums'>
+                      {Math.round(pct)}%
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Activity Stats */}
@@ -241,18 +319,21 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   value: prs_by_complexity.small,
                   pct: smallPct,
                   color: "bg-green-500",
+                  multiplier: "×1.0",
                 },
                 {
                   label: "Medium",
                   value: prs_by_complexity.medium,
                   pct: mediumPct,
                   color: "bg-yellow-500",
+                  multiplier: "×1.3",
                 },
                 {
                   label: "Large",
                   value: prs_by_complexity.large,
                   pct: largePct,
                   color: "bg-red-500",
+                  multiplier: "×1.7",
                 },
               ].map((item) => (
                 <div
@@ -262,7 +343,10 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   <p className='text-lg font-bold text-gray-800'>
                     {item.value}
                   </p>
-                  <p className='text-xs text-gray-500 mb-2'>{item.label}</p>
+                  <p className='text-xs text-gray-500'>{item.label}</p>
+                  <p className='text-[10px] text-gray-400 font-mono font-semibold mb-2'>
+                    {item.multiplier}
+                  </p>
                   <div className='w-full bg-gray-200 rounded-full h-1.5'>
                     <div
                       className={`${item.color} h-1.5 rounded-full transition-all duration-500`}

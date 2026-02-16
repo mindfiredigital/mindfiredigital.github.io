@@ -6,6 +6,7 @@ import TopContributors from "./components/TopContributors";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorCard from "./components/ContributorCard";
 import ContributorModal from "./components/ContributorModal";
+import ScoringSystem from "./components/ScoringSystem";
 import contributorList from "../projects/assets/contributors.json";
 import leaderboardData from "../projects/assets/leaderboard.json";
 import { Contributor, ContributorFilters, TopScorer } from "@/types";
@@ -67,9 +68,7 @@ export default function Contributors() {
     }
 
     // Score range filter
-    // scoreRange is now stored as a plain number string e.g. "100", "500", "1000"
     if (filters.scoreRange !== "all") {
-      // Strip any trailing "+" in case old values still appear
       const min = parseInt(filters.scoreRange.replace("+", ""), 10);
       if (!isNaN(min)) {
         result = result.filter((c) => c.total_score >= min);
@@ -130,8 +129,11 @@ export default function Contributors() {
           </div>
         </div>
 
+        {/* Scoring System — collapsible, sits between top strip and leaderboard */}
+        <ScoringSystem />
+
         {/* Leaderboard section */}
-        <div className='container mx-auto mt-10 pb-16'>
+        <div className='container mx-auto mt-2 pb-16'>
           <div className='flex items-center justify-center gap-4 mb-8'>
             <h2 className='text-3xl font-medium text-gray-800'>Leaderboard</h2>
             <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
