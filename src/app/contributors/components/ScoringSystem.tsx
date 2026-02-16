@@ -8,7 +8,6 @@ const ScoringSystem = () => {
 
   return (
     <div className='mx-auto max-w-4xl px-4 mb-8'>
-      {/* Toggle button */}
       <button
         onClick={() => setIsOpen((v) => !v)}
         className='w-full flex items-center justify-between gap-3 px-5 py-3.5 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-red-200 transition-all duration-200 group'
@@ -35,19 +34,16 @@ const ScoringSystem = () => {
         </div>
       </button>
 
-      {/* Collapsible content */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-[800px] opacity-100 mt-3" : "max-h-0 opacity-0"
         }`}
       >
         <div className='bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-6'>
-          {/* Formula header */}
           <div className='text-center'>
             <span className='inline-block px-3 py-1 bg-red-50 border border-red-100 rounded-full text-xs font-bold text-mf-red uppercase tracking-wider mb-3'>
               Scoring Formula
             </span>
-            {/* Total score equation */}
             <div className='flex items-center justify-center gap-2 flex-wrap text-sm font-mono'>
               <span className='px-3 py-1.5 bg-red-50 border border-red-200 text-mindfire-text-red rounded-lg font-bold'>
                 Total Score
@@ -67,9 +63,7 @@ const ScoringSystem = () => {
             </div>
           </div>
 
-          {/* Three columns */}
           <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-            {/* Code Score */}
             <div className='bg-blue-50 border border-blue-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-blue-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-blue-400 inline-block' />
@@ -103,7 +97,6 @@ const ScoringSystem = () => {
               </div>
             </div>
 
-            {/* Quality Score */}
             <div className='bg-emerald-50 border border-emerald-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-emerald-400 inline-block' />
@@ -219,7 +212,6 @@ const ScoringSystem = () => {
             </div>
           </div>
 
-          {/* Impact bonus note */}
           <div className='bg-gray-50 border border-gray-200 rounded-xl p-3.5 flex items-start gap-3'>
             <Info className='w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5' />
             <p className='text-xs text-gray-600'>
