@@ -149,7 +149,6 @@ async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
 
       if (!commits || commits.length === 0) break;
 
-      // Filter out bot commits
       const humanCommits = commits.filter(
         (c) => !isBot(c.author?.login) && !isBot(c.commit?.author?.name)
       );
@@ -171,15 +170,10 @@ async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
 }
 
 // ============================================================================
-// NEW: ANALYZE PR COMPLEXITY
+// ANALYZE PR COMPLEXITY
 // ============================================================================
 
 function analyzePRComplexity(pr) {
-  // Complexity criteria based on your requirements:
-  // Small: 1-2 files, <100 lines
-  // Medium: 3-7 files, moderate complexity
-  // Large: 8+ files, core changes
-
   const filesChanged = pr.changed_files || 0;
   const linesChanged = (pr.additions || 0) + (pr.deletions || 0);
 
@@ -201,7 +195,6 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
     `   🔍 Fetching all merged PRs (including indirect merges to ${defaultBranch})...`
   );
 
-  // Step 1: Get all commits from default branch first
   const defaultBranchCommits = await fetchAllCommitsFromDefaultBranch(
     owner,
     repo,
@@ -226,7 +219,6 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
 
       if (!prs || prs.length === 0) break;
 
-      // Filter: all merged PRs (not just to default branch)
       const mergedPRs = prs.filter((pr) => {
         const isMerged = pr.merged_at !== null;
         const notBot = !isBot(pr.user?.login);
@@ -246,19 +238,16 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
   console.log(`   📊 Total merged PRs found: ${allMergedPRs.length}`);
   console.log(`   🔍 Filtering PRs and enriching with complexity + reviews...`);
 
-  // Step 2: Filter PRs in default branch and enrich with details
   const enrichedPRs = [];
 
   for (let i = 0; i < allMergedPRs.length; i++) {
     const pr = allMergedPRs[i];
 
-    // Check if the PR's merge commit SHA is in the default branch
     if (!pr.merge_commit_sha || !defaultBranchSHAs.has(pr.merge_commit_sha)) {
       continue;
     }
 
     try {
-      // Fetch full PR details for complexity analysis
       await delay(CONFIG.DELAY_MS);
       const fullPR = await fetchGitHub(
         `https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}`
@@ -267,7 +256,6 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
 
       const complexity = analyzePRComplexity(fullPR);
 
-      // Fetch reviews for this PR
       let reviews = [];
       try {
         await delay(CONFIG.DELAY_MS);
@@ -280,7 +268,6 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
         reviews = [];
       }
 
-      // Fetch review comments
       let reviewComments = [];
       try {
         await delay(CONFIG.DELAY_MS);
@@ -295,7 +282,6 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
         reviewComments = [];
       }
 
-      // Filter out bot reviews
       const humanReviews = reviews.filter((r) => !isBot(r.user?.login));
       const humanComments = reviewComments.filter((c) => !isBot(c.user?.login));
 
@@ -345,8 +331,44 @@ async function fetchAllMergedPRsToDefault(owner, repo, defaultBranch) {
 }
 
 // ============================================================================
-// FETCH CATEGORIZED ISSUES
+// FIX 1 of 3: FETCH REAL ISSUE COMMENT AUTHORS
+// Previously: stored only `comments: issue.comments` (a count integer)
+// Now: fetches each issue's comments and stores the actual author logins
+// This is what feeds generate-leaderboard.js with accurate per-user data
 // ============================================================================
+
+async function fetchIssueCommentAuthors(owner, repo, issueNumber) {
+  let page = 1;
+  const authors = [];
+
+  while (true) {
+    const url = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100&page=${page}`;
+    try {
+      await delay(CONFIG.DELAY_MS);
+      const comments = await fetchGitHub(url);
+      if (!comments || comments.length === 0) break;
+
+      for (const comment of comments) {
+        if (!isBot(comment.user?.login)) {
+          authors.push({
+            author: comment.user?.login,
+            created_at: comment.created_at,
+          });
+        }
+      }
+
+      if (comments.length < 100) break;
+      page++;
+    } catch (err) {
+      console.error(
+        `      ⚠️ Error fetching comments for issue #${issueNumber}: ${err.message}`
+      );
+      break;
+    }
+  }
+
+  return authors;
+}
 
 async function fetchCategorizedIssues(owner, repo) {
   console.log(`   🔍 Fetching categorized issues...`);
@@ -358,7 +380,9 @@ async function fetchCategorizedIssues(owner, repo) {
     others: [],
   };
   let apiCalls = 0;
+  let allRawIssues = [];
 
+  // Step 1: collect all issues first
   while (true) {
     const url = `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&page=${page}`;
 
@@ -370,47 +394,9 @@ async function fetchCategorizedIssues(owner, repo) {
       if (!allIssues || allIssues.length === 0) break;
 
       for (const issue of allIssues) {
-        // Skip pull requests
         if (issue.pull_request) continue;
-
-        // Skip bot issues
         if (isBot(issue.user?.login)) continue;
-
-        const labels = issue.labels.map((label) => label.name.toLowerCase());
-        const issueData = {
-          number: issue.number,
-          author: issue.user?.login,
-          title: issue.title,
-          labels: labels,
-          created_at: issue.created_at,
-          state: issue.state,
-          comments: issue.comments || 0, // Number of comments
-        };
-
-        // Categorize based on labels
-        if (labels.some((l) => l.includes("bug") || l.includes("fix"))) {
-          issues.bugs.push(issueData);
-        } else if (
-          labels.some(
-            (l) =>
-              l.includes("enhancement") ||
-              l.includes("feature") ||
-              l.includes("improvement")
-          )
-        ) {
-          issues.enhancements.push(issueData);
-        } else if (
-          labels.some(
-            (l) =>
-              l.includes("documentation") ||
-              l.includes("docs") ||
-              l.includes("doc")
-          )
-        ) {
-          issues.documentation.push(issueData);
-        } else {
-          issues.others.push(issueData);
-        }
+        allRawIssues.push(issue);
       }
 
       if (allIssues.length < 100) break;
@@ -422,7 +408,64 @@ async function fetchCategorizedIssues(owner, repo) {
   }
 
   console.log(
-    `   ✅ Found ${issues.bugs.length} bugs, ${issues.enhancements.length} enhancements, ${issues.documentation.length} docs, ${issues.others.length} others (${apiCalls} API calls)`
+    `   🔍 Fetching real comment authors for ${allRawIssues.length} issues...`
+  );
+
+  // Step 2: for each issue, fetch actual comment authors
+  for (let i = 0; i < allRawIssues.length; i++) {
+    const issue = allRawIssues[i];
+
+    // Only fetch comments if the issue actually has some
+    const commentAuthors =
+      issue.comments > 0
+        ? await fetchIssueCommentAuthors(owner, repo, issue.number)
+        : [];
+
+    const labels = issue.labels.map((label) => label.name.toLowerCase());
+
+    // Store the real comment_authors array instead of just a count
+    const issueData = {
+      number: issue.number,
+      author: issue.user?.login,
+      title: issue.title,
+      labels: labels,
+      created_at: issue.created_at,
+      state: issue.state,
+      comments: issue.comments || 0, // total count (kept for reference)
+      comment_authors: commentAuthors, // ← REAL authors, not a guess
+    };
+
+    if (labels.some((l) => l.includes("bug") || l.includes("fix"))) {
+      issues.bugs.push(issueData);
+    } else if (
+      labels.some(
+        (l) =>
+          l.includes("enhancement") ||
+          l.includes("feature") ||
+          l.includes("improvement")
+      )
+    ) {
+      issues.enhancements.push(issueData);
+    } else if (
+      labels.some(
+        (l) =>
+          l.includes("documentation") || l.includes("docs") || l.includes("doc")
+      )
+    ) {
+      issues.documentation.push(issueData);
+    } else {
+      issues.others.push(issueData);
+    }
+
+    if ((i + 1) % 20 === 0) {
+      console.log(
+        `   Progress: ${i + 1}/${allRawIssues.length} issues processed...`
+      );
+    }
+  }
+
+  console.log(
+    `   ✅ Found ${issues.bugs.length} bugs, ${issues.enhancements.length} enhancements, ${issues.documentation.length} docs, ${issues.others.length} others`
   );
   return issues;
 }
@@ -435,21 +478,17 @@ async function processProject(projectId, projectTitle, repoName) {
   console.log(`\n📊 Processing: ${projectTitle}`);
 
   try {
-    // Step 1: Get default branch
     const defaultBranch = await fetchDefaultBranch(CONFIG.OWNER, repoName);
     console.log(`   🌿 Default branch: ${defaultBranch}`);
 
-    // Step 2: Fetch PRs (with reviews and complexity)
     const mergedPRs = await fetchAllMergedPRsToDefault(
       CONFIG.OWNER,
       repoName,
       defaultBranch
     );
 
-    // Step 3: Fetch issues
     const issues = await fetchCategorizedIssues(CONFIG.OWNER, repoName);
 
-    // Step 4: Fetch commits (reusing from PR fetch)
     const commits = await fetchAllCommitsFromDefaultBranch(
       CONFIG.OWNER,
       repoName,
@@ -477,6 +516,7 @@ async function processProject(projectId, projectTitle, repoName) {
           title: i.title,
           created_at: i.created_at,
           comments: i.comments,
+          comment_authors: i.comment_authors, // ← stored in cache
         })),
         enhancements: issues.enhancements.map((i) => ({
           number: i.number,
@@ -484,6 +524,7 @@ async function processProject(projectId, projectTitle, repoName) {
           title: i.title,
           created_at: i.created_at,
           comments: i.comments,
+          comment_authors: i.comment_authors,
         })),
         documentation: issues.documentation.map((i) => ({
           number: i.number,
@@ -491,6 +532,7 @@ async function processProject(projectId, projectTitle, repoName) {
           title: i.title,
           created_at: i.created_at,
           comments: i.comments,
+          comment_authors: i.comment_authors,
         })),
         others: issues.others.map((i) => ({
           number: i.number,
@@ -498,6 +540,7 @@ async function processProject(projectId, projectTitle, repoName) {
           title: i.title,
           created_at: i.created_at,
           comments: i.comments,
+          comment_authors: i.comment_authors,
         })),
       },
       stats: {
@@ -526,16 +569,13 @@ async function cacheLeaderboardData() {
   console.log(`Fetching:`);
   console.log(`  📝 Commits in default branch`);
   console.log(`  🔀 ALL merged PRs whose code made it to default branch`);
-  console.log(
-    `     (includes PRs to dev/feature branches that later merged to main)`
-  );
   console.log(`  🎯 PR complexity (small/medium/large)`);
   console.log(`  👀 PR reviews given + review comments`);
   console.log(`  🐛 Categorized issues (bugs, enhancements, docs, others)`);
-  console.log(`  💬 Issue comments count`);
-  console.log(`  📊 Project participation\n`);
+  console.log(
+    `  💬 Issue comments — REAL authors per comment (not estimated)\n`
+  );
 
-  // Load files
   const contributors = readJsonFile(CONFIG.CONTRIBUTORS_FILE) || [];
   const projects = readJsonFile(CONFIG.PROJECTS_FILE) || [];
   const contributorMapping =
@@ -551,7 +591,6 @@ async function cacheLeaderboardData() {
   console.log(`   Projects: ${projects.length}`);
   console.log(`   Special projects: ${CONFIG.SPECIAL_PROJECTS.length}\n`);
 
-  // Filter bots
   const humanContributors = contributors.filter((c) => !isBot(c.login));
   console.log(
     `👥 Human contributors: ${humanContributors.length} (${
@@ -563,7 +602,6 @@ async function cacheLeaderboardData() {
   const totalProjects = projects.length + CONFIG.SPECIAL_PROJECTS.length;
   let processedCount = 0;
 
-  // Process regular projects
   for (const project of projects) {
     processedCount++;
     console.log(`\n[${processedCount}/${totalProjects}] 📌 ${project.title}`);
@@ -591,7 +629,6 @@ async function cacheLeaderboardData() {
     }
   }
 
-  // Process special projects (website, etc.)
   for (const specialProject of CONFIG.SPECIAL_PROJECTS) {
     processedCount++;
     console.log(
@@ -609,7 +646,6 @@ async function cacheLeaderboardData() {
     }
   }
 
-  // Save results
   console.log("\n" + "=".repeat(80));
   console.log("💾 Saving cached data...");
   const success = writeJsonFile(CONFIG.CACHE_FILE, allProjectsData);
@@ -640,7 +676,6 @@ async function cacheLeaderboardData() {
     console.log(`   Projects: ${stats.totalProjects}`);
     console.log(`   Total Commits: ${stats.totalCommits}`);
     console.log(`   Total Merged PRs: ${stats.totalMergedPRs}`);
-    console.log(`   (includes PRs to any branch that eventually reached main)`);
     console.log(`   Total Issues: ${stats.totalIssues}`);
     console.log(`📁 Saved to: ${CONFIG.CACHE_FILE}`);
   }

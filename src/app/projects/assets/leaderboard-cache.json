@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:42:18.305Z",
+    "fetched_at": "2026-02-17T10:43:10.860Z",
     "commits": [
       {
         "sha": "472fc175c93ad086c35d209a7926233f0a4077e3",
@@ -1654,7 +1654,7 @@
       {
         "sha": "fb78f0a0aa4e19e156a09dc530e84bf86e5b861a",
         "author_login": "1019058432",
-        "author_name": "芦苇先���",
+        "author_name": "芦苇先生",
         "date": "2023-04-22T08:39:01Z",
         "message": "feat: enable keyboard event when image resizer (#179)"
       },
@@ -4839,7 +4839,7 @@
       {
         "sha": "ab99cd0975b178e26d6d0f1f63e19b13893cd018",
         "author_login": "Hufe921",
-        "author_name": "黄云飞",
+        "author_name": "黄云��",
         "date": "2022-03-04T09:09:26Z",
         "message": "feat:add editor mode"
       },
@@ -5259,7 +5259,7 @@
       {
         "sha": "beb3274a581867c7bd2655d1b7b83645f0665e8d",
         "author_login": "Hufe921",
-        "author_name": "黄云���",
+        "author_name": "黄云飞",
         "date": "2021-12-14T13:56:22Z",
         "message": "feat:add table tool"
       },
@@ -5301,7 +5301,7 @@
       {
         "sha": "f92d5f56ce8c5a2222da0a790c03107116361ba9",
         "author_login": "Hufe921",
-        "author_name": "黄云飞",
+        "author_name": "黄���飞",
         "date": "2021-11-29T13:24:05Z",
         "message": "fix:page zoom bug"
       },
@@ -5436,7 +5436,7 @@
         "author_login": "Hufe921",
         "author_name": "黄云飞",
         "date": "2021-11-22T12:33:42Z",
-        "message": "feat:增加构建脚本"
+        "message": "feat:增加构建脚��"
       },
       {
         "sha": "0529c03ec7fb12e9c7952a28beaa768ede79192c",
@@ -5464,7 +5464,7 @@
         "author_login": "Hufe921",
         "author_name": "黄云飞",
         "date": "2021-11-22T08:42:39Z",
-        "message": "feat:处理��染元素位置计算浏览器兼容性"
+        "message": "feat:处理渲染元素位置计算浏览器兼容性"
       },
       {
         "sha": "6fb444ca1b40160d7d802741f3ddd356a105b893",
@@ -5695,7 +5695,7 @@
         "author_login": "Hufe921",
         "author_name": "黄云飞",
         "date": "2021-11-16T01:38:07Z",
-        "message": "feat:增加撤销、回退、格���刷、清除样式功能"
+        "message": "feat:增加撤销、回退、格式刷、清除样式功能"
       },
       {
         "sha": "6cef3f096bc065684d2734523f0097b5872870b7",
@@ -6270,7 +6270,13 @@
           "author": "ashutosh-jena-mindfire",
           "title": "A warning is showing when using the React Canvas editor",
           "created_at": "2023-10-24T08:43:47Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ashutosh-jena-mindfire",
+              "created_at": "2023-10-24T08:44:49Z"
+            }
+          ]
         }
       ],
       "enhancements": [],
@@ -6281,28 +6287,32 @@
           "author": "ashutosh-jena-mindfire",
           "title": "Add commitlint",
           "created_at": "2024-02-07T09:01:43Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 17,
           "author": "ashutosh-jena-mindfire",
           "title": "Resolving the range issue in the canvas. ",
           "created_at": "2024-02-01T07:34:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 16,
           "author": "ashutosh-jena-mindfire",
           "title": "Auto deploy",
           "created_at": "2024-02-01T06:59:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 13,
           "author": "ashutosh-jena-mindfire",
           "title": "Reduce the build file size",
           "created_at": "2023-11-20T10:07:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -6320,7 +6330,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:42:26.376Z",
+    "fetched_at": "2026-02-17T10:43:17.204Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7482,7 +7492,8 @@
           "author": "Rakesh-sahoo07",
           "title": "No Mint Validation ",
           "created_at": "2023-12-26T10:21:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -7500,7 +7511,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:42:54.042Z",
+    "fetched_at": "2026-02-17T10:43:40.539Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -7977,7 +7988,8 @@
           "author": "BasudevBharatBhushan",
           "title": "New Feat - Automate pushing of npm release",
           "created_at": "2024-01-12T07:13:21Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -7995,7 +8007,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-02-12T10:43:24.598Z",
+    "fetched_at": "2026-02-17T10:44:06.360Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9279,14 +9291,25 @@
           "author": "lakinmindfire",
           "title": "Add standard opensource files to repo",
           "created_at": "2023-12-06T09:54:15Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-06T09:56:40Z"
+            },
+            {
+              "author": "ssswagatss",
+              "created_at": "2025-11-03T18:46:44Z"
+            }
+          ]
         },
         {
           "number": 4,
           "author": "ssswagatss",
           "title": "Create documentation for DateTime Extensions",
           "created_at": "2019-09-23T14:22:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": [
@@ -9295,7 +9318,13 @@
           "author": "ssswagatss",
           "title": "Write test cases for the following String Extensions.",
           "created_at": "2019-09-19T13:23:03Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ssswagatss",
+              "created_at": "2021-03-08T17:35:37Z"
+            }
+          ]
         }
       ]
     },
@@ -9313,7 +9342,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-02-12T10:43:28.584Z",
+    "fetched_at": "2026-02-17T10:44:09.484Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9351,7 +9380,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:44:03.901Z",
+    "fetched_at": "2026-02-17T10:44:42.167Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10208,7 +10237,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:44:35.448Z",
+    "fetched_at": "2026-02-17T10:45:07.760Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -10722,7 +10751,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:45:14.479Z",
+    "fetched_at": "2026-02-17T10:45:44.067Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11307,7 +11336,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:46:17.919Z",
+    "fetched_at": "2026-02-17T10:46:39.631Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -13668,7 +13697,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-02-12T10:47:25.804Z",
+    "fetched_at": "2026-02-17T10:47:44.876Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15330,7 +15359,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-02-12T10:48:54.600Z",
+    "fetched_at": "2026-02-17T10:49:10.183Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17032,42 +17061,57 @@
           "author": "deepakyadav-01",
           "title": "[Feature]:Support markdown",
           "created_at": "2024-09-09T10:55:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 42,
           "author": "deepakyadav-01",
           "title": "[Feature]:Add Option for Adding rows and column via \"+\" button top corner of table",
           "created_at": "2024-09-09T10:53:02Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 41,
           "author": "deepakyadav-01",
           "title": "[Feature]:Add Option for different font themes",
           "created_at": "2024-09-09T10:28:17Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 40,
           "author": "deepakyadav-01",
           "title": "[Feature]:Add option for spell check",
           "created_at": "2024-09-09T10:25:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 39,
           "author": "deepakyadav-01",
           "title": "[Feature]:Add option to change font size",
           "created_at": "2024-09-09T10:24:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 37,
           "author": "anandmindfire",
           "title": "[Feature]: Add option to change text color in the Editor",
           "created_at": "2024-09-09T08:49:48Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "Aber72",
+              "created_at": "2024-09-22T18:09:58Z"
+            },
+            {
+              "author": "deepakyadav-01",
+              "created_at": "2024-10-06T15:35:19Z"
+            }
+          ]
         }
       ],
       "documentation": [
@@ -17076,7 +17120,8 @@
           "author": "deepakyadav-01",
           "title": "[Feature]:add documentation using docusaurus",
           "created_at": "2024-09-09T10:54:59Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": [
@@ -17085,28 +17130,60 @@
           "author": "geekychandan",
           "title": "[BUG]:  Previous link remains in the \"Add Link\" modal when reopening for new link",
           "created_at": "2024-10-03T07:21:46Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "geekychandan",
+              "created_at": "2024-10-03T07:30:37Z"
+            },
+            {
+              "author": "deepakyadav-01",
+              "created_at": "2024-10-06T15:39:03Z"
+            }
+          ]
         },
         {
           "number": 45,
           "author": "geekychandan",
           "title": "[BUG]: Link formatting and alignment issues after inserting a link by addLink button",
           "created_at": "2024-10-03T07:06:04Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "geekychandan",
+              "created_at": "2024-10-03T07:34:13Z"
+            },
+            {
+              "author": "deepakyadav-01",
+              "created_at": "2024-10-06T15:37:13Z"
+            }
+          ]
         },
         {
           "number": 36,
           "author": "Asima-Das",
           "title": "[Feature]: Make a link clickable",
           "created_at": "2024-09-09T08:22:18Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2024-09-09T08:25:17Z"
+            }
+          ]
         },
         {
           "number": 26,
           "author": "deepakyadav-01",
           "title": "[BUG]: Apply Heading on selected text",
           "created_at": "2024-09-06T11:40:56Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "deepakyadav-01",
+              "created_at": "2024-09-06T12:31:35Z"
+            }
+          ]
         }
       ]
     },
@@ -17124,7 +17201,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:49:44.043Z",
+    "fetched_at": "2026-02-17T10:49:57.939Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -17810,7 +17887,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-02-12T10:51:07.387Z",
+    "fetched_at": "2026-02-17T10:51:27.290Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -19837,112 +19914,215 @@
           "author": "anandmindfire",
           "title": "[FEATURE]: Add CLI Command to Generate ESLint Reports in CSV & PDF Formats",
           "created_at": "2025-06-20T09:48:40Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-06-20T10:29:17Z"
+            }
+          ]
         },
         {
           "number": 61,
           "author": "anandmindfire",
           "title": "[NEW RULE]: Enforce Consistent Route Path Format",
           "created_at": "2025-06-20T09:38:55Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SsagarikaR",
+              "created_at": "2025-06-20T10:08:17Z"
+            }
+          ]
         },
         {
           "number": 60,
           "author": "anandmindfire",
           "title": "[NEW RULE]:  Validate HTTP Status Code Usage",
           "created_at": "2025-06-20T09:31:42Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanghamitradash021",
+              "created_at": "2025-06-20T09:53:28Z"
+            }
+          ]
         },
         {
           "number": 59,
           "author": "anandmindfire",
           "title": "[NEW RULE]:  Enforce HTTP Verb Consistency",
           "created_at": "2025-06-20T09:29:12Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-06-20T10:12:34Z"
+            }
+          ]
         },
         {
           "number": 58,
           "author": "anandmindfire",
           "title": "[NEW RULE]: Enforce Plural Naming for Resource Paths",
           "created_at": "2025-06-20T09:22:48Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParasMindfire",
+              "created_at": "2025-06-20T09:51:58Z"
+            }
+          ]
         },
         {
           "number": 29,
           "author": "ParasMindfire",
           "title": "[NEW RULE] Minimize Deep Asynchronous Chains",
           "created_at": "2025-05-29T09:50:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 10,
           "author": "anandmindfire",
           "title": "[NEW RULE] Address All Compiler or Linter Warnings",
           "created_at": "2025-05-27T05:12:18Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanghamitradash021",
+              "created_at": "2025-05-28T10:55:53Z"
+            }
+          ]
         },
         {
           "number": 9,
           "author": "anandmindfire",
           "title": "[NEW RULE] Limit Pointer/Reference Complexity",
           "created_at": "2025-05-27T05:10:30Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SsagarikaR",
+              "created_at": "2025-05-28T10:56:39Z"
+            }
+          ]
         },
         {
           "number": 8,
           "author": "anandmindfire",
           "title": "[NEW RULE] Use the Preprocessor/Build Tools Judiciously",
           "created_at": "2025-05-27T05:04:04Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-05-28T10:55:44Z"
+            },
+            {
+              "author": "biswalom22",
+              "created_at": "2025-06-05T12:36:45Z"
+            }
+          ]
         },
         {
           "number": 7,
           "author": "anandmindfire",
           "title": "[NEW RULE] Check All Return Values",
           "created_at": "2025-05-27T05:00:46Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-05-27T05:16:43Z"
+            }
+          ]
         },
         {
           "number": 6,
           "author": "anandmindfire",
           "title": "[NEW RULE] Limit the Scope of Data",
           "created_at": "2025-05-27T04:56:36Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParasMindfire",
+              "created_at": "2025-05-27T05:18:27Z"
+            }
+          ]
         },
         {
           "number": 5,
           "author": "anandmindfire",
           "title": "[NEW RULE]  Use Adequate Runtime Assertions",
           "created_at": "2025-05-27T04:54:14Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParasMindfire",
+              "created_at": "2025-05-28T10:55:21Z"
+            }
+          ]
         },
         {
           "number": 4,
           "author": "anandmindfire",
           "title": "[NEW RULE] Keep Functions Concise",
           "created_at": "2025-05-27T04:50:45Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SsagarikaR",
+              "created_at": "2025-05-27T05:18:26Z"
+            }
+          ]
         },
         {
           "number": 3,
           "author": "anandmindfire",
           "title": "[NEW RULE] Avoid Heap Allocation after Initialization",
           "created_at": "2025-05-27T04:46:39Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-05-28T10:55:01Z"
+            },
+            {
+              "author": "biswalom22",
+              "created_at": "2025-06-03T08:11:50Z"
+            }
+          ]
         },
         {
           "number": 2,
           "author": "anandmindfire",
           "title": "[NEW RULE] Use Fixed Bounds on Loops",
           "created_at": "2025-05-27T04:41:03Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Sanghamitradash20",
+              "created_at": "2025-05-27T05:18:31Z"
+            }
+          ]
         },
         {
           "number": 1,
           "author": "anandmindfire",
           "title": "[NEW RULE] Minimize Complex Flow Constructs",
           "created_at": "2025-05-26T05:17:47Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-05-27T05:28:08Z"
+            },
+            {
+              "author": "biswalom22",
+              "created_at": "2025-06-03T08:00:45Z"
+            }
+          ]
         }
       ],
       "documentation": [
@@ -19951,70 +20131,105 @@
           "author": "anandmindfire",
           "title": "[DOCS] Add: Minimize Complex Flow Constructs Rule to Docusaurus",
           "created_at": "2025-05-29T09:18:52Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-05-30T05:41:43Z"
+            }
+          ]
         },
         {
           "number": 27,
           "author": "anandmindfire",
           "title": "[DOCS] Add: Use Fixed Bounds on Loops Rule to Docusourus",
           "created_at": "2025-05-29T09:13:21Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-05-30T05:42:23Z"
+            }
+          ]
         },
         {
           "number": 26,
           "author": "anandmindfire",
           "title": "[DOCS] Add: Avoid Heap Allocation after Initialization Rule to Docusaurus",
           "created_at": "2025-05-29T09:10:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 25,
           "author": "anandmindfire",
           "title": "[DOCS] Add Documentation: Keep Functions Concise Rule to Docusaurus",
           "created_at": "2025-05-29T09:06:43Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 24,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Limit Pointer/Reference Complexity\" Rule to Docusaurus",
           "created_at": "2025-05-29T08:02:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 23,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Use the Preprocessor/Build Tools Judiciously\" Rule to Docusaurus",
           "created_at": "2025-05-29T07:56:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 22,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Check All Return Values\" Rule to Docusaurus",
           "created_at": "2025-05-29T07:51:07Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 21,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Limit the Scope of Data\" Rule to Docusaurus",
           "created_at": "2025-05-29T07:38:25Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParasMindfire",
+              "created_at": "2025-05-30T09:28:00Z"
+            }
+          ]
         },
         {
           "number": 20,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Use Adequate Runtime Assertions\" Rule to Docusaurus",
           "created_at": "2025-05-29T07:34:43Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParasMindfire",
+              "created_at": "2025-05-30T09:28:22Z"
+            }
+          ]
         },
         {
           "number": 19,
           "author": "anandmindfire",
           "title": "[DOCS] Add \"Address All Compiler or Linter Warnings\" Rule to Docusaurus",
           "created_at": "2025-05-29T07:31:01Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "biswalom22",
+              "created_at": "2025-06-05T12:10:03Z"
+            }
+          ]
         }
       ],
       "others": [
@@ -20023,7 +20238,8 @@
           "author": "Aadil0403",
           "title": "[Feature Request] Add no-raw-sql-strings rule to prevent SQL injection",
           "created_at": "2025-12-19T14:23:58Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -20041,7 +20257,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T10:55:52.920Z",
+    "fetched_at": "2026-02-17T10:55:44.205Z",
     "commits": [
       {
         "sha": "9cb628a1066d6f36ec9eefdf9bf5edb02d450795",
@@ -26021,84 +26237,96 @@
           "author": "SsagarikaR",
           "title": "[BUG]: Issue: Preview Mode Enhancement",
           "created_at": "2025-10-29T06:46:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 146,
           "author": "SsagarikaR",
           "title": "[BUG]: Responsiveness Issue: Components not adapting properly on different viewport",
           "created_at": "2025-10-24T07:08:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 139,
           "author": "SsagarikaR",
           "title": "[BUG]: React package not consistently passing configuration data to Web Component package",
           "created_at": "2025-10-16T08:27:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 130,
           "author": "SsagarikaR",
           "title": "[BUG]: Nested Drag-and-Drop Conflict: Dragging Child Component Also Moves Parent Container",
           "created_at": "2025-10-09T09:16:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 113,
           "author": "SsagarikaR",
           "title": "[BUG]: Preview mode & PDF export: Styles not matching canvas (components overlapping)",
           "created_at": "2025-08-19T07:25:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 112,
           "author": "SsagarikaR",
           "title": "[BUG]: Canvas content gets hidden below instead of scrolling when adding items vertically",
           "created_at": "2025-08-11T04:54:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 49,
           "author": "ayusmanmindfire",
           "title": "[BUG]:  Troubleshooting Drag-and-Drop Grid Alignment Issues for the Container Component",
           "created_at": "2025-01-14T06:56:14Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 48,
           "author": "SubhenduS1999",
           "title": "[BUG]: Double delete icons are showing for the containers when we insert one text component in 2 and 3-column containers.",
           "created_at": "2025-01-14T05:36:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 15,
           "author": "anandmindfire",
           "title": "[BUG]: Duplicate label issue when adding a component inside and outside a container",
           "created_at": "2024-11-08T14:01:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 13,
           "author": "anandmindfire",
           "title": "[BUG]: Parent container is also hovered when hovering over child component",
           "created_at": "2024-11-08T13:42:06Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 11,
           "author": "anandmindfire",
           "title": "[BUG]: Image component hover effect not displaying name label",
           "created_at": "2024-11-08T07:10:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 1,
           "author": "anandmindfire",
           "title": "[BUG]: Padding issue when dragging and dropping multiple components inside a container on the canvas",
           "created_at": "2024-11-05T05:30:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "enhancements": [
@@ -26107,84 +26335,101 @@
           "author": "SsagarikaR",
           "title": "[Feature]:Attribute-based Customization for Basic Components",
           "created_at": "2025-08-29T05:37:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 109,
           "author": "SsagarikaR",
           "title": "[Feature]:State Management Feature",
           "created_at": "2025-08-07T12:29:43Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SsagarikaR",
+              "created_at": "2025-11-11T09:50:38Z"
+            }
+          ]
         },
         {
           "number": 108,
           "author": "SsagarikaR",
           "title": "[Feature]:Settings Feature for Custom Components",
           "created_at": "2025-08-07T12:24:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 107,
           "author": "SsagarikaR",
           "title": "[Feature]:View Mode",
           "created_at": "2025-08-07T12:16:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 14,
           "author": "anandmindfire",
           "title": "[Feature]:Reset Button (Remove Saved Layout and Reset Canvas)",
           "created_at": "2024-11-08T13:46:59Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 10,
           "author": "anandmindfire",
           "title": "[Feature]:Draggable Components After Adding Into Canvas.",
           "created_at": "2024-11-08T06:57:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 8,
           "author": "anandmindfire",
           "title": "[Feature]:Delete Component",
           "created_at": "2024-11-08T06:41:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 6,
           "author": "anandmindfire",
           "title": "[Feature]:Export Options (Export Canvas Design in HTML, React, Angular, or Vue Components)",
           "created_at": "2024-11-05T13:26:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 5,
           "author": "anandmindfire",
           "title": "[Feature]:Save Options (Local Storage)",
           "created_at": "2024-11-05T10:46:16Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 4,
           "author": "anandmindfire",
           "title": "[Feature]:Undo/Redo Functionality",
           "created_at": "2024-11-05T10:41:27Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 3,
           "author": "anandmindfire",
           "title": "[Feature]:Component Div Selector",
           "created_at": "2024-11-05T10:27:39Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 2,
           "author": "anandmindfire",
           "title": "[Feature]:Template Selector",
           "created_at": "2024-11-05T05:43:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [],
@@ -26204,7 +26449,7 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:02:15.530Z",
+    "fetched_at": "2026-02-17T11:01:41.788Z",
     "commits": [
       {
         "sha": "d67a60c1139e92ef466900f4901bb6445d7704a6",
@@ -26778,7 +27023,7 @@
         "author_login": "anandmindfire",
         "author_name": "Anand kumar",
         "date": "2025-12-03T07:18:18Z",
-        "message": "feat(core): Feature/connectservice (#222)\n\n# Pull Request Description\n\n\n### Changes Made:\n\nFixed critical CSV date parsing bug by correcting conditional logic to\nprevent invalid date conversions (Invalid time value error resolved).\nFixed Raw Data view empty-table issue by restructuring processing order\nso that engine receives augmented data before layout initialization.\nImplemented complete Web Worker–based parallel file processing\narchitecture, including:\nStreamingFileReader.ts (chunk-based file streaming)\ncsv-parser.worker.ts (parallel CSV parsing)\nWorkerPool.ts (multi-worker management)\nAdded automatic worker detection for large files (≥5MB) to boost\nperformance while keeping small-file processing fast.\n\n\n\n### Checklist:\n\n- [x] [Specific task related to the feature]\n- [x] [Another specific task]\n- [x] Ensure all components are properly typed with TypeScript.\n- [x] Add or update unit tests for new functionality.\n- [x] Update documentation (comments, README, etc.) to reflect changes.\n- [x] The file(s) or folder(s) now contain changes as specified in the\nissue I worked on.\n- [x] Check build, test, lint and format by run running command `pnpm\nrun build` at root directory.\n- [x] I certify that I ran the checklist.\n\n### Testing:\nUploaded multiple CSV files of varying sizes (1MB to 22MB) to verify:\nNo parsing errors\nCorrect Raw Data population\nWorker-based parsing kicks in at ≥5MB\nLayout builds in under ~1 second\nEngine updates without lag\nTested correctness of row count, column mapping, leftover chunk\nhandling, and type inference.\nValidated performance logs to confirm expected improvements."
+        "message": "feat(core): Feature/connectservice (#222)\n\n# Pull Request Description\n\n\n### Changes Made:\n\nFixed critical CSV date parsing bug by correcting conditional logic to\nprevent invalid date conversions (Invalid time value error resolved).\nFixed Raw Data view empty-table issue by restructuring processing order\nso that engine receives augmented data before layout initialization.\nImplemented complete Web Worker–based parallel file processing\narchitecture, including:\nStreamingFileReader.ts (chunk-based file streaming)\ncsv-parser.worker.ts (parallel CSV parsing)\nWorkerPool.ts (multi-worker management)\nAdded automatic worker detection for large files (≥5MB) to boost\nperformance while keeping small-file processing fast.\n\n\n\n### Checklist:\n\n- [x] [Specific task related to the feature]\n- [x] [Another specific task]\n- [x] Ensure all components are properly typed with TypeScript.\n- [x] Add or update unit tests for new functionality.\n- [x] Update documentation (comments, README, etc.) to reflect changes.\n- [x] The file(s) or folder(s) now contain changes as specified in the\nissue I worked on.\n- [x] Check build, test, lint and format by run running command `pnpm\nrun build` at root directory.\n- [x] I certify that I ran the checklist.\n\n### Testing:\nUploaded multiple CSV files of varying sizes (1MB to 22MB) to verify:\nNo parsing errors\nCorrect Raw Data population\nWorker-based parsing kicks in at ��5MB\nLayout builds in under ~1 second\nEngine updates without lag\nTested correctness of row count, column mapping, leftover chunk\nhandling, and type inference.\nValidated performance logs to confirm expected improvements."
       },
       {
         "sha": "7931c45d0e8b6187fea6f5c8a649616046f5a296",
@@ -32981,119 +33226,146 @@
           "author": "sanghamitradash021",
           "title": "[BUG]: while exporting the table in HTML or PDF we are getting zero in all cells",
           "created_at": "2025-09-01T05:39:45Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanghamitradash021",
+              "created_at": "2025-09-01T05:50:17Z"
+            }
+          ]
         },
         {
           "number": 171,
           "author": "sanghamitradash021",
           "title": "[BUG]: Drag row and Drag column is not working for process data",
           "created_at": "2025-08-19T11:44:48Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 151,
           "author": "anandmindfire",
           "title": "[BUG]: applyGrouping logic is always using the original config data instead of using the filtered results",
           "created_at": "2025-05-27T05:57:54Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "JKAryan2003",
+              "created_at": "2025-05-27T06:07:43Z"
+            }
+          ]
         },
         {
           "number": 125,
           "author": "akashdeep-singh-multani",
           "title": "Changeset commit restructuring",
           "created_at": "2025-02-07T17:18:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 123,
           "author": "akashdeep-singh-multani",
           "title": "Exclude examples from publishing to npm",
           "created_at": "2025-02-06T16:29:15Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 120,
           "author": "akashdeep-singh-multani",
           "title": "Issue related to package.json for examples workspace",
           "created_at": "2025-02-06T11:30:29Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 119,
           "author": "akashdeep-singh-multani",
           "title": "Create changescript js script and update publish.yml",
           "created_at": "2025-02-06T11:08:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 111,
           "author": "akashdeep-singh-multani",
           "title": "Setup Changesets for Automated Versioning",
           "created_at": "2025-02-05T05:46:12Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 103,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Fix table data field validation",
           "created_at": "2025-01-24T12:26:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 98,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Fix readme header",
           "created_at": "2025-01-21T09:51:12Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 87,
           "author": "akashdeep-singh-multani",
           "title": "Update publish.yml to Publish to NPM",
           "created_at": "2025-01-18T15:29:00Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 82,
           "author": "akashdeep-singh-multani",
           "title": "Fix issue related to CI/CD workflows for deployment to npm",
           "created_at": "2025-01-18T06:48:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 59,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Improve UI for table for decial values and formatting",
           "created_at": "2025-01-13T08:04:48Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 57,
           "author": "akashdeep-singh-multani",
           "title": "Bug Fixes and Feature Enhancements for Field Settings Popup",
           "created_at": "2025-01-11T18:30:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 41,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Pull request checkList update",
           "created_at": "2024-12-20T08:00:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 33,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Formatting and linting recheck",
           "created_at": "2024-12-17T14:12:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 12,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Code clean up ",
           "created_at": "2024-12-05T16:44:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "enhancements": [
@@ -33102,259 +33374,301 @@
           "author": "MohdAasim",
           "title": "[Feature]:Setup Docusaurus Documentation for Monorepo",
           "created_at": "2025-09-10T12:49:20Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 179,
           "author": "MohdAasim",
           "title": "[Feature]:Add Condotional Formating to Web Component",
           "created_at": "2025-08-28T09:07:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 175,
           "author": "MohdAasim",
           "title": "[Feature]:Create lightweight wrapper for web component to provide idiomatic APIs, strong typing, and SSR support",
           "created_at": "2025-08-22T05:14:07Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 167,
           "author": "MohdAasim",
           "title": "[Feature]:Add support for three modes in mywebcomponent (headless-pivot): none, minimal, and default",
           "created_at": "2025-08-08T16:49:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 165,
           "author": "MohdAasim",
           "title": "[Feature]:Add subscription listener and event emission to core functionality",
           "created_at": "2025-08-08T16:06:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 158,
           "author": "anandmindfire",
           "title": "[Feature]: Setup & Test PivotHead App + Make Component Headless",
           "created_at": "2025-07-24T16:07:28Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "MohdAasim",
+              "created_at": "2025-07-24T16:11:17Z"
+            }
+          ]
         },
         {
           "number": 154,
           "author": "sanghamitradash021",
           "title": "[Feature]:Add Conditional formatting feature in the core",
           "created_at": "2025-06-11T08:37:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 149,
           "author": "anandmindfire",
           "title": "[Feature]: Add Web Component support to PivotHead core for multi-framework integration",
           "created_at": "2025-05-05T07:09:40Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 140,
           "author": "anandmindfire",
           "title": "[Feature]: Enhanced Export Options",
           "created_at": "2025-03-10T10:18:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 139,
           "author": "anandmindfire",
           "title": "[Feature]: Connect to Local Data Sources",
           "created_at": "2025-03-10T10:13:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 115,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Add header for exporting option print, pdf and html",
           "created_at": "2025-02-05T13:01:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 110,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Data source for core",
           "created_at": "2025-02-04T11:03:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 104,
           "author": "mfsisudhanshuk",
           "title": "[Feature]:Hide/Show toolbar in pivot table",
           "created_at": "2025-01-27T10:07:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 101,
           "author": "mfsisudhanshuk",
           "title": "[Improvement]: Code clean up and refactor.",
           "created_at": "2025-01-24T09:14:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 96,
           "author": "akashdeep-singh-multani",
           "title": "Implement Multiple Columns Grouping for Headless Pivot Table",
           "created_at": "2025-01-20T17:19:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 95,
           "author": "akashdeep-singh-multani",
           "title": "Create Angular Wrapper for @mindfiredigital/pivothead-core",
           "created_at": "2025-01-20T16:43:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 92,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Create a react wrapper setup",
           "created_at": "2025-01-20T08:41:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 75,
           "author": "akashdeep-singh-multani",
           "title": "[Feature]: Add CI/CD workflows",
           "created_at": "2025-01-17T18:30:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 65,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Implementing dynamic conditional formatting rendering for between condition",
           "created_at": "2025-01-16T11:11:32Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 63,
           "author": "mfsisudhanshuk",
           "title": "[Feature]:Dynamic formatting of fields based on popup setup",
           "created_at": "2025-01-15T12:56:25Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 55,
           "author": "akashdeep-singh-multani",
           "title": "UI Changes for Pivot Table and Buttons",
           "created_at": "2025-01-10T10:10:15Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 49,
           "author": "akashdeep-singh-multani",
           "title": "[Feature]: Fields Popup - Design and Drag-Drop Functionality",
           "created_at": "2025-01-02T11:47:55Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 48,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Sort implementation issue",
           "created_at": "2025-01-02T08:22:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 45,
           "author": "akashdeep-singh-multani",
           "title": "[Feature]: Dynamic Popup for Pivot Table Fields",
           "created_at": "2024-12-30T05:52:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 43,
           "author": "mfsisudhanshuk",
           "title": "Update the pre-commmit",
           "created_at": "2024-12-24T06:40:06Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 42,
           "author": "akashdeep-singh-multani",
           "title": "Separation of logic for features(sorting, resizing, drag, grouping) in pivotEngine",
           "created_at": "2024-12-20T13:07:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 36,
           "author": "akashdeep-singh-multani",
           "title": "Add standard error handlers ",
           "created_at": "2024-12-17T19:06:11Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 29,
           "author": "patisubhakanta",
           "title": "[Feature]:Visualization of Grouped Data in Graphs",
           "created_at": "2024-12-16T08:50:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 28,
           "author": "patisubhakanta",
           "title": "[Feature]:Conditional Formatting for Data Cells",
           "created_at": "2024-12-16T08:44:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 27,
           "author": "patisubhakanta",
           "title": "[Feature]:Aggregation Functions for Data Fields",
           "created_at": "2024-12-16T08:28:48Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 25,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Draggable row and column ",
           "created_at": "2024-12-13T08:15:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 22,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Grouping of data.",
           "created_at": "2024-12-11T08:14:10Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 17,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Pull request template",
           "created_at": "2024-12-09T08:34:07Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 16,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Row expansion/contraction",
           "created_at": "2024-12-09T07:53:06Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 13,
           "author": "mfsisudhanshuk",
           "title": "[Feature]: Vercel setup for live preview ",
           "created_at": "2024-12-05T16:58:11Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 5,
           "author": "patisubhakanta",
           "title": "[Feature] : Sorting",
           "created_at": "2024-12-03T06:09:43Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 1,
           "author": "mfsisudhanshuk",
           "title": "[Feature] : Add husky config",
           "created_at": "2024-11-29T10:46:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [
@@ -33363,49 +33677,61 @@
           "author": "lakinmindfire",
           "title": "RFC: PivotHead Analytics - Chart Generation Package",
           "created_at": "2026-01-30T09:34:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 205,
           "author": "lakinmindfire",
           "title": "[Docs]: SDS for Client-Side High-Volume PivotHead",
           "created_at": "2025-10-06T10:42:38Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanghamitradash021",
+              "created_at": "2025-10-09T07:09:05Z"
+            }
+          ]
         },
         {
           "number": 97,
           "author": "akashdeep-singh-multani",
           "title": "Test core functionalities, make Changes in Readme.md",
           "created_at": "2025-01-20T18:01:10Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 73,
           "author": "mfsisudhanshuk",
           "title": "[Improvement]: Update hook for patch branch",
           "created_at": "2025-01-17T16:11:07Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 53,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Improvement , restructuring and writing function comments.",
           "created_at": "2025-01-09T12:19:16Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 31,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Update README.md for highlighting code part",
           "created_at": "2024-12-17T07:29:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 7,
           "author": "patisubhakanta",
           "title": "[Feature] : Virtualization",
           "created_at": "2024-12-03T06:10:27Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": [
@@ -33414,182 +33740,208 @@
           "author": "sanghamitradash021",
           "title": "[Feature]:Data Visualization Support",
           "created_at": "2026-01-21T09:33:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 248,
           "author": "sanghamitradash021",
           "title": "Refactor: Distribute WASM as an NPM Package for Server-Side Use",
           "created_at": "2026-01-07T10:47:27Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 212,
           "author": "sanghamitradash021",
           "title": "[BUG]: CSV Upload Fails with \"Invalid time value\" Due to Incorrect Date Type Inference",
           "created_at": "2025-10-13T10:58:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 211,
           "author": "sanghamitradash021",
           "title": "[Feature]:Flexible and Extensible Data Ingestion Pipeline",
           "created_at": "2025-10-09T07:41:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 210,
           "author": "sanghamitradash021",
           "title": "[Feature]:Progressive UI Updates and Virtualized Rendering",
           "created_at": "2025-10-09T07:40:50Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 209,
           "author": "sanghamitradash021",
           "title": "[Feature]: In-Memory Columnar Data Store",
           "created_at": "2025-10-09T07:38:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 208,
           "author": "sanghamitradash021",
           "title": "[Feature]:Optional WebAssembly Integration for High-Volume Data",
           "created_at": "2025-10-09T07:37:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 207,
           "author": "sanghamitradash021",
           "title": "[Feature]:Worker-Based Parallel Data Parsing and Aggregation",
           "created_at": "2025-10-09T07:37:17Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 206,
           "author": "sanghamitradash021",
           "title": "[Feature]:Client-Side Chunked Data Streaming",
           "created_at": "2025-10-09T07:36:21Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 200,
           "author": "MohdAasim",
           "title": "[Feature]:Setup Cypress E2E Testing",
           "created_at": "2025-09-24T11:55:00Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 188,
           "author": "MohdAasim",
           "title": "[Feature]:Add CSV Upload Support with Interactive PivotTable (Field Drag & Drop, Aggregation Change)",
           "created_at": "2025-09-19T05:29:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 187,
           "author": "sanghamitradash021",
           "title": "[Feature]:Implement Storybook for  Testing of Pivot Table",
           "created_at": "2025-09-12T10:58:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 164,
           "author": "MohdAasim",
           "title": "RFC: Headless Pivot Table Architecture for Web Components and Framework Integration",
           "created_at": "2025-07-30T12:54:00Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 153,
           "author": "JKAryan2003",
           "title": "[BUG]: dragRow and dragColumn method is using raw data",
           "created_at": "2025-06-06T10:06:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 144,
           "author": "anandmindfire",
           "title": "[Feature]: Add Vitest Tests for Export Features (HTML, PDF, Excel)",
           "created_at": "2025-03-25T11:21:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 107,
           "author": "patisubhakanta",
           "title": "React Wrapper",
           "created_at": "2025-01-30T09:07:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 105,
           "author": "mfsisudhanshuk",
           "title": "[Feature]:Drag and drop in pivot table for rearranging",
           "created_at": "2025-01-27T10:19:10Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 94,
           "author": "patisubhakanta",
           "title": "Add Advanced Layout Options for Table Display",
           "created_at": "2025-01-20T10:15:58Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 93,
           "author": "patisubhakanta",
           "title": "Enhance Table Formatting Options",
           "created_at": "2025-01-20T10:13:11Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 70,
           "author": "patisubhakanta",
           "title": "[BUG]: Fix and Cleanup Code to Resolve Merge Conflicts",
           "created_at": "2025-01-17T06:24:42Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 66,
           "author": "patisubhakanta",
           "title": "Add Feature to Choose Value with Decimal Places and Currency Symbol",
           "created_at": "2025-01-16T12:48:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 46,
           "author": "patisubhakanta",
           "title": "[Feature]: Header UI",
           "created_at": "2025-01-02T06:19:55Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 30,
           "author": "patisubhakanta",
           "title": "[Feature]: Basic Table Features: Sorting, Filtering, Pagination, and Universal Search",
           "created_at": "2024-12-16T09:00:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 9,
           "author": "akashdeep-singh-multani",
           "title": "Add issue templates for bug report, feature request, and questions",
           "created_at": "2024-12-03T10:51:27Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 6,
           "author": "patisubhakanta",
           "title": "[Feature] : Filtering",
           "created_at": "2024-12-03T06:09:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 4,
           "author": "patisubhakanta",
           "title": "[Feature] : JSON to UI ",
           "created_at": "2024-12-03T06:09:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -33607,7 +33959,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:02:18.785Z",
+    "fetched_at": "2026-02-17T11:01:44.678Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -33645,7 +33997,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:03:09.572Z",
+    "fetched_at": "2026-02-17T11:02:32.606Z",
     "commits": [
       {
         "sha": "16df0b5e69d9b9a634c7b090e4ff72a471becac6",
@@ -34708,8 +35060,85 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:16:31.536Z",
+    "fetched_at": "2026-02-17T11:17:49.073Z",
     "commits": [
+      {
+        "sha": "f8a1af8788439b2f4323a7940bb48156809e14bb",
+        "author_login": "deepakyadav-01",
+        "author_name": "Deepak Yadav",
+        "date": "2026-02-16T09:25:59Z",
+        "message": "fix(docs,cli-tool,cli): Merge pull request #597 from mindfiredigital/development\n\nDevelopment"
+      },
+      {
+        "sha": "237fd8b2967cf7a8c95062fbae75c532750edeaa",
+        "author_login": "deepakyadav-01",
+        "author_name": "Deepak Yadav",
+        "date": "2026-02-16T09:24:10Z",
+        "message": "Merge pull request #589 from SandipMF/feature/modals\n\nFeature/modals"
+      },
+      {
+        "sha": "e22ef99e77c1e00e0fb4bca986b678485bad1b9d",
+        "author_login": "deepakyadav-01",
+        "author_name": "Deepak Yadav",
+        "date": "2026-02-16T09:23:12Z",
+        "message": "Merge pull request #594 from sanobery/feature/component-page\n\nFeature/component page"
+      },
+      {
+        "sha": "d4cda2c093f2f6665b90754a3ee1e1752830edcc",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-13T13:35:05Z",
+        "message": "feat(docs): updated doc for testimonial card"
+      },
+      {
+        "sha": "413e8c48f2b3cb52e1a79153772e0f61fec3d3fe",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-13T13:26:24Z",
+        "message": "feat(registry): added testimonial card detail"
+      },
+      {
+        "sha": "706de47e5904a37a8abef15a91e2e0c68be3112f",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-13T13:25:27Z",
+        "message": "feat(storybook): added testimonial card detail"
+      },
+      {
+        "sha": "7a880b0f8fdbcb87a4926d1e3c5faee13b3916ad",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-13T05:54:15Z",
+        "message": "fix(docs): resolve merge conflict"
+      },
+      {
+        "sha": "16fee303bdc24491f03a7f2ada8930f91405062e",
+        "author_login": "deepakyadav-01",
+        "author_name": "Deepak Yadav",
+        "date": "2026-02-12T14:05:42Z",
+        "message": "Merge pull request #591 from sanobery/feature/component-page\n\nFeature/component page"
+      },
+      {
+        "sha": "ed22e54b473d2ce61850508e4c6e45beb92121ce",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-12T12:22:47Z",
+        "message": "feat(docs): updated docusaurus config"
+      },
+      {
+        "sha": "833cf6dc2a6dab4144d54980710ed04c7162cf9e",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-12T12:20:54Z",
+        "message": "feat(docs): create file for all templates components and layouts"
+      },
+      {
+        "sha": "827dd6a654edc8beddc16f32579d4932afe2e466",
+        "author_login": null,
+        "author_name": "“sanobery”",
+        "date": "2026-02-12T12:16:59Z",
+        "message": "feat(docs): updated version sidebar"
+      },
       {
         "sha": "4f53b051051681c700a0661262f463000ce47f8a",
         "author_login": "deepakyadav-01",
@@ -34730,6 +35159,27 @@
         "author_name": "Deepak Yadav",
         "date": "2026-02-12T10:43:08Z",
         "message": "Merge pull request #556 from SandipMF/feature/list-with-status\n\nFeature/list with status"
+      },
+      {
+        "sha": "ebc949d6d486766e0c81b6b92ddcfa64deebded4",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-11T14:41:13Z",
+        "message": "feat(registry): add unit test cases for modal component"
+      },
+      {
+        "sha": "a2d813706e59a873c220fba9d8769589c5b2a5df",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-11T09:29:22Z",
+        "message": "feat(registry): add new registry component for Modal"
+      },
+      {
+        "sha": "f384636f61bce27c342a8f4fbfff3d768cce8b76",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-11T08:51:48Z",
+        "message": "Merge branch 'development' of github.com:SandipMF/ignix-ui into feature/modals"
       },
       {
         "sha": "3fa824087da3544cdb72c1706410dc9c54dc3519",
@@ -34765,6 +35215,13 @@
         "author_name": "NikhilMeshram01",
         "date": "2026-02-11T06:56:25Z",
         "message": "fix(component): resolved merge conflicts"
+      },
+      {
+        "sha": "d498aff3cad7d0efa580a66d21c5d3a1b3df6881",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-11T06:40:03Z",
+        "message": "refactor(docs, storybook): remove unwanted code"
       },
       {
         "sha": "f311fc8d56fbdc1ea5d23ac8151561594dd866e6",
@@ -34830,6 +35287,20 @@
         "message": "Merge pull request #552 from SandipMF/fix/version-docs\n\nFix/version docs"
       },
       {
+        "sha": "e07e9eabe481dcdee0b7d5667cee8a3ac57c1e40",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-10T18:24:33Z",
+        "message": "refactor(docs): refactor the doc and demo for composable nested structure"
+      },
+      {
+        "sha": "e9148ed38d1c2bc7d90af048d1eedb497adc6807",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-10T18:00:28Z",
+        "message": "refactor(storybook): refactor the modal componenet storybook for nested component render"
+      },
+      {
         "sha": "e168b86934ade0cbe3fecf72ac0e2899d74ed3f2",
         "author_login": null,
         "author_name": "“sanobery”",
@@ -34856,6 +35327,27 @@
         "author_name": "“sanobery”",
         "date": "2026-02-10T13:51:28Z",
         "message": "feat(storybook): added product card stories variants"
+      },
+      {
+        "sha": "a83c10e07047e9fd8feb48b015c334e540a54739",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-10T12:36:43Z",
+        "message": "feat(docs): implement version doc for modal component"
+      },
+      {
+        "sha": "489c254572d1629461c0ca03933a597acaa36153",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-10T07:40:09Z",
+        "message": "fix(storybook): fix closeOnOverlayClick issue and add header with icon feature"
+      },
+      {
+        "sha": "d5542eef1cb116e0205d4a4136744f86b8b298b4",
+        "author_login": "SandipMF",
+        "author_name": "SandipMF",
+        "date": "2026-02-10T06:43:34Z",
+        "message": "feat(storybook): implement new storybook for modal"
       },
       {
         "sha": "7625784844a0351e0a0c8661de922d205417d9f4",
@@ -36337,7 +36829,7 @@
       {
         "sha": "642d5baa9642fc5fe1e47a8aaf95315715e4263d",
         "author_login": null,
-        "author_name": "���sanobery”",
+        "author_name": "“sanobery”",
         "date": "2025-12-24T09:12:20Z",
         "message": "feat(registry): updated registry.json and added test case"
       },
@@ -42504,6 +42996,78 @@
     ],
     "merged_prs": [
       {
+        "number": 597,
+        "author": "deepakyadav-01",
+        "title": "Development",
+        "merged_at": "2026-02-16T09:25:59Z",
+        "created_at": "2026-02-16T09:24:23Z",
+        "base_ref": "main",
+        "merge_commit_sha": "f8a1af8788439b2f4323a7940bb48156809e14bb",
+        "changed_files": 22,
+        "additions": 8413,
+        "deletions": 77,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 589,
+        "author": "SandipMF",
+        "title": "Feature/modals",
+        "merged_at": "2026-02-16T09:24:10Z",
+        "created_at": "2026-02-11T14:51:32Z",
+        "base_ref": "development",
+        "merge_commit_sha": "237fd8b2967cf7a8c95062fbae75c532750edeaa",
+        "changed_files": 10,
+        "additions": 3766,
+        "deletions": 1,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 594,
+        "author": "sanobery",
+        "title": "Feature/component page",
+        "merged_at": "2026-02-16T09:23:12Z",
+        "created_at": "2026-02-13T14:09:01Z",
+        "base_ref": "development",
+        "merge_commit_sha": "e22ef99e77c1e00e0fb4bca986b678485bad1b9d",
+        "changed_files": 9,
+        "additions": 3786,
+        "deletions": 4,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 591,
+        "author": "sanobery",
+        "title": "Feature/component page",
+        "merged_at": "2026-02-12T14:05:43Z",
+        "created_at": "2026-02-12T12:25:38Z",
+        "base_ref": "development",
+        "merge_commit_sha": "16fee303bdc24491f03a7f2ada8930f91405062e",
+        "changed_files": 6,
+        "additions": 862,
+        "deletions": 73,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
         "number": 590,
         "author": "deepakyadav-01",
         "title": "Development",
@@ -48466,161 +49030,296 @@
           "author": "jyotiprakashmfsi",
           "title": "[BUG]: The names under layout section are not ordered in ascending",
           "created_at": "2025-09-24T08:20:19Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-25T05:29:43Z"
+            }
+          ]
         },
         {
           "number": 313,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Stack component docs – justify prop not working + outdated use cases",
           "created_at": "2025-09-23T14:05:08Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-24T04:58:56Z"
+            }
+          ]
         },
         {
           "number": 312,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Masonry component docs – preview not responsive on mobile",
           "created_at": "2025-09-23T14:00:04Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-24T05:19:28Z"
+            }
+          ]
         },
         {
           "number": 310,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: LazyLoad component docs – empty content and broken preview",
           "created_at": "2025-09-23T13:56:07Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-25T05:29:18Z"
+            }
+          ]
         },
         {
           "number": 309,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Breakpoint component docs – unclear/empty preview on desktop",
           "created_at": "2025-09-23T13:52:37Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-24T04:58:27Z"
+            }
+          ]
         },
         {
           "number": 308,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Box component docs – lacks dark mode support and detailed information",
           "created_at": "2025-09-23T13:50:12Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-24T05:20:01Z"
+            },
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-03T08:52:26Z"
+            }
+          ]
         },
         {
           "number": 307,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: AspectRatio component docs – custom props inconsistent sizing",
           "created_at": "2025-09-23T13:44:39Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-24T04:59:43Z"
+            }
+          ]
         },
         {
           "number": 275,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: in Aspect ratio under layouts width customization not working",
           "created_at": "2025-09-12T09:16:56Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-25T05:38:10Z"
+            }
+          ]
         },
         {
           "number": 274,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Ignix UI favicon browser icon is different from other ignix ui icon present in the page",
           "created_at": "2025-09-12T09:07:07Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-15T06:07:05Z"
+            }
+          ]
         },
         {
           "number": 242,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: If you select night mode and select bg as gradient and open drop down, both dropdown box and outer box of open menu will overlap",
           "created_at": "2025-09-05T09:41:35Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-08T09:08:46Z"
+            }
+          ]
         },
         {
           "number": 241,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: in drop down variants if we select bg gradient and transparent dropdown wont be visivble",
           "created_at": "2025-09-05T09:38:47Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-08T09:08:18Z"
+            }
+          ]
         },
         {
           "number": 240,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: open menu drop down not aligned with open menu and also its little outside of the outer box of open menu",
           "created_at": "2025-09-05T09:35:59Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-08T09:29:24Z"
+            }
+          ]
         },
         {
           "number": 239,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Even though I selected background dark still drop down come with background white",
           "created_at": "2025-09-05T09:19:48Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-05T12:32:45Z"
+            }
+          ]
         },
         {
           "number": 238,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Basic usage is not aligned properly on the right side bar",
           "created_at": "2025-09-05T09:11:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 237,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Box component present in layouts and components",
           "created_at": "2025-09-05T09:07:57Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-15T12:44:04Z"
+            }
+          ]
         },
         {
           "number": 236,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Basic usage is not aligned properly on the right side bar",
           "created_at": "2025-09-05T09:07:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 235,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: In varaiants of box Texts are getting outside the box when I'm selecting a particular setting",
           "created_at": "2025-09-05T09:02:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 233,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: box component top side edge is not visible",
           "created_at": "2025-09-05T08:56:48Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-05T12:41:04Z"
+            }
+          ]
         },
         {
           "number": 232,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Interactive sliders buttom slider % not visible properly in dark mode",
           "created_at": "2025-09-05T08:39:53Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-08T13:31:21Z"
+            }
+          ]
         },
         {
           "number": 231,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: small box in the box component not text aligned",
           "created_at": "2025-09-05T08:34:46Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-05T08:48:45Z"
+            }
+          ]
         },
         {
           "number": 220,
           "author": "deepakyadav-01",
           "title": "[BUG]: Sidebar Issue on Mobile View",
           "created_at": "2025-08-29T06:01:09Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-04T11:11:45Z"
+            }
+          ]
         },
         {
           "number": 214,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Docs Navbar UI breaking when navigating over menu",
           "created_at": "2025-08-26T14:08:50Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-04T11:03:41Z"
+            },
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-15T12:45:17Z"
+            }
+          ]
         },
         {
           "number": 161,
           "author": "mfsisudhanshuk",
           "title": "[BUG]: Input box placeholder text overlap with outside box.",
           "created_at": "2025-08-21T12:32:37Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-05T05:11:36Z"
+            },
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-17T12:08:31Z"
+            }
+          ]
         }
       ],
       "enhancements": [
@@ -48629,217 +49328,367 @@
           "author": "deepakyadav-01",
           "title": "[Feature]:Add Component Showcase Page with Grid Layout",
           "created_at": "2026-02-01T18:19:45Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-02-04T14:59:39Z"
+            }
+          ]
         },
         {
           "number": 535,
           "author": "deepakyadav-01",
           "title": "[Feature]: Add multiple scope in changeset deployement flow",
           "created_at": "2026-01-12T06:45:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 361,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Documentation & Developer Workflow Examples for CLI",
           "created_at": "2025-10-13T06:48:53Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:53:34Z"
+            }
+          ]
         },
         {
           "number": 303,
           "author": "deepakyadav-01",
           "title": "[Feature]: Add Theme Configurator In CLI",
           "created_at": "2025-09-22T15:50:18Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 301,
           "author": "lakinmindfire",
           "title": "[Feature]:ThemeEditor Component – FRS & SDS",
           "created_at": "2025-09-22T11:55:20Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-09-22T11:55:41Z"
+            }
+          ]
         },
         {
           "number": 279,
           "author": "deepakyadav-01",
           "title": "[Feature]: Add alias @ignix-ui in in mport",
           "created_at": "2025-09-15T08:56:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 277,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Storybook testing for Navbar",
           "created_at": "2025-09-15T05:39:38Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-30T06:06:04Z"
+            }
+          ]
         },
         {
           "number": 254,
           "author": "deepakyadav-01",
           "title": "[Feature]: Skip CI/CD which are not in scope",
           "created_at": "2025-09-09T08:56:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 219,
           "author": "anandmindfire",
           "title": "[Feature]: Component Scaffolding Script",
           "created_at": "2025-08-28T12:15:39Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ankitsingh252225",
+              "created_at": "2025-09-10T05:58:42Z"
+            }
+          ]
         },
         {
           "number": 213,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <DebugBox> Development Utility",
           "created_at": "2025-08-26T07:34:40Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 212,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <LazyLoad> Performance Component",
           "created_at": "2025-08-26T07:34:09Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-12T14:43:16Z"
+            }
+          ]
         },
         {
           "number": 211,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Drawer> Interactive Layout",
           "created_at": "2025-08-26T07:33:42Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-19T11:38:39Z"
+            }
+          ]
         },
         {
           "number": 210,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Accordion> Interactive Layout",
           "created_at": "2025-08-26T07:33:18Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-12T14:42:21Z"
+            }
+          ]
         },
         {
           "number": 209,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <FieldGroup> Form Layout Component",
           "created_at": "2025-08-26T07:32:30Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-15T07:05:56Z"
+            }
+          ]
         },
         {
           "number": 205,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Responsive> Adaptive Layout Component",
           "created_at": "2025-08-26T07:30:25Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-18T11:09:49Z"
+            }
+          ]
         },
         {
           "number": 204,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Breakpoint> Responsive Utility Component",
           "created_at": "2025-08-26T07:29:55Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-08T13:39:11Z"
+            }
+          ]
         },
         {
           "number": 203,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <HeaderLayout> Page Structure Component",
           "created_at": "2025-08-26T07:29:30Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-17T05:40:00Z"
+            }
+          ]
         },
         {
           "number": 202,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Sidebar> Layout Component",
           "created_at": "2025-08-26T07:28:58Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-19T05:49:32Z"
+            }
+          ]
         },
         {
           "number": 201,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <AppShell> Application Layout Component",
           "created_at": "2025-08-26T07:28:17Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-11T07:03:13Z"
+            }
+          ]
         },
         {
           "number": 200,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Cluster> Grouping Component",
           "created_at": "2025-08-26T07:27:44Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-11T08:35:23Z"
+            }
+          ]
         },
         {
           "number": 199,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Split> Two-Column Layout Component",
           "created_at": "2025-08-26T07:27:07Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-03T05:24:56Z"
+            }
+          ]
         },
         {
           "number": 198,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Flex> Flexbox Wrapper Component",
           "created_at": "2025-08-26T07:26:24Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanjeevkumar321",
+              "created_at": "2025-09-01T10:18:06Z"
+            }
+          ]
         },
         {
           "number": 191,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Stack> Flex System Component",
           "created_at": "2025-08-26T05:59:11Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-08-29T11:32:50Z"
+            },
+            {
+              "author": "mfsisudhanshuk",
+              "created_at": "2025-09-15T12:46:13Z"
+            }
+          ]
         },
         {
           "number": 190,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Masonry> Layout Component",
           "created_at": "2025-08-26T05:58:30Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-08T07:01:24Z"
+            }
+          ]
         },
         {
           "number": 189,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <AutoGrid> Layout Component",
           "created_at": "2025-08-26T05:57:34Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-05T11:51:34Z"
+            }
+          ]
         },
         {
           "number": 188,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <ResponsiveGrid> Layout Component",
           "created_at": "2025-08-26T05:56:19Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-01T05:37:08Z"
+            }
+          ]
         },
         {
           "number": 187,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Pin> Positioning Component",
           "created_at": "2025-08-26T05:55:24Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-09-01T05:36:47Z"
+            }
+          ]
         },
         {
           "number": 185,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Section> Page Structure Component",
           "created_at": "2025-08-26T05:51:17Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-09-15T06:41:05Z"
+            }
+          ]
         },
         {
           "number": 102,
           "author": "deepakyadav-01",
           "title": "[Feature]: Create /llms.txt file",
           "created_at": "2025-08-08T06:28:33Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 58,
           "author": "deepakyadav-01",
           "title": "[Feature]:Framer-motion animations",
           "created_at": "2025-06-04T07:35:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 41,
           "author": "deepakyadav-01",
           "title": "[Feature]:add feature for theme setup and usage in component",
           "created_at": "2025-06-04T07:19:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [
@@ -48848,1006 +49697,1555 @@
           "author": "lakinmindfire",
           "title": "[SDS]:Enabling Custom Tailwind-Styled Components with Ignix UI Themes",
           "created_at": "2025-10-14T12:09:06Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 347,
           "author": "lakinmindfire",
           "title": "[Doc]: CLI  Software Design Specification (SDS)",
           "created_at": "2025-10-10T11:17:05Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-10-10T11:17:32Z"
+            }
+          ]
         },
         {
           "number": 302,
           "author": "lakinmindfire",
           "title": "[Feature]: Ignix UI Theming System (FRS)",
           "created_at": "2025-09-22T11:58:29Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 300,
           "author": "lakinmindfire",
           "title": "[Feature]: ThemeWizard Component - Ignix UI (FRS)",
           "created_at": "2025-09-22T11:49:56Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 299,
           "author": "lakinmindfire",
           "title": "[Feature]:Ignix UI Theming System - Software Design Specification",
           "created_at": "2025-09-22T11:19:34Z",
-          "comments": 3
+          "comments": 3,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-09-22T11:33:43Z"
+            },
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-09-22T11:35:56Z"
+            },
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-09-22T11:36:22Z"
+            }
+          ]
         },
         {
           "number": 298,
           "author": "lakinmindfire",
           "title": "[Feature]:Theming Categories with Example Palettes",
           "created_at": "2025-09-22T11:12:14Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 165,
           "author": "lakinmindfire",
           "title": "[SDS]: Layout Components",
           "created_at": "2025-08-24T17:13:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 57,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for tooltip",
           "created_at": "2025-06-04T07:32:17Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 56,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for toast",
           "created_at": "2025-06-04T07:31:56Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 55,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for textarea",
           "created_at": "2025-06-04T07:31:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 54,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for tab",
           "created_at": "2025-06-04T07:31:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 53,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for switch",
           "created_at": "2025-06-04T07:30:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 52,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for stepper",
           "created_at": "2025-06-04T07:30:19Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 51,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation fo spinner",
           "created_at": "2025-06-04T07:29:48Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 50,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for slider",
           "created_at": "2025-06-04T07:29:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 49,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for navbar",
           "created_at": "2025-06-04T07:28:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 48,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for input",
           "created_at": "2025-06-04T07:28:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 47,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for dropdown",
           "created_at": "2025-06-04T07:26:32Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 46,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for dialog box",
           "created_at": "2025-06-04T07:26:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 45,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for buttons",
           "created_at": "2025-06-04T07:25:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 44,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for breadcrumbs",
           "created_at": "2025-06-04T07:24:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 43,
           "author": "deepakyadav-01",
           "title": "[Feature]:Documentation for badge",
           "created_at": "2025-06-04T07:21:43Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 42,
           "author": "deepakyadav-01",
           "title": "[Feature]:documentation for accordion",
           "created_at": "2025-06-04T07:20:44Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-06-05T12:23:01Z"
+            }
+          ]
         }
       ],
       "others": [
+        {
+          "number": 598,
+          "author": "sanobery",
+          "title": "[Feature]: Carousel",
+          "created_at": "2026-02-17T04:57:00Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-02-17T04:57:13Z"
+            }
+          ]
+        },
+        {
+          "number": 596,
+          "author": "MNikks01",
+          "title": "[feature]: 6.4.4 Team Profiles",
+          "created_at": "2026-02-16T05:24:14Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "MNikks01",
+              "created_at": "2026-02-16T05:24:28Z"
+            }
+          ]
+        },
+        {
+          "number": 593,
+          "author": "SandipMF",
+          "title": "[Feature]: Tabs Navigation(6.1.5)",
+          "created_at": "2026-02-13T06:02:32Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 592,
+          "author": "SandipMF",
+          "title": "[Feature]: Mega Menu(6.1.3 )",
+          "created_at": "2026-02-13T05:59:49Z",
+          "comments": 0,
+          "comment_authors": []
+        },
         {
           "number": 588,
           "author": "NikhilMeshram01",
           "title": "[feature] : FAQ Accordion – Expandable FAQ Section (FR-SE-C-002)",
           "created_at": "2026-02-11T09:06:54Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2026-02-11T09:07:05Z"
+            }
+          ]
         },
         {
           "number": 586,
           "author": "sanobery",
           "title": "[Feature]: Testimonial Card(7.3.6)",
           "created_at": "2026-02-10T14:18:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 584,
           "author": "sanobery",
           "title": "[Feature]: Product Card(7.3.5)",
           "created_at": "2026-02-10T14:11:09Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-02-10T14:11:26Z"
+            }
+          ]
         },
         {
           "number": 582,
           "author": "NikhilMeshram01",
           "title": "[feature]: Call to action - Contact Form Section",
           "created_at": "2026-02-05T12:32:20Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 581,
           "author": "NikhilMeshram01",
           "title": "[feature]: Call to action - Demo Request Form",
           "created_at": "2026-02-05T12:26:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 580,
           "author": "NikhilMeshram01",
           "title": "[feature]: Call to action - Newsletter Signup",
           "created_at": "2026-02-05T05:34:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 576,
           "author": "NikhilMeshram01",
           "title": "[feature]: Call to action - CTA Banner",
           "created_at": "2026-02-02T14:11:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 574,
           "author": "sanobery",
           "title": "[Feature]: Carousel Hero(6.2.4)",
           "created_at": "2026-02-02T12:36:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 570,
           "author": "sanobery",
           "title": "[Feature]: Video Background Hero(6.2.3)",
           "created_at": "2026-01-30T11:46:56Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-01-30T11:47:22Z"
+            }
+          ]
         },
         {
           "number": 565,
           "author": "SandipMF",
           "title": "[Feature]: Paginated Table(7.5.4)",
           "created_at": "2026-01-29T15:43:18Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-29T15:43:46Z"
+            }
+          ]
         },
         {
           "number": 564,
           "author": "SandipMF",
           "title": "[Feature]: Sortable Table(7.5.2)",
           "created_at": "2026-01-29T15:40:53Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-29T15:41:08Z"
+            }
+          ]
         },
         {
           "number": 563,
           "author": "SandipMF",
           "title": "[Feature]: Basic Table(7.5.1)",
           "created_at": "2026-01-29T15:36:33Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-29T15:37:24Z"
+            }
+          ]
         },
         {
           "number": 562,
           "author": "NikhilMeshram01",
           "title": "[Feature] : Skeleton",
           "created_at": "2026-01-29T14:26:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 561,
           "author": "SandipMF",
           "title": "[Feature]: Progress Bars",
           "created_at": "2026-01-29T06:04:18Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-03T14:16:36Z"
+            }
+          ]
         },
         {
           "number": 560,
           "author": "SandipMF",
           "title": "[Feature]: Modals(7.6.3)",
           "created_at": "2026-01-28T16:12:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 559,
           "author": "SandipMF",
           "title": "[Feature]: Filterable Table(7.5.3)",
           "created_at": "2026-01-28T16:09:28Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-29T06:04:47Z"
+            }
+          ]
         },
         {
           "number": 558,
           "author": "sanobery",
           "title": "[Feature]:Two-Column Hero(6.2.2)",
           "created_at": "2026-01-28T13:49:13Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-01-28T13:49:29Z"
+            }
+          ]
         },
         {
           "number": 555,
           "author": "sanobery",
           "title": "[Feature]: Hero Section(default) (6.2.1)",
           "created_at": "2026-01-27T05:00:29Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-01-27T05:01:06Z"
+            }
+          ]
         },
         {
           "number": 547,
           "author": "sanobery",
           "title": "[Feature]: Rating",
           "created_at": "2026-01-16T09:01:35Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-01-16T09:01:53Z"
+            }
+          ]
         },
         {
           "number": 543,
           "author": "SandipMF",
           "title": "[Feature]: List with Status(7.4.4)",
           "created_at": "2026-01-15T09:50:41Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-15T09:51:00Z"
+            }
+          ]
         },
         {
           "number": 542,
           "author": "SandipMF",
           "title": "[Feature]: List with Avatars(7.4.3)",
           "created_at": "2026-01-15T09:45:33Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-15T09:45:52Z"
+            }
+          ]
         },
         {
           "number": 539,
           "author": "sanobery",
           "title": "[Feature]: Person Profile(User Card) [FR-PA-C-004]",
           "created_at": "2026-01-14T06:25:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 532,
           "author": "SandipMF",
           "title": "[Feature]: List with Actions(7.4.2)",
           "created_at": "2026-01-12T05:39:43Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-12T05:57:57Z"
+            }
+          ]
         },
         {
           "number": 530,
           "author": "SandipMF",
           "title": "[Feature]: Simple List(7.4.1)",
           "created_at": "2026-01-08T05:43:44Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-08T05:49:58Z"
+            }
+          ]
         },
         {
           "number": 519,
           "author": "SandipMF",
           "title": "[Feature]: Button Groups(7.1.4)",
           "created_at": "2026-01-05T14:38:49Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-05T14:39:03Z"
+            }
+          ]
         },
         {
           "number": 517,
           "author": "sanobery",
           "title": "[Feature]: Image Card(7.3.2)",
           "created_at": "2026-01-02T05:20:43Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-01-02T05:23:01Z"
+            }
+          ]
         },
         {
           "number": 516,
           "author": "SandipMF",
           "title": "[Feature]: Loading State Button(7.1.3)",
           "created_at": "2026-01-02T05:14:20Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-01-02T05:14:38Z"
+            }
+          ]
         },
         {
           "number": 514,
           "author": "NikhilMeshram01",
           "title": "Feature : Modal component (Dialog box) (7.6.3)",
           "created_at": "2025-12-30T14:41:42Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2025-12-30T14:48:38Z"
+            }
+          ]
         },
         {
           "number": 510,
           "author": "sanobery",
           "title": "[Feature]: Comparison Table(6.3.5)",
           "created_at": "2025-12-26T15:32:10Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-26T15:32:56Z"
+            }
+          ]
         },
         {
           "number": 503,
           "author": "NikhilMeshram01",
           "title": "feature :  Date Picker (7.2.6)",
           "created_at": "2025-12-19T13:43:25Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 502,
           "author": "NikhilMeshram01",
           "title": "Feature: File Upload Pattern (7.2.5)",
           "created_at": "2025-12-19T13:40:59Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 501,
           "author": "sanobery",
           "title": "[Feature]: Pricing Grid(6.4.3)",
           "created_at": "2025-12-19T13:19:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 500,
           "author": "SandipMF",
           "title": "[Feature]: Buttons with Icons(7.1.2)",
           "created_at": "2025-12-19T12:58:49Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-12-23T05:30:11Z"
+            }
+          ]
         },
         {
           "number": 499,
           "author": "SandipMF",
           "title": "[Feature]: Notifications Settings Page(5.2.4)",
           "created_at": "2025-12-19T12:16:09Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-12-23T05:29:23Z"
+            }
+          ]
         },
         {
           "number": 496,
           "author": "sanobery",
           "title": "[Feature]: Billing Page(5.2.5)",
           "created_at": "2025-12-18T09:57:12Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-18T09:57:28Z"
+            }
+          ]
         },
         {
           "number": 493,
           "author": "NikhilMeshram01",
           "title": "Feature : API Keys Page (5.2.6)",
           "created_at": "2025-12-17T14:36:46Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2025-12-17T15:10:10Z"
+            }
+          ]
         },
         {
           "number": 491,
           "author": "SandipMF",
           "title": "[Feature]: Security Page(5.2.3)",
           "created_at": "2025-12-16T06:47:03Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-12-16T06:47:22Z"
+            }
+          ]
         },
         {
           "number": 484,
           "author": "sanobery",
           "title": "[Feature]:Radio(7.2.3)",
           "created_at": "2025-12-12T08:37:32Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-12T08:37:54Z"
+            }
+          ]
         },
         {
           "number": 480,
           "author": "sanobery",
           "title": "[Feature]: Settings Page(5.2.2)",
           "created_at": "2025-12-11T04:42:32Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-11T04:43:01Z"
+            }
+          ]
         },
         {
           "number": 475,
           "author": "SandipMF",
           "title": "[Feature]: Two-Factor Authentication Setup(5.1.6)",
           "created_at": "2025-12-10T12:33:55Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-12-10T12:42:41Z"
+            }
+          ]
         },
         {
           "number": 472,
           "author": "NikhilMeshram01",
           "title": "Feature : Profile Page (5.2.1)",
           "created_at": "2025-12-09T11:55:19Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 465,
           "author": "sanobery",
           "title": "[Feature]: OTP Verification Page(5.1.5 )",
           "created_at": "2025-12-05T07:10:06Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-05T07:10:43Z"
+            }
+          ]
         },
         {
           "number": 460,
           "author": "SandipMF",
           "title": "[Feature]: Reset Password Page(5.1.4)",
           "created_at": "2025-12-03T06:42:54Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-12-03T06:43:15Z"
+            }
+          ]
         },
         {
           "number": 456,
           "author": "sanobery",
           "title": "[Feature]: Forgot Password Page(5.1.3)",
           "created_at": "2025-12-01T08:29:57Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-12-01T08:30:12Z"
+            }
+          ]
         },
         {
           "number": 454,
           "author": "NikhilMeshram01",
           "title": "Feature : Login Page (Email/Password Login)",
           "created_at": "2025-12-01T06:54:25Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2025-12-01T06:56:22Z"
+            }
+          ]
         },
         {
           "number": 452,
           "author": "NikhilMeshram01",
           "title": "Feature : Typography Component (Text)",
           "created_at": "2025-11-26T14:59:41Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2025-11-26T14:59:53Z"
+            }
+          ]
         },
         {
           "number": 444,
           "author": "sanobery",
           "title": "[Feature]: Three Column Layout(FR-L-004)",
           "created_at": "2025-11-24T13:22:19Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 443,
           "author": "MNikks01",
           "title": "Feature : Checkbox Component / Feature",
           "created_at": "2025-11-24T11:17:25Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "MNikks01",
+              "created_at": "2025-11-24T11:17:38Z"
+            },
+            {
+              "author": "100xmanas",
+              "created_at": "2025-11-25T19:31:51Z"
+            }
+          ]
         },
         {
           "number": 440,
           "author": "SandipMF",
           "title": "[Feature]:Responsive Grid Layout",
           "created_at": "2025-11-21T06:50:00Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "100xmanas",
+              "created_at": "2025-11-25T19:22:51Z"
+            },
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-27T07:31:23Z"
+            }
+          ]
         },
         {
           "number": 438,
           "author": "sanobery",
           "title": "[Feature]: Full-Height Sidebar Layout(FR-L-005)",
           "created_at": "2025-11-18T12:47:47Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-11-18T12:49:13Z"
+            }
+          ]
         },
         {
           "number": 435,
           "author": "sanobery",
           "title": "[Feature]:  Right Sidebar Fixed Layout",
           "created_at": "2025-11-17T06:35:25Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-11-17T06:36:30Z"
+            }
+          ]
         },
         {
           "number": 434,
           "author": "NikhilMeshram01",
           "title": "[Feature] : Registration Form (FR-P-A-002)",
           "created_at": "2025-11-17T06:26:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 421,
           "author": "SandipMF",
           "title": "Next.js App Router Template",
           "created_at": "2025-11-11T07:10:37Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-13T11:42:58Z"
+            }
+          ]
         },
         {
           "number": 418,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Left Sidebar Fixed Layout",
           "created_at": "2025-11-10T07:28:12Z",
-          "comments": 4
+          "comments": 4,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2025-11-10T07:31:06Z"
+            },
+            {
+              "author": "100xmanas",
+              "created_at": "2025-11-10T18:34:51Z"
+            },
+            {
+              "author": "sanobery",
+              "created_at": "2025-11-11T05:16:43Z"
+            },
+            {
+              "author": "100xmanas",
+              "created_at": "2025-11-11T14:23:25Z"
+            }
+          ]
         },
         {
           "number": 417,
           "author": "NikhilMeshram01",
           "title": "Single Column Layout (FR-L-001)",
           "created_at": "2025-11-07T06:03:58Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2025-11-07T06:13:02Z"
+            }
+          ]
         },
         {
           "number": 412,
           "author": "subhranshus-mindfire",
           "title": "Monorepo Setup Template",
           "created_at": "2025-11-03T07:33:00Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-05T14:30:41Z"
+            }
+          ]
         },
         {
           "number": 411,
           "author": "subhranshus-mindfire",
           "title": "Generic TypeScript + Tailwind Baseline",
           "created_at": "2025-11-03T07:21:41Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-19T14:34:10Z"
+            }
+          ]
         },
         {
           "number": 410,
           "author": "subhranshus-mindfire",
           "title": "Vite + React Template",
           "created_at": "2025-11-03T07:20:59Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-17T05:44:10Z"
+            },
+            {
+              "author": "SandipMF",
+              "created_at": "2025-11-19T14:24:06Z"
+            }
+          ]
         },
         {
           "number": 409,
           "author": "subhranshus-mindfire",
           "title": "Next.js App Router Template",
           "created_at": "2025-11-03T07:20:13Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 408,
           "author": "subhranshus-mindfire",
           "title": "Bug: Dynamic require of \"events\" is not supported in Vite App",
           "created_at": "2025-11-03T06:09:41Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 406,
           "author": "lakinmindfire",
           "title": "[Docs]: Templates  - Functional Requirements Specification (FRS)",
           "created_at": "2025-10-30T11:26:38Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-10-30T11:27:58Z"
+            },
+            {
+              "author": "lakinmindfire",
+              "created_at": "2025-10-30T11:31:46Z"
+            }
+          ]
         },
         {
           "number": 399,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Outdated Tailwind Installation Steps in InitCommand",
           "created_at": "2025-10-28T10:36:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 393,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: AspectRatio component images do not maintain proper aspect ratio without manual class",
           "created_at": "2025-10-27T08:04:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 392,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Errors in AppShell Documentation",
           "created_at": "2025-10-27T07:33:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 391,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Alias not being added to correct tsconfig.json when project uses references",
           "created_at": "2025-10-27T07:25:50Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 377,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: CSS injection BUG in theming",
           "created_at": "2025-10-23T06:05:29Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 376,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Add NPM Install Commands for Components in Manual Installation Guide",
           "created_at": "2025-10-22T10:49:22Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 371,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Missing Type Declarations for .jpg Files",
           "created_at": "2025-10-17T06:46:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 360,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: CLI Configuration File",
           "created_at": "2025-10-13T06:47:56Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:53:46Z"
+            }
+          ]
         },
         {
           "number": 359,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Theme Injection via CLI",
           "created_at": "2025-10-13T06:47:07Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:54:03Z"
+            }
+          ]
         },
         {
           "number": 358,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Component Injection via CLI",
           "created_at": "2025-10-13T06:46:24Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:53:10Z"
+            }
+          ]
         },
         {
           "number": 357,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: CLI Installation & Setup",
           "created_at": "2025-10-13T06:38:37Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:52:19Z"
+            }
+          ]
         },
         {
           "number": 356,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Update Documentation for themeSwitcher",
           "created_at": "2025-10-13T06:34:24Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "jyotiprakashmfsi",
+              "created_at": "2025-10-13T06:52:47Z"
+            }
+          ]
         },
         {
           "number": 355,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Write Unit & Integration Tests for themeSwitcher",
           "created_at": "2025-10-13T06:32:58Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:40:19Z"
+            }
+          ]
         },
         {
           "number": 354,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Add Animations and Transitions between theme switch",
           "created_at": "2025-10-13T06:31:55Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:40:36Z"
+            }
+          ]
         },
         {
           "number": 353,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Add Theme Persistence for themeSwitcher ",
           "created_at": "2025-10-13T06:30:59Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:40:50Z"
+            }
+          ]
         },
         {
           "number": 352,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Integrate with useTheme() Hook for themeSwitcher ",
           "created_at": "2025-10-13T06:23:35Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:42:40Z"
+            }
+          ]
         },
         {
           "number": 351,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Create ThemeSwitcher Component Structure",
           "created_at": "2025-10-13T06:22:10Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:42:54Z"
+            }
+          ]
         },
         {
           "number": 350,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Create ThemeSwitcher component",
           "created_at": "2025-10-10T12:45:22Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T06:43:15Z"
+            }
+          ]
         },
         {
           "number": 349,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Adding a wrapper for ThemeProvider component",
           "created_at": "2025-10-10T12:43:45Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-13T07:00:29Z"
+            }
+          ]
         },
         {
           "number": 348,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Setup Ignix CLI base project structure",
           "created_at": "2025-10-10T12:43:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 344,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Registry error: Invalid registry format",
           "created_at": "2025-10-09T08:15:45Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-09T10:12:08Z"
+            }
+          ]
         },
         {
           "number": 343,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: TypeScript Definitions + Base Types",
           "created_at": "2025-10-08T12:25:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 342,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: CSS Injection System",
           "created_at": "2025-10-08T12:24:53Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 341,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Develop Basic ThemeSwitcher Component (Dropdown Version)",
           "created_at": "2025-10-08T12:24:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 340,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Preset Loader (JSON Based Theme Presets)",
           "created_at": "2025-10-08T12:21:15Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 339,
           "author": "subhranshus-mindfire",
           "title": "[Feature]:  Build Theme Engine (Color Algorithms + Validation)",
           "created_at": "2025-10-08T12:20:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 338,
           "author": "subhranshus-mindfire",
           "title": "[Feature]: Implement ThemeProvider (Context + Persistence)",
           "created_at": "2025-10-08T12:16:41Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-08T12:34:19Z"
+            }
+          ]
         },
         {
           "number": 332,
           "author": "subhranshus-mindfire",
           "title": "[BUG]: Shows Light instead of Dark mode in AppShell Docs",
           "created_at": "2025-10-07T11:35:51Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "subhranshus-mindfire",
+              "created_at": "2025-10-08T05:48:43Z"
+            }
+          ]
         },
         {
           "number": 325,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Too many alignment issues in BOX component",
           "created_at": "2025-09-29T13:45:12Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "100xmanas",
+              "created_at": "2025-09-30T19:37:57Z"
+            }
+          ]
         },
         {
           "number": 323,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: in variant of aspect ratio I can see alignment issue for particular 16:9 and 21:9",
           "created_at": "2025-09-29T13:21:02Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "100xmanas",
+              "created_at": "2025-09-30T20:03:05Z"
+            }
+          ]
         },
         {
           "number": 291,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for slider",
           "created_at": "2025-09-18T07:17:27Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 290,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for sidebar",
           "created_at": "2025-09-18T07:17:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 289,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for input",
           "created_at": "2025-09-18T07:16:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 288,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for dropdown",
           "created_at": "2025-09-18T07:15:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 287,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for dialog box",
           "created_at": "2025-09-18T07:14:55Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 286,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for Card",
           "created_at": "2025-09-18T07:14:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 285,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for Badge",
           "created_at": "2025-09-18T07:14:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 284,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]:Storybook testing for accordion",
           "created_at": "2025-09-18T07:13:31Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 208,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Form> Layout Component",
           "created_at": "2025-08-26T07:32:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 207,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <AspectRatio> Sizing Component",
           "created_at": "2025-08-26T07:31:34Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "narayan-mindfire",
+              "created_at": "2025-09-01T05:37:08Z"
+            },
+            {
+              "author": "narayan-mindfire",
+              "created_at": "2025-09-05T06:00:08Z"
+            }
+          ]
         },
         {
           "number": 206,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Spacer> Spacing Utility Component",
           "created_at": "2025-08-26T07:30:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 193,
           "author": "deepakyadav-01",
           "title": "test issue",
           "created_at": "2025-08-26T06:44:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 192,
           "author": "deepakyadav-01",
           "title": "testing issue close on pr",
           "created_at": "2025-08-26T06:43:12Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 186,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Center> Positioning Component",
           "created_at": "2025-08-26T05:53:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 184,
           "author": "mfsisudhanshuk",
           "title": "[Feature]:Add <Box> Layout component wrapper",
           "created_at": "2025-08-25T19:19:20Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 183,
           "author": "jyotiprakashmfsi",
           "title": "[Feature]: Implement <Container> Core Layout Component",
           "created_at": "2025-08-25T16:38:16Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 116,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: In cards preview Glow effect applied in every interaction.",
           "created_at": "2025-08-17T18:25:16Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 115,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: In Animated buttons in the front page active is in red colour.",
           "created_at": "2025-08-17T18:04:16Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 114,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: When clicking on preview of breadcrumbs its navigating to top of the page.",
           "created_at": "2025-08-17T17:49:02Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 113,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: in badge preview Email box logo not visible and notification is hidden",
           "created_at": "2025-08-17T16:40:12Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 92,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]:  Inconsistent Slider Handle Sizes in Themed Sliders Section",
           "created_at": "2025-07-27T18:11:39Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 91,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Ignix header is invisible in responsive sidebar",
           "created_at": "2025-07-27T18:05:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 90,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Get Started and neon glow button are different in size",
           "created_at": "2025-07-27T18:00:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 89,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Toasts appearing in background not visible to user",
           "created_at": "2025-07-27T17:54:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 88,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]:one of the Stylish switch in the front page of ignix site is in white colour(functionality not visible)",
           "created_at": "2025-07-27T15:56:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 87,
           "author": "anujmindfire",
           "title": "[BUG]: Switch is not visible",
           "created_at": "2025-07-23T05:44:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 86,
           "author": "anujmindfire",
           "title": "[BUG]: Add Slider render components in landing page",
           "created_at": "2025-07-23T05:40:48Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 85,
           "author": "anujmindfire",
           "title": "[Feature]: Card component",
           "created_at": "2025-07-23T05:35:23Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
     "stats": {
-      "total_commits": 1113,
-      "total_merged_prs": 325,
+      "total_commits": 1133,
+      "total_merged_prs": 329,
       "total_bugs": 23,
       "total_enhancements": 31,
       "total_documentation": 23,
-      "total_others": 119
+      "total_others": 123
     }
   },
   "24": {
@@ -49855,7 +51253,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:16:36.252Z",
+    "fetched_at": "2026-02-17T11:17:53.058Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -49998,7 +51396,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:16:40.755Z",
+    "fetched_at": "2026-02-17T11:17:56.745Z",
     "commits": [
       {
         "sha": "6b3070cb5b0d489ca4139394745198b4daa1004a",
@@ -50155,7 +51553,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-02-12T11:16:43.828Z",
+    "fetched_at": "2026-02-17T11:18:00.002Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -50193,7 +51591,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:16:56.816Z",
+    "fetched_at": "2026-02-17T11:18:14.553Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -50406,7 +51804,8 @@
           "author": "lakinmindfire",
           "title": "SDS",
           "created_at": "2025-08-20T12:09:33Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -50424,7 +51823,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:17:00.255Z",
+    "fetched_at": "2026-02-17T11:18:17.972Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -50476,7 +51875,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:17:03.642Z",
+    "fetched_at": "2026-02-17T11:18:22.308Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -50528,7 +51927,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:17:39.695Z",
+    "fetched_at": "2026-02-17T11:18:59.744Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -51559,7 +52958,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:19:12.219Z",
+    "fetched_at": "2026-02-17T11:20:31.179Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -53675,42 +55074,48 @@
           "author": "ParasMindfire",
           "title": "[BUG]: ci issue due to pushing of large files",
           "created_at": "2026-01-22T05:23:33Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 82,
           "author": "ParasMindfire",
           "title": "[BUG]: Docasaurus recent changes not getting reflected",
           "created_at": "2026-01-20T08:01:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 75,
           "author": "ParasMindfire",
           "title": "[BUG]: docasaurus not dound issue in CI",
           "created_at": "2026-01-20T05:15:38Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 68,
           "author": "ParasMindfire",
           "title": "[BUG]: docasurus ci error",
           "created_at": "2026-01-14T10:56:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 67,
           "author": "ParasMindfire",
           "title": "[BUG]: eslint not working for examples folder",
           "created_at": "2026-01-14T10:50:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 16,
           "author": "ParasMindfire",
           "title": "[BUG]: GitHub Action fails due to multiple pnpm version conflict",
           "created_at": "2025-12-24T13:13:02Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "enhancements": [
@@ -53719,126 +55124,144 @@
           "author": "ParasMindfire",
           "title": "[Refactor]: modularise test cases",
           "created_at": "2026-01-14T12:05:20Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 71,
           "author": "ParasMindfire",
           "title": "[Feature]: make the ui for custom routes using middleware",
           "created_at": "2026-01-14T11:13:18Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 70,
           "author": "ParasMindfire",
           "title": "[Refactor] change the theme of docasaurus landing page",
           "created_at": "2026-01-14T11:08:29Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 66,
           "author": "ParasMindfire",
           "title": "[Refactor]: modularise constants",
           "created_at": "2026-01-14T10:45:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 65,
           "author": "ParasMindfire",
           "title": "[Refactor]: modularise types and interfaces",
           "created_at": "2026-01-14T10:42:12Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 61,
           "author": "ParasMindfire",
           "title": "[Feature]: update package to use middleware in custom paths",
           "created_at": "2026-01-13T12:07:25Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 13,
           "author": "ParasMindfire",
           "title": "[Maintenance]: Project-Wide Migration to ESLint Flat Config (v9+)",
           "created_at": "2025-12-23T13:47:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 12,
           "author": "ParasMindfire",
           "title": "[Refactor]: Standardize Strict Type Safety Across Project Wrappers and Utilities",
           "created_at": "2025-12-23T13:43:46Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 11,
           "author": "ParasMindfire",
           "title": "[Feature]: Add Comprehensive Test Suite for Security Wrappers",
           "created_at": "2025-12-23T05:32:06Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 10,
           "author": "ParasMindfire",
           "title": "[Feature]:  Add path and IP whitelisting for trusted sources",
           "created_at": "2025-12-22T05:31:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 9,
           "author": "ParasMindfire",
           "title": "[Feature]: Add comprehensive test suite with 80+ test cases",
           "created_at": "2025-12-22T05:26:40Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 8,
           "author": "ParasMindfire",
           "title": "[Feature]: Add interactive demo application with 15 attack test vectors",
           "created_at": "2025-12-22T05:15:18Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 7,
           "author": "ParasMindfire",
           "title": "[Feature]: Add API Routes security wrapper with per-route configuration",
           "created_at": "2025-12-22T05:13:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 6,
           "author": "ParasMindfire",
           "title": "[Feature]: Add Server Actions security wrapper with input sanitization",
           "created_at": "2025-12-22T05:10:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 5,
           "author": "ParasMindfire",
           "title": "[Feature]: Add zero-config Next.js middleware integration",
           "created_at": "2025-12-22T05:06:56Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 4,
           "author": "ParasMindfire",
           "title": "[Feature]: Add CSRF protection with token generation and validation",
           "created_at": "2025-12-22T05:04:19Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 3,
           "author": "ParasMindfire",
           "title": "[Feature]: Add multi-vector injection detection validator (SQL, XSS, Command, Code)",
           "created_at": "2025-12-22T05:00:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 2,
           "author": "ParasMindfire",
           "title": "[Feature]: Add comprehensive deserialization validator for CVE-2025-55182 protection",
           "created_at": "2025-12-22T04:56:35Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [
@@ -53847,112 +55270,128 @@
           "author": "ParasMindfire",
           "title": "[DOCS]: add gif in readme file and docasaurus",
           "created_at": "2026-01-14T11:05:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 64,
           "author": "ParasMindfire",
           "title": "[DOCS]: add documentation for using custom paths middleware",
           "created_at": "2026-01-14T10:37:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 56,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for server action",
           "created_at": "2026-01-12T07:33:59Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 55,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for api route",
           "created_at": "2026-01-12T07:33:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 54,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for rate limiting",
           "created_at": "2026-01-12T07:31:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 53,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for xss protection",
           "created_at": "2026-01-12T07:30:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 52,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for sql injection",
           "created_at": "2026-01-12T07:28:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 51,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for command injection",
           "created_at": "2026-01-12T07:27:40Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 50,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for code injection",
           "created_at": "2026-01-12T07:26:46Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 49,
           "author": "ParasMindfire",
           "title": "[DOCS] add documnetation for ghost mode encoding",
           "created_at": "2026-01-12T07:25:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 48,
           "author": "ParasMindfire",
           "title": "[DOCS] add documnetation for depth limiting",
           "created_at": "2026-01-12T07:17:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 47,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for dangerous pattern",
           "created_at": "2026-01-12T07:16:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 46,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for dangerous keys check",
           "created_at": "2026-01-12T07:14:17Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 45,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for circular reference check",
           "created_at": "2026-01-12T07:12:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 44,
           "author": "ParasMindfire",
           "title": "[DOCS] add documentation for csrf protection",
           "created_at": "2026-01-12T07:11:10Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 1,
           "author": "lakinmindfire",
           "title": "RFC:  Universal Next.js Security Validation Framework",
           "created_at": "2025-12-17T12:24:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": []
@@ -53971,7 +55410,7 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:20:01.488Z",
+    "fetched_at": "2026-02-17T11:21:19.519Z",
     "commits": [
       {
         "sha": "7f06f02fc8727f2293989332b98a4c82c7231827",
@@ -55095,28 +56534,32 @@
           "author": "anandmindfire",
           "title": "[Feature]: Changelog & Release Notes Viewer (Per Package)",
           "created_at": "2026-02-04T07:24:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 32,
           "author": "anandmindfire",
           "title": "[Feature]: Real-Time Release Pipeline Management & GitHub Actions Log Viewer",
           "created_at": "2026-02-04T07:21:34Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 31,
           "author": "anandmindfire",
           "title": "[Feature]: UI-Based Package Publishing & Monorepo Version Control Using Changesets",
           "created_at": "2026-02-04T07:19:21Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 30,
           "author": "anandmindfire",
           "title": "[Feature]: Repository-Scoped GitHub OAuth Authentication & Permission Mapping",
           "created_at": "2026-02-04T07:17:04Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [
@@ -55125,14 +56568,21 @@
           "author": "lakinmindfire",
           "title": "Software Design Specification (SDS)",
           "created_at": "2025-10-08T07:30:17Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 1,
           "author": "lakinmindfire",
           "title": "Functional Requirements Specification (FRS)",
           "created_at": "2025-10-08T07:09:51Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "anandmindfire",
+              "created_at": "2025-10-08T07:50:02Z"
+            }
+          ]
         }
       ],
       "others": [
@@ -55141,14 +56591,16 @@
           "author": "anandmindfire",
           "title": "Functional Requirements Specification (FRS) Version 2.O",
           "created_at": "2026-02-04T06:20:58Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 4,
           "author": "anandmindfire",
           "title": "Initial Project Setup",
           "created_at": "2025-10-10T06:09:43Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -55166,7 +56618,7 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:25:06.338Z",
+    "fetched_at": "2026-02-17T11:26:49.827Z",
     "commits": [
       {
         "sha": "a65d4a22cc5a15909204dca1dca516ed38df74e2",
@@ -59719,14 +61171,16 @@
           "author": "MohdAasim",
           "title": "[Feature]:Setup Cypress for e2e testing across workspaces",
           "created_at": "2025-10-01T05:23:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 208,
           "author": "MohdAasim",
           "title": "[Feature]:Vitest unit test setup/bug in packages/core of monorepo",
           "created_at": "2025-09-29T05:15:00Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [],
@@ -59736,392 +61190,478 @@
           "author": "rohitrg96",
           "title": "[BUG]:  Formatting features (bold, italic, underline, strikethrough) not applying when all text is selected",
           "created_at": "2025-12-23T05:58:24Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 230,
           "author": "rohitrg96",
           "title": "[BUG]: Empty formatted blocks reappear after deleting all text and typing new content",
           "created_at": "2025-12-22T05:50:19Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 229,
           "author": "rohitrg96",
           "title": "[BUG]: Formatting Not Applied to Multiple Selected Lines",
           "created_at": "2025-12-18T06:45:30Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 228,
           "author": "rohitrg96",
           "title": "[Feature]: Add Numbered List Support in Headless Architecture",
           "created_at": "2025-12-17T04:36:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 227,
           "author": "rohitrg96",
           "title": "[Feature]:Add Background colour feature in headless architecture",
           "created_at": "2025-12-15T05:26:13Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 226,
           "author": "rohitrg96",
           "title": "[Feature]: Add image insert feature in headless aech",
           "created_at": "2025-12-12T05:39:39Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 225,
           "author": "rohitrg96",
           "title": "[Feature]:Add Bullet point Feature in Headless Architecture",
           "created_at": "2025-12-10T12:24:58Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 224,
           "author": "rohitrg96",
           "title": "[Feature]: Add Text Alignment Feature in Headless Architecture",
           "created_at": "2025-12-08T05:26:55Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 223,
           "author": "rohitrg96",
           "title": "[Feature]:Add Font Family Selection Feature in Headless Architecture",
           "created_at": "2025-12-02T03:30:00Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 222,
           "author": "rohitrg96",
           "title": "[Feature]:Add Font size feature for headless arch",
           "created_at": "2025-12-01T02:45:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 219,
           "author": "MohdAasim",
           "title": "[BUG]: Inserted hyperlink incorrectly prepends current URL to link",
           "created_at": "2025-10-09T05:16:47Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 216,
           "author": "rohitrg96",
           "title": "[BUG]: Font style changes unexpectedly on pressing Enter",
           "created_at": "2025-10-07T06:01:15Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 213,
           "author": "MohdAasim",
           "title": "[BUG]: Numeric list numbering incorrect for multi-line selection",
           "created_at": "2025-10-03T13:27:05Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 212,
           "author": "rohitrg96",
           "title": "[Feature]:Add strikethrough formatting support",
           "created_at": "2025-10-03T05:32:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 211,
           "author": "rohitrg96",
           "title": "[Feature]:Add Acknowledgment after Clicking Get HTML",
           "created_at": "2025-10-01T07:23:10Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 201,
           "author": "ParthDhemeliya",
           "title": "[Feature]: Make links clickable and open in new tab",
           "created_at": "2025-09-16T13:06:22Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParthDhemeliya",
+              "created_at": "2025-09-19T13:41:19Z"
+            }
+          ]
         },
         {
           "number": 196,
           "author": "ParthDhemeliya",
           "title": "[BUG]: Cursor jumps unexpectedly when deleting text or pressing backspace",
           "created_at": "2025-09-08T13:52:10Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParthDhemeliya",
+              "created_at": "2025-09-19T13:41:57Z"
+            }
+          ]
         },
         {
           "number": 193,
           "author": "rohitrg96",
           "title": "[Feature]:Support \"Enter\" key to apply hyperlink",
           "created_at": "2025-07-16T05:54:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 192,
           "author": "rohitrg96",
           "title": "[BUG]: Hyperlink application doesn't deselect text and the cursor stays within the hyperlink range",
           "created_at": "2025-07-14T17:01:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 190,
           "author": "rohitrg96",
           "title": "[BUG]: \"Visit URL\" popup shifts on click and requires double-click to add hyperlink",
           "created_at": "2025-07-10T16:08:25Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParthDhemeliya",
+              "created_at": "2025-09-18T13:57:26Z"
+            }
+          ]
         },
         {
           "number": 119,
           "author": "jagdish-mindfire",
           "title": "[BUG]:  Cursor issue with undo redo",
           "created_at": "2025-03-05T12:43:39Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 110,
           "author": "jagdish-mindfire",
           "title": "[BUG]: Combination of image and underordered list and ordered list not working as expected.",
           "created_at": "2025-02-26T12:25:33Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 108,
           "author": "jagdish-mindfire",
           "title": "[Feature]: hide toolbar with config",
           "created_at": "2025-02-25T12:46:49Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 106,
           "author": "vickysmf",
           "title": "working on issue of load html data",
           "created_at": "2025-02-20T10:33:25Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 104,
           "author": "jagdish-mindfire",
           "title": "[BUG]: Bug - currenlty the editor taking properites from right char it should take property of left char",
           "created_at": "2025-02-20T06:49:46Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 94,
           "author": "vickysmf",
           "title": "[Feature]: Option to add BackgroundColor in the text",
           "created_at": "2025-02-11T06:39:36Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 92,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Image inserting feature",
           "created_at": "2025-02-10T05:16:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 85,
           "author": "vickysmf",
           "title": "bug - when do ctrl + a and click somewhere and then click backspace delete all data",
           "created_at": "2025-02-06T11:26:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 84,
           "author": "vickysmf",
           "title": "bug- not able to delete first line using backspace",
           "created_at": "2025-02-06T11:22:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 81,
           "author": "jagdish-mindfire",
           "title": "[BUG]: There are some minor issues regarding showing the Visit URL popup on hyperlink (not properly hiding)",
           "created_at": "2025-02-06T03:39:05Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParthDhemeliya",
+              "created_at": "2025-09-18T14:02:21Z"
+            }
+          ]
         },
         {
           "number": 80,
           "author": "vickysmf",
           "title": "bug - if we apply some attributes in the first line,and press enter at the  end of the first line then some wrods are getting copied in the next line from the first line",
           "created_at": "2025-02-05T12:05:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 78,
           "author": "vickysmf",
           "title": "bug- paragraph: when we apply formatting on paragraph and hit enter in between of any formatted line it is going to next line but formatting is removed",
           "created_at": "2025-02-04T08:03:01Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 76,
           "author": "jagdish-mindfire",
           "title": "[BUG]:  ctrl + A + hyperlink not working, not working even for mutiple lines",
           "created_at": "2025-02-03T12:34:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 71,
           "author": "jagdish-mindfire",
           "title": "[BUG]: None attributes are getting copied from neighbour (if we insert text at between some word) in other than first line",
           "created_at": "2025-01-31T08:24:56Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 70,
           "author": "vickysmf",
           "title": "bug- paragraph: when we have more than one line then when we do backspace so below paragraph is not merged on above paragraph",
           "created_at": "2025-01-31T06:49:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 59,
           "author": "jagdish-mindfire",
           "title": "[BUG]: Font size is not getting updated when inserting new text in between a word",
           "created_at": "2025-01-27T14:25:39Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 58,
           "author": "jagdish-mindfire",
           "title": "[BUG]:  Text is getting appended at the end of the line if we insert new text on any line other than first line.",
           "created_at": "2025-01-27T13:09:14Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 57,
           "author": "jagdish-mindfire",
           "title": "[BUG]: Font family is not getting updated when inserting new text in between a word",
           "created_at": "2025-01-27T12:58:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 56,
           "author": "vickysmf",
           "title": "bug - select all: it is not properly working",
           "created_at": "2025-01-27T12:13:29Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 55,
           "author": "vickysmf",
           "title": "order list edge case",
           "created_at": "2025-01-27T03:21:08Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 46,
           "author": "vickysmf",
           "title": "[Feature]: alignment(center, left, right)",
           "created_at": "2025-01-16T03:43:09Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 44,
           "author": "vickysmf",
           "title": "[Feature]: Implement font size & font style",
           "created_at": "2025-01-14T04:28:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 42,
           "author": "vickysmf",
           "title": "[Feature]:undo-redo-edge-cases",
           "created_at": "2025-01-03T11:48:32Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 39,
           "author": "vickysmf",
           "title": "[Feature]: order and unorder list",
           "created_at": "2024-12-24T06:12:42Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 38,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Delete button is working as expected.",
           "created_at": "2024-12-23T12:44:22Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "ParthDhemeliya",
+              "created_at": "2025-09-19T13:45:40Z"
+            }
+          ]
         },
         {
           "number": 36,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Option to add Color in the text",
           "created_at": "2024-12-20T06:45:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 35,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Button to add hyperlink in the text",
           "created_at": "2024-12-20T06:44:44Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 34,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Undo - Redo not working",
           "created_at": "2024-12-20T06:43:18Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 33,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Drag and Drop is not working",
           "created_at": "2024-12-20T06:39:25Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 32,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Re-rendering issue",
           "created_at": "2024-12-19T11:23:13Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 31,
           "author": "jagdish-mindfire",
           "title": "[Feature]: Copy-Paste Functionality Not Working",
           "created_at": "2024-12-19T11:20:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 30,
           "author": "jagdish-mindfire",
           "title": "[Feature]: The \"Enter\" key functionality is not working as expected.",
           "created_at": "2024-12-19T11:16:37Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 22,
           "author": "deepakyadav-01",
           "title": "[Feature]:Add font color feature",
           "created_at": "2024-11-20T09:44:42Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "vickysmf",
+              "created_at": "2025-02-19T04:07:44Z"
+            }
+          ]
         },
         {
           "number": 21,
           "author": "deepakyadav-01",
           "title": "[Feature]:tooltip to features",
           "created_at": "2024-11-20T09:43:57Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 20,
           "author": "deepakyadav-01",
           "title": "[Feature]:dialog for table and layout feature",
           "created_at": "2024-11-20T09:42:28Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 19,
           "author": "deepakyadav-01",
           "title": "[Feature]:Popup open on text selection",
           "created_at": "2024-11-20T09:29:45Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
@@ -60139,7 +61679,7 @@
     "project_title": "Mindfire Digital Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-02-12T11:32:26.033Z",
+    "fetched_at": "2026-02-17T11:33:41.590Z",
     "commits": [
       {
         "sha": "654b5a544aff3f480210a7b46e97ec4778140aa8",
@@ -66905,28 +68445,37 @@
           "author": "lakinmindfire",
           "title": "Implement husky along with commitlint , prettify etc for dev enviornment",
           "created_at": "2023-12-08T12:01:50Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 10,
           "author": "lakinmindfire",
           "title": "Add meta tags for SEO purpose",
           "created_at": "2023-11-24T10:52:51Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 7,
           "author": "lakinmindfire",
           "title": "Include standard opensource files",
           "created_at": "2023-11-22T08:56:22Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-08T12:01:17Z"
+            }
+          ]
         },
         {
           "number": 6,
           "author": "lakinmindfire",
           "title": "Add filter to projects page",
           "created_at": "2023-11-22T08:54:52Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "documentation": [
@@ -66935,7 +68484,8 @@
           "author": "lakinmindfire",
           "title": "Add NFT repo to project list",
           "created_at": "2023-11-22T10:48:18Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": [
@@ -66944,49 +68494,75 @@
           "author": "ParasMindfire",
           "title": "RFC: New Contribution Tracking & Scoring System",
           "created_at": "2026-02-12T06:52:58Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 61,
           "author": "lakinmindfire",
           "title": "Implement automatic changelog generator ",
           "created_at": "2023-12-08T12:05:03Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 43,
           "author": "lakinmindfire",
           "title": "Add submenus under projects ",
           "created_at": "2023-12-06T11:28:43Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-08T12:00:46Z"
+            }
+          ]
         },
         {
           "number": 37,
           "author": "lakinmindfire",
           "title": "Add proper title and descriptions for SEO ",
           "created_at": "2023-12-06T09:29:20Z",
-          "comments": 1
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-08T12:00:57Z"
+            }
+          ]
         },
         {
           "number": 18,
           "author": "lakinmindfire",
           "title": "Add \"Coming Soon\" section under projects page .",
           "created_at": "2023-12-01T09:06:54Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         },
         {
           "number": 17,
           "author": "lakinmindfire",
           "title": "Update Readme of official repo ",
           "created_at": "2023-12-01T09:01:00Z",
-          "comments": 2
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-06T07:32:55Z"
+            },
+            {
+              "author": "lakinmindfire",
+              "created_at": "2023-12-08T12:01:07Z"
+            }
+          ]
         },
         {
           "number": 9,
           "author": "lakinmindfire",
           "title": "Add filemaker repo to project list",
           "created_at": "2023-11-23T04:03:26Z",
-          "comments": 0
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },

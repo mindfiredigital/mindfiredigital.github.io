@@ -80,15 +80,13 @@ export default function ContributorCard({
       <div className='p-5 flex flex-col flex-1'>
         <div className='flex items-start justify-between mb-4'>
           <div className='flex items-center gap-3'>
+            {/* Avatar — no online dot */}
             <div className='relative flex-shrink-0'>
               <img
                 src={contributor.avatar_url}
                 alt={contributor.username}
                 className='w-11 h-11 rounded-full ring-2 ring-gray-100 object-cover'
               />
-              {isTopThree && (
-                <span className='absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-white rounded-full' />
-              )}
             </div>
             <div className='min-w-0'>
               <a
