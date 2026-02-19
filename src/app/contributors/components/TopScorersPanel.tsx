@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { TopScorer } from "@/types";
-import weeklyRaw from "../../projects/assets/leaderboard-weekly.json";
 import monthlyRaw from "../../projects/assets/leaderboard-monthly.json";
 
 interface TopScorersPanelProps {
@@ -11,12 +10,11 @@ interface TopScorersPanelProps {
   onViewDetails: (contributor: TopScorer) => void;
 }
 
-type Tab = "alltime" | "monthly" | "weekly";
+type Tab = "alltime" | "monthly";
 
-const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: "alltime", label: "All Time", icon: "" },
-  { id: "monthly", label: "Month", icon: "" },
-  { id: "weekly", label: "Week", icon: "" },
+const TABS: { id: Tab; label: string }[] = [
+  { id: "alltime", label: "All Time" },
+  { id: "monthly", label: "Month" },
 ];
 
 const PODIUM_SLOTS = [
@@ -28,7 +26,6 @@ const PODIUM_SLOTS = [
     ringFrom: "#cbd5e1",
     ringTo: "#94a3b8",
     glowColor: "rgba(148,163,184,0.55)",
-    // Silver crown: desaturate to grey
     crownFilter:
       "grayscale(0.6) brightness(1.3) drop-shadow(0 2px 6px rgba(148,163,184,0.9))",
     crownSize: "text-lg",
@@ -49,7 +46,6 @@ const PODIUM_SLOTS = [
     ringFrom: "#fde68a",
     ringTo: "#f59e0b",
     glowColor: "rgba(251,191,36,0.65)",
-    // Gold crown: natural emoji color + glow
     crownFilter: "drop-shadow(0 2px 8px rgba(251,191,36,0.9))",
     crownSize: "text-xl",
     crownDuration: "2.5s",
@@ -69,7 +65,6 @@ const PODIUM_SLOTS = [
     ringFrom: "#fdba74",
     ringTo: "#f97316",
     glowColor: "rgba(249,115,22,0.45)",
-    // Bronze crown: sepia + slight warm shift
     crownFilter:
       "sepia(0.8) saturate(1.2) brightness(0.85) drop-shadow(0 2px 6px rgba(180,90,20,0.8))",
     crownSize: "text-base",
@@ -101,12 +96,14 @@ export default function TopScorersPanel({
   const [activeTab, setActiveTab] = useState<Tab>("alltime");
   const [mobileRestOpen, setMobileRestOpen] = useState(false);
 
+  // Derive month label from the JSON metadata if available
+  const monthLabel =
+    (monthlyRaw as { month_label?: string }).month_label ?? "This Month";
+
   const scorers: TopScorer[] =
-    activeTab === "weekly"
-      ? (weeklyRaw.leaderboard as unknown as TopScorer[])
-      : activeTab === "monthly"
-        ? (monthlyRaw.leaderboard as unknown as TopScorer[])
-        : topScorers;
+    activeTab === "monthly"
+      ? (monthlyRaw.leaderboard as unknown as TopScorer[])
+      : topScorers;
 
   const top10 = scorers.slice(0, 10);
   const podium3 = top10.slice(0, 3);
@@ -159,7 +156,7 @@ export default function TopScorersPanel({
           </div>
         </div>
 
-        {/* Tab pill switcher */}
+        {/* Tab pill switcher — All Time | Month only */}
         <div className='relative flex rounded-xl bg-gray-100 p-0.5 gap-0.5'>
           {TABS.map((tab) => (
             <button
@@ -175,8 +172,9 @@ export default function TopScorersPanel({
                 }
               `}
             >
-              <span className='text-xs leading-none'>{tab.icon}</span>
-              {tab.label}
+              {tab.id === "monthly" && activeTab === "monthly"
+                ? monthLabel
+                : tab.label}
             </button>
           ))}
         </div>
@@ -185,16 +183,13 @@ export default function TopScorersPanel({
       {/* ── Body ── */}
       <div className='lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain lg:[&::-webkit-scrollbar]:hidden lg:[-ms-overflow-style:none] lg:[scrollbar-width:none]'>
         {top10.length === 0 ? (
-          /* Empty state */
           <div className='flex flex-col items-center justify-center py-14 px-4 text-center gap-2'>
             <span className='text-4xl'>😴</span>
             <p className='text-sm font-semibold text-gray-500 mt-1'>
               No activity yet
             </p>
             <p className='text-xs text-gray-400'>
-              {activeTab === "weekly"
-                ? "No contributions in the last 7 days"
-                : "No contributions in the last 30 days"}
+              No contributions recorded for {monthLabel}.
             </p>
           </div>
         ) : (
@@ -220,7 +215,6 @@ export default function TopScorersPanel({
                         slot.selfEnd ? "self-end" : ""
                       }`}
                     >
-                      {/* Crown for all top 3 */}
                       <span
                         className={`${slot.crownSize} select-none mb-1 block`}
                         style={{
@@ -308,7 +302,7 @@ export default function TopScorersPanel({
                   ))}
                 </div>
 
-                {/* Mobile: collapsible dropdown, page scroll handles navigation */}
+                {/* Mobile: collapsible */}
                 <div className='lg:hidden flex flex-col gap-1'>
                   <button
                     onClick={() => setMobileRestOpen((v) => !v)}

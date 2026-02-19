@@ -59,7 +59,7 @@ const SCORING = {
 };
 
 // ============================================================================
-// HELPER FUNCTIONS
+// HELPERS
 // ============================================================================
 
 function readJsonFile(filePath) {
@@ -69,8 +69,7 @@ function readJsonFile(filePath) {
       console.warn(`⚠️  File not found: ${filePath}`);
       return null;
     }
-    const data = fs.readFileSync(fullPath, "utf8");
-    return JSON.parse(data);
+    return JSON.parse(fs.readFileSync(fullPath, "utf8"));
   } catch (error) {
     console.error(`❌ Error reading ${filePath}:`, error.message);
     return null;
@@ -80,9 +79,7 @@ function readJsonFile(filePath) {
 function writeJsonFile(filePath, data) {
   try {
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
     console.log(`✅ Successfully wrote to ${filePath}`);
     return true;
@@ -98,29 +95,21 @@ function writeJsonFile(filePath, data) {
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
-
   for (const item of items) {
     const date = new Date(item[dateField]);
     const monthKey = `${date.getFullYear()}-${String(
       date.getMonth() + 1
     ).padStart(2, "0")}`;
-
     if (!byMonth[monthKey]) byMonth[monthKey] = [];
     byMonth[monthKey].push(item);
   }
-
   const capped = [];
-  for (const month in byMonth) {
-    capped.push(...byMonth[month].slice(0, cap));
-  }
-
+  for (const month in byMonth) capped.push(...byMonth[month].slice(0, cap));
   return capped;
 }
 
 // ============================================================================
-// FIX 2 of 3: ANALYZE USER IN PROJECT
-// Previously: counted 30% of all comments on other people's issues (wrong)
-// Now: counts comments where comment_authors[].author === username (real data)
+// ANALYZE USER IN PROJECT
 // ============================================================================
 
 function analyzeUserInProject(username, projectData) {
@@ -130,7 +119,7 @@ function analyzeUserInProject(username, projectData) {
     pr_reviews_given: 0,
     code_review_comments: 0,
     issues_opened: [],
-    issue_comments_given: [], // now an array of objects with created_at for monthly capping
+    issue_comments_given: [],
     quality_metrics: {
       has_tests: 0,
       has_docs: 0,
@@ -140,7 +129,7 @@ function analyzeUserInProject(username, projectData) {
     },
   };
 
-  // 1. Count commits
+  // 1. Commits — only on default branch (already guaranteed by cache)
   if (projectData.commits) {
     stats.commits = projectData.commits.filter(
       (commit) =>
@@ -149,7 +138,8 @@ function analyzeUserInProject(username, projectData) {
     ).length;
   }
 
-  // 2. Count PRs with complexity
+  // 2. PRs — only merged to default branch (guaranteed by cache)
+  //    Store merged_at so callers can filter by date if needed
   if (projectData.merged_prs) {
     const userPRs = projectData.merged_prs.filter(
       (pr) => pr.author === username
@@ -158,6 +148,7 @@ function analyzeUserInProject(username, projectData) {
     for (const pr of userPRs) {
       stats.prs.push({
         number: pr.number,
+        merged_at: pr.merged_at || null, // ← stored so date filtering works
         complexity: pr.complexity || "small",
         multiplier: pr.complexity_multiplier || 1.0,
         changed_files: pr.changed_files || 0,
@@ -187,7 +178,7 @@ function analyzeUserInProject(username, projectData) {
     }
   }
 
-  // 3. Count PR reviews GIVEN by this user
+  // 3. PR reviews GIVEN by this user on other people's PRs
   if (projectData.merged_prs) {
     for (const pr of projectData.merged_prs) {
       if (pr.reviews) {
@@ -195,7 +186,6 @@ function analyzeUserInProject(username, projectData) {
           (r) => r.reviewer === username
         ).length;
       }
-
       if (pr.review_comments) {
         stats.code_review_comments += pr.review_comments.filter(
           (c) => c.author === username
@@ -204,21 +194,17 @@ function analyzeUserInProject(username, projectData) {
     }
   }
 
-  // 4. Count issues opened
+  // 4. Issues opened
   if (projectData.issues) {
-    const allUserIssues = [
+    stats.issues_opened = [
       ...projectData.issues.bugs.filter((i) => i.author === username),
       ...projectData.issues.enhancements.filter((i) => i.author === username),
       ...projectData.issues.documentation.filter((i) => i.author === username),
       ...projectData.issues.others.filter((i) => i.author === username),
     ];
-
-    stats.issues_opened = allUserIssues;
   }
 
-  // 5. Count issue comments GIVEN — uses real comment_authors from cache
-  // comment_authors is an array of { author, created_at } fetched per issue
-  // We only count comments on issues the user did NOT open themselves
+  // 5. Issue comments on OTHER people's issues (real authors from cache)
   if (projectData.issues) {
     const allIssues = [
       ...projectData.issues.bugs,
@@ -229,13 +215,10 @@ function analyzeUserInProject(username, projectData) {
 
     for (const issue of allIssues) {
       if (!issue.comment_authors) continue;
-
-      // Only count comments on OTHER people's issues (not self-replies)
-      if (issue.author === username) continue;
+      if (issue.author === username) continue; // skip own issues
 
       for (const comment of issue.comment_authors) {
         if (comment.author === username) {
-          // Push with created_at so monthly cap can be applied correctly
           stats.issue_comments_given.push({ created_at: comment.created_at });
         }
       }
@@ -250,7 +233,7 @@ function analyzeUserInProject(username, projectData) {
 // ============================================================================
 
 function calculateScore(userStats) {
-  // 1. CODE SCORE
+  // Code score
   let prScore = 0;
   for (const pr of userStats.prs) {
     prScore += SCORING.PR_MERGED_BASE * pr.multiplier;
@@ -262,13 +245,11 @@ function calculateScore(userStats) {
     userStats.pr_reviews_given * SCORING.PR_REVIEW_GIVEN +
     userStats.code_review_comments * SCORING.CODE_REVIEW_COMMENT;
 
-  // 2. COMMUNITY SCORE (with monthly caps)
+  // Community score (with monthly caps)
   const cappedIssues = applyMonthlyCaps(
     userStats.issues_opened,
     SCORING.CAPS.ISSUES_PER_MONTH
   );
-
-  // Apply monthly cap to real issue comments (now an array with created_at)
   const cappedIssueComments = applyMonthlyCaps(
     userStats.issue_comments_given,
     SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH
@@ -278,7 +259,7 @@ function calculateScore(userStats) {
     cappedIssues.length * SCORING.ISSUE_OPENED +
     cappedIssueComments.length * SCORING.ISSUE_COMMENT;
 
-  // 3. QUALITY SCORE
+  // Quality score
   const impactBonusTotal = userStats.quality_metrics.impact_bonuses.reduce(
     (sum, bonus) => sum + bonus,
     0
@@ -334,7 +315,7 @@ function calculateScore(userStats) {
 
 function generateLeaderboard() {
   console.log("\n" + "=".repeat(80));
-  console.log("🏆 STEP 2: GENERATING LEADERBOARD WITH NEW SCORING");
+  console.log("🏆 GENERATING LEADERBOARD");
   console.log("=".repeat(80) + "\n");
 
   const contributors = readJsonFile(CONFIG.INPUT_FILES.contributors) || [];
@@ -343,12 +324,10 @@ function generateLeaderboard() {
     readJsonFile(CONFIG.INPUT_FILES.contributorMapping) || {};
   const cachedData = readJsonFile(CONFIG.INPUT_FILES.cachedData) || {};
 
-  console.log(`📦 Loaded Data:`);
+  console.log(`📦 Loaded:`);
   console.log(`   Contributors: ${contributors.length}`);
   console.log(`   Projects: ${projects.length}`);
   console.log(`   Cached Projects: ${Object.keys(cachedData).length}\n`);
-
-  console.log("🔍 Processing contributors...\n");
 
   const leaderboardData = [];
 
@@ -357,7 +336,6 @@ function generateLeaderboard() {
     console.log(`📌 Processing ${username}...`);
 
     const userMappedProjectIds = contributorMapping[username] || [];
-
     const allProjectIds = [
       ...new Set([...userMappedProjectIds, ...CONFIG.SPECIAL_PROJECT_IDS]),
     ];
@@ -368,7 +346,7 @@ function generateLeaderboard() {
       pr_reviews_given: 0,
       code_review_comments: 0,
       issues_opened: [],
-      issue_comments_given: [], // array of { created_at } objects
+      issue_comments_given: [],
       projectsWorkingOn: 0,
       projects: [],
       quality_metrics: {
@@ -383,7 +361,6 @@ function generateLeaderboard() {
 
     for (const projectId of allProjectIds) {
       const projectData = cachedData[projectId];
-
       if (!projectData) {
         console.log(`   ⚠️ No cached data for project ID ${projectId}`);
         continue;
@@ -431,7 +408,6 @@ function generateLeaderboard() {
     }
 
     const scoreData = calculateScore(userStats);
-
     const avgCommitsPerPR =
       userStats.prs.length > 0
         ? (userStats.commits / userStats.prs.length).toFixed(2)
@@ -439,7 +415,7 @@ function generateLeaderboard() {
 
     leaderboardData.push({
       rank: 0,
-      username: username,
+      username,
       id: contributor.id,
       avatar_url: contributor.avatar_url,
       html_url: contributor.html_url,
@@ -449,7 +425,7 @@ function generateLeaderboard() {
       totalPRReviewsGiven: userStats.pr_reviews_given,
       totalCodeReviewComments: userStats.code_review_comments,
       totalIssuesOpened: userStats.issues_opened.length,
-      totalIssueComments: scoreData.capped_counts.issue_comments, // capped real count
+      totalIssueComments: scoreData.capped_counts.issue_comments,
       avgCommitsPerPR: parseFloat(avgCommitsPerPR),
       projectsWorkingOn: userStats.projectsWorkingOn,
 
@@ -489,30 +465,27 @@ function displayTopScorers(leaderboard, topN = 10) {
   console.log(`🏆 TOP ${topN} CONTRIBUTORS`);
   console.log("=".repeat(80) + "\n");
 
-  const topScorers = leaderboard.slice(0, topN);
-
-  topScorers.forEach((contributor, index) => {
+  leaderboard.slice(0, topN).forEach((contributor, index) => {
     const rank = index + 1;
     const medal =
       rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : `${rank}.`;
 
     console.log(`${medal} ${contributor.username}`);
     console.log(
-      `   Total Score: ${contributor.total_score} points (Rank #${contributor.rank})`
+      `   Total Score: ${contributor.total_score} (Rank #${contributor.rank})`
     );
     console.log(
-      `   ├─ Code Score: ${contributor.code_score} (PRs: ${contributor.score_breakdown.pr_score}, Commits: ${contributor.score_breakdown.commits_score}, Reviews: ${contributor.score_breakdown.pr_reviews_score})`
+      `   ├─ Code:      ${contributor.code_score} (PRs: ${contributor.score_breakdown.pr_score}, Commits: ${contributor.score_breakdown.commits_score}, Reviews: ${contributor.score_breakdown.pr_reviews_score})`
     );
     console.log(
-      `   ├─ Community Score: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score})`
+      `   ├─ Community: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score})`
     );
     console.log(
-      `   └─ Quality Score: ${contributor.quality_score} (Tests: ${contributor.score_breakdown.tests_score}, Docs: ${contributor.score_breakdown.docs_score}, Zero Rev: ${contributor.score_breakdown.zero_revisions_score})`
+      `   └─ Quality:   ${contributor.quality_score} (Tests: ${contributor.score_breakdown.tests_score}, Docs: ${contributor.score_breakdown.docs_score}, ZeroRev: ${contributor.score_breakdown.zero_revisions_score})`
     );
     console.log(
-      `   Metrics: ${contributor.totalCommits} commits, ${contributor.totalPRs} PRs (S:${contributor.prs_by_complexity.small} M:${contributor.prs_by_complexity.medium} L:${contributor.prs_by_complexity.large}), ${contributor.totalPRReviewsGiven} reviews, ${contributor.totalIssueComments} issue comments`
+      `   Metrics: ${contributor.totalCommits} commits, ${contributor.totalPRs} PRs (S:${contributor.prs_by_complexity.small} M:${contributor.prs_by_complexity.medium} L:${contributor.prs_by_complexity.large}), ${contributor.totalPRReviewsGiven} reviews`
     );
-    console.log(`   Projects: ${contributor.projectsWorkingOn}`);
     console.log("");
   });
 
@@ -520,7 +493,7 @@ function displayTopScorers(leaderboard, topN = 10) {
 }
 
 // ============================================================================
-// MAIN EXECUTION
+// MAIN
 // ============================================================================
 
 function main() {
@@ -558,13 +531,14 @@ function main() {
         code_formula:
           "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
         community_formula:
-          "(ΣIssues × 2) [cap: 10/month] + (ΣIssue_Comments × 1) [cap: 20/month, real authors only]",
+          "(ΣIssues × 2) [cap: 10/month] + (ΣIssue_Comments × 1) [cap: 20/month]",
         quality_formula:
           "Impact_bonuses + Tests + Docs + Mentor + Zero_revisions",
+        note: "PRs and commits counted only if merged/committed to the default branch",
       },
       scoring_weights: SCORING,
-      summary: summary,
-      leaderboard: leaderboard,
+      summary,
+      leaderboard,
     };
 
     writeJsonFile(CONFIG.OUTPUT_FILES.leaderboard, outputData);
@@ -578,21 +552,19 @@ function main() {
 
     displayTopScorers(leaderboard, 10);
 
-    console.log("📈 SUMMARY STATISTICS:");
-    console.log(`   Total Contributors: ${summary.total_contributors}`);
-    console.log(`   Total Commits: ${summary.total_commits}`);
-    console.log(`   Total PRs: ${summary.total_prs}`);
-    console.log(`   Total PR Reviews Given: ${summary.total_pr_reviews}`);
-    console.log(`   Total Issues Opened: ${summary.total_issues}`);
-    console.log(`   Average Score: ${summary.avg_score}`);
+    console.log("📈 SUMMARY:");
+    console.log(`   Contributors: ${summary.total_contributors}`);
+    console.log(`   Commits:      ${summary.total_commits}`);
+    console.log(`   PRs:          ${summary.total_prs}`);
+    console.log(`   PR Reviews:   ${summary.total_pr_reviews}`);
+    console.log(`   Issues:       ${summary.total_issues}`);
+    console.log(`   Avg Score:    ${summary.avg_score}`);
     console.log(
-      `   Highest Score: ${leaderboard[0]?.total_score || 0} (${
+      `   Top Score:    ${leaderboard[0]?.total_score || 0} (${
         leaderboard[0]?.username || "N/A"
       })`
     );
-    console.log();
-
-    console.log("✅ Leaderboard generation completed successfully!\n");
+    console.log("\n✅ Done!\n");
 
     return leaderboard;
   } catch (error) {

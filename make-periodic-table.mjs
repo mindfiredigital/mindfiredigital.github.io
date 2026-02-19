@@ -16,7 +16,6 @@ const CONFIG = {
     contributorMapping: "./src/app/projects/assets/contributor-mapping.json",
   },
   OUTPUT_FILES: {
-    weekly: "./src/app/projects/assets/leaderboard-weekly.json",
     monthly: "./src/app/projects/assets/leaderboard-monthly.json",
   },
 
@@ -92,11 +91,15 @@ function isBot(username) {
   return CONFIG.BOT_PATTERNS.some((p) => lower.includes(p.toLowerCase()));
 }
 
-function getWindowStart(daysBack) {
-  const d = new Date();
-  d.setDate(d.getDate() - daysBack);
-  d.setHours(0, 0, 0, 0);
-  return d;
+/**
+ * Returns midnight UTC on the 1st of the current calendar month.
+ * e.g. Feb 19 2026 → Feb 01 2026 00:00:00 UTC
+ */
+function getCurrentMonthStart() {
+  const now = new Date();
+  return new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1, 0, 0, 0, 0)
+  );
 }
 
 async function fetchGitHub(url) {
@@ -114,9 +117,12 @@ async function fetchGitHub(url) {
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
           if (res.statusCode === 403 || res.statusCode === 429) {
-            const retry = res.headers["retry-after"];
             reject(
-              new Error(`Rate limited. Retry after: ${retry ?? "unknown"}s`)
+              new Error(
+                `Rate limited. Retry after: ${
+                  res.headers["retry-after"] ?? "unknown"
+                }s`
+              )
             );
           } else if (res.statusCode !== 200) {
             reject(
@@ -177,40 +183,61 @@ async function fetchDefaultBranch(repo) {
 }
 
 // ============================================================================
-// FETCH COMMITS SINCE DATE
+// FETCH COMMITS ON DEFAULT BRANCH SINCE monthStart
+//
+// Returns normalized objects: { sha, author_login, author_name, date }
+// — same shape as the all-time cache so scoreUser() uses identical field names.
+// Only commits on sha=<defaultBranch> with date >= since are returned.
 // ============================================================================
 
 async function fetchCommitsSince(repo, branch, since) {
-  console.log(`      → commits since ${since.toISOString().slice(0, 10)}`);
-  const url = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/commits?sha=${branch}`;
-  const commits = await fetchAllPages(url, since);
-  return commits.filter(
-    (c) => !isBot(c.author?.login) && !isBot(c.commit?.author?.name)
+  console.log(
+    `      → commits on ${branch} since ${since.toISOString().slice(0, 10)}`
   );
+
+  const raw = await fetchAllPages(
+    `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/commits?sha=${branch}`,
+    since
+  );
+
+  const commits = raw
+    .filter((c) => !isBot(c.author?.login) && !isBot(c.commit?.author?.name))
+    .map((c) => ({
+      sha: c.sha,
+      // Normalize to author_login / author_name — same fields generate-leaderboard.js uses
+      author_login: c.author?.login || null,
+      author_name: c.commit?.author?.name || null,
+      date: c.commit?.author?.date || null,
+    }));
+
+  console.log(`         ${commits.length} commits on ${branch}`);
+  return commits;
 }
 
 // ============================================================================
-// FETCH MERGED PRS SINCE DATE — uses merge_commit_sha check like main fetcher
+// FETCH MERGED PRS SINCE monthStart THAT LANDED ON DEFAULT BRANCH
+//
+// Reuses the SHA set already built from the commits fetch — no second pass.
+// Only PRs with merged_at >= since AND merge_commit_sha in SHA set are kept.
 // ============================================================================
 
-async function fetchMergedPRsSince(repo, defaultBranch, since) {
-  console.log(`      → merged PRs since ${since.toISOString().slice(0, 10)}`);
-
-  // Get all commit SHAs on default branch — catches indirect merges
+async function fetchMergedPRsSince(
+  repo,
+  defaultBranch,
+  since,
+  defaultBranchSHAs
+) {
   console.log(
-    `         fetching default branch commits to verify merge SHAs...`
+    `      → merged PRs on ${defaultBranch} since ${since
+      .toISOString()
+      .slice(0, 10)}`
   );
-  const defaultBranchCommits = await fetchAllPages(
-    `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/commits?sha=${defaultBranch}`,
-    since
-  );
-  const defaultBranchSHAs = new Set(defaultBranchCommits.map((c) => c.sha));
   console.log(
-    `         ${defaultBranchSHAs.size} commits on ${defaultBranch} in window`
+    `         checking against ${defaultBranchSHAs.size} commit SHAs`
   );
 
   let page = 1;
-  const results = [];
+  const candidates = [];
   let done = false;
 
   while (!done) {
@@ -227,10 +254,16 @@ async function fetchMergedPRsSince(repo, defaultBranch, since) {
         }
         if (!pr.merged_at) continue;
         if (new Date(pr.merged_at) < since) continue;
+        console.log(
+          `PR #${pr.number} by ${pr.user?.login}: merged_at=${
+            pr.merged_at
+          }, sha_match=${defaultBranchSHAs.has(pr.merge_commit_sha)}`
+        );
         if (isBot(pr.user?.login)) continue;
+        // Core rule: merge commit must exist on the default branch
         if (!pr.merge_commit_sha || !defaultBranchSHAs.has(pr.merge_commit_sha))
           continue;
-        results.push(pr);
+        candidates.push(pr);
       }
       if (prs.length < 100) break;
       page++;
@@ -240,8 +273,12 @@ async function fetchMergedPRsSince(repo, defaultBranch, since) {
     }
   }
 
+  console.log(
+    `         ${candidates.length} PRs confirmed merged into ${defaultBranch}`
+  );
+
   const enriched = [];
-  for (const pr of results) {
+  for (const pr of candidates) {
     try {
       await delay(CONFIG.DELAY_MS);
       const full = await fetchGitHub(
@@ -304,25 +341,23 @@ async function fetchMergedPRsSince(repo, defaultBranch, since) {
     }
   }
 
-  console.log(`         ${enriched.length} merged PRs found`);
+  console.log(`         ${enriched.length} PRs enriched`);
   return enriched;
 }
 
 // ============================================================================
-// FIX 3 of 3: FETCH REAL ISSUE COMMENT AUTHORS FOR THE TIME WINDOW
-// Previously: estimated with Math.ceil(issue.comments * 0.3) — completely wrong
-// Now: calls /issues/{number}/comments API, filters to the time window,
-//      stores { author, created_at } so monthly caps work correctly
+// FETCH ISSUES SINCE monthStart (with real comment authors in window)
 // ============================================================================
 
 async function fetchIssuesSince(repo, since) {
   console.log(`      → issues since ${since.toISOString().slice(0, 10)}`);
-  const url = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues?state=all&sort=created&direction=desc`;
-  const allIssues = await fetchAllPages(url, since);
+  const raw = await fetchAllPages(
+    `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues?state=all&sort=created&direction=desc`,
+    since
+  );
 
   const issues = { bugs: [], enhancements: [], documentation: [], others: [] };
-
-  const rawIssues = allIssues.filter(
+  const rawIssues = raw.filter(
     (issue) =>
       !issue.pull_request &&
       !isBot(issue.user?.login) &&
@@ -330,23 +365,20 @@ async function fetchIssuesSince(repo, since) {
   );
 
   console.log(
-    `         fetching real comment authors for ${rawIssues.length} issues...`
+    `         fetching comment authors for ${rawIssues.length} issues...`
   );
 
   for (const issue of rawIssues) {
-    // Fetch real comment authors for this issue (only if it has comments)
     let comment_authors = [];
     if (issue.comments > 0) {
       let page = 1;
       while (true) {
-        const commentUrl = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues/${issue.number}/comments?per_page=100&page=${page}`;
+        const url = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues/${issue.number}/comments?per_page=100&page=${page}`;
         try {
           await delay(CONFIG.DELAY_MS);
-          const comments = await fetchGitHub(commentUrl);
+          const comments = await fetchGitHub(url);
           if (!comments || comments.length === 0) break;
-
           for (const comment of comments) {
-            // Only include comments that fall within our time window
             if (
               !isBot(comment.user?.login) &&
               new Date(comment.created_at) >= since
@@ -357,12 +389,11 @@ async function fetchIssuesSince(repo, since) {
               });
             }
           }
-
           if (comments.length < 100) break;
           page++;
         } catch (err) {
           console.error(
-            `      ⚠️ Error fetching comments for issue #${issue.number}: ${err.message}`
+            `      ⚠️ Comments for issue #${issue.number}: ${err.message}`
           );
           break;
         }
@@ -377,8 +408,8 @@ async function fetchIssuesSince(repo, since) {
       labels,
       created_at: issue.created_at,
       state: issue.state,
-      comments: issue.comments || 0, // total count (for reference)
-      comment_authors, // ← real authors with timestamps
+      comments: issue.comments || 0,
+      comment_authors,
     };
 
     if (labels.some((l) => l.includes("bug") || l.includes("fix")))
@@ -401,17 +432,29 @@ async function fetchIssuesSince(repo, since) {
 }
 
 // ============================================================================
-// PROCESS ONE REPO FOR A TIME WINDOW
+// PROCESS ONE REPO
+// Commits fetched once → SHA set reused for PR filtering (no double API pass).
 // ============================================================================
 
 async function processRepo(repoName, projectTitle, since) {
   console.log(`\n   📁 ${projectTitle} (${repoName})`);
   try {
     const branch = await fetchDefaultBranch(repoName);
+
+    // Fetch & normalize commits first
     const commits = await fetchCommitsSince(repoName, branch, since);
-    const mergedPRs = await fetchMergedPRsSince(repoName, branch, since);
+
+    // Build SHA set from already-fetched commits — reused for PR filtering
+    const defaultBranchSHAs = new Set(commits.map((c) => c.sha));
+
+    const mergedPRs = await fetchMergedPRsSince(
+      repoName,
+      branch,
+      since,
+      defaultBranchSHAs
+    );
     const issues = await fetchIssuesSince(repoName, since);
-    console.log(`         ${commits.length} commits, ${mergedPRs.length} PRs`);
+
     return {
       project_title: projectTitle,
       commits,
@@ -425,7 +468,8 @@ async function processRepo(repoName, projectTitle, since) {
 }
 
 // ============================================================================
-// SCORE A USER — uses real comment_authors, applies monthly caps correctly
+// SCORE A USER
+// Uses author_login / author_name — same fields as the normalized cache shape.
 // ============================================================================
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
@@ -450,22 +494,22 @@ function scoreUser(username, projectDataList) {
     pr_reviews_given = 0,
     code_review_comments = 0,
     issues_opened = [],
-    issue_comments_given = []; // array of { created_at } objects
+    issue_comments_given = [];
   const qm = { has_tests: 0, has_docs: 0, zero_revisions: 0 };
   const projectNames = [];
 
   for (const pd of projectDataList) {
     if (!pd) continue;
 
-    // Commits
+    // Commits: match author_login (exact) or author_name (substring fallback)
     const userCommits = pd.commits.filter(
       (c) =>
-        c.author?.login === username ||
-        c.commit?.author?.name?.toLowerCase().includes(username.toLowerCase())
+        c.author_login === username ||
+        c.author_name?.toLowerCase().includes(username.toLowerCase())
     );
     commits += userCommits.length;
 
-    // PRs
+    // PRs already filtered to default branch by fetchMergedPRsSince
     const userPRs = pd.merged_prs.filter((pr) => pr.author === username);
     for (const pr of userPRs) {
       prs.push(pr);
@@ -482,7 +526,6 @@ function scoreUser(username, projectDataList) {
       if (pr.reviews_count === 0) qm.zero_revisions++;
     }
 
-    // Reviews given on OTHER people's PRs
     for (const pr of pd.merged_prs) {
       if (pr.author === username) continue;
       pr_reviews_given += (pr.reviews || []).filter(
@@ -493,7 +536,6 @@ function scoreUser(username, projectDataList) {
       ).length;
     }
 
-    // Issues opened
     const allIssues = [
       ...pd.issues.bugs,
       ...pd.issues.enhancements,
@@ -502,15 +544,12 @@ function scoreUser(username, projectDataList) {
     ];
     issues_opened.push(...allIssues.filter((i) => i.author === username));
 
-    // Issue comments — real authors only, on issues the user didn't open
     for (const issue of allIssues) {
       if (issue.author === username) continue;
       if (!issue.comment_authors) continue;
-
       for (const comment of issue.comment_authors) {
-        if (comment.author === username) {
+        if (comment.author === username)
           issue_comments_given.push({ created_at: comment.created_at });
-        }
       }
     }
 
@@ -530,7 +569,6 @@ function scoreUser(username, projectDataList) {
   )
     return null;
 
-  // Score
   let prScore = 0;
   for (const pr of prs)
     prScore +=
@@ -607,7 +645,7 @@ function scoreUser(username, projectDataList) {
 }
 
 // ============================================================================
-// BUILD LEADERBOARD FOR ONE WINDOW
+// BUILD LEADERBOARD
 // ============================================================================
 
 async function generateLeaderboard(contributors, projectDataList, label) {
@@ -615,7 +653,6 @@ async function generateLeaderboard(contributors, projectDataList, label) {
   console.log(`🏆 Building ${label} leaderboard...`);
 
   const results = [];
-
   for (const contributor of contributors) {
     const username = contributor.login;
     const result = scoreUser(username, projectDataList);
@@ -650,7 +687,9 @@ async function generateLeaderboard(contributors, projectDataList, label) {
     });
 
     console.log(
-      `   ✅ ${username}: ${result.scores.total} pts  (${result.prs.length} PRs, ${result.commits} commits, ${result.issue_comments_given.length} issue comments)`
+      `   ✅ ${username}: ${result.scores.total} pts  ` +
+        `(${result.prs.length} merged PRs on default branch, ` +
+        `${result.commits} commits on default branch)`
     );
   }
 
@@ -658,8 +697,7 @@ async function generateLeaderboard(contributors, projectDataList, label) {
   results.forEach((c, i) => {
     c.rank = i + 1;
   });
-
-  console.log(`\n   📊 ${results.length} contributors active in this period`);
+  console.log(`\n   📊 ${results.length} contributors active this month`);
   return results;
 }
 
@@ -669,8 +707,12 @@ async function generateLeaderboard(contributors, projectDataList, label) {
 
 async function main() {
   console.log("\n" + "=".repeat(60));
-  console.log("🔄 FETCH PERIODIC LEADERBOARD DATA");
-  console.log("   Calls GitHub API with date filters + real comment authors");
+  console.log("🔄 FETCH MONTHLY LEADERBOARD DATA");
+  console.log("   Window  : 1st of current calendar month → today");
+  console.log("   Commits : default branch only (sha= param)");
+  console.log(
+    "   PRs     : merged_at >= window start + merge_commit_sha on default branch"
+  );
   console.log("=".repeat(60));
 
   if (!CONFIG.GITHUB_TOKEN) {
@@ -686,18 +728,15 @@ async function main() {
     process.exit(1);
   }
 
-  const monthlyStart = getWindowStart(30);
-  const weeklyStart = getWindowStart(7);
+  const monthStart = getCurrentMonthStart();
+  const now = new Date();
 
   console.log(
-    `\n📅 Monthly window: ${monthlyStart.toISOString().slice(0, 10)} → today`
+    `\n📅 Window: ${monthStart.toISOString().slice(0, 10)} → ${now
+      .toISOString()
+      .slice(0, 10)}`
   );
-  console.log(
-    `📅 Weekly  window: ${weeklyStart.toISOString().slice(0, 10)}  → today`
-  );
-  console.log(`\n🌐 Fetching from GitHub API...`);
 
-  // Build repo list
   const repoList = [];
   for (const project of projects) {
     const match = (
@@ -711,98 +750,38 @@ async function main() {
     repoList.push({ repoName: sp.repoName, title: sp.title });
   }
 
-  console.log(`\n📦 Repos to fetch: ${repoList.length}`);
+  console.log(`\n📦 Repos: ${repoList.length}`);
 
-  // Fetch once for monthly window (covers weekly too — weekly is a subset)
   const projectDataList = [];
   for (const repo of repoList) {
-    const data = await processRepo(repo.repoName, repo.title, monthlyStart);
+    const data = await processRepo(repo.repoName, repo.title, monthStart);
     if (data) projectDataList.push(data);
   }
 
-  const now = new Date().toISOString();
-
-  // Monthly leaderboard — use all fetched data as-is
   const monthly = await generateLeaderboard(
     contributors,
     projectDataList,
-    "MONTHLY"
+    "MONTHLY (current calendar month)"
   );
+
+  const nowIso = now.toISOString();
   writeJsonFile(CONFIG.OUTPUT_FILES.monthly, {
-    generated_at: now,
+    generated_at: nowIso,
     period: "monthly",
-    days_back: 30,
-    window_start: monthlyStart.toISOString(),
+    window_start: monthStart.toISOString(),
+    window_end: nowIso,
+    month_label: monthStart.toLocaleString("default", {
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }),
     total_contributors: monthly.length,
     leaderboard: monthly,
   });
 
-  // Weekly leaderboard — filter everything down to 7-day window
-  const weeklyProjectData = projectDataList.map((pd) => ({
-    ...pd,
-    commits: pd.commits.filter(
-      (c) => new Date(c.commit?.author?.date || 0) >= weeklyStart
-    ),
-    merged_prs: pd.merged_prs.filter(
-      (pr) => new Date(pr.merged_at) >= weeklyStart
-    ),
-    issues: {
-      bugs: pd.issues.bugs
-        .filter((i) => new Date(i.created_at) >= weeklyStart)
-        .map((i) => ({
-          ...i,
-          // Also filter comment_authors to the weekly window
-          comment_authors: (i.comment_authors || []).filter(
-            (c) => new Date(c.created_at) >= weeklyStart
-          ),
-        })),
-      enhancements: pd.issues.enhancements
-        .filter((i) => new Date(i.created_at) >= weeklyStart)
-        .map((i) => ({
-          ...i,
-          comment_authors: (i.comment_authors || []).filter(
-            (c) => new Date(c.created_at) >= weeklyStart
-          ),
-        })),
-      documentation: pd.issues.documentation
-        .filter((i) => new Date(i.created_at) >= weeklyStart)
-        .map((i) => ({
-          ...i,
-          comment_authors: (i.comment_authors || []).filter(
-            (c) => new Date(c.created_at) >= weeklyStart
-          ),
-        })),
-      others: pd.issues.others
-        .filter((i) => new Date(i.created_at) >= weeklyStart)
-        .map((i) => ({
-          ...i,
-          comment_authors: (i.comment_authors || []).filter(
-            (c) => new Date(c.created_at) >= weeklyStart
-          ),
-        })),
-    },
-  }));
-
-  const weekly = await generateLeaderboard(
-    contributors,
-    weeklyProjectData,
-    "WEEKLY"
-  );
-  writeJsonFile(CONFIG.OUTPUT_FILES.weekly, {
-    generated_at: now,
-    period: "weekly",
-    days_back: 7,
-    window_start: weeklyStart.toISOString(),
-    total_contributors: weekly.length,
-    leaderboard: weekly,
-  });
-
   console.log("\n" + "=".repeat(60));
-  console.log("✅ Done!");
-  console.log(`   Weekly:  ${weekly.length}  active contributors`);
-  console.log(`   Monthly: ${monthly.length} active contributors`);
-  console.log("\n💡 package.json:");
-  console.log('   "generate:periodic": "node fetch-periodic-data.js"');
+  console.log(`✅ Done! Month: ${monthStart.toISOString().slice(0, 7)}`);
+  console.log(`   Active contributors: ${monthly.length}`);
   console.log("=".repeat(60) + "\n");
 }
 

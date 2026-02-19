@@ -159,7 +159,7 @@ export default function Contributors() {
             <div className='mt-12 pb-16 px-6'>
               <div className='flex items-center justify-center gap-4 mb-8'>
                 <h2 className='text-3xl font-medium text-gray-800'>
-                  Leaderboard
+                  Contributors
                 </h2>
                 <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
                   {filteredAndSorted.length} of {topScorers.length}
