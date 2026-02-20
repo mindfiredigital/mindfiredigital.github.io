@@ -29,12 +29,11 @@ export default function ProjectsPage() {
 
   const typedMapping = contributorMapping as ContributorMap;
 
-  // 1. Extract unique tags and technologies from BOTH current and upcoming projects
+  // Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
     const tagsSet = new Set<string>();
     const techSet = new Set<string>();
 
-    // Combine both project arrays
     const allProjects = [
       ...(projectData as Project[]),
       ...(upcomingProjectData as Project[]),
@@ -72,7 +71,7 @@ export default function ProjectsPage() {
     };
   }, []);
 
-  // 2. Filter projects using STATIC mapping
+  // Filter projects
   const filterProjects = (projects: Project[]) => {
     return projects.filter((project) => {
       // Search filter
@@ -84,7 +83,7 @@ export default function ProjectsPage() {
         if (!matchesSearch) return false;
       }
 
-      // Tags/Tech filters...
+      // Tags filter
       if (filters.tags.length > 0) {
         const hasTag = filters.tags.some((tag) =>
           project.tags?.some((pTag) => pTag.toLowerCase() === tag.toLowerCase())
@@ -92,6 +91,7 @@ export default function ProjectsPage() {
         if (!hasTag) return false;
       }
 
+      // Technology filter
       if (filters.technologies.length > 0) {
         const hasTech = filters.technologies.some((tech) =>
           project.tags?.some(
@@ -101,16 +101,28 @@ export default function ProjectsPage() {
         if (!hasTech) return false;
       }
 
-      // Star range
+      // ✅ FIXED: Star range filter — parse the numeric threshold from the "10+", "50+" string
       if (filters.starRange !== "all") {
+        const minStars = parseInt(filters.starRange.replace("+", ""), 10);
         const stars = project.stars || 0;
-        if (filters.starRange === "10+" && stars < 10) return false;
-        if (filters.starRange === "50+" && stars < 50) return false;
-        if (filters.starRange === "100+" && stars < 100) return false;
-        if (filters.starRange === "500+" && stars < 500) return false;
+        if (stars < minStars) return false;
       }
 
-      // STATIC Contributor Filter
+      // ✅ FIXED: Contributor range filter — was never applied before, now correctly
+      // derives contributor count per project from the contributor-mapping.json
+      if (filters.contributorRange !== "all") {
+        const minContributors = parseInt(
+          filters.contributorRange.replace("+", ""),
+          10
+        );
+        // Count how many contributors in the mapping have worked on this project
+        const contributorCount = Object.values(typedMapping).filter(
+          (projectIds) => projectIds.includes(project.id)
+        ).length;
+        if (contributorCount < minContributors) return false;
+      }
+
+      // Contributor multi-select filter (AND logic)
       if (filters.selectedContributor.length > 0) {
         const hasAllContributors = filters.selectedContributor.every(
           (login) => {
@@ -141,10 +153,7 @@ export default function ProjectsPage() {
         return sorted.sort((a, b) => {
           const dateA = new Date(a.lastPushedAt || 0).getTime();
           const dateB = new Date(b.lastPushedAt || 0).getTime();
-
-          console.log("date ", dateB - dateA);
-
-          return dateB - dateA; // Most recent push first
+          return dateB - dateA;
         });
       case "stars":
         return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
@@ -169,12 +178,33 @@ export default function ProjectsPage() {
 
   const sortedUpcomingProjects = useMemo(() => {
     const sorted = [...filteredUpcomingProjects];
-    if (filters.sortBy === "stars") {
-      return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
-    } else if (filters.sortBy === "name") {
-      return sorted.sort((a, b) => a.title.localeCompare(b.title));
+
+    switch (filters.sortBy) {
+      case "activity":
+        return sorted.sort((a, b) => {
+          const dateA = new Date(a.lastPushedAt || 0).getTime();
+          const dateB = new Date(b.lastPushedAt || 0).getTime();
+          return dateB - dateA;
+        });
+      case "stars":
+        return sorted.sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+      case "name":
+        return sorted.sort((a, b) => a.title.localeCompare(b.title));
+      case "newest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(b.date_created).getTime() -
+            new Date(a.date_created).getTime()
+        );
+      case "oldest":
+        return sorted.sort(
+          (a, b) =>
+            new Date(a.date_created).getTime() -
+            new Date(b.date_created).getTime()
+        );
+      default:
+        return sorted;
     }
-    return sorted;
   }, [filteredUpcomingProjects, filters.sortBy]);
 
   const handleFilterChange = (newFilters: Partial<Filters>) => {
@@ -202,9 +232,8 @@ export default function ProjectsPage() {
 
   // Handle scroll on page load if there's a hash in the URL
   useEffect(() => {
-    const hash = window.location.hash.slice(1); // Remove the '#' character
+    const hash = window.location.hash.slice(1);
     if (hash) {
-      // Small delay to ensure the DOM is fully rendered
       setTimeout(() => {
         scrollToSection(hash);
       }, 100);
@@ -244,7 +273,6 @@ export default function ProjectsPage() {
 
       <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
-          {/* Move headings OUTSIDE the flex container */}
           <div id='current-projects' className='mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
@@ -255,7 +283,6 @@ export default function ProjectsPage() {
           </div>
 
           <div className='flex flex-col lg:flex-row gap-6 items-start'>
-            {/* Sticky Sidebar - now aligns with cards */}
             <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-4 lg:self-start lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto'>
               <FilterSidebar
                 allTags={allTags}
@@ -273,9 +300,7 @@ export default function ProjectsPage() {
               />
             </aside>
 
-            {/* Main Content Area - Cards */}
             <main className='flex-1 min-w-0'>
-              {/* Current Projects Grid */}
               <div className='mb-16'>
                 {sortedCurrentProjects.length === 0 ? (
                   <div className='text-center py-12'>
@@ -303,7 +328,6 @@ export default function ProjectsPage() {
             </main>
           </div>
 
-          {/* Upcoming Projects Section - Full Width Heading */}
           <div id='upcoming-projects' className='mt-16 mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
@@ -313,12 +337,9 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          {/* Upcoming Projects Grid - aligned with sidebar */}
           <div className='flex flex-col lg:flex-row gap-6 items-start'>
-            {/* Spacer to match sidebar width */}
             <div className='lg:w-72 flex-shrink-0'></div>
 
-            {/* Upcoming Projects Content */}
             <main className='flex-1 min-w-0'>
               {sortedUpcomingProjects.length === 0 ? (
                 <div className='text-center py-12'>
