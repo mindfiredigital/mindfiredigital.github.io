@@ -20,7 +20,6 @@ const TABS: { id: Tab; label: string }[] = [
 const PODIUM_SLOTS = [
   {
     rankIndex: 1,
-    medal: "🥈",
     podiumHeight: "h-14",
     podiumGradient: "from-slate-300 to-slate-400",
     ringFrom: "#cbd5e1",
@@ -40,7 +39,6 @@ const PODIUM_SLOTS = [
   },
   {
     rankIndex: 0,
-    medal: "🥇",
     podiumHeight: "h-24",
     podiumGradient: "from-yellow-400 to-amber-500",
     ringFrom: "#fde68a",
@@ -59,7 +57,6 @@ const PODIUM_SLOTS = [
   },
   {
     rankIndex: 2,
-    medal: "🥉",
     podiumHeight: "h-9",
     podiumGradient: "from-orange-300 to-amber-400",
     ringFrom: "#fdba74",
@@ -96,7 +93,6 @@ export default function TopScorersPanel({
   const [activeTab, setActiveTab] = useState<Tab>("alltime");
   const [mobileRestOpen, setMobileRestOpen] = useState(false);
 
-  // Derive month label from the JSON metadata if available
   const monthLabel =
     (monthlyRaw as { month_label?: string }).month_label ?? "This Month";
 
@@ -122,7 +118,6 @@ export default function TopScorersPanel({
           }}
         />
 
-        {/* Title row */}
         <div className='relative flex items-center gap-3 mb-3'>
           <div className='relative flex-shrink-0'>
             <div
@@ -156,7 +151,6 @@ export default function TopScorersPanel({
           </div>
         </div>
 
-        {/* Tab pill switcher — All Time | Month only */}
         <div className='relative flex rounded-xl bg-gray-100 p-0.5 gap-0.5'>
           {TABS.map((tab) => (
             <button
@@ -215,6 +209,7 @@ export default function TopScorersPanel({
                         slot.selfEnd ? "self-end" : ""
                       }`}
                     >
+                      {/* Crown only — no medal badge */}
                       <span
                         className={`${slot.crownSize} select-none mb-1 block`}
                         style={{
@@ -250,10 +245,11 @@ export default function TopScorersPanel({
                             </div>
                           </div>
                         </div>
+                        {/* Rank number badge instead of medal emoji */}
                         <span
-                          className={`absolute -bottom-1 -right-1 w-[22px] h-[22px] rounded-full ${slot.badgeBg} border-2 border-white flex items-center justify-center text-xs shadow-lg`}
+                          className={`absolute -bottom-1 -right-1 w-[22px] h-[22px] rounded-full ${slot.badgeBg} border-2 border-white flex items-center justify-center text-[10px] font-black text-white shadow-lg`}
                         >
-                          {slot.medal}
+                          {slot.podiumNum}
                         </span>
                       </div>
                       <p
@@ -286,7 +282,7 @@ export default function TopScorersPanel({
             {/* Ranks 4–10 */}
             {rest.length > 0 && (
               <div className='px-3 py-2 flex flex-col gap-1'>
-                {/* Desktop: always shown, scrolls within panel */}
+                {/* Desktop: always shown */}
                 <div className='hidden lg:flex flex-col gap-1'>
                   {rest.map((scorer, i) => (
                     <RankRow
