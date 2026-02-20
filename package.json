@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "update-all": "node updateScript/updateProject.mjs && node updateScript/updatePackages.mjs",
+    "update-all": "node updateScript/updateProject.mjs && node updateScript/updatePackages.mjs && node updateScript/make-cache.mjs && updateScript/make-leaderboard.mjs && updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "start": "next start",
     "lint": "next lint",

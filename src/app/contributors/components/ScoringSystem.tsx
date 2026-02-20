@@ -103,12 +103,12 @@ const ScoringSystem = () => {
                 Quality Score
               </h4>
               <div className='space-y-2 text-xs text-emerald-900/80 font-mono'>
-                <div className='flex items-start gap-1.5'>
+                {/* <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
                     Impact bonus <strong>0–10</strong>
                   </span>
-                </div>
+                </div> */}
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
@@ -212,7 +212,7 @@ const ScoringSystem = () => {
             </div>
           </div>
 
-          <div className='bg-gray-50 border border-gray-200 rounded-xl p-3.5 flex items-start gap-3'>
+          {/* <div className='bg-gray-50 border border-gray-200 rounded-xl p-3.5 flex items-start gap-3'>
             <Info className='w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5' />
             <p className='text-xs text-gray-600'>
               <strong className='text-gray-800'>Impact bonus</strong> ranges
@@ -222,7 +222,7 @@ const ScoringSystem = () => {
               <code className='bg-gray-200 rounded px-1'>10</code> (critical),
               awarded per PR based on overall impact to the project.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
