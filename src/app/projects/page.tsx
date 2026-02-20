@@ -86,21 +86,17 @@ export default function ProjectsPage() {
 
       // Tags/Tech filters...
       if (filters.tags.length > 0) {
-        const hasTag = filters.tags.some(
-          (tag) =>
-            project.tags?.some(
-              (pTag) => pTag.toLowerCase() === tag.toLowerCase()
-            )
+        const hasTag = filters.tags.some((tag) =>
+          project.tags?.some((pTag) => pTag.toLowerCase() === tag.toLowerCase())
         );
         if (!hasTag) return false;
       }
 
       if (filters.technologies.length > 0) {
-        const hasTech = filters.technologies.some(
-          (tech) =>
-            project.tags?.some(
-              (pTag) => pTag.toLowerCase() === tech.toLowerCase()
-            )
+        const hasTech = filters.technologies.some((tech) =>
+          project.tags?.some(
+            (pTag) => pTag.toLowerCase() === tech.toLowerCase()
+          )
         );
         if (!hasTech) return false;
       }
