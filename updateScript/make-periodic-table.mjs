@@ -22,7 +22,7 @@ const CONFIG = {
   SPECIAL_PROJECTS: [
     {
       id: "special-website",
-      title: "Mindfire Digital Website",
+      title: "Mindfire Foss Website",
       repoName: "mindfiredigital.github.io",
     },
   ],
