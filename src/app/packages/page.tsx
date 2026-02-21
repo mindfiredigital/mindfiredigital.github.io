@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import PackageCount from "./components/PackageCount";
+import TotalDownloads from "./components/Totaldownloads";
 import { usePackageStats } from "@/hooks/usePackageStats";
 import { groupPackages, getFrameworkName } from "../utils";
 import { GroupedPackage, ProjectGroupedData } from "@/types";
@@ -18,6 +19,8 @@ import github from "../../../public/images/bxl-github.svg";
 import nuget from "../../../public/images/social-media/nuget-svgrepo-com.png";
 
 import projectsGroupedData from "../projects/assets/projects_grouped.json";
+
+type FilterType = "all" | "npm" | "pypi";
 
 const Stats = () => {
   const {
@@ -42,6 +45,7 @@ const Stats = () => {
     null
   );
   const [groupedPackages, setGroupedPackages] = useState<GroupedPackage[]>([]);
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
 
   useEffect(() => {
     if (packages.length > 0) {
@@ -58,30 +62,77 @@ const Stats = () => {
     setShowPackagesModal(true);
   };
 
+  // Filter grouped packages based on active filter
+  const filteredPackages = groupedPackages.filter((group) => {
+    if (activeFilter === "all") return true;
+    return group.packages.some(
+      (pkg) => pkg.type?.toLowerCase() === activeFilter
+    );
+  });
+
+  // Compute total downloads only from filtered packages
+  const totalDownloads = filteredPackages.reduce(
+    (sum, group) => sum + (group.totalDownloads || 0),
+    0
+  );
+
+  // Compute total package count from filtered packages
+  const totalPackageCount = filteredPackages.reduce(
+    (sum, group) => sum + group.packages.length,
+    0
+  );
+
+  const filterOptions: { label: string; value: FilterType }[] = [
+    { label: "All", value: "all" },
+    { label: "NPM", value: "npm" },
+    { label: "PyPI", value: "pypi" },
+  ];
+
   return (
     <section className='bg-slate-50'>
       <div className='container mx-auto flex flex-col gap-4 items-center'>
+        {/* Header */}
         <div className='flex items-center gap-4 mt-10'>
           <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
             Our Packages
           </h1>
-          <PackageCount
-            totalPackages={
-              packages.filter((pkg) => pkg.status === "published").length
-            }
-          />
+          <PackageCount totalPackages={totalPackageCount} />
         </div>
-        <p className='mt-6 text-xl text-mf-light-grey tracking-wide mb-10 text-center px-4'>
+
+        <p className='mt-6 text-xl text-mf-light-grey tracking-wide text-center px-4'>
           Elevate your projects with Mindfire&apos;s game-changing open-source
           packages.
         </p>
 
+        {/* Total Downloads Badge */}
+        <TotalDownloads totalDownloads={totalDownloads} />
+
+        {/* Three-way Toggle Filter */}
+        <div className='mt-4 flex items-center'>
+          <div className='relative flex items-center bg-white border border-gray-200 rounded-full shadow-sm p-1 gap-1'>
+            {filterOptions.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => setActiveFilter(opt.value)}
+                className={`relative z-10 px-5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 focus:outline-none ${
+                  activeFilter === opt.value
+                    ? "bg-gradient-to-r from-mindfire-text-red to-orange-500 text-white shadow-md"
+                    : "text-gray-500 hover:text-gray-800"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Package Grid */}
         <div className='w-full'>
-          <div className='mt-12 px-8 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
-            {groupedPackages.map((group) => (
+          <div className='mt-8 px-8 grid gap-6 max-w-6xl mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center'>
+            {filteredPackages.map((group) => (
               <div
                 key={group.id}
-                className='border p-4 rounded bg-white flex flex-col justify-between drop-shadow-md w-80 h-48 hover:scale-105 transition-transform'
+                className='border p-4 rounded bg-white flex flex-col justify-between drop-shadow-md w-full max-w-xs h-48 hover:scale-105 transition-transform'
               >
                 <div className='flex flex-row items-start justify-between'>
                   <div className='flex-1'>
@@ -169,7 +220,7 @@ const Stats = () => {
                       >
                         <Image
                           src={
-                            group.packages[0].type.toLowerCase() === "pypi"
+                            group.packages[0].type?.toLowerCase() === "pypi"
                               ? pypi
                               : group.packages[0].type === "Nuget"
                                 ? nuget

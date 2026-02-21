@@ -11,7 +11,6 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
 
   return (
     <div className='relative rounded-full'>
-      {/* Actual content */}
       <div className='relative flex items-center gap-2 bg-white/90 border border-gray-200 backdrop-blur-sm rounded-full shadow-md shadow-red-300 py-2 px-4 hover:shadow-xl transition-shadow duration-300'>
         <span className='text-3xl font-bold bg-gradient-to-r from-mindfire-text-red to-orange-500 bg-clip-text text-transparent'>
           {count}

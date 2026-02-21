@@ -43,6 +43,10 @@ jobs:
           git restore src/app/projects/assets/packages.json
           git restore src/app/projects/assets/projects_grouped.json
           git restore src/app/projects/assets/contributor-mapping.json
+          git restore src/app/projects/assets/leaderboard-cache.json
+          git restore src/app/projects/assets/leaderboard-monthly.json
+          git restore src/app/projects/assets/leaderboard.json
+          git restore src/app/projects/assets/top-scorers.json
 
       - name: 'Fetch branches'
         run: git fetch origin
