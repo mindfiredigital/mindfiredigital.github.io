@@ -16,6 +16,9 @@ const CONFIG = {
     "./src/app/projects/assets/contributor-mapping.json",
   CACHE_FILE: "./src/app/projects/assets/leaderboard-cache.json",
 
+  // Fix 4: Progress checkpoint file
+  PROGRESS_FILE: "./src/app/projects/assets/leaderboard-progress.json",
+
   SPECIAL_PROJECTS: [
     {
       id: "special-website",
@@ -39,12 +42,117 @@ const CONFIG = {
 };
 
 // ============================================================================
-// HELPERS
+// RATE LIMIT HELPERS
 // ============================================================================
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+class RequestQueue {
+  constructor(concurrency = 1, delayBetweenRequests = 500) {
+    this.concurrency = concurrency;
+    this.delayBetweenRequests = delayBetweenRequests;
+    this.queue = [];
+    this.running = 0;
+  }
+
+  async add(fn) {
+    return new Promise((resolve, reject) => {
+      this.queue.push({ fn, resolve, reject });
+      this.process();
+    });
+  }
+
+  async process() {
+    if (this.running >= this.concurrency || this.queue.length === 0) return;
+
+    this.running++;
+    const { fn, resolve, reject } = this.queue.shift();
+
+    try {
+      const result = await fn();
+      resolve(result);
+    } catch (error) {
+      reject(error);
+    } finally {
+      this.running--;
+      if (this.queue.length > 0) {
+        await delay(this.delayBetweenRequests);
+      }
+      this.process();
+    }
+  }
+}
+
+const githubQueue = new RequestQueue(1, 500);
+
+// ============================================================================
+// Fix 3: Smart retry that reads Retry-After / X-RateLimit-Reset headers
+// ============================================================================
+
+async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const data = await rawFetchGitHub(url);
+      return data;
+    } catch (error) {
+      const msg = error.message?.toLowerCase() || "";
+      const isRateLimit =
+        error.status === 429 ||
+        error.status === 403 ||
+        msg.includes("429") ||
+        msg.includes("rate limit") ||
+        msg.includes("rate limited");
+
+      if (isRateLimit && attempt < maxRetries - 1) {
+        let waitTime;
+
+        if (error.retryAfterMs && error.retryAfterMs > 0) {
+          // GitHub told us exactly how long — trust it + 1s buffer
+          waitTime = error.retryAfterMs + 1000;
+          console.warn(
+            `⏳ Rate limited (header). Waiting ${Math.round(waitTime / 1000)}s` +
+              ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
+          );
+        } else if (error.resetAtMs && error.resetAtMs > Date.now()) {
+          // X-RateLimit-Reset: unix timestamp when quota refills
+          waitTime = error.resetAtMs - Date.now() + 1500;
+          console.warn(
+            `⏳ Rate limited (reset). Waiting ${Math.round(waitTime / 1000)}s` +
+              ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
+          );
+        } else {
+          // Fallback: exponential backoff with jitter
+          const baseWait = initialDelay * Math.pow(2, attempt);
+          const jitter = Math.random() * 1000;
+          waitTime = baseWait + jitter;
+          console.warn(
+            `⏳ Rate limited (backoff). Waiting ${Math.round(waitTime / 1000)}s` +
+              ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
+          );
+        }
+
+        await delay(waitTime);
+        continue;
+      }
+
+      if (attempt === maxRetries - 1) {
+        console.error(`❌ Failed after ${maxRetries} attempts: ${url}`);
+      }
+      throw error;
+    }
+  }
+}
+
 async function fetchGitHub(url) {
+  return githubQueue.add(() => fetchWithRetry(url));
+}
+
+// ============================================================================
+// HELPERS
+// ============================================================================
+
+// Fix 3: rawFetchGitHub now extracts rate-limit headers and attaches to error
+async function rawFetchGitHub(url) {
   return new Promise((resolve, reject) => {
     const options = {
       headers: {
@@ -58,7 +166,25 @@ async function fetchGitHub(url) {
         let data = "";
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
-          if (res.statusCode !== 200) {
+          if (res.statusCode === 403 || res.statusCode === 429) {
+            const err = new Error(
+              `Rate limited. Retry after: ${res.headers["retry-after"] ?? "unknown"}s`
+            );
+            err.status = res.statusCode;
+
+            // Attach parsed header values so fetchWithRetry can use them
+            const retryAfterRaw = res.headers["retry-after"];
+            const rateLimitReset = res.headers["x-ratelimit-reset"];
+
+            if (retryAfterRaw) {
+              err.retryAfterMs = parseInt(retryAfterRaw, 10) * 1000;
+            }
+            if (rateLimitReset) {
+              err.resetAtMs = parseInt(rateLimitReset, 10) * 1000;
+            }
+
+            reject(err);
+          } else if (res.statusCode !== 200) {
             reject(new Error(`HTTP ${res.statusCode}: ${data}`));
           } else {
             resolve(JSON.parse(data));
@@ -102,12 +228,52 @@ function writeJsonFile(filePath, data) {
 }
 
 // ============================================================================
+// Fix 4: PROGRESS CHECKPOINT — resume from crash without re-fetching
+// ============================================================================
+
+function loadProgress() {
+  try {
+    const fullPath = path.resolve(CONFIG.PROGRESS_FILE);
+    if (!fs.existsSync(fullPath)) return { completed: {}, partialCache: {} };
+    const saved = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+    const count = Object.keys(saved.completed || {}).length;
+    if (count > 0) {
+      console.log(
+        `♻️  Resuming — ${count} project(s) already cached, skipping:`
+      );
+      Object.keys(saved.completed).forEach((id) =>
+        console.log(`   ✓ ${saved.completed[id].title} (${id})`)
+      );
+      console.log();
+    }
+    return saved;
+  } catch {
+    return { completed: {}, partialCache: {} };
+  }
+}
+
+function saveProgress(projectId, projectTitle, projectData, progress) {
+  progress.completed[projectId] = {
+    title: projectTitle,
+    savedAt: new Date().toISOString(),
+  };
+  progress.partialCache[projectId] = projectData;
+  writeJsonFile(CONFIG.PROGRESS_FILE, progress);
+}
+
+function clearProgress() {
+  try {
+    const fullPath = path.resolve(CONFIG.PROGRESS_FILE);
+    if (fs.existsSync(fullPath)) fs.unlinkSync(fullPath);
+  } catch {}
+}
+
+// ============================================================================
 // FETCH DEFAULT BRANCH
 // ============================================================================
 
 async function fetchDefaultBranch(owner, repo) {
   try {
-    await delay(CONFIG.DELAY_MS);
     const repoData = await fetchGitHub(
       `https://api.github.com/repos/${owner}/${repo}`
     );
@@ -120,8 +286,6 @@ async function fetchDefaultBranch(owner, repo) {
 
 // ============================================================================
 // FETCH ALL COMMITS FROM DEFAULT BRANCH ONLY
-// Returns both the commits array AND the SHA set so we can reuse it for PR
-// filtering without making a second API pass.
 // ============================================================================
 
 async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
@@ -135,13 +299,10 @@ async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
   while (true) {
     const url = `https://api.github.com/repos/${owner}/${repo}/commits?sha=${defaultBranch}&per_page=100&page=${page}`;
     try {
-      await delay(CONFIG.DELAY_MS);
       const commits = await fetchGitHub(url);
       apiCalls++;
-
       if (!commits || commits.length === 0) break;
 
-      // Only keep human commits — bots don't count toward anyone's score
       const humanCommits = commits.filter(
         (c) => !isBot(c.author?.login) && !isBot(c.commit?.author?.name)
       );
@@ -182,24 +343,13 @@ function analyzePRComplexity(pr) {
 
 // ============================================================================
 // FETCH ALL MERGED PRS THAT LANDED ON DEFAULT BRANCH
-//
-// Strategy:
-//   1. Build the set of all commit SHAs on the default branch (reuse the
-//      commits we already fetched — passed in as `defaultBranchSHAs`).
-//   2. Fetch every closed PR.
-//   3. Keep only PRs where merged_at !== null AND
-//      merge_commit_sha is in defaultBranchSHAs.
-//      → This guarantees the PR's code actually reached the default branch,
-//        even if it was merged via a release/staging branch first.
-//   4. Enrich each qualifying PR with file-count/line-count (complexity),
-//      reviews, and review comments.
 // ============================================================================
 
 async function fetchAllMergedPRsToDefault(
   owner,
   repo,
   defaultBranch,
-  defaultBranchSHAs // reuse the SHA set built from commits fetch
+  defaultBranchSHAs
 ) {
   console.log(
     `   🔍 Fetching merged PRs whose merge_commit_sha is on ${defaultBranch}...`
@@ -215,20 +365,15 @@ async function fetchAllMergedPRsToDefault(
   while (true) {
     const url = `https://api.github.com/repos/${owner}/${repo}/pulls?state=closed&per_page=100&page=${page}&sort=updated&direction=desc`;
     try {
-      await delay(CONFIG.DELAY_MS);
       const prs = await fetchGitHub(url);
       apiCalls++;
-
       if (!prs || prs.length === 0) break;
 
       for (const pr of prs) {
-        // Must be merged (not just closed), not a bot, and its merge commit
-        // must exist on the default branch
         if (!pr.merged_at) continue;
         if (isBot(pr.user?.login)) continue;
         if (!pr.merge_commit_sha) continue;
         if (!defaultBranchSHAs.has(pr.merge_commit_sha)) continue;
-
         candidatePRs.push(pr);
       }
 
@@ -253,7 +398,6 @@ async function fetchAllMergedPRsToDefault(
     const pr = candidatePRs[i];
 
     try {
-      await delay(CONFIG.DELAY_MS);
       const fullPR = await fetchGitHub(
         `https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}`
       );
@@ -262,7 +406,6 @@ async function fetchAllMergedPRsToDefault(
 
       let reviews = [];
       try {
-        await delay(CONFIG.DELAY_MS);
         reviews = await fetchGitHub(
           `https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}/reviews`
         );
@@ -272,7 +415,6 @@ async function fetchAllMergedPRsToDefault(
 
       let reviewComments = [];
       try {
-        await delay(CONFIG.DELAY_MS);
         reviewComments = await fetchGitHub(
           `https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}/comments`
         );
@@ -340,7 +482,6 @@ async function fetchIssueCommentAuthors(owner, repo, issueNumber) {
   while (true) {
     const url = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100&page=${page}`;
     try {
-      await delay(CONFIG.DELAY_MS);
       const comments = await fetchGitHub(url);
       if (!comments || comments.length === 0) break;
 
@@ -370,20 +511,16 @@ async function fetchCategorizedIssues(owner, repo) {
   console.log(`   🔍 Fetching categorized issues...`);
   let page = 1;
   const issues = { bugs: [], enhancements: [], documentation: [], others: [] };
-  let apiCalls = 0;
   const allRawIssues = [];
 
   while (true) {
     const url = `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&page=${page}`;
     try {
-      await delay(CONFIG.DELAY_MS);
       const allIssues = await fetchGitHub(url);
-      apiCalls++;
-
       if (!allIssues || allIssues.length === 0) break;
 
       for (const issue of allIssues) {
-        if (issue.pull_request) continue; // skip PRs listed in issues endpoint
+        if (issue.pull_request) continue;
         if (isBot(issue.user?.login)) continue;
         allRawIssues.push(issue);
       }
@@ -458,7 +595,6 @@ async function fetchCategorizedIssues(owner, repo) {
 
 // ============================================================================
 // PROCESS SINGLE PROJECT
-// Commits are fetched ONCE and the SHA set is reused for PR filtering.
 // ============================================================================
 
 async function processProject(projectId, projectTitle, repoName) {
@@ -468,7 +604,6 @@ async function processProject(projectId, projectTitle, repoName) {
     const defaultBranch = await fetchDefaultBranch(CONFIG.OWNER, repoName);
     console.log(`   🌿 Default branch: ${defaultBranch}`);
 
-    // Fetch commits ONCE — reuse SHA set for PR filtering (no double fetch)
     const commits = await fetchAllCommitsFromDefaultBranch(
       CONFIG.OWNER,
       repoName,
@@ -476,7 +611,6 @@ async function processProject(projectId, projectTitle, repoName) {
     );
     const defaultBranchSHAs = new Set(commits.map((c) => c.sha));
 
-    // Pass SHA set directly — avoids a second full commit fetch
     const mergedPRs = await fetchAllMergedPRsToDefault(
       CONFIG.OWNER,
       repoName,
@@ -486,14 +620,12 @@ async function processProject(projectId, projectTitle, repoName) {
 
     const issues = await fetchCategorizedIssues(CONFIG.OWNER, repoName);
 
-    // Normalize commit shape for generate-leaderboard.js
-    // Fields: author_login, author_name, date, sha, message
     const normalizedCommits = commits.map((c) => ({
       sha: c.sha,
       author_login: c.author?.login || null,
       author_name: c.commit?.author?.name || null,
       date: c.commit?.author?.date || null,
-      message: (c.commit?.message || "").split("\n")[0], // first line only
+      message: (c.commit?.message || "").split("\n")[0],
     }));
 
     const mapIssue = (i) => ({
@@ -542,17 +674,19 @@ async function cacheLeaderboardData() {
   console.log("\n" + "=".repeat(80));
   console.log("🏆 LEADERBOARD DATA FETCHER");
   console.log("=".repeat(80));
-  console.log(`Rules:`);
-  console.log(`  📝 Commits = only commits on the default branch`);
+  console.log(`  📝 Commits  = only commits on the default branch`);
   console.log(
-    `  🔀 PRs     = only merged PRs whose merge_commit_sha is on default branch`
+    `  🔀 PRs      = only merged PRs whose merge_commit_sha is on default branch`
   );
-  console.log(
-    `  🎯 PR complexity: small (<3 files & <100 lines) / medium / large`
-  );
+  console.log(`  🎯 Complexity: small / medium / large`);
   console.log(`  👀 PR reviews + review comments`);
   console.log(`  🐛 Issues categorized (bugs / enhancements / docs / others)`);
-  console.log(`  💬 Issue comments — real authors fetched per issue\n`);
+  console.log(`  💬 Issue comments — real authors fetched per issue`);
+  console.log(`  ⚙️  Queue: concurrency=1, 500ms delay`);
+  console.log(`  ✅ Fix 3: Reads Retry-After / X-RateLimit-Reset headers`);
+  console.log(
+    `  ✅ Fix 4: Checkpointed — crashes resume from last completed project\n`
+  );
 
   const contributors = readJsonFile(CONFIG.CONTRIBUTORS_FILE) || [];
   const projects = readJsonFile(CONFIG.PROJECTS_FILE) || [];
@@ -567,13 +701,16 @@ async function cacheLeaderboardData() {
   );
   console.log(`   Special projects: ${CONFIG.SPECIAL_PROJECTS.length}\n`);
 
-  const allProjectsData = {};
+  // Fix 4: Load existing progress — skip already-completed projects
+  const progress = loadProgress();
+  const allProjectsData = { ...progress.partialCache };
+  const skippedCount = Object.keys(progress.completed).length;
+
   const totalProjects = projects.length + CONFIG.SPECIAL_PROJECTS.length;
   let processedCount = 0;
 
   for (const project of projects) {
     processedCount++;
-    console.log(`\n[${processedCount}/${totalProjects}] 📌 ${project.title}`);
 
     const repoMatch = (
       project.githubUrl ||
@@ -582,9 +719,20 @@ async function cacheLeaderboardData() {
     ).match(/github\.com\/[^\/]+\/([^\/]+)/);
 
     if (!repoMatch) {
+      console.log(`\n[${processedCount}/${totalProjects}] 📌 ${project.title}`);
       console.log(`   ⚠️ Skipping — no valid GitHub URL`);
       continue;
     }
+
+    // Fix 4: Skip if already done in a previous run
+    if (progress.completed[project.id]) {
+      console.log(
+        `\n[${processedCount}/${totalProjects}] ⏭️  ${project.title} — already cached, skipping`
+      );
+      continue;
+    }
+
+    console.log(`\n[${processedCount}/${totalProjects}] 📌 ${project.title}`);
 
     const projectData = await processProject(
       project.id,
@@ -592,19 +740,35 @@ async function cacheLeaderboardData() {
       repoMatch[1]
     );
 
-    if (projectData) allProjectsData[project.id] = projectData;
+    if (projectData) {
+      allProjectsData[project.id] = projectData;
+      saveProgress(project.id, project.title, projectData, progress);
+      console.log(`   💾 Progress saved (${project.title})`);
+    }
   }
 
   for (const sp of CONFIG.SPECIAL_PROJECTS) {
     processedCount++;
+
+    if (progress.completed[sp.id]) {
+      console.log(
+        `\n[${processedCount}/${totalProjects}] ⏭️  ${sp.title} — already cached, skipping`
+      );
+      continue;
+    }
+
     console.log(`\n[${processedCount}/${totalProjects}] 🌟 ${sp.title}`);
 
     const projectData = await processProject(sp.id, sp.title, sp.repoName);
-    if (projectData) allProjectsData[sp.id] = projectData;
+    if (projectData) {
+      allProjectsData[sp.id] = projectData;
+      saveProgress(sp.id, sp.title, projectData, progress);
+      console.log(`   💾 Progress saved (${sp.title})`);
+    }
   }
 
   console.log("\n" + "=".repeat(80));
-  console.log("💾 Saving cache...");
+  console.log("💾 Saving final cache...");
 
   const success = writeJsonFile(CONFIG.CACHE_FILE, allProjectsData);
 
@@ -617,10 +781,20 @@ async function cacheLeaderboardData() {
       (s, p) => s + (p.stats?.total_merged_prs || 0),
       0
     );
-    console.log(`✅ Cached ${Object.keys(allProjectsData).length} projects`);
+    console.log(
+      `✅ Cached ${Object.keys(allProjectsData).length} projects total`
+    );
+    console.log(`   ⏭️  Skipped (already cached): ${skippedCount}`);
+    console.log(
+      `   🆕 Newly fetched this run:   ${Object.keys(allProjectsData).length - skippedCount}`
+    );
     console.log(`   Total commits (default branch): ${totalCommits}`);
     console.log(`   Total merged PRs (default branch): ${totalPRs}`);
     console.log(`📁 → ${CONFIG.CACHE_FILE}`);
+
+    // Fix 4: Clean up checkpoint now that everything succeeded
+    clearProgress();
+    console.log(`🧹 Progress checkpoint cleared`);
   }
 
   console.log("=".repeat(80) + "\n");

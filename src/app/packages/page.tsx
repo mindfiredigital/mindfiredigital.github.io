@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import PackageCount from "./components/PackageCount";
-// import TotalDownloads from "./components/Totaldownloads";
+import TotalDownloads from "./components/Totaldownloads";
 import { usePackageStats } from "@/hooks/usePackageStats";
 import { groupPackages, getFrameworkName } from "../utils";
 import { GroupedPackage, ProjectGroupedData } from "@/types";
@@ -71,10 +71,10 @@ const Stats = () => {
   });
 
   // Compute total downloads only from filtered packages
-  // const totalDownloads = filteredPackages.reduce(
-  //   (sum, group) => sum + (group.totalDownloads || 0),
-  //   0
-  // );
+  const totalDownloads = filteredPackages.reduce(
+    (sum, group) => sum + (group.totalDownloads || 0),
+    0
+  );
 
   // Compute total package count from filtered packages
   const totalPackageCount = filteredPackages.reduce(
@@ -105,7 +105,7 @@ const Stats = () => {
         </p>
 
         {/* Total Downloads Badge */}
-        {/* <TotalDownloads totalDownloads={totalDownloads} /> */}
+        <TotalDownloads totalDownloads={totalDownloads} />
 
         {/* Three-way Toggle Filter */}
         <div className='mt-4 flex items-center'>

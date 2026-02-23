@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-19T09:00:16.374Z",
+  "generated_at": "2026-02-23T11:01:04.942Z",
   "scoring_formula": {
     "description": "Total_Score = Code_Score + Community_Score + Quality_Score",
     "code_formula": "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
@@ -36,11 +36,11 @@
   },
   "summary": {
     "total_contributors": 76,
-    "total_commits": 4881,
-    "total_prs": 1175,
-    "total_pr_reviews": 83,
-    "total_issues": 425,
-    "avg_score": 298
+    "total_commits": 4951,
+    "total_prs": 1184,
+    "total_pr_reviews": 85,
+    "total_issues": 441,
+    "avg_score": 302
   },
   "leaderboard": [
     {
@@ -49,8 +49,8 @@
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
       "html_url": "https://github.com/deepakyadav-01",
-      "totalCommits": 642,
-      "totalPRs": 210,
+      "totalCommits": 646,
+      "totalPRs": 211,
       "totalPRReviewsGiven": 7,
       "totalCodeReviewComments": 5,
       "totalIssuesOpened": 39,
@@ -60,15 +60,15 @@
       "prs_by_complexity": {
         "small": 69,
         "medium": 53,
-        "large": 88
+        "large": 89
       },
-      "total_score": 3465,
-      "code_score": 2748,
+      "total_score": 3484,
+      "code_score": 2764,
       "community_score": 65,
-      "quality_score": 652,
+      "quality_score": 655,
       "score_breakdown": {
-        "pr_score": 1438,
-        "commits_score": 1284,
+        "pr_score": 1446,
+        "commits_score": 1292,
         "pr_reviews_score": 21,
         "code_comments_score": 5,
         "issues_opened_score": 62,
@@ -76,7 +76,7 @@
         "tests_score": 4,
         "docs_score": 18,
         "mentor_score": 0,
-        "zero_revisions_score": 630,
+        "zero_revisions_score": 633,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -89,7 +89,7 @@
         "react-text-igniter",
         "Ignix UI",
         "TextIgniter",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "react-text-igniter": {
@@ -461,8 +461,18 @@
           }
         },
         "Ignix UI": {
-          "commits": 395,
+          "commits": 399,
           "prs": [
+            {
+              "number": 614,
+              "merged_at": "2026-02-23T06:51:30Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 43,
+              "additions": 16882,
+              "deletions": 3919,
+              "reviews_count": 0
+            },
             {
               "number": 604,
               "merged_at": "2026-02-18T19:00:56Z",
@@ -2027,7 +2037,7 @@
             "has_tests": 2,
             "has_docs": 8,
             "first_time_mentor": 0,
-            "zero_revisions": 131,
+            "zero_revisions": 132,
             "impact_bonuses": []
           }
         },
@@ -2475,7 +2485,7 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 13,
           "prs": [
             {
@@ -2612,7 +2622,7 @@
           }
         }
       },
-      "lastActiveDays": 5
+      "lastActiveDays": null
     },
     {
       "rank": 2,
@@ -2620,34 +2630,34 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 990,
-      "totalPRs": 114,
-      "totalPRReviewsGiven": 11,
+      "totalCommits": 994,
+      "totalPRs": 116,
+      "totalPRReviewsGiven": 13,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 51,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 8.68,
+      "avgCommitsPerPR": 8.57,
       "projectsWorkingOn": 9,
       "prs_by_complexity": {
-        "small": 43,
+        "small": 44,
         "medium": 27,
-        "large": 44
+        "large": 45
       },
-      "total_score": 3199,
-      "code_score": 2778,
+      "total_score": 3232,
+      "code_score": 2805,
       "community_score": 75,
-      "quality_score": 346,
+      "quality_score": 352,
       "score_breakdown": {
-        "pr_score": 765,
-        "commits_score": 1980,
-        "pr_reviews_score": 33,
+        "pr_score": 778,
+        "commits_score": 1988,
+        "pr_reviews_score": 39,
         "code_comments_score": 0,
         "issues_opened_score": 74,
         "issue_comments_score": 1,
         "tests_score": 2,
         "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 342,
+        "zero_revisions_score": 348,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -2665,7 +2675,7 @@
         "Ignix UI",
         "Next.js Fortress",
         "MonoDog",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "react-text-igniter": {
@@ -4130,9 +4140,29 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
-          "commits": 98,
+        "Mindfire Foss Website": {
+          "commits": 102,
           "prs": [
+            {
+              "number": 223,
+              "merged_at": "2026-02-23T04:47:28Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 221,
+              "merged_at": "2026-02-21T14:03:50Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 27,
+              "additions": 111880,
+              "deletions": 437,
+              "reviews_count": 0
+            },
             {
               "number": 200,
               "merged_at": "2026-02-02T12:50:22Z",
@@ -4494,7 +4524,7 @@
               "reviews_count": 0
             }
           ],
-          "pr_reviews_given": 1,
+          "pr_reviews_given": 3,
           "code_review_comments": 0,
           "issues_opened": [],
           "issue_comments_given": [],
@@ -4502,7 +4532,7 @@
             "has_tests": 0,
             "has_docs": 0,
             "first_time_mentor": 0,
-            "zero_revisions": 36,
+            "zero_revisions": 38,
             "impact_bonuses": []
           }
         }
@@ -4569,7 +4599,7 @@
         "Ignix UI",
         "AUTOTEST",
         "Next.js Fortress",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "Canvas Editor": {
@@ -5006,7 +5036,7 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 178,
           "prs": [
             {
@@ -5686,7 +5716,7 @@
           }
         }
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 12
     },
     {
       "rank": 4,
@@ -6956,29 +6986,29 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "totalCommits": 197,
-      "totalPRs": 48,
+      "totalCommits": 221,
+      "totalPRs": 50,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 41,
+      "totalIssuesOpened": 51,
       "totalIssueComments": 5,
-      "avgCommitsPerPR": 4.1,
+      "avgCommitsPerPR": 4.42,
       "projectsWorkingOn": 3,
       "prs_by_complexity": {
-        "small": 23,
+        "small": 24,
         "medium": 9,
-        "large": 16
+        "large": 17
       },
-      "total_score": 922,
-      "code_score": 704,
-      "community_score": 49,
+      "total_score": 1001,
+      "code_score": 765,
+      "community_score": 67,
       "quality_score": 169,
       "score_breakdown": {
-        "pr_score": 310,
-        "commits_score": 394,
+        "pr_score": 323,
+        "commits_score": 442,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 44,
+        "issues_opened_score": 62,
         "issue_comments_score": 5,
         "tests_score": 4,
         "docs_score": 24,
@@ -6987,15 +7017,15 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 22,
-        "issues_total": 41,
+        "issues_opened": 31,
+        "issues_total": 51,
         "issue_comments": 5,
         "issue_comments_total": 5
       },
       "projects": [
         "ESLint Plugin Hub",
         "Next.js Fortress",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "ESLint Plugin Hub": {
@@ -7748,9 +7778,29 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
-          "commits": 34,
+        "Mindfire Foss Website": {
+          "commits": 58,
           "prs": [
+            {
+              "number": 222,
+              "merged_at": "2026-02-23T04:46:53Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 1
+            },
+            {
+              "number": 220,
+              "merged_at": "2026-02-21T14:02:56Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 27,
+              "additions": 111880,
+              "deletions": 437,
+              "reviews_count": 1
+            },
             {
               "number": 207,
               "merged_at": "2026-02-06T12:10:04Z",
@@ -7856,12 +7906,147 @@
           "code_review_comments": 0,
           "issues_opened": [
             {
+              "number": 219,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add TotalDownloads badge showing aggregate downloads with compact formatting",
+              "created_at": "2026-02-20T09:07:20Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:15:13Z"
+                }
+              ]
+            },
+            {
+              "number": 218,
+              "author": "ParasMindfire",
+              "title": "[BUG]: PackageCount badge should update reactively when the toggle filter changes",
+              "created_at": "2026-02-20T09:05:59Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:14:53Z"
+                }
+              ]
+            },
+            {
+              "number": 217,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add three-way toggle filter (All / NPM / PyPI) for the package grid",
+              "created_at": "2026-02-20T09:04:39Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:14:31Z"
+                }
+              ]
+            },
+            {
+              "number": 216,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add \"View All Packages\" modal for monorepo cards",
+              "created_at": "2026-02-20T09:03:08Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:14:00Z"
+                }
+              ]
+            },
+            {
+              "number": 215,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Group monorepo packages into a single card instead of individual cards per sub-package",
+              "created_at": "2026-02-20T09:01:33Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:13:27Z"
+                }
+              ]
+            },
+            {
+              "number": 214,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add mobile filter drawer with floating action button and active filter count badge",
+              "created_at": "2026-02-20T08:58:40Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:12:44Z"
+                }
+              ]
+            },
+            {
+              "number": 213,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add Sort By with 5 options for the project grid",
+              "created_at": "2026-02-20T08:54:38Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:12:13Z"
+                }
+              ]
+            },
+            {
+              "number": 212,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Add multi-select contributor filter with AND logic for collaboration discovery",
+              "created_at": "2026-02-20T08:52:47Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:11:38Z"
+                }
+              ]
+            },
+            {
+              "number": 211,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Build a sticky Filter Sidebar with search, tags, technology, stars, and contributor count filters",
+              "created_at": "2026-02-20T08:50:18Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:11:07Z"
+                }
+              ]
+            },
+            {
+              "number": 210,
+              "author": "ParasMindfire",
+              "title": "[Feature]: Merge Current & Upcoming Projects into a single unified page",
+              "created_at": "2026-02-20T08:47:33Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:08:52Z"
+                }
+              ]
+            },
+            {
               "number": 209,
               "author": "ParasMindfire",
-              "title": "RFC: New Contribution Tracking & Scoring System",
+              "title": "[RFC]: New Contribution Tracking & Scoring System",
               "created_at": "2026-02-12T06:52:58Z",
-              "comments": 0,
-              "comment_authors": []
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ParasMindfire",
+                  "created_at": "2026-02-20T09:08:04Z"
+                }
+              ]
             }
           ],
           "issue_comments_given": [],
@@ -7921,7 +8106,7 @@
       "projects": [
         "Page Builder",
         "Multi Cloud Monorepo Boilerplate",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "Page Builder": {
@@ -8535,7 +8720,7 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 8,
           "prs": [
             {
@@ -8610,47 +8795,67 @@
       "id": 117646878,
       "avatar_url": "https://avatars.githubusercontent.com/u/117646878?v=4",
       "html_url": "https://github.com/sanobery",
-      "totalCommits": 151,
-      "totalPRs": 29,
+      "totalCommits": 161,
+      "totalPRs": 31,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 21,
+      "totalIssuesOpened": 23,
       "totalIssueComments": 3,
-      "avgCommitsPerPR": 5.21,
+      "avgCommitsPerPR": 5.19,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
-        "large": 28
+        "large": 30
       },
-      "total_score": 685,
-      "code_score": 547,
-      "community_score": 45,
-      "quality_score": 93,
+      "total_score": 732,
+      "code_score": 584,
+      "community_score": 49,
+      "quality_score": 99,
       "score_breakdown": {
-        "pr_score": 245,
-        "commits_score": 302,
+        "pr_score": 262,
+        "commits_score": 322,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 42,
+        "issues_opened_score": 46,
         "issue_comments_score": 3,
         "tests_score": 0,
         "docs_score": 6,
         "mentor_score": 0,
-        "zero_revisions_score": 87,
+        "zero_revisions_score": 93,
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 21,
-        "issues_total": 21,
+        "issues_opened": 23,
+        "issues_total": 23,
         "issue_comments": 3,
         "issue_comments_total": 3
       },
       "projects": ["Ignix UI"],
       "byProject": {
         "Ignix UI": {
-          "commits": 151,
+          "commits": 161,
           "prs": [
+            {
+              "number": 603,
+              "merged_at": "2026-02-23T06:50:43Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 13,
+              "additions": 6455,
+              "deletions": 3908,
+              "reviews_count": 0
+            },
+            {
+              "number": 611,
+              "merged_at": "2026-02-23T06:50:41Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 29,
+              "additions": 11347,
+              "deletions": 3910,
+              "reviews_count": 0
+            },
             {
               "number": 594,
               "merged_at": "2026-02-16T09:23:12Z",
@@ -8946,6 +9151,27 @@
           "code_review_comments": 0,
           "issues_opened": [
             {
+              "number": 613,
+              "author": "sanobery",
+              "title": "[Feature]:Forbidden Page(5.6.3)",
+              "created_at": "2026-02-20T15:39:06Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 612,
+              "author": "sanobery",
+              "title": "[Feature]:Server Error(5.6.2)",
+              "created_at": "2026-02-20T15:36:47Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "sanobery",
+                  "created_at": "2026-02-20T15:37:01Z"
+                }
+              ]
+            },
+            {
               "number": 602,
               "author": "sanobery",
               "title": "[Feature]:Not Found Page(5.6.1)",
@@ -9209,12 +9435,12 @@
             "has_tests": 0,
             "has_docs": 3,
             "first_time_mentor": 0,
-            "zero_revisions": 29,
+            "zero_revisions": 31,
             "impact_bonuses": []
           }
         }
       },
-      "lastActiveDays": 2
+      "lastActiveDays": null
     },
     {
       "rank": 8,
@@ -9820,7 +10046,7 @@
           }
         }
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 5
     },
     {
       "rank": 9,
@@ -10808,756 +11034,602 @@
     },
     {
       "rank": 11,
-      "username": "mfsisudhanshuk",
-      "id": 187290740,
-      "avatar_url": "https://avatars.githubusercontent.com/u/187290740?v=4",
-      "html_url": "https://github.com/mfsisudhanshuk",
-      "totalCommits": 35,
-      "totalPRs": 40,
-      "totalPRReviewsGiven": 4,
-      "totalCodeReviewComments": 3,
-      "totalIssuesOpened": 29,
-      "totalIssueComments": 7,
-      "avgCommitsPerPR": 0.88,
-      "projectsWorkingOn": 2,
+      "username": "SandipMF",
+      "id": 113003818,
+      "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
+      "html_url": "https://github.com/SandipMF",
+      "totalCommits": 135,
+      "totalPRs": 23,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 25,
+      "totalIssueComments": 5,
+      "avgCommitsPerPR": 5.87,
+      "projectsWorkingOn": 1,
       "prs_by_complexity": {
-        "small": 9,
-        "medium": 12,
-        "large": 19
+        "small": 1,
+        "medium": 1,
+        "large": 21
       },
-      "total_score": 548,
-      "code_score": 370,
-      "community_score": 61,
-      "quality_score": 117,
+      "total_score": 582,
+      "code_score": 460,
+      "community_score": 51,
+      "quality_score": 71,
       "score_breakdown": {
-        "pr_score": 285,
-        "commits_score": 70,
-        "pr_reviews_score": 12,
-        "code_comments_score": 3,
-        "issues_opened_score": 54,
-        "issue_comments_score": 7,
-        "tests_score": 2,
-        "docs_score": 10,
+        "pr_score": 190,
+        "commits_score": 270,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 46,
+        "issue_comments_score": 5,
+        "tests_score": 0,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 105,
+        "zero_revisions_score": 69,
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 27,
-        "issues_total": 29,
-        "issue_comments": 7,
-        "issue_comments_total": 7
+        "issues_opened": 23,
+        "issues_total": 25,
+        "issue_comments": 5,
+        "issue_comments_total": 5
       },
-      "projects": ["Pivothead", "Ignix UI"],
+      "projects": ["Ignix UI"],
       "byProject": {
-        "Pivothead": {
-          "commits": 34,
+        "Ignix UI": {
+          "commits": 135,
           "prs": [
             {
-              "number": 122,
-              "merged_at": "2025-02-07T14:42:55Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 268,
-              "deletions": 21,
+              "number": 606,
+              "merged_at": "2026-02-23T06:50:25Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 2108,
+              "deletions": 9,
               "reviews_count": 0
             },
             {
-              "number": 114,
-              "merged_at": "2025-02-07T14:42:06Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 264,
-              "deletions": 20,
+              "number": 599,
+              "merged_at": "2026-02-23T06:38:16Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 3427,
+              "deletions": 0,
               "reviews_count": 0
             },
             {
-              "number": 106,
-              "merged_at": "2025-01-31T12:17:45Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 395,
-              "deletions": 52,
+              "number": 589,
+              "merged_at": "2026-02-16T09:24:10Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10,
+              "additions": 3766,
+              "deletions": 1,
               "reviews_count": 0
             },
             {
-              "number": 109,
-              "merged_at": "2025-01-31T06:57:40Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 28,
+              "number": 556,
+              "merged_at": "2026-02-12T10:43:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 12,
+              "additions": 4171,
+              "deletions": 689,
+              "reviews_count": 0
+            },
+            {
+              "number": 583,
+              "merged_at": "2026-02-11T04:13:43Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 3204,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 577,
+              "merged_at": "2026-02-11T04:13:10Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 2941,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 552,
+              "merged_at": "2026-02-11T04:12:27Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 17,
+              "additions": 1533,
+              "deletions": 285,
+              "reviews_count": 0
+            },
+            {
+              "number": 548,
+              "merged_at": "2026-02-01T18:20:23Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 3017,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 541,
+              "merged_at": "2026-01-15T10:43:11Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 2686,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 536,
+              "merged_at": "2026-01-14T06:42:16Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 34,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 533,
+              "merged_at": "2026-01-12T06:40:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 2335,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 529,
+              "merged_at": "2026-01-12T06:39:47Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 21,
+              "additions": 5083,
               "deletions": 4,
               "reviews_count": 0
             },
             {
-              "number": 52,
-              "merged_at": "2025-01-27T09:53:18Z",
+              "number": 513,
+              "merged_at": "2026-01-12T06:38:51Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 393,
-              "deletions": 207,
+              "changed_files": 9,
+              "additions": 2077,
+              "deletions": 0,
               "reviews_count": 0
             },
             {
-              "number": 102,
-              "merged_at": "2025-01-24T09:25:34Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 5,
-              "deletions": 209,
-              "reviews_count": 0
-            },
-            {
-              "number": 100,
-              "merged_at": "2025-01-24T06:27:15Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 101,
-              "deletions": 34,
-              "reviews_count": 0
-            },
-            {
-              "number": 99,
-              "merged_at": "2025-01-23T06:36:42Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 7,
-              "reviews_count": 0
-            },
-            {
-              "number": 91,
-              "merged_at": "2025-01-21T06:39:09Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 4,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 90,
-              "merged_at": "2025-01-21T06:38:16Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 6,
-              "deletions": 5,
-              "reviews_count": 0
-            },
-            {
-              "number": 44,
-              "merged_at": "2024-12-24T19:29:13Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 192,
-              "deletions": 166,
-              "reviews_count": 0
-            },
-            {
-              "number": 38,
-              "merged_at": "2024-12-26T08:53:12Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 15,
-              "additions": 1540,
-              "deletions": 659,
-              "reviews_count": 0
-            },
-            {
-              "number": 60,
-              "merged_at": "2025-01-14T06:40:01Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 1,
-              "additions": 134,
-              "deletions": 98,
-              "reviews_count": 0
-            },
-            {
-              "number": 54,
-              "merged_at": "2025-01-13T06:53:17Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 6,
-              "additions": 215,
-              "deletions": 417,
-              "reviews_count": 0
-            },
-            {
-              "number": 35,
-              "merged_at": "2024-12-18T06:16:19Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 26,
-              "additions": 1222,
-              "deletions": 286,
-              "reviews_count": 0
-            },
-            {
-              "number": 8,
-              "merged_at": "2024-12-03T13:24:08Z",
+              "number": 508,
+              "merged_at": "2026-01-12T06:38:27Z",
               "complexity": "large",
               "multiplier": 1.7,
               "changed_files": 14,
-              "additions": 383,
+              "additions": 3721,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 518,
+              "merged_at": "2026-01-07T06:35:31Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10,
+              "additions": 2119,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 498,
+              "merged_at": "2025-12-22T05:11:39Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 16,
+              "additions": 5118,
               "deletions": 3,
               "reviews_count": 0
             },
             {
-              "number": 15,
-              "merged_at": "2024-12-06T15:44:10Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 25,
-              "additions": 112,
-              "deletions": 2839,
-              "reviews_count": 0
-            },
-            {
-              "number": 14,
-              "merged_at": "2024-12-09T04:54:08Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 17,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 19,
-              "merged_at": "2024-12-09T09:05:56Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 89,
-              "merged_at": "2025-01-20T06:50:29Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 0,
-              "additions": 0,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 81,
-              "merged_at": "2025-01-17T22:26:22Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 3,
-              "additions": 1444,
-              "deletions": 2419,
-              "reviews_count": 1
-            },
-            {
-              "number": 80,
-              "merged_at": "2025-01-17T22:21:27Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 3,
-              "additions": 2420,
-              "deletions": 1445,
-              "reviews_count": 1
-            },
-            {
-              "number": 79,
-              "merged_at": "2025-01-17T21:33:41Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 14,
-              "deletions": 0,
-              "reviews_count": 1
-            },
-            {
-              "number": 78,
-              "merged_at": "2025-01-17T21:14:35Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 3,
-              "deletions": 0,
-              "reviews_count": 1
-            },
-            {
-              "number": 77,
-              "merged_at": "2025-01-17T20:53:18Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 39,
-              "deletions": 8,
-              "reviews_count": 1
-            },
-            {
-              "number": 72,
-              "merged_at": "2025-01-17T15:59:13Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 3,
-              "additions": 587,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 64,
-              "merged_at": "2025-01-16T16:47:48Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 6,
-              "additions": 848,
-              "deletions": 513,
-              "reviews_count": 0
-            },
-            {
-              "number": 32,
-              "merged_at": "2024-12-17T08:54:31Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 36,
-              "deletions": 28,
-              "reviews_count": 0
-            },
-            {
-              "number": 26,
-              "merged_at": "2024-12-17T06:14:25Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 7,
-              "additions": 475,
-              "deletions": 89,
-              "reviews_count": 0
-            },
-            {
-              "number": 23,
-              "merged_at": "2024-12-13T06:59:01Z",
+              "number": 488,
+              "merged_at": "2025-12-16T05:52:11Z",
               "complexity": "large",
               "multiplier": 1.7,
               "changed_files": 13,
-              "additions": 389,
-              "deletions": 30,
+              "additions": 3180,
+              "deletions": 52,
               "reviews_count": 0
             },
             {
-              "number": 21,
-              "merged_at": "2024-12-11T08:14:59Z",
+              "number": 459,
+              "merged_at": "2025-12-10T13:52:48Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 241,
-              "deletions": 2458,
+              "changed_files": 10,
+              "additions": 2048,
+              "deletions": 1,
               "reviews_count": 0
             },
             {
-              "number": 20,
-              "merged_at": "2024-12-10T11:55:45Z",
+              "number": 473,
+              "merged_at": "2025-12-10T10:15:35Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 2859,
-              "deletions": 7,
+              "changed_files": 15,
+              "additions": 2610,
+              "deletions": 13,
               "reviews_count": 0
             },
             {
-              "number": 18,
-              "merged_at": "2024-12-09T08:49:02Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 30,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 11,
-              "merged_at": "2024-12-06T09:50:35Z",
+              "number": 439,
+              "merged_at": "2025-11-24T19:13:55Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 76,
-              "additions": 3714,
-              "deletions": 2263,
+              "changed_files": 6,
+              "additions": 707,
+              "deletions": 142,
+              "reviews_count": 0
+            },
+            {
+              "number": 431,
+              "merged_at": "2025-11-18T05:21:42Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 6,
+              "additions": 990,
+              "deletions": 220,
+              "reviews_count": 0
+            },
+            {
+              "number": 422,
+              "merged_at": "2025-11-11T10:55:29Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 697,
+              "deletions": 77,
+              "reviews_count": 0
+            },
+            {
+              "number": 416,
+              "merged_at": "2025-11-11T10:55:17Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 10,
+              "deletions": 20,
               "reviews_count": 0
             }
           ],
-          "pr_reviews_given": 1,
+          "pr_reviews_given": 0,
           "code_review_comments": 0,
           "issues_opened": [
             {
-              "number": 103,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Fix table data field validation",
-              "created_at": "2025-01-24T12:26:37Z",
+              "number": 610,
+              "author": "SandipMF",
+              "title": "[Feature]: Quick Actions(5.3.4)",
+              "created_at": "2026-02-20T11:16:26Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 98,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Fix readme header",
-              "created_at": "2025-01-21T09:51:12Z",
+              "number": 609,
+              "author": "SandipMF",
+              "title": "[Feature]: Activity Feed(5.3.3)",
+              "created_at": "2026-02-20T11:12:41Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 59,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Improve UI for table for decial values and formatting",
-              "created_at": "2025-01-13T08:04:48Z",
+              "number": 608,
+              "author": "SandipMF",
+              "title": "[Feature]: Analytics Dashboard(5.3.2)",
+              "created_at": "2026-02-20T11:08:10Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 41,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Pull request checkList update",
-              "created_at": "2024-12-20T08:00:44Z",
+              "number": 607,
+              "author": "SandipMF",
+              "title": "[Feature]: Dashboard Overview(5.3.1)",
+              "created_at": "2026-02-20T11:05:58Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 33,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Formatting and linting recheck",
-              "created_at": "2024-12-17T14:12:08Z",
+              "number": 593,
+              "author": "SandipMF",
+              "title": "[Feature]: Tabs Navigation(6.1.5)",
+              "created_at": "2026-02-13T06:02:32Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 12,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Code clean up ",
-              "created_at": "2024-12-05T16:44:52Z",
+              "number": 592,
+              "author": "SandipMF",
+              "title": "[Feature]: Mega Menu(6.1.3 )",
+              "created_at": "2026-02-13T05:59:49Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 115,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Add header for exporting option print, pdf and html",
-              "created_at": "2025-02-05T13:01:01Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 110,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Data source for core",
-              "created_at": "2025-02-04T11:03:53Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 104,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]:Hide/Show toolbar in pivot table",
-              "created_at": "2025-01-27T10:07:52Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 101,
-              "author": "mfsisudhanshuk",
-              "title": "[Improvement]: Code clean up and refactor.",
-              "created_at": "2025-01-24T09:14:23Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 92,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Create a react wrapper setup",
-              "created_at": "2025-01-20T08:41:09Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 65,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Implementing dynamic conditional formatting rendering for between condition",
-              "created_at": "2025-01-16T11:11:32Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 63,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]:Dynamic formatting of fields based on popup setup",
-              "created_at": "2025-01-15T12:56:25Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 48,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Sort implementation issue",
-              "created_at": "2025-01-02T08:22:35Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 43,
-              "author": "mfsisudhanshuk",
-              "title": "Update the pre-commmit",
-              "created_at": "2024-12-24T06:40:06Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 25,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Draggable row and column ",
-              "created_at": "2024-12-13T08:15:03Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 22,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Grouping of data.",
-              "created_at": "2024-12-11T08:14:10Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 17,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Pull request template",
-              "created_at": "2024-12-09T08:34:07Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 16,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Row expansion/contraction",
-              "created_at": "2024-12-09T07:53:06Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 13,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]: Vercel setup for live preview ",
-              "created_at": "2024-12-05T16:58:11Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 1,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature] : Add husky config",
-              "created_at": "2024-11-29T10:46:47Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 73,
-              "author": "mfsisudhanshuk",
-              "title": "[Improvement]: Update hook for patch branch",
-              "created_at": "2025-01-17T16:11:07Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 53,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Improvement , restructuring and writing function comments.",
-              "created_at": "2025-01-09T12:19:16Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 31,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Update README.md for highlighting code part",
-              "created_at": "2024-12-17T07:29:34Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 105,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]:Drag and drop in pivot table for rearranging",
-              "created_at": "2025-01-27T10:19:10Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 1,
-            "has_docs": 3,
-            "first_time_mentor": 0,
-            "zero_revisions": 29,
-            "impact_bonuses": []
-          }
-        },
-        "Ignix UI": {
-          "commits": 1,
-          "prs": [
-            {
-              "number": 280,
-              "merged_at": "2025-09-19T16:25:24Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 565,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 272,
-              "merged_at": "2025-09-19T16:05:11Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 11,
-              "additions": 753,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 251,
-              "merged_at": "2025-09-11T10:41:27Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 392,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 234,
-              "merged_at": "2025-09-08T05:20:44Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 6,
-              "deletions": 6,
-              "reviews_count": 0
-            },
-            {
-              "number": 215,
-              "merged_at": "2025-08-29T06:04:11Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 492,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 164,
-              "merged_at": "2025-08-24T19:38:05Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 2,
-              "deletions": 2,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 3,
-          "code_review_comments": 3,
-          "issues_opened": [
-            {
-              "number": 237,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Box component present in layouts and components",
-              "created_at": "2025-09-05T09:07:57Z",
+              "number": 565,
+              "author": "SandipMF",
+              "title": "[Feature]: Paginated Table(7.5.4)",
+              "created_at": "2026-01-29T15:43:18Z",
               "comments": 1,
               "comment_authors": [
                 {
-                  "author": "mfsisudhanshuk",
-                  "created_at": "2025-09-15T12:44:04Z"
+                  "author": "SandipMF",
+                  "created_at": "2026-01-29T15:43:46Z"
                 }
               ]
             },
             {
-              "number": 214,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Docs Navbar UI breaking when navigating over menu",
-              "created_at": "2025-08-26T14:08:50Z",
-              "comments": 2,
+              "number": 564,
+              "author": "SandipMF",
+              "title": "[Feature]: Sortable Table(7.5.2)",
+              "created_at": "2026-01-29T15:40:53Z",
+              "comments": 1,
               "comment_authors": [
                 {
-                  "author": "ankitsingh252225",
-                  "created_at": "2025-09-04T11:03:41Z"
-                },
-                {
-                  "author": "mfsisudhanshuk",
-                  "created_at": "2025-09-15T12:45:17Z"
+                  "author": "SandipMF",
+                  "created_at": "2026-01-29T15:41:08Z"
                 }
               ]
             },
             {
-              "number": 161,
-              "author": "mfsisudhanshuk",
-              "title": "[BUG]: Input box placeholder text overlap with outside box.",
-              "created_at": "2025-08-21T12:32:37Z",
-              "comments": 2,
+              "number": 563,
+              "author": "SandipMF",
+              "title": "[Feature]: Basic Table(7.5.1)",
+              "created_at": "2026-01-29T15:36:33Z",
+              "comments": 1,
               "comment_authors": [
                 {
-                  "author": "ankitsingh252225",
-                  "created_at": "2025-09-05T05:11:36Z"
-                },
-                {
-                  "author": "mfsisudhanshuk",
-                  "created_at": "2025-09-17T12:08:31Z"
+                  "author": "SandipMF",
+                  "created_at": "2026-01-29T15:37:24Z"
                 }
               ]
             },
             {
-              "number": 184,
-              "author": "mfsisudhanshuk",
-              "title": "[Feature]:Add <Box> Layout component wrapper",
-              "created_at": "2025-08-25T19:19:20Z",
+              "number": 561,
+              "author": "SandipMF",
+              "title": "[Feature]: Progress Bars",
+              "created_at": "2026-01-29T06:04:18Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-02-03T14:16:36Z"
+                }
+              ]
+            },
+            {
+              "number": 560,
+              "author": "SandipMF",
+              "title": "[Feature]: Modals(7.6.3)",
+              "created_at": "2026-01-28T16:12:52Z",
               "comments": 0,
               "comment_authors": []
+            },
+            {
+              "number": 559,
+              "author": "SandipMF",
+              "title": "[Feature]: Filterable Table(7.5.3)",
+              "created_at": "2026-01-28T16:09:28Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-29T06:04:47Z"
+                }
+              ]
+            },
+            {
+              "number": 543,
+              "author": "SandipMF",
+              "title": "[Feature]: List with Status(7.4.4)",
+              "created_at": "2026-01-15T09:50:41Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-15T09:51:00Z"
+                }
+              ]
+            },
+            {
+              "number": 542,
+              "author": "SandipMF",
+              "title": "[Feature]: List with Avatars(7.4.3)",
+              "created_at": "2026-01-15T09:45:33Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-15T09:45:52Z"
+                }
+              ]
+            },
+            {
+              "number": 532,
+              "author": "SandipMF",
+              "title": "[Feature]: List with Actions(7.4.2)",
+              "created_at": "2026-01-12T05:39:43Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-12T05:57:57Z"
+                }
+              ]
+            },
+            {
+              "number": 530,
+              "author": "SandipMF",
+              "title": "[Feature]: Simple List(7.4.1)",
+              "created_at": "2026-01-08T05:43:44Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-08T05:49:58Z"
+                }
+              ]
+            },
+            {
+              "number": 519,
+              "author": "SandipMF",
+              "title": "[Feature]: Button Groups(7.1.4)",
+              "created_at": "2026-01-05T14:38:49Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-05T14:39:03Z"
+                }
+              ]
+            },
+            {
+              "number": 516,
+              "author": "SandipMF",
+              "title": "[Feature]: Loading State Button(7.1.3)",
+              "created_at": "2026-01-02T05:14:20Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2026-01-02T05:14:38Z"
+                }
+              ]
+            },
+            {
+              "number": 500,
+              "author": "SandipMF",
+              "title": "[Feature]: Buttons with Icons(7.1.2)",
+              "created_at": "2025-12-19T12:58:49Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-12-23T05:30:11Z"
+                }
+              ]
+            },
+            {
+              "number": 499,
+              "author": "SandipMF",
+              "title": "[Feature]: Notifications Settings Page(5.2.4)",
+              "created_at": "2025-12-19T12:16:09Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-12-23T05:29:23Z"
+                }
+              ]
+            },
+            {
+              "number": 491,
+              "author": "SandipMF",
+              "title": "[Feature]: Security Page(5.2.3)",
+              "created_at": "2025-12-16T06:47:03Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-12-16T06:47:22Z"
+                }
+              ]
+            },
+            {
+              "number": 475,
+              "author": "SandipMF",
+              "title": "[Feature]: Two-Factor Authentication Setup(5.1.6)",
+              "created_at": "2025-12-10T12:33:55Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-12-10T12:42:41Z"
+                }
+              ]
+            },
+            {
+              "number": 460,
+              "author": "SandipMF",
+              "title": "[Feature]: Reset Password Page(5.1.4)",
+              "created_at": "2025-12-03T06:42:54Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-12-03T06:43:15Z"
+                }
+              ]
+            },
+            {
+              "number": 440,
+              "author": "SandipMF",
+              "title": "[Feature]:Responsive Grid Layout",
+              "created_at": "2025-11-21T06:50:00Z",
+              "comments": 2,
+              "comment_authors": [
+                {
+                  "author": "100xmanas",
+                  "created_at": "2025-11-25T19:22:51Z"
+                },
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-11-27T07:31:23Z"
+                }
+              ]
+            },
+            {
+              "number": 421,
+              "author": "SandipMF",
+              "title": "Next.js App Router Template",
+              "created_at": "2025-11-11T07:10:37Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SandipMF",
+                  "created_at": "2025-11-13T11:42:58Z"
+                }
+              ]
             }
           ],
           "issue_comments_given": [
             {
-              "created_at": "2025-09-05T08:48:45Z"
+              "created_at": "2025-11-03T08:52:26Z"
             },
             {
-              "created_at": "2025-09-12T14:43:16Z"
+              "created_at": "2025-11-05T14:30:41Z"
             },
             {
-              "created_at": "2025-09-12T14:42:21Z"
+              "created_at": "2025-11-19T14:34:10Z"
             },
             {
-              "created_at": "2025-09-08T13:39:11Z"
+              "created_at": "2025-11-17T05:44:10Z"
             },
             {
-              "created_at": "2025-09-19T05:49:32Z"
-            },
-            {
-              "created_at": "2025-08-29T11:32:50Z"
-            },
-            {
-              "created_at": "2025-09-15T12:46:13Z"
+              "created_at": "2025-11-19T14:24:06Z"
             }
           ],
           "quality_metrics": {
             "has_tests": 0,
-            "has_docs": 2,
+            "has_docs": 1,
             "first_time_mentor": 0,
-            "zero_revisions": 6,
+            "zero_revisions": 23,
             "impact_bonuses": []
           }
         }
@@ -12108,555 +12180,761 @@
     },
     {
       "rank": 13,
-      "username": "SandipMF",
-      "id": 113003818,
-      "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
-      "html_url": "https://github.com/SandipMF",
-      "totalCommits": 120,
-      "totalPRs": 21,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 21,
-      "totalIssueComments": 5,
-      "avgCommitsPerPR": 5.71,
-      "projectsWorkingOn": 1,
+      "username": "mfsisudhanshuk",
+      "id": 187290740,
+      "avatar_url": "https://avatars.githubusercontent.com/u/187290740?v=4",
+      "html_url": "https://github.com/mfsisudhanshuk",
+      "totalCommits": 35,
+      "totalPRs": 40,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 3,
+      "totalIssuesOpened": 29,
+      "totalIssueComments": 7,
+      "avgCommitsPerPR": 0.88,
+      "projectsWorkingOn": 2,
       "prs_by_complexity": {
-        "small": 1,
-        "medium": 1,
-        "large": 19
+        "small": 10,
+        "medium": 12,
+        "large": 18
       },
-      "total_score": 521,
-      "code_score": 413,
-      "community_score": 43,
-      "quality_score": 65,
+      "total_score": 544,
+      "code_score": 366,
+      "community_score": 61,
+      "quality_score": 117,
       "score_breakdown": {
-        "pr_score": 173,
-        "commits_score": 240,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 38,
-        "issue_comments_score": 5,
-        "tests_score": 0,
-        "docs_score": 2,
+        "pr_score": 281,
+        "commits_score": 70,
+        "pr_reviews_score": 12,
+        "code_comments_score": 3,
+        "issues_opened_score": 54,
+        "issue_comments_score": 7,
+        "tests_score": 2,
+        "docs_score": 10,
         "mentor_score": 0,
-        "zero_revisions_score": 63,
+        "zero_revisions_score": 105,
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 19,
-        "issues_total": 21,
-        "issue_comments": 5,
-        "issue_comments_total": 5
+        "issues_opened": 27,
+        "issues_total": 29,
+        "issue_comments": 7,
+        "issue_comments_total": 7
       },
-      "projects": ["Ignix UI"],
+      "projects": ["Pivothead", "Ignix UI"],
       "byProject": {
-        "Ignix UI": {
-          "commits": 120,
+        "Pivothead": {
+          "commits": 34,
           "prs": [
             {
-              "number": 589,
-              "merged_at": "2026-02-16T09:24:10Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 10,
-              "additions": 3766,
-              "deletions": 1,
+              "number": 122,
+              "merged_at": "2025-02-07T14:42:55Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 268,
+              "deletions": 21,
               "reviews_count": 0
             },
             {
-              "number": 556,
-              "merged_at": "2026-02-12T10:43:08Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 12,
-              "additions": 4171,
-              "deletions": 689,
+              "number": 114,
+              "merged_at": "2025-02-07T14:42:06Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 264,
+              "deletions": 20,
               "reviews_count": 0
             },
             {
-              "number": 583,
-              "merged_at": "2026-02-11T04:13:43Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 3204,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 577,
-              "merged_at": "2026-02-11T04:13:10Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 2941,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 552,
-              "merged_at": "2026-02-11T04:12:27Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 17,
-              "additions": 1533,
-              "deletions": 285,
-              "reviews_count": 0
-            },
-            {
-              "number": 548,
-              "merged_at": "2026-02-01T18:20:23Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 3017,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 541,
-              "merged_at": "2026-01-15T10:43:11Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 2686,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 536,
-              "merged_at": "2026-01-14T06:42:16Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 34,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 533,
-              "merged_at": "2026-01-12T06:40:08Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 2335,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 529,
-              "merged_at": "2026-01-12T06:39:47Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 21,
-              "additions": 5083,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 513,
-              "merged_at": "2026-01-12T06:38:51Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 2077,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 508,
-              "merged_at": "2026-01-12T06:38:27Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 14,
-              "additions": 3721,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 518,
-              "merged_at": "2026-01-07T06:35:31Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 10,
-              "additions": 2119,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 498,
-              "merged_at": "2025-12-22T05:11:39Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 16,
-              "additions": 5118,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 488,
-              "merged_at": "2025-12-16T05:52:11Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 13,
-              "additions": 3180,
+              "number": 106,
+              "merged_at": "2025-01-31T12:17:45Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 395,
               "deletions": 52,
               "reviews_count": 0
             },
             {
-              "number": 459,
-              "merged_at": "2025-12-10T13:52:48Z",
+              "number": 109,
+              "merged_at": "2025-01-31T06:57:40Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 28,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 52,
+              "merged_at": "2025-01-27T09:53:18Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 10,
-              "additions": 2048,
+              "changed_files": 8,
+              "additions": 393,
+              "deletions": 207,
+              "reviews_count": 0
+            },
+            {
+              "number": 102,
+              "merged_at": "2025-01-24T09:25:34Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 5,
+              "deletions": 209,
+              "reviews_count": 0
+            },
+            {
+              "number": 100,
+              "merged_at": "2025-01-24T06:27:15Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 101,
+              "deletions": 34,
+              "reviews_count": 0
+            },
+            {
+              "number": 99,
+              "merged_at": "2025-01-23T06:36:42Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 91,
+              "merged_at": "2025-01-21T06:39:09Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 4,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 90,
+              "merged_at": "2025-01-21T06:38:16Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 6,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 44,
+              "merged_at": "2024-12-24T19:29:13Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 192,
+              "deletions": 166,
+              "reviews_count": 0
+            },
+            {
+              "number": 38,
+              "merged_at": "2024-12-26T08:53:12Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 1540,
+              "deletions": 659,
+              "reviews_count": 0
+            },
+            {
+              "number": 60,
+              "merged_at": "2025-01-14T06:40:01Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 1,
+              "additions": 134,
+              "deletions": 98,
+              "reviews_count": 0
+            },
+            {
+              "number": 54,
+              "merged_at": "2025-01-13T06:53:17Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 6,
+              "additions": 215,
+              "deletions": 417,
+              "reviews_count": 0
+            },
+            {
+              "number": 35,
+              "merged_at": "2024-12-18T06:16:19Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 26,
+              "additions": 1222,
+              "deletions": 286,
+              "reviews_count": 0
+            },
+            {
+              "number": 8,
+              "merged_at": "2024-12-03T13:24:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 14,
+              "additions": 383,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 15,
+              "merged_at": "2024-12-06T15:44:10Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 25,
+              "additions": 112,
+              "deletions": 2839,
+              "reviews_count": 0
+            },
+            {
+              "number": 14,
+              "merged_at": "2024-12-09T04:54:08Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 17,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 19,
+              "merged_at": "2024-12-09T09:05:56Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
               "deletions": 1,
               "reviews_count": 0
             },
             {
-              "number": 473,
-              "merged_at": "2025-12-10T10:15:35Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 15,
-              "additions": 2610,
-              "deletions": 13,
+              "number": 89,
+              "merged_at": "2025-01-20T06:50:29Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 0,
+              "additions": 0,
+              "deletions": 0,
               "reviews_count": 0
             },
             {
-              "number": 439,
-              "merged_at": "2025-11-24T19:13:55Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 6,
-              "additions": 707,
-              "deletions": 142,
-              "reviews_count": 0
+              "number": 81,
+              "merged_at": "2025-01-17T22:26:22Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 0,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 1
             },
             {
-              "number": 431,
-              "merged_at": "2025-11-18T05:21:42Z",
+              "number": 80,
+              "merged_at": "2025-01-17T22:21:27Z",
               "complexity": "large",
               "multiplier": 1.7,
-              "changed_files": 6,
-              "additions": 990,
-              "deletions": 220,
-              "reviews_count": 0
+              "changed_files": 3,
+              "additions": 2420,
+              "deletions": 1445,
+              "reviews_count": 1
             },
             {
-              "number": 422,
-              "merged_at": "2025-11-11T10:55:29Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 697,
-              "deletions": 77,
-              "reviews_count": 0
+              "number": 79,
+              "merged_at": "2025-01-17T21:33:41Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 14,
+              "deletions": 0,
+              "reviews_count": 1
             },
             {
-              "number": 416,
-              "merged_at": "2025-11-11T10:55:17Z",
+              "number": 78,
+              "merged_at": "2025-01-17T21:14:35Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 0,
+              "reviews_count": 1
+            },
+            {
+              "number": 77,
+              "merged_at": "2025-01-17T20:53:18Z",
               "complexity": "medium",
               "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 39,
+              "deletions": 8,
+              "reviews_count": 1
+            },
+            {
+              "number": 72,
+              "merged_at": "2025-01-17T15:59:13Z",
+              "complexity": "large",
+              "multiplier": 1.7,
               "changed_files": 3,
-              "additions": 10,
-              "deletions": 20,
+              "additions": 587,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 64,
+              "merged_at": "2025-01-16T16:47:48Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 6,
+              "additions": 848,
+              "deletions": 513,
+              "reviews_count": 0
+            },
+            {
+              "number": 32,
+              "merged_at": "2024-12-17T08:54:31Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 36,
+              "deletions": 28,
+              "reviews_count": 0
+            },
+            {
+              "number": 26,
+              "merged_at": "2024-12-17T06:14:25Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 7,
+              "additions": 475,
+              "deletions": 89,
+              "reviews_count": 0
+            },
+            {
+              "number": 23,
+              "merged_at": "2024-12-13T06:59:01Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 13,
+              "additions": 389,
+              "deletions": 30,
+              "reviews_count": 0
+            },
+            {
+              "number": 21,
+              "merged_at": "2024-12-11T08:14:59Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 241,
+              "deletions": 2458,
+              "reviews_count": 0
+            },
+            {
+              "number": 20,
+              "merged_at": "2024-12-10T11:55:45Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 2859,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 18,
+              "merged_at": "2024-12-09T08:49:02Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 30,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 11,
+              "merged_at": "2024-12-06T09:50:35Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 76,
+              "additions": 3714,
+              "deletions": 2263,
               "reviews_count": 0
             }
           ],
-          "pr_reviews_given": 0,
+          "pr_reviews_given": 1,
           "code_review_comments": 0,
           "issues_opened": [
             {
-              "number": 593,
-              "author": "SandipMF",
-              "title": "[Feature]: Tabs Navigation(6.1.5)",
-              "created_at": "2026-02-13T06:02:32Z",
+              "number": 103,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Fix table data field validation",
+              "created_at": "2025-01-24T12:26:37Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 592,
-              "author": "SandipMF",
-              "title": "[Feature]: Mega Menu(6.1.3 )",
-              "created_at": "2026-02-13T05:59:49Z",
+              "number": 98,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Fix readme header",
+              "created_at": "2025-01-21T09:51:12Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 565,
-              "author": "SandipMF",
-              "title": "[Feature]: Paginated Table(7.5.4)",
-              "created_at": "2026-01-29T15:43:18Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-29T15:43:46Z"
-                }
-              ]
-            },
-            {
-              "number": 564,
-              "author": "SandipMF",
-              "title": "[Feature]: Sortable Table(7.5.2)",
-              "created_at": "2026-01-29T15:40:53Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-29T15:41:08Z"
-                }
-              ]
-            },
-            {
-              "number": 563,
-              "author": "SandipMF",
-              "title": "[Feature]: Basic Table(7.5.1)",
-              "created_at": "2026-01-29T15:36:33Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-29T15:37:24Z"
-                }
-              ]
-            },
-            {
-              "number": 561,
-              "author": "SandipMF",
-              "title": "[Feature]: Progress Bars",
-              "created_at": "2026-01-29T06:04:18Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-02-03T14:16:36Z"
-                }
-              ]
-            },
-            {
-              "number": 560,
-              "author": "SandipMF",
-              "title": "[Feature]: Modals(7.6.3)",
-              "created_at": "2026-01-28T16:12:52Z",
+              "number": 59,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Improve UI for table for decial values and formatting",
+              "created_at": "2025-01-13T08:04:48Z",
               "comments": 0,
               "comment_authors": []
             },
             {
-              "number": 559,
-              "author": "SandipMF",
-              "title": "[Feature]: Filterable Table(7.5.3)",
-              "created_at": "2026-01-28T16:09:28Z",
+              "number": 41,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Pull request checkList update",
+              "created_at": "2024-12-20T08:00:44Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 33,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Formatting and linting recheck",
+              "created_at": "2024-12-17T14:12:08Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 12,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Code clean up ",
+              "created_at": "2024-12-05T16:44:52Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 115,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Add header for exporting option print, pdf and html",
+              "created_at": "2025-02-05T13:01:01Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 110,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Data source for core",
+              "created_at": "2025-02-04T11:03:53Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 104,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]:Hide/Show toolbar in pivot table",
+              "created_at": "2025-01-27T10:07:52Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 101,
+              "author": "mfsisudhanshuk",
+              "title": "[Improvement]: Code clean up and refactor.",
+              "created_at": "2025-01-24T09:14:23Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 92,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Create a react wrapper setup",
+              "created_at": "2025-01-20T08:41:09Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 65,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Implementing dynamic conditional formatting rendering for between condition",
+              "created_at": "2025-01-16T11:11:32Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 63,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]:Dynamic formatting of fields based on popup setup",
+              "created_at": "2025-01-15T12:56:25Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 48,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Sort implementation issue",
+              "created_at": "2025-01-02T08:22:35Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 43,
+              "author": "mfsisudhanshuk",
+              "title": "Update the pre-commmit",
+              "created_at": "2024-12-24T06:40:06Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 25,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Draggable row and column ",
+              "created_at": "2024-12-13T08:15:03Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 22,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Grouping of data.",
+              "created_at": "2024-12-11T08:14:10Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 17,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Pull request template",
+              "created_at": "2024-12-09T08:34:07Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 16,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Row expansion/contraction",
+              "created_at": "2024-12-09T07:53:06Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 13,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]: Vercel setup for live preview ",
+              "created_at": "2024-12-05T16:58:11Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 1,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature] : Add husky config",
+              "created_at": "2024-11-29T10:46:47Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 73,
+              "author": "mfsisudhanshuk",
+              "title": "[Improvement]: Update hook for patch branch",
+              "created_at": "2025-01-17T16:11:07Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 53,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Improvement , restructuring and writing function comments.",
+              "created_at": "2025-01-09T12:19:16Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 31,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Update README.md for highlighting code part",
+              "created_at": "2024-12-17T07:29:34Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 105,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]:Drag and drop in pivot table for rearranging",
+              "created_at": "2025-01-27T10:19:10Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 1,
+            "has_docs": 3,
+            "first_time_mentor": 0,
+            "zero_revisions": 29,
+            "impact_bonuses": []
+          }
+        },
+        "Ignix UI": {
+          "commits": 1,
+          "prs": [
+            {
+              "number": 280,
+              "merged_at": "2025-09-19T16:25:24Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 565,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 272,
+              "merged_at": "2025-09-19T16:05:11Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 753,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 251,
+              "merged_at": "2025-09-11T10:41:27Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 392,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 234,
+              "merged_at": "2025-09-08T05:20:44Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 6,
+              "deletions": 6,
+              "reviews_count": 0
+            },
+            {
+              "number": 215,
+              "merged_at": "2025-08-29T06:04:11Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 492,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 164,
+              "merged_at": "2025-08-24T19:38:05Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 2,
+              "deletions": 2,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 3,
+          "code_review_comments": 3,
+          "issues_opened": [
+            {
+              "number": 237,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Box component present in layouts and components",
+              "created_at": "2025-09-05T09:07:57Z",
               "comments": 1,
               "comment_authors": [
                 {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-29T06:04:47Z"
+                  "author": "mfsisudhanshuk",
+                  "created_at": "2025-09-15T12:44:04Z"
                 }
               ]
             },
             {
-              "number": 543,
-              "author": "SandipMF",
-              "title": "[Feature]: List with Status(7.4.4)",
-              "created_at": "2026-01-15T09:50:41Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-15T09:51:00Z"
-                }
-              ]
-            },
-            {
-              "number": 542,
-              "author": "SandipMF",
-              "title": "[Feature]: List with Avatars(7.4.3)",
-              "created_at": "2026-01-15T09:45:33Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-15T09:45:52Z"
-                }
-              ]
-            },
-            {
-              "number": 532,
-              "author": "SandipMF",
-              "title": "[Feature]: List with Actions(7.4.2)",
-              "created_at": "2026-01-12T05:39:43Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-12T05:57:57Z"
-                }
-              ]
-            },
-            {
-              "number": 530,
-              "author": "SandipMF",
-              "title": "[Feature]: Simple List(7.4.1)",
-              "created_at": "2026-01-08T05:43:44Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-08T05:49:58Z"
-                }
-              ]
-            },
-            {
-              "number": 519,
-              "author": "SandipMF",
-              "title": "[Feature]: Button Groups(7.1.4)",
-              "created_at": "2026-01-05T14:38:49Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-05T14:39:03Z"
-                }
-              ]
-            },
-            {
-              "number": 516,
-              "author": "SandipMF",
-              "title": "[Feature]: Loading State Button(7.1.3)",
-              "created_at": "2026-01-02T05:14:20Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2026-01-02T05:14:38Z"
-                }
-              ]
-            },
-            {
-              "number": 500,
-              "author": "SandipMF",
-              "title": "[Feature]: Buttons with Icons(7.1.2)",
-              "created_at": "2025-12-19T12:58:49Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2025-12-23T05:30:11Z"
-                }
-              ]
-            },
-            {
-              "number": 499,
-              "author": "SandipMF",
-              "title": "[Feature]: Notifications Settings Page(5.2.4)",
-              "created_at": "2025-12-19T12:16:09Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2025-12-23T05:29:23Z"
-                }
-              ]
-            },
-            {
-              "number": 491,
-              "author": "SandipMF",
-              "title": "[Feature]: Security Page(5.2.3)",
-              "created_at": "2025-12-16T06:47:03Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2025-12-16T06:47:22Z"
-                }
-              ]
-            },
-            {
-              "number": 475,
-              "author": "SandipMF",
-              "title": "[Feature]: Two-Factor Authentication Setup(5.1.6)",
-              "created_at": "2025-12-10T12:33:55Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2025-12-10T12:42:41Z"
-                }
-              ]
-            },
-            {
-              "number": 460,
-              "author": "SandipMF",
-              "title": "[Feature]: Reset Password Page(5.1.4)",
-              "created_at": "2025-12-03T06:42:54Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SandipMF",
-                  "created_at": "2025-12-03T06:43:15Z"
-                }
-              ]
-            },
-            {
-              "number": 440,
-              "author": "SandipMF",
-              "title": "[Feature]:Responsive Grid Layout",
-              "created_at": "2025-11-21T06:50:00Z",
+              "number": 214,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Docs Navbar UI breaking when navigating over menu",
+              "created_at": "2025-08-26T14:08:50Z",
               "comments": 2,
               "comment_authors": [
                 {
-                  "author": "100xmanas",
-                  "created_at": "2025-11-25T19:22:51Z"
+                  "author": "ankitsingh252225",
+                  "created_at": "2025-09-04T11:03:41Z"
                 },
                 {
-                  "author": "SandipMF",
-                  "created_at": "2025-11-27T07:31:23Z"
+                  "author": "mfsisudhanshuk",
+                  "created_at": "2025-09-15T12:45:17Z"
                 }
               ]
             },
             {
-              "number": 421,
-              "author": "SandipMF",
-              "title": "Next.js App Router Template",
-              "created_at": "2025-11-11T07:10:37Z",
-              "comments": 1,
+              "number": 161,
+              "author": "mfsisudhanshuk",
+              "title": "[BUG]: Input box placeholder text overlap with outside box.",
+              "created_at": "2025-08-21T12:32:37Z",
+              "comments": 2,
               "comment_authors": [
                 {
-                  "author": "SandipMF",
-                  "created_at": "2025-11-13T11:42:58Z"
+                  "author": "ankitsingh252225",
+                  "created_at": "2025-09-05T05:11:36Z"
+                },
+                {
+                  "author": "mfsisudhanshuk",
+                  "created_at": "2025-09-17T12:08:31Z"
                 }
               ]
+            },
+            {
+              "number": 184,
+              "author": "mfsisudhanshuk",
+              "title": "[Feature]:Add <Box> Layout component wrapper",
+              "created_at": "2025-08-25T19:19:20Z",
+              "comments": 0,
+              "comment_authors": []
             }
           ],
           "issue_comments_given": [
             {
-              "created_at": "2025-11-03T08:52:26Z"
+              "created_at": "2025-09-05T08:48:45Z"
             },
             {
-              "created_at": "2025-11-05T14:30:41Z"
+              "created_at": "2025-09-12T14:43:16Z"
             },
             {
-              "created_at": "2025-11-19T14:34:10Z"
+              "created_at": "2025-09-12T14:42:21Z"
             },
             {
-              "created_at": "2025-11-17T05:44:10Z"
+              "created_at": "2025-09-08T13:39:11Z"
             },
             {
-              "created_at": "2025-11-19T14:24:06Z"
+              "created_at": "2025-09-19T05:49:32Z"
+            },
+            {
+              "created_at": "2025-08-29T11:32:50Z"
+            },
+            {
+              "created_at": "2025-09-15T12:46:13Z"
             }
           ],
           "quality_metrics": {
             "has_tests": 0,
-            "has_docs": 1,
+            "has_docs": 2,
             "first_time_mentor": 0,
-            "zero_revisions": 21,
+            "zero_revisions": 6,
             "impact_bonuses": []
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": null
     },
     {
       "rank": 14,
@@ -12703,7 +12981,7 @@
       "projects": [
         "Canvas Editor",
         "Angular Canvas Editor",
-        "Mindfire Digital Website"
+        "Mindfire Foss Website"
       ],
       "byProject": {
         "Canvas Editor": {
@@ -12934,7 +13212,7 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 24,
           "prs": [
             {
@@ -13001,7 +13279,7 @@
           }
         }
       },
-      "lastActiveDays": null
+      "lastActiveDays": 5
     },
     {
       "rank": 15,
@@ -14249,7 +14527,7 @@
           }
         }
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 4
     },
     {
       "rank": 18,
@@ -14654,7 +14932,7 @@
           }
         }
       },
-      "lastActiveDays": 26
+      "lastActiveDays": 17
     },
     {
       "rank": 19,
@@ -15725,7 +16003,7 @@
           }
         }
       },
-      "lastActiveDays": 2
+      "lastActiveDays": null
     },
     {
       "rank": 23,
@@ -16572,7 +16850,7 @@
           }
         }
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 13
     },
     {
       "rank": 27,
@@ -17172,7 +17450,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Angular Canvas Editor", "Mindfire Digital Website"],
+      "projects": ["Angular Canvas Editor", "Mindfire Foss Website"],
       "byProject": {
         "Angular Canvas Editor": {
           "commits": 1,
@@ -17200,7 +17478,7 @@
             "impact_bonuses": []
           }
         },
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 20,
           "prs": [
             {
@@ -17431,9 +17709,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 25,
           "prs": [
             {
@@ -17973,9 +18251,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 1,
           "prs": [
             {
@@ -18543,9 +18821,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 13,
           "prs": [
             {
@@ -18898,6 +19176,149 @@
     },
     {
       "rank": 40,
+      "username": "Dibas2421",
+      "id": 157849988,
+      "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
+      "html_url": "https://github.com/Dibas2421",
+      "totalCommits": 14,
+      "totalPRs": 8,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1.75,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 3,
+        "medium": 1,
+        "large": 4
+      },
+      "total_score": 107,
+      "code_score": 84,
+      "community_score": 0,
+      "quality_score": 23,
+      "score_breakdown": {
+        "pr_score": 56,
+        "commits_score": 28,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "tests_score": 2,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 21,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["AUTOTEST"],
+      "byProject": {
+        "AUTOTEST": {
+          "commits": 14,
+          "prs": [
+            {
+              "number": 37,
+              "merged_at": "2025-09-08T06:02:37Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 273,
+              "deletions": 50,
+              "reviews_count": 0
+            },
+            {
+              "number": 27,
+              "merged_at": "2025-07-18T11:11:28Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 34,
+              "reviews_count": 0
+            },
+            {
+              "number": 25,
+              "merged_at": "2025-07-18T10:48:38Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 24,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 23,
+              "merged_at": "2025-07-18T10:30:41Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 136,
+              "deletions": 265,
+              "reviews_count": 0
+            },
+            {
+              "number": 22,
+              "merged_at": "2025-07-18T06:43:30Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 29,
+              "additions": 679,
+              "deletions": 229,
+              "reviews_count": 0
+            },
+            {
+              "number": 21,
+              "merged_at": "2025-06-30T10:16:34Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 2,
+              "additions": 190,
+              "deletions": 387,
+              "reviews_count": 0
+            },
+            {
+              "number": 20,
+              "merged_at": "2025-06-23T12:27:15Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 30,
+              "deletions": 22,
+              "reviews_count": 0
+            },
+            {
+              "number": 18,
+              "merged_at": "2025-06-20T07:09:41Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 6,
+              "additions": 2140,
+              "deletions": 242,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 1,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 7,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 41,
       "username": "asishmindfire",
       "id": 118360815,
       "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
@@ -19010,7 +19431,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 41,
+      "rank": 42,
       "username": "iabhishekkumarms",
       "id": 87860388,
       "avatar_url": "https://avatars.githubusercontent.com/u/87860388?v=4",
@@ -19133,149 +19554,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 42,
-      "username": "Dibas2421",
-      "id": 157849988,
-      "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
-      "html_url": "https://github.com/Dibas2421",
-      "totalCommits": 1,
-      "totalPRs": 8,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0.13,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 1,
-        "large": 4
-      },
-      "total_score": 81,
-      "code_score": 58,
-      "community_score": 0,
-      "quality_score": 23,
-      "score_breakdown": {
-        "pr_score": 56,
-        "commits_score": 2,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 2,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 21,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["AUTOTEST"],
-      "byProject": {
-        "AUTOTEST": {
-          "commits": 1,
-          "prs": [
-            {
-              "number": 37,
-              "merged_at": "2025-09-08T06:02:37Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 273,
-              "deletions": 50,
-              "reviews_count": 0
-            },
-            {
-              "number": 27,
-              "merged_at": "2025-07-18T11:11:28Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 0,
-              "deletions": 34,
-              "reviews_count": 0
-            },
-            {
-              "number": 25,
-              "merged_at": "2025-07-18T10:48:38Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 24,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 23,
-              "merged_at": "2025-07-18T10:30:41Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 136,
-              "deletions": 265,
-              "reviews_count": 0
-            },
-            {
-              "number": 22,
-              "merged_at": "2025-07-18T06:43:30Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 29,
-              "additions": 679,
-              "deletions": 229,
-              "reviews_count": 0
-            },
-            {
-              "number": 21,
-              "merged_at": "2025-06-30T10:16:34Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 2,
-              "additions": 190,
-              "deletions": 387,
-              "reviews_count": 0
-            },
-            {
-              "number": 20,
-              "merged_at": "2025-06-23T12:27:15Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 30,
-              "deletions": 22,
-              "reviews_count": 0
-            },
-            {
-              "number": 18,
-              "merged_at": "2025-06-20T07:09:41Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 6,
-              "additions": 2140,
-              "deletions": 242,
-              "reviews_count": 1
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 1,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 7,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 43,
       "username": "prashant-mindfire",
       "id": 148045555,
@@ -19317,9 +19595,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 18,
           "prs": [
             {
@@ -19789,9 +20067,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 9,
           "prs": [
             {
@@ -19848,7 +20126,7 @@
           }
         }
       },
-      "lastActiveDays": null
+      "lastActiveDays": 14
     },
     {
       "rank": 49,
@@ -19954,9 +20232,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 25,
           "prs": [],
           "pr_reviews_given": 0,
@@ -20201,7 +20479,7 @@
           }
         }
       },
-      "lastActiveDays": null
+      "lastActiveDays": 17
     },
     {
       "rank": 54,
@@ -20563,9 +20841,9 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["Mindfire Digital Website"],
+      "projects": ["Mindfire Foss Website"],
       "byProject": {
-        "Mindfire Digital Website": {
+        "Mindfire Foss Website": {
           "commits": 7,
           "prs": [
             {
@@ -21229,7 +21507,7 @@
           }
         }
       },
-      "lastActiveDays": 24
+      "lastActiveDays": 17
     },
     {
       "rank": 67,
@@ -21445,7 +21723,7 @@
           }
         }
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 5
     },
     {
       "rank": 70,

@@ -321,7 +321,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/ignix-ui/",
     "stars": 52,
     "tags": ["component", "radix", "radix-ui", "react", "shadcn"],
-    "lastPushedAt": "2026-02-18T19:03:50Z"
+    "lastPushedAt": "2026-02-23T06:51:30Z"
   },
   {
     "id": 24,
@@ -497,6 +497,6 @@
     "documentationUrl": "https://github.com/mindfiredigital/TextIgniterJS/blob/main/README.md",
     "stars": 36,
     "tags": [],
-    "lastPushedAt": "2026-02-09T07:59:50Z"
+    "lastPushedAt": "2026-02-23T05:30:59Z"
   }
 ]
