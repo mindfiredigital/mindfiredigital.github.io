@@ -55,10 +55,133 @@ const SCORING = {
 };
 
 // ============================================================================
-// HELPERS
+// RATE LIMIT HELPERS  (same pattern as updatePackages.mjs)
 // ============================================================================
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Queue manager with concurrency control
+class RequestQueue {
+  constructor(concurrency = 1, delayBetweenRequests = 500) {
+    this.concurrency = concurrency;
+    this.delayBetweenRequests = delayBetweenRequests;
+    this.queue = [];
+    this.running = 0;
+  }
+
+  async add(fn) {
+    return new Promise((resolve, reject) => {
+      this.queue.push({ fn, resolve, reject });
+      this.process();
+    });
+  }
+
+  async process() {
+    if (this.running >= this.concurrency || this.queue.length === 0) return;
+
+    this.running++;
+    const { fn, resolve, reject } = this.queue.shift();
+
+    try {
+      const result = await fn();
+      resolve(result);
+    } catch (error) {
+      reject(error);
+    } finally {
+      this.running--;
+      if (this.queue.length > 0) {
+        await delay(this.delayBetweenRequests);
+      }
+      this.process();
+    }
+  }
+}
+
+// Single shared queue for all GitHub requests
+const githubQueue = new RequestQueue(1, 500); // 1 concurrent, 500ms between requests
+
+// Fetch with exponential backoff on rate limit
+async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const data = await rawFetchGitHub(url);
+      return data;
+    } catch (error) {
+      const msg = error.message?.toLowerCase() || "";
+      const isRateLimit =
+        error.status === 429 ||
+        error.status === 403 ||
+        msg.includes("429") ||
+        msg.includes("rate limit") ||
+        msg.includes("rate limited");
+
+      if (isRateLimit && attempt < maxRetries - 1) {
+        const baseWait = initialDelay * Math.pow(2, attempt);
+        const jitter = Math.random() * 1000;
+        const waitTime = baseWait + jitter;
+        console.warn(
+          `⏳ GitHub rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1}/${maxRetries - 1} — ${url}`
+        );
+        await delay(waitTime);
+        continue;
+      }
+
+      if (attempt === maxRetries - 1) {
+        console.error(`❌ Failed after ${maxRetries} attempts: ${url}`);
+      }
+      throw error;
+    }
+  }
+}
+
+// Queued GitHub fetch — every API call goes through the queue
+async function fetchGitHub(url) {
+  return githubQueue.add(() => fetchWithRetry(url));
+}
+
+// ============================================================================
+// HELPERS
+// ============================================================================
+
+// Raw HTTP fetch (used internally by fetchWithRetry only)
+async function rawFetchGitHub(url) {
+  return new Promise((resolve, reject) => {
+    const options = {
+      headers: {
+        Authorization: `Bearer ${CONFIG.GITHUB_TOKEN}`,
+        "User-Agent": "GitHub-Periodic-Leaderboard",
+        Accept: "application/vnd.github.v3+json",
+      },
+    };
+    https
+      .get(url, options, (res) => {
+        let data = "";
+        res.on("data", (chunk) => (data += chunk));
+        res.on("end", () => {
+          if (res.statusCode === 403 || res.statusCode === 429) {
+            const err = new Error(
+              `Rate limited. Retry after: ${
+                res.headers["retry-after"] ?? "unknown"
+              }s`
+            );
+            err.status = res.statusCode;
+            reject(err);
+          } else if (res.statusCode !== 200) {
+            reject(
+              new Error(`HTTP ${res.statusCode}: ${url}\n${data.slice(0, 200)}`)
+            );
+          } else {
+            try {
+              resolve(JSON.parse(data));
+            } catch (e) {
+              reject(new Error(`JSON parse error: ${e.message}`));
+            }
+          }
+        });
+      })
+      .on("error", reject);
+  });
+}
 
 function readJsonFile(filePath) {
   try {
@@ -91,54 +214,11 @@ function isBot(username) {
   return CONFIG.BOT_PATTERNS.some((p) => lower.includes(p.toLowerCase()));
 }
 
-/**
- * Returns midnight UTC on the 1st of the current calendar month.
- * e.g. Feb 19 2026 → Feb 01 2026 00:00:00 UTC
- */
 function getCurrentMonthStart() {
   const now = new Date();
   return new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1, 0, 0, 0, 0)
   );
-}
-
-async function fetchGitHub(url) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      headers: {
-        Authorization: `Bearer ${CONFIG.GITHUB_TOKEN}`,
-        "User-Agent": "GitHub-Periodic-Leaderboard",
-        Accept: "application/vnd.github.v3+json",
-      },
-    };
-    https
-      .get(url, options, (res) => {
-        let data = "";
-        res.on("data", (chunk) => (data += chunk));
-        res.on("end", () => {
-          if (res.statusCode === 403 || res.statusCode === 429) {
-            reject(
-              new Error(
-                `Rate limited. Retry after: ${
-                  res.headers["retry-after"] ?? "unknown"
-                }s`
-              )
-            );
-          } else if (res.statusCode !== 200) {
-            reject(
-              new Error(`HTTP ${res.statusCode}: ${url}\n${data.slice(0, 200)}`)
-            );
-          } else {
-            try {
-              resolve(JSON.parse(data));
-            } catch (e) {
-              reject(new Error(`JSON parse error: ${e.message}`));
-            }
-          }
-        });
-      })
-      .on("error", reject);
-  });
 }
 
 async function fetchAllPages(baseUrl, since = null) {
@@ -149,8 +229,7 @@ async function fetchAllPages(baseUrl, since = null) {
     const sinceParam = since ? `&since=${since.toISOString()}` : "";
     const url = `${baseUrl}${sep}per_page=100&page=${page}${sinceParam}`;
     try {
-      await delay(CONFIG.DELAY_MS);
-      const data = await fetchGitHub(url);
+      const data = await fetchGitHub(url); // ← now goes through queue
       if (!Array.isArray(data) || data.length === 0) break;
       results.push(...data);
       if (data.length < 100) break;
@@ -169,7 +248,6 @@ async function fetchAllPages(baseUrl, since = null) {
 
 async function fetchDefaultBranch(repo) {
   try {
-    await delay(CONFIG.DELAY_MS);
     const data = await fetchGitHub(
       `https://api.github.com/repos/${CONFIG.OWNER}/${repo}`
     );
@@ -184,10 +262,6 @@ async function fetchDefaultBranch(repo) {
 
 // ============================================================================
 // FETCH COMMITS ON DEFAULT BRANCH SINCE monthStart
-//
-// Returns normalized objects: { sha, author_login, author_name, date }
-// — same shape as the all-time cache so scoreUser() uses identical field names.
-// Only commits on sha=<defaultBranch> with date >= since are returned.
 // ============================================================================
 
 async function fetchCommitsSince(repo, branch, since) {
@@ -204,7 +278,6 @@ async function fetchCommitsSince(repo, branch, since) {
     .filter((c) => !isBot(c.author?.login) && !isBot(c.commit?.author?.name))
     .map((c) => ({
       sha: c.sha,
-      // Normalize to author_login / author_name — same fields generate-leaderboard.js uses
       author_login: c.author?.login || null,
       author_name: c.commit?.author?.name || null,
       date: c.commit?.author?.date || null,
@@ -216,9 +289,6 @@ async function fetchCommitsSince(repo, branch, since) {
 
 // ============================================================================
 // FETCH MERGED PRS SINCE monthStart THAT LANDED ON DEFAULT BRANCH
-//
-// Reuses the SHA set already built from the commits fetch — no second pass.
-// Only PRs with merged_at >= since AND merge_commit_sha in SHA set are kept.
 // ============================================================================
 
 async function fetchMergedPRsSince(
@@ -243,8 +313,7 @@ async function fetchMergedPRsSince(
   while (!done) {
     const url = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/pulls?state=closed&sort=updated&direction=desc&per_page=100&page=${page}`;
     try {
-      await delay(CONFIG.DELAY_MS);
-      const prs = await fetchGitHub(url);
+      const prs = await fetchGitHub(url); // ← now goes through queue
       if (!prs || prs.length === 0) break;
 
       for (const pr of prs) {
@@ -260,7 +329,6 @@ async function fetchMergedPRsSince(
           }, sha_match=${defaultBranchSHAs.has(pr.merge_commit_sha)}`
         );
         if (isBot(pr.user?.login)) continue;
-        // Core rule: merge commit must exist on the default branch
         if (!pr.merge_commit_sha || !defaultBranchSHAs.has(pr.merge_commit_sha))
           continue;
         candidates.push(pr);
@@ -280,7 +348,6 @@ async function fetchMergedPRsSince(
   const enriched = [];
   for (const pr of candidates) {
     try {
-      await delay(CONFIG.DELAY_MS);
       const full = await fetchGitHub(
         `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/pulls/${pr.number}`
       );
@@ -297,7 +364,6 @@ async function fetchMergedPRsSince(
         multiplier = 1.3;
       }
 
-      await delay(CONFIG.DELAY_MS);
       let reviews = [];
       try {
         reviews = await fetchGitHub(
@@ -305,7 +371,6 @@ async function fetchMergedPRsSince(
         );
       } catch (_) {}
 
-      await delay(CONFIG.DELAY_MS);
       let reviewComments = [];
       try {
         reviewComments = await fetchGitHub(
@@ -346,7 +411,7 @@ async function fetchMergedPRsSince(
 }
 
 // ============================================================================
-// FETCH ISSUES SINCE monthStart (with real comment authors in window)
+// FETCH ISSUES SINCE monthStart
 // ============================================================================
 
 async function fetchIssuesSince(repo, since) {
@@ -375,8 +440,7 @@ async function fetchIssuesSince(repo, since) {
       while (true) {
         const url = `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues/${issue.number}/comments?per_page=100&page=${page}`;
         try {
-          await delay(CONFIG.DELAY_MS);
-          const comments = await fetchGitHub(url);
+          const comments = await fetchGitHub(url); // ← now goes through queue
           if (!comments || comments.length === 0) break;
           for (const comment of comments) {
             if (
@@ -433,7 +497,6 @@ async function fetchIssuesSince(repo, since) {
 
 // ============================================================================
 // PROCESS ONE REPO
-// Commits fetched once → SHA set reused for PR filtering (no double API pass).
 // ============================================================================
 
 async function processRepo(repoName, projectTitle, since) {
@@ -441,10 +504,7 @@ async function processRepo(repoName, projectTitle, since) {
   try {
     const branch = await fetchDefaultBranch(repoName);
 
-    // Fetch & normalize commits first
     const commits = await fetchCommitsSince(repoName, branch, since);
-
-    // Build SHA set from already-fetched commits — reused for PR filtering
     const defaultBranchSHAs = new Set(commits.map((c) => c.sha));
 
     const mergedPRs = await fetchMergedPRsSince(
@@ -469,7 +529,6 @@ async function processRepo(repoName, projectTitle, since) {
 
 // ============================================================================
 // SCORE A USER
-// Uses author_login / author_name — same fields as the normalized cache shape.
 // ============================================================================
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
@@ -501,7 +560,6 @@ function scoreUser(username, projectDataList) {
   for (const pd of projectDataList) {
     if (!pd) continue;
 
-    // Commits: match author_login (exact) or author_name (substring fallback)
     const userCommits = pd.commits.filter(
       (c) =>
         c.author_login === username ||
@@ -509,7 +567,6 @@ function scoreUser(username, projectDataList) {
     );
     commits += userCommits.length;
 
-    // PRs already filtered to default branch by fetchMergedPRsSince
     const userPRs = pd.merged_prs.filter((pr) => pr.author === username);
     for (const pr of userPRs) {
       prs.push(pr);
@@ -713,6 +770,7 @@ async function main() {
   console.log(
     "   PRs     : merged_at >= window start + merge_commit_sha on default branch"
   );
+  console.log("   ⚙️  Queue: concurrency=1, 500ms delay, retry with backoff");
   console.log("=".repeat(60));
 
   if (!CONFIG.GITHUB_TOKEN) {

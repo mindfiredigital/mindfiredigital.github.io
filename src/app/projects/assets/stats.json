@@ -12,8 +12,8 @@
     "name": "neo-pusher",
     "type": "pypi",
     "day": 0,
-    "week": 1,
-    "month": 98,
+    "week": 0,
+    "month": 95,
     "year": 0,
     "total": 21000,
     "title": "neo-pusher"
@@ -22,7 +22,7 @@
     "name": "sqlrag",
     "type": "pypi",
     "day": 0,
-    "week": 12,
+    "week": 0,
     "month": 38,
     "year": 0,
     "total": 7000,
@@ -70,7 +70,7 @@
     "day": 3,
     "week": 22,
     "year": 1652,
-    "total": 2178,
+    "total": 2171,
     "title": "canvas-editor"
   },
   {
@@ -88,7 +88,7 @@
     "day": 8,
     "week": 22,
     "year": 1050,
-    "total": 1332,
+    "total": 1327,
     "title": "react-canvas-editor"
   },
   {
