@@ -112,13 +112,13 @@ const ScoringSystem = () => {
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Has tests × <strong>2</strong>
+                    Has tests × <strong>1</strong>
                   </span>
                 </div>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Has docs × <strong>2</strong>
+                    Has docs × <strong>1</strong>
                   </span>
                 </div>
                 <div className='flex items-start gap-1.5'>
@@ -130,7 +130,7 @@ const ScoringSystem = () => {
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Zero revisions × <strong>3</strong>
+                    Zero revisions × <strong>2</strong>
                   </span>
                 </div>
               </div>
