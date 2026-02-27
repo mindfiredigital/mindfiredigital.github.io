@@ -114,7 +114,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
   };
 
   const badge = getRankBadge(contributor.rank);
-  const projectsScore = score_breakdown.projects_score ?? 0;
   const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;
 
   return (
@@ -214,31 +213,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
               </div>
             ))}
           </div>
-
-          {/* ── NEW: Multi-project bonus highlight banner ── */}
-          {projectsWorkedOn > 0 && (
-            <div className='flex items-center gap-3 bg-violet-50 border border-violet-200 rounded-xl px-4 py-3'>
-              <Layers className='w-5 h-5 text-violet-500 flex-shrink-0' />
-              <div className='flex-1 min-w-0'>
-                <p className='text-xs font-bold text-violet-800'>
-                  Multi-Project Contributor
-                </p>
-                <p className='text-xs text-violet-600 mt-0.5'>
-                  Worked on{" "}
-                  <strong>
-                    {projectsWorkedOn} project
-                    {projectsWorkedOn !== 1 ? "s" : ""}
-                  </strong>{" "}
-                  — earning a{" "}
-                  <strong className='font-mono'>+{projectsScore} pt</strong>{" "}
-                  community bonus ({projectsWorkedOn} × 10)
-                </p>
-              </div>
-              <span className='flex-shrink-0 text-lg font-black text-violet-700 font-mono'>
-                +{projectsScore}
-              </span>
-            </div>
-          )}
 
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
@@ -405,11 +379,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                     </span>
                     <div className='flex-1 bg-gray-100 rounded-full h-2'>
                       <div
-                        className={`h-2 rounded-full transition-all duration-500 ${
-                          item.label === "Multi-Project Bonus"
-                            ? "bg-gradient-to-r from-violet-500 to-purple-400"
-                            : "bg-gradient-to-r from-mindfire-text-red to-orange-400"
-                        }`}
+                        className={`h-2 rounded-full transition-all duration-500 bg-gradient-to-r from-mindfire-text-red to-orange-400`}
                         style={{ width: `${(item.value / maxScore) * 100}%` }}
                       />
                     </div>

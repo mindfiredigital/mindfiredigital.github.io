@@ -31,7 +31,7 @@ export default function ProjectCard({
             {title}
           </h3>
 
-          {parentTitle !== "Upcoming Projects" && stars !== undefined && (
+          {stars !== undefined && (
             <div className='flex items-center gap-1 bg-gray-100 rounded-full p-1 flex-shrink-0'>
               <AiFillStar className='text-yellow-400' />
               <span className='text-sm text-gray-600'>{stars}</span>

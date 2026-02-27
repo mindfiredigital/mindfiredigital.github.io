@@ -324,32 +324,57 @@ export async function getContributorData(contributor) {
 }
 
 async function generateMapping() {
-  const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
+  const currentProjects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
+
+  // ← NEW: also load upcoming projects
+  const UPCOMING_PROJECTS_PATH =
+    "./src/app/projects/assets/upcomingProjects.json";
+  let upcomingProjects = [];
+  try {
+    upcomingProjects = JSON.parse(
+      fs.readFileSync(UPCOMING_PROJECTS_PATH, "utf8")
+    );
+    console.log(`📦 Loaded ${upcomingProjects.length} upcoming projects`);
+  } catch (e) {
+    console.warn(
+      "⚠️ Could not load upcomingProjects.json, skipping upcoming projects"
+    );
+  }
+
+  // ← NEW: merge both lists
+  const allProjects = [...currentProjects, ...upcomingProjects];
   const mapping = {};
 
-  console.log("🚀 Generating contributor-to-project mapping...");
+  console.log(
+    `🚀 Generating contributor-to-project mapping for ${allProjects.length} total projects (${currentProjects.length} current + ${upcomingProjects.length} upcoming)...`
+  );
 
-  for (const project of projects) {
-    // Extract owner and repo from githubUrl
-    const match = project.githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
-    if (match) {
-      const [, owner, repo] = match;
-      try {
-        const res = await axios.get(
-          `https://api.github.com/repos/${owner}/${repo}/contributors`,
-          { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
-        );
+  for (const project of allProjects) {
+    const repoUrl = project.githubUrl || project.github_repository_link || "";
+    const match = repoUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
+    if (!match) continue;
 
-        res.data.forEach((contributor) => {
-          if (!mapping[contributor.login]) mapping[contributor.login] = [];
+    const [, owner, repo] = match;
+    try {
+      const res = await axios.get(
+        `https://api.github.com/repos/${owner}/${repo}/contributors`,
+        { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
+      );
+
+      res.data.forEach((contributor) => {
+        if (!mapping[contributor.login]) mapping[contributor.login] = [];
+        // avoid duplicates if a contributor is in both current and upcoming
+        if (!mapping[contributor.login].includes(project.id)) {
           mapping[contributor.login].push(project.id);
-        });
-        console.log(`✅ Synced: ${project.title}`);
-      } catch (e) {
-        console.error(
-          `❌ Failed: ${project.title} (Rate limit or invalid URL)`
-        );
-      }
+        }
+      });
+      console.log(
+        `✅ Synced: ${project.title} (${project.project_type || "upcoming"})`
+      );
+    } catch (e) {
+      console.error(
+        `❌ Failed: ${project.title} — ${e.response?.status || e.message}`
+      );
     }
   }
 

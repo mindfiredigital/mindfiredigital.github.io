@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:05:59.469Z",
+    "fetched_at": "2026-02-27T07:36:09.693Z",
     "commits": [
       {
         "sha": "472fc175c93ad086c35d209a7926233f0a4077e3",
@@ -4419,7 +4419,7 @@
       {
         "sha": "c6c1936468a7e8a479854c1524d29d8e555907dd",
         "author_login": "Hufe921",
-        "author_name": "黄��飞",
+        "author_name": "黄云飞",
         "date": "2022-04-06T10:06:01Z",
         "message": "fix:event error at control boundary"
       },
@@ -4587,7 +4587,7 @@
       {
         "sha": "564d10a8d2b00d081e5120650aed8093699f7495",
         "author_login": "Hufe921",
-        "author_name": "黄云���",
+        "author_name": "黄云飞",
         "date": "2022-03-23T08:12:18Z",
         "message": "feat:add get editor image interface"
       },
@@ -6330,7 +6330,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:06:03.366Z",
+    "fetched_at": "2026-02-27T07:36:12.915Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7511,7 +7511,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:06:21.495Z",
+    "fetched_at": "2026-02-27T07:36:31.308Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -8007,7 +8007,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-02-23T10:06:41.252Z",
+    "fetched_at": "2026-02-27T07:36:52.492Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9342,7 +9342,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-02-23T10:06:43.201Z",
+    "fetched_at": "2026-02-27T07:36:54.506Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9380,7 +9380,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:07:08.839Z",
+    "fetched_at": "2026-02-27T07:37:21.388Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10237,7 +10237,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:07:32.071Z",
+    "fetched_at": "2026-02-27T07:37:43.475Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -10751,7 +10751,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:08:01.351Z",
+    "fetched_at": "2026-02-27T07:38:13.396Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11336,7 +11336,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:08:43.577Z",
+    "fetched_at": "2026-02-27T07:38:56.171Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -13697,7 +13697,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-02-23T10:09:35.167Z",
+    "fetched_at": "2026-02-27T07:39:46.741Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15359,7 +15359,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-02-23T10:10:41.526Z",
+    "fetched_at": "2026-02-27T07:40:59.153Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17201,7 +17201,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:11:17.228Z",
+    "fetched_at": "2026-02-27T07:41:37.402Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -17887,7 +17887,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-02-23T10:12:24.546Z",
+    "fetched_at": "2026-02-27T07:42:47.305Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -20257,7 +20257,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:15:56.031Z",
+    "fetched_at": "2026-02-27T07:48:09.704Z",
     "commits": [
       {
         "sha": "9cb628a1066d6f36ec9eefdf9bf5edb02d450795",
@@ -26449,8 +26449,603 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:20:45.152Z",
+    "fetched_at": "2026-02-27T07:54:02.064Z",
     "commits": [
+      {
+        "sha": "f4bc3be6643237d07488319aab0a8b8315a18095",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T06:42:08Z",
+        "message": "chore(release): version packages (#280)"
+      },
+      {
+        "sha": "93524992acef0fafe1ede2e235a9e98b2a140b34",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:44:35Z",
+        "message": "feat(core): Release from Dev (#279)"
+      },
+      {
+        "sha": "1180e28e96658c283bd79ae215ca08c6f3da78ec",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:43:38Z",
+        "message": "feat(core): Feat/charts (#278)"
+      },
+      {
+        "sha": "3fef6be5f5a997fc5943dd13c1846c96586638d5",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-26T12:35:25Z",
+        "message": "docs(charts): added the documentation for the chart library"
+      },
+      {
+        "sha": "a0628025dee690d2b697f4d5e9599b5d1f387d22",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-25T12:29:10Z",
+        "message": "chore(release): version packages (#277)"
+      },
+      {
+        "sha": "25a4521acd27ff09e023ff155d28dc30edf056ea",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-25T12:24:58Z",
+        "message": "feat(core): Release from Dev (#276)"
+      },
+      {
+        "sha": "63219d5f8d3c2f121c3d0e5ea0fa2d2f1cf3783c",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-25T12:24:13Z",
+        "message": "fix(charts): modified the import and added the library (#275)"
+      },
+      {
+        "sha": "095c49cdf77c6ccc9388eb4e12f780bb9572b092",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T10:32:20Z",
+        "message": "fix(charts): modified the import and added the library"
+      },
+      {
+        "sha": "2c4d0f6109df207f357a94f3c5569b34ff714696",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-25T10:15:34Z",
+        "message": "feat(core): Release from dev (#274)"
+      },
+      {
+        "sha": "b40af6e7061c4e27fefda4bbe106a71da9a1b8c9",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-25T10:14:24Z",
+        "message": "docs(charts): updated the docs for user (#273)"
+      },
+      {
+        "sha": "1ed09e58b467890d6b8342170603d4075cd4c16f",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T08:52:47Z",
+        "message": "fix(charts): added the header"
+      },
+      {
+        "sha": "5e6f049fb17d87a7915870f016c53394fb1402c5",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T08:38:26Z",
+        "message": "feat(charts): added the filter to demo"
+      },
+      {
+        "sha": "e6661a193591de901286b16488472994b271afc4",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T08:37:27Z",
+        "message": "fix(charts): updated the palatte"
+      },
+      {
+        "sha": "ced547971fd4f968f5cec43b8e456157957e216f",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T08:36:23Z",
+        "message": "feat(charts): modified the analytics package"
+      },
+      {
+        "sha": "6e289cdab3ca8fc0108754dcfe5a1f28b68a212a",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-25T07:51:53Z",
+        "message": "docs(charts): added the api reference"
+      },
+      {
+        "sha": "7784e950b7bde1c913e5ac10b1b5478e782a4004",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-24T06:39:57Z",
+        "message": "docs(charts): updated the docs for user"
+      },
+      {
+        "sha": "8d3620f8313e12e5a1e94fc6c6e84131da370f65",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:44:51Z",
+        "message": "chore(release): version packages (#272)"
+      },
+      {
+        "sha": "d722ffe9522e23b63ba3e7c517cd6784dbbc5a02",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:42:24Z",
+        "message": "feat(core): Release from Dev (#271)"
+      },
+      {
+        "sha": "f0744655fff1ee0beadd9fc71b910d5e171b99e3",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:42:03Z",
+        "message": "Merge branch 'main' into dev"
+      },
+      {
+        "sha": "652e24532bc080e4e427530afc4af9e2dbe52ae7",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:40:47Z",
+        "message": "feat(core): Set package as private in analytics-demo (#270)"
+      },
+      {
+        "sha": "b5763cbc3831b603684f2fb383efa0a2377760b0",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:40:11Z",
+        "message": "feat(core): Set package as private in analytics-demo"
+      },
+      {
+        "sha": "e5b1e786d62fd0d11a7815a81040266806411789",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:36:28Z",
+        "message": "chore(release): version packages (#269)"
+      },
+      {
+        "sha": "49e1826165357bde374f817c5ff92812ffd8dad0",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:33:35Z",
+        "message": "feat(core): Release from Dev (#268)"
+      },
+      {
+        "sha": "81c30ae2a2f4a40ed9e4db365e6cba62a0e06127",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-18T07:43:09Z",
+        "message": "feat(charts): added the docs for the analytics package (#267)"
+      },
+      {
+        "sha": "1b89f277550eeecb054e46d78e84285bb879c59b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-02-17T11:02:47Z",
+        "message": "feat(charts): added the docs for the analytics package"
+      },
+      {
+        "sha": "0aca0885e3e9309f08ce70af72f3b2bd7878a5b9",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-01-29T10:03:31Z",
+        "message": "feat(core): Feat/charts (#265)"
+      },
+      {
+        "sha": "c675fb2496836bd1efeade222af8f58f2405066c",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:15:12Z",
+        "message": "docs(vue): added the mdx file"
+      },
+      {
+        "sha": "9bf86bf6cd10212c4be9cbe09c6ad1229dea55c3",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:14:52Z",
+        "message": "docs(vue): docs updated"
+      },
+      {
+        "sha": "8dc72939f212b8bdb3938cb01fbd986613437e48",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:13:48Z",
+        "message": "docs(vue): sample project updated with error handler"
+      },
+      {
+        "sha": "af47b44d113fcf1e6d802f4478f56eff0e989a70",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:13:28Z",
+        "message": "docs(vue): sample project added"
+      },
+      {
+        "sha": "052f8757760404e59800c0be7acedd33b76f4ac5",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:07:54Z",
+        "message": "docs(charts): animation modified"
+      },
+      {
+        "sha": "89c5318b8a8211126802299c69519629e6fe8f77",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:07:36Z",
+        "message": "docs(charts): css added for animation"
+      },
+      {
+        "sha": "483a4ec18baff3a8f3000683bd22ad8bf6a8aa33",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:06:37Z",
+        "message": "docs(charts): test code added"
+      },
+      {
+        "sha": "a1cfcddd54ce249fde7de4cb5ba5fd5c6f8cd01e",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:06:16Z",
+        "message": "docs(charts): overview updated"
+      },
+      {
+        "sha": "8597628af6732f4a9452d45715c82aa4e23dfd16",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-29T08:05:17Z",
+        "message": "docs(charts): updated the homepage"
+      },
+      {
+        "sha": "58d27c4c5dfaf8da472bfc56a7fe1a3ea5d8d476",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:25:32Z",
+        "message": "docs(core): added the compatibility"
+      },
+      {
+        "sha": "a8b284230079c546795f4e6f3c7e54699aec1c37",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:17:20Z",
+        "message": "docs(core): added the wasm code"
+      },
+      {
+        "sha": "9b95ba02d2a048668bc3d9787c1d88e070c3e546",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:15:01Z",
+        "message": "docs(core): added the code for ref"
+      },
+      {
+        "sha": "7791aab5ce1bb2befdd6dc8d6db49222a45b72e8",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:11:50Z",
+        "message": "docs(core): added the wasm docs"
+      },
+      {
+        "sha": "51887c0fe2d8f14ea4918c9ee96fcf23531af5cd",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:11:26Z",
+        "message": "docs(core): added the sigterm"
+      },
+      {
+        "sha": "337923b9b1168487154e2ef7153a896525705b2b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:07:51Z",
+        "message": "docs(core): added the error handlers"
+      },
+      {
+        "sha": "6c47beacbae5569abc87a94f61a298ebc8db9e7a",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:07:29Z",
+        "message": "docs(core): added the santize delimiters"
+      },
+      {
+        "sha": "0ec3c85b16c4ea145e2168dff1ff98f0863da173",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:06:30Z",
+        "message": "docs(core): methods added for webcomponent"
+      },
+      {
+        "sha": "301c7490fbb22392a9f483403ed44becddad623d",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:06:16Z",
+        "message": "docs(core): methods added for core"
+      },
+      {
+        "sha": "6ff6bbed58d08156593601a43e35b1395d48bec2",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:05:29Z",
+        "message": "docs(core): detail type modified"
+      },
+      {
+        "sha": "675b1b4c1086200159731f841905e267ec9f9d17",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:05:06Z",
+        "message": "docs(core): events added and details"
+      },
+      {
+        "sha": "93fa247118afe27112580c3f1876a2c7291a1211",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:03:27Z",
+        "message": "docs(core): modified the attributes"
+      },
+      {
+        "sha": "ec34245b05606f6f4f4cdf3d9e1fbddd71c03ac2",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:02:53Z",
+        "message": "docs(core): added the attributes"
+      },
+      {
+        "sha": "c5f4059431a9cafe314a42d3d63c707ce30d80c5",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:01:23Z",
+        "message": "docs(charts): removed the img"
+      },
+      {
+        "sha": "4b2121c63a95c94c5c367a887b0659314ed1120d",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:00:50Z",
+        "message": "docs(charts): added the combo chart data"
+      },
+      {
+        "sha": "d6273512f4814736c548eaa52a190ac6a10b2a7b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T11:00:13Z",
+        "message": "docs(vue): modified the api reference"
+      },
+      {
+        "sha": "94d966b1f1c6906b9947c0b815bcbd4a905606f8",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:59:23Z",
+        "message": "docs(vue): added the pagination"
+      },
+      {
+        "sha": "461f7dda2f6f60d06c01ee1a2af73e12375e34e2",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:58:55Z",
+        "message": "docs(vue): added the format value"
+      },
+      {
+        "sha": "bd23ddd7c6b1653e591d284dcddfd39e527f759b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:58:00Z",
+        "message": "docs(vue): modified the  core concepts"
+      },
+      {
+        "sha": "f20f3cda156298120be38a1c56d2bb1bb412db9a",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:57:28Z",
+        "message": "docs(vue): added the core concepts"
+      },
+      {
+        "sha": "17a4287bc51d1456d047571871635fe56e4cc50e",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:56:39Z",
+        "message": "docs(vue): added api in  the vue docs"
+      },
+      {
+        "sha": "818f999b1cbe3403263c04ce4e8be52cc2cd7135",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:54:15Z",
+        "message": "docs(vue): modified the vue docs"
+      },
+      {
+        "sha": "e3f70e41671bed1f284994219fdbde3861b76d63",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:45:15Z",
+        "message": "docs(charts): typescript added"
+      },
+      {
+        "sha": "cde07ac34f41d0a6a67ea98d66bd477ecdcf1bba",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:42:12Z",
+        "message": "docs(charts): types of data added"
+      },
+      {
+        "sha": "9814aa2044adb2bf1bfa400107a0872b9e43df47",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:41:21Z",
+        "message": "docs(charts): modified the aggregated data"
+      },
+      {
+        "sha": "ca6765ab65e5abca03bc5f2f32554991ca689e9b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T10:40:40Z",
+        "message": "docs(charts): added the aggregated data"
+      },
+      {
+        "sha": "221315cec3de0781044a1731deea4478dc9f53ee",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:58:31Z",
+        "message": "docs(charts): added the installation"
+      },
+      {
+        "sha": "3d8b551be4b0e878cda278f0dc9eeb62b3656b47",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:58:11Z",
+        "message": "docs(charts): added the reference"
+      },
+      {
+        "sha": "81c0160098e419583919f61796a18b9aaa904c56",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:57:27Z",
+        "message": "docs(charts): added the typescript code"
+      },
+      {
+        "sha": "3236b77b8019721c903dac7d5567480402d14da5",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:56:56Z",
+        "message": "docs(charts): added about the types"
+      },
+      {
+        "sha": "eff2ca1457e5d29262180728a363da3c49171fa3",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:56:04Z",
+        "message": "docs(charts): added about the charts types"
+      },
+      {
+        "sha": "b6850fb740380af95b5070496678329aa09fedf2",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:55:43Z",
+        "message": "docs(charts): added about the charts sections"
+      },
+      {
+        "sha": "84edf68c2cccd17981a384a7e2f591612469898e",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:53:58Z",
+        "message": "docs(charts): added colur pallete"
+      },
+      {
+        "sha": "3e32a0773dbf222d8040b2e74d635a5b79ac5aeb",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:53:06Z",
+        "message": "docs(charts): added style to charts docs"
+      },
+      {
+        "sha": "593b926cc20339c297350a0c92ecd7c241576359",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:52:11Z",
+        "message": "docs(charts): modified the api reference"
+      },
+      {
+        "sha": "d7c39a897cdc1f519f32e701cd63c1eee225a680",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:50:55Z",
+        "message": "docs(charts): modified the react docs and vue"
+      },
+      {
+        "sha": "4bc4c7bc24e974783127d2c6a4141bb5b7a5d82c",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:48:34Z",
+        "message": "docs(charts): added react docs"
+      },
+      {
+        "sha": "d1f583c904a43c4964c0969fcb13430a79c5b085",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:46:22Z",
+        "message": "docs(charts): modified the style section"
+      },
+      {
+        "sha": "661c50a818a9330d34bd80d8828d723356a9bb5d",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:45:54Z",
+        "message": "docs(charts): modified the feature section"
+      },
+      {
+        "sha": "37635119379c35fc03591bcb50659e85c67cedf9",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:42:45Z",
+        "message": "docs(charts): updated docs for interactive demo"
+      },
+      {
+        "sha": "3511761a120859e29173a28f1857581f92cce74c",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-28T09:42:09Z",
+        "message": "docs(charts): updated docs for analytics"
+      },
+      {
+        "sha": "3ee72bc2bae27ee124cc7e69f0babac644d0fac1",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-01-23T12:33:12Z",
+        "message": "feat(vue): added the analytics using the package (#264)"
+      },
+      {
+        "sha": "4a6afb5cc464f0dd60f305963e48e19a388436d0",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T12:31:10Z",
+        "message": "docs(charts): updated the simple js demo  readme file"
+      },
+      {
+        "sha": "909c620345e0f19e4c75de63a86c18da3e75823b",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T11:47:27Z",
+        "message": "docs(charts): updated the vue-eg readme file"
+      },
+      {
+        "sha": "e97f0c6fdf2f2418d2bc60cd9c18fc8022824cce",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T11:27:50Z",
+        "message": "docs(charts): updated the readme file"
+      },
+      {
+        "sha": "a413e8825f1d3d984c631daa171a9d0ec25edd8c",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T11:12:45Z",
+        "message": "feat(charts): added the chartjs to the package"
+      },
+      {
+        "sha": "ee4e8120334a8ec5ac2f48efc512700bad972f72",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T10:14:59Z",
+        "message": "fix(core): modified the readme"
+      },
+      {
+        "sha": "91c46b81c1aea98307652163026df32a681516b2",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T08:48:51Z",
+        "message": "fix(vue): modified the analytics tab"
+      },
+      {
+        "sha": "4bff6ff93962f6d9a31ab18a59f52c7c03c7e35e",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T07:58:43Z",
+        "message": "fix(vue): modified the table tab"
+      },
+      {
+        "sha": "6018fa9d2e41f1cb004d7f75f7f67cec21fb8b43",
+        "author_login": "sanghamitradash021",
+        "author_name": "sanghamitra dash",
+        "date": "2026-01-23T07:48:21Z",
+        "message": "feat(vue): added the analytics using the package"
+      },
       {
         "sha": "d67a60c1139e92ef466900f4901bb6445d7704a6",
         "author_login": "anandmindfire",
@@ -30633,6 +31228,234 @@
     ],
     "merged_prs": [
       {
+        "number": 279,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-27T05:44:36Z",
+        "created_at": "2026-02-27T05:44:20Z",
+        "base_ref": "main",
+        "merge_commit_sha": "93524992acef0fafe1ede2e235a9e98b2a140b34",
+        "changed_files": 1,
+        "additions": 104,
+        "deletions": 238,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 278,
+        "author": "sanghamitradash021",
+        "title": "Feat/charts",
+        "merged_at": "2026-02-27T05:43:38Z",
+        "created_at": "2026-02-26T12:36:36Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "1180e28e96658c283bd79ae215ca08c6f3da78ec",
+        "changed_files": 1,
+        "additions": 104,
+        "deletions": 238,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-27T05:43:21Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 276,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-25T12:24:58Z",
+        "created_at": "2026-02-25T12:24:40Z",
+        "base_ref": "main",
+        "merge_commit_sha": "25a4521acd27ff09e023ff155d28dc30edf056ea",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 4,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 275,
+        "author": "sanghamitradash021",
+        "title": "fix(charts): modified the import and added the library",
+        "merged_at": "2026-02-25T12:24:13Z",
+        "created_at": "2026-02-25T10:33:48Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "63219d5f8d3c2f121c3d0e5ea0fa2d2f1cf3783c",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 4,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-25T12:23:48Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 274,
+        "author": "anandmindfire",
+        "title": "Release from dev",
+        "merged_at": "2026-02-25T10:15:34Z",
+        "created_at": "2026-02-25T10:15:09Z",
+        "base_ref": "main",
+        "merge_commit_sha": "2c4d0f6109df207f357a94f3c5569b34ff714696",
+        "changed_files": 23,
+        "additions": 1855,
+        "deletions": 1080,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 273,
+        "author": "sanghamitradash021",
+        "title": "docs(charts): updated the docs for user",
+        "merged_at": "2026-02-25T10:14:24Z",
+        "created_at": "2026-02-24T06:40:48Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "b40af6e7061c4e27fefda4bbe106a71da9a1b8c9",
+        "changed_files": 23,
+        "additions": 1855,
+        "deletions": 1080,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 271,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-24T04:42:24Z",
+        "created_at": "2026-02-24T04:41:37Z",
+        "base_ref": "main",
+        "merge_commit_sha": "d722ffe9522e23b63ba3e7c517cd6784dbbc5a02",
+        "changed_files": 1,
+        "additions": 2,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 270,
+        "author": "anandmindfire",
+        "title": "feat(core): Set package as private in analytics-demo",
+        "merged_at": "2026-02-24T04:40:47Z",
+        "created_at": "2026-02-24T04:40:22Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "652e24532bc080e4e427530afc4af9e2dbe52ae7",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 0,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 268,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-24T04:33:35Z",
+        "created_at": "2026-02-24T04:33:09Z",
+        "base_ref": "main",
+        "merge_commit_sha": "49e1826165357bde374f817c5ff92812ffd8dad0",
+        "changed_files": 83,
+        "additions": 21260,
+        "deletions": 2467,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 267,
+        "author": "sanghamitradash021",
+        "title": "feat(charts): added the docs for the analytics package",
+        "merged_at": "2026-02-18T07:43:09Z",
+        "created_at": "2026-02-17T11:03:47Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "81c30ae2a2f4a40ed9e4db365e6cba62a0e06127",
+        "changed_files": 52,
+        "additions": 15914,
+        "deletions": 1988,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 265,
+        "author": "sanghamitradash021",
+        "title": "Feat/charts",
+        "merged_at": "2026-01-29T10:03:32Z",
+        "created_at": "2026-01-28T09:43:30Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "0aca0885e3e9309f08ce70af72f3b2bd7878a5b9",
+        "changed_files": 29,
+        "additions": 4519,
+        "deletions": 89,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 264,
+        "author": "sanghamitradash021",
+        "title": "feat(vue): added the analytics using the package",
+        "merged_at": "2026-01-23T12:33:12Z",
+        "created_at": "2026-01-23T07:49:07Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "3ee72bc2bae27ee124cc7e69f0babac644d0fac1",
+        "changed_files": 15,
+        "additions": 1366,
+        "deletions": 929,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
         "number": 262,
         "author": "anandmindfire",
         "title": "Release from Dev",
@@ -32644,11 +33467,11 @@
         "created_at": "2025-01-17T22:24:21Z",
         "base_ref": "main",
         "merge_commit_sha": "1fe66ed2fbb32df04afba3ffc1ff96559ce10e68",
-        "changed_files": 0,
-        "additions": 0,
-        "deletions": 0,
-        "complexity": "small",
-        "complexity_multiplier": 1,
+        "changed_files": 3,
+        "additions": 1444,
+        "deletions": 2419,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
         "reviews_count": 1,
         "review_comments_count": 0,
         "reviews": [
@@ -33220,453 +34043,13 @@
       }
     ],
     "issues": {
-      "bugs": [
-        {
-          "number": 180,
-          "author": "sanghamitradash021",
-          "title": "[BUG]: while exporting the table in HTML or PDF we are getting zero in all cells",
-          "created_at": "2025-09-01T05:39:45Z",
-          "comments": 1,
-          "comment_authors": [
-            {
-              "author": "sanghamitradash021",
-              "created_at": "2025-09-01T05:50:17Z"
-            }
-          ]
-        },
-        {
-          "number": 171,
-          "author": "sanghamitradash021",
-          "title": "[BUG]: Drag row and Drag column is not working for process data",
-          "created_at": "2025-08-19T11:44:48Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 151,
-          "author": "anandmindfire",
-          "title": "[BUG]: applyGrouping logic is always using the original config data instead of using the filtered results",
-          "created_at": "2025-05-27T05:57:54Z",
-          "comments": 1,
-          "comment_authors": [
-            {
-              "author": "JKAryan2003",
-              "created_at": "2025-05-27T06:07:43Z"
-            }
-          ]
-        },
-        {
-          "number": 125,
-          "author": "akashdeep-singh-multani",
-          "title": "Changeset commit restructuring",
-          "created_at": "2025-02-07T17:18:35Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 123,
-          "author": "akashdeep-singh-multani",
-          "title": "Exclude examples from publishing to npm",
-          "created_at": "2025-02-06T16:29:15Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 120,
-          "author": "akashdeep-singh-multani",
-          "title": "Issue related to package.json for examples workspace",
-          "created_at": "2025-02-06T11:30:29Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 119,
-          "author": "akashdeep-singh-multani",
-          "title": "Create changescript js script and update publish.yml",
-          "created_at": "2025-02-06T11:08:53Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 111,
-          "author": "akashdeep-singh-multani",
-          "title": "Setup Changesets for Automated Versioning",
-          "created_at": "2025-02-05T05:46:12Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 103,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Fix table data field validation",
-          "created_at": "2025-01-24T12:26:37Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 98,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Fix readme header",
-          "created_at": "2025-01-21T09:51:12Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 87,
-          "author": "akashdeep-singh-multani",
-          "title": "Update publish.yml to Publish to NPM",
-          "created_at": "2025-01-18T15:29:00Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 82,
-          "author": "akashdeep-singh-multani",
-          "title": "Fix issue related to CI/CD workflows for deployment to npm",
-          "created_at": "2025-01-18T06:48:38Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 59,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Improve UI for table for decial values and formatting",
-          "created_at": "2025-01-13T08:04:48Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 57,
-          "author": "akashdeep-singh-multani",
-          "title": "Bug Fixes and Feature Enhancements for Field Settings Popup",
-          "created_at": "2025-01-11T18:30:28Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 41,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Pull request checkList update",
-          "created_at": "2024-12-20T08:00:44Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 33,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Formatting and linting recheck",
-          "created_at": "2024-12-17T14:12:08Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 12,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Code clean up ",
-          "created_at": "2024-12-05T16:44:52Z",
-          "comments": 0,
-          "comment_authors": []
-        }
-      ],
+      "bugs": [],
       "enhancements": [
         {
           "number": 185,
           "author": "MohdAasim",
           "title": "[Feature]:Setup Docusaurus Documentation for Monorepo",
           "created_at": "2025-09-10T12:49:20Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 179,
-          "author": "MohdAasim",
-          "title": "[Feature]:Add Condotional Formating to Web Component",
-          "created_at": "2025-08-28T09:07:47Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 175,
-          "author": "MohdAasim",
-          "title": "[Feature]:Create lightweight wrapper for web component to provide idiomatic APIs, strong typing, and SSR support",
-          "created_at": "2025-08-22T05:14:07Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 167,
-          "author": "MohdAasim",
-          "title": "[Feature]:Add support for three modes in mywebcomponent (headless-pivot): none, minimal, and default",
-          "created_at": "2025-08-08T16:49:36Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 165,
-          "author": "MohdAasim",
-          "title": "[Feature]:Add subscription listener and event emission to core functionality",
-          "created_at": "2025-08-08T16:06:35Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 158,
-          "author": "anandmindfire",
-          "title": "[Feature]: Setup & Test PivotHead App + Make Component Headless",
-          "created_at": "2025-07-24T16:07:28Z",
-          "comments": 1,
-          "comment_authors": [
-            {
-              "author": "MohdAasim",
-              "created_at": "2025-07-24T16:11:17Z"
-            }
-          ]
-        },
-        {
-          "number": 154,
-          "author": "sanghamitradash021",
-          "title": "[Feature]:Add Conditional formatting feature in the core",
-          "created_at": "2025-06-11T08:37:24Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 149,
-          "author": "anandmindfire",
-          "title": "[Feature]: Add Web Component support to PivotHead core for multi-framework integration",
-          "created_at": "2025-05-05T07:09:40Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 140,
-          "author": "anandmindfire",
-          "title": "[Feature]: Enhanced Export Options",
-          "created_at": "2025-03-10T10:18:03Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 139,
-          "author": "anandmindfire",
-          "title": "[Feature]: Connect to Local Data Sources",
-          "created_at": "2025-03-10T10:13:51Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 115,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Add header for exporting option print, pdf and html",
-          "created_at": "2025-02-05T13:01:01Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 110,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Data source for core",
-          "created_at": "2025-02-04T11:03:53Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 104,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]:Hide/Show toolbar in pivot table",
-          "created_at": "2025-01-27T10:07:52Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 101,
-          "author": "mfsisudhanshuk",
-          "title": "[Improvement]: Code clean up and refactor.",
-          "created_at": "2025-01-24T09:14:23Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 96,
-          "author": "akashdeep-singh-multani",
-          "title": "Implement Multiple Columns Grouping for Headless Pivot Table",
-          "created_at": "2025-01-20T17:19:53Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 95,
-          "author": "akashdeep-singh-multani",
-          "title": "Create Angular Wrapper for @mindfiredigital/pivothead-core",
-          "created_at": "2025-01-20T16:43:09Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 92,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Create a react wrapper setup",
-          "created_at": "2025-01-20T08:41:09Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 75,
-          "author": "akashdeep-singh-multani",
-          "title": "[Feature]: Add CI/CD workflows",
-          "created_at": "2025-01-17T18:30:30Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 65,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Implementing dynamic conditional formatting rendering for between condition",
-          "created_at": "2025-01-16T11:11:32Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 63,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]:Dynamic formatting of fields based on popup setup",
-          "created_at": "2025-01-15T12:56:25Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 55,
-          "author": "akashdeep-singh-multani",
-          "title": "UI Changes for Pivot Table and Buttons",
-          "created_at": "2025-01-10T10:10:15Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 49,
-          "author": "akashdeep-singh-multani",
-          "title": "[Feature]: Fields Popup - Design and Drag-Drop Functionality",
-          "created_at": "2025-01-02T11:47:55Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 48,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Sort implementation issue",
-          "created_at": "2025-01-02T08:22:35Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 45,
-          "author": "akashdeep-singh-multani",
-          "title": "[Feature]: Dynamic Popup for Pivot Table Fields",
-          "created_at": "2024-12-30T05:52:36Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 43,
-          "author": "mfsisudhanshuk",
-          "title": "Update the pre-commmit",
-          "created_at": "2024-12-24T06:40:06Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 42,
-          "author": "akashdeep-singh-multani",
-          "title": "Separation of logic for features(sorting, resizing, drag, grouping) in pivotEngine",
-          "created_at": "2024-12-20T13:07:49Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 36,
-          "author": "akashdeep-singh-multani",
-          "title": "Add standard error handlers ",
-          "created_at": "2024-12-17T19:06:11Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 29,
-          "author": "patisubhakanta",
-          "title": "[Feature]:Visualization of Grouped Data in Graphs",
-          "created_at": "2024-12-16T08:50:52Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 28,
-          "author": "patisubhakanta",
-          "title": "[Feature]:Conditional Formatting for Data Cells",
-          "created_at": "2024-12-16T08:44:41Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 27,
-          "author": "patisubhakanta",
-          "title": "[Feature]:Aggregation Functions for Data Fields",
-          "created_at": "2024-12-16T08:28:48Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 25,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Draggable row and column ",
-          "created_at": "2024-12-13T08:15:03Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 22,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Grouping of data.",
-          "created_at": "2024-12-11T08:14:10Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 17,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Pull request template",
-          "created_at": "2024-12-09T08:34:07Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 16,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Row expansion/contraction",
-          "created_at": "2024-12-09T07:53:06Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 13,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]: Vercel setup for live preview ",
-          "created_at": "2024-12-05T16:58:11Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 5,
-          "author": "patisubhakanta",
-          "title": "[Feature] : Sorting",
-          "created_at": "2024-12-03T06:09:43Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 1,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature] : Add husky config",
-          "created_at": "2024-11-29T10:46:47Z",
           "comments": 0,
           "comment_authors": []
         }
@@ -33692,46 +34075,6 @@
               "created_at": "2025-10-09T07:09:05Z"
             }
           ]
-        },
-        {
-          "number": 97,
-          "author": "akashdeep-singh-multani",
-          "title": "Test core functionalities, make Changes in Readme.md",
-          "created_at": "2025-01-20T18:01:10Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 73,
-          "author": "mfsisudhanshuk",
-          "title": "[Improvement]: Update hook for patch branch",
-          "created_at": "2025-01-17T16:11:07Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 53,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Improvement , restructuring and writing function comments.",
-          "created_at": "2025-01-09T12:19:16Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 31,
-          "author": "mfsisudhanshuk",
-          "title": "[BUG]: Update README.md for highlighting code part",
-          "created_at": "2024-12-17T07:29:34Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 7,
-          "author": "patisubhakanta",
-          "title": "[Feature] : Virtualization",
-          "created_at": "2024-12-03T06:10:27Z",
-          "comments": 0,
-          "comment_authors": []
         }
       ],
       "others": [
@@ -33830,128 +34173,16 @@
           "created_at": "2025-09-12T10:58:31Z",
           "comments": 0,
           "comment_authors": []
-        },
-        {
-          "number": 164,
-          "author": "MohdAasim",
-          "title": "RFC: Headless Pivot Table Architecture for Web Components and Framework Integration",
-          "created_at": "2025-07-30T12:54:00Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 153,
-          "author": "JKAryan2003",
-          "title": "[BUG]: dragRow and dragColumn method is using raw data",
-          "created_at": "2025-06-06T10:06:41Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 144,
-          "author": "anandmindfire",
-          "title": "[Feature]: Add Vitest Tests for Export Features (HTML, PDF, Excel)",
-          "created_at": "2025-03-25T11:21:31Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 107,
-          "author": "patisubhakanta",
-          "title": "React Wrapper",
-          "created_at": "2025-01-30T09:07:37Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 105,
-          "author": "mfsisudhanshuk",
-          "title": "[Feature]:Drag and drop in pivot table for rearranging",
-          "created_at": "2025-01-27T10:19:10Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 94,
-          "author": "patisubhakanta",
-          "title": "Add Advanced Layout Options for Table Display",
-          "created_at": "2025-01-20T10:15:58Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 93,
-          "author": "patisubhakanta",
-          "title": "Enhance Table Formatting Options",
-          "created_at": "2025-01-20T10:13:11Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 70,
-          "author": "patisubhakanta",
-          "title": "[BUG]: Fix and Cleanup Code to Resolve Merge Conflicts",
-          "created_at": "2025-01-17T06:24:42Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 66,
-          "author": "patisubhakanta",
-          "title": "Add Feature to Choose Value with Decimal Places and Currency Symbol",
-          "created_at": "2025-01-16T12:48:38Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 46,
-          "author": "patisubhakanta",
-          "title": "[Feature]: Header UI",
-          "created_at": "2025-01-02T06:19:55Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 30,
-          "author": "patisubhakanta",
-          "title": "[Feature]: Basic Table Features: Sorting, Filtering, Pagination, and Universal Search",
-          "created_at": "2024-12-16T09:00:04Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 9,
-          "author": "akashdeep-singh-multani",
-          "title": "Add issue templates for bug report, feature request, and questions",
-          "created_at": "2024-12-03T10:51:27Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 6,
-          "author": "patisubhakanta",
-          "title": "[Feature] : Filtering",
-          "created_at": "2024-12-03T06:09:54Z",
-          "comments": 0,
-          "comment_authors": []
-        },
-        {
-          "number": 4,
-          "author": "patisubhakanta",
-          "title": "[Feature] : JSON to UI ",
-          "created_at": "2024-12-03T06:09:30Z",
-          "comments": 0,
-          "comment_authors": []
         }
       ]
     },
     "stats": {
-      "total_commits": 597,
-      "total_merged_prs": 141,
-      "total_bugs": 17,
-      "total_enhancements": 37,
-      "total_documentation": 7,
-      "total_others": 26
+      "total_commits": 682,
+      "total_merged_prs": 153,
+      "total_bugs": 0,
+      "total_enhancements": 1,
+      "total_documentation": 2,
+      "total_others": 12
     }
   },
   "21": {
@@ -33959,7 +34190,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:20:47.017Z",
+    "fetched_at": "2026-02-27T07:54:04.115Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -33997,7 +34228,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:21:25.651Z",
+    "fetched_at": "2026-02-27T07:54:59.084Z",
     "commits": [
       {
         "sha": "16df0b5e69d9b9a634c7b090e4ff72a471becac6",
@@ -35060,7 +35291,7 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:34:50.506Z",
+    "fetched_at": "2026-02-27T08:06:36.737Z",
     "commits": [
       {
         "sha": "46e02e68ffa736319953461366fd960f6845a1f6",
@@ -38222,7 +38453,7 @@
       {
         "sha": "86bc624cccc8e1b112348e50a2377a7c54eee744",
         "author_login": null,
-        "author_name": "“sanobery��",
+        "author_name": "“sanobery”",
         "date": "2025-11-18T02:07:18Z",
         "message": "feat(docs): added sidebar-right-layout template"
       },
@@ -48514,7 +48745,7 @@
       {
         "number": 98,
         "author": "jyotiprakashmfsi",
-        "title": "fix(release): changeset added to devdependency and card typecheck iss…",
+        "title": "fix(release): changeset added to devdependency and card typecheck iss��",
         "merged_at": "2025-08-05T06:34:23Z",
         "created_at": "2025-08-05T05:48:58Z",
         "base_ref": "main",
@@ -50273,12 +50504,38 @@
       ],
       "others": [
         {
+          "number": 621,
+          "author": "NikhilMeshram01",
+          "title": "[Feature] : Multi-Step Form (5.5.3)",
+          "created_at": "2026-02-27T05:11:49Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "NikhilMeshram01",
+              "created_at": "2026-02-27T05:12:05Z"
+            }
+          ]
+        },
+        {
+          "number": 620,
+          "author": "sanobery",
+          "title": "[Feature]:Maintenance Page(5.6.4)",
+          "created_at": "2026-02-26T15:12:01Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
           "number": 613,
           "author": "sanobery",
           "title": "[Feature]:Forbidden Page(5.6.3)",
           "created_at": "2026-02-20T15:39:06Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-02-25T07:45:45Z"
+            }
+          ]
         },
         {
           "number": 612,
@@ -50314,16 +50571,26 @@
           "author": "SandipMF",
           "title": "[Feature]: Analytics Dashboard(5.3.2)",
           "created_at": "2026-02-20T11:08:10Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-25T14:23:23Z"
+            }
+          ]
         },
         {
           "number": 607,
           "author": "SandipMF",
           "title": "[Feature]: Dashboard Overview(5.3.1)",
           "created_at": "2026-02-20T11:05:58Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-25T06:00:57Z"
+            }
+          ]
         },
         {
           "number": 605,
@@ -50395,16 +50662,26 @@
           "author": "SandipMF",
           "title": "[Feature]: Tabs Navigation(6.1.5)",
           "created_at": "2026-02-13T06:02:32Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-25T05:57:31Z"
+            }
+          ]
         },
         {
           "number": 592,
           "author": "SandipMF",
           "title": "[Feature]: Mega Menu(6.1.3 )",
           "created_at": "2026-02-13T05:59:49Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-25T05:58:50Z"
+            }
+          ]
         },
         {
           "number": 588,
@@ -50558,8 +50835,13 @@
           "author": "SandipMF",
           "title": "[Feature]: Modals(7.6.3)",
           "created_at": "2026-01-28T16:12:52Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "SandipMF",
+              "created_at": "2026-02-25T05:59:39Z"
+            }
+          ]
         },
         {
           "number": 559,
@@ -51708,7 +51990,7 @@
       "total_bugs": 23,
       "total_enhancements": 31,
       "total_documentation": 23,
-      "total_others": 132
+      "total_others": 134
     }
   },
   "24": {
@@ -51716,7 +51998,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:34:53.631Z",
+    "fetched_at": "2026-02-27T08:06:39.818Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -51859,7 +52141,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:34:55.863Z",
+    "fetched_at": "2026-02-27T08:06:41.965Z",
     "commits": [
       {
         "sha": "6b3070cb5b0d489ca4139394745198b4daa1004a",
@@ -52016,7 +52298,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-02-23T10:34:57.722Z",
+    "fetched_at": "2026-02-27T08:06:43.743Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -52054,7 +52336,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:35:08.098Z",
+    "fetched_at": "2026-02-27T08:06:53.708Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -52286,7 +52568,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:35:10.323Z",
+    "fetched_at": "2026-02-27T08:06:55.592Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -52338,7 +52620,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:35:12.457Z",
+    "fetched_at": "2026-02-27T08:06:57.757Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -52390,7 +52672,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:35:39.949Z",
+    "fetched_at": "2026-02-27T08:07:23.516Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -53421,7 +53703,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:50:13.625Z",
+    "fetched_at": "2026-02-27T08:08:27.129Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -55873,7 +56155,7 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:50:51.839Z",
+    "fetched_at": "2026-02-27T08:09:02.493Z",
     "commits": [
       {
         "sha": "7f06f02fc8727f2293989332b98a4c82c7231827",
@@ -57081,8 +57363,666 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T10:54:55.373Z",
+    "fetched_at": "2026-02-27T08:14:45.379Z",
     "commits": [
+      {
+        "sha": "0752582f6cf3dc6aaa691dba577539f244421960",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T11:15:46Z",
+        "message": "Merge pull request #242 from mindfiredigital/dev"
+      },
+      {
+        "sha": "4816def9a02f7d82875f75bedf2038f7daa4adc1",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T11:11:26Z",
+        "message": "feat(web-component): updated react package version"
+      },
+      {
+        "sha": "6bd7d4f9af4f55ef8a22a0b91c08ed1f7ecf503c",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T11:04:11Z",
+        "message": "feat(react): updated react package version"
+      },
+      {
+        "sha": "aaabccc5a7629bfd19a2228e1b3ef2fe6ce3a25b",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T10:59:53Z",
+        "message": "Merge pull request #241 from mindfiredigital/dev"
+      },
+      {
+        "sha": "77e0daaf8d0196f0ea96bfc6a2dcc3898f7a0485",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T10:54:42Z",
+        "message": "feat(web-component): updated readme and example for web component package"
+      },
+      {
+        "sha": "a85886f666f8e3a00710b25b5e1555364622e80a",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T10:52:24Z",
+        "message": "feat(react): updated readme and example for react package"
+      },
+      {
+        "sha": "7f771526301d42ea7cfd6d70396b3ed2e58e6789",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T10:50:15Z",
+        "message": "feat(angular): updated readme and example for angular package"
+      },
+      {
+        "sha": "9001c8877b467b5f0187b282a5df7339253b0a66",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T09:42:32Z",
+        "message": "feat(core): updated readme for core package"
+      },
+      {
+        "sha": "1f3e64832112ebce1381fd72f0ef729805196ffc",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-25T06:13:40Z",
+        "message": "chore(core): Stable version release to core"
+      },
+      {
+        "sha": "df5294f4378c5d13d761ac93640eb76a22cb2cc6",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-24T20:07:16Z",
+        "message": "feat(core): added content change event"
+      },
+      {
+        "sha": "161ecb12b571891aa2b9028aa6b29096a15eb706",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-24T19:42:17Z",
+        "message": "fix(core): improved font color and background color picker UI design"
+      },
+      {
+        "sha": "3ce4df85eda6fc6d24321778649cb2259e81b834",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-24T17:40:15Z",
+        "message": "Merge pull request #238 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "e69e6315212c8fee6c883e2e4ee0c777e60a29d9",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-24T17:18:02Z",
+        "message": "fix(core): fix strikethrough button issue while typing"
+      },
+      {
+        "sha": "4d1bfa07b720f01c72f7617cdfb65f0762f6c2d7",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-23T05:30:59Z",
+        "message": "Merge pull request #235 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "a6640320ddfbd6c03937399affa57798a9b0fdd8",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-20T10:40:17Z",
+        "message": "fix(core): update ui of the text edit and fix issues of pnpm build"
+      },
+      {
+        "sha": "944e24081acc5f5182f7300191e4f8d0a818dcc4",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-16T06:45:00Z",
+        "message": "fix(core): fix build process for core"
+      },
+      {
+        "sha": "44cb75c181f5822a0d9ab3d00eaac8b9c20b6105",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-09T07:59:50Z",
+        "message": "Merge pull request #232 from rohitrg96/feat/bullet-pointsHeadless"
+      },
+      {
+        "sha": "da3ee27effa91ec7a2ce3b7451868a362a0ee8c2",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-24T15:16:05Z",
+        "message": "fix(core): fix formatting issue feature"
+      },
+      {
+        "sha": "13f27993f6dd1a61985d7f78fa4f994bb27ddc50",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-24T13:06:44Z",
+        "message": "fix(core): empty formatted blocks reappear after deleting all text and typing new content"
+      },
+      {
+        "sha": "f89a32f9b14359508a80b1e043cacb0adc701402",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-19T14:06:35Z",
+        "message": "feat(core): add numbered list feature"
+      },
+      {
+        "sha": "e68ae40b60797cbdba65f522c39070884e2b7c7d",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-18T15:09:25Z",
+        "message": "fix(core): multiple line selection issue solve"
+      },
+      {
+        "sha": "b5a0adb588f8cb1f691ebdb203b881786f9f8123",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-16T17:07:16Z",
+        "message": "fix(core): enter button issue solve"
+      },
+      {
+        "sha": "f0db3432490e25473b1c0bf1131398b91260b81f",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-16T16:38:36Z",
+        "message": "fix(core): enter button issue solve"
+      },
+      {
+        "sha": "7f401f205208e75e1895fca5daacaed306823070",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-15T14:11:42Z",
+        "message": "fix(core): image insert position"
+      },
+      {
+        "sha": "92832bd9e4b50efad16f6e3a6e73465bff5079ad",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-15T13:03:22Z",
+        "message": "feat(core): add image insert feature"
+      },
+      {
+        "sha": "fa8b4733eee31e62aaeb4a00da7760d2bb275c2a",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-09T15:46:06Z",
+        "message": "feat(core): add font style feature"
+      },
+      {
+        "sha": "a0bc176ebc75a1e8d4081787bd814f71e25c300b",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-05T14:00:14Z",
+        "message": "feat(core): modify folder structure"
+      },
+      {
+        "sha": "56f5c178335b86b0090de3378d75eaae3744ce18",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-05T13:27:27Z",
+        "message": "feat(core): add folder structure and readme"
+      },
+      {
+        "sha": "ba1482495b4f33aa728acee638c02e617b87b1c7",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-12-01T06:11:12Z",
+        "message": "feat(core): add readme file and optimize span merge"
+      },
+      {
+        "sha": "4db9535527a03e996b13c2eec799f88ed5d85e58",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-11-28T09:05:19Z",
+        "message": "feat(core): add font size feature in headless arch"
+      },
+      {
+        "sha": "fdad17a8dc2aec34b822c61420f963d309943e5a",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-11-06T10:42:26Z",
+        "message": "feat(core): add color change feature"
+      },
+      {
+        "sha": "51bc7504592ca62a18a3994050e41e07f27e06dd",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-24T06:28:24Z",
+        "message": "feat(core): add underline and strikethrough feature"
+      },
+      {
+        "sha": "f8f5ea99b6d985bc9f2fa8b7c499118a9f81aa92",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-21T14:07:56Z",
+        "message": "feat(core): add italic feature"
+      },
+      {
+        "sha": "771472cef5efa78af5f20b8dcd942a3ea8e0291d",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-16T12:35:07Z",
+        "message": "feat(core): add headless poc for bold"
+      },
+      {
+        "sha": "69ea870af4ff49e1546c74b77cc7baef200b0bb7",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-10T10:29:13Z",
+        "message": "feat(core): add poc for headless bold"
+      },
+      {
+        "sha": "d6f43877375a137163d8a7312c7728c050321960",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-10T08:49:27Z",
+        "message": "Merge pull request #221 from MohdAasim/bugfix/219-hyperlink-prepend-url"
+      },
+      {
+        "sha": "81c51c96fedda2faa8a1efab0a2ae5820ba5d79a",
+        "author_login": "MohdAasim",
+        "author_name": "Mohd Aasim",
+        "date": "2025-10-10T08:41:54Z",
+        "message": "fix(core): resolve inserted hyperlink incorrectly prepends current URL to link"
+      },
+      {
+        "sha": "4698d533926bbffcf390f173afe13aa7176392c0",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-10T03:44:45Z",
+        "message": "Merge pull request #220 from rohitrg96/feat/216-font-issue"
+      },
+      {
+        "sha": "b9d733ac8ab83daae9a1a22d635848135c4607db",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-09T13:38:17Z",
+        "message": "test(core): fix test cases related to font style issue"
+      },
+      {
+        "sha": "bb725c76b8f13c9d228bbcc0c167ce4c754c6ce0",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-09T13:06:59Z",
+        "message": "fix(core): fix conflict"
+      },
+      {
+        "sha": "dc1e6faed92c42c80703b750129697f6376fad0a",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-09T13:03:19Z",
+        "message": "fix(core): font style test cases updated"
+      },
+      {
+        "sha": "5b01e6f1709e2c238772a72c2cbc3cbe09fb4128",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-09T10:04:49Z",
+        "message": "fix(core): font style issue fix"
+      },
+      {
+        "sha": "ab4d4c61f2811e0bf9f3dfb42f5a2c4de5cdbc1c",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-08T11:40:00Z",
+        "message": "Merge pull request #218 from MohdAasim/bugfix/213-orderderlist-fix"
+      },
+      {
+        "sha": "2abf3fc4618cd21cd62b8e38e6cccdb5b086fc94",
+        "author_login": "MohdAasim",
+        "author_name": "Mohd Aasim",
+        "date": "2025-10-08T10:41:52Z",
+        "message": "fix(core): resolve backspace and ordered numeric list issues"
+      },
+      {
+        "sha": "909f5424e53324c57b08e1d99e346e4af3bd2df3",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-07T16:57:45Z",
+        "message": "Merge pull request #217 from rohitrg96/feat/211-add-strikethrough"
+      },
+      {
+        "sha": "2daea65ead97ef59be58b1ecd0852098d3b4de42",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-07T16:24:33Z",
+        "message": "Merge branch 'dev' of https://github.com/mindfiredigital/TextIgniterJS into feat/211-add-strikethrough"
+      },
+      {
+        "sha": "57bd90e7fc5dac044f59838e228b0cd0acf1e16a",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-07T15:05:46Z",
+        "message": "test(core): add test case for strikethrough feature"
+      },
+      {
+        "sha": "cf52b9a215ed20b4ef4f65cd19c3311d7199e771",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-07T05:31:15Z",
+        "message": "Merge pull request #215 from rohitrg96/feat/211-html-acknowledgment"
+      },
+      {
+        "sha": "4f7a63bb823232715c92c43c3822d846d0598553",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-06T15:17:48Z",
+        "message": "Merge branch 'dev' of https://github.com/mindfiredigital/TextIgniterJS into feat/211-html-acknowledgment"
+      },
+      {
+        "sha": "090463ccf21c568d9518856c8b4a89bd3f119048",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-06T15:05:33Z",
+        "message": "test(core): add test cases for showAcknowledgement"
+      },
+      {
+        "sha": "8b0e3bb6a456231da0fdec3487cfb8d4936becec",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-06T11:05:02Z",
+        "message": "feat(core): add strikethrough feature"
+      },
+      {
+        "sha": "da7d7acc29a7a76859444cd6dbeb8881f0b7865c",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-10-06T09:51:14Z",
+        "message": "Merge pull request #214 from MohdAasim/feature/210-cypress-e2e-testing"
+      },
+      {
+        "sha": "f3de319fb3ec339e8fed92e67f6de0d86ef94b78",
+        "author_login": "MohdAasim",
+        "author_name": "Mohd Aasim",
+        "date": "2025-10-06T06:31:40Z",
+        "message": "test(core): setup Cypress and add tests for core and wrappers"
+      },
+      {
+        "sha": "f52b1d0b1be06b504aa9255afc9bf4ba61d8676d",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-03T09:17:44Z",
+        "message": "fix(core): test issue fix"
+      },
+      {
+        "sha": "fb9cad903bfebc3912fb573d73f694a3e96b6bc1",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-01T14:03:48Z",
+        "message": "fix(core): add incoming changes"
+      },
+      {
+        "sha": "794d7f282cf9159b1729a21e564e418de8e5d11d",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-10-01T13:54:41Z",
+        "message": "feat(core): add html copy feedback"
+      },
+      {
+        "sha": "059e2c5fef5c4d41e11feb63ff00c6e1a5bbaf11",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-30T08:53:48Z",
+        "message": "Merge pull request #209 from MohdAasim/feature/208-core-unit-test-vitest"
+      },
+      {
+        "sha": "76d3b4d9e899449a4286ac60be2c91d23bcc882a",
+        "author_login": "MohdAasim",
+        "author_name": "Mohd Aasim",
+        "date": "2025-09-30T05:22:38Z",
+        "message": "feat(core): setup vitest and add unit tests"
+      },
+      {
+        "sha": "1f6670988815786de4af53ee40fe08bd2ce0217f",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-23T08:09:56Z",
+        "message": "Merge pull request #207 from ParthDhemeliya/bugfix/hyperlink-selection-cursor-192"
+      },
+      {
+        "sha": "50af1e706e0c04219e96aecc5721c18ecf613108",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-19T13:29:59Z",
+        "message": "fix(core): clear selection and move cursor after hyperlink application (#192)"
+      },
+      {
+        "sha": "5d9da88bf83c8328f8637716133bffd6016c3b1d",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-19T09:23:54Z",
+        "message": "fix(core): clear selection and move cursor after hyperlink application (#192)"
+      },
+      {
+        "sha": "2f18666d8de661c6995b281d975b0c57ad886e60",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-19T08:55:10Z",
+        "message": "Merge pull request #205 from ParthDhemeliya/feature/193-enter-key-apply-hyperlink"
+      },
+      {
+        "sha": "28da66dcc8feba2f69587c7d248d365a79271e7a",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-19T07:26:49Z",
+        "message": "Merge pull request #203 from ParthDhemeliya/feature/enter-key-apply-hyperlink-193"
+      },
+      {
+        "sha": "43c740fa90ccf3cafa861e2128404c1835456fc3",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-19T07:21:18Z",
+        "message": "feat(core): support Enter key to apply hyperlink (#193)"
+      },
+      {
+        "sha": "b88735b7ab4b475ec70f6e59096b3ecefeb39b3b",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth",
+        "date": "2025-09-19T06:53:51Z",
+        "message": "Merge branch 'dev' into feature/enter-key-apply-hyperlink-193"
+      },
+      {
+        "sha": "c7d1de10547d64625005fd04739c908e786fb830",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth",
+        "date": "2025-09-19T06:37:50Z",
+        "message": "remove dist folder"
+      },
+      {
+        "sha": "74ab5297f99f9881aca7d660b42abf0b7f653306",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-19T06:13:30Z",
+        "message": "Merge pull request #200 from ParthDhemeliya/fix/cursor-undo-redo-119"
+      },
+      {
+        "sha": "1f319276db03592f245cb2b8b0490107cf4d9ca0",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth",
+        "date": "2025-09-18T13:05:47Z",
+        "message": "Merge branch 'dev' into feature/enter-key-apply-hyperlink-193"
+      },
+      {
+        "sha": "6ed330bb2f071eccffaf087bc6c51f59d1040e89",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-18T12:57:29Z",
+        "message": "feat(core): support Enter key to apply hyperlink (#193)"
+      },
+      {
+        "sha": "bd5c5af39720c3412d3ba166acef687b285ffec4",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-18T12:18:35Z",
+        "message": "feat(core): support Enter key to apply hyperlink (#193)"
+      },
+      {
+        "sha": "509b78f6cf0a0099fcad2eaca547a560f4bc8ea1",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-17T14:08:16Z",
+        "message": "feat(core): make pasted links clickable and open in new tab (#120)"
+      },
+      {
+        "sha": "142d53834421c54c31b8e38bff62b6bb36fd5c6e",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-17T13:39:06Z",
+        "message": "feat(core): make pasted links clickable and open in new tab (#120)"
+      },
+      {
+        "sha": "0420d4e43a0e8615b3d6c0def59819e66f859dba",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-17T12:03:32Z",
+        "message": "feat(core): make pasted links clickable and open in new tab (#120)"
+      },
+      {
+        "sha": "1294dcfaad16b152d7e4bbbe2b6c2d2913724bba",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-16T13:32:57Z",
+        "message": "fix(core): resolve undefined variables in TextIgniter.ts"
+      },
+      {
+        "sha": "aba9ae633928e3b722ac18b0ee3e6a856ee7ca3c",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth",
+        "date": "2025-09-16T11:22:55Z",
+        "message": "Merge branch 'dev' into fix/cursor-undo-redo-119"
+      },
+      {
+        "sha": "e3a18d51146434327229efef41cd0155a0dddba5",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-16T10:28:01Z",
+        "message": "fix(core): resolve delete key issue where text reappeared (#119)"
+      },
+      {
+        "sha": "1a23b09673f24ac372b1629087f32de7d1052a81",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-16T10:17:30Z",
+        "message": "fix(core): resolve delete key issue where text reappeared (#119)"
+      },
+      {
+        "sha": "12cf510af0cbb23dafe2fe2569491df4a566a096",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-15T11:04:56Z",
+        "message": "Merge pull request #199 from ParthDhemeliya/bugfix/delete-button-working-38"
+      },
+      {
+        "sha": "66d5138df5e72158a9cde6a6d466174a4734675c",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth",
+        "date": "2025-09-15T10:55:05Z",
+        "message": "Merge branch 'dev' into bugfix/delete-button-working-38"
+      },
+      {
+        "sha": "1ef04fe7195063382dd515dfa9c2dfae1f007e35",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-09-14T16:27:42Z",
+        "message": "Merge pull request #198 from ParthDhemeliya/bugfix/196-cursor-position-on-delete-backspace to dev-pr"
+      },
+      {
+        "sha": "12d253e62338f5092acd10e3ec7c5c602b0fb6c3",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T12:25:24Z",
+        "message": "fix(core): fix deleteRange method calls and remove unused variables"
+      },
+      {
+        "sha": "cd1000789481041588ecb2a162c75784e0604837",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T12:22:58Z",
+        "message": "fix(core): restore proper isBackspace logic in deleteRange method"
+      },
+      {
+        "sha": "d01acfa6bdd50f74d59a2a9a1715005eab30f52d",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T12:17:02Z",
+        "message": "fix(core): add missing isBackspace parameter to deleteRange method"
+      },
+      {
+        "sha": "0f4e58ca45b367d7d420a1dc1f19fad343438a84",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T12:10:32Z",
+        "message": "fix(core): improve cursor positioning for delete/backspace operations"
+      },
+      {
+        "sha": "b7f151b77b1ca3d850402ea30f92e58092ba2ad2",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T10:31:24Z",
+        "message": "refactor(core): remove commented Delete key code"
+      },
+      {
+        "sha": "6d03cef0134c2cfc2dc41f4577b0dd6aecc59918",
+        "author_login": "ParthDhemeliya",
+        "author_name": "Parth Dhemeliya",
+        "date": "2025-09-12T10:19:41Z",
+        "message": "fix(core): correct the Delete/Backspace behavior and prevent deleted text from reappearing"
+      },
+      {
+        "sha": "fc0cea534fe07dc66f86ca3b88e0973fb77acf55",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-07-16T09:49:14Z",
+        "message": "Merge pull request #191 from rohitrg96/feat/fix-link"
+      },
+      {
+        "sha": "0537ae5437ca7b041d5b52fd836a64820e54d70c",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-07-14T12:56:07Z",
+        "message": "Merge branch 'dev' into feat/fix-link"
+      },
+      {
+        "sha": "1b76d26ac88021b79c57acb3e36345bb870955c1",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-07-14T12:38:35Z",
+        "message": "refactor(core): \\remove unwanted code"
+      },
+      {
+        "sha": "d0e4fafb252628f49c8bb2b84eee31f80d154288",
+        "author_login": "rohitrg96",
+        "author_name": "rohitrg96",
+        "date": "2025-07-14T12:24:55Z",
+        "message": "fix(core): hide visit link pop up when click outside"
+      },
+      {
+        "sha": "f26237cc4c3a0e85ab83c2028cc1a4edb34035fb",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-06-18T12:37:22Z",
+        "message": "Merge pull request #189 from ParasMindfire/feat/popup"
+      },
+      {
+        "sha": "afe1dd08996a77df22aeab32d1ce14ff8c29dc98",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2025-06-18T07:15:21Z",
+        "message": "feat(core): popup open on text selection"
+      },
+      {
+        "sha": "4c1885c657503b863cbd9cb6f30d1bf6518dd97e",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2025-06-10T10:51:49Z",
+        "message": "Merge pull request #188 from ParasMindfire/fix/hypelink"
+      },
+      {
+        "sha": "33399c773401f3702a9e845766c93bbfdbc9c61a",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2025-06-10T09:50:48Z",
+        "message": "fix(core): ensure visit url popup hides correctly on outside click"
+      },
       {
         "sha": "a65d4a22cc5a15909204dca1dca516ed38df74e2",
         "author_login": "saradab-mindfire",
@@ -59297,6 +60237,402 @@
       }
     ],
     "merged_prs": [
+      {
+        "number": 242,
+        "author": "saradab-mindfire",
+        "title": "Updated react and web component package version",
+        "merged_at": "2026-02-25T11:15:47Z",
+        "created_at": "2026-02-25T11:15:11Z",
+        "base_ref": "main",
+        "merge_commit_sha": "0752582f6cf3dc6aaa691dba577539f244421960",
+        "changed_files": 2,
+        "additions": 3,
+        "deletions": 3,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 241,
+        "author": "saradab-mindfire",
+        "title": "Updated all packages with examples and readme.",
+        "merged_at": "2026-02-25T10:59:53Z",
+        "created_at": "2026-02-25T10:58:44Z",
+        "base_ref": "main",
+        "merge_commit_sha": "aaabccc5a7629bfd19a2228e1b3ef2fe6ce3a25b",
+        "changed_files": 32,
+        "additions": 2545,
+        "deletions": 829,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 239,
+        "author": "saradab-mindfire",
+        "title": "Stable version released",
+        "merged_at": "2026-02-25T06:13:41Z",
+        "created_at": "2026-02-25T06:13:07Z",
+        "base_ref": "main",
+        "merge_commit_sha": "1f3e64832112ebce1381fd72f0ef729805196ffc",
+        "changed_files": 146,
+        "additions": 17629,
+        "deletions": 2308,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 238,
+        "author": "jyotiprakashmfsi",
+        "title": "fix(core): fix strikethrough button issue while typing",
+        "merged_at": "2026-02-24T17:40:16Z",
+        "created_at": "2026-02-24T17:24:44Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "3ce4df85eda6fc6d24321778649cb2259e81b834",
+        "changed_files": 6,
+        "additions": 346,
+        "deletions": 2,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 235,
+        "author": "jyotiprakashmfsi",
+        "title": "Update ui of text editor and fix build issue",
+        "merged_at": "2026-02-23T05:30:59Z",
+        "created_at": "2026-02-20T10:43:44Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "4d1bfa07b720f01c72f7617cdfb65f0762f6c2d7",
+        "changed_files": 40,
+        "additions": 1813,
+        "deletions": 623,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 232,
+        "author": "rohitrg96",
+        "title": "Feat/bullet points headless",
+        "merged_at": "2026-02-09T07:59:50Z",
+        "created_at": "2026-02-09T07:30:20Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "44cb75c181f5822a0d9ab3d00eaac8b9c20b6105",
+        "changed_files": 22,
+        "additions": 5263,
+        "deletions": 1,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 221,
+        "author": "MohdAasim",
+        "title": "fix(core): resolve inserted hyperlink incorrectly prepends current UR…",
+        "merged_at": "2025-10-10T08:49:27Z",
+        "created_at": "2025-10-10T08:44:56Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "d6f43877375a137163d8a7312c7728c050321960",
+        "changed_files": 6,
+        "additions": 246,
+        "deletions": 16,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 220,
+        "author": "rohitrg96",
+        "title": "Feat/216 font issue",
+        "merged_at": "2025-10-10T03:44:45Z",
+        "created_at": "2025-10-09T13:40:12Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "4698d533926bbffcf390f173afe13aa7176392c0",
+        "changed_files": 4,
+        "additions": 71,
+        "deletions": 81,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 218,
+        "author": "MohdAasim",
+        "title": "fix(core): resolve backspace and ordered numeric list issues",
+        "merged_at": "2025-10-08T11:40:00Z",
+        "created_at": "2025-10-08T10:44:34Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "ab4d4c61f2811e0bf9f3dfb42f5a2c4de5cdbc1c",
+        "changed_files": 4,
+        "additions": 1650,
+        "deletions": 148,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 217,
+        "author": "rohitrg96",
+        "title": "Feat/211 add strikethrough",
+        "merged_at": "2025-10-07T16:57:45Z",
+        "created_at": "2025-10-07T16:36:21Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "909f5424e53324c57b08e1d99e346e4af3bd2df3",
+        "changed_files": 12,
+        "additions": 187,
+        "deletions": 64,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 215,
+        "author": "rohitrg96",
+        "title": "Feat/211 html acknowledgment",
+        "merged_at": "2025-10-07T05:31:15Z",
+        "created_at": "2025-10-06T11:53:36Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "cf52b9a215ed20b4ef4f65cd19c3311d7199e771",
+        "changed_files": 4,
+        "additions": 92,
+        "deletions": 1,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 214,
+        "author": "MohdAasim",
+        "title": "test(core): setup Cypress and add tests for core and wrappers",
+        "merged_at": "2025-10-06T09:51:14Z",
+        "created_at": "2025-10-06T06:42:37Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "da7d7acc29a7a76859444cd6dbeb8881f0b7865c",
+        "changed_files": 21,
+        "additions": 2864,
+        "deletions": 2,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 209,
+        "author": "MohdAasim",
+        "title": "feat(core): setup vitest and add unit tests",
+        "merged_at": "2025-09-30T08:53:48Z",
+        "created_at": "2025-09-30T05:26:49Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "059e2c5fef5c4d41e11feb63ff00c6e1a5bbaf11",
+        "changed_files": 33,
+        "additions": 3938,
+        "deletions": 920,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 207,
+        "author": "ParthDhemeliya",
+        "title": "fix(core): clear selection and move cursor after hyperlink application (#192)",
+        "merged_at": "2025-09-23T08:09:56Z",
+        "created_at": "2025-09-19T09:52:01Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "1f6670988815786de4af53ee40fe08bd2ce0217f",
+        "changed_files": 1,
+        "additions": 6,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 205,
+        "author": "ParthDhemeliya",
+        "title": "feat(core): support Enter key to apply hyperlink (#193)",
+        "merged_at": "2025-09-19T08:55:10Z",
+        "created_at": "2025-09-19T08:20:15Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "2f18666d8de661c6995b281d975b0c57ad886e60",
+        "changed_files": 1,
+        "additions": 10,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 203,
+        "author": "ParthDhemeliya",
+        "title": "feat(core): support Enter key to apply hyperlink (#193)",
+        "merged_at": "2025-09-19T07:26:49Z",
+        "created_at": "2025-09-18T13:04:04Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "28da66dcc8feba2f69587c7d248d365a79271e7a",
+        "changed_files": 40,
+        "additions": 1712,
+        "deletions": 4673,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 200,
+        "author": "ParthDhemeliya",
+        "title": "fix: resolve cursor issue with undo/redo and delete key (#119)",
+        "merged_at": "2025-09-19T06:13:30Z",
+        "created_at": "2025-09-16T10:40:36Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "74ab5297f99f9881aca7d660b42abf0b7f653306",
+        "changed_files": 3,
+        "additions": 37,
+        "deletions": 14,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 199,
+        "author": "ParthDhemeliya",
+        "title": "fix(core): correct Delete/Backspace behaviour in dev branch",
+        "merged_at": "2025-09-15T11:04:56Z",
+        "created_at": "2025-09-15T08:45:21Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "12cf510af0cbb23dafe2fe2569491df4a566a096",
+        "changed_files": 2,
+        "additions": 57,
+        "deletions": 2,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 198,
+        "author": "ParthDhemeliya",
+        "title": "Bugfix/196 cursor position on delete backspace",
+        "merged_at": "2025-09-14T16:27:43Z",
+        "created_at": "2025-09-12T12:39:59Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "1ef04fe7195063382dd515dfa9c2dfae1f007e35",
+        "changed_files": 2,
+        "additions": 145,
+        "deletions": 23,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 191,
+        "author": "rohitrg96",
+        "title": "Issue 81: Hide visit link pop up when click outside ",
+        "merged_at": "2025-07-16T09:49:14Z",
+        "created_at": "2025-07-14T12:45:41Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "fc0cea534fe07dc66f86ca3b88e0973fb77acf55",
+        "changed_files": 2,
+        "additions": 32,
+        "deletions": 10,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 189,
+        "author": "ParasMindfire",
+        "title": "feat(core): popup open on text selection",
+        "merged_at": "2025-06-18T12:37:22Z",
+        "created_at": "2025-06-18T07:20:40Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "f26237cc4c3a0e85ab83c2028cc1a4edb34035fb",
+        "changed_files": 19,
+        "additions": 1288,
+        "deletions": 859,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 188,
+        "author": "ParasMindfire",
+        "title": "Fix/hypelink",
+        "merged_at": "2025-06-10T10:51:49Z",
+        "created_at": "2025-06-10T09:57:14Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "4c1885c657503b863cbd9cb6f30d1bf6518dd97e",
+        "changed_files": 8,
+        "additions": 3807,
+        "deletions": 980,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
       {
         "number": 186,
         "author": "saradab-mindfire",
@@ -61649,6 +62985,22 @@
       "documentation": [],
       "others": [
         {
+          "number": 240,
+          "author": "jyotiprakashmfsi",
+          "title": "[BUG]: Text styles reset after pressing enter for next line.",
+          "created_at": "2026-02-25T09:53:51Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 237,
+          "author": "jyotiprakashmfsi",
+          "title": "[BUG]: Highlight the effect used while it is in use or the part of text is selected which used that effect.",
+          "created_at": "2026-02-24T17:24:11Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
           "number": 236,
           "author": "jyotiprakashmfsi",
           "title": "[BUG]: Build of core package failing to build properly",
@@ -62137,12 +63489,12 @@
       ]
     },
     "stats": {
-      "total_commits": 316,
-      "total_merged_prs": 129,
+      "total_commits": 410,
+      "total_merged_prs": 151,
       "total_bugs": 0,
       "total_enhancements": 2,
       "total_documentation": 0,
-      "total_others": 57
+      "total_others": 59
     }
   },
   "special-website": {
@@ -62150,8 +63502,78 @@
     "project_title": "Mindfire Foss Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-02-23T11:01:04.673Z",
+    "fetched_at": "2026-02-27T08:21:46.356Z",
     "commits": [
+      {
+        "sha": "b94f0f5fc20f0e3b703f5749a8cff72303add3f6",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T05:02:44Z",
+        "message": "fix: Merge pull request #229 from mindfiredigital/dev"
+      },
+      {
+        "sha": "a5465feea37652925d520b45d0c58dcf63556c31",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T05:01:45Z",
+        "message": "fix: Merge pull request #228 from mindfiredigital/fix/scoringsystem-patch"
+      },
+      {
+        "sha": "79ca4b6e8bc98fb49193bfa435f2d94796a9f1ce",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T05:01:06Z",
+        "message": "fix: Update ScoringSystem component"
+      },
+      {
+        "sha": "f5d41993a1a245c4c1bbe5411d2e57ac8e86787d",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:57:57Z",
+        "message": "fix: Merge pull request #227 from mindfiredigital/dev"
+      },
+      {
+        "sha": "5a2846c22a9922489e4d69ffffa943f9d6b59d0c",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:57:14Z",
+        "message": "fix: Merge pull request #226 from mindfiredigital/fix/scoring"
+      },
+      {
+        "sha": "a9bee6af21a4fba6fff2a1d86d0e3de1af89cb2d",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T04:56:47Z",
+        "message": "fix: adjust leaderboard scoring criteria values"
+      },
+      {
+        "sha": "528801e856d5a5dc7dafe6b91107fb1b380a3c18",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-23T11:26:20Z",
+        "message": "fix: Merge pull request #225 from mindfiredigital/dev"
+      },
+      {
+        "sha": "fe8f9e45f84c166a07b8613bab3503e302ac032f",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-23T11:25:18Z",
+        "message": "fix: Merge pull request #224 from ParasMindfire/feat/contributorRank"
+      },
+      {
+        "sha": "495cfb56467308b7d4e1b4b5414a50fabe59a979",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-02-23T11:06:30Z",
+        "message": "fix(contributors): rate limit issue"
+      },
+      {
+        "sha": "8c794e7abb1c9e007f6606bec1326d9789871d12",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-02-23T05:25:49Z",
+        "message": "fix: totaldownlaod issue"
+      },
       {
         "sha": "d1501e8f25e40b09e91b993169f221942ea7c0e0",
         "author_login": "anandmindfire",
@@ -65661,6 +67083,114 @@
       }
     ],
     "merged_prs": [
+      {
+        "number": 229,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-24T05:02:44Z",
+        "created_at": "2026-02-24T05:02:20Z",
+        "base_ref": "main",
+        "merge_commit_sha": "b94f0f5fc20f0e3b703f5749a8cff72303add3f6",
+        "changed_files": 1,
+        "additions": 3,
+        "deletions": 3,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 228,
+        "author": "anandmindfire",
+        "title": "fix: Update ScoringSystem component",
+        "merged_at": "2026-02-24T05:01:45Z",
+        "created_at": "2026-02-24T05:01:23Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "a5465feea37652925d520b45d0c58dcf63556c31",
+        "changed_files": 1,
+        "additions": 3,
+        "deletions": 3,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 227,
+        "author": "anandmindfire",
+        "title": "Release From Dev",
+        "merged_at": "2026-02-24T04:57:57Z",
+        "created_at": "2026-02-24T04:57:42Z",
+        "base_ref": "main",
+        "merge_commit_sha": "f5d41993a1a245c4c1bbe5411d2e57ac8e86787d",
+        "changed_files": 1,
+        "additions": 3,
+        "deletions": 3,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 226,
+        "author": "anandmindfire",
+        "title": "fix: adjust leaderboard scoring criteria values",
+        "merged_at": "2026-02-24T04:57:14Z",
+        "created_at": "2026-02-24T04:57:02Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "5a2846c22a9922489e4d69ffffa943f9d6b59d0c",
+        "changed_files": 1,
+        "additions": 3,
+        "deletions": 3,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 225,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-23T11:26:20Z",
+        "created_at": "2026-02-23T11:26:06Z",
+        "base_ref": "main",
+        "merge_commit_sha": "528801e856d5a5dc7dafe6b91107fb1b380a3c18",
+        "changed_files": 10,
+        "additions": 16802,
+        "deletions": 3142,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 224,
+        "author": "ParasMindfire",
+        "title": "fix(contributors): rate limit issue ",
+        "merged_at": "2026-02-23T11:25:18Z",
+        "created_at": "2026-02-23T11:08:24Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "fe8f9e45f84c166a07b8613bab3503e302ac032f",
+        "changed_files": 10,
+        "additions": 16802,
+        "deletions": 3142,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
       {
         "number": 223,
         "author": "anandmindfire",
@@ -69453,8 +70983,8 @@
       ]
     },
     "stats": {
-      "total_commits": 501,
-      "total_merged_prs": 188,
+      "total_commits": 511,
+      "total_merged_prs": 194,
       "total_bugs": 0,
       "total_enhancements": 4,
       "total_documentation": 1,
