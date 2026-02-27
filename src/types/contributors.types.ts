@@ -30,6 +30,7 @@ export interface ScoreBreakdown {
   mentor_score: number;
   zero_revisions_score: number;
   impact_bonus_score: number;
+  projects_score: number;
 }
 
 export interface PRComplexity {

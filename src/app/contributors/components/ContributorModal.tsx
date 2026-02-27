@@ -10,6 +10,7 @@ import {
   AlertCircle,
   MessageSquare,
   Github,
+  Layers, // icon for multi-project
 } from "lucide-react";
 import { TopScorer } from "@/types";
 
@@ -81,6 +82,11 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
     { label: "Mentor", value: score_breakdown.mentor_score },
     { label: "Zero Revisions", value: score_breakdown.zero_revisions_score },
     { label: "Impact Bonus", value: score_breakdown.impact_bonus_score },
+    // ── NEW ──
+    {
+      label: "Multi-Project Bonus",
+      value: score_breakdown.projects_score ?? 0,
+    },
   ];
 
   const maxScore = Math.max(...scoreItems.map((s) => s.value), 1);
@@ -108,6 +114,8 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
   };
 
   const badge = getRankBadge(contributor.rank);
+  const projectsScore = score_breakdown.projects_score ?? 0;
+  const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center p-4'>
@@ -207,6 +215,31 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             ))}
           </div>
 
+          {/* ── NEW: Multi-project bonus highlight banner ── */}
+          {projectsWorkedOn > 0 && (
+            <div className='flex items-center gap-3 bg-violet-50 border border-violet-200 rounded-xl px-4 py-3'>
+              <Layers className='w-5 h-5 text-violet-500 flex-shrink-0' />
+              <div className='flex-1 min-w-0'>
+                <p className='text-xs font-bold text-violet-800'>
+                  Multi-Project Contributor
+                </p>
+                <p className='text-xs text-violet-600 mt-0.5'>
+                  Worked on{" "}
+                  <strong>
+                    {projectsWorkedOn} project
+                    {projectsWorkedOn !== 1 ? "s" : ""}
+                  </strong>{" "}
+                  — earning a{" "}
+                  <strong className='font-mono'>+{projectsScore} pt</strong>{" "}
+                  community bonus ({projectsWorkedOn} × 10)
+                </p>
+              </div>
+              <span className='flex-shrink-0 text-lg font-black text-violet-700 font-mono'>
+                +{projectsScore}
+              </span>
+            </div>
+          )}
+
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               Score Composition
@@ -282,6 +315,12 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   icon: <GitCommit className='w-4 h-4' />,
                   label: "Avg Commits/PR",
                   value: contributor.avgCommitsPerPR.toFixed(1),
+                },
+                // ── NEW: projects stat tile ──
+                {
+                  icon: <Layers className='w-4 h-4' />,
+                  label: "Projects",
+                  value: projectsWorkedOn,
                 },
               ].map((stat) => (
                 <div
@@ -361,12 +400,16 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                 .sort((a, b) => b.value - a.value)
                 .map((item) => (
                   <div key={item.label} className='flex items-center gap-3'>
-                    <span className='text-xs text-gray-600 w-32 flex-shrink-0 text-right'>
+                    <span className='text-xs text-gray-600 w-36 flex-shrink-0 text-right'>
                       {item.label}
                     </span>
                     <div className='flex-1 bg-gray-100 rounded-full h-2'>
                       <div
-                        className='bg-gradient-to-r from-mindfire-text-red to-orange-400 h-2 rounded-full transition-all duration-500'
+                        className={`h-2 rounded-full transition-all duration-500 ${
+                          item.label === "Multi-Project Bonus"
+                            ? "bg-gradient-to-r from-violet-500 to-purple-400"
+                            : "bg-gradient-to-r from-mindfire-text-red to-orange-400"
+                        }`}
                         style={{ width: `${(item.value / maxScore) * 100}%` }}
                       />
                     </div>
@@ -387,7 +430,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                 {contributor.projects.map((project) => (
                   <span
                     key={project}
-                    className='px-2.5 py-1 text-xs bg-gray-100 text-gray-700 rounded-full border border-gray-200'
+                    className='px-2.5 py-1 text-xs bg-violet-50 text-violet-700 rounded-full border border-violet-200'
                   >
                     {project}
                   </span>

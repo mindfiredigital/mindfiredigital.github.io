@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T11:01:04.947Z",
+  "generated_at": "2026-02-27T06:21:05.561Z",
   "scoring_weights": {
     "PR_MERGED_BASE": 5,
     "COMMIT": 2,
@@ -12,16 +12,17 @@
     },
     "ISSUE_OPENED": 2,
     "ISSUE_COMMENT": 1,
-    "HAS_TESTS": 2,
-    "HAS_DOCS": 2,
+    "HAS_TESTS": 1,
+    "HAS_DOCS": 1,
     "FIRST_TIME_MENTOR": 5,
-    "ZERO_REVISIONS": 3,
+    "ZERO_REVISIONS": 2,
     "IMPACT_BONUS": {
       "low": 0,
       "medium": 3,
       "high": 7,
       "critical": 10
     },
+    "PROJECT_DIVERSITY": 10,
     "CAPS": {
       "ISSUES_PER_MONTH": 10,
       "ISSUE_COMMENTS_PER_MONTH": 20
@@ -47,10 +48,10 @@
         "medium": 53,
         "large": 89
       },
-      "total_score": 3484,
+      "total_score": 3302,
       "code_score": 2764,
-      "community_score": 65,
-      "quality_score": 655,
+      "community_score": 105,
+      "quality_score": 433,
       "score_breakdown": {
         "pr_score": 1446,
         "commits_score": 1292,
@@ -58,10 +59,11 @@
         "code_comments_score": 5,
         "issues_opened_score": 62,
         "issue_comments_score": 3,
-        "tests_score": 4,
-        "docs_score": 18,
+        "projects_score": 40,
+        "tests_score": 2,
+        "docs_score": 9,
         "mentor_score": 0,
-        "zero_revisions_score": 633,
+        "zero_revisions_score": 422,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -2628,10 +2630,10 @@
         "medium": 27,
         "large": 45
       },
-      "total_score": 3232,
+      "total_score": 3204,
       "code_score": 2805,
-      "community_score": 75,
-      "quality_score": 352,
+      "community_score": 165,
+      "quality_score": 234,
       "score_breakdown": {
         "pr_score": 778,
         "commits_score": 1988,
@@ -2639,10 +2641,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 74,
         "issue_comments_score": 1,
-        "tests_score": 2,
-        "docs_score": 2,
+        "projects_score": 90,
+        "tests_score": 1,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 348,
+        "zero_revisions_score": 232,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -4543,10 +4546,10 @@
         "medium": 16,
         "large": 17
       },
-      "total_score": 1110,
+      "total_score": 1232,
       "code_score": 888,
-      "community_score": 49,
-      "quality_score": 173,
+      "community_score": 229,
+      "quality_score": 115,
       "score_breakdown": {
         "pr_score": 369,
         "commits_score": 462,
@@ -4554,10 +4557,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 48,
         "issue_comments_score": 1,
+        "projects_score": 180,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 171,
+        "zero_revisions_score": 114,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -5722,10 +5726,10 @@
         "medium": 20,
         "large": 25
       },
-      "total_score": 1102,
+      "total_score": 1037,
       "code_score": 799,
-      "community_score": 71,
-      "quality_score": 232,
+      "community_score": 91,
+      "quality_score": 147,
       "score_breakdown": {
         "pr_score": 433,
         "commits_score": 366,
@@ -5733,10 +5737,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 60,
         "issue_comments_score": 11,
-        "tests_score": 2,
-        "docs_score": 44,
+        "projects_score": 20,
+        "tests_score": 1,
+        "docs_score": 22,
         "mentor_score": 0,
-        "zero_revisions_score": 186,
+        "zero_revisions_score": 124,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -6984,10 +6989,10 @@
         "medium": 9,
         "large": 17
       },
-      "total_score": 1001,
+      "total_score": 970,
       "code_score": 765,
-      "community_score": 67,
-      "quality_score": 169,
+      "community_score": 97,
+      "quality_score": 108,
       "score_breakdown": {
         "pr_score": 323,
         "commits_score": 442,
@@ -6995,10 +7000,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 62,
         "issue_comments_score": 5,
-        "tests_score": 4,
-        "docs_score": 24,
+        "projects_score": 30,
+        "tests_score": 2,
+        "docs_score": 12,
         "mentor_score": 0,
-        "zero_revisions_score": 141,
+        "zero_revisions_score": 94,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -8065,10 +8071,10 @@
         "medium": 24,
         "large": 27
       },
-      "total_score": 908,
+      "total_score": 870,
       "code_score": 709,
-      "community_score": 2,
-      "quality_score": 197,
+      "community_score": 32,
+      "quality_score": 129,
       "score_breakdown": {
         "pr_score": 441,
         "commits_score": 268,
@@ -8076,10 +8082,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 2,
         "issue_comments_score": 0,
-        "tests_score": 4,
-        "docs_score": 10,
+        "projects_score": 30,
+        "tests_score": 2,
+        "docs_score": 5,
         "mentor_score": 0,
-        "zero_revisions_score": 183,
+        "zero_revisions_score": 122,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -8793,10 +8800,10 @@
         "medium": 1,
         "large": 30
       },
-      "total_score": 732,
+      "total_score": 708,
       "code_score": 584,
-      "community_score": 49,
-      "quality_score": 99,
+      "community_score": 59,
+      "quality_score": 65,
       "score_breakdown": {
         "pr_score": 262,
         "commits_score": 322,
@@ -8804,10 +8811,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 46,
         "issue_comments_score": 3,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 6,
+        "docs_score": 3,
         "mentor_score": 0,
-        "zero_revisions_score": 93,
+        "zero_revisions_score": 62,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -9446,10 +9454,10 @@
         "medium": 5,
         "large": 29
       },
-      "total_score": 638,
+      "total_score": 622,
       "code_score": 478,
-      "community_score": 29,
-      "quality_score": 131,
+      "community_score": 59,
+      "quality_score": 85,
       "score_breakdown": {
         "pr_score": 304,
         "commits_score": 174,
@@ -9457,10 +9465,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 26,
         "issue_comments_score": 3,
-        "tests_score": 2,
-        "docs_score": 12,
+        "projects_score": 30,
+        "tests_score": 1,
+        "docs_score": 6,
         "mentor_score": 0,
-        "zero_revisions_score": 117,
+        "zero_revisions_score": 78,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -10052,10 +10061,10 @@
         "medium": 8,
         "large": 14
       },
-      "total_score": 619,
+      "total_score": 600,
       "code_score": 484,
-      "community_score": 52,
-      "quality_score": 83,
+      "community_score": 62,
+      "quality_score": 54,
       "score_breakdown": {
         "pr_score": 196,
         "commits_score": 276,
@@ -10063,10 +10072,11 @@
         "code_comments_score": 3,
         "issues_opened_score": 42,
         "issue_comments_score": 10,
-        "tests_score": 4,
-        "docs_score": 4,
+        "projects_score": 10,
+        "tests_score": 2,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 75,
+        "zero_revisions_score": 50,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -10763,10 +10773,10 @@
         "medium": 5,
         "large": 6
       },
-      "total_score": 595,
+      "total_score": 570,
       "code_score": 506,
-      "community_score": 0,
-      "quality_score": 89,
+      "community_score": 10,
+      "quality_score": 54,
       "score_breakdown": {
         "pr_score": 134,
         "commits_score": 372,
@@ -10774,10 +10784,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "tests_score": 2,
-        "docs_score": 30,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 15,
         "mentor_score": 0,
-        "zero_revisions_score": 57,
+        "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -11036,10 +11047,10 @@
         "medium": 1,
         "large": 21
       },
-      "total_score": 582,
+      "total_score": 568,
       "code_score": 460,
-      "community_score": 51,
-      "quality_score": 71,
+      "community_score": 61,
+      "quality_score": 47,
       "score_breakdown": {
         "pr_score": 190,
         "commits_score": 270,
@@ -11047,10 +11058,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 46,
         "issue_comments_score": 5,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 69,
+        "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -11623,548 +11635,6 @@
     },
     {
       "rank": 12,
-      "username": "vickysmf",
-      "id": 183806487,
-      "avatar_url": "https://avatars.githubusercontent.com/u/183806487?v=4",
-      "html_url": "https://github.com/vickysmf",
-      "totalCommits": 79,
-      "totalPRs": 37,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 13,
-      "totalIssueComments": 1,
-      "avgCommitsPerPR": 2.14,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 12,
-        "medium": 14,
-        "large": 11
-      },
-      "total_score": 547,
-      "code_score": 403,
-      "community_score": 27,
-      "quality_score": 117,
-      "score_breakdown": {
-        "pr_score": 245,
-        "commits_score": 158,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 26,
-        "issue_comments_score": 1,
-        "tests_score": 0,
-        "docs_score": 6,
-        "mentor_score": 0,
-        "zero_revisions_score": 111,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 13,
-        "issues_total": 13,
-        "issue_comments": 1,
-        "issue_comments_total": 1
-      },
-      "projects": ["TextIgniter"],
-      "byProject": {
-        "TextIgniter": {
-          "commits": 79,
-          "prs": [
-            {
-              "number": 185,
-              "merged_at": "2025-04-29T11:22:06Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 62,
-              "deletions": 15,
-              "reviews_count": 0
-            },
-            {
-              "number": 182,
-              "merged_at": "2025-04-29T11:12:11Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 5,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 179,
-              "merged_at": "2025-04-29T11:02:57Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 14,
-              "additions": 101,
-              "deletions": 56,
-              "reviews_count": 0
-            },
-            {
-              "number": 176,
-              "merged_at": "2025-04-18T11:00:30Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 93,
-              "additions": 26651,
-              "deletions": 4223,
-              "reviews_count": 0
-            },
-            {
-              "number": 172,
-              "merged_at": "2025-04-11T11:57:28Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 2,
-              "additions": 86,
-              "deletions": 60,
-              "reviews_count": 0
-            },
-            {
-              "number": 169,
-              "merged_at": "2025-04-11T11:40:55Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 24,
-              "additions": 915,
-              "deletions": 865,
-              "reviews_count": 0
-            },
-            {
-              "number": 166,
-              "merged_at": "2025-04-08T11:13:45Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 163,
-              "merged_at": "2025-04-08T11:03:57Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 163,
-              "additions": 8314,
-              "deletions": 6640,
-              "reviews_count": 0
-            },
-            {
-              "number": 160,
-              "merged_at": "2025-04-01T13:58:53Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 157,
-              "merged_at": "2025-04-01T12:24:52Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 7,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 154,
-              "merged_at": "2025-04-01T12:11:45Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 2,
-              "additions": 276,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 146,
-              "merged_at": "2025-04-01T11:37:39Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 144,
-              "merged_at": "2025-04-01T11:26:53Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 0,
-              "deletions": 5,
-              "reviews_count": 0
-            },
-            {
-              "number": 142,
-              "merged_at": "2025-04-01T11:11:58Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 132,
-              "merged_at": "2025-03-28T11:02:52Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 115,
-              "additions": 11254,
-              "deletions": 5830,
-              "reviews_count": 0
-            },
-            {
-              "number": 127,
-              "merged_at": "2025-03-13T07:35:54Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 42,
-              "deletions": 647,
-              "reviews_count": 0
-            },
-            {
-              "number": 125,
-              "merged_at": "2025-03-12T04:30:37Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 7,
-              "additions": 513,
-              "deletions": 491,
-              "reviews_count": 0
-            },
-            {
-              "number": 121,
-              "merged_at": "2025-03-07T08:29:37Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 1,
-              "additions": 106,
-              "deletions": 43,
-              "reviews_count": 0
-            },
-            {
-              "number": 112,
-              "merged_at": "2025-03-03T10:17:41Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 265,
-              "deletions": 70,
-              "reviews_count": 0
-            },
-            {
-              "number": 107,
-              "merged_at": "2025-02-23T09:28:32Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 125,
-              "deletions": 50,
-              "reviews_count": 0
-            },
-            {
-              "number": 99,
-              "merged_at": "2025-02-14T10:37:16Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 130,
-              "deletions": 133,
-              "reviews_count": 0
-            },
-            {
-              "number": 96,
-              "merged_at": "2025-02-13T12:47:51Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 298,
-              "deletions": 19,
-              "reviews_count": 0
-            },
-            {
-              "number": 95,
-              "merged_at": "2025-02-11T19:50:47Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 116,
-              "deletions": 9,
-              "reviews_count": 0
-            },
-            {
-              "number": 93,
-              "merged_at": "2025-02-11T06:51:53Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 222,
-              "deletions": 84,
-              "reviews_count": 0
-            },
-            {
-              "number": 86,
-              "merged_at": "2025-02-07T10:21:43Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 24,
-              "deletions": 8,
-              "reviews_count": 0
-            },
-            {
-              "number": 83,
-              "merged_at": "2025-02-06T11:21:34Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 6,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 82,
-              "merged_at": "2025-02-06T10:54:03Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 2,
-              "additions": 140,
-              "deletions": 40,
-              "reviews_count": 0
-            },
-            {
-              "number": 77,
-              "merged_at": "2025-02-04T08:07:33Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 25,
-              "deletions": 10,
-              "reviews_count": 0
-            },
-            {
-              "number": 68,
-              "merged_at": "2025-01-30T12:10:47Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 27,
-              "deletions": 7,
-              "reviews_count": 0
-            },
-            {
-              "number": 67,
-              "merged_at": "2025-01-29T11:32:39Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 215,
-              "deletions": 172,
-              "reviews_count": 0
-            },
-            {
-              "number": 49,
-              "merged_at": "2025-01-23T12:21:42Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 65,
-              "deletions": 9,
-              "reviews_count": 0
-            },
-            {
-              "number": 48,
-              "merged_at": "2025-01-23T06:21:52Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 282,
-              "deletions": 34,
-              "reviews_count": 0
-            },
-            {
-              "number": 47,
-              "merged_at": "2025-01-17T12:15:02Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 46,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 45,
-              "merged_at": "2025-01-15T12:59:07Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 111,
-              "deletions": 17,
-              "reviews_count": 0
-            },
-            {
-              "number": 43,
-              "merged_at": "2025-01-14T05:41:41Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 105,
-              "deletions": 27,
-              "reviews_count": 0
-            },
-            {
-              "number": 41,
-              "merged_at": "2025-01-03T11:52:48Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 10,
-              "additions": 292,
-              "deletions": 30,
-              "reviews_count": 0
-            },
-            {
-              "number": 37,
-              "merged_at": "2024-12-23T11:57:40Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 288,
-              "deletions": 120,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 106,
-              "author": "vickysmf",
-              "title": "working on issue of load html data",
-              "created_at": "2025-02-20T10:33:25Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 94,
-              "author": "vickysmf",
-              "title": "[Feature]: Option to add BackgroundColor in the text",
-              "created_at": "2025-02-11T06:39:36Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 85,
-              "author": "vickysmf",
-              "title": "bug - when do ctrl + a and click somewhere and then click backspace delete all data",
-              "created_at": "2025-02-06T11:26:08Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 84,
-              "author": "vickysmf",
-              "title": "bug- not able to delete first line using backspace",
-              "created_at": "2025-02-06T11:22:37Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 80,
-              "author": "vickysmf",
-              "title": "bug - if we apply some attributes in the first line,and press enter at the  end of the first line then some wrods are getting copied in the next line from the first line",
-              "created_at": "2025-02-05T12:05:09Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 78,
-              "author": "vickysmf",
-              "title": "bug- paragraph: when we apply formatting on paragraph and hit enter in between of any formatted line it is going to next line but formatting is removed",
-              "created_at": "2025-02-04T08:03:01Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 70,
-              "author": "vickysmf",
-              "title": "bug- paragraph: when we have more than one line then when we do backspace so below paragraph is not merged on above paragraph",
-              "created_at": "2025-01-31T06:49:26Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 56,
-              "author": "vickysmf",
-              "title": "bug - select all: it is not properly working",
-              "created_at": "2025-01-27T12:13:29Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 55,
-              "author": "vickysmf",
-              "title": "order list edge case",
-              "created_at": "2025-01-27T03:21:08Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 46,
-              "author": "vickysmf",
-              "title": "[Feature]: alignment(center, left, right)",
-              "created_at": "2025-01-16T03:43:09Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 44,
-              "author": "vickysmf",
-              "title": "[Feature]: Implement font size & font style",
-              "created_at": "2025-01-14T04:28:37Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 42,
-              "author": "vickysmf",
-              "title": "[Feature]:undo-redo-edge-cases",
-              "created_at": "2025-01-03T11:48:32Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 39,
-              "author": "vickysmf",
-              "title": "[Feature]: order and unorder list",
-              "created_at": "2024-12-24T06:12:42Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [
-            {
-              "created_at": "2025-02-19T04:07:44Z"
-            }
-          ],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 3,
-            "first_time_mentor": 0,
-            "zero_revisions": 37,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 13,
       "username": "mfsisudhanshuk",
       "id": 187290740,
       "avatar_url": "https://avatars.githubusercontent.com/u/187290740?v=4",
@@ -12182,10 +11652,10 @@
         "medium": 12,
         "large": 18
       },
-      "total_score": 544,
+      "total_score": 523,
       "code_score": 366,
-      "community_score": 61,
-      "quality_score": 117,
+      "community_score": 81,
+      "quality_score": 76,
       "score_breakdown": {
         "pr_score": 281,
         "commits_score": 70,
@@ -12193,10 +11663,11 @@
         "code_comments_score": 3,
         "issues_opened_score": 54,
         "issue_comments_score": 7,
-        "tests_score": 2,
-        "docs_score": 10,
+        "projects_score": 20,
+        "tests_score": 1,
+        "docs_score": 5,
         "mentor_score": 0,
-        "zero_revisions_score": 105,
+        "zero_revisions_score": 70,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -12922,6 +12393,549 @@
       "lastActiveDays": null
     },
     {
+      "rank": 13,
+      "username": "vickysmf",
+      "id": 183806487,
+      "avatar_url": "https://avatars.githubusercontent.com/u/183806487?v=4",
+      "html_url": "https://github.com/vickysmf",
+      "totalCommits": 79,
+      "totalPRs": 37,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 13,
+      "totalIssueComments": 1,
+      "avgCommitsPerPR": 2.14,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 12,
+        "medium": 14,
+        "large": 11
+      },
+      "total_score": 517,
+      "code_score": 403,
+      "community_score": 37,
+      "quality_score": 77,
+      "score_breakdown": {
+        "pr_score": 245,
+        "commits_score": 158,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 26,
+        "issue_comments_score": 1,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 74,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 13,
+        "issues_total": 13,
+        "issue_comments": 1,
+        "issue_comments_total": 1
+      },
+      "projects": ["TextIgniter"],
+      "byProject": {
+        "TextIgniter": {
+          "commits": 79,
+          "prs": [
+            {
+              "number": 185,
+              "merged_at": "2025-04-29T11:22:06Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 62,
+              "deletions": 15,
+              "reviews_count": 0
+            },
+            {
+              "number": 182,
+              "merged_at": "2025-04-29T11:12:11Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 5,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 179,
+              "merged_at": "2025-04-29T11:02:57Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 14,
+              "additions": 101,
+              "deletions": 56,
+              "reviews_count": 0
+            },
+            {
+              "number": 176,
+              "merged_at": "2025-04-18T11:00:30Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 93,
+              "additions": 26651,
+              "deletions": 4223,
+              "reviews_count": 0
+            },
+            {
+              "number": 172,
+              "merged_at": "2025-04-11T11:57:28Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 2,
+              "additions": 86,
+              "deletions": 60,
+              "reviews_count": 0
+            },
+            {
+              "number": 169,
+              "merged_at": "2025-04-11T11:40:55Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 24,
+              "additions": 915,
+              "deletions": 865,
+              "reviews_count": 0
+            },
+            {
+              "number": 166,
+              "merged_at": "2025-04-08T11:13:45Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 163,
+              "merged_at": "2025-04-08T11:03:57Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 163,
+              "additions": 8314,
+              "deletions": 6640,
+              "reviews_count": 0
+            },
+            {
+              "number": 160,
+              "merged_at": "2025-04-01T13:58:53Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 157,
+              "merged_at": "2025-04-01T12:24:52Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 7,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 154,
+              "merged_at": "2025-04-01T12:11:45Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 2,
+              "additions": 276,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 146,
+              "merged_at": "2025-04-01T11:37:39Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 144,
+              "merged_at": "2025-04-01T11:26:53Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 5,
+              "reviews_count": 0
+            },
+            {
+              "number": 142,
+              "merged_at": "2025-04-01T11:11:58Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 132,
+              "merged_at": "2025-03-28T11:02:52Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 115,
+              "additions": 11254,
+              "deletions": 5830,
+              "reviews_count": 0
+            },
+            {
+              "number": 127,
+              "merged_at": "2025-03-13T07:35:54Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 42,
+              "deletions": 647,
+              "reviews_count": 0
+            },
+            {
+              "number": 125,
+              "merged_at": "2025-03-12T04:30:37Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 7,
+              "additions": 513,
+              "deletions": 491,
+              "reviews_count": 0
+            },
+            {
+              "number": 121,
+              "merged_at": "2025-03-07T08:29:37Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 1,
+              "additions": 106,
+              "deletions": 43,
+              "reviews_count": 0
+            },
+            {
+              "number": 112,
+              "merged_at": "2025-03-03T10:17:41Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 265,
+              "deletions": 70,
+              "reviews_count": 0
+            },
+            {
+              "number": 107,
+              "merged_at": "2025-02-23T09:28:32Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 125,
+              "deletions": 50,
+              "reviews_count": 0
+            },
+            {
+              "number": 99,
+              "merged_at": "2025-02-14T10:37:16Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 130,
+              "deletions": 133,
+              "reviews_count": 0
+            },
+            {
+              "number": 96,
+              "merged_at": "2025-02-13T12:47:51Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 298,
+              "deletions": 19,
+              "reviews_count": 0
+            },
+            {
+              "number": 95,
+              "merged_at": "2025-02-11T19:50:47Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 116,
+              "deletions": 9,
+              "reviews_count": 0
+            },
+            {
+              "number": 93,
+              "merged_at": "2025-02-11T06:51:53Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 222,
+              "deletions": 84,
+              "reviews_count": 0
+            },
+            {
+              "number": 86,
+              "merged_at": "2025-02-07T10:21:43Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 24,
+              "deletions": 8,
+              "reviews_count": 0
+            },
+            {
+              "number": 83,
+              "merged_at": "2025-02-06T11:21:34Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 6,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 82,
+              "merged_at": "2025-02-06T10:54:03Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 2,
+              "additions": 140,
+              "deletions": 40,
+              "reviews_count": 0
+            },
+            {
+              "number": 77,
+              "merged_at": "2025-02-04T08:07:33Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 25,
+              "deletions": 10,
+              "reviews_count": 0
+            },
+            {
+              "number": 68,
+              "merged_at": "2025-01-30T12:10:47Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 27,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 67,
+              "merged_at": "2025-01-29T11:32:39Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 215,
+              "deletions": 172,
+              "reviews_count": 0
+            },
+            {
+              "number": 49,
+              "merged_at": "2025-01-23T12:21:42Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 65,
+              "deletions": 9,
+              "reviews_count": 0
+            },
+            {
+              "number": 48,
+              "merged_at": "2025-01-23T06:21:52Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 282,
+              "deletions": 34,
+              "reviews_count": 0
+            },
+            {
+              "number": 47,
+              "merged_at": "2025-01-17T12:15:02Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 46,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 45,
+              "merged_at": "2025-01-15T12:59:07Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 111,
+              "deletions": 17,
+              "reviews_count": 0
+            },
+            {
+              "number": 43,
+              "merged_at": "2025-01-14T05:41:41Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 105,
+              "deletions": 27,
+              "reviews_count": 0
+            },
+            {
+              "number": 41,
+              "merged_at": "2025-01-03T11:52:48Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10,
+              "additions": 292,
+              "deletions": 30,
+              "reviews_count": 0
+            },
+            {
+              "number": 37,
+              "merged_at": "2024-12-23T11:57:40Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 288,
+              "deletions": 120,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 106,
+              "author": "vickysmf",
+              "title": "working on issue of load html data",
+              "created_at": "2025-02-20T10:33:25Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 94,
+              "author": "vickysmf",
+              "title": "[Feature]: Option to add BackgroundColor in the text",
+              "created_at": "2025-02-11T06:39:36Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 85,
+              "author": "vickysmf",
+              "title": "bug - when do ctrl + a and click somewhere and then click backspace delete all data",
+              "created_at": "2025-02-06T11:26:08Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 84,
+              "author": "vickysmf",
+              "title": "bug- not able to delete first line using backspace",
+              "created_at": "2025-02-06T11:22:37Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 80,
+              "author": "vickysmf",
+              "title": "bug - if we apply some attributes in the first line,and press enter at the  end of the first line then some wrods are getting copied in the next line from the first line",
+              "created_at": "2025-02-05T12:05:09Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 78,
+              "author": "vickysmf",
+              "title": "bug- paragraph: when we apply formatting on paragraph and hit enter in between of any formatted line it is going to next line but formatting is removed",
+              "created_at": "2025-02-04T08:03:01Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 70,
+              "author": "vickysmf",
+              "title": "bug- paragraph: when we have more than one line then when we do backspace so below paragraph is not merged on above paragraph",
+              "created_at": "2025-01-31T06:49:26Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 56,
+              "author": "vickysmf",
+              "title": "bug - select all: it is not properly working",
+              "created_at": "2025-01-27T12:13:29Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 55,
+              "author": "vickysmf",
+              "title": "order list edge case",
+              "created_at": "2025-01-27T03:21:08Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 46,
+              "author": "vickysmf",
+              "title": "[Feature]: alignment(center, left, right)",
+              "created_at": "2025-01-16T03:43:09Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 44,
+              "author": "vickysmf",
+              "title": "[Feature]: Implement font size & font style",
+              "created_at": "2025-01-14T04:28:37Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 42,
+              "author": "vickysmf",
+              "title": "[Feature]:undo-redo-edge-cases",
+              "created_at": "2025-01-03T11:48:32Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 39,
+              "author": "vickysmf",
+              "title": "[Feature]: order and unorder list",
+              "created_at": "2024-12-24T06:12:42Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [
+            {
+              "created_at": "2025-02-19T04:07:44Z"
+            }
+          ],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 3,
+            "first_time_mentor": 0,
+            "zero_revisions": 37,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
       "rank": 14,
       "username": "ashutosh-jena-mindfire",
       "id": 116242186,
@@ -12940,10 +12954,10 @@
         "medium": 4,
         "large": 12
       },
-      "total_score": 503,
+      "total_score": 511,
       "code_score": 430,
-      "community_score": 10,
-      "quality_score": 63,
+      "community_score": 40,
+      "quality_score": 41,
       "score_breakdown": {
         "pr_score": 148,
         "commits_score": 270,
@@ -12951,10 +12965,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 10,
         "issue_comments_score": 0,
+        "projects_score": 30,
         "tests_score": 0,
-        "docs_score": 6,
+        "docs_score": 3,
         "mentor_score": 0,
-        "zero_revisions_score": 57,
+        "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -13285,10 +13300,10 @@
         "medium": 6,
         "large": 11
       },
-      "total_score": 493,
+      "total_score": 480,
       "code_score": 388,
-      "community_score": 36,
-      "quality_score": 69,
+      "community_score": 46,
+      "quality_score": 46,
       "score_breakdown": {
         "pr_score": 168,
         "commits_score": 220,
@@ -13296,10 +13311,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 36,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 69,
+        "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -13733,10 +13749,10 @@
         "medium": 3,
         "large": 0
       },
-      "total_score": 465,
+      "total_score": 446,
       "code_score": 381,
-      "community_score": 0,
-      "quality_score": 84,
+      "community_score": 10,
+      "quality_score": 55,
       "score_breakdown": {
         "pr_score": 135,
         "commits_score": 246,
@@ -13744,10 +13760,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 6,
+        "docs_score": 3,
         "mentor_score": 0,
-        "zero_revisions_score": 78,
+        "zero_revisions_score": 52,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -14039,6 +14056,412 @@
     },
     {
       "rank": 17,
+      "username": "SsagarikaR",
+      "id": 193941133,
+      "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
+      "html_url": "https://github.com/SsagarikaR",
+      "totalCommits": 82,
+      "totalPRs": 23,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 10,
+      "totalIssueComments": 3,
+      "avgCommitsPerPR": 3.57,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 4,
+        "large": 18
+      },
+      "total_score": 440,
+      "code_score": 348,
+      "community_score": 43,
+      "quality_score": 49,
+      "score_breakdown": {
+        "pr_score": 184,
+        "commits_score": 164,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 20,
+        "issue_comments_score": 3,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 46,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 10,
+        "issues_total": 10,
+        "issue_comments": 3,
+        "issue_comments_total": 3
+      },
+      "projects": ["ESLint Plugin Hub", "Page Builder"],
+      "byProject": {
+        "ESLint Plugin Hub": {
+          "commits": 9,
+          "prs": [
+            {
+              "number": 66,
+              "merged_at": "2025-07-02T12:38:33Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 399,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 16,
+              "merged_at": "2025-05-29T07:23:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 3,
+              "additions": 583,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 13,
+              "merged_at": "2025-05-28T10:33:41Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 399,
+              "deletions": 6,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [
+            {
+              "created_at": "2025-06-20T10:08:17Z"
+            },
+            {
+              "created_at": "2025-05-28T10:56:39Z"
+            },
+            {
+              "created_at": "2025-05-27T05:18:26Z"
+            }
+          ],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 3,
+            "impact_bonuses": []
+          }
+        },
+        "Page Builder": {
+          "commits": 73,
+          "prs": [
+            {
+              "number": 164,
+              "merged_at": "2026-01-11T16:26:55Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 22,
+              "additions": 69806,
+              "deletions": 59605,
+              "reviews_count": 0
+            },
+            {
+              "number": 160,
+              "merged_at": "2025-11-11T10:33:31Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 4,
+              "deletions": 132,
+              "reviews_count": 0
+            },
+            {
+              "number": 158,
+              "merged_at": "2025-11-11T09:57:40Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 3,
+              "deletions": 151,
+              "reviews_count": 0
+            },
+            {
+              "number": 156,
+              "merged_at": "2025-11-11T08:48:16Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 31,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 154,
+              "merged_at": "2025-11-11T07:07:07Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 81,
+              "additions": 60957,
+              "deletions": 752,
+              "reviews_count": 0
+            },
+            {
+              "number": 151,
+              "merged_at": "2025-10-30T15:43:51Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 40,
+              "additions": 167,
+              "deletions": 4804,
+              "reviews_count": 0
+            },
+            {
+              "number": 148,
+              "merged_at": "2025-10-30T06:18:02Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 41,
+              "additions": 1608,
+              "deletions": 236,
+              "reviews_count": 0
+            },
+            {
+              "number": 143,
+              "merged_at": "2025-10-17T08:28:37Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 91,
+              "additions": 14253,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 140,
+              "merged_at": "2025-10-17T06:26:48Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 96,
+              "additions": 53,
+              "deletions": 14256,
+              "reviews_count": 0
+            },
+            {
+              "number": 136,
+              "merged_at": "2025-10-16T05:52:29Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 53,
+              "additions": 4934,
+              "deletions": 10121,
+              "reviews_count": 0
+            },
+            {
+              "number": 133,
+              "merged_at": "2025-10-09T11:53:31Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 7908,
+              "deletions": 931,
+              "reviews_count": 0
+            },
+            {
+              "number": 129,
+              "merged_at": "2025-10-09T10:53:36Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 81,
+              "additions": 7285,
+              "deletions": 416,
+              "reviews_count": 0
+            },
+            {
+              "number": 128,
+              "merged_at": "2025-09-26T05:14:27Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 32,
+              "additions": 635,
+              "deletions": 374,
+              "reviews_count": 0
+            },
+            {
+              "number": 125,
+              "merged_at": "2025-09-17T12:22:52Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 4,
+              "deletions": 21,
+              "reviews_count": 0
+            },
+            {
+              "number": 123,
+              "merged_at": "2025-09-17T10:22:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 30,
+              "additions": 932,
+              "deletions": 235,
+              "reviews_count": 0
+            },
+            {
+              "number": 120,
+              "merged_at": "2025-09-16T10:01:20Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 756,
+              "deletions": 354,
+              "reviews_count": 0
+            },
+            {
+              "number": 117,
+              "merged_at": "2025-09-12T12:57:34Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 75,
+              "additions": 4641,
+              "deletions": 2423,
+              "reviews_count": 0
+            },
+            {
+              "number": 116,
+              "merged_at": "2025-09-10T10:26:44Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 42,
+              "additions": 2432,
+              "deletions": 7739,
+              "reviews_count": 0
+            },
+            {
+              "number": 115,
+              "merged_at": "2025-09-02T14:02:06Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 97,
+              "additions": 6665,
+              "deletions": 14152,
+              "reviews_count": 0
+            },
+            {
+              "number": 111,
+              "merged_at": "2025-08-11T05:59:07Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 77,
+              "additions": 32251,
+              "deletions": 16614,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 147,
+              "author": "SsagarikaR",
+              "title": "[BUG]: Issue: Preview Mode Enhancement",
+              "created_at": "2025-10-29T06:46:41Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 146,
+              "author": "SsagarikaR",
+              "title": "[BUG]: Responsiveness Issue: Components not adapting properly on different viewport",
+              "created_at": "2025-10-24T07:08:24Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 139,
+              "author": "SsagarikaR",
+              "title": "[BUG]: React package not consistently passing configuration data to Web Component package",
+              "created_at": "2025-10-16T08:27:54Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 130,
+              "author": "SsagarikaR",
+              "title": "[BUG]: Nested Drag-and-Drop Conflict: Dragging Child Component Also Moves Parent Container",
+              "created_at": "2025-10-09T09:16:49Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 113,
+              "author": "SsagarikaR",
+              "title": "[BUG]: Preview mode & PDF export: Styles not matching canvas (components overlapping)",
+              "created_at": "2025-08-19T07:25:30Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 112,
+              "author": "SsagarikaR",
+              "title": "[BUG]: Canvas content gets hidden below instead of scrolling when adding items vertically",
+              "created_at": "2025-08-11T04:54:04Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 114,
+              "author": "SsagarikaR",
+              "title": "[Feature]:Attribute-based Customization for Basic Components",
+              "created_at": "2025-08-29T05:37:05Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 109,
+              "author": "SsagarikaR",
+              "title": "[Feature]:State Management Feature",
+              "created_at": "2025-08-07T12:29:43Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "SsagarikaR",
+                  "created_at": "2025-11-11T09:50:38Z"
+                }
+              ]
+            },
+            {
+              "number": 108,
+              "author": "SsagarikaR",
+              "title": "[Feature]:Settings Feature for Custom Components",
+              "created_at": "2025-08-07T12:24:35Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 107,
+              "author": "SsagarikaR",
+              "title": "[Feature]:View Mode",
+              "created_at": "2025-08-07T12:16:52Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 3,
+            "first_time_mentor": 0,
+            "zero_revisions": 20,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 17
+    },
+    {
+      "rank": 18,
       "username": "NikhilMeshram01",
       "id": 224547702,
       "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
@@ -14056,10 +14479,10 @@
         "medium": 0,
         "large": 23
       },
-      "total_score": 459,
+      "total_score": 440,
       "code_score": 326,
-      "community_score": 33,
-      "quality_score": 100,
+      "community_score": 53,
+      "quality_score": 61,
       "score_breakdown": {
         "pr_score": 196,
         "commits_score": 130,
@@ -14067,10 +14490,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 32,
         "issue_comments_score": 1,
-        "tests_score": 6,
-        "docs_score": 28,
+        "projects_score": 20,
+        "tests_score": 3,
+        "docs_score": 14,
         "mentor_score": 0,
-        "zero_revisions_score": 66,
+        "zero_revisions_score": 44,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -14515,411 +14939,6 @@
       "lastActiveDays": 4
     },
     {
-      "rank": 18,
-      "username": "SsagarikaR",
-      "id": 193941133,
-      "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
-      "html_url": "https://github.com/SsagarikaR",
-      "totalCommits": 82,
-      "totalPRs": 23,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 10,
-      "totalIssueComments": 3,
-      "avgCommitsPerPR": 3.57,
-      "projectsWorkingOn": 2,
-      "prs_by_complexity": {
-        "small": 1,
-        "medium": 4,
-        "large": 18
-      },
-      "total_score": 446,
-      "code_score": 348,
-      "community_score": 23,
-      "quality_score": 75,
-      "score_breakdown": {
-        "pr_score": 184,
-        "commits_score": 164,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 20,
-        "issue_comments_score": 3,
-        "tests_score": 0,
-        "docs_score": 6,
-        "mentor_score": 0,
-        "zero_revisions_score": 69,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 10,
-        "issues_total": 10,
-        "issue_comments": 3,
-        "issue_comments_total": 3
-      },
-      "projects": ["ESLint Plugin Hub", "Page Builder"],
-      "byProject": {
-        "ESLint Plugin Hub": {
-          "commits": 9,
-          "prs": [
-            {
-              "number": 66,
-              "merged_at": "2025-07-02T12:38:33Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 399,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 16,
-              "merged_at": "2025-05-29T07:23:08Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 3,
-              "additions": 583,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 13,
-              "merged_at": "2025-05-28T10:33:41Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 399,
-              "deletions": 6,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [
-            {
-              "created_at": "2025-06-20T10:08:17Z"
-            },
-            {
-              "created_at": "2025-05-28T10:56:39Z"
-            },
-            {
-              "created_at": "2025-05-27T05:18:26Z"
-            }
-          ],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 3,
-            "impact_bonuses": []
-          }
-        },
-        "Page Builder": {
-          "commits": 73,
-          "prs": [
-            {
-              "number": 164,
-              "merged_at": "2026-01-11T16:26:55Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 22,
-              "additions": 69806,
-              "deletions": 59605,
-              "reviews_count": 0
-            },
-            {
-              "number": 160,
-              "merged_at": "2025-11-11T10:33:31Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 4,
-              "deletions": 132,
-              "reviews_count": 0
-            },
-            {
-              "number": 158,
-              "merged_at": "2025-11-11T09:57:40Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 3,
-              "additions": 3,
-              "deletions": 151,
-              "reviews_count": 0
-            },
-            {
-              "number": 156,
-              "merged_at": "2025-11-11T08:48:16Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 31,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 154,
-              "merged_at": "2025-11-11T07:07:07Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 81,
-              "additions": 60957,
-              "deletions": 752,
-              "reviews_count": 0
-            },
-            {
-              "number": 151,
-              "merged_at": "2025-10-30T15:43:51Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 40,
-              "additions": 167,
-              "deletions": 4804,
-              "reviews_count": 0
-            },
-            {
-              "number": 148,
-              "merged_at": "2025-10-30T06:18:02Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 41,
-              "additions": 1608,
-              "deletions": 236,
-              "reviews_count": 0
-            },
-            {
-              "number": 143,
-              "merged_at": "2025-10-17T08:28:37Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 91,
-              "additions": 14253,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 140,
-              "merged_at": "2025-10-17T06:26:48Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 96,
-              "additions": 53,
-              "deletions": 14256,
-              "reviews_count": 0
-            },
-            {
-              "number": 136,
-              "merged_at": "2025-10-16T05:52:29Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 53,
-              "additions": 4934,
-              "deletions": 10121,
-              "reviews_count": 0
-            },
-            {
-              "number": 133,
-              "merged_at": "2025-10-09T11:53:31Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 8,
-              "additions": 7908,
-              "deletions": 931,
-              "reviews_count": 0
-            },
-            {
-              "number": 129,
-              "merged_at": "2025-10-09T10:53:36Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 81,
-              "additions": 7285,
-              "deletions": 416,
-              "reviews_count": 0
-            },
-            {
-              "number": 128,
-              "merged_at": "2025-09-26T05:14:27Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 32,
-              "additions": 635,
-              "deletions": 374,
-              "reviews_count": 0
-            },
-            {
-              "number": 125,
-              "merged_at": "2025-09-17T12:22:52Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 4,
-              "deletions": 21,
-              "reviews_count": 0
-            },
-            {
-              "number": 123,
-              "merged_at": "2025-09-17T10:22:08Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 30,
-              "additions": 932,
-              "deletions": 235,
-              "reviews_count": 0
-            },
-            {
-              "number": 120,
-              "merged_at": "2025-09-16T10:01:20Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 20,
-              "additions": 756,
-              "deletions": 354,
-              "reviews_count": 0
-            },
-            {
-              "number": 117,
-              "merged_at": "2025-09-12T12:57:34Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 75,
-              "additions": 4641,
-              "deletions": 2423,
-              "reviews_count": 0
-            },
-            {
-              "number": 116,
-              "merged_at": "2025-09-10T10:26:44Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 42,
-              "additions": 2432,
-              "deletions": 7739,
-              "reviews_count": 0
-            },
-            {
-              "number": 115,
-              "merged_at": "2025-09-02T14:02:06Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 97,
-              "additions": 6665,
-              "deletions": 14152,
-              "reviews_count": 0
-            },
-            {
-              "number": 111,
-              "merged_at": "2025-08-11T05:59:07Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 77,
-              "additions": 32251,
-              "deletions": 16614,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 147,
-              "author": "SsagarikaR",
-              "title": "[BUG]: Issue: Preview Mode Enhancement",
-              "created_at": "2025-10-29T06:46:41Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 146,
-              "author": "SsagarikaR",
-              "title": "[BUG]: Responsiveness Issue: Components not adapting properly on different viewport",
-              "created_at": "2025-10-24T07:08:24Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 139,
-              "author": "SsagarikaR",
-              "title": "[BUG]: React package not consistently passing configuration data to Web Component package",
-              "created_at": "2025-10-16T08:27:54Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 130,
-              "author": "SsagarikaR",
-              "title": "[BUG]: Nested Drag-and-Drop Conflict: Dragging Child Component Also Moves Parent Container",
-              "created_at": "2025-10-09T09:16:49Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 113,
-              "author": "SsagarikaR",
-              "title": "[BUG]: Preview mode & PDF export: Styles not matching canvas (components overlapping)",
-              "created_at": "2025-08-19T07:25:30Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 112,
-              "author": "SsagarikaR",
-              "title": "[BUG]: Canvas content gets hidden below instead of scrolling when adding items vertically",
-              "created_at": "2025-08-11T04:54:04Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 114,
-              "author": "SsagarikaR",
-              "title": "[Feature]:Attribute-based Customization for Basic Components",
-              "created_at": "2025-08-29T05:37:05Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 109,
-              "author": "SsagarikaR",
-              "title": "[Feature]:State Management Feature",
-              "created_at": "2025-08-07T12:29:43Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "SsagarikaR",
-                  "created_at": "2025-11-11T09:50:38Z"
-                }
-              ]
-            },
-            {
-              "number": 108,
-              "author": "SsagarikaR",
-              "title": "[Feature]:Settings Feature for Custom Components",
-              "created_at": "2025-08-07T12:24:35Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 107,
-              "author": "SsagarikaR",
-              "title": "[Feature]:View Mode",
-              "created_at": "2025-08-07T12:16:52Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 3,
-            "first_time_mentor": 0,
-            "zero_revisions": 20,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": 17
-    },
-    {
       "rank": 19,
       "username": "jagdish-mindfire",
       "id": 180177757,
@@ -14938,10 +14957,10 @@
         "medium": 8,
         "large": 7
       },
-      "total_score": 353,
+      "total_score": 340,
       "code_score": 246,
-      "community_score": 38,
-      "quality_score": 69,
+      "community_score": 48,
+      "quality_score": 46,
       "score_breakdown": {
         "pr_score": 152,
         "commits_score": 94,
@@ -14949,10 +14968,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 38,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 69,
+        "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -15377,6 +15397,146 @@
     },
     {
       "rank": 20,
+      "username": "ssswagatss",
+      "id": 7521181,
+      "avatar_url": "https://avatars.githubusercontent.com/u/7521181?v=4",
+      "html_url": "https://github.com/ssswagatss",
+      "totalCommits": 129,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 1,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 2,
+      "totalIssueComments": 1,
+      "avgCommitsPerPR": 25.8,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 0,
+        "large": 3
+      },
+      "total_score": 324,
+      "code_score": 297,
+      "community_score": 15,
+      "quality_score": 12,
+      "score_breakdown": {
+        "pr_score": 36,
+        "commits_score": 258,
+        "pr_reviews_score": 3,
+        "code_comments_score": 0,
+        "issues_opened_score": 4,
+        "issue_comments_score": 1,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 2,
+        "mentor_score": 0,
+        "zero_revisions_score": 10,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 2,
+        "issues_total": 2,
+        "issue_comments": 1,
+        "issue_comments_total": 1
+      },
+      "projects": ["Extension Methods"],
+      "byProject": {
+        "Extension Methods": {
+          "commits": 129,
+          "prs": [
+            {
+              "number": 18,
+              "merged_at": "2025-11-03T18:27:57Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 903,
+              "deletions": 144,
+              "reviews_count": 0
+            },
+            {
+              "number": 12,
+              "merged_at": "2022-09-20T10:27:13Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 8,
+              "merged_at": "2021-03-08T18:41:42Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 1293,
+              "deletions": 102,
+              "reviews_count": 0
+            },
+            {
+              "number": 6,
+              "merged_at": "2019-09-24T05:21:17Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 0,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 5,
+              "merged_at": "2019-09-24T05:20:35Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 413,
+              "deletions": 60,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 1,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 4,
+              "author": "ssswagatss",
+              "title": "Create documentation for DateTime Extensions",
+              "created_at": "2019-09-23T14:22:47Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 3,
+              "author": "ssswagatss",
+              "title": "Write test cases for the following String Extensions.",
+              "created_at": "2019-09-19T13:23:03Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ssswagatss",
+                  "created_at": "2021-03-08T17:35:37Z"
+                }
+              ]
+            }
+          ],
+          "issue_comments_given": [
+            {
+              "created_at": "2025-11-03T18:46:44Z"
+            }
+          ],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 2,
+            "first_time_mentor": 0,
+            "zero_revisions": 5,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 21,
       "username": "saradab-mindfire",
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
@@ -15394,10 +15554,10 @@
         "medium": 4,
         "large": 7
       },
-      "total_score": 329,
+      "total_score": 315,
       "code_score": 258,
-      "community_score": 0,
-      "quality_score": 71,
+      "community_score": 10,
+      "quality_score": 47,
       "score_breakdown": {
         "pr_score": 146,
         "commits_score": 112,
@@ -15405,10 +15565,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 69,
+        "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -15669,145 +15830,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 21,
-      "username": "ssswagatss",
-      "id": 7521181,
-      "avatar_url": "https://avatars.githubusercontent.com/u/7521181?v=4",
-      "html_url": "https://github.com/ssswagatss",
-      "totalCommits": 129,
-      "totalPRs": 5,
-      "totalPRReviewsGiven": 1,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 2,
-      "totalIssueComments": 1,
-      "avgCommitsPerPR": 25.8,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 2,
-        "medium": 0,
-        "large": 3
-      },
-      "total_score": 321,
-      "code_score": 297,
-      "community_score": 5,
-      "quality_score": 19,
-      "score_breakdown": {
-        "pr_score": 36,
-        "commits_score": 258,
-        "pr_reviews_score": 3,
-        "code_comments_score": 0,
-        "issues_opened_score": 4,
-        "issue_comments_score": 1,
-        "tests_score": 0,
-        "docs_score": 4,
-        "mentor_score": 0,
-        "zero_revisions_score": 15,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 2,
-        "issues_total": 2,
-        "issue_comments": 1,
-        "issue_comments_total": 1
-      },
-      "projects": ["Extension Methods"],
-      "byProject": {
-        "Extension Methods": {
-          "commits": 129,
-          "prs": [
-            {
-              "number": 18,
-              "merged_at": "2025-11-03T18:27:57Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 11,
-              "additions": 903,
-              "deletions": 144,
-              "reviews_count": 0
-            },
-            {
-              "number": 12,
-              "merged_at": "2022-09-20T10:27:13Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 2,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 8,
-              "merged_at": "2021-03-08T18:41:42Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 15,
-              "additions": 1293,
-              "deletions": 102,
-              "reviews_count": 0
-            },
-            {
-              "number": 6,
-              "merged_at": "2019-09-24T05:21:17Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 0,
-              "additions": 0,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 5,
-              "merged_at": "2019-09-24T05:20:35Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 413,
-              "deletions": 60,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 1,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 4,
-              "author": "ssswagatss",
-              "title": "Create documentation for DateTime Extensions",
-              "created_at": "2019-09-23T14:22:47Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 3,
-              "author": "ssswagatss",
-              "title": "Write test cases for the following String Extensions.",
-              "created_at": "2019-09-19T13:23:03Z",
-              "comments": 1,
-              "comment_authors": [
-                {
-                  "author": "ssswagatss",
-                  "created_at": "2021-03-08T17:35:37Z"
-                }
-              ]
-            }
-          ],
-          "issue_comments_given": [
-            {
-              "created_at": "2025-11-03T18:46:44Z"
-            }
-          ],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 2,
-            "first_time_mentor": 0,
-            "zero_revisions": 5,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 22,
       "username": "manojkmfsi",
       "id": 134362545,
@@ -15826,10 +15848,10 @@
         "medium": 2,
         "large": 10
       },
-      "total_score": 301,
+      "total_score": 297,
       "code_score": 262,
-      "community_score": 0,
-      "quality_score": 39,
+      "community_score": 10,
+      "quality_score": 25,
       "score_breakdown": {
         "pr_score": 98,
         "commits_score": 158,
@@ -15837,10 +15859,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "tests_score": 2,
-        "docs_score": 4,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 33,
+        "zero_revisions_score": 22,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -16009,9 +16032,9 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 252,
+      "total_score": 262,
       "code_score": 252,
-      "community_score": 0,
+      "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -16020,6 +16043,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
@@ -16054,269 +16078,6 @@
     },
     {
       "rank": 24,
-      "username": "abdulla-mindfire",
-      "id": 105473459,
-      "avatar_url": "https://avatars.githubusercontent.com/u/105473459?v=4",
-      "html_url": "https://github.com/abdulla-mindfire",
-      "totalCommits": 41,
-      "totalPRs": 20,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.05,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 19,
-        "medium": 0,
-        "large": 1
-      },
-      "total_score": 248,
-      "code_score": 186,
-      "community_score": 0,
-      "quality_score": 62,
-      "score_breakdown": {
-        "pr_score": 104,
-        "commits_score": 82,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 2,
-        "mentor_score": 0,
-        "zero_revisions_score": 60,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["sqlrag"],
-      "byProject": {
-        "sqlrag": {
-          "commits": 41,
-          "prs": [
-            {
-              "number": 20,
-              "merged_at": "2024-10-03T08:01:06Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 9,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 19,
-              "merged_at": "2024-10-03T07:54:50Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 10,
-              "deletions": 10,
-              "reviews_count": 0
-            },
-            {
-              "number": 18,
-              "merged_at": "2024-10-03T06:51:12Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 3,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 17,
-              "merged_at": "2024-10-03T05:23:21Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 16,
-              "merged_at": "2024-10-03T05:19:43Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 10,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 15,
-              "merged_at": "2024-10-03T05:15:01Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 11,
-              "deletions": 22,
-              "reviews_count": 0
-            },
-            {
-              "number": 14,
-              "merged_at": "2024-10-03T05:11:06Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 0,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 13,
-              "merged_at": "2024-10-03T05:07:37Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 19,
-              "deletions": 14,
-              "reviews_count": 0
-            },
-            {
-              "number": 12,
-              "merged_at": "2024-10-03T05:02:21Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 11,
-              "merged_at": "2024-10-03T04:59:56Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 10,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 10,
-              "merged_at": "2024-10-03T04:54:41Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 3,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 9,
-              "merged_at": "2024-10-03T04:48:30Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 10,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 8,
-              "merged_at": "2024-10-03T04:43:47Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 52,
-              "additions": 8732,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 7,
-              "merged_at": "2024-10-01T12:44:13Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 5,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 6,
-              "merged_at": "2024-10-01T12:37:15Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 3,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 5,
-              "merged_at": "2024-10-01T12:30:34Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 33,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 4,
-              "merged_at": "2024-10-01T12:27:28Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 0,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 3,
-              "merged_at": "2024-10-01T12:22:43Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 18,
-              "deletions": 56,
-              "reviews_count": 0
-            },
-            {
-              "number": 2,
-              "merged_at": "2024-10-01T11:52:04Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 18,
-              "reviews_count": 0
-            },
-            {
-              "number": 1,
-              "merged_at": "2024-10-01T11:46:19Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 0,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 1,
-            "first_time_mentor": 0,
-            "zero_revisions": 20,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 25,
       "username": "anilkumarswain140",
       "id": 142868838,
       "avatar_url": "https://avatars.githubusercontent.com/u/142868838?v=4",
@@ -16334,10 +16095,10 @@
         "medium": 2,
         "large": 8
       },
-      "total_score": 236,
+      "total_score": 250,
       "code_score": 220,
-      "community_score": 0,
-      "quality_score": 16,
+      "community_score": 20,
+      "quality_score": 10,
       "score_breakdown": {
         "pr_score": 96,
         "commits_score": 124,
@@ -16345,10 +16106,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "tests_score": 2,
-        "docs_score": 2,
+        "projects_score": 20,
+        "tests_score": 1,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -16525,7 +16287,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 26,
+      "rank": 25,
       "username": "biswalom22",
       "id": 125389787,
       "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
@@ -16543,10 +16305,10 @@
         "medium": 6,
         "large": 4
       },
-      "total_score": 236,
+      "total_score": 247,
       "code_score": 170,
-      "community_score": 9,
-      "quality_score": 57,
+      "community_score": 39,
+      "quality_score": 38,
       "score_breakdown": {
         "pr_score": 118,
         "commits_score": 52,
@@ -16554,10 +16316,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 9,
+        "projects_score": 30,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 57,
+        "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -16838,7 +16601,528 @@
       "lastActiveDays": 13
     },
     {
+      "rank": 26,
+      "username": "abdulla-mindfire",
+      "id": 105473459,
+      "avatar_url": "https://avatars.githubusercontent.com/u/105473459?v=4",
+      "html_url": "https://github.com/abdulla-mindfire",
+      "totalCommits": 41,
+      "totalPRs": 20,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 2.05,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 19,
+        "medium": 0,
+        "large": 1
+      },
+      "total_score": 237,
+      "code_score": 186,
+      "community_score": 10,
+      "quality_score": 41,
+      "score_breakdown": {
+        "pr_score": 104,
+        "commits_score": 82,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 40,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["sqlrag"],
+      "byProject": {
+        "sqlrag": {
+          "commits": 41,
+          "prs": [
+            {
+              "number": 20,
+              "merged_at": "2024-10-03T08:01:06Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 9,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 19,
+              "merged_at": "2024-10-03T07:54:50Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 10,
+              "reviews_count": 0
+            },
+            {
+              "number": 18,
+              "merged_at": "2024-10-03T06:51:12Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 17,
+              "merged_at": "2024-10-03T05:23:21Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 16,
+              "merged_at": "2024-10-03T05:19:43Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 15,
+              "merged_at": "2024-10-03T05:15:01Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 11,
+              "deletions": 22,
+              "reviews_count": 0
+            },
+            {
+              "number": 14,
+              "merged_at": "2024-10-03T05:11:06Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 13,
+              "merged_at": "2024-10-03T05:07:37Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 19,
+              "deletions": 14,
+              "reviews_count": 0
+            },
+            {
+              "number": 12,
+              "merged_at": "2024-10-03T05:02:21Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 11,
+              "merged_at": "2024-10-03T04:59:56Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 10,
+              "merged_at": "2024-10-03T04:54:41Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 9,
+              "merged_at": "2024-10-03T04:48:30Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 8,
+              "merged_at": "2024-10-03T04:43:47Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 52,
+              "additions": 8732,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 7,
+              "merged_at": "2024-10-01T12:44:13Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 5,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 6,
+              "merged_at": "2024-10-01T12:37:15Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 3,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 5,
+              "merged_at": "2024-10-01T12:30:34Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 33,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 4,
+              "merged_at": "2024-10-01T12:27:28Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 3,
+              "merged_at": "2024-10-01T12:22:43Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 18,
+              "deletions": 56,
+              "reviews_count": 0
+            },
+            {
+              "number": 2,
+              "merged_at": "2024-10-01T11:52:04Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 18,
+              "reviews_count": 0
+            },
+            {
+              "number": 1,
+              "merged_at": "2024-10-01T11:46:19Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 20,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
       "rank": 27,
+      "username": "patisubhakanta",
+      "id": 59618850,
+      "avatar_url": "https://avatars.githubusercontent.com/u/59618850?v=4",
+      "html_url": "https://github.com/patisubhakanta",
+      "totalCommits": 41,
+      "totalPRs": 8,
+      "totalPRReviewsGiven": 6,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 14,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 5.13,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 1,
+        "large": 5
+      },
+      "total_score": 212,
+      "code_score": 159,
+      "community_score": 38,
+      "quality_score": 15,
+      "score_breakdown": {
+        "pr_score": 59,
+        "commits_score": 82,
+        "pr_reviews_score": 18,
+        "code_comments_score": 0,
+        "issues_opened_score": 28,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 14,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 14,
+        "issues_total": 14,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["Pivothead"],
+      "byProject": {
+        "Pivothead": {
+          "commits": 41,
+          "prs": [
+            {
+              "number": 71,
+              "merged_at": "2025-01-17T06:29:08Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 11,
+              "deletions": 6,
+              "reviews_count": 0
+            },
+            {
+              "number": 69,
+              "merged_at": "2025-01-17T05:45:48Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 1,
+              "additions": 214,
+              "deletions": 126,
+              "reviews_count": 0
+            },
+            {
+              "number": 68,
+              "merged_at": "2025-01-16T13:01:12Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 7,
+              "additions": 406,
+              "deletions": 539,
+              "reviews_count": 0
+            },
+            {
+              "number": 62,
+              "merged_at": "2025-01-16T12:47:49Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 7,
+              "additions": 539,
+              "deletions": 406,
+              "reviews_count": 0
+            },
+            {
+              "number": 47,
+              "merged_at": "2025-01-02T06:49:02Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9,
+              "additions": 763,
+              "deletions": 137,
+              "reviews_count": 0
+            },
+            {
+              "number": 39,
+              "merged_at": "2024-12-20T06:09:34Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 28,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 24,
+              "merged_at": "2024-12-19T06:32:45Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 7,
+              "additions": 666,
+              "deletions": 276,
+              "reviews_count": 1
+            },
+            {
+              "number": 3,
+              "merged_at": "2024-12-03T13:28:52Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 78,
+              "additions": 3691,
+              "deletions": 0,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 6,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 29,
+              "author": "patisubhakanta",
+              "title": "[Feature]:Visualization of Grouped Data in Graphs",
+              "created_at": "2024-12-16T08:50:52Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 28,
+              "author": "patisubhakanta",
+              "title": "[Feature]:Conditional Formatting for Data Cells",
+              "created_at": "2024-12-16T08:44:41Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 27,
+              "author": "patisubhakanta",
+              "title": "[Feature]:Aggregation Functions for Data Fields",
+              "created_at": "2024-12-16T08:28:48Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 5,
+              "author": "patisubhakanta",
+              "title": "[Feature] : Sorting",
+              "created_at": "2024-12-03T06:09:43Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 7,
+              "author": "patisubhakanta",
+              "title": "[Feature] : Virtualization",
+              "created_at": "2024-12-03T06:10:27Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 107,
+              "author": "patisubhakanta",
+              "title": "React Wrapper",
+              "created_at": "2025-01-30T09:07:37Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 94,
+              "author": "patisubhakanta",
+              "title": "Add Advanced Layout Options for Table Display",
+              "created_at": "2025-01-20T10:15:58Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 93,
+              "author": "patisubhakanta",
+              "title": "Enhance Table Formatting Options",
+              "created_at": "2025-01-20T10:13:11Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 70,
+              "author": "patisubhakanta",
+              "title": "[BUG]: Fix and Cleanup Code to Resolve Merge Conflicts",
+              "created_at": "2025-01-17T06:24:42Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 66,
+              "author": "patisubhakanta",
+              "title": "Add Feature to Choose Value with Decimal Places and Currency Symbol",
+              "created_at": "2025-01-16T12:48:38Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 46,
+              "author": "patisubhakanta",
+              "title": "[Feature]: Header UI",
+              "created_at": "2025-01-02T06:19:55Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 30,
+              "author": "patisubhakanta",
+              "title": "[Feature]: Basic Table Features: Sorting, Filtering, Pagination, and Universal Search",
+              "created_at": "2024-12-16T09:00:04Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 6,
+              "author": "patisubhakanta",
+              "title": "[Feature] : Filtering",
+              "created_at": "2024-12-03T06:09:54Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 4,
+              "author": "patisubhakanta",
+              "title": "[Feature] : JSON to UI ",
+              "created_at": "2024-12-03T06:09:30Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 7,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 28,
       "username": "ankitsingh252225",
       "id": 227138911,
       "avatar_url": "https://avatars.githubusercontent.com/u/227138911?v=4",
@@ -16856,10 +17140,10 @@
         "medium": 6,
         "large": 1
       },
-      "total_score": 219,
+      "total_score": 204,
       "code_score": 137,
-      "community_score": 12,
-      "quality_score": 70,
+      "community_score": 22,
+      "quality_score": 45,
       "score_breakdown": {
         "pr_score": 113,
         "commits_score": 24,
@@ -16867,10 +17151,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 12,
-        "tests_score": 8,
-        "docs_score": 2,
+        "projects_score": 10,
+        "tests_score": 4,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 60,
+        "zero_revisions_score": 40,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -17138,262 +17423,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 28,
-      "username": "patisubhakanta",
-      "id": 59618850,
-      "avatar_url": "https://avatars.githubusercontent.com/u/59618850?v=4",
-      "html_url": "https://github.com/patisubhakanta",
-      "totalCommits": 41,
-      "totalPRs": 8,
-      "totalPRReviewsGiven": 6,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 14,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 5.13,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 2,
-        "medium": 1,
-        "large": 5
-      },
-      "total_score": 210,
-      "code_score": 159,
-      "community_score": 28,
-      "quality_score": 23,
-      "score_breakdown": {
-        "pr_score": 59,
-        "commits_score": 82,
-        "pr_reviews_score": 18,
-        "code_comments_score": 0,
-        "issues_opened_score": 28,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 2,
-        "mentor_score": 0,
-        "zero_revisions_score": 21,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 14,
-        "issues_total": 14,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["Pivothead"],
-      "byProject": {
-        "Pivothead": {
-          "commits": 41,
-          "prs": [
-            {
-              "number": 71,
-              "merged_at": "2025-01-17T06:29:08Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 11,
-              "deletions": 6,
-              "reviews_count": 0
-            },
-            {
-              "number": 69,
-              "merged_at": "2025-01-17T05:45:48Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 1,
-              "additions": 214,
-              "deletions": 126,
-              "reviews_count": 0
-            },
-            {
-              "number": 68,
-              "merged_at": "2025-01-16T13:01:12Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 7,
-              "additions": 406,
-              "deletions": 539,
-              "reviews_count": 0
-            },
-            {
-              "number": 62,
-              "merged_at": "2025-01-16T12:47:49Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 7,
-              "additions": 539,
-              "deletions": 406,
-              "reviews_count": 0
-            },
-            {
-              "number": 47,
-              "merged_at": "2025-01-02T06:49:02Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9,
-              "additions": 763,
-              "deletions": 137,
-              "reviews_count": 0
-            },
-            {
-              "number": 39,
-              "merged_at": "2024-12-20T06:09:34Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 28,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 24,
-              "merged_at": "2024-12-19T06:32:45Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 7,
-              "additions": 666,
-              "deletions": 276,
-              "reviews_count": 1
-            },
-            {
-              "number": 3,
-              "merged_at": "2024-12-03T13:28:52Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 78,
-              "additions": 3691,
-              "deletions": 0,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 6,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 29,
-              "author": "patisubhakanta",
-              "title": "[Feature]:Visualization of Grouped Data in Graphs",
-              "created_at": "2024-12-16T08:50:52Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 28,
-              "author": "patisubhakanta",
-              "title": "[Feature]:Conditional Formatting for Data Cells",
-              "created_at": "2024-12-16T08:44:41Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 27,
-              "author": "patisubhakanta",
-              "title": "[Feature]:Aggregation Functions for Data Fields",
-              "created_at": "2024-12-16T08:28:48Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 5,
-              "author": "patisubhakanta",
-              "title": "[Feature] : Sorting",
-              "created_at": "2024-12-03T06:09:43Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 7,
-              "author": "patisubhakanta",
-              "title": "[Feature] : Virtualization",
-              "created_at": "2024-12-03T06:10:27Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 107,
-              "author": "patisubhakanta",
-              "title": "React Wrapper",
-              "created_at": "2025-01-30T09:07:37Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 94,
-              "author": "patisubhakanta",
-              "title": "Add Advanced Layout Options for Table Display",
-              "created_at": "2025-01-20T10:15:58Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 93,
-              "author": "patisubhakanta",
-              "title": "Enhance Table Formatting Options",
-              "created_at": "2025-01-20T10:13:11Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 70,
-              "author": "patisubhakanta",
-              "title": "[BUG]: Fix and Cleanup Code to Resolve Merge Conflicts",
-              "created_at": "2025-01-17T06:24:42Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 66,
-              "author": "patisubhakanta",
-              "title": "Add Feature to Choose Value with Decimal Places and Currency Symbol",
-              "created_at": "2025-01-16T12:48:38Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 46,
-              "author": "patisubhakanta",
-              "title": "[Feature]: Header UI",
-              "created_at": "2025-01-02T06:19:55Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 30,
-              "author": "patisubhakanta",
-              "title": "[Feature]: Basic Table Features: Sorting, Filtering, Pagination, and Universal Search",
-              "created_at": "2024-12-16T09:00:04Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 6,
-              "author": "patisubhakanta",
-              "title": "[Feature] : Filtering",
-              "created_at": "2024-12-03T06:09:54Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 4,
-              "author": "patisubhakanta",
-              "title": "[Feature] : JSON to UI ",
-              "created_at": "2024-12-03T06:09:30Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 1,
-            "first_time_mentor": 0,
-            "zero_revisions": 7,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 29,
       "username": "praliptarajoo",
       "id": 42381761,
@@ -17412,10 +17441,10 @@
         "medium": 4,
         "large": 0
       },
-      "total_score": 197,
+      "total_score": 198,
       "code_score": 144,
-      "community_score": 0,
-      "quality_score": 53,
+      "community_score": 20,
+      "quality_score": 34,
       "score_breakdown": {
         "pr_score": 96,
         "commits_score": 42,
@@ -17423,10 +17452,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 20,
         "tests_score": 0,
-        "docs_score": 8,
+        "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 45,
+        "zero_revisions_score": 30,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -17654,6 +17684,144 @@
     },
     {
       "rank": 30,
+      "username": "BasudevBharatBhushan",
+      "id": 64151314,
+      "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
+      "html_url": "https://github.com/BasudevBharatBhushan",
+      "totalCommits": 48,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 9.6,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 3,
+        "large": 0
+      },
+      "total_score": 159,
+      "code_score": 126,
+      "community_score": 22,
+      "quality_score": 11,
+      "score_breakdown": {
+        "pr_score": 30,
+        "commits_score": 96,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 8,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["FMDAPI Node Weaver", "FileMaker List View Addon"],
+      "byProject": {
+        "FMDAPI Node Weaver": {
+          "commits": 31,
+          "prs": [
+            {
+              "number": 10,
+              "merged_at": "2024-04-03T08:07:14Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 9,
+              "merged_at": "2024-04-03T07:55:36Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 190,
+              "deletions": 69,
+              "reviews_count": 0
+            },
+            {
+              "number": 3,
+              "merged_at": "2024-01-12T07:10:07Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 225,
+              "deletions": 130,
+              "reviews_count": 0
+            },
+            {
+              "number": 2,
+              "merged_at": "2023-12-12T13:57:52Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 1,
+              "merged_at": "2023-11-23T04:02:26Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 228,
+              "deletions": 147,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 4,
+              "author": "BasudevBharatBhushan",
+              "title": "New Feat - Automate pushing of npm release",
+              "created_at": "2024-01-12T07:13:21Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 3,
+            "first_time_mentor": 0,
+            "zero_revisions": 4,
+            "impact_bonuses": []
+          }
+        },
+        "FileMaker List View Addon": {
+          "commits": 17,
+          "prs": [],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 31,
       "username": "ArnabKMindfire",
       "id": 103591425,
       "avatar_url": "https://avatars.githubusercontent.com/u/103591425?v=4",
@@ -17671,10 +17839,10 @@
         "medium": 1,
         "large": 5
       },
-      "total_score": 162,
+      "total_score": 158,
       "code_score": 124,
-      "community_score": 0,
-      "quality_score": 38,
+      "community_score": 10,
+      "quality_score": 24,
       "score_breakdown": {
         "pr_score": 74,
         "commits_score": 50,
@@ -17682,10 +17850,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 8,
+        "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 30,
+        "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -17826,7 +17995,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 31,
+      "rank": 32,
       "username": "MohdAasim",
       "id": 79627135,
       "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
@@ -17844,10 +18013,10 @@
         "medium": 0,
         "large": 10
       },
-      "total_score": 155,
+      "total_score": 153,
       "code_score": 105,
-      "community_score": 17,
-      "quality_score": 33,
+      "community_score": 27,
+      "quality_score": 21,
       "score_breakdown": {
         "pr_score": 85,
         "commits_score": 20,
@@ -17855,10 +18024,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 16,
         "issue_comments_score": 1,
-        "tests_score": 2,
-        "docs_score": 4,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 27,
+        "zero_revisions_score": 18,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -18058,143 +18228,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 32,
-      "username": "BasudevBharatBhushan",
-      "id": 64151314,
-      "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
-      "html_url": "https://github.com/BasudevBharatBhushan",
-      "totalCommits": 48,
-      "totalPRs": 5,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 1,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 9.6,
-      "projectsWorkingOn": 2,
-      "prs_by_complexity": {
-        "small": 2,
-        "medium": 3,
-        "large": 0
-      },
-      "total_score": 146,
-      "code_score": 126,
-      "community_score": 2,
-      "quality_score": 18,
-      "score_breakdown": {
-        "pr_score": 30,
-        "commits_score": 96,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 2,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 6,
-        "mentor_score": 0,
-        "zero_revisions_score": 12,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 1,
-        "issues_total": 1,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["FMDAPI Node Weaver", "FileMaker List View Addon"],
-      "byProject": {
-        "FMDAPI Node Weaver": {
-          "commits": 31,
-          "prs": [
-            {
-              "number": 10,
-              "merged_at": "2024-04-03T08:07:14Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 9,
-              "merged_at": "2024-04-03T07:55:36Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 190,
-              "deletions": 69,
-              "reviews_count": 0
-            },
-            {
-              "number": 3,
-              "merged_at": "2024-01-12T07:10:07Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 225,
-              "deletions": 130,
-              "reviews_count": 0
-            },
-            {
-              "number": 2,
-              "merged_at": "2023-12-12T13:57:52Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 2,
-              "deletions": 2,
-              "reviews_count": 0
-            },
-            {
-              "number": 1,
-              "merged_at": "2023-11-23T04:02:26Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 228,
-              "deletions": 147,
-              "reviews_count": 1
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 4,
-              "author": "BasudevBharatBhushan",
-              "title": "New Feat - Automate pushing of npm release",
-              "created_at": "2024-01-12T07:13:21Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 3,
-            "first_time_mentor": 0,
-            "zero_revisions": 4,
-            "impact_bonuses": []
-          }
-        },
-        "FileMaker List View Addon": {
-          "commits": 17,
-          "prs": [],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 0,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 33,
       "username": "VershalaT",
       "id": 134675427,
@@ -18213,10 +18246,10 @@
         "medium": 0,
         "large": 12
       },
-      "total_score": 146,
+      "total_score": 145,
       "code_score": 114,
-      "community_score": 0,
-      "quality_score": 32,
+      "community_score": 10,
+      "quality_score": 21,
       "score_breakdown": {
         "pr_score": 112,
         "commits_score": 2,
@@ -18224,10 +18257,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 30,
+        "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -18399,6 +18433,156 @@
     },
     {
       "rank": 34,
+      "username": "hemant-sudhanshu",
+      "id": 85334692,
+      "avatar_url": "https://avatars.githubusercontent.com/u/85334692?v=4",
+      "html_url": "https://github.com/hemant-sudhanshu",
+      "totalCommits": 25,
+      "totalPRs": 7,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.57,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 6
+      },
+      "total_score": 129,
+      "code_score": 108,
+      "community_score": 20,
+      "quality_score": 1,
+      "score_breakdown": {
+        "pr_score": 58,
+        "commits_score": 50,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
+      "byProject": {
+        "MobileQuickLaunchKit-iOS": {
+          "commits": 23,
+          "prs": [
+            {
+              "number": 10,
+              "merged_at": "2024-04-12T11:31:28Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 49,
+              "additions": 681,
+              "deletions": 248,
+              "reviews_count": 1
+            },
+            {
+              "number": 9,
+              "merged_at": "2024-03-28T06:38:13Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 51,
+              "additions": 1577,
+              "deletions": 286,
+              "reviews_count": 1
+            },
+            {
+              "number": 7,
+              "merged_at": "2024-03-14T11:41:03Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 15,
+              "additions": 163,
+              "deletions": 37,
+              "reviews_count": 1
+            },
+            {
+              "number": 4,
+              "merged_at": "2024-02-26T06:36:53Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 130,
+              "additions": 268,
+              "deletions": 405,
+              "reviews_count": 1
+            },
+            {
+              "number": 2,
+              "merged_at": "2024-02-16T09:50:36Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 19,
+              "deletions": 20,
+              "reviews_count": 1
+            },
+            {
+              "number": 1,
+              "merged_at": "2024-02-15T05:34:38Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 203,
+              "additions": 10080,
+              "deletions": 0,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        },
+        "MobileQuickLaunchKit-Android": {
+          "commits": 2,
+          "prs": [
+            {
+              "number": 1,
+              "merged_at": "2024-02-15T06:48:08Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 284,
+              "additions": 11844,
+              "deletions": 0,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 35,
       "username": "SubhenduS1999",
       "id": 169184262,
       "avatar_url": "https://avatars.githubusercontent.com/u/169184262?v=4",
@@ -18418,8 +18602,8 @@
       },
       "total_score": 127,
       "code_score": 95,
-      "community_score": 2,
-      "quality_score": 30,
+      "community_score": 12,
+      "quality_score": 20,
       "score_breakdown": {
         "pr_score": 81,
         "commits_score": 14,
@@ -18427,10 +18611,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 2,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 30,
+        "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -18570,7 +18755,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 35,
+      "rank": 36,
       "username": "ankitsaha-mindfire",
       "id": 235838245,
       "avatar_url": "https://avatars.githubusercontent.com/u/235838245?v=4",
@@ -18588,9 +18773,9 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 112,
+      "total_score": 122,
       "code_score": 112,
-      "community_score": 0,
+      "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -18599,6 +18784,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
@@ -18632,139 +18818,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 36,
-      "username": "konark-mindfire",
-      "id": 160819069,
-      "avatar_url": "https://avatars.githubusercontent.com/u/160819069?v=4",
-      "html_url": "https://github.com/konark-mindfire",
-      "totalCommits": 16,
-      "totalPRs": 7,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.29,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 1,
-        "large": 6
-      },
-      "total_score": 112,
-      "code_score": 90,
-      "community_score": 0,
-      "quality_score": 22,
-      "score_breakdown": {
-        "pr_score": 58,
-        "commits_score": 32,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 4,
-        "mentor_score": 0,
-        "zero_revisions_score": 18,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["MobileQuickLaunchKit-Android"],
-      "byProject": {
-        "MobileQuickLaunchKit-Android": {
-          "commits": 16,
-          "prs": [
-            {
-              "number": 14,
-              "merged_at": "2024-04-09T08:13:10Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 11,
-              "additions": 724,
-              "deletions": 53,
-              "reviews_count": 0
-            },
-            {
-              "number": 12,
-              "merged_at": "2024-04-04T13:58:48Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 21,
-              "additions": 265,
-              "deletions": 87,
-              "reviews_count": 0
-            },
-            {
-              "number": 10,
-              "merged_at": "2024-03-26T06:09:50Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 11,
-              "additions": 255,
-              "deletions": 116,
-              "reviews_count": 0
-            },
-            {
-              "number": 9,
-              "merged_at": "2024-03-07T16:02:12Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 16,
-              "additions": 199,
-              "deletions": 4,
-              "reviews_count": 0
-            },
-            {
-              "number": 7,
-              "merged_at": "2024-02-29T11:01:15Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 12,
-              "additions": 406,
-              "deletions": 307,
-              "reviews_count": 0
-            },
-            {
-              "number": 5,
-              "merged_at": "2024-02-23T08:05:50Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 35,
-              "deletions": 7,
-              "reviews_count": 0
-            },
-            {
-              "number": 3,
-              "merged_at": "2024-02-22T06:09:39Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 20,
-              "additions": 271,
-              "deletions": 319,
-              "reviews_count": 1
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 2,
-            "first_time_mentor": 0,
-            "zero_revisions": 6,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 37,
       "username": "aryanxorian",
       "id": 29296038,
@@ -18783,10 +18836,10 @@
         "medium": 1,
         "large": 6
       },
-      "total_score": 112,
+      "total_score": 115,
       "code_score": 94,
-      "community_score": 0,
-      "quality_score": 18,
+      "community_score": 10,
+      "quality_score": 11,
       "score_breakdown": {
         "pr_score": 68,
         "commits_score": 26,
@@ -18794,10 +18847,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "tests_score": 4,
-        "docs_score": 2,
+        "projects_score": 10,
+        "tests_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -18919,155 +18973,6 @@
     },
     {
       "rank": 38,
-      "username": "hemant-sudhanshu",
-      "id": 85334692,
-      "avatar_url": "https://avatars.githubusercontent.com/u/85334692?v=4",
-      "html_url": "https://github.com/hemant-sudhanshu",
-      "totalCommits": 25,
-      "totalPRs": 7,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.57,
-      "projectsWorkingOn": 2,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 1,
-        "large": 6
-      },
-      "total_score": 110,
-      "code_score": 108,
-      "community_score": 0,
-      "quality_score": 2,
-      "score_breakdown": {
-        "pr_score": 58,
-        "commits_score": 50,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 2,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
-      "byProject": {
-        "MobileQuickLaunchKit-iOS": {
-          "commits": 23,
-          "prs": [
-            {
-              "number": 10,
-              "merged_at": "2024-04-12T11:31:28Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 49,
-              "additions": 681,
-              "deletions": 248,
-              "reviews_count": 1
-            },
-            {
-              "number": 9,
-              "merged_at": "2024-03-28T06:38:13Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 51,
-              "additions": 1577,
-              "deletions": 286,
-              "reviews_count": 1
-            },
-            {
-              "number": 7,
-              "merged_at": "2024-03-14T11:41:03Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 15,
-              "additions": 163,
-              "deletions": 37,
-              "reviews_count": 1
-            },
-            {
-              "number": 4,
-              "merged_at": "2024-02-26T06:36:53Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 130,
-              "additions": 268,
-              "deletions": 405,
-              "reviews_count": 1
-            },
-            {
-              "number": 2,
-              "merged_at": "2024-02-16T09:50:36Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 19,
-              "deletions": 20,
-              "reviews_count": 1
-            },
-            {
-              "number": 1,
-              "merged_at": "2024-02-15T05:34:38Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 203,
-              "additions": 10080,
-              "deletions": 0,
-              "reviews_count": 1
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 1,
-            "first_time_mentor": 0,
-            "zero_revisions": 0,
-            "impact_bonuses": []
-          }
-        },
-        "MobileQuickLaunchKit-Android": {
-          "commits": 2,
-          "prs": [
-            {
-              "number": 1,
-              "merged_at": "2024-02-15T06:48:08Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 284,
-              "additions": 11844,
-              "deletions": 0,
-              "reviews_count": 1
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 0,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 39,
       "username": "Ankit-saha-iiitbbsr",
       "id": 120235923,
       "avatar_url": "https://avatars.githubusercontent.com/u/120235923?v=4",
@@ -19085,10 +18990,10 @@
         "medium": 0,
         "large": 2
       },
-      "total_score": 108,
+      "total_score": 114,
       "code_score": 97,
-      "community_score": 0,
-      "quality_score": 11,
+      "community_score": 10,
+      "quality_score": 7,
       "score_breakdown": {
         "pr_score": 22,
         "commits_score": 72,
@@ -19096,10 +19001,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 9,
+        "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19160,6 +19066,140 @@
       "lastActiveDays": null
     },
     {
+      "rank": 39,
+      "username": "konark-mindfire",
+      "id": 160819069,
+      "avatar_url": "https://avatars.githubusercontent.com/u/160819069?v=4",
+      "html_url": "https://github.com/konark-mindfire",
+      "totalCommits": 16,
+      "totalPRs": 7,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 2.29,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 6
+      },
+      "total_score": 114,
+      "code_score": 90,
+      "community_score": 10,
+      "quality_score": 14,
+      "score_breakdown": {
+        "pr_score": 58,
+        "commits_score": 32,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 2,
+        "mentor_score": 0,
+        "zero_revisions_score": 12,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["MobileQuickLaunchKit-Android"],
+      "byProject": {
+        "MobileQuickLaunchKit-Android": {
+          "commits": 16,
+          "prs": [
+            {
+              "number": 14,
+              "merged_at": "2024-04-09T08:13:10Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 724,
+              "deletions": 53,
+              "reviews_count": 0
+            },
+            {
+              "number": 12,
+              "merged_at": "2024-04-04T13:58:48Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 21,
+              "additions": 265,
+              "deletions": 87,
+              "reviews_count": 0
+            },
+            {
+              "number": 10,
+              "merged_at": "2024-03-26T06:09:50Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 255,
+              "deletions": 116,
+              "reviews_count": 0
+            },
+            {
+              "number": 9,
+              "merged_at": "2024-03-07T16:02:12Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 16,
+              "additions": 199,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
+              "number": 7,
+              "merged_at": "2024-02-29T11:01:15Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 12,
+              "additions": 406,
+              "deletions": 307,
+              "reviews_count": 0
+            },
+            {
+              "number": 5,
+              "merged_at": "2024-02-23T08:05:50Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 35,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 3,
+              "merged_at": "2024-02-22T06:09:39Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 271,
+              "deletions": 319,
+              "reviews_count": 1
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 2,
+            "first_time_mentor": 0,
+            "zero_revisions": 6,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
       "rank": 40,
       "username": "Dibas2421",
       "id": 157849988,
@@ -19178,10 +19218,10 @@
         "medium": 1,
         "large": 4
       },
-      "total_score": 107,
+      "total_score": 109,
       "code_score": 84,
-      "community_score": 0,
-      "quality_score": 23,
+      "community_score": 10,
+      "quality_score": 15,
       "score_breakdown": {
         "pr_score": 56,
         "commits_score": 28,
@@ -19189,10 +19229,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "tests_score": 2,
+        "projects_score": 10,
+        "tests_score": 1,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 21,
+        "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19321,10 +19362,10 @@
         "medium": 0,
         "large": 3
       },
-      "total_score": 88,
+      "total_score": 96,
       "code_score": 82,
-      "community_score": 0,
-      "quality_score": 6,
+      "community_score": 10,
+      "quality_score": 4,
       "score_breakdown": {
         "pr_score": 36,
         "commits_score": 30,
@@ -19332,10 +19373,11 @@
         "code_comments_score": 4,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 6,
+        "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19434,10 +19476,10 @@
         "medium": 1,
         "large": 5
       },
-      "total_score": 87,
+      "total_score": 95,
       "code_score": 82,
-      "community_score": 0,
-      "quality_score": 5,
+      "community_score": 10,
+      "quality_score": 3,
       "score_breakdown": {
         "pr_score": 49,
         "commits_score": 30,
@@ -19445,10 +19487,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 3,
+        "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19557,10 +19600,10 @@
         "medium": 0,
         "large": 3
       },
-      "total_score": 76,
+      "total_score": 84,
       "code_score": 72,
-      "community_score": 0,
-      "quality_score": 4,
+      "community_score": 10,
+      "quality_score": 2,
       "score_breakdown": {
         "pr_score": 36,
         "commits_score": 36,
@@ -19568,8 +19611,9 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 4,
+        "docs_score": 2,
         "mentor_score": 0,
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
@@ -19653,6 +19697,69 @@
     },
     {
       "rank": 44,
+      "username": "pratul-mindfire",
+      "id": 104986454,
+      "avatar_url": "https://avatars.githubusercontent.com/u/104986454?v=4",
+      "html_url": "https://github.com/pratul-mindfire",
+      "totalCommits": 34,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 78,
+      "code_score": 68,
+      "community_score": 10,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 68,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["QuickLaunchReactNativeKit"],
+      "byProject": {
+        "QuickLaunchReactNativeKit": {
+          "commits": 34,
+          "prs": [],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 45,
       "username": "100xmanas",
       "id": 147431910,
       "avatar_url": "https://avatars.githubusercontent.com/u/147431910?v=4",
@@ -19670,10 +19777,10 @@
         "medium": 1,
         "large": 0
       },
-      "total_score": 74,
+      "total_score": 77,
       "code_score": 49,
-      "community_score": 6,
-      "quality_score": 19,
+      "community_score": 16,
+      "quality_score": 12,
       "score_breakdown": {
         "pr_score": 27,
         "commits_score": 22,
@@ -19681,10 +19788,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 6,
-        "tests_score": 4,
+        "projects_score": 10,
+        "tests_score": 2,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 15,
+        "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19784,12 +19892,12 @@
       "lastActiveDays": null
     },
     {
-      "rank": 45,
-      "username": "pratul-mindfire",
-      "id": 104986454,
-      "avatar_url": "https://avatars.githubusercontent.com/u/104986454?v=4",
-      "html_url": "https://github.com/pratul-mindfire",
-      "totalCommits": 34,
+      "rank": 46,
+      "username": "Shubh2694",
+      "id": 108745749,
+      "avatar_url": "https://avatars.githubusercontent.com/u/108745749?v=4",
+      "html_url": "https://github.com/Shubh2694",
+      "totalCommits": 31,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
@@ -19802,17 +19910,18 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 68,
-      "code_score": 68,
-      "community_score": 0,
+      "total_score": 72,
+      "code_score": 62,
+      "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
-        "commits_score": 68,
+        "commits_score": 62,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
@@ -19825,10 +19934,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": ["react-text-igniter"],
       "byProject": {
-        "QuickLaunchReactNativeKit": {
-          "commits": 34,
+        "react-text-igniter": {
+          "commits": 31,
           "prs": [],
           "pr_reviews_given": 0,
           "code_review_comments": 0,
@@ -19846,7 +19955,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 46,
+      "rank": 47,
       "username": "Satyam-Mindfire",
       "id": 138189810,
       "avatar_url": "https://avatars.githubusercontent.com/u/138189810?v=4",
@@ -19864,10 +19973,10 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 67,
+      "total_score": 71,
       "code_score": 51,
-      "community_score": 0,
-      "quality_score": 16,
+      "community_score": 10,
+      "quality_score": 10,
       "score_breakdown": {
         "pr_score": 29,
         "commits_score": 22,
@@ -19875,10 +19984,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 4,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19949,68 +20059,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 47,
-      "username": "Shubh2694",
-      "id": 108745749,
-      "avatar_url": "https://avatars.githubusercontent.com/u/108745749?v=4",
-      "html_url": "https://github.com/Shubh2694",
-      "totalCommits": 31,
-      "totalPRs": 0,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 62,
-      "code_score": 62,
-      "community_score": 0,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 62,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["react-text-igniter"],
-      "byProject": {
-        "react-text-igniter": {
-          "commits": 31,
-          "prs": [],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 0,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 48,
       "username": "rohitrg96",
       "id": 190622750,
@@ -20029,10 +20077,10 @@
         "medium": 1,
         "large": 3
       },
-      "total_score": 62,
+      "total_score": 68,
       "code_score": 50,
-      "community_score": 0,
-      "quality_score": 12,
+      "community_score": 10,
+      "quality_score": 8,
       "score_breakdown": {
         "pr_score": 32,
         "commits_score": 18,
@@ -20040,10 +20088,11 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -20115,6 +20164,84 @@
     },
     {
       "rank": 49,
+      "username": "chaudharyvivek",
+      "id": 10649999,
+      "avatar_url": "https://avatars.githubusercontent.com/u/10649999?v=4",
+      "html_url": "https://github.com/chaudharyvivek",
+      "totalCommits": 6,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 12,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 68,
+      "code_score": 48,
+      "community_score": 20,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 12,
+        "pr_reviews_score": 36,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
+      "byProject": {
+        "MobileQuickLaunchKit-iOS": {
+          "commits": 4,
+          "prs": [],
+          "pr_reviews_given": 6,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        },
+        "MobileQuickLaunchKit-Android": {
+          "commits": 2,
+          "prs": [],
+          "pr_reviews_given": 6,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 50,
       "username": "Harshita-mindfire",
       "id": 84971366,
       "avatar_url": "https://avatars.githubusercontent.com/u/84971366?v=4",
@@ -20132,9 +20259,9 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 55,
+      "total_score": 65,
       "code_score": 55,
-      "community_score": 0,
+      "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -20143,6 +20270,7 @@
         "code_comments_score": 3,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
@@ -20162,68 +20290,6 @@
           "prs": [],
           "pr_reviews_given": 4,
           "code_review_comments": 3,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 0,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 50,
-      "username": "VershalaTandon",
-      "id": 63102290,
-      "avatar_url": "https://avatars.githubusercontent.com/u/63102290?v=4",
-      "html_url": "https://github.com/VershalaTandon",
-      "totalCommits": 25,
-      "totalPRs": 0,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 50,
-      "code_score": 50,
-      "community_score": 0,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 50,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["Mindfire Foss Website"],
-      "byProject": {
-        "Mindfire Foss Website": {
-          "commits": 25,
-          "prs": [],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
           "issues_opened": [],
           "issue_comments_given": [],
           "quality_metrics": {

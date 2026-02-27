@@ -52,6 +52,8 @@ const SCORING = {
     critical: 10,
   },
 
+  PROJECT_DIVERSITY: 10, // ← NEW: 10 pts per unique project contributed to
+
   CAPS: {
     ISSUES_PER_MONTH: 10,
     ISSUE_COMMENTS_PER_MONTH: 20,
@@ -129,7 +131,7 @@ function analyzeUserInProject(username, projectData) {
     },
   };
 
-  // 1. Commits — only on default branch (already guaranteed by cache)
+  // 1. Commits
   if (projectData.commits) {
     stats.commits = projectData.commits.filter(
       (commit) =>
@@ -138,8 +140,7 @@ function analyzeUserInProject(username, projectData) {
     ).length;
   }
 
-  // 2. PRs — only merged to default branch (guaranteed by cache)
-  //    Store merged_at so callers can filter by date if needed
+  // 2. PRs
   if (projectData.merged_prs) {
     const userPRs = projectData.merged_prs.filter(
       (pr) => pr.author === username
@@ -148,7 +149,7 @@ function analyzeUserInProject(username, projectData) {
     for (const pr of userPRs) {
       stats.prs.push({
         number: pr.number,
-        merged_at: pr.merged_at || null, // ← stored so date filtering works
+        merged_at: pr.merged_at || null,
         complexity: pr.complexity || "small",
         multiplier: pr.complexity_multiplier || 1.0,
         changed_files: pr.changed_files || 0,
@@ -204,7 +205,7 @@ function analyzeUserInProject(username, projectData) {
     ];
   }
 
-  // 5. Issue comments on OTHER people's issues (real authors from cache)
+  // 5. Issue comments on OTHER people's issues
   if (projectData.issues) {
     const allIssues = [
       ...projectData.issues.bugs,
@@ -215,7 +216,7 @@ function analyzeUserInProject(username, projectData) {
 
     for (const issue of allIssues) {
       if (!issue.comment_authors) continue;
-      if (issue.author === username) continue; // skip own issues
+      if (issue.author === username) continue;
 
       for (const comment of issue.comment_authors) {
         if (comment.author === username) {
@@ -255,9 +256,14 @@ function calculateScore(userStats) {
     SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH
   );
 
+  // ← NEW: multi-project diversity bonus
+  const projectsWorkedOn = userStats.projectsWorkingOn || 0;
+  const projectDiversityScore = projectsWorkedOn * SCORING.PROJECT_DIVERSITY;
+
   const communityScore =
     cappedIssues.length * SCORING.ISSUE_OPENED +
-    cappedIssueComments.length * SCORING.ISSUE_COMMENT;
+    cappedIssueComments.length * SCORING.ISSUE_COMMENT +
+    projectDiversityScore; // ← NEW
 
   // Quality score
   const impactBonusTotal = userStats.quality_metrics.impact_bonuses.reduce(
@@ -287,6 +293,7 @@ function calculateScore(userStats) {
         userStats.code_review_comments * SCORING.CODE_REVIEW_COMMENT,
       issues_opened_score: cappedIssues.length * SCORING.ISSUE_OPENED,
       issue_comments_score: cappedIssueComments.length * SCORING.ISSUE_COMMENT,
+      projects_score: projectDiversityScore, // ← NEW
       tests_score: userStats.quality_metrics.has_tests * SCORING.HAS_TESTS,
       docs_score: userStats.quality_metrics.has_docs * SCORING.HAS_DOCS,
       mentor_score:
@@ -444,7 +451,7 @@ function generateLeaderboard() {
     });
 
     console.log(
-      `   ✅ Score: ${scoreData.total} (Code: ${scoreData.code_score}, Community: ${scoreData.community_score}, Quality: ${scoreData.quality_score})\n`
+      `   ✅ Score: ${scoreData.total} (Code: ${scoreData.code_score}, Community: ${scoreData.community_score} [+${scoreData.breakdown.projects_score} project bonus], Quality: ${scoreData.quality_score})\n`
     );
   }
 
@@ -478,13 +485,13 @@ function displayTopScorers(leaderboard, topN = 10) {
       `   ├─ Code:      ${contributor.code_score} (PRs: ${contributor.score_breakdown.pr_score}, Commits: ${contributor.score_breakdown.commits_score}, Reviews: ${contributor.score_breakdown.pr_reviews_score})`
     );
     console.log(
-      `   ├─ Community: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score})`
+      `   ├─ Community: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score}, Projects: ${contributor.score_breakdown.projects_score})`
     );
     console.log(
       `   └─ Quality:   ${contributor.quality_score} (Tests: ${contributor.score_breakdown.tests_score}, Docs: ${contributor.score_breakdown.docs_score}, ZeroRev: ${contributor.score_breakdown.zero_revisions_score})`
     );
     console.log(
-      `   Metrics: ${contributor.totalCommits} commits, ${contributor.totalPRs} PRs (S:${contributor.prs_by_complexity.small} M:${contributor.prs_by_complexity.medium} L:${contributor.prs_by_complexity.large}), ${contributor.totalPRReviewsGiven} reviews`
+      `   Metrics: ${contributor.totalCommits} commits, ${contributor.totalPRs} PRs (S:${contributor.prs_by_complexity.small} M:${contributor.prs_by_complexity.medium} L:${contributor.prs_by_complexity.large}), ${contributor.totalPRReviewsGiven} reviews, ${contributor.projectsWorkingOn} projects`
     );
     console.log("");
   });
@@ -531,7 +538,7 @@ function main() {
         code_formula:
           "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
         community_formula:
-          "(ΣIssues × 2) [cap: 10/month] + (ΣIssue_Comments × 1) [cap: 20/month]",
+          "(ΣIssues × 2) [cap: 10/month] + (ΣIssue_Comments × 1) [cap: 20/month] + (ΣProjects × 10)",
         quality_formula:
           "Impact_bonuses + Tests + Docs + Mentor + Zero_revisions",
         note: "PRs and commits counted only if merged/committed to the default branch",
