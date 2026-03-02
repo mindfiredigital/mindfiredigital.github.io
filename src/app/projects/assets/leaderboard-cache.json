@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:36:09.693Z",
+    "fetched_at": "2026-02-27T12:08:29.305Z",
     "commits": [
       {
         "sha": "472fc175c93ad086c35d209a7926233f0a4077e3",
@@ -6330,7 +6330,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:36:12.915Z",
+    "fetched_at": "2026-02-27T12:08:33.401Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7511,7 +7511,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:36:31.308Z",
+    "fetched_at": "2026-02-27T12:08:53.957Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -8007,7 +8007,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-02-27T07:36:52.492Z",
+    "fetched_at": "2026-02-27T12:09:15.794Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9342,7 +9342,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-02-27T07:36:54.506Z",
+    "fetched_at": "2026-02-27T12:09:18.251Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9380,7 +9380,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:37:21.388Z",
+    "fetched_at": "2026-02-27T12:09:42.717Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10237,7 +10237,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:37:43.475Z",
+    "fetched_at": "2026-02-27T12:10:05.566Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -10751,7 +10751,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:38:13.396Z",
+    "fetched_at": "2026-02-27T12:10:35.882Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11336,7 +11336,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:38:56.171Z",
+    "fetched_at": "2026-02-27T12:11:21.143Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -13697,7 +13697,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-02-27T07:39:46.741Z",
+    "fetched_at": "2026-02-27T12:12:15.416Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15359,7 +15359,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-02-27T07:40:59.153Z",
+    "fetched_at": "2026-02-27T12:13:29.614Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17201,7 +17201,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:41:37.402Z",
+    "fetched_at": "2026-02-27T12:14:11.933Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -17887,7 +17887,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-02-27T07:42:47.305Z",
+    "fetched_at": "2026-02-27T12:15:27.082Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -20257,7 +20257,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:48:09.704Z",
+    "fetched_at": "2026-02-27T12:19:16.890Z",
     "commits": [
       {
         "sha": "9cb628a1066d6f36ec9eefdf9bf5edb02d450795",
@@ -26449,7 +26449,7 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:54:02.064Z",
+    "fetched_at": "2026-02-27T12:24:57.140Z",
     "commits": [
       {
         "sha": "f4bc3be6643237d07488319aab0a8b8315a18095",
@@ -34043,13 +34043,453 @@
       }
     ],
     "issues": {
-      "bugs": [],
+      "bugs": [
+        {
+          "number": 180,
+          "author": "sanghamitradash021",
+          "title": "[BUG]: while exporting the table in HTML or PDF we are getting zero in all cells",
+          "created_at": "2025-09-01T05:39:45Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanghamitradash021",
+              "created_at": "2025-09-01T05:50:17Z"
+            }
+          ]
+        },
+        {
+          "number": 171,
+          "author": "sanghamitradash021",
+          "title": "[BUG]: Drag row and Drag column is not working for process data",
+          "created_at": "2025-08-19T11:44:48Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 151,
+          "author": "anandmindfire",
+          "title": "[BUG]: applyGrouping logic is always using the original config data instead of using the filtered results",
+          "created_at": "2025-05-27T05:57:54Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "JKAryan2003",
+              "created_at": "2025-05-27T06:07:43Z"
+            }
+          ]
+        },
+        {
+          "number": 125,
+          "author": "akashdeep-singh-multani",
+          "title": "Changeset commit restructuring",
+          "created_at": "2025-02-07T17:18:35Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 123,
+          "author": "akashdeep-singh-multani",
+          "title": "Exclude examples from publishing to npm",
+          "created_at": "2025-02-06T16:29:15Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 120,
+          "author": "akashdeep-singh-multani",
+          "title": "Issue related to package.json for examples workspace",
+          "created_at": "2025-02-06T11:30:29Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 119,
+          "author": "akashdeep-singh-multani",
+          "title": "Create changescript js script and update publish.yml",
+          "created_at": "2025-02-06T11:08:53Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 111,
+          "author": "akashdeep-singh-multani",
+          "title": "Setup Changesets for Automated Versioning",
+          "created_at": "2025-02-05T05:46:12Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 103,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Fix table data field validation",
+          "created_at": "2025-01-24T12:26:37Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 98,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Fix readme header",
+          "created_at": "2025-01-21T09:51:12Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 87,
+          "author": "akashdeep-singh-multani",
+          "title": "Update publish.yml to Publish to NPM",
+          "created_at": "2025-01-18T15:29:00Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 82,
+          "author": "akashdeep-singh-multani",
+          "title": "Fix issue related to CI/CD workflows for deployment to npm",
+          "created_at": "2025-01-18T06:48:38Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 59,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Improve UI for table for decial values and formatting",
+          "created_at": "2025-01-13T08:04:48Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 57,
+          "author": "akashdeep-singh-multani",
+          "title": "Bug Fixes and Feature Enhancements for Field Settings Popup",
+          "created_at": "2025-01-11T18:30:28Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 41,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Pull request checkList update",
+          "created_at": "2024-12-20T08:00:44Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 33,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Formatting and linting recheck",
+          "created_at": "2024-12-17T14:12:08Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 12,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Code clean up ",
+          "created_at": "2024-12-05T16:44:52Z",
+          "comments": 0,
+          "comment_authors": []
+        }
+      ],
       "enhancements": [
         {
           "number": 185,
           "author": "MohdAasim",
           "title": "[Feature]:Setup Docusaurus Documentation for Monorepo",
           "created_at": "2025-09-10T12:49:20Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 179,
+          "author": "MohdAasim",
+          "title": "[Feature]:Add Condotional Formating to Web Component",
+          "created_at": "2025-08-28T09:07:47Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 175,
+          "author": "MohdAasim",
+          "title": "[Feature]:Create lightweight wrapper for web component to provide idiomatic APIs, strong typing, and SSR support",
+          "created_at": "2025-08-22T05:14:07Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 167,
+          "author": "MohdAasim",
+          "title": "[Feature]:Add support for three modes in mywebcomponent (headless-pivot): none, minimal, and default",
+          "created_at": "2025-08-08T16:49:36Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 165,
+          "author": "MohdAasim",
+          "title": "[Feature]:Add subscription listener and event emission to core functionality",
+          "created_at": "2025-08-08T16:06:35Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 158,
+          "author": "anandmindfire",
+          "title": "[Feature]: Setup & Test PivotHead App + Make Component Headless",
+          "created_at": "2025-07-24T16:07:28Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "MohdAasim",
+              "created_at": "2025-07-24T16:11:17Z"
+            }
+          ]
+        },
+        {
+          "number": 154,
+          "author": "sanghamitradash021",
+          "title": "[Feature]:Add Conditional formatting feature in the core",
+          "created_at": "2025-06-11T08:37:24Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 149,
+          "author": "anandmindfire",
+          "title": "[Feature]: Add Web Component support to PivotHead core for multi-framework integration",
+          "created_at": "2025-05-05T07:09:40Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 140,
+          "author": "anandmindfire",
+          "title": "[Feature]: Enhanced Export Options",
+          "created_at": "2025-03-10T10:18:03Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 139,
+          "author": "anandmindfire",
+          "title": "[Feature]: Connect to Local Data Sources",
+          "created_at": "2025-03-10T10:13:51Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 115,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Add header for exporting option print, pdf and html",
+          "created_at": "2025-02-05T13:01:01Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 110,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Data source for core",
+          "created_at": "2025-02-04T11:03:53Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 104,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]:Hide/Show toolbar in pivot table",
+          "created_at": "2025-01-27T10:07:52Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 101,
+          "author": "mfsisudhanshuk",
+          "title": "[Improvement]: Code clean up and refactor.",
+          "created_at": "2025-01-24T09:14:23Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 96,
+          "author": "akashdeep-singh-multani",
+          "title": "Implement Multiple Columns Grouping for Headless Pivot Table",
+          "created_at": "2025-01-20T17:19:53Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 95,
+          "author": "akashdeep-singh-multani",
+          "title": "Create Angular Wrapper for @mindfiredigital/pivothead-core",
+          "created_at": "2025-01-20T16:43:09Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 92,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Create a react wrapper setup",
+          "created_at": "2025-01-20T08:41:09Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 75,
+          "author": "akashdeep-singh-multani",
+          "title": "[Feature]: Add CI/CD workflows",
+          "created_at": "2025-01-17T18:30:30Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 65,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Implementing dynamic conditional formatting rendering for between condition",
+          "created_at": "2025-01-16T11:11:32Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 63,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]:Dynamic formatting of fields based on popup setup",
+          "created_at": "2025-01-15T12:56:25Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 55,
+          "author": "akashdeep-singh-multani",
+          "title": "UI Changes for Pivot Table and Buttons",
+          "created_at": "2025-01-10T10:10:15Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 49,
+          "author": "akashdeep-singh-multani",
+          "title": "[Feature]: Fields Popup - Design and Drag-Drop Functionality",
+          "created_at": "2025-01-02T11:47:55Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 48,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Sort implementation issue",
+          "created_at": "2025-01-02T08:22:35Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 45,
+          "author": "akashdeep-singh-multani",
+          "title": "[Feature]: Dynamic Popup for Pivot Table Fields",
+          "created_at": "2024-12-30T05:52:36Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 43,
+          "author": "mfsisudhanshuk",
+          "title": "Update the pre-commmit",
+          "created_at": "2024-12-24T06:40:06Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 42,
+          "author": "akashdeep-singh-multani",
+          "title": "Separation of logic for features(sorting, resizing, drag, grouping) in pivotEngine",
+          "created_at": "2024-12-20T13:07:49Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 36,
+          "author": "akashdeep-singh-multani",
+          "title": "Add standard error handlers ",
+          "created_at": "2024-12-17T19:06:11Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 29,
+          "author": "patisubhakanta",
+          "title": "[Feature]:Visualization of Grouped Data in Graphs",
+          "created_at": "2024-12-16T08:50:52Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 28,
+          "author": "patisubhakanta",
+          "title": "[Feature]:Conditional Formatting for Data Cells",
+          "created_at": "2024-12-16T08:44:41Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 27,
+          "author": "patisubhakanta",
+          "title": "[Feature]:Aggregation Functions for Data Fields",
+          "created_at": "2024-12-16T08:28:48Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 25,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Draggable row and column ",
+          "created_at": "2024-12-13T08:15:03Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 22,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Grouping of data.",
+          "created_at": "2024-12-11T08:14:10Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 17,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Pull request template",
+          "created_at": "2024-12-09T08:34:07Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 16,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Row expansion/contraction",
+          "created_at": "2024-12-09T07:53:06Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 13,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]: Vercel setup for live preview ",
+          "created_at": "2024-12-05T16:58:11Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 5,
+          "author": "patisubhakanta",
+          "title": "[Feature] : Sorting",
+          "created_at": "2024-12-03T06:09:43Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 1,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature] : Add husky config",
+          "created_at": "2024-11-29T10:46:47Z",
           "comments": 0,
           "comment_authors": []
         }
@@ -34075,6 +34515,46 @@
               "created_at": "2025-10-09T07:09:05Z"
             }
           ]
+        },
+        {
+          "number": 97,
+          "author": "akashdeep-singh-multani",
+          "title": "Test core functionalities, make Changes in Readme.md",
+          "created_at": "2025-01-20T18:01:10Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 73,
+          "author": "mfsisudhanshuk",
+          "title": "[Improvement]: Update hook for patch branch",
+          "created_at": "2025-01-17T16:11:07Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 53,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Improvement , restructuring and writing function comments.",
+          "created_at": "2025-01-09T12:19:16Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 31,
+          "author": "mfsisudhanshuk",
+          "title": "[BUG]: Update README.md for highlighting code part",
+          "created_at": "2024-12-17T07:29:34Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 7,
+          "author": "patisubhakanta",
+          "title": "[Feature] : Virtualization",
+          "created_at": "2024-12-03T06:10:27Z",
+          "comments": 0,
+          "comment_authors": []
         }
       ],
       "others": [
@@ -34173,16 +34653,128 @@
           "created_at": "2025-09-12T10:58:31Z",
           "comments": 0,
           "comment_authors": []
+        },
+        {
+          "number": 164,
+          "author": "MohdAasim",
+          "title": "RFC: Headless Pivot Table Architecture for Web Components and Framework Integration",
+          "created_at": "2025-07-30T12:54:00Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 153,
+          "author": "JKAryan2003",
+          "title": "[BUG]: dragRow and dragColumn method is using raw data",
+          "created_at": "2025-06-06T10:06:41Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 144,
+          "author": "anandmindfire",
+          "title": "[Feature]: Add Vitest Tests for Export Features (HTML, PDF, Excel)",
+          "created_at": "2025-03-25T11:21:31Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 107,
+          "author": "patisubhakanta",
+          "title": "React Wrapper",
+          "created_at": "2025-01-30T09:07:37Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 105,
+          "author": "mfsisudhanshuk",
+          "title": "[Feature]:Drag and drop in pivot table for rearranging",
+          "created_at": "2025-01-27T10:19:10Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 94,
+          "author": "patisubhakanta",
+          "title": "Add Advanced Layout Options for Table Display",
+          "created_at": "2025-01-20T10:15:58Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 93,
+          "author": "patisubhakanta",
+          "title": "Enhance Table Formatting Options",
+          "created_at": "2025-01-20T10:13:11Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 70,
+          "author": "patisubhakanta",
+          "title": "[BUG]: Fix and Cleanup Code to Resolve Merge Conflicts",
+          "created_at": "2025-01-17T06:24:42Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 66,
+          "author": "patisubhakanta",
+          "title": "Add Feature to Choose Value with Decimal Places and Currency Symbol",
+          "created_at": "2025-01-16T12:48:38Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 46,
+          "author": "patisubhakanta",
+          "title": "[Feature]: Header UI",
+          "created_at": "2025-01-02T06:19:55Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 30,
+          "author": "patisubhakanta",
+          "title": "[Feature]: Basic Table Features: Sorting, Filtering, Pagination, and Universal Search",
+          "created_at": "2024-12-16T09:00:04Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 9,
+          "author": "akashdeep-singh-multani",
+          "title": "Add issue templates for bug report, feature request, and questions",
+          "created_at": "2024-12-03T10:51:27Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 6,
+          "author": "patisubhakanta",
+          "title": "[Feature] : Filtering",
+          "created_at": "2024-12-03T06:09:54Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 4,
+          "author": "patisubhakanta",
+          "title": "[Feature] : JSON to UI ",
+          "created_at": "2024-12-03T06:09:30Z",
+          "comments": 0,
+          "comment_authors": []
         }
       ]
     },
     "stats": {
       "total_commits": 682,
       "total_merged_prs": 153,
-      "total_bugs": 0,
-      "total_enhancements": 1,
-      "total_documentation": 2,
-      "total_others": 12
+      "total_bugs": 17,
+      "total_enhancements": 37,
+      "total_documentation": 7,
+      "total_others": 26
     }
   },
   "21": {
@@ -34190,7 +34782,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:54:04.115Z",
+    "fetched_at": "2026-02-27T12:24:59.634Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -34228,7 +34820,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T07:54:59.084Z",
+    "fetched_at": "2026-02-27T12:25:39.505Z",
     "commits": [
       {
         "sha": "16df0b5e69d9b9a634c7b090e4ff72a471becac6",
@@ -35291,7 +35883,7 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:36.737Z",
+    "fetched_at": "2026-02-27T12:38:28.068Z",
     "commits": [
       {
         "sha": "46e02e68ffa736319953461366fd960f6845a1f6",
@@ -48745,7 +49337,7 @@
       {
         "number": 98,
         "author": "jyotiprakashmfsi",
-        "title": "fix(release): changeset added to devdependency and card typecheck iss��",
+        "title": "fix(release): changeset added to devdependency and card typecheck iss…",
         "merged_at": "2025-08-05T06:34:23Z",
         "created_at": "2025-08-05T05:48:58Z",
         "base_ref": "main",
@@ -51998,7 +52590,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:39.818Z",
+    "fetched_at": "2026-02-27T12:38:30.923Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -52141,7 +52733,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:41.965Z",
+    "fetched_at": "2026-02-27T12:38:33.586Z",
     "commits": [
       {
         "sha": "6b3070cb5b0d489ca4139394745198b4daa1004a",
@@ -52298,7 +52890,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-02-27T08:06:43.743Z",
+    "fetched_at": "2026-02-27T12:38:36.043Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -52336,7 +52928,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:53.708Z",
+    "fetched_at": "2026-02-27T12:38:47.930Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -52568,7 +53160,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:55.592Z",
+    "fetched_at": "2026-02-27T12:38:50.579Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -52620,7 +53212,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:06:57.757Z",
+    "fetched_at": "2026-02-27T12:38:53.447Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -52672,7 +53264,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:07:23.516Z",
+    "fetched_at": "2026-02-27T12:39:23.575Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -53703,7 +54295,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:08:27.129Z",
+    "fetched_at": "2026-03-02T05:17:19.213Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -56155,7 +56747,7 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:09:02.493Z",
+    "fetched_at": "2026-03-02T05:17:52.587Z",
     "commits": [
       {
         "sha": "7f06f02fc8727f2293989332b98a4c82c7231827",
@@ -57363,8 +57955,183 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:14:45.379Z",
+    "fetched_at": "2026-03-02T05:22:27.765Z",
     "commits": [
+      {
+        "sha": "e811c48f517bced3704ca480c88f5fb6031eb7b0",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T18:35:22Z",
+        "message": "Merge pull request #255 from mindfiredigital/dev"
+      },
+      {
+        "sha": "d34e5a2ba0dbdd4864712c5d043a49125ef260c1",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T18:30:57Z",
+        "message": "fix(angular): sync library version to 1.2.2"
+      },
+      {
+        "sha": "5d2efd01b55f5f39b5eee2964fb1de0dd53211a8",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T18:23:24Z",
+        "message": "Merge pull request #254 from mindfiredigital/dev"
+      },
+      {
+        "sha": "777eaeb192cc4e26879be437dc17b6bfdbdfe79b",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T18:04:07Z",
+        "message": "fix(angular): updated angular exported path"
+      },
+      {
+        "sha": "1b524f1f4240802353574c1ac65cc905adef0103",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T13:08:36Z",
+        "message": "Merge pull request #253 from mindfiredigital/dev"
+      },
+      {
+        "sha": "5b5f80d508d80c6a1d100b58949bdb04164a8156",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T13:06:24Z",
+        "message": "fix(core): updated lock file"
+      },
+      {
+        "sha": "8b3352223c60296917ab392abb01ec396f4de084",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T13:02:45Z",
+        "message": "Merge pull request #252 from mindfiredigital/dev"
+      },
+      {
+        "sha": "ca62ca458373ddc29cfa7475e6e6c8a1dd2267ce",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T12:57:58Z",
+        "message": "fix(angular): updated version in angular package"
+      },
+      {
+        "sha": "4dcd972723dc4ef547075f9f0dd047e84639f467",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T12:55:16Z",
+        "message": "fix(angular): updated version in angular package"
+      },
+      {
+        "sha": "0a08f8103007a965a521afe757acd306a25a9a08",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T12:46:29Z",
+        "message": "feat(web-component): revert updated react package version\""
+      },
+      {
+        "sha": "d65b4f2f79d3dd110c7a4ed9298cad49071e68e8",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T12:44:03Z",
+        "message": "Merge pull request #250 from mindfiredigital/dev"
+      },
+      {
+        "sha": "0ab224f34f716d5d6cd64259257611ef422e8a7d",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T12:42:38Z",
+        "message": "Merge pull request #248 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "5e1e5c4901ef896244333a02cb970b2dbd958917",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-27T12:36:30Z",
+        "message": "fix(web-component): update import paths and package json"
+      },
+      {
+        "sha": "eca71babf1601d8d4f79e8738600b83ee005e813",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-27T12:31:14Z",
+        "message": "fix(web-component): update import paths and package json"
+      },
+      {
+        "sha": "e417773899b4d9cad150fe754ff01e0399c7f211",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T11:58:22Z",
+        "message": "Merge pull request #247 from mindfiredigital/dev"
+      },
+      {
+        "sha": "601700821d96d6c18837bebe52d20f5514d5b271",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T11:57:44Z",
+        "message": "Merge pull request #246 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "ee39556e8b0664fe67211569268714095851c477",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-27T11:31:34Z",
+        "message": "fix(web-component): update package json to reorder exports"
+      },
+      {
+        "sha": "d123df98f3e2033b899cff24bbae27e523a964ef",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T10:29:22Z",
+        "message": "Merge pull request #245 from mindfiredigital/dev"
+      },
+      {
+        "sha": "98d8a1411174109103d4f26ef6e8949bf4b04ff8",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T10:20:37Z",
+        "message": "fix(angular): base package version updated in angular package"
+      },
+      {
+        "sha": "bfe34b668d725f199eaeadef092dadcf946f31a2",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-27T10:13:15Z",
+        "message": "Merge pull request #244 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "c52783ae497165849ee545a35c953060ad8764ef",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-26T12:05:39Z",
+        "message": "fix(web-component): update tsup.config to include text igniter package and update readme file"
+      },
+      {
+        "sha": "f9eb4bbfa5daf3134c2bda43ddf38741b03fc219",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-26T12:03:30Z",
+        "message": "fix(web-component): update tsup.config to include text igniter package and update readme file"
+      },
+      {
+        "sha": "522e65c062fc9a417782c8e8147aa03db258a0cb",
+        "author_login": "saradab-mindfire",
+        "author_name": "saradab-mindfire",
+        "date": "2026-02-26T07:04:17Z",
+        "message": "Merge pull request #243 from jyotiprakashmfsi/jyoti-fix-core"
+      },
+      {
+        "sha": "4eb870e503160f751daa54759ff8f04d1370bdf1",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-25T12:38:39Z",
+        "message": "Merge branch 'dev' into jyoti-fix-core"
+      },
+      {
+        "sha": "bd145f68fd556125e2b262927ff1151d7c4503bf",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-25T12:36:44Z",
+        "message": "Merge branch 'dev' of https://github.com/jyotiprakashmfsi/TextIgniterJS into jyoti-fix-core"
+      },
       {
         "sha": "0752582f6cf3dc6aaa691dba577539f244421960",
         "author_login": "saradab-mindfire",
@@ -57413,6 +58180,13 @@
         "author_name": "saradab-mindfire",
         "date": "2026-02-25T10:50:15Z",
         "message": "feat(angular): updated readme and example for angular package"
+      },
+      {
+        "sha": "3de0f8688860bb1d6648b98348615b1fc5c6e9bd",
+        "author_login": "jyotiprakashmfsi",
+        "author_name": "jyotiprakashmfsi",
+        "date": "2026-02-25T09:54:39Z",
+        "message": "fix(core): fix issue of styles insonsistency in multiple lines"
       },
       {
         "sha": "9001c8877b467b5f0187b282a5df7339253b0a66",
@@ -60237,6 +61011,204 @@
       }
     ],
     "merged_prs": [
+      {
+        "number": 255,
+        "author": "saradab-mindfire",
+        "title": "fix(angular): sync library version to 1.2.2",
+        "merged_at": "2026-02-27T18:35:22Z",
+        "created_at": "2026-02-27T18:35:05Z",
+        "base_ref": "main",
+        "merge_commit_sha": "e811c48f517bced3704ca480c88f5fb6031eb7b0",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 254,
+        "author": "saradab-mindfire",
+        "title": "fix(angular): updated angular exported path",
+        "merged_at": "2026-02-27T18:23:24Z",
+        "created_at": "2026-02-27T18:23:10Z",
+        "base_ref": "main",
+        "merge_commit_sha": "5d2efd01b55f5f39b5eee2964fb1de0dd53211a8",
+        "changed_files": 4,
+        "additions": 49,
+        "deletions": 27,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 253,
+        "author": "saradab-mindfire",
+        "title": "fix(core): updated lock file",
+        "merged_at": "2026-02-27T13:08:36Z",
+        "created_at": "2026-02-27T13:07:52Z",
+        "base_ref": "main",
+        "merge_commit_sha": "1b524f1f4240802353574c1ac65cc905adef0103",
+        "changed_files": 1,
+        "additions": 9683,
+        "deletions": 10282,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 252,
+        "author": "saradab-mindfire",
+        "title": "fix(angular): updated version in angular package",
+        "merged_at": "2026-02-27T13:02:45Z",
+        "created_at": "2026-02-27T13:00:11Z",
+        "base_ref": "main",
+        "merge_commit_sha": "8b3352223c60296917ab392abb01ec396f4de084",
+        "changed_files": 6,
+        "additions": 7210,
+        "deletions": 2541,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 250,
+        "author": "saradab-mindfire",
+        "title": "Dev",
+        "merged_at": "2026-02-27T12:44:03Z",
+        "created_at": "2026-02-27T12:43:54Z",
+        "base_ref": "main",
+        "merge_commit_sha": "d65b4f2f79d3dd110c7a4ed9298cad49071e68e8",
+        "changed_files": 7,
+        "additions": 11027,
+        "deletions": 13552,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 248,
+        "author": "jyotiprakashmfsi",
+        "title": "fix(web-component): update import paths and package json",
+        "merged_at": "2026-02-27T12:42:38Z",
+        "created_at": "2026-02-27T12:32:31Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "0ab224f34f716d5d6cd64259257611ef422e8a7d",
+        "changed_files": 7,
+        "additions": 11027,
+        "deletions": 13552,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 247,
+        "author": "saradab-mindfire",
+        "title": "Dev",
+        "merged_at": "2026-02-27T11:58:22Z",
+        "created_at": "2026-02-27T11:58:03Z",
+        "base_ref": "main",
+        "merge_commit_sha": "e417773899b4d9cad150fe754ff01e0399c7f211",
+        "changed_files": 1,
+        "additions": 2,
+        "deletions": 2,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 246,
+        "author": "jyotiprakashmfsi",
+        "title": "fix(web-component): update package json to reorder exports",
+        "merged_at": "2026-02-27T11:57:44Z",
+        "created_at": "2026-02-27T11:34:10Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "601700821d96d6c18837bebe52d20f5514d5b271",
+        "changed_files": 1,
+        "additions": 2,
+        "deletions": 2,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 245,
+        "author": "saradab-mindfire",
+        "title": "fix(angular): base package version updated in angular package",
+        "merged_at": "2026-02-27T10:29:22Z",
+        "created_at": "2026-02-27T10:23:23Z",
+        "base_ref": "main",
+        "merge_commit_sha": "d123df98f3e2033b899cff24bbae27e523a964ef",
+        "changed_files": 15,
+        "additions": 20209,
+        "deletions": 10160,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 244,
+        "author": "jyotiprakashmfsi",
+        "title": "fix: update readme and tsup file in web-components package.",
+        "merged_at": "2026-02-27T10:13:15Z",
+        "created_at": "2026-02-26T12:06:30Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "bfe34b668d725f199eaeadef092dadcf946f31a2",
+        "changed_files": 12,
+        "additions": 8008,
+        "deletions": 31,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 243,
+        "author": "jyotiprakashmfsi",
+        "title": "fix(core): fix issue of styles insonsistency in multiple lines",
+        "merged_at": "2026-02-26T07:04:17Z",
+        "created_at": "2026-02-25T12:33:42Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "522e65c062fc9a417782c8e8147aa03db258a0cb",
+        "changed_files": 1,
+        "additions": 39,
+        "deletions": 12,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
       {
         "number": 242,
         "author": "saradab-mindfire",
@@ -63489,12 +64461,661 @@
       ]
     },
     "stats": {
-      "total_commits": 410,
-      "total_merged_prs": 151,
+      "total_commits": 436,
+      "total_merged_prs": 162,
       "total_bugs": 0,
       "total_enhancements": 2,
       "total_documentation": 0,
       "total_others": 59
+    }
+  },
+  "34": {
+    "project_id": 34,
+    "project_title": "ADAC (Architecture Diagram as Code)",
+    "repo_name": "adac-tools",
+    "default_branch": "main",
+    "fetched_at": "2026-03-02T05:22:51.419Z",
+    "commits": [
+      {
+        "sha": "37e01ffc153e501ee4beafbd563cc7359f2261c1",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:50:32Z",
+        "message": "feat: Merge pull request #33 from mindfiredigital/dev"
+      },
+      {
+        "sha": "9839e769ae411de81adf88de494c5379b7cce7d9",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:48:52Z",
+        "message": "feat: Merge pull request #30 from mindfiredigital/fix/test-case-coverage"
+      },
+      {
+        "sha": "6ae060118ce41011d6ca5398d82d85bffaa75199",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:47:51Z",
+        "message": "feat: Merge pull request #32 from mindfiredigital/dev"
+      },
+      {
+        "sha": "3fe2f8d0976209bdf7f8a722b79e1349e0d20bb7",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T05:46:00Z",
+        "message": "feat: merge pull request #31 from mfsiayanc-debug/feature/adac-layout-core"
+      },
+      {
+        "sha": "e8d0130f01fd730bd09088411c60276e59a1dfce",
+        "author_login": null,
+        "author_name": "ayan",
+        "date": "2026-02-26T10:35:04Z",
+        "message": "patch: emojis removed from comments"
+      },
+      {
+        "sha": "0e9d1e32c1f9059e305f5384c7e1dfffeaf7a347",
+        "author_login": null,
+        "author_name": "ayan",
+        "date": "2026-02-26T08:08:46Z",
+        "message": "feat(layout-core): implement adac layout core package"
+      },
+      {
+        "sha": "4332c0c272ff108c44650a619317a667ead16f72",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-26T05:03:06Z",
+        "message": "chore: improved test case coverage and eslint fixes"
+      },
+      {
+        "sha": "fbefc1e92b6e2a1228fdf869ae408be1b6fd3c69",
+        "author_login": "uzerjamal-mfsi",
+        "author_name": "uzerjamal-mfsi",
+        "date": "2026-02-25T17:49:54Z",
+        "message": "Merge pull request #29 from mindfiredigital/feature/adac-core"
+      },
+      {
+        "sha": "e90bab7dbe05a0e1bf2bd8ea80ad9e972e75a56b",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-24T15:09:38Z",
+        "message": "feat(adac-core): refactor pnpm monorepo structure with core, cli, diagram, layout-elk, and web packages, removing old scaffolding and lock files."
+      },
+      {
+        "sha": "88c2abf2c9305c0d939f3182c1046c6db3634398",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T07:38:59Z",
+        "message": "feat: Merge pull request #27 from mindfiredigital/dev"
+      },
+      {
+        "sha": "e2cbbc8e1b60de5e71b577ce96d2af394e69e56d",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-24T07:35:57Z",
+        "message": "feat(adac-parser): Merge pull request #28 from mindfiredigital/feature/doc-update"
+      },
+      {
+        "sha": "9e98dff9b813459901f53b4e18c65be6f746fb6a",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-24T05:16:08Z",
+        "message": "feat: Establish initial ADAC project structure, core schema, and YAML parser with documentation and tests."
+      },
+      {
+        "sha": "e562e2c9ed034bf5177dc45e9e98b730d99cfc79",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-21T14:02:12Z",
+        "message": "feat(adac-parser): Merge pull request #26 from mindfiredigital/feature/adac-parser"
+      },
+      {
+        "sha": "5cadd41824dee027de7fac5a1eeb3d55a66ab1de",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-20T05:16:55Z",
+        "message": "feat(adac-parser): implement ADAC parser package with schema interfaces and validation logic."
+      },
+      {
+        "sha": "d1977f794ed3b4c133edf261e6bbf580708acc8e",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-19T10:26:49Z",
+        "message": "feat(adac-schema): Merge pull request #25 from mindfiredigital/feature/schema-validator"
+      },
+      {
+        "sha": "e496df5cce8b5d38b2a4fe4bbf51bc542d413ed7",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-19T04:38:22Z",
+        "message": "feat: Establish monorepo structure and introduce ADAC CLI for diagram generation and schema validation."
+      },
+      {
+        "sha": "b41916aaf93b551fea4ee48580bbc8cd50ee6c60",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-18T07:12:03Z",
+        "message": "feat(adac-cli): Merge pull request #10 from mindfiredigital/feature/doc-update"
+      },
+      {
+        "sha": "39992309c1c96997e4da8bc19c2db24d82b06d21",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-13T09:41:37Z",
+        "message": "feat: Initialize new web package with React, Vite, and workspace dependencies."
+      },
+      {
+        "sha": "cc34ea3f2207690a869d3e648ea00c4ee5f97a2f",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-13T08:36:46Z",
+        "message": "feat: Initialize core packages including schema, CLI, diagram, parser, layout, and AWS icons."
+      },
+      {
+        "sha": "29bed67e3a911f7a08157a9ebc6cec36ce6f149a",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-11T10:31:50Z",
+        "message": "feat: added-unit-test-for-adac-modules"
+      },
+      {
+        "sha": "a1fc7d7fb449318d8159781aa866f892a04fed47",
+        "author_login": "lakinmindfire",
+        "author_name": "Lakin Mohapatra",
+        "date": "2026-02-11T07:39:34Z",
+        "message": "Merge pull request #8 from mindfiredigital/feature/adac-modules"
+      },
+      {
+        "sha": "8f9e7cb87353b5ed9caa3f13cc082e2d3ddf29a6",
+        "author_login": "101yogeshsharma",
+        "author_name": "101yogeshsharma",
+        "date": "2026-02-10T12:02:03Z",
+        "message": "feat: segrated adac into seprate modules and fixed dependencies"
+      },
+      {
+        "sha": "4f44b7c238f6e2283c90a75ce4375283365fcc2d",
+        "author_login": "lakinmindfire",
+        "author_name": "Lakin Mohapatra",
+        "date": "2026-02-04T11:38:51Z",
+        "message": "Initial commit"
+      }
+    ],
+    "merged_prs": [
+      {
+        "number": 33,
+        "author": "anandmindfire",
+        "title": "Merge from Dev",
+        "merged_at": "2026-02-27T05:50:32Z",
+        "created_at": "2026-02-27T05:50:15Z",
+        "base_ref": "main",
+        "merge_commit_sha": "37e01ffc153e501ee4beafbd563cc7359f2261c1",
+        "changed_files": 15,
+        "additions": 927,
+        "deletions": 50,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 30,
+        "author": "yogeshsmindfire",
+        "title": "chore(adac/diagram): improved test case coverage and eslint fixes",
+        "merged_at": "2026-02-27T05:48:52Z",
+        "created_at": "2026-02-26T05:03:33Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "9839e769ae411de81adf88de494c5379b7cce7d9",
+        "changed_files": 15,
+        "additions": 927,
+        "deletions": 50,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-27T05:46:56Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 32,
+        "author": "anandmindfire",
+        "title": "Merge from Dev",
+        "merged_at": "2026-02-27T05:47:52Z",
+        "created_at": "2026-02-27T05:47:37Z",
+        "base_ref": "main",
+        "merge_commit_sha": "6ae060118ce41011d6ca5398d82d85bffaa75199",
+        "changed_files": 131,
+        "additions": 31895,
+        "deletions": 11244,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 31,
+        "author": "mfsiayanc-debug",
+        "title": "Feature layout-core: Implement adac layout core package",
+        "merged_at": "2026-02-27T05:46:00Z",
+        "created_at": "2026-02-26T09:25:54Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "3fe2f8d0976209bdf7f8a722b79e1349e0d20bb7",
+        "changed_files": 21,
+        "additions": 528,
+        "deletions": 9,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 1,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "COMMENTED",
+            "submitted_at": "2026-02-26T09:29:57Z"
+          }
+        ],
+        "review_comments": [
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-26T09:29:50Z"
+          }
+        ]
+      },
+      {
+        "number": 29,
+        "author": "yogeshsmindfire",
+        "title": "feat(adac-core): refactor pnpm monorepo structure with core, cli, diagram, layout-elk, and web packages, removing old scaffolding and lock files.",
+        "merged_at": "2026-02-25T17:49:54Z",
+        "created_at": "2026-02-24T14:51:35Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "fbefc1e92b6e2a1228fdf869ae408be1b6fd3c69",
+        "changed_files": 112,
+        "additions": 31369,
+        "deletions": 11237,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 27,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-02-24T07:38:59Z",
+        "created_at": "2026-02-24T04:30:54Z",
+        "base_ref": "main",
+        "merge_commit_sha": "88c2abf2c9305c0d939f3182c1046c6db3634398",
+        "changed_files": 48,
+        "additions": 1881,
+        "deletions": 1292,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 28,
+        "author": "yogeshsmindfire",
+        "title": "feat(adac-parser): Establish initial ADAC project structure, core schema, and YAML parser with documentation and tests.",
+        "merged_at": "2026-02-24T07:35:57Z",
+        "created_at": "2026-02-24T05:18:01Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "e2cbbc8e1b60de5e71b577ce96d2af394e69e56d",
+        "changed_files": 16,
+        "additions": 513,
+        "deletions": 202,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-24T07:35:39Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 10,
+        "author": "yogeshsmindfire",
+        "title": "feat(adac-cli): Initialize core packages including schema, CLI, diagram, parser, layout, and AWS icons",
+        "merged_at": "2026-02-18T07:12:03Z",
+        "created_at": "2026-02-13T08:37:07Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "b41916aaf93b551fea4ee48580bbc8cd50ee6c60",
+        "changed_files": 122,
+        "additions": 3270,
+        "deletions": 42564,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 26,
+        "author": "yogeshsmindfire",
+        "title": "feat(adac-parser): implement ADAC parser package with schema interfaces and validation logic.",
+        "merged_at": "2026-02-21T14:02:13Z",
+        "created_at": "2026-02-20T05:20:31Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "e562e2c9ed034bf5177dc45e9e98b730d99cfc79",
+        "changed_files": 5,
+        "additions": 244,
+        "deletions": 87,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-21T14:01:57Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 25,
+        "author": "yogeshsmindfire",
+        "title": "feat(adac-schema): added package for schema validation.",
+        "merged_at": "2026-02-19T10:26:49Z",
+        "created_at": "2026-02-19T04:41:23Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "d1977f794ed3b4c133edf261e6bbf580708acc8e",
+        "changed_files": 10,
+        "additions": 957,
+        "deletions": 401,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-19T10:26:26Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 9,
+        "author": "yogeshsmindfire",
+        "title": "feat: added-unit-test-for-adac-modules",
+        "merged_at": "2026-02-13T05:53:28Z",
+        "created_at": "2026-02-11T10:32:31Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "29bed67e3a911f7a08157a9ebc6cec36ce6f149a",
+        "changed_files": 120,
+        "additions": 42383,
+        "deletions": 3524,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 8,
+        "author": "yogeshsmindfire",
+        "title": "feat: segrated adac into seprate modules and fixed dependencies",
+        "merged_at": "2026-02-11T07:39:34Z",
+        "created_at": "2026-02-10T14:37:44Z",
+        "base_ref": "main",
+        "merge_commit_sha": "a1fc7d7fb449318d8159781aa866f892a04fed47",
+        "changed_files": 4135,
+        "additions": 54379,
+        "deletions": 1,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "lakinmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-02-11T07:39:27Z"
+          }
+        ],
+        "review_comments": []
+      }
+    ],
+    "issues": {
+      "bugs": [],
+      "enhancements": [],
+      "documentation": [
+        {
+          "number": 7,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - Complete Folder Structure",
+          "created_at": "2026-02-05T07:53:10Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 6,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - Local Package Testing Guide",
+          "created_at": "2026-02-05T07:47:02Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 4,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - Package Exports & Imports Reference",
+          "created_at": "2026-02-05T07:35:50Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 3,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - Phased Development Plan",
+          "created_at": "2026-02-05T07:27:26Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "lakinmindfire",
+              "created_at": "2026-02-05T07:30:34Z"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - Software Design Specification (SDS) v2.0",
+          "created_at": "2026-02-05T07:22:16Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 1,
+          "author": "lakinmindfire",
+          "title": "SDS doc",
+          "created_at": "2026-02-04T11:40:04Z",
+          "comments": 0,
+          "comment_authors": []
+        }
+      ],
+      "others": [
+        {
+          "number": 24,
+          "author": "yogeshsmindfire",
+          "title": "[adac-vscode] Feature: VS Code Extension",
+          "created_at": "2026-02-17T02:44:43Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 23,
+          "author": "yogeshsmindfire",
+          "title": "[adac-export-k8s] Feature: Kubernetes Manifest Generator",
+          "created_at": "2026-02-17T02:44:42Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 22,
+          "author": "yogeshsmindfire",
+          "title": "[adac-export-cloudformation] Feature: CloudFormation Template Generator",
+          "created_at": "2026-02-17T02:44:40Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 21,
+          "author": "yogeshsmindfire",
+          "title": "[adac-export-terraform] Feature: Terraform HCL Generator",
+          "created_at": "2026-02-17T02:44:39Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 20,
+          "author": "yogeshsmindfire",
+          "title": "[adac-web-editor] Feature: Visual Architecture Editor",
+          "created_at": "2026-02-17T02:44:37Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 19,
+          "author": "yogeshsmindfire",
+          "title": "[adac-web-server] Feature: Backend API for Web Editor",
+          "created_at": "2026-02-17T02:44:36Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 18,
+          "author": "yogeshsmindfire",
+          "title": "[adac-compliance] Feature: Compliance Rules Engine",
+          "created_at": "2026-02-17T02:44:34Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 17,
+          "author": "yogeshsmindfire",
+          "title": "[adac-cost-calculator] Feature: Cloud Cost Estimation",
+          "created_at": "2026-02-17T02:44:32Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 16,
+          "author": "yogeshsmindfire",
+          "title": "[adac-doc] Feature: Documentation Generator",
+          "created_at": "2026-02-17T02:44:31Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 15,
+          "author": "yogeshsmindfire",
+          "title": "[adac-diagram] Feature: SVG/PNG Renderer",
+          "created_at": "2026-02-17T02:44:29Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 14,
+          "author": "yogeshsmindfire",
+          "title": "[adac-layout-engine] Feature: Core Graph Layout Algorithms",
+          "created_at": "2026-02-17T02:44:27Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 13,
+          "author": "yogeshsmindfire",
+          "title": "[adac-cli] Feature: Main Monorepo CLI Orchestrator",
+          "created_at": "2026-02-17T02:44:26Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 12,
+          "author": "yogeshsmindfire",
+          "title": "[adac-validator] Feature: CLI & Library for Validation",
+          "created_at": "2026-02-17T02:44:24Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 11,
+          "author": "yogeshsmindfire",
+          "title": "[adac-core-schema] Feature: Core JSON Schema & Type Definitions",
+          "created_at": "2026-02-17T02:44:23Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 5,
+          "author": "lakinmindfire",
+          "title": "ADAC Tools - GitHub Issues Template",
+          "created_at": "2026-02-05T07:42:57Z",
+          "comments": 0,
+          "comment_authors": []
+        }
+      ]
+    },
+    "stats": {
+      "total_commits": 23,
+      "total_merged_prs": 12,
+      "total_bugs": 0,
+      "total_enhancements": 0,
+      "total_documentation": 6,
+      "total_others": 15
+    }
+  },
+  "35": {
+    "project_id": 35,
+    "project_title": "Agentic Web Starter",
+    "repo_name": "Agentic-Web-Starter",
+    "default_branch": "main",
+    "fetched_at": "2026-03-02T05:22:53.151Z",
+    "commits": [
+      {
+        "sha": "e2b558a0b56bb8880abf7b5e97576998f6fd64ea",
+        "author_login": "lakinmindfire",
+        "author_name": "Lakin Mohapatra",
+        "date": "2026-02-03T11:55:04Z",
+        "message": "Initial commit"
+      }
+    ],
+    "merged_prs": [],
+    "issues": {
+      "bugs": [],
+      "enhancements": [],
+      "documentation": [],
+      "others": []
+    },
+    "stats": {
+      "total_commits": 1,
+      "total_merged_prs": 0,
+      "total_bugs": 0,
+      "total_enhancements": 0,
+      "total_documentation": 0,
+      "total_others": 0
     }
   },
   "special-website": {
@@ -63502,7 +65123,7 @@
     "project_title": "Mindfire Foss Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-02-27T08:21:46.356Z",
+    "fetched_at": "2026-03-02T05:28:18.308Z",
     "commits": [
       {
         "sha": "b94f0f5fc20f0e3b703f5749a8cff72303add3f6",

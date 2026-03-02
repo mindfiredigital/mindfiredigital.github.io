@@ -161,13 +161,26 @@ async function updateProjects() {
     console.log("Current projects updated successfully.");
 
     // Process and write data for upcoming projects
-    const upcomingProjects = upcomingProjectsData.data.foss_projects.map(
-      (entry) => ({
-        ...entry,
-        id: parseInt(entry.id),
-        shortDescription: entry.short_description,
-        githubUrl: entry.github_repository_link,
-        documentationUrl: entry.documentation_link,
+    const upcomingProjects = await Promise.all(
+      upcomingProjectsData.data.foss_projects.map(async (entry) => {
+        const repoUrl = entry.github_repository_link;
+        const [owner, repo] =
+          repoUrl && repoUrl !== "NA"
+            ? repoUrl.replace("https://github.com/", "").split("/")
+            : [null, null];
+
+        const repoData = await getRepoData(owner, repo);
+
+        return {
+          ...entry,
+          id: parseInt(entry.id),
+          shortDescription: entry.short_description,
+          githubUrl: entry.github_repository_link,
+          documentationUrl: entry.documentation_link,
+          stars: repoData ? repoData.stargazers_count : 0,
+          tags: repoData ? repoData.topics.slice(0, 5) : [],
+          lastPushedAt: repoData ? repoData.pushed_at : entry.date_created,
+        };
       })
     );
     writeJsonToFile(`${pathForJson}/upcomingProjects.json`, upcomingProjects);
