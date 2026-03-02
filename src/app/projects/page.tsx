@@ -13,7 +13,14 @@ import projectData from "./assets/projects.json";
 import upcomingProjectData from "./assets/upcomingProjects.json";
 import contributorsData from "./assets/contributors.json";
 import contributorMapping from "./assets/contributor-mapping.json";
-import { Project, Filters, ContributorMap } from "../../types";
+import leaderboardData from "./assets/leaderboard.json";
+import {
+  Project,
+  Filters,
+  ContributorMap,
+  ContributorProject,
+  TopScorer,
+} from "../../types";
 
 export default function ProjectsPage() {
   const [filters, setFilters] = useState<Filters>({
@@ -28,6 +35,19 @@ export default function ProjectsPage() {
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   const typedMapping = contributorMapping as ContributorMap;
+
+  // Enrich contributors with total_score from leaderboard.json, sorted highest first
+  const enrichedContributors = useMemo((): ContributorProject[] => {
+    const topScorers = leaderboardData.leaderboard as unknown as TopScorer[];
+    return (contributorsData as unknown as ContributorProject[])
+      .map((contributor) => {
+        const match = topScorers.find(
+          (s) => s.username.toLowerCase() === contributor.login.toLowerCase()
+        );
+        return { ...contributor, total_score: match?.total_score ?? 0 };
+      })
+      .sort((a, b) => (b.total_score ?? 0) - (a.total_score ?? 0));
+  }, []);
 
   // Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
@@ -101,21 +121,17 @@ export default function ProjectsPage() {
         if (!hasTech) return false;
       }
 
-      // ✅ FIXED: Star range filter — parse the numeric threshold from the "10+", "50+" string
       if (filters.starRange !== "all") {
         const minStars = parseInt(filters.starRange.replace("+", ""), 10);
         const stars = project.stars || 0;
         if (stars < minStars) return false;
       }
 
-      // ✅ FIXED: Contributor range filter — was never applied before, now correctly
-      // derives contributor count per project from the contributor-mapping.json
       if (filters.contributorRange !== "all") {
         const minContributors = parseInt(
           filters.contributorRange.replace("+", ""),
           10
         );
-        // Count how many contributors in the mapping have worked on this project
         const contributorCount = Object.values(typedMapping).filter(
           (projectIds) => projectIds.includes(project.id)
         ).length;
@@ -230,7 +246,6 @@ export default function ProjectsPage() {
     }
   };
 
-  // Handle scroll on page load if there's a hash in the URL
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
@@ -287,7 +302,7 @@ export default function ProjectsPage() {
               <FilterSidebar
                 allTags={allTags}
                 allTechnologies={allTechnologies}
-                contributors={contributorsData}
+                contributors={enrichedContributors}
                 filters={filters}
                 onFilterChange={handleFilterChange}
                 onReset={handleResetFilters}

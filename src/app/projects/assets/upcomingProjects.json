@@ -11,7 +11,10 @@
     "status": "draft",
     "shortDescription": "ADAC is a proof-of-concept tool and specification that enables defining, versioning, and visualizing cloud infrastructure using machine-readable code. It treats architecture diagrams as a single source of truth, helping teams keep infrastructure documentation accurate, auditable, and aligned with real system design while showcasing innovation in Full-Stack engineering and DevOps tooling.",
     "githubUrl": "https://github.com/mindfiredigital/adac-tools",
-    "documentationUrl": "https://github.com/mindfiredigital/adac-tools/blob/main/README.md"
+    "documentationUrl": "https://github.com/mindfiredigital/adac-tools/blob/main/README.md",
+    "stars": 15,
+    "tags": [],
+    "lastPushedAt": "2026-02-27T05:50:32Z"
   },
   {
     "id": 35,
@@ -25,6 +28,9 @@
     "status": "draft",
     "shortDescription": "Agentic Web Starter is a FastAPI-based backend template for building agentic and RAG-driven applications. It provides ready-to-use ingestion, retrieval, and chat APIs with integrated vector search (Qdrant) and persistent session memory (Redis), enabling teams to quickly develop, extend, and deploy production-oriented agentic workflows without rebuilding foundational backend infrastructure.",
     "githubUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter",
-    "documentationUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter/blob/main/LICENSE"
+    "documentationUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter/blob/main/LICENSE",
+    "stars": 14,
+    "tags": ["agent", "ai", "ai-agents", "aiagent", "fastapi"],
+    "lastPushedAt": "2026-02-17T10:36:56Z"
   }
 ]

@@ -14,7 +14,7 @@ import { Contributor, ContributorFilters, TopScorer } from "@/types";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
-  const topScorers = leaderboardData.leaderboard as TopScorer[];
+  const topScorers = leaderboardData.leaderboard as unknown as TopScorer[];
 
   const [filters, setFilters] = useState<ContributorFilters>({
     sortBy: "total_score",
