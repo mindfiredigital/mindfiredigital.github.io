@@ -306,7 +306,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                           {contributor.login}
                         </p>
                         <p className='text-[10px] text-gray-500'>
-                          {contributor.contributions} contributions
+                          Score: {contributor.total_score}
                         </p>
                       </div>
                     </label>
