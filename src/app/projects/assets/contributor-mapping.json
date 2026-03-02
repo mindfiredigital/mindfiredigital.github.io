@@ -6,7 +6,7 @@
   "biswalom22": [2, 18, 22],
   "Harshita-mindfire": [2],
   "lakinmindfire": [
-    2, 4, 5, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 30, 31
+    2, 4, 5, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 30, 31, 34, 35
   ],
   "xavier711": [2],
   "zhaobingwang": [2],
@@ -36,12 +36,12 @@
   "deepakyadav-01": [16, 23, 33],
   "Shubh2694": [16],
   "geekychandan": [16],
-  "anandmindfire": [16, 18, 19, 20, 22, 23, 31, 32],
+  "anandmindfire": [16, 18, 19, 20, 22, 23, 31, 32, 34],
   "abdulla-mindfire": [17],
-  "ParasMindfire": [18, 31],
+  "ParasMindfire": [18, 31, 33],
   "SsagarikaR": [18, 19],
   "sanghamitradash021": [18, 20, 23],
-  "jyotiprakashmfsi": [18, 23],
+  "jyotiprakashmfsi": [18, 23, 33],
   "vcs-anandkr": [18, 19, 20],
   "ayusmanmindfire": [19, 27],
   "github-actions[bot]": [19, 20, 22, 23, 24, 31, 32, 33],
@@ -50,7 +50,7 @@
   "akashdeep-singh-multani": [20],
   "patisubhakanta": [20],
   "mfsisudhanshuk": [20, 23],
-  "MohdAasim": [20],
+  "MohdAasim": [20, 33],
   "JKAryan2003": [20],
   "Abhiadi12": [20],
   "sumanb-mindfire": [21],
@@ -77,7 +77,11 @@
   "SiriMuramulla268": [30],
   "alokrajmindfire": [30],
   "manojkmfsi": [32],
-  "vickysmf": [33],
   "saradab-mindfire": [33],
-  "jagdish-mindfire": [33]
+  "vickysmf": [33],
+  "jagdish-mindfire": [33],
+  "rohitrg96": [33],
+  "ParthDhemeliya": [33],
+  "101yogeshsharma": [34],
+  "uzerjamal-mfsi": [34]
 }

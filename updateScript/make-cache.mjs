@@ -15,6 +15,7 @@ const CONFIG = {
   CONTRIBUTOR_MAPPING_FILE:
     "./src/app/projects/assets/contributor-mapping.json",
   CACHE_FILE: "./src/app/projects/assets/leaderboard-cache.json",
+  UPCOMING_PROJECTS_FILE: "./src/app/projects/assets/upcomingProjects.json",
 
   // Fix 4: Progress checkpoint file
   PROGRESS_FILE: "./src/app/projects/assets/leaderboard-progress.json",
@@ -690,6 +691,8 @@ async function cacheLeaderboardData() {
 
   const contributors = readJsonFile(CONFIG.CONTRIBUTORS_FILE) || [];
   const projects = readJsonFile(CONFIG.PROJECTS_FILE) || [];
+  const upcomingProjects = readJsonFile(CONFIG.UPCOMING_PROJECTS_FILE) || [];
+  const allProjects = [...projects, ...upcomingProjects];
 
   if (!contributors.length) {
     console.error("❌ No contributors found!");
@@ -706,10 +709,10 @@ async function cacheLeaderboardData() {
   const allProjectsData = { ...progress.partialCache };
   const skippedCount = Object.keys(progress.completed).length;
 
-  const totalProjects = projects.length + CONFIG.SPECIAL_PROJECTS.length;
+  const totalProjects = allProjects.length + CONFIG.SPECIAL_PROJECTS.length;
   let processedCount = 0;
 
-  for (const project of projects) {
+  for (const project of allProjects) {
     processedCount++;
 
     const repoMatch = (

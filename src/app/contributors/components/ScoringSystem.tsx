@@ -36,7 +36,7 @@ const ScoringSystem = () => {
 
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[800px] opacity-100 mt-3" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[900px] opacity-100 mt-3" : "max-h-0 opacity-0"
         }`}
       >
         <div className='bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-6'>
@@ -103,12 +103,6 @@ const ScoringSystem = () => {
                 Quality Score
               </h4>
               <div className='space-y-2 text-xs text-emerald-900/80 font-mono'>
-                {/* <div className='flex items-start gap-1.5'>
-                  <span className='text-emerald-400 mt-0.5'>+</span>
-                  <span>
-                    Impact bonus <strong>0–10</strong>
-                  </span>
-                </div> */}
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
@@ -162,6 +156,12 @@ const ScoringSystem = () => {
                   <span className='text-violet-400 mt-0.5'></span>
                   <span className='text-violet-400'>(cap: 20/month)</span>
                 </div>
+                <div className='flex items-start gap-1.5 mt-1 pt-1.5'>
+                  <span className='text-violet-400 mt-0.5'>+</span>
+                  <span>
+                    Projects worked on × <strong>10</strong>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -211,18 +211,6 @@ const ScoringSystem = () => {
               ))}
             </div>
           </div>
-
-          {/* <div className='bg-gray-50 border border-gray-200 rounded-xl p-3.5 flex items-start gap-3'>
-            <Info className='w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5' />
-            <p className='text-xs text-gray-600'>
-              <strong className='text-gray-800'>Impact bonus</strong> ranges
-              from <code className='bg-gray-200 rounded px-1'>0</code> (none) →{" "}
-              <code className='bg-gray-200 rounded px-1'>3</code> (low) →{" "}
-              <code className='bg-gray-200 rounded px-1'>7</code> (high) →{" "}
-              <code className='bg-gray-200 rounded px-1'>10</code> (critical),
-              awarded per PR based on overall impact to the project.
-            </p>
-          </div> */}
         </div>
       </div>
     </div>

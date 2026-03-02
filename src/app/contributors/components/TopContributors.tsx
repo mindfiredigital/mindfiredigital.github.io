@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Contributor, TopScorer } from "@/types";
@@ -48,6 +48,16 @@ function buildGroups(
       stat: `Active ${c.lastActiveDays}d ago`,
     }));
 
+  const topByPRs = [...topScorers]
+    .sort((a, b) => b.totalPRs - a.totalPRs)
+    .slice(0, 6)
+    .map((s) => ({
+      login: s.username,
+      avatar_url: s.avatar_url,
+      html_url: s.html_url,
+      stat: `${s.totalPRs} PRs`,
+    }));
+
   const topByCommits = [...topScorers]
     .sort((a, b) => b.totalCommits - a.totalCommits)
     .slice(0, 6)
@@ -68,9 +78,9 @@ function buildGroups(
           : activeThisMonth.slice(0, 6),
     },
     {
-      label: "Active This Month",
+      label: "Most PRs Raised",
       icon: "",
-      items: activeThisMonth,
+      items: topByPRs,
     },
     {
       label: "Top by Commits",
@@ -81,6 +91,7 @@ function buildGroups(
 }
 
 const INTERVAL_MS = 4000;
+const PAUSE_ON_CLICK_MS = 8000;
 
 const TopContributors = ({
   contributors,
@@ -88,13 +99,25 @@ const TopContributors = ({
 }: TopContributorsProps) => {
   const groups = buildGroups(contributors, topScorers);
   const [activeIndex, setActiveIndex] = useState(0);
+  const pausedUntilRef = useRef<number>(0);
 
-  useEffect(() => {
+  const startTimer = useCallback(() => {
     const timer = setInterval(() => {
+      if (Date.now() < pausedUntilRef.current) return;
       setActiveIndex((prev) => (prev + 1) % groups.length);
     }, INTERVAL_MS);
-    return () => clearInterval(timer);
+    return timer;
   }, [groups.length]);
+
+  useEffect(() => {
+    const timer = startTimer();
+    return () => clearInterval(timer);
+  }, [startTimer]);
+
+  const handleDotClick = (i: number) => {
+    pausedUntilRef.current = Date.now() + PAUSE_ON_CLICK_MS;
+    setActiveIndex(i);
+  };
 
   return (
     <div className='relative w-full px-2 sm:px-4 py-6 flex flex-col items-center overflow-hidden'>
@@ -167,7 +190,7 @@ const TopContributors = ({
         {groups.map((_, i) => (
           <button
             key={i}
-            onClick={() => setActiveIndex(i)}
+            onClick={() => handleDotClick(i)}
             className='rounded-full transition-all duration-500'
             style={{
               width: i === activeIndex ? "16px" : "6px",

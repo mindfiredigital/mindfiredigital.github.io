@@ -10,6 +10,7 @@ import {
   AlertCircle,
   MessageSquare,
   Github,
+  Layers, // icon for multi-project
 } from "lucide-react";
 import { TopScorer } from "@/types";
 
@@ -81,6 +82,11 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
     { label: "Mentor", value: score_breakdown.mentor_score },
     { label: "Zero Revisions", value: score_breakdown.zero_revisions_score },
     { label: "Impact Bonus", value: score_breakdown.impact_bonus_score },
+    // ── NEW ──
+    {
+      label: "Multi-Project Bonus",
+      value: score_breakdown.projects_score ?? 0,
+    },
   ];
 
   const maxScore = Math.max(...scoreItems.map((s) => s.value), 1);
@@ -108,6 +114,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
   };
 
   const badge = getRankBadge(contributor.rank);
+  const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center p-4'>
@@ -283,6 +290,12 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   label: "Avg Commits/PR",
                   value: contributor.avgCommitsPerPR.toFixed(1),
                 },
+                // ── NEW: projects stat tile ──
+                {
+                  icon: <Layers className='w-4 h-4' />,
+                  label: "Projects",
+                  value: projectsWorkedOn,
+                },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -361,12 +374,12 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                 .sort((a, b) => b.value - a.value)
                 .map((item) => (
                   <div key={item.label} className='flex items-center gap-3'>
-                    <span className='text-xs text-gray-600 w-32 flex-shrink-0 text-right'>
+                    <span className='text-xs text-gray-600 w-36 flex-shrink-0 text-right'>
                       {item.label}
                     </span>
                     <div className='flex-1 bg-gray-100 rounded-full h-2'>
                       <div
-                        className='bg-gradient-to-r from-mindfire-text-red to-orange-400 h-2 rounded-full transition-all duration-500'
+                        className={`h-2 rounded-full transition-all duration-500 bg-gradient-to-r from-mindfire-text-red to-orange-400`}
                         style={{ width: `${(item.value / maxScore) * 100}%` }}
                       />
                     </div>
@@ -387,7 +400,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                 {contributor.projects.map((project) => (
                   <span
                     key={project}
-                    className='px-2.5 py-1 text-xs bg-gray-100 text-gray-700 rounded-full border border-gray-200'
+                    className='px-2.5 py-1 text-xs bg-violet-50 text-violet-700 rounded-full border border-violet-200'
                   >
                     {project}
                   </span>

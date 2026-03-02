@@ -65,15 +65,7 @@ export interface ContributorProject {
   contributions: number;
   html_url: string;
   avatar_url: string;
-}
-
-export interface Filters {
-  tags: string[];
-  technologies: string[];
-  starRange: string;
-  contributorRange: string;
-  selectedContributor: string[];
-  sortBy: string;
+  total_score?: number;
 }
 
 export interface FilterSidebarProps {
