@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: 'Build Mindfire FOSS application'
+    name: 'Build Mindfire FOSS'
     runs-on: ubuntu-latest
     permissions:
       contents: write
