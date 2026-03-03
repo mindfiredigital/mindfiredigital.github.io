@@ -24,6 +24,9 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: 'Install dependencies'
+        run: npm install
+
       - name: 'Build application'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
