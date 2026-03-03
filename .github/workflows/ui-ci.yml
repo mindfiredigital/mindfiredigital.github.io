@@ -30,7 +30,7 @@ jobs:
       - name: 'Build application'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run build
+        run: npm run build:ci
 
       - name: 'Fetch branches'
         run: git fetch origin
