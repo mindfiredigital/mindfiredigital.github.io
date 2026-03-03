@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: 'Build Mindfire FOSS'
+    name: 'Build Mindfire FOSS Website'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,9 +23,6 @@ jobs:
           node-version: 20
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 'Install dependencies'
-        run: npm install
 
       - name: 'Build application'
         env:
