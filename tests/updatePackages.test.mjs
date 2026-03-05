@@ -201,3 +201,49 @@ describe("parseNpmDownloads", () => {
     );
   });
 });
+
+describe("parsePypiDownloads", () => {
+  it("returns zeros for null response", () => {
+    assert.deepEqual(parsePypiDownloads(null, "my-pypi"), {
+      name: "my-pypi",
+      weekly: 0,
+      monthly: 0,
+      total: 0,
+    });
+  });
+
+  it("returns zeros for missing data field", () => {
+    assert.deepEqual(parsePypiDownloads({}, "my-pypi"), {
+      name: "my-pypi",
+      weekly: 0,
+      monthly: 0,
+      total: 0,
+    });
+  });
+
+  it("extracts last_week as weekly", () => {
+    assert.equal(
+      parsePypiDownloads(
+        { data: { last_day: 10, last_week: 200, last_month: 800 } },
+        "pkg"
+      ).weekly,
+      200
+    );
+  });
+
+  it("extracts last_month as monthly", () => {
+    assert.equal(
+      parsePypiDownloads(
+        { data: { last_day: 10, last_week: 200, last_month: 800 } },
+        "pkg"
+      ).monthly,
+      800
+    );
+  });
+
+  it("defaults to 0 when fields are missing", () => {
+    const result = parsePypiDownloads({ data: {} }, "pkg");
+    assert.equal(result.weekly, 0);
+    assert.equal(result.monthly, 0);
+  });
+});
