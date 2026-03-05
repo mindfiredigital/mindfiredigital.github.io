@@ -206,3 +206,43 @@ describe("shapeUpcomingProject", () => {
     assert.equal(result.tags.length, 5);
   });
 });
+
+describe("filterContributors", () => {
+  it("removes Bot type contributors", () => {
+    const result = filterContributors([
+      { login: "human", type: "User" },
+      { login: "automaton", type: "Bot" },
+    ]);
+    assert.equal(result.length, 1);
+    assert.equal(result[0].login, "human");
+  });
+
+  it("removes github-actions prefixed logins", () => {
+    const result = filterContributors([
+      { login: "github-actions[bot]", type: "User" },
+      { login: "dev", type: "User" },
+    ]);
+    assert.equal(result.length, 1);
+    assert.equal(result[0].login, "dev");
+  });
+
+  it("keeps regular users", () =>
+    assert.equal(
+      filterContributors([
+        { login: "alice", type: "User" },
+        { login: "bob", type: "User" },
+      ]).length,
+      2
+    ));
+  it("handles empty array", () => assert.deepEqual(filterContributors([]), []));
+
+  it("removes multiple bots at once", () => {
+    const result = filterContributors([
+      { login: "github-actions[bot]", type: "Bot" },
+      { login: "dependabot[bot]", type: "Bot" },
+      { login: "real-user", type: "User" },
+    ]);
+    assert.equal(result.length, 1);
+    assert.equal(result[0].login, "real-user");
+  });
+});
