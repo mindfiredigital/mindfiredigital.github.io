@@ -86,3 +86,83 @@ describe("parseRepoFromUrl", () => {
     assert.equal(repo, "repo");
   });
 });
+
+describe("shapeCurrentProject", () => {
+  it("converts id string to integer", () => {
+    assert.equal(typeof shapeCurrentProject(baseEntry, null).id, "number");
+    assert.equal(shapeCurrentProject(baseEntry, null).id, 42);
+  });
+
+  it("maps short_description to shortDescription", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, null).shortDescription,
+      "A short desc"
+    );
+  });
+
+  it("maps github_repository_link to githubUrl", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, null).githubUrl,
+      "https://github.com/org/repo"
+    );
+  });
+
+  it("maps documentation_link to documentationUrl", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, null).documentationUrl,
+      "https://docs.example.com"
+    );
+  });
+
+  it("uses 0 stars when repoData is null", () => {
+    assert.equal(shapeCurrentProject(baseEntry, null).stars, 0);
+  });
+
+  it("uses stargazers_count from repoData", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, {
+        stargazers_count: 128,
+        topics: [],
+        pushed_at: "2024-06-01",
+      }).stars,
+      128
+    );
+  });
+
+  it("uses empty tags when repoData is null", () => {
+    assert.deepEqual(shapeCurrentProject(baseEntry, null).tags, []);
+  });
+
+  it("slices topics to max 5 tags", () => {
+    const result = shapeCurrentProject(baseEntry, {
+      stargazers_count: 0,
+      topics: ["a", "b", "c", "d", "e", "f", "g"],
+      pushed_at: "2024-06-01",
+    });
+    assert.equal(result.tags.length, 5);
+  });
+
+  it("uses date_created as lastPushedAt when repoData is null", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, null).lastPushedAt,
+      "2024-01-01"
+    );
+  });
+
+  it("uses pushed_at from repoData as lastPushedAt", () => {
+    assert.equal(
+      shapeCurrentProject(baseEntry, {
+        stargazers_count: 0,
+        topics: [],
+        pushed_at: "2024-09-15",
+      }).lastPushedAt,
+      "2024-09-15"
+    );
+  });
+
+  it("preserves original entry fields", () => {
+    const result = shapeCurrentProject(baseEntry, null);
+    assert.equal(result.title, "My Project");
+    assert.equal(result.status, "published");
+  });
+});
