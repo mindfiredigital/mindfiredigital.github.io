@@ -166,3 +166,43 @@ describe("shapeCurrentProject", () => {
     assert.equal(result.status, "published");
   });
 });
+
+describe("shapeUpcomingProject", () => {
+  const upcomingEntry = {
+    id: "7",
+    title: "Coming Soon",
+    short_description: "Will be great",
+    github_repository_link: "https://github.com/org/coming-soon",
+    documentation_link: null,
+    date_created: "2024-05-01",
+    project_type: "upcoming",
+    status: "draft",
+  };
+
+  it("converts id to integer", () =>
+    assert.equal(shapeUpcomingProject(upcomingEntry, null).id, 7));
+  it("maps shortDescription without repoData", () =>
+    assert.equal(
+      shapeUpcomingProject(upcomingEntry, null).shortDescription,
+      "Will be great"
+    ));
+  it("uses 0 stars without repoData", () =>
+    assert.equal(shapeUpcomingProject(upcomingEntry, null).stars, 0));
+  it("uses repoData stars when available", () =>
+    assert.equal(
+      shapeUpcomingProject(upcomingEntry, {
+        stargazers_count: 42,
+        topics: ["ts"],
+        pushed_at: "2024-07-01",
+      }).stars,
+      42
+    ));
+  it("slices topics to 5 for upcoming projects", () => {
+    const result = shapeUpcomingProject(upcomingEntry, {
+      stargazers_count: 0,
+      topics: ["a", "b", "c", "d", "e", "f"],
+      pushed_at: "2024-07-01",
+    });
+    assert.equal(result.tags.length, 5);
+  });
+});
