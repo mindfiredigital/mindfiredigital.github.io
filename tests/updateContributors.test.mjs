@@ -118,3 +118,134 @@ describe("filterBots", () => {
     assert.ok(result.some((c) => c.login === "alice"));
   });
 });
+
+describe("aggregateContributions", () => {
+  it("aggregates contributions from multiple repos for same user", () => {
+    const input = {
+      "repo-a": [
+        {
+          login: "alice",
+          contributions: 10,
+          id: 1,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 2,
+          issueCount: 1,
+          lastActiveDays: 3,
+        },
+      ],
+      "repo-b": [
+        {
+          login: "alice",
+          contributions: 5,
+          id: 1,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 1,
+          issueCount: 0,
+          lastActiveDays: 1,
+        },
+      ],
+    };
+    const result = aggregateContributions(input);
+    const alice = result.find((c) => c.login === "alice");
+    assert.equal(alice.contributions, 15);
+    assert.equal(alice.pullRequestCount, 3);
+    assert.equal(alice.issueCount, 1);
+  });
+
+  it("handles multiple contributors across repos", () => {
+    const input = {
+      "repo-a": [
+        {
+          login: "alice",
+          contributions: 10,
+          id: 1,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 2,
+          issueCount: 1,
+          lastActiveDays: 5,
+        },
+        {
+          login: "bob",
+          contributions: 3,
+          id: 2,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 1,
+          issueCount: 0,
+          lastActiveDays: 10,
+        },
+      ],
+    };
+    assert.equal(aggregateContributions(input).length, 2);
+  });
+
+  it("sorts by contributions descending", () => {
+    const input = {
+      "repo-a": [
+        {
+          login: "alice",
+          contributions: 3,
+          id: 1,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 0,
+          issueCount: 0,
+          lastActiveDays: 0,
+        },
+        {
+          login: "bob",
+          contributions: 10,
+          id: 2,
+          avatar_url: "",
+          html_url: "",
+          pullRequestCount: 0,
+          issueCount: 0,
+          lastActiveDays: 0,
+        },
+      ],
+    };
+    const result = aggregateContributions(input);
+    assert.equal(result[0].login, "bob");
+    assert.equal(result[1].login, "alice");
+  });
+
+  it("handles empty contributors object", () => {
+    assert.deepEqual(aggregateContributions({}), []);
+  });
+
+  it("handles repo with empty contributor array", () => {
+    assert.deepEqual(aggregateContributions({ "repo-a": [] }), []);
+  });
+
+  it("preserves avatar_url and html_url", () => {
+    const input = {
+      "repo-a": [
+        {
+          login: "alice",
+          contributions: 5,
+          id: 1,
+          avatar_url: "https://avatar.com/alice",
+          html_url: "https://github.com/alice",
+          pullRequestCount: 1,
+          issueCount: 0,
+          lastActiveDays: 2,
+        },
+      ],
+    };
+    const result = aggregateContributions(input);
+    assert.equal(result[0].avatar_url, "https://avatar.com/alice");
+    assert.equal(result[0].html_url, "https://github.com/alice");
+  });
+
+  it("does not include prototype properties", () => {
+    const input = Object.create({
+      injected: [{ login: "evil", contributions: 9999 }],
+    });
+    input["repo-a"] = [];
+    const result = aggregateContributions(input);
+    assert.ok(!result.find((c) => c.login === "evil"));
+  });
+});
