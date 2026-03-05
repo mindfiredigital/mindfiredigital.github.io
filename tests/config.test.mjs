@@ -109,3 +109,120 @@ describe("writeJsonToFile", () => {
     assert.deepEqual(parsed, []);
   });
 });
+
+describe("fetchData", () => {
+  it("returns parsed JSON on success", async () => {
+    const mockFetch = async () => ({
+      ok: true,
+      json: async () => ({ data: "test" }),
+    });
+    const result = await fetchData(
+      mockFetch,
+      "https://example.com",
+      {},
+      3,
+      5000
+    );
+    assert.deepEqual(result, { data: "test" });
+  });
+
+  it("throws on HTTP 404 error response", async () => {
+    const mockFetch = async () => ({
+      ok: false,
+      status: 404,
+      statusText: "Not Found",
+      text: async () => "Not Found",
+    });
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 1, 5000),
+      /HTTP 404/
+    );
+  });
+
+  it("throws on HTTP 500 error", async () => {
+    const mockFetch = async () => ({
+      ok: false,
+      status: 500,
+      statusText: "Internal Server Error",
+      text: async () => "",
+    });
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 1, 5000),
+      /HTTP 500/
+    );
+  });
+
+  it("retries on network error and eventually throws", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      throw new Error("Network error");
+    };
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 3, 5000),
+      /Failed to fetch/
+    );
+    assert.equal(callCount, 3);
+  });
+
+  it("retries correct number of times before giving up", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      throw new Error("fail");
+    };
+    await assert.rejects(() =>
+      fetchData(mockFetch, "https://x.com", {}, 2, 5000)
+    );
+    assert.equal(callCount, 2);
+  });
+
+  it("succeeds on second attempt after initial failure", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      if (callCount === 1) throw new Error("transient");
+      return { ok: true, json: async () => ({ ok: true }) };
+    };
+    const result = await fetchData(
+      mockFetch,
+      "https://example.com",
+      {},
+      3,
+      5000
+    );
+    assert.deepEqual(result, { ok: true });
+    assert.equal(callCount, 2);
+  });
+
+  it("stops retrying on AbortError", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      const err = new Error("aborted");
+      err.name = "AbortError";
+      throw err;
+    };
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 3, 5000),
+      /Failed to fetch/
+    );
+    assert.equal(callCount, 1);
+  });
+
+  it("passes options to underlying fetch", async () => {
+    let capturedOptions;
+    const mockFetch = async (url, opts) => {
+      capturedOptions = opts;
+      return { ok: true, json: async () => ({}) };
+    };
+    await fetchData(
+      mockFetch,
+      "https://example.com",
+      { method: "POST" },
+      1,
+      5000
+    );
+    assert.equal(capturedOptions.method, "POST");
+  });
+});
