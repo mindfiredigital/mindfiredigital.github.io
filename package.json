@@ -7,6 +7,8 @@
     "update-all": "node updateScript/updateProject.mjs && node updateScript/updatePackages.mjs && node updateScript/make-cache.mjs && node updateScript/make-leaderboard.mjs && node updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "build:ci": "next build && touch ./build/.nojekyll",
+    "test": "node --test tests/*.test.mjs",
+    "test:watch": "node --test --watch tests/*.test.mjs",
     "start": "next start",
     "lint": "next lint",
     "start:build": "serve ./build",
