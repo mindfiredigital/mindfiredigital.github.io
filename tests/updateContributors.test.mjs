@@ -249,3 +249,24 @@ describe("aggregateContributions", () => {
     assert.ok(!result.find((c) => c.login === "evil"));
   });
 });
+
+describe("calculateLastActiveDays", () => {
+  it("returns null for null input", () =>
+    assert.equal(calculateLastActiveDays(null), null));
+  it("returns null for undefined input", () =>
+    assert.equal(calculateLastActiveDays(undefined), null));
+  it("returns 0 for today's date", () =>
+    assert.equal(calculateLastActiveDays(new Date().toISOString()), 0));
+  it("returns correct days for a past date", () => {
+    const pastDate = new Date(
+      Date.now() - 5 * 24 * 60 * 60 * 1000
+    ).toISOString();
+    assert.equal(calculateLastActiveDays(pastDate), 5);
+  });
+  it("always returns non-negative number", () => {
+    const pastDate = new Date(
+      Date.now() - 10 * 24 * 60 * 60 * 1000
+    ).toISOString();
+    assert.ok(calculateLastActiveDays(pastDate) >= 0);
+  });
+});
