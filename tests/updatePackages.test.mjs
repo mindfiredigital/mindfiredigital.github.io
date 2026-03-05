@@ -105,3 +105,51 @@ describe("mergeStats", () => {
     assert.equal(result["shared"].type, "pypi");
   });
 });
+
+describe("enrichWithTitles", () => {
+  const npmPkgs = [{ name: "pkg-a", title: "Package A" }];
+  const pypiPkgs = [{ name: "pypi-b", title: "PyPI B" }];
+
+  it("adds title from npm package list", () => {
+    const result = enrichWithTitles(
+      { "pkg-a": { name: "pkg-a", type: "npm", total: 100 } },
+      npmPkgs,
+      pypiPkgs
+    );
+    assert.equal(result[0].title, "Package A");
+  });
+
+  it("adds title from pypi package list", () => {
+    const result = enrichWithTitles(
+      { "pypi-b": { name: "pypi-b", type: "pypi", total: 50 } },
+      npmPkgs,
+      pypiPkgs
+    );
+    assert.equal(result[0].title, "PyPI B");
+  });
+
+  it("falls back to package name when no title found", () => {
+    const result = enrichWithTitles(
+      { "unknown-pkg": { name: "unknown-pkg", type: "npm", total: 10 } },
+      [],
+      []
+    );
+    assert.equal(result[0].title, "unknown-pkg");
+  });
+
+  it("sorts by total downloads descending", () => {
+    const statsMap = {
+      low: { name: "low", type: "npm", total: 10 },
+      high: { name: "high", type: "npm", total: 9999 },
+      mid: { name: "mid", type: "npm", total: 500 },
+    };
+    const result = enrichWithTitles(statsMap, [], []);
+    assert.equal(result[0].name, "high");
+    assert.equal(result[1].name, "mid");
+    assert.equal(result[2].name, "low");
+  });
+
+  it("handles empty stats map", () => {
+    assert.deepEqual(enrichWithTitles({}, [], []), []);
+  });
+});
