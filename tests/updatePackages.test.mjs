@@ -153,3 +153,51 @@ describe("enrichWithTitles", () => {
     assert.deepEqual(enrichWithTitles({}, [], []), []);
   });
 });
+
+describe("parseNpmDownloads", () => {
+  it("returns zeros for null response", () => {
+    assert.deepEqual(parseNpmDownloads(null, "my-pkg"), {
+      name: "my-pkg",
+      weekly: 0,
+      monthly: 0,
+      total: 0,
+    });
+  });
+
+  it("returns zeros for response with no downloads array", () => {
+    assert.deepEqual(parseNpmDownloads({}, "my-pkg"), {
+      name: "my-pkg",
+      weekly: 0,
+      monthly: 0,
+      total: 0,
+    });
+  });
+
+  it("sums total correctly", () => {
+    const result = parseNpmDownloads(
+      {
+        downloads: [{ downloads: 100 }, { downloads: 200 }, { downloads: 300 }],
+      },
+      "my-pkg"
+    );
+    assert.equal(result.total, 600);
+  });
+
+  it("computes weekly from last 7 entries", () => {
+    const downloads = Array.from({ length: 35 }, (_, i) => ({
+      downloads: i + 1,
+    }));
+    const result = parseNpmDownloads({ downloads }, "my-pkg");
+    const expectedWeekly = downloads
+      .slice(-7)
+      .reduce((s, d) => s + d.downloads, 0);
+    assert.equal(result.weekly, expectedWeekly);
+  });
+
+  it("preserves package name", () => {
+    assert.equal(
+      parseNpmDownloads({ downloads: [] }, "cool-lib").name,
+      "cool-lib"
+    );
+  });
+});
