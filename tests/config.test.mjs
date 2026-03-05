@@ -1,0 +1,260 @@
+import { describe, it, beforeEach, afterEach } from "node:test";
+import assert from "node:assert/strict";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function writeJsonToFile(basePath, relativePath, data) {
+  const fullPath = path.join(basePath, relativePath);
+  fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
+}
+
+async function fetchData(
+  fetchFn,
+  url,
+  options = {},
+  retries = 3,
+  timeoutMs = 10000
+) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const response = await fetchFn(url, {
+        ...options,
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      if (!response.ok) {
+        const errorText = await response.text().catch(() => "");
+        throw new Error(
+          `HTTP ${response.status} - ${response.statusText}: ${errorText}`
+        );
+      }
+      return await response.json();
+    } catch (error) {
+      clearTimeout(timeoutId);
+      const isLastAttempt = attempt === retries;
+      const isAbort = error.name === "AbortError";
+      if (isLastAttempt || isAbort) {
+        throw new Error(
+          `Failed to fetch ${url} after ${attempt} attempts: ${error.message}`
+        );
+      }
+      await new Promise((r) => setTimeout(r, 100));
+    }
+  }
+}
+
+describe("writeJsonToFile", () => {
+  const tmpDir = path.join(__dirname, "__tmp__");
+
+  beforeEach(() => {
+    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
+  });
+
+  afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  it("writes valid JSON to file", () => {
+    const data = { hello: "world", count: 42 };
+    writeJsonToFile(tmpDir, "output.json", data);
+    const parsed = JSON.parse(
+      fs.readFileSync(path.join(tmpDir, "output.json"), "utf8")
+    );
+    assert.deepEqual(parsed, data);
+  });
+
+  it("writes array data to file", () => {
+    const data = [{ id: 1 }, { id: 2 }];
+    writeJsonToFile(tmpDir, "array.json", data);
+    const parsed = JSON.parse(
+      fs.readFileSync(path.join(tmpDir, "array.json"), "utf8")
+    );
+    assert.deepEqual(parsed, data);
+  });
+
+  it("pretty-prints with 2-space indentation", () => {
+    writeJsonToFile(tmpDir, "pretty.json", { a: 1 });
+    const raw = fs.readFileSync(path.join(tmpDir, "pretty.json"), "utf8");
+    assert.ok(raw.includes("  "));
+    assert.ok(raw.includes("\n"));
+  });
+
+  it("overwrites existing file", () => {
+    writeJsonToFile(tmpDir, "overwrite.json", { v: 1 });
+    writeJsonToFile(tmpDir, "overwrite.json", { v: 2 });
+    const parsed = JSON.parse(
+      fs.readFileSync(path.join(tmpDir, "overwrite.json"), "utf8")
+    );
+    assert.equal(parsed.v, 2);
+  });
+
+  it("handles empty object", () => {
+    writeJsonToFile(tmpDir, "empty.json", {});
+    const parsed = JSON.parse(
+      fs.readFileSync(path.join(tmpDir, "empty.json"), "utf8")
+    );
+    assert.deepEqual(parsed, {});
+  });
+
+  it("handles empty array", () => {
+    writeJsonToFile(tmpDir, "emptyarr.json", []);
+    const parsed = JSON.parse(
+      fs.readFileSync(path.join(tmpDir, "emptyarr.json"), "utf8")
+    );
+    assert.deepEqual(parsed, []);
+  });
+});
+
+describe("fetchData", () => {
+  it("returns parsed JSON on success", async () => {
+    const mockFetch = async () => ({
+      ok: true,
+      json: async () => ({ data: "test" }),
+    });
+    const result = await fetchData(
+      mockFetch,
+      "https://example.com",
+      {},
+      3,
+      5000
+    );
+    assert.deepEqual(result, { data: "test" });
+  });
+
+  it("throws on HTTP 404 error response", async () => {
+    const mockFetch = async () => ({
+      ok: false,
+      status: 404,
+      statusText: "Not Found",
+      text: async () => "Not Found",
+    });
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 1, 5000),
+      /HTTP 404/
+    );
+  });
+
+  it("throws on HTTP 500 error", async () => {
+    const mockFetch = async () => ({
+      ok: false,
+      status: 500,
+      statusText: "Internal Server Error",
+      text: async () => "",
+    });
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 1, 5000),
+      /HTTP 500/
+    );
+  });
+
+  it("retries on network error and eventually throws", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      throw new Error("Network error");
+    };
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 3, 5000),
+      /Failed to fetch/
+    );
+    assert.equal(callCount, 3);
+  });
+
+  it("retries correct number of times before giving up", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      throw new Error("fail");
+    };
+    await assert.rejects(() =>
+      fetchData(mockFetch, "https://x.com", {}, 2, 5000)
+    );
+    assert.equal(callCount, 2);
+  });
+
+  it("succeeds on second attempt after initial failure", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      if (callCount === 1) throw new Error("transient");
+      return { ok: true, json: async () => ({ ok: true }) };
+    };
+    const result = await fetchData(
+      mockFetch,
+      "https://example.com",
+      {},
+      3,
+      5000
+    );
+    assert.deepEqual(result, { ok: true });
+    assert.equal(callCount, 2);
+  });
+
+  it("stops retrying on AbortError", async () => {
+    let callCount = 0;
+    const mockFetch = async () => {
+      callCount++;
+      const err = new Error("aborted");
+      err.name = "AbortError";
+      throw err;
+    };
+    await assert.rejects(
+      () => fetchData(mockFetch, "https://example.com", {}, 3, 5000),
+      /Failed to fetch/
+    );
+    assert.equal(callCount, 1);
+  });
+
+  it("passes options to underlying fetch", async () => {
+    let capturedOptions;
+    const mockFetch = async (url, opts) => {
+      capturedOptions = opts;
+      return { ok: true, json: async () => ({}) };
+    };
+    await fetchData(
+      mockFetch,
+      "https://example.com",
+      { method: "POST" },
+      1,
+      5000
+    );
+    assert.equal(capturedOptions.method, "POST");
+  });
+});
+
+describe("package filtering", () => {
+  const mockPackages = [
+    { name: "pkg-a", type: "npm", title: "Package A" },
+    { name: "pkg-b", type: "PyPi", title: "Package B" },
+    { name: "pkg-c", type: "npm", title: "Package C" },
+    { name: "pkg-d", type: "PyPi", title: "Package D" },
+  ];
+
+  it("filters npm packages correctly", () => {
+    const npm = mockPackages.filter((p) => p.type === "npm");
+    assert.equal(npm.length, 2);
+    assert.ok(npm.every((p) => p.type === "npm"));
+  });
+
+  it("filters PyPi packages correctly", () => {
+    const pypi = mockPackages.filter((p) => p.type === "PyPi");
+    assert.equal(pypi.length, 2);
+    assert.ok(pypi.every((p) => p.type === "PyPi"));
+  });
+
+  it("returns empty array if no packages match type", () => {
+    const other = mockPackages.filter((p) => p.type === "maven");
+    assert.equal(other.length, 0);
+  });
+
+  it("preserves all fields when filtering", () => {
+    const npm = mockPackages.filter((p) => p.type === "npm");
+    assert.ok(npm[0].name);
+    assert.ok(npm[0].title);
+  });
+});

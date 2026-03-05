@@ -120,7 +120,9 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
         const jitter = Math.random() * 1000;
         const waitTime = baseWait + jitter;
         console.warn(
-          `⏳ GitHub rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1}/${maxRetries - 1} — ${url}`
+          `⏳ GitHub rate limited. Waiting ${Math.round(
+            waitTime / 1000
+          )}s before retry ${attempt + 1}/${maxRetries - 1} — ${url}`
         );
         await delay(waitTime);
         continue;

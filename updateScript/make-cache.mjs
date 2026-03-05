@@ -111,8 +111,9 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
           // GitHub told us exactly how long — trust it + 1s buffer
           waitTime = error.retryAfterMs + 1000;
           console.warn(
-            `⏳ Rate limited (header). Waiting ${Math.round(waitTime / 1000)}s` +
-              ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
+            `⏳ Rate limited (header). Waiting ${Math.round(
+              waitTime / 1000
+            )}s` + ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
           );
         } else if (error.resetAtMs && error.resetAtMs > Date.now()) {
           // X-RateLimit-Reset: unix timestamp when quota refills
@@ -127,8 +128,9 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
           const jitter = Math.random() * 1000;
           waitTime = baseWait + jitter;
           console.warn(
-            `⏳ Rate limited (backoff). Waiting ${Math.round(waitTime / 1000)}s` +
-              ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
+            `⏳ Rate limited (backoff). Waiting ${Math.round(
+              waitTime / 1000
+            )}s` + ` (retry ${attempt + 1}/${maxRetries - 1}) — ${url}`
           );
         }
 
@@ -169,7 +171,9 @@ async function rawFetchGitHub(url) {
         res.on("end", () => {
           if (res.statusCode === 403 || res.statusCode === 429) {
             const err = new Error(
-              `Rate limited. Retry after: ${res.headers["retry-after"] ?? "unknown"}s`
+              `Rate limited. Retry after: ${
+                res.headers["retry-after"] ?? "unknown"
+              }s`
             );
             err.status = res.statusCode;
 
@@ -789,7 +793,9 @@ async function cacheLeaderboardData() {
     );
     console.log(`   ⏭️  Skipped (already cached): ${skippedCount}`);
     console.log(
-      `   🆕 Newly fetched this run:   ${Object.keys(allProjectsData).length - skippedCount}`
+      `   🆕 Newly fetched this run:   ${
+        Object.keys(allProjectsData).length - skippedCount
+      }`
     );
     console.log(`   Total commits (default branch): ${totalCommits}`);
     console.log(`   Total merged PRs (default branch): ${totalPRs}`);
