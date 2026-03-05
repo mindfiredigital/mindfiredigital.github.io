@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import { TopScorer } from "@/types";
 import monthlyRaw from "../../projects/assets/leaderboard-monthly.json";
@@ -86,12 +86,25 @@ const RANK_ROW_ACCENT = [
   "text-gray-400 bg-gray-50 border-gray-200",
 ];
 
+async function toBase64Url(url: string): Promise<string> {
+  const res = await fetch(url);
+  const blob = await res.blob();
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result as string);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
 export default function TopScorersPanel({
   topScorers,
   onViewDetails,
 }: TopScorersPanelProps) {
   const [activeTab, setActiveTab] = useState<Tab>("alltime");
   const [mobileRestOpen, setMobileRestOpen] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const monthLabel =
     (monthlyRaw as { month_label?: string }).month_label ?? "This Month";
@@ -106,8 +119,64 @@ export default function TopScorersPanel({
   const rest = top10.slice(3);
   const maxScore = top10[0]?.total_score ?? 1;
 
+  const handleDownload = useCallback(async () => {
+    if (!containerRef.current) return;
+    setIsDownloading(true);
+
+    try {
+      const { toPng } = await import("html-to-image");
+
+      const imgEls = Array.from(
+        containerRef.current.querySelectorAll("img")
+      ) as HTMLImageElement[];
+      const originalSrcs = imgEls.map((img) => img.src);
+
+      await Promise.all(
+        imgEls.map(async (img) => {
+          try {
+            img.src = await toBase64Url(img.src);
+          } catch (e) {
+            void e;
+          }
+        })
+      );
+
+      // Hide the download button from the snapshot
+      const dlBtn = containerRef.current.querySelector(
+        "[data-dl-btn]"
+      ) as HTMLElement | null;
+      if (dlBtn) dlBtn.style.visibility = "hidden";
+
+      const dataUrl = await toPng(containerRef.current, {
+        cacheBust: true,
+        pixelRatio: 2,
+      });
+
+      // Restore
+      if (dlBtn) dlBtn.style.visibility = "visible";
+      imgEls.forEach((img, i) => {
+        img.src = originalSrcs[i];
+      });
+
+      const label = activeTab === "monthly" ? monthLabel : "all-time";
+      const link = document.createElement("a");
+      link.download = `hall-of-fame-${label
+        .toLowerCase()
+        .replace(/\s+/g, "-")}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error("Failed to download image:", err);
+    } finally {
+      setIsDownloading(false);
+    }
+  }, [activeTab, monthLabel]);
+
   return (
-    <div className='flex flex-col rounded-2xl border border-gray-100 shadow-lg bg-white overflow-hidden lg:h-full'>
+    <div
+      ref={containerRef}
+      className='flex flex-col rounded-2xl border border-gray-100 shadow-lg bg-white overflow-hidden lg:h-full'
+    >
       {/* ── Header ── */}
       <div className='relative px-4 pt-4 pb-3 border-b border-gray-100 flex-shrink-0'>
         <div
@@ -118,6 +187,7 @@ export default function TopScorersPanel({
           }}
         />
 
+        {/* Title row */}
         <div className='relative flex items-center gap-3 mb-3'>
           <div className='relative flex-shrink-0'>
             <div
@@ -151,26 +221,74 @@ export default function TopScorersPanel({
           </div>
         </div>
 
-        <div className='relative flex rounded-xl bg-gray-100 p-0.5 gap-0.5'>
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`
-                flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg
-                text-[11px] font-bold transition-all duration-200
-                ${
-                  activeTab === tab.id
-                    ? "bg-white shadow-sm text-gray-900"
-                    : "text-gray-400 hover:text-gray-600"
-                }
-              `}
-            >
-              {tab.id === "monthly" && activeTab === "monthly"
-                ? monthLabel
-                : tab.label}
-            </button>
-          ))}
+        {/* Tab switcher + download icon */}
+        <div className='relative flex items-center gap-2'>
+          <div className='flex flex-1 rounded-xl bg-gray-100 p-0.5 gap-0.5'>
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`
+                  flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg
+                  text-[11px] font-bold transition-all duration-200
+                  ${
+                    activeTab === tab.id
+                      ? "bg-white shadow-sm text-gray-900"
+                      : "text-gray-400 hover:text-gray-600"
+                  }
+                `}
+              >
+                {tab.id === "monthly" && activeTab === "monthly"
+                  ? monthLabel
+                  : tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Small icon-only download button */}
+          <button
+            data-dl-btn
+            onClick={handleDownload}
+            disabled={isDownloading}
+            title='Download image'
+            className='flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-lg border border-mf-red text-mf-red hover:bg-mf-red hover:text-white transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed'
+          >
+            {isDownloading ? (
+              <svg
+                className='animate-spin w-3.5 h-3.5'
+                fill='none'
+                viewBox='0 0 24 24'
+              >
+                <circle
+                  className='opacity-25'
+                  cx='12'
+                  cy='12'
+                  r='10'
+                  stroke='currentColor'
+                  strokeWidth='4'
+                />
+                <path
+                  className='opacity-75'
+                  fill='currentColor'
+                  d='M4 12a8 8 0 018-8v8z'
+                />
+              </svg>
+            ) : (
+              <svg
+                className='w-3.5 h-3.5'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth={2}
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 4v11'
+                />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
 
@@ -209,7 +327,6 @@ export default function TopScorersPanel({
                         slot.selfEnd ? "self-end" : ""
                       }`}
                     >
-                      {/* Crown only — no medal badge */}
                       <span
                         className={`${slot.crownSize} select-none mb-1 block`}
                         style={{
@@ -245,7 +362,6 @@ export default function TopScorersPanel({
                             </div>
                           </div>
                         </div>
-                        {/* Rank number badge instead of medal emoji */}
                         <span
                           className={`absolute -bottom-1 -right-1 w-[22px] h-[22px] rounded-full ${slot.badgeBg} border-2 border-white flex items-center justify-center text-[10px] font-black text-white shadow-lg`}
                         >
