@@ -226,3 +226,35 @@ describe("fetchData", () => {
     assert.equal(capturedOptions.method, "POST");
   });
 });
+
+describe("package filtering", () => {
+  const mockPackages = [
+    { name: "pkg-a", type: "npm", title: "Package A" },
+    { name: "pkg-b", type: "PyPi", title: "Package B" },
+    { name: "pkg-c", type: "npm", title: "Package C" },
+    { name: "pkg-d", type: "PyPi", title: "Package D" },
+  ];
+
+  it("filters npm packages correctly", () => {
+    const npm = mockPackages.filter((p) => p.type === "npm");
+    assert.equal(npm.length, 2);
+    assert.ok(npm.every((p) => p.type === "npm"));
+  });
+
+  it("filters PyPi packages correctly", () => {
+    const pypi = mockPackages.filter((p) => p.type === "PyPi");
+    assert.equal(pypi.length, 2);
+    assert.ok(pypi.every((p) => p.type === "PyPi"));
+  });
+
+  it("returns empty array if no packages match type", () => {
+    const other = mockPackages.filter((p) => p.type === "maven");
+    assert.equal(other.length, 0);
+  });
+
+  it("preserves all fields when filtering", () => {
+    const npm = mockPackages.filter((p) => p.type === "npm");
+    assert.ok(npm[0].name);
+    assert.ok(npm[0].title);
+  });
+});
