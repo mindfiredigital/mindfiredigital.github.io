@@ -99,3 +99,43 @@ describe("isBot", () => {
   it("returns false for undefined", () => assert.ok(!isBot(undefined)));
   it("is case-insensitive", () => assert.ok(isBot("DEPENDABOT[BOT]")));
 });
+
+describe("filterHumanCommits", () => {
+  it("keeps commits from human authors", () => {
+    assert.equal(
+      filterHumanCommits([
+        { author: { login: "alice" }, commit: { author: { name: "Alice" } } },
+      ]).length,
+      1
+    );
+  });
+
+  it("removes commits from bot login", () => {
+    const commits = [
+      {
+        author: { login: "dependabot[bot]" },
+        commit: { author: { name: "Dependabot" } },
+      },
+      { author: { login: "alice" }, commit: { author: { name: "Alice" } } },
+    ];
+    assert.equal(filterHumanCommits(commits).length, 1);
+    assert.equal(filterHumanCommits(commits)[0].author.login, "alice");
+  });
+
+  it("removes commits where commit author name matches bot pattern", () => {
+    const commits = [
+      { author: null, commit: { author: { name: "github-actions" } } },
+      { author: { login: "bob" }, commit: { author: { name: "Bob" } } },
+    ];
+    assert.equal(filterHumanCommits(commits).length, 1);
+  });
+
+  it("handles empty input", () => assert.deepEqual(filterHumanCommits([]), []));
+
+  it("handles commits with null author without throwing", () => {
+    const commits = [
+      { author: null, commit: { author: { name: "Regular User" } } },
+    ];
+    assert.equal(filterHumanCommits(commits).length, 1);
+  });
+});
