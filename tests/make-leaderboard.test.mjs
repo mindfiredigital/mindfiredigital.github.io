@@ -179,3 +179,33 @@ describe("analyzePRComplexity", () => {
       "large"
     ));
 });
+
+describe("applyMonthlyCaps", () => {
+  it("does not cap when items are below limit", () => {
+    const items = [{ created_at: "2024-01-05" }, { created_at: "2024-01-10" }];
+    assert.equal(applyMonthlyCaps(items, 10).length, 2);
+  });
+
+  it("caps items at limit per month", () => {
+    const items = Array.from({ length: 15 }, (_, i) => ({
+      created_at: `2024-01-${String(i + 1).padStart(2, "0")}`,
+    }));
+    assert.equal(applyMonthlyCaps(items, 10).length, 10);
+  });
+
+  it("applies cap independently per month (10 Jan + 10 Feb = 20)", () => {
+    const items = [
+      ...Array.from({ length: 12 }, () => ({ created_at: "2024-01-15" })),
+      ...Array.from({ length: 12 }, () => ({ created_at: "2024-02-15" })),
+    ];
+    assert.equal(applyMonthlyCaps(items, 10).length, 20);
+  });
+
+  it("returns empty array for empty input", () =>
+    assert.deepEqual(applyMonthlyCaps([], 10), []));
+
+  it("uses custom date field", () => {
+    const items = [{ merged_at: "2024-03-01" }, { merged_at: "2024-03-02" }];
+    assert.equal(applyMonthlyCaps(items, 1, "merged_at").length, 1);
+  });
+});
