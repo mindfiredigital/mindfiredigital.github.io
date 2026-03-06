@@ -104,6 +104,8 @@ export default function TopScorersPanel({
   const [activeTab, setActiveTab] = useState<Tab>("alltime");
   const [mobileRestOpen, setMobileRestOpen] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [isCopying, setIsCopying] = useState(false);
+  const [copied, setCopied] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const monthLabel =
@@ -119,50 +121,64 @@ export default function TopScorersPanel({
   const rest = top10.slice(3);
   const maxScore = top10[0]?.total_score ?? 1;
 
+  const getLabel = useCallback(
+    () => (activeTab === "monthly" ? monthLabel : "all-time"),
+    [activeTab, monthLabel]
+  );
+
+  const getFileName = useCallback(
+    () => `hall-of-fame-${getLabel().toLowerCase().replace(/\s+/g, "-")}.png`,
+    [getLabel]
+  );
+
+  // Shared capture logic
+  const captureImage = useCallback(async (): Promise<string> => {
+    const { toPng } = await import("html-to-image");
+
+    const imgEls = Array.from(
+      containerRef.current!.querySelectorAll("img")
+    ) as HTMLImageElement[];
+    const originalSrcs = imgEls.map((img) => img.src);
+
+    await Promise.all(
+      imgEls.map(async (img) => {
+        try {
+          img.src = await toBase64Url(img.src);
+        } catch (e) {
+          void e;
+        }
+      })
+    );
+
+    const actionBtns = Array.from(
+      containerRef.current!.querySelectorAll("[data-action-btn]")
+    ) as HTMLElement[];
+    actionBtns.forEach((btn) => {
+      btn.style.visibility = "hidden";
+    });
+
+    const dataUrl = await toPng(containerRef.current!, {
+      cacheBust: true,
+      pixelRatio: 2,
+    });
+
+    actionBtns.forEach((btn) => {
+      btn.style.visibility = "visible";
+    });
+    imgEls.forEach((img, i) => {
+      img.src = originalSrcs[i];
+    });
+
+    return dataUrl;
+  }, []);
+
   const handleDownload = useCallback(async () => {
     if (!containerRef.current) return;
     setIsDownloading(true);
-
     try {
-      const { toPng } = await import("html-to-image");
-
-      const imgEls = Array.from(
-        containerRef.current.querySelectorAll("img")
-      ) as HTMLImageElement[];
-      const originalSrcs = imgEls.map((img) => img.src);
-
-      await Promise.all(
-        imgEls.map(async (img) => {
-          try {
-            img.src = await toBase64Url(img.src);
-          } catch (e) {
-            void e;
-          }
-        })
-      );
-
-      // Hide the download button from the snapshot
-      const dlBtn = containerRef.current.querySelector(
-        "[data-dl-btn]"
-      ) as HTMLElement | null;
-      if (dlBtn) dlBtn.style.visibility = "hidden";
-
-      const dataUrl = await toPng(containerRef.current, {
-        cacheBust: true,
-        pixelRatio: 2,
-      });
-
-      // Restore
-      if (dlBtn) dlBtn.style.visibility = "visible";
-      imgEls.forEach((img, i) => {
-        img.src = originalSrcs[i];
-      });
-
-      const label = activeTab === "monthly" ? monthLabel : "all-time";
+      const dataUrl = await captureImage();
       const link = document.createElement("a");
-      link.download = `hall-of-fame-${label
-        .toLowerCase()
-        .replace(/\s+/g, "-")}.png`;
+      link.download = getFileName();
       link.href = dataUrl;
       link.click();
     } catch (err) {
@@ -170,7 +186,26 @@ export default function TopScorersPanel({
     } finally {
       setIsDownloading(false);
     }
-  }, [activeTab, monthLabel]);
+  }, [captureImage, getFileName]);
+
+  const handleCopy = useCallback(async () => {
+    if (!containerRef.current) return;
+    setIsCopying(true);
+    try {
+      const dataUrl = await captureImage();
+      const fetchRes = await fetch(dataUrl);
+      const blob = await fetchRes.blob();
+      await navigator.clipboard.write([
+        new ClipboardItem({ "image/png": blob }),
+      ]);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy image:", err);
+    } finally {
+      setIsCopying(false);
+    }
+  }, [captureImage]);
 
   return (
     <div
@@ -221,7 +256,7 @@ export default function TopScorersPanel({
           </div>
         </div>
 
-        {/* Tab switcher + download icon */}
+        {/* Tab switcher + action buttons */}
         <div className='relative flex items-center gap-2'>
           <div className='flex flex-1 rounded-xl bg-gray-100 p-0.5 gap-0.5'>
             {TABS.map((tab) => (
@@ -245,11 +280,11 @@ export default function TopScorersPanel({
             ))}
           </div>
 
-          {/* Small icon-only download button */}
+          {/* Download icon button */}
           <button
-            data-dl-btn
+            data-action-btn
             onClick={handleDownload}
-            disabled={isDownloading}
+            disabled={isDownloading || isCopying}
             title='Download image'
             className='flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-lg border border-mf-red text-mf-red hover:bg-mf-red hover:text-white transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed'
           >
@@ -285,6 +320,72 @@ export default function TopScorersPanel({
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   d='M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 4v11'
+                />
+              </svg>
+            )}
+          </button>
+
+          {/* Copy icon button */}
+          <button
+            data-action-btn
+            onClick={handleCopy}
+            disabled={isCopying || isDownloading}
+            title={copied ? "Copied!" : "Copy image to clipboard"}
+            className={`flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-lg border transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed
+              ${
+                copied
+                  ? "border-green-500 text-green-500 bg-green-50"
+                  : "border-mf-red text-mf-red hover:bg-mf-red hover:text-white"
+              }`}
+          >
+            {isCopying ? (
+              <svg
+                className='animate-spin w-3.5 h-3.5'
+                fill='none'
+                viewBox='0 0 24 24'
+              >
+                <circle
+                  className='opacity-25'
+                  cx='12'
+                  cy='12'
+                  r='10'
+                  stroke='currentColor'
+                  strokeWidth='4'
+                />
+                <path
+                  className='opacity-75'
+                  fill='currentColor'
+                  d='M4 12a8 8 0 018-8v8z'
+                />
+              </svg>
+            ) : copied ? (
+              // Checkmark when copied
+              <svg
+                className='w-3.5 h-3.5'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth={2.5}
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M5 13l4 4L19 7'
+                />
+              </svg>
+            ) : (
+              // Copy icon
+              <svg
+                className='w-3.5 h-3.5'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth={2}
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z'
                 />
               </svg>
             )}
@@ -336,7 +437,6 @@ export default function TopScorersPanel({
                       >
                         👑
                       </span>
-
                       <div className='relative mb-1'>
                         <div
                           className='absolute inset-0 rounded-full blur-lg scale-[1.3] opacity-75'
@@ -398,7 +498,6 @@ export default function TopScorersPanel({
             {/* Ranks 4–10 */}
             {rest.length > 0 && (
               <div className='px-3 py-2 flex flex-col gap-1'>
-                {/* Desktop: always shown */}
                 <div className='hidden lg:flex flex-col gap-1'>
                   {rest.map((scorer, i) => (
                     <RankRow
@@ -414,7 +513,6 @@ export default function TopScorersPanel({
                   ))}
                 </div>
 
-                {/* Mobile: collapsible */}
                 <div className='lg:hidden flex flex-col gap-1'>
                   <button
                     onClick={() => setMobileRestOpen((v) => !v)}
