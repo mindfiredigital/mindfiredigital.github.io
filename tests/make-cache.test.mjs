@@ -139,3 +139,85 @@ describe("filterHumanCommits", () => {
     assert.equal(filterHumanCommits(commits).length, 1);
   });
 });
+
+describe("filterMergedPRs", () => {
+  const sha1 = "abc123";
+  const shas = new Set([sha1]);
+
+  it("keeps PRs that are merged and on the default branch", () => {
+    assert.equal(
+      filterMergedPRs(
+        [
+          {
+            merged_at: "2024-01-01",
+            user: { login: "alice" },
+            merge_commit_sha: sha1,
+          },
+        ],
+        shas
+      ).length,
+      1
+    );
+  });
+
+  it("removes PRs not in defaultBranchSHAs", () => {
+    assert.equal(
+      filterMergedPRs(
+        [
+          {
+            merged_at: "2024-01-01",
+            user: { login: "alice" },
+            merge_commit_sha: "other",
+          },
+        ],
+        shas
+      ).length,
+      0
+    );
+  });
+
+  it("removes unmerged PRs (no merged_at)", () => {
+    assert.equal(
+      filterMergedPRs(
+        [{ merged_at: null, user: { login: "alice" }, merge_commit_sha: sha1 }],
+        shas
+      ).length,
+      0
+    );
+  });
+
+  it("removes PRs from bots", () => {
+    assert.equal(
+      filterMergedPRs(
+        [
+          {
+            merged_at: "2024-01-01",
+            user: { login: "dependabot[bot]" },
+            merge_commit_sha: sha1,
+          },
+        ],
+        shas
+      ).length,
+      0
+    );
+  });
+
+  it("removes PRs with null merge_commit_sha", () => {
+    assert.equal(
+      filterMergedPRs(
+        [
+          {
+            merged_at: "2024-01-01",
+            user: { login: "alice" },
+            merge_commit_sha: null,
+          },
+        ],
+        shas
+      ).length,
+      0
+    );
+  });
+
+  it("handles empty PR list", () =>
+    assert.deepEqual(filterMergedPRs([], shas), []));
+});
