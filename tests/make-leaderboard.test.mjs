@@ -209,3 +209,135 @@ describe("applyMonthlyCaps", () => {
     assert.equal(applyMonthlyCaps(items, 1, "merged_at").length, 1);
   });
 });
+
+describe("calculateScore", () => {
+  it("returns 0 for empty stats", () =>
+    assert.equal(calculateScore(emptyStats()).total, 0));
+  it("scores commits at 2pts each", () =>
+    assert.equal(calculateScore(emptyStats({ commits: 5 })).code_score, 10));
+  it("scores small PR at base × 1.0 = 5", () =>
+    assert.equal(
+      calculateScore(emptyStats({ prs: [{ multiplier: 1.0 }] })).code_score,
+      5
+    ));
+  it("scores medium PR at base × 1.3 = 6.5 → rounded 7", () =>
+    assert.equal(
+      calculateScore(emptyStats({ prs: [{ multiplier: 1.3 }] })).code_score,
+      Math.round(5 * 1.3)
+    ));
+  it("scores large PR at base × 1.7 = 8.5 → rounded 9", () =>
+    assert.equal(
+      calculateScore(emptyStats({ prs: [{ multiplier: 1.7 }] })).code_score,
+      Math.round(5 * 1.7)
+    ));
+  it("scores PR reviews at 3pts each", () =>
+    assert.equal(
+      calculateScore(emptyStats({ pr_reviews_given: 4 })).code_score,
+      12
+    ));
+  it("scores code review comments at 1pt each", () =>
+    assert.equal(
+      calculateScore(emptyStats({ code_review_comments: 7 })).code_score,
+      7
+    ));
+
+  it("scores issues opened at 2pts each", () => {
+    const stats = emptyStats({
+      issues_opened: [
+        { created_at: "2024-01-01" },
+        { created_at: "2024-01-02" },
+      ],
+    });
+    assert.equal(calculateScore(stats).community_score, 4);
+  });
+
+  it("scores issue comments at 1pt each", () => {
+    const stats = emptyStats({
+      issue_comments_given: [
+        { created_at: "2024-01-01" },
+        { created_at: "2024-01-02" },
+      ],
+    });
+    assert.equal(calculateScore(stats).community_score, 2);
+  });
+
+  it("adds 10pts per project for diversity", () =>
+    assert.equal(
+      calculateScore(emptyStats({ projectsWorkingOn: 3 })).community_score,
+      30
+    ));
+
+  it("scores has_tests=1 + has_docs=1 + zero_revisions=1 as quality=4", () => {
+    const stats = emptyStats({
+      quality_metrics: {
+        has_tests: 1,
+        has_docs: 1,
+        first_time_mentor: 0,
+        zero_revisions: 1,
+        impact_bonuses: [],
+      },
+    });
+    assert.equal(calculateScore(stats).quality_score, 4);
+  });
+
+  it("scores first_time_mentor at 5pts each", () => {
+    const stats = emptyStats({
+      quality_metrics: {
+        has_tests: 0,
+        has_docs: 0,
+        first_time_mentor: 2,
+        zero_revisions: 0,
+        impact_bonuses: [],
+      },
+    });
+    assert.equal(calculateScore(stats).quality_score, 10);
+  });
+
+  it("includes impact bonuses in quality score", () => {
+    const stats = emptyStats({
+      quality_metrics: {
+        has_tests: 0,
+        has_docs: 0,
+        first_time_mentor: 0,
+        zero_revisions: 0,
+        impact_bonuses: [7, 3],
+      },
+    });
+    assert.equal(calculateScore(stats).quality_score, 10);
+  });
+
+  it("total equals code + community + quality", () => {
+    const stats = emptyStats({
+      commits: 3,
+      pr_reviews_given: 1,
+      projectsWorkingOn: 1,
+      quality_metrics: {
+        has_tests: 1,
+        has_docs: 0,
+        first_time_mentor: 0,
+        zero_revisions: 0,
+        impact_bonuses: [],
+      },
+    });
+    const r = calculateScore(stats);
+    assert.equal(r.total, r.code_score + r.community_score + r.quality_score);
+  });
+
+  it("caps issues at 10/month (15 issues in Jan → 20pts not 30pts)", () => {
+    const stats = emptyStats({
+      issues_opened: Array.from({ length: 15 }, () => ({
+        created_at: "2024-01-15",
+      })),
+    });
+    assert.equal(calculateScore(stats).community_score, 20);
+  });
+
+  it("caps issue comments at 20/month (25 comments in Jan → 20pts)", () => {
+    const stats = emptyStats({
+      issue_comments_given: Array.from({ length: 25 }, () => ({
+        created_at: "2024-01-15",
+      })),
+    });
+    assert.equal(calculateScore(stats).community_score, 20);
+  });
+});
