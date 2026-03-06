@@ -300,3 +300,24 @@ describe("normalizeCommit", () => {
     assert.equal(normalizeCommit(commit).message, "");
   });
 });
+
+describe("mapIssue", () => {
+  it("maps only the expected fields and drops extras", () => {
+    const issue = {
+      number: 42,
+      author: "alice",
+      title: "Something broke",
+      created_at: "2024-01-01",
+      comments: 3,
+      comment_authors: [{ author: "bob" }],
+      extra_field: "dropped",
+    };
+    const result = mapIssue(issue);
+    assert.equal(result.number, 42);
+    assert.equal(result.author, "alice");
+    assert.equal(result.title, "Something broke");
+    assert.equal(result.comments, 3);
+    assert.equal(result.comment_authors.length, 1);
+    assert.equal(result.extra_field, undefined);
+  });
+});
