@@ -14,7 +14,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/canvas-editor",
     "stars": 20,
     "tags": [],
-    "lastPushedAt": "2025-12-16T14:35:05Z"
+    "lastPushedAt": "2026-03-02T08:42:54Z"
   },
   {
     "id": 3,
@@ -211,7 +211,7 @@
     "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
     "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
     "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/blob/main/README.md",
-    "stars": 18,
+    "stars": 19,
     "tags": ["agent", "ai", "huggingface", "javascript", "langchain"],
     "lastPushedAt": "2024-10-03T09:14:36Z"
   },
@@ -321,7 +321,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/ignix-ui/",
     "stars": 52,
     "tags": ["component", "radix", "radix-ui", "react", "shadcn"],
-    "lastPushedAt": "2026-02-25T12:35:57Z"
+    "lastPushedAt": "2026-03-03T09:38:33Z"
   },
   {
     "id": 24,
@@ -446,7 +446,7 @@
       "endtoendtesting",
       "llm"
     ],
-    "lastPushedAt": "2026-02-27T11:59:11Z"
+    "lastPushedAt": "2026-03-05T13:01:58Z"
   },
   {
     "id": 31,
@@ -478,9 +478,9 @@
     "shortDescription": "Monodog provides developers with a centralized visual interface to track workspace health, analyze package dependencies, and view Git histories across all individual modules in a single view. By automating the oversight of complex repo structures, it replaces manual CLI checks with a streamlined UI that monitors build statuses and security vulnerabilities in real-time.",
     "githubUrl": "https://github.com/mindfiredigital/MonoDog",
     "documentationUrl": "https://github.com/mindfiredigital/MonoDog/blob/main/README.md",
-    "stars": 17,
+    "stars": 18,
     "tags": [],
-    "lastPushedAt": "2026-03-02T04:17:51Z"
+    "lastPushedAt": "2026-03-03T09:00:31Z"
   },
   {
     "id": 33,
@@ -495,8 +495,8 @@
     "shortDescription": "TextIgniterJS is a lightweight, powerful, and intuitive HTML editor library built in TypeScript that provides rich-text editing features developers can integrate into web projects. It offers common editor capabilities like bold, italic, underline, lists, tables, hyperlinks, image insertion, and lets you retrieve editor content as HTML or JSON for use in your app UI or workflows.",
     "githubUrl": "https://github.com/mindfiredigital/TextIgniterJS",
     "documentationUrl": "https://github.com/mindfiredigital/TextIgniterJS/blob/main/README.md",
-    "stars": 36,
+    "stars": 37,
     "tags": [],
-    "lastPushedAt": "2026-02-27T18:36:32Z"
+    "lastPushedAt": "2026-03-03T10:42:29Z"
   }
 ]
