@@ -221,3 +221,30 @@ describe("filterMergedPRs", () => {
   it("handles empty PR list", () =>
     assert.deepEqual(filterMergedPRs([], shas), []));
 });
+
+describe("categorizeIssue", () => {
+  it("categorizes 'bug' as bugs", () =>
+    assert.equal(categorizeIssue(["bug"]), "bugs"));
+  it("categorizes 'fix' as bugs", () =>
+    assert.equal(categorizeIssue(["fix"]), "bugs"));
+  it("categorizes 'enhancement' as enhancements", () =>
+    assert.equal(categorizeIssue(["enhancement"]), "enhancements"));
+  it("categorizes 'feature' as enhancements", () =>
+    assert.equal(categorizeIssue(["feature"]), "enhancements"));
+  it("categorizes 'improvement' as enhancements", () =>
+    assert.equal(categorizeIssue(["improvement"]), "enhancements"));
+  it("categorizes 'documentation' as documentation", () =>
+    assert.equal(categorizeIssue(["documentation"]), "documentation"));
+  it("categorizes 'docs' as documentation", () =>
+    assert.equal(categorizeIssue(["docs"]), "documentation"));
+  it("categorizes 'doc' as documentation", () =>
+    assert.equal(categorizeIssue(["doc"]), "documentation"));
+  it("categorizes unknown labels as others", () =>
+    assert.equal(categorizeIssue(["question", "help-wanted"]), "others"));
+  it("categorizes empty labels as others", () =>
+    assert.equal(categorizeIssue([]), "others"));
+  it("is case-insensitive", () =>
+    assert.equal(categorizeIssue(["BUG"]), "bugs"));
+  it("bug takes priority when mixed with enhancement", () =>
+    assert.equal(categorizeIssue(["enhancement", "bug"]), "bugs"));
+});
