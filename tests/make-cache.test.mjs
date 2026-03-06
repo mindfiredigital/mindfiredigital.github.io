@@ -248,3 +248,55 @@ describe("categorizeIssue", () => {
   it("bug takes priority when mixed with enhancement", () =>
     assert.equal(categorizeIssue(["enhancement", "bug"]), "bugs"));
 });
+
+describe("normalizeCommit", () => {
+  it("extracts all fields correctly", () => {
+    const commit = {
+      sha: "abc123",
+      author: { login: "alice" },
+      commit: {
+        author: { name: "Alice", date: "2024-01-01" },
+        message: "feat: add stuff",
+      },
+    };
+    const result = normalizeCommit(commit);
+    assert.equal(result.sha, "abc123");
+    assert.equal(result.author_login, "alice");
+    assert.equal(result.author_name, "Alice");
+    assert.equal(result.date, "2024-01-01");
+    assert.equal(result.message, "feat: add stuff");
+  });
+
+  it("truncates multi-line commit message to first line", () => {
+    const commit = {
+      sha: "xyz",
+      author: { login: "bob" },
+      commit: {
+        author: { name: "Bob", date: "2024-02-01" },
+        message: "feat: thing\n\nBody text",
+      },
+    };
+    assert.equal(normalizeCommit(commit).message, "feat: thing");
+  });
+
+  it("uses null for missing author login", () => {
+    const commit = {
+      sha: "abc",
+      author: null,
+      commit: {
+        author: { name: "Someone", date: "2024-01-01" },
+        message: "fix: bug",
+      },
+    };
+    assert.equal(normalizeCommit(commit).author_login, null);
+  });
+
+  it("handles empty message string", () => {
+    const commit = {
+      sha: "abc",
+      author: { login: "alice" },
+      commit: { author: { name: "Alice", date: "2024-01-01" }, message: "" },
+    };
+    assert.equal(normalizeCommit(commit).message, "");
+  });
+});
