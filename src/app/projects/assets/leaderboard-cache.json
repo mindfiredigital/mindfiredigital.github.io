@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:44:10.672Z",
+    "fetched_at": "2026-03-09T13:56:13.806Z",
     "commits": [
       {
         "sha": "472fc175c93ad086c35d209a7926233f0a4077e3",
@@ -1654,7 +1654,7 @@
       {
         "sha": "fb78f0a0aa4e19e156a09dc530e84bf86e5b861a",
         "author_login": "1019058432",
-        "author_name": "芦苇先���",
+        "author_name": "芦苇先生",
         "date": "2023-04-22T08:39:01Z",
         "message": "feat: enable keyboard event when image resizer (#179)"
       },
@@ -3936,7 +3936,7 @@
       {
         "sha": "a55b23dc2ab14ee33a69db82b9998e6b33d01eb0",
         "author_login": "Hufe921",
-        "author_name": "��云飞",
+        "author_name": "黄云飞",
         "date": "2022-07-01T09:45:32Z",
         "message": "fix:file case error"
       },
@@ -4146,7 +4146,7 @@
       {
         "sha": "fd1a8032d9e873918b8f3cea1b81fd9deaa7c2a5",
         "author_login": "Hufe921",
-        "author_name": "���云飞",
+        "author_name": "黄云飞",
         "date": "2022-05-01T14:27:01Z",
         "message": "v0.8.9"
       },
@@ -5147,7 +5147,7 @@
       {
         "sha": "8a4688cfd1cb3df44531f6e9048e19dd5add85e9",
         "author_login": "Hufe921",
-        "author_name": "黄云飞",
+        "author_name": "黄���飞",
         "date": "2021-12-29T12:42:34Z",
         "message": "feat:data persistence"
       },
@@ -5504,7 +5504,7 @@
       {
         "sha": "8ed09d325c512540a68b2546f00b8b3c4e83f5c1",
         "author_login": "Hufe921",
-        "author_name": "��云飞",
+        "author_name": "黄云飞",
         "date": "2021-11-20T10:49:37Z",
         "message": "v0.2.0"
       },
@@ -5562,7 +5562,7 @@
         "author_login": "Hufe921",
         "author_name": "黄云飞",
         "date": "2021-11-19T07:53:37Z",
-        "message": "feat:增加行间距"
+        "message": "feat:增加行间��"
       },
       {
         "sha": "e41ec6eb09c482ed0898942a06f6aab91f06ea7b",
@@ -6330,7 +6330,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:44:13.850Z",
+    "fetched_at": "2026-03-09T13:56:18.617Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7511,7 +7511,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:44:30.666Z",
+    "fetched_at": "2026-03-09T13:56:42.594Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -8007,7 +8007,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-03-06T07:44:48.334Z",
+    "fetched_at": "2026-03-09T13:57:03.980Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9342,7 +9342,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-03-06T07:44:50.242Z",
+    "fetched_at": "2026-03-09T13:57:06.529Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9380,7 +9380,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:45:14.876Z",
+    "fetched_at": "2026-03-09T13:57:31.073Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10237,7 +10237,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:45:34.466Z",
+    "fetched_at": "2026-03-09T13:57:54.185Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -10751,7 +10751,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:46:01.567Z",
+    "fetched_at": "2026-03-09T13:58:24.788Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11336,7 +11336,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:46:43.384Z",
+    "fetched_at": "2026-03-09T13:59:14.768Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -13697,7 +13697,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-03-06T07:47:38.379Z",
+    "fetched_at": "2026-03-09T14:00:08.799Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15359,7 +15359,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-03-06T07:48:41.359Z",
+    "fetched_at": "2026-03-09T14:01:20.289Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17201,7 +17201,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:49:17.367Z",
+    "fetched_at": "2026-03-09T14:02:07.242Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -17887,7 +17887,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-03-06T07:50:27.432Z",
+    "fetched_at": "2026-03-09T14:03:43.855Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -20257,7 +20257,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:53:37.736Z",
+    "fetched_at": "2026-03-09T14:07:45.005Z",
     "commits": [
       {
         "sha": "9cb628a1066d6f36ec9eefdf9bf5edb02d450795",
@@ -26449,8 +26449,15 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:58:07.855Z",
+    "fetched_at": "2026-03-09T14:12:56.274Z",
     "commits": [
+      {
+        "sha": "f01ec9eea488d963ec9bd706ec62a9c09ad3cef9",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T13:52:13Z",
+        "message": "chore(release): version packages (#283)"
+      },
       {
         "sha": "a9b1b2957bf082d243f222f52413d5de4ccdd058",
         "author_login": "anandmindfire",
@@ -34832,7 +34839,7 @@
       ]
     },
     "stats": {
-      "total_commits": 685,
+      "total_commits": 686,
       "total_merged_prs": 155,
       "total_bugs": 17,
       "total_enhancements": 37,
@@ -34845,7 +34852,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:58:09.636Z",
+    "fetched_at": "2026-03-09T14:12:58.355Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -34883,7 +34890,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T07:58:42.691Z",
+    "fetched_at": "2026-03-09T14:13:39.053Z",
     "commits": [
       {
         "sha": "16df0b5e69d9b9a634c7b090e4ff72a471becac6",
@@ -35930,7 +35937,24 @@
       "bugs": [],
       "enhancements": [],
       "documentation": [],
-      "others": []
+      "others": [
+        {
+          "number": 34,
+          "author": "biswalom22",
+          "title": "[Feature]:(react): add Jest + React Testing Library test suite",
+          "created_at": "2026-03-06T10:01:39Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 33,
+          "author": "biswalom22",
+          "title": "fix(react): 10 runtime, memory leak, and production bugs in react-canvas-editor",
+          "created_at": "2026-03-06T09:59:35Z",
+          "comments": 0,
+          "comment_authors": []
+        }
+      ]
     },
     "stats": {
       "total_commits": 96,
@@ -35938,7 +35962,7 @@
       "total_bugs": 0,
       "total_enhancements": 0,
       "total_documentation": 0,
-      "total_others": 0
+      "total_others": 2
     }
   },
   "23": {
@@ -35946,7 +35970,7 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:10.260Z",
+    "fetched_at": "2026-03-09T14:25:27.110Z",
     "commits": [
       {
         "sha": "79b753ab1b8d39384d3f380bd7c1c16a18c26743",
@@ -51421,6 +51445,14 @@
       ],
       "others": [
         {
+          "number": 639,
+          "author": "NikhilMeshram01",
+          "title": "[Feature]: Dynamic Form (5.5.4)",
+          "created_at": "2026-03-06T11:00:55Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
           "number": 637,
           "author": "ashutosh-jena-mindfire",
           "title": "[BUG]: Dropdown content is not fully visible and overflows the container",
@@ -51449,16 +51481,26 @@
           "author": "ashutosh-jena-mindfire",
           "title": "[BUG]: Circle is not aligned correctly during the animation (Pulse and Glow)",
           "created_at": "2026-03-05T08:13:24Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-03-06T10:49:08Z"
+            }
+          ]
         },
         {
           "number": 633,
           "author": "soumya0809mindfiresolutions",
           "title": "[BUG]: Placeholder text overlaps input border in “bounce” variant",
           "created_at": "2026-03-04T08:06:55Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "sanobery",
+              "created_at": "2026-03-09T11:08:44Z"
+            }
+          ]
         },
         {
           "number": 632,
@@ -53021,7 +53063,7 @@
       "total_bugs": 23,
       "total_enhancements": 31,
       "total_documentation": 23,
-      "total_others": 147
+      "total_others": 148
     }
   },
   "24": {
@@ -53029,7 +53071,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:13.662Z",
+    "fetched_at": "2026-03-09T14:25:30.082Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -53172,7 +53214,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:15.981Z",
+    "fetched_at": "2026-03-09T14:25:32.330Z",
     "commits": [
       {
         "sha": "6b3070cb5b0d489ca4139394745198b4daa1004a",
@@ -53329,7 +53371,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-03-06T08:09:17.757Z",
+    "fetched_at": "2026-03-09T14:25:34.380Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -53367,7 +53409,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:27.174Z",
+    "fetched_at": "2026-03-09T14:25:44.168Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -53599,7 +53641,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:29.021Z",
+    "fetched_at": "2026-03-09T14:25:46.359Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -53651,7 +53693,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:09:31.262Z",
+    "fetched_at": "2026-03-09T14:25:48.816Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -53703,7 +53745,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:30:44.092Z",
+    "fetched_at": "2026-03-09T14:40:49.958Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -54734,7 +54776,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:31:46.614Z",
+    "fetched_at": "2026-03-09T14:42:07.951Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -57186,8 +57228,155 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:32:22.203Z",
+    "fetched_at": "2026-03-09T14:43:00.343Z",
     "commits": [
+      {
+        "sha": "e440afe2dc16e58425059047d9e5c01ae99c1812",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:22:48Z",
+        "message": "chore: Merge pull request #41 from mindfiredigital/changeset-release/main"
+      },
+      {
+        "sha": "ab4fd74608887d34bea4edd32a52e29744dc5295",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:18:32Z",
+        "message": "feat(monodog): Merge pull request #40 from mindfiredigital/development"
+      },
+      {
+        "sha": "7b723c4e080f6928588874da5d19058bcf8a541f",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:17:31Z",
+        "message": "feat(monodog): Merge pull request #39 from mindfiredigital/docs-patch-1"
+      },
+      {
+        "sha": "ce4598f147dbcb1b63ee6ea0fa4330a6f815ba6b",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:16:57Z",
+        "message": "feat(monodog): Create CONTRIBUTING.md with contribution guidelines"
+      },
+      {
+        "sha": "4c8871be89b1c089644e49be1273d5f34e160d18",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:09:43Z",
+        "message": "feat: Merge pull request #38 from mindfiredigital/development"
+      },
+      {
+        "sha": "ec6ba1e840e79e0cfcd3a0b123ce9401130189e3",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:08:38Z",
+        "message": "feat: Merge pull request #37 from mindfiredigital/doc-patch-1"
+      },
+      {
+        "sha": "2694836aba943ad005ab0f376060e38687ca8060",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T14:08:11Z",
+        "message": "feat: Add Code of Conduct for the MonoDog project"
+      },
+      {
+        "sha": "3baea629e9b5ec2b92cbc0e0172823c11f019f56",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-03T05:20:10Z",
+        "message": "feat(monodog): Merge pull request #35 from mindfiredigital/feature/release"
+      },
+      {
+        "sha": "83e9e73e69106d263cf5538e690eee9a75f2d7a3",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-03-02T04:17:34Z",
+        "message": "chore:  Refactoring ang optimize code"
+      },
+      {
+        "sha": "820dc432d971310137606671acf493eb06c53497",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T20:54:50Z",
+        "message": "chore: Added Ducumentation"
+      },
+      {
+        "sha": "eedfe104634f7b5ad1a5502b84ff67fad00c3f2d",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T20:15:54Z",
+        "message": "fix(monodog): fix unit test error, added text constants"
+      },
+      {
+        "sha": "c1aa5659b9f096b9e1630adce33d434228adebac",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T18:19:04Z",
+        "message": "test: Added unit tests for changeset release"
+      },
+      {
+        "sha": "9a030635809227b905ee42d754f6d474a48174a5",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T18:06:27Z",
+        "message": "feat(monodog): UI-Based Package Publishing & Monorepo Version Control Using Changesets"
+      },
+      {
+        "sha": "30f3ddc742d2b9f7d005565adc76fad45fd9a2a7",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-02-27T11:35:58Z",
+        "message": "feat(monodog): Merge pull request #34 from mindfiredigital/feature/git-oauth"
+      },
+      {
+        "sha": "564e6017fc44b7f4348d0db1eb9e3661f2a1ed04",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T11:24:17Z",
+        "message": "fix(monodog): fix lint issues"
+      },
+      {
+        "sha": "189824ef3bc97b82168cac282690d81638e7199c",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T11:13:31Z",
+        "message": "docs(monodog): Added Documentation and swagger API docs"
+      },
+      {
+        "sha": "e0f69bea4cb0c87ebdbe079ece09245bf394dca6",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T09:37:46Z",
+        "message": "chore(monodog): Added unit tests"
+      },
+      {
+        "sha": "27dd7baa70f121c6c072f52efc6e39b44bd327db",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T09:34:49Z",
+        "message": "fix(monodog): updated icons"
+      },
+      {
+        "sha": "355c698c5b6a5627b09445f1bc90fea5b21a601f",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-27T07:19:55Z",
+        "message": "fix(monodog): Code refactor -added constants,  separate types and interface files, added API interceptor, use cookies"
+      },
+      {
+        "sha": "a4eecf69cd8b5ac2b6d9bea90a07a6359ab6ec97",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-26T20:30:11Z",
+        "message": "fix(monodog): Refactor  auth code to use route-controller-service"
+      },
+      {
+        "sha": "9c7321febb23d1c1c89614534017dd8e701b4cb0",
+        "author_login": "manojkmfsi",
+        "author_name": "Manoj Kumar",
+        "date": "2026-02-25T03:23:33Z",
+        "message": "feat(monodog): Repository-Scoped GitHub OAuth Authentication & Permission Mapping"
+      },
       {
         "sha": "7f06f02fc8727f2293989332b98a4c82c7231827",
         "author_login": "anandmindfire",
@@ -57961,6 +58150,204 @@
     ],
     "merged_prs": [
       {
+        "number": 40,
+        "author": "anandmindfire",
+        "title": "Release from Development",
+        "merged_at": "2026-03-09T14:18:33Z",
+        "created_at": "2026-03-09T14:18:19Z",
+        "base_ref": "main",
+        "merge_commit_sha": "ab4fd74608887d34bea4edd32a52e29744dc5295",
+        "changed_files": 1,
+        "additions": 131,
+        "deletions": 0,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 39,
+        "author": "anandmindfire",
+        "title": "feat(monodog): Create CONTRIBUTING.md with contribution guidelines",
+        "merged_at": "2026-03-09T14:17:31Z",
+        "created_at": "2026-03-09T14:17:07Z",
+        "base_ref": "development",
+        "merge_commit_sha": "7b723c4e080f6928588874da5d19058bcf8a541f",
+        "changed_files": 1,
+        "additions": 131,
+        "deletions": 0,
+        "complexity": "medium",
+        "complexity_multiplier": 1.3,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 38,
+        "author": "anandmindfire",
+        "title": "Release from Development",
+        "merged_at": "2026-03-09T14:09:43Z",
+        "created_at": "2026-03-09T14:09:11Z",
+        "base_ref": "main",
+        "merge_commit_sha": "4c8871be89b1c089644e49be1273d5f34e160d18",
+        "changed_files": 204,
+        "additions": 15897,
+        "deletions": 2281,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 37,
+        "author": "anandmindfire",
+        "title": "feat: Add Code of Conduct for the MonoDog project",
+        "merged_at": "2026-03-09T14:08:38Z",
+        "created_at": "2026-03-09T14:08:22Z",
+        "base_ref": "development",
+        "merge_commit_sha": "ec6ba1e840e79e0cfcd3a0b123ce9401130189e3",
+        "changed_files": 1,
+        "additions": 70,
+        "deletions": 0,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 35,
+        "author": "manojkmfsi",
+        "title": "feat(monodog): UI-Based Package Publishing & Monorepo Version Control Using Changesets ",
+        "merged_at": "2026-03-03T05:20:11Z",
+        "created_at": "2026-02-27T21:02:43Z",
+        "base_ref": "development",
+        "merge_commit_sha": "3baea629e9b5ec2b92cbc0e0172823c11f019f56",
+        "changed_files": 61,
+        "additions": 4443,
+        "deletions": 550,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 1,
+        "review_comments_count": 0,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "APPROVED",
+            "submitted_at": "2026-03-03T05:19:52Z"
+          }
+        ],
+        "review_comments": []
+      },
+      {
+        "number": 34,
+        "author": "manojkmfsi",
+        "title": "feat(monodog): Repository-Scoped GitHub OAuth Authentication & Permission Mapping",
+        "merged_at": "2026-02-27T11:35:58Z",
+        "created_at": "2026-02-25T03:46:57Z",
+        "base_ref": "development",
+        "merge_commit_sha": "30f3ddc742d2b9f7d005565adc76fad45fd9a2a7",
+        "changed_files": 165,
+        "additions": 11866,
+        "deletions": 2213,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 2,
+        "review_comments_count": 18,
+        "reviews": [
+          {
+            "reviewer": "anandmindfire",
+            "state": "COMMENTED",
+            "submitted_at": "2026-02-25T04:21:45Z"
+          },
+          {
+            "reviewer": "anandmindfire",
+            "state": "COMMENTED",
+            "submitted_at": "2026-02-25T04:35:21Z"
+          }
+        ],
+        "review_comments": [
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:05:04Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:06:41Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:08:55Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:09:41Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:10:04Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:10:41Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:11:27Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:12:07Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:13:37Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:15:59Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:17:26Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:19:21Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:20:17Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:21:14Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:23:33Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:23:56Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:26:49Z"
+          },
+          {
+            "author": "anandmindfire",
+            "created_at": "2026-02-25T04:28:02Z"
+          }
+        ]
+      },
+      {
         "number": 26,
         "author": "anandmindfire",
         "title": "Development",
@@ -58381,8 +58768,8 @@
       ]
     },
     "stats": {
-      "total_commits": 110,
-      "total_merged_prs": 18,
+      "total_commits": 131,
+      "total_merged_prs": 24,
       "total_bugs": 0,
       "total_enhancements": 4,
       "total_documentation": 2,
@@ -58394,7 +58781,7 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:37:07.457Z",
+    "fetched_at": "2026-03-09T14:49:12.941Z",
     "commits": [
       {
         "sha": "59af3ede5b96bed477c857e59b2041e9adc32b38",
@@ -65104,7 +65491,7 @@
     "project_title": "ADAC (Architecture Diagram as Code)",
     "repo_name": "adac-tools",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:37:32.411Z",
+    "fetched_at": "2026-03-09T14:49:45.292Z",
     "commits": [
       {
         "sha": "37e01ffc153e501ee4beafbd563cc7359f2261c1",
@@ -65722,7 +66109,7 @@
     "project_title": "Agentic Web Starter",
     "repo_name": "Agentic-Web-Starter",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:37:34.186Z",
+    "fetched_at": "2026-03-09T14:49:47.544Z",
     "commits": [
       {
         "sha": "e2b558a0b56bb8880abf7b5e97576998f6fd64ea",
@@ -65753,8 +66140,120 @@
     "project_title": "Mindfire Foss Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-03-06T08:43:17.388Z",
+    "fetched_at": "2026-03-09T14:57:56.098Z",
     "commits": [
+      {
+        "sha": "a41c501879b82a9862c19dd413ac27776265b927",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T13:55:42Z",
+        "message": "fix: Merge pull request #253 from mindfiredigital/dev"
+      },
+      {
+        "sha": "9e18fe581e4db0829e85a8000ed7ae2f458258ee",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T13:54:55Z",
+        "message": "fix: Merge pull request #252 from mindfiredigital/readme-patch-1"
+      },
+      {
+        "sha": "8d390bdd36f8692442a21e79f35f0fad3694587e",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-09T13:54:32Z",
+        "message": "fix: Markdown formatting in README"
+      },
+      {
+        "sha": "402d5b8a0e0332a359af563646e6a015f3cac18a",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-06T09:17:22Z",
+        "message": "feat: Merge pull request #251 from mindfiredigital/dev"
+      },
+      {
+        "sha": "2e77f6ed16034c5736f3ba0e3ef64909de0c2b9f",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-03-06T09:16:10Z",
+        "message": "feat: Merge pull request #250 from ParasMindfire/feat/test"
+      },
+      {
+        "sha": "e2aba24956d95448251e66864eded8a637d5d881",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T09:00:36Z",
+        "message": "feat(projects): update json data"
+      },
+      {
+        "sha": "447bb25d7b14fb5e77e44de9d07f5b592610ee62",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T07:22:13Z",
+        "message": "feat(contributors): add copy button to copy image"
+      },
+      {
+        "sha": "4efa65b4da52b1b819eee7efd643d8b770227f5a",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T06:00:11Z",
+        "message": "feat(test): add mapping of contributors"
+      },
+      {
+        "sha": "27ca69a88b4e7cfe8c4de37d2d56e9667cfd63e2",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:58:30Z",
+        "message": "feat(test): add normalise commit test"
+      },
+      {
+        "sha": "af98fb4bb1438c1e2a17c1c826acbc141a393436",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:54:46Z",
+        "message": "feat(test): add categorise issue test case"
+      },
+      {
+        "sha": "517547eea063d4e6cb4c859a7757d19325d7f9ff",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:53:25Z",
+        "message": "feat(test): add filter merged pr test"
+      },
+      {
+        "sha": "5b29db1331d92f0750373686527bef9bc8708f8c",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:52:05Z",
+        "message": "feat(test): add filter human test case"
+      },
+      {
+        "sha": "fee5db74020e9728ebd5b0c342ea3fe445f87a2f",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:50:38Z",
+        "message": "feat(test): add is bot test case"
+      },
+      {
+        "sha": "06a39a3e82e6383614b3ebf290a404ec4202cdd0",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:42:45Z",
+        "message": "feat(test): add calculate score test in leaderborad test file"
+      },
+      {
+        "sha": "d67a5fc96036b866028555c1c262b877f2e64f9c",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:40:19Z",
+        "message": "feat(test): add monthly caps in leaderborad test file"
+      },
+      {
+        "sha": "4ab8f6fb4ecdc4364aae14bf0dafc1e8394e60d7",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-03-06T05:37:28Z",
+        "message": "feat(test): add pr complexity test in leaderboard test file"
+      },
       {
         "sha": "c71663a50c6d8181675f9eb257607a3798927dac",
         "author_login": "anandmindfire",
@@ -69579,6 +70078,78 @@
       }
     ],
     "merged_prs": [
+      {
+        "number": 253,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-03-09T13:55:42Z",
+        "created_at": "2026-03-09T13:55:21Z",
+        "base_ref": "main",
+        "merge_commit_sha": "a41c501879b82a9862c19dd413ac27776265b927",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 252,
+        "author": "anandmindfire",
+        "title": "fix: Markdown formatting in README",
+        "merged_at": "2026-03-09T13:54:55Z",
+        "created_at": "2026-03-09T13:54:41Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "9e18fe581e4db0829e85a8000ed7ae2f458258ee",
+        "changed_files": 1,
+        "additions": 1,
+        "deletions": 1,
+        "complexity": "small",
+        "complexity_multiplier": 1,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 251,
+        "author": "anandmindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-03-06T09:17:23Z",
+        "created_at": "2026-03-06T09:16:58Z",
+        "base_ref": "main",
+        "merge_commit_sha": "402d5b8a0e0332a359af563646e6a015f3cac18a",
+        "changed_files": 12,
+        "additions": 9860,
+        "deletions": 6932,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 250,
+        "author": "ParasMindfire",
+        "title": "Feat: add test cases for leaderboard generation script and add copy button",
+        "merged_at": "2026-03-06T09:16:10Z",
+        "created_at": "2026-03-06T07:28:23Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "2e77f6ed16034c5736f3ba0e3ef64909de0c2b9f",
+        "changed_files": 12,
+        "additions": 9860,
+        "deletions": 6932,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
       {
         "number": 248,
         "author": "anandmindfire",
@@ -73717,8 +74288,8 @@
       ]
     },
     "stats": {
-      "total_commits": 546,
-      "total_merged_prs": 200,
+      "total_commits": 562,
+      "total_merged_prs": 204,
       "total_bugs": 0,
       "total_enhancements": 4,
       "total_documentation": 1,
