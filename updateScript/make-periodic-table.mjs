@@ -470,15 +470,6 @@ function applyMonthlyCaps(items, cap, dateField = "created_at") {
   return capped;
 }
 
-// ============================================================================
-// Read manifest to find the earliest month we have data for any project.
-// For periodic script: we treat "project first seen" as the month_key of the
-// archive file that first contains that contributor × project combo.
-// Since the periodic script only has THIS month's live data, we award the
-// project diversity bonus only for projects the contributor is joining for the
-// first time — checked by reading the manifest + past archive files.
-// ============================================================================
-
 function loadManifestMonths() {
   try {
     const fullPath = path.resolve(CONFIG.OUTPUT_FILES.manifest);
@@ -490,8 +481,6 @@ function loadManifestMonths() {
   }
 }
 
-// Returns Set<"projectTitle"> that a contributor has ALREADY received
-// the diversity bonus for in any past month (by scanning archive files)
 function getAlreadyBonusedProjects(username, pastMonthKeys) {
   const bonusedProjects = new Set();
   for (const mk of pastMonthKeys) {
@@ -521,7 +510,6 @@ function scoreUser(username, projectDataList, pastMonthKeys) {
     issue_comments_given = [];
   const qm = { has_tests: 0, has_docs: 0, zero_revisions: 0 };
   const projectNames = [];
-  // Monthly diversity: only new projects (not seen in any past month)
   let newProjectsCount = 0;
 
   const alreadyBonused = getAlreadyBonusedProjects(username, pastMonthKeys);
@@ -580,7 +568,6 @@ function scoreUser(username, projectDataList, pastMonthKeys) {
 
     if (hasActivity) {
       projectNames.push(pd.project_title);
-      // Only award diversity bonus if this project is new for this contributor
       if (!alreadyBonused.has(pd.project_title)) {
         newProjectsCount++;
       }
