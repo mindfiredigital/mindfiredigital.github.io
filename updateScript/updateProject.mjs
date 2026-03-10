@@ -284,5 +284,4 @@ async function updateProjects() {
   }
 }
 
-// Call the main function
 updateProjects();

@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-// ============================================================================
-// CONFIGURATION
-// ============================================================================
+/* CONFIGURATION */
 
 const CONFIG = {
   INPUT_FILES: {
@@ -16,14 +14,14 @@ const CONFIG = {
   OUTPUT_FILES: {
     leaderboard: "./src/app/projects/assets/leaderboard.json",
     topScorers: "./src/app/projects/assets/top-scorers.json",
+    monthlyArchiveDir: "./public/leaderboard",
+    manifest: "./public/leaderboard/manifest.json",
   },
 
   SPECIAL_PROJECT_IDS: ["special-website"],
 };
 
-// ============================================================================
-// SCORING SYSTEM
-// ============================================================================
+/* SCORING SYSTEM */
 
 const SCORING = {
   PR_MERGED_BASE: 5,
@@ -52,7 +50,7 @@ const SCORING = {
     critical: 10,
   },
 
-  PROJECT_DIVERSITY: 10, // ← NEW: 10 pts per unique project contributed to
+  PROJECT_DIVERSITY: 10,
 
   CAPS: {
     ISSUES_PER_MONTH: 10,
@@ -60,9 +58,7 @@ const SCORING = {
   },
 };
 
-// ============================================================================
-// HELPERS
-// ============================================================================
+/* HELPERS */
 
 function readJsonFile(filePath) {
   try {
@@ -91,16 +87,15 @@ function writeJsonFile(filePath, data) {
   }
 }
 
-// ============================================================================
-// APPLY MONTHLY CAPS
-// ============================================================================
+/* APPLY MONTHLY CAPS — uses UTC so it matches toMonthKey() exactly */
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
   for (const item of items) {
-    const date = new Date(item[dateField]);
-    const monthKey = `${date.getFullYear()}-${String(
-      date.getMonth() + 1
+    const d = new Date(item[dateField]);
+    // UTC month key — must match toMonthKey() which also uses UTC
+    const monthKey = `${d.getUTCFullYear()}-${String(
+      d.getUTCMonth() + 1
     ).padStart(2, "0")}`;
     if (!byMonth[monthKey]) byMonth[monthKey] = [];
     byMonth[monthKey].push(item);
@@ -110,9 +105,7 @@ function applyMonthlyCaps(items, cap, dateField = "created_at") {
   return capped;
 }
 
-// ============================================================================
-// ANALYZE USER IN PROJECT
-// ============================================================================
+/* ANALYZE USER IN PROJECT */
 
 function analyzeUserInProject(username, projectData) {
   const stats = {
@@ -229,12 +222,9 @@ function analyzeUserInProject(username, projectData) {
   return stats;
 }
 
-// ============================================================================
-// CALCULATE SCORE
-// ============================================================================
+/* CALCULATE SCORE */
 
 function calculateScore(userStats) {
-  // Code score
   let prScore = 0;
   for (const pr of userStats.prs) {
     prScore += SCORING.PR_MERGED_BASE * pr.multiplier;
@@ -246,7 +236,6 @@ function calculateScore(userStats) {
     userStats.pr_reviews_given * SCORING.PR_REVIEW_GIVEN +
     userStats.code_review_comments * SCORING.CODE_REVIEW_COMMENT;
 
-  // Community score (with monthly caps)
   const cappedIssues = applyMonthlyCaps(
     userStats.issues_opened,
     SCORING.CAPS.ISSUES_PER_MONTH
@@ -256,20 +245,17 @@ function calculateScore(userStats) {
     SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH
   );
 
-  // ← NEW: multi-project diversity bonus
-  const projectsWorkedOn = userStats.projectsWorkingOn || 0;
-  const projectDiversityScore = projectsWorkedOn * SCORING.PROJECT_DIVERSITY;
+  const projectDiversityScore =
+    (userStats.projectsWorkingOn || 0) * SCORING.PROJECT_DIVERSITY;
 
   const communityScore =
     cappedIssues.length * SCORING.ISSUE_OPENED +
     cappedIssueComments.length * SCORING.ISSUE_COMMENT +
-    projectDiversityScore; // ← NEW
+    projectDiversityScore;
 
-  // Quality score
-  const impactBonusTotal = userStats.quality_metrics.impact_bonuses.reduce(
-    (sum, bonus) => sum + bonus,
-    0
-  );
+  const impactBonusTotal = (
+    userStats.quality_metrics.impact_bonuses || []
+  ).reduce((sum, bonus) => sum + bonus, 0);
 
   const qualityScore =
     impactBonusTotal +
@@ -293,7 +279,7 @@ function calculateScore(userStats) {
         userStats.code_review_comments * SCORING.CODE_REVIEW_COMMENT,
       issues_opened_score: cappedIssues.length * SCORING.ISSUE_OPENED,
       issue_comments_score: cappedIssueComments.length * SCORING.ISSUE_COMMENT,
-      projects_score: projectDiversityScore, // ← NEW
+      projects_score: projectDiversityScore,
       tests_score: userStats.quality_metrics.has_tests * SCORING.HAS_TESTS,
       docs_score: userStats.quality_metrics.has_docs * SCORING.HAS_DOCS,
       mentor_score:
@@ -316,13 +302,137 @@ function calculateScore(userStats) {
   };
 }
 
-// ============================================================================
-// GENERATE LEADERBOARD
-// ============================================================================
+/* MONTHLY HELPERS */
+
+function toMonthKey(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d)) return null;
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
+    2,
+    "0"
+  )}`;
+}
+
+function getAllMonthKeys(cachedData) {
+  const keys = new Set();
+  for (const projectData of Object.values(cachedData)) {
+    for (const commit of projectData.commits || []) {
+      const k = toMonthKey(commit.date);
+      if (k) keys.add(k);
+    }
+    for (const pr of projectData.merged_prs || []) {
+      const k = toMonthKey(pr.merged_at);
+      if (k) keys.add(k);
+    }
+    for (const category of [
+      "bugs",
+      "enhancements",
+      "documentation",
+      "others",
+    ]) {
+      for (const issue of projectData.issues?.[category] || []) {
+        const k = toMonthKey(issue.created_at);
+        if (k) keys.add(k);
+      }
+    }
+  }
+  return Array.from(keys).sort();
+}
+
+function sliceIssues(issues, monthKey) {
+  const result = [];
+  for (const issue of issues) {
+    if (toMonthKey(issue.created_at) !== monthKey) continue;
+    result.push({
+      ...issue,
+      comment_authors: issue.comment_authors || [], // ← remove the month filter
+    });
+  }
+  return result;
+}
+
+function sliceCachedDataToMonth(cachedData, monthKey) {
+  const sliced = {};
+  for (const [projectId, projectData] of Object.entries(cachedData)) {
+    sliced[projectId] = {
+      ...projectData,
+      commits: (projectData.commits || []).filter(
+        (c) => toMonthKey(c.date) === monthKey
+      ),
+      merged_prs: (projectData.merged_prs || []).filter(
+        (pr) => toMonthKey(pr.merged_at) === monthKey
+      ),
+      issues: {
+        bugs: sliceIssues(projectData.issues?.bugs || [], monthKey),
+        enhancements: sliceIssues(
+          projectData.issues?.enhancements || [],
+          monthKey
+        ),
+        documentation: sliceIssues(
+          projectData.issues?.documentation || [],
+          monthKey
+        ),
+        others: sliceIssues(projectData.issues?.others || [], monthKey),
+      },
+    };
+  }
+  return sliced;
+}
+// Build Map<username, Map<projectId, earliestMonthKey>>
+function buildEarliestContributionMap(cachedData, contributors, allProjectIds) {
+  const map = new Map();
+
+  for (const contributor of contributors) {
+    const username = contributor.login;
+    const projectMap = new Map();
+
+    for (const projectId of allProjectIds) {
+      const projectData = cachedData[projectId];
+      if (!projectData) continue;
+
+      const dates = [];
+
+      for (const commit of projectData.commits || []) {
+        if (
+          commit.author_login === username ||
+          commit.author_name?.toLowerCase().includes(username.toLowerCase())
+        ) {
+          if (commit.date) dates.push(commit.date);
+        }
+      }
+      for (const pr of projectData.merged_prs || []) {
+        if (pr.author === username && pr.merged_at) dates.push(pr.merged_at);
+      }
+      for (const category of [
+        "bugs",
+        "enhancements",
+        "documentation",
+        "others",
+      ]) {
+        for (const issue of projectData.issues?.[category] || []) {
+          if (issue.author === username && issue.created_at)
+            dates.push(issue.created_at);
+        }
+      }
+
+      if (dates.length > 0) {
+        dates.sort();
+        projectMap.set(projectId, toMonthKey(dates[0]));
+      }
+    }
+
+    map.set(username, projectMap);
+  }
+
+  return map;
+}
+
+/* GENERATE ALL-TIME LEADERBOARD */
 
 function generateLeaderboard() {
   console.log("\n" + "=".repeat(80));
-  console.log("🏆 GENERATING LEADERBOARD");
+  console.log("🏆 GENERATING ALL-TIME LEADERBOARD");
   console.log("=".repeat(80) + "\n");
 
   const contributors = readJsonFile(CONFIG.INPUT_FILES.contributors) || [];
@@ -343,9 +453,9 @@ function generateLeaderboard() {
     console.log(`📌 Processing ${username}...`);
 
     const userMappedProjectIds = contributorMapping[username] || [];
-    const allProjectIds = [
-      ...new Set([...userMappedProjectIds, ...CONFIG.SPECIAL_PROJECT_IDS]),
-    ];
+    const allProjectIds = Array.from(
+      new Set([...userMappedProjectIds, ...CONFIG.SPECIAL_PROJECT_IDS])
+    );
 
     const userStats = {
       commits: 0,
@@ -426,7 +536,6 @@ function generateLeaderboard() {
       id: contributor.id,
       avatar_url: contributor.avatar_url,
       html_url: contributor.html_url,
-
       totalCommits: userStats.commits,
       totalPRs: userStats.prs.length,
       totalPRReviewsGiven: userStats.pr_reviews_given,
@@ -435,16 +544,13 @@ function generateLeaderboard() {
       totalIssueComments: scoreData.capped_counts.issue_comments,
       avgCommitsPerPR: parseFloat(avgCommitsPerPR),
       projectsWorkingOn: userStats.projectsWorkingOn,
-
       prs_by_complexity: scoreData.prs_by_complexity,
-
       total_score: scoreData.total,
       code_score: scoreData.code_score,
       community_score: scoreData.community_score,
       quality_score: scoreData.quality_score,
       score_breakdown: scoreData.breakdown,
       capped_counts: scoreData.capped_counts,
-
       projects: userStats.projects,
       byProject: userStats.byProject,
       lastActiveDays: contributor.lastActiveDays || null,
@@ -460,12 +566,209 @@ function generateLeaderboard() {
     contributor.rank = index + 1;
   });
 
-  return leaderboardData;
+  return { leaderboardData, contributors, contributorMapping, cachedData };
 }
 
-// ============================================================================
-// DISPLAY TOP SCORERS
-// ============================================================================
+/* GENERATE MONTHLY BREAKDOWN FROM CACHE */
+
+function generateMonthlyBreakdownFromCache(
+  contributors,
+  contributorMapping,
+  cachedData
+) {
+  console.log("\n" + "=".repeat(80));
+  console.log("📅 GENERATING MONTHLY BREAKDOWN FROM CACHE");
+  console.log("=".repeat(80));
+
+  const allMonths = getAllMonthKeys(cachedData);
+  if (allMonths.length === 0) {
+    console.log(
+      "⚠️  No month keys found in cache — skipping monthly breakdown"
+    );
+    return;
+  }
+
+  console.log(
+    `\n   Found ${allMonths.length} months: ${allMonths[0]} → ${
+      allMonths[allMonths.length - 1]
+    }\n`
+  );
+
+  const allProjectIds = new Set(CONFIG.SPECIAL_PROJECT_IDS);
+  for (const ids of Object.values(contributorMapping)) {
+    for (const id of ids) allProjectIds.add(id);
+  }
+
+  const earliestMap = buildEarliestContributionMap(
+    cachedData,
+    contributors,
+    Array.from(allProjectIds)
+  );
+
+  // Build a reverse lookup: projectId → project_title (from cached data)
+  const projectTitleById = {};
+  for (const [projectId, projectData] of Object.entries(cachedData)) {
+    if (projectData.project_title) {
+      projectTitleById[projectId] = projectData.project_title;
+    }
+  }
+
+  for (const monthKey of allMonths) {
+    console.log(`\n📊 Scoring ${monthKey}...`);
+    const monthSlice = sliceCachedDataToMonth(cachedData, monthKey);
+    const monthResults = [];
+
+    for (const contributor of contributors) {
+      const username = contributor.login;
+      const userMappedProjectIds = contributorMapping[username] || [];
+      const userProjectIds = Array.from(
+        new Set([...userMappedProjectIds, ...CONFIG.SPECIAL_PROJECT_IDS])
+      );
+
+      const userStats = {
+        commits: 0,
+        prs: [],
+        pr_reviews_given: 0,
+        code_review_comments: 0,
+        issues_opened: [],
+        issue_comments_given: [],
+        projectsWorkingOn: 0, // new-project diversity bonus count
+        quality_metrics: {
+          has_tests: 0,
+          has_docs: 0,
+          first_time_mentor: 0,
+          zero_revisions: 0,
+          impact_bonuses: [],
+        },
+      };
+
+      // Track projects with any activity this month (for display + projects field)
+      const activeProjectTitles = [];
+      const userEarliestMap = earliestMap.get(username) || new Map();
+
+      for (const projectId of userProjectIds) {
+        const projectData = monthSlice[projectId];
+        if (!projectData) continue;
+
+        // Called exactly ONCE per project — no double calls
+        const projectStats = analyzeUserInProject(username, projectData);
+
+        const hasContributions =
+          projectStats.commits > 0 ||
+          projectStats.prs.length > 0 ||
+          projectStats.issues_opened.length > 0 ||
+          projectStats.pr_reviews_given > 0 ||
+          projectStats.code_review_comments > 0 ||
+          projectStats.issue_comments_given.length > 0;
+
+        if (!hasContributions) continue;
+
+        // Track this project as active this month
+        const title = projectTitleById[projectId] || projectId;
+        activeProjectTitles.push(title);
+
+        userStats.commits += projectStats.commits;
+        userStats.prs.push(...projectStats.prs);
+        userStats.pr_reviews_given += projectStats.pr_reviews_given;
+        userStats.code_review_comments += projectStats.code_review_comments;
+        userStats.issues_opened.push(...projectStats.issues_opened);
+        userStats.issue_comments_given.push(
+          ...projectStats.issue_comments_given
+        );
+        userStats.quality_metrics.has_tests +=
+          projectStats.quality_metrics.has_tests;
+        userStats.quality_metrics.has_docs +=
+          projectStats.quality_metrics.has_docs;
+        userStats.quality_metrics.zero_revisions +=
+          projectStats.quality_metrics.zero_revisions;
+
+        // Diversity bonus: only in the month user FIRST ever touched this project
+        const firstMonth = userEarliestMap.get(projectId);
+        if (firstMonth === monthKey) {
+          userStats.projectsWorkingOn++;
+        }
+      }
+
+      const scoreData = calculateScore(userStats);
+      if (scoreData.total === 0) continue;
+
+      monthResults.push({
+        rank: 0,
+        username,
+        id: contributor.id,
+        avatar_url: contributor.avatar_url,
+        html_url: contributor.html_url,
+        totalCommits: userStats.commits,
+        totalPRs: userStats.prs.length,
+        totalPRReviewsGiven: userStats.pr_reviews_given,
+        totalCodeReviewComments: userStats.code_review_comments,
+        totalIssuesOpened: userStats.issues_opened.length,
+        totalIssueComments: scoreData.capped_counts.issue_comments,
+        avgCommitsPerPR:
+          userStats.prs.length > 0
+            ? parseFloat((userStats.commits / userStats.prs.length).toFixed(2))
+            : 0,
+        projectsWorkingOn: activeProjectTitles.length,
+        projects: activeProjectTitles,
+        newProjectsThisMonth: userStats.projectsWorkingOn,
+        prs_by_complexity: scoreData.prs_by_complexity,
+        total_score: scoreData.total,
+        code_score: scoreData.code_score,
+        community_score: scoreData.community_score,
+        quality_score: scoreData.quality_score,
+        score_breakdown: scoreData.breakdown,
+        capped_counts: scoreData.capped_counts,
+        lastActiveDays: contributor.lastActiveDays ?? null,
+      });
+    }
+
+    monthResults.sort((a, b) => b.total_score - a.total_score);
+    monthResults.forEach((c, i) => {
+      c.rank = i + 1;
+    });
+
+    const [year, month] = monthKey.split("-");
+    const monthLabel = new Date(
+      Number(year),
+      Number(month) - 1,
+      1
+    ).toLocaleString("default", { month: "long", year: "numeric" });
+
+    const payload = {
+      generated_at: new Date().toISOString(),
+      period: "monthly",
+      month_label: monthLabel,
+      month_key: monthKey,
+      total_contributors: monthResults.length,
+      leaderboard: monthResults,
+    };
+
+    const filePath = path.join(
+      CONFIG.OUTPUT_FILES.monthlyArchiveDir,
+      `leaderboard-${monthKey}.json`
+    );
+    writeJsonFile(filePath, payload);
+
+    if (monthResults[0]) {
+      console.log(
+        `   🥇 ${monthResults[0].username} — ${monthResults[0].total_score} pts (${monthResults.length} active contributors)`
+      );
+    } else {
+      console.log(`   😴 No active contributors`);
+    }
+  }
+
+  const manifest = {
+    months: Array.from(allMonths).reverse(),
+    updated_at: new Date().toISOString(),
+  };
+  writeJsonFile(CONFIG.OUTPUT_FILES.manifest, manifest);
+  console.log(
+    `\n📋 manifest.json written — ${allMonths.length} months indexed`
+  );
+}
+
+/* DISPLAY TOP SCORERS */
 
 function displayTopScorers(leaderboard, topN = 10) {
   console.log("\n" + "=".repeat(80));
@@ -499,33 +802,35 @@ function displayTopScorers(leaderboard, topN = 10) {
   console.log("=".repeat(80) + "\n");
 }
 
-// ============================================================================
-// MAIN
-// ============================================================================
+/* MAIN */
 
 function main() {
   try {
     console.log("🚀 Starting Leaderboard Generation...\n");
 
-    const leaderboard = generateLeaderboard();
+    const { leaderboardData, contributors, contributorMapping, cachedData } =
+      generateLeaderboard();
 
     const summary = {
-      total_contributors: leaderboard.length,
-      total_commits: leaderboard.reduce((sum, c) => sum + c.totalCommits, 0),
-      total_prs: leaderboard.reduce((sum, c) => sum + c.totalPRs, 0),
-      total_pr_reviews: leaderboard.reduce(
+      total_contributors: leaderboardData.length,
+      total_commits: leaderboardData.reduce(
+        (sum, c) => sum + c.totalCommits,
+        0
+      ),
+      total_prs: leaderboardData.reduce((sum, c) => sum + c.totalPRs, 0),
+      total_pr_reviews: leaderboardData.reduce(
         (sum, c) => sum + c.totalPRReviewsGiven,
         0
       ),
-      total_issues: leaderboard.reduce(
+      total_issues: leaderboardData.reduce(
         (sum, c) => sum + c.totalIssuesOpened,
         0
       ),
       avg_score:
-        leaderboard.length > 0
+        leaderboardData.length > 0
           ? Math.round(
-              leaderboard.reduce((sum, c) => sum + c.total_score, 0) /
-                leaderboard.length
+              leaderboardData.reduce((sum, c) => sum + c.total_score, 0) /
+                leaderboardData.length
             )
           : 0,
     };
@@ -540,12 +845,12 @@ function main() {
         community_formula:
           "(ΣIssues × 2) [cap: 10/month] + (ΣIssue_Comments × 1) [cap: 20/month] + (ΣProjects × 10)",
         quality_formula:
-          "Impact_bonuses + Tests + Docs + Mentor + Zero_revisions",
-        note: "PRs and commits counted only if merged/committed to the default branch",
+          "Impact_bonuses + Tests×1 + Docs×1 + Mentor×5 + ZeroRevisions×2",
+        note: "PRs and commits counted only on default branch. Monthly project diversity bonus awarded only in the first month a contributor joins a project. All month boundaries use UTC.",
       },
       scoring_weights: SCORING,
       summary,
-      leaderboard,
+      leaderboard: leaderboardData,
     };
 
     writeJsonFile(CONFIG.OUTPUT_FILES.leaderboard, outputData);
@@ -553,11 +858,11 @@ function main() {
     const top50 = {
       generated_at: new Date().toISOString(),
       scoring_weights: SCORING,
-      top_scorers: leaderboard.slice(0, 50),
+      top_scorers: leaderboardData.slice(0, 50),
     };
     writeJsonFile(CONFIG.OUTPUT_FILES.topScorers, top50);
 
-    displayTopScorers(leaderboard, 10);
+    displayTopScorers(leaderboardData, 10);
 
     console.log("📈 SUMMARY:");
     console.log(`   Contributors: ${summary.total_contributors}`);
@@ -567,13 +872,20 @@ function main() {
     console.log(`   Issues:       ${summary.total_issues}`);
     console.log(`   Avg Score:    ${summary.avg_score}`);
     console.log(
-      `   Top Score:    ${leaderboard[0]?.total_score || 0} (${
-        leaderboard[0]?.username || "N/A"
+      `   Top Score:    ${leaderboardData[0]?.total_score || 0} (${
+        leaderboardData[0]?.username || "N/A"
       })`
     );
+
+    generateMonthlyBreakdownFromCache(
+      contributors,
+      contributorMapping,
+      cachedData
+    );
+
     console.log("\n✅ Done!\n");
 
-    return leaderboard;
+    return leaderboardData;
   } catch (error) {
     console.error("\n❌ Fatal error:", error);
     console.error(error.stack);

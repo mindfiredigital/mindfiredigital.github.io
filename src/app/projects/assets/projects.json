@@ -438,7 +438,7 @@
     "shortDescription": "A new GenAI-powered test automation command-line tool that analyzes live web pages, automatically derives test cases, and generates production-ready Python Selenium scripts—designed to reduce manual QA effort and speed up test coverage. The team has now started working on a web-based product.",
     "githubUrl": "https://github.com/mindfiredigital/AUTOTEST",
     "documentationUrl": "https://github.com/mindfiredigital/AUTOTEST",
-    "stars": 32,
+    "stars": 33,
     "tags": [
       "automation-testing",
       "chromium",
@@ -446,7 +446,7 @@
       "endtoendtesting",
       "llm"
     ],
-    "lastPushedAt": "2026-03-05T13:01:58Z"
+    "lastPushedAt": "2026-03-09T07:56:57Z"
   },
   {
     "id": 31,

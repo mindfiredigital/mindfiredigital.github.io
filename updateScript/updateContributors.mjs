@@ -1,19 +1,18 @@
 import { gitBaseUrl, gitOwner, githubToken } from "./config.mjs";
 import { fetchData } from "./config.mjs";
 import fs from "fs";
-import path from "path";
 import axios from "axios";
 
 const PROJECTS_PATH = "./src/app/projects/assets/projects.json";
 const MAPPING_PATH = "./src/app/projects/assets/contributor-mapping.json";
-const TOKEN = process.env.GITHUB_TOKEN; // Use GITHUB_TOKEN from env (set in CI or .env.local)
+const TOKEN = process.env.GITHUB_TOKEN;
 
 async function fetchDefaultBranch(owner, repo, token) {
   const repoDetails = await fetchData(`${gitBaseUrl}/${owner}/${repo}`, {
     headers: { Authorization: `token ${token}` },
   });
 
-  return repoDetails.default_branch; // e.g. "main"
+  return repoDetails.default_branch;
 }
 
 async function fetchPullRequestCount(owner, repo, author, token) {
@@ -102,7 +101,7 @@ async function fetchAllCommits(owner, repo, branch = undefined, token) {
         );
         return [];
       }
-      throw err; // Re-throw for other errors
+      throw err;
     }
   }
 
@@ -258,7 +257,6 @@ async function fetchContributorsFromBranchExcludingParent(
     const author = commit?.author;
     const login = author?.login;
 
-    // Skip if this contributor already existed in parent
     if (login && parentContributors.has(login)) {
       continue;
     }
@@ -325,8 +323,6 @@ export async function getContributorData(contributor) {
 
 async function generateMapping() {
   const currentProjects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
-
-  // ← NEW: also load upcoming projects
   const UPCOMING_PROJECTS_PATH =
     "./src/app/projects/assets/upcomingProjects.json";
   let upcomingProjects = [];
@@ -341,7 +337,6 @@ async function generateMapping() {
     );
   }
 
-  // ← NEW: merge both lists
   const allProjects = [...currentProjects, ...upcomingProjects];
   const mapping = {};
 

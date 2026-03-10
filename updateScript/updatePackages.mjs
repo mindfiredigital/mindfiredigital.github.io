@@ -36,7 +36,6 @@ class RequestQueue {
     } finally {
       this.running--;
 
-      // Add delay before processing next request
       if (this.queue.length > 0) {
         await delay(this.delayBetweenRequests);
       }
@@ -47,7 +46,7 @@ class RequestQueue {
 }
 
 // Create a single queue instance for npm requests
-const npmQueue = new RequestQueue(1, 1000); // concurrency: 1, delay: 1000ms
+const npmQueue = new RequestQueue(1, 1000);
 
 // Function to fetch with retry logic for rate limiting
 async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
@@ -149,7 +148,6 @@ export async function getAllStats(npmPackages, pypiPackages) {
 
   // Fetch stats for PyPI packages (parallel is ok, different API)
   console.log(`\n📊 Fetching PyPI stats...`);
-  // In the PyPI section, change to:
   await Promise.all(
     pypiPackages.map(async (packageName) => {
       try {
@@ -163,8 +161,8 @@ export async function getAllStats(npmPackages, pypiPackages) {
             day: stats.last_day || 0,
             week: stats.last_week || 0,
             month: stats.last_month || 0,
-            year: 0, // pepy.tech doesn't provide yearly, only all-time
-            total: totalDownloads, // ALL-TIME downloads from pepy.tech
+            year: 0,
+            total: totalDownloads,
           };
           console.log(
             `✅ ${packageName} (PyPI): day=${stats.last_day}, week=${stats.last_week}, month=${stats.last_month}, total=${totalDownloads}`
@@ -293,7 +291,6 @@ async function updatePackages() {
       description: project.short_description,
       isMonoRepo: project.is_mono_repo,
       repoUrl: project.github_repository_link,
-      // We keep the packages nested inside the project
       packages: project.packages.map((pkg) => ({
         name: pkg.package_name,
         type: pkg.package_type,
