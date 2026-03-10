@@ -354,20 +354,13 @@ function getAllMonthKeys(cachedData) {
   return Array.from(keys).sort();
 }
 
-// Slice issues to a month AND filter their comment_authors to that same month.
-// Without this, an issue opened in March that has April comments would
-// incorrectly award April comment points when scoring March.
 function sliceIssues(issues, monthKey) {
   const result = [];
   for (const issue of issues) {
-    // Issue itself must belong to this month
     if (toMonthKey(issue.created_at) !== monthKey) continue;
     result.push({
       ...issue,
-      // Only keep comments that also fall within this month
-      comment_authors: (issue.comment_authors || []).filter(
-        (c) => toMonthKey(c.created_at) === monthKey
-      ),
+      comment_authors: issue.comment_authors || [], // ← remove the month filter
     });
   }
   return result;

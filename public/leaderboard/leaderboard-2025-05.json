@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T14:57:59.498Z",
+  "generated_at": "2026-03-10T05:56:24.753Z",
   "period": "monthly",
   "month_label": "May 2025",
   "month_key": "2025-05",
@@ -162,7 +162,7 @@
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
-      "totalIssueComments": 4,
+      "totalIssueComments": 8,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 2,
       "projects": ["ESLint Plugin Hub", "Document Editor"],
@@ -172,9 +172,9 @@
         "medium": 1,
         "large": 1
       },
-      "total_score": 52,
+      "total_score": 56,
       "code_score": 32,
-      "community_score": 14,
+      "community_score": 18,
       "quality_score": 6,
       "score_breakdown": {
         "pr_score": 20,
@@ -182,7 +182,7 @@
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
-        "issue_comments_score": 4,
+        "issue_comments_score": 8,
         "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
@@ -193,8 +193,8 @@
       "capped_counts": {
         "issues_opened": 0,
         "issues_total": 0,
-        "issue_comments": 4,
-        "issue_comments_total": 4
+        "issue_comments": 8,
+        "issue_comments_total": 8
       },
       "lastActiveDays": 3
     },

@@ -459,10 +459,9 @@ function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
   for (const item of items) {
     const date = new Date(item[dateField]);
-    const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
-      2,
-      "0"
-    )}`;
+    const key = `${date.getUTCFullYear()}-${String(
+      date.getUTCMonth() + 1
+    ).padStart(2, "0")}`;
     if (!byMonth[key]) byMonth[key] = [];
     byMonth[key].push(item);
   }
