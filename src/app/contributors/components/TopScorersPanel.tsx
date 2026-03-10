@@ -137,7 +137,6 @@ function currentMonthKey(): string {
   )}`;
 }
 
-// ── Month Calendar Picker ──────────────────────────────────────────────────
 function MonthCalendarPicker({
   availableMonths,
   selectedMonth,
