@@ -56,12 +56,23 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
 
+      - name: 'Copy leaderboard data to temp before branch switch'
+        run: |
+          mkdir -p /tmp/leaderboard-data
+          cp -r public/leaderboard/* /tmp/leaderboard-data/
+
+      - name: 'Restore generated leaderboard files to allow branch switch'   
+        run: git restore public/leaderboard/
+
       - name: 'Copy build artifacts to gh-pages branch'
         run: |
           mkdir /tmp/temp-directory
           shopt -s dotglob
           cp -r build/* /tmp/temp-directory/
           shopt -u dotglob
+          # Also include the generated leaderboard data
+          mkdir -p /tmp/temp-directory/leaderboard
+          cp -r /tmp/leaderboard-data/* /tmp/temp-directory/leaderboard/
           git checkout gh-pages
           rm -rf *
           rm -rf .nojekyll
