@@ -138,7 +138,6 @@ function currentMonthKey(): string {
 }
 
 // ── Month Calendar Picker ──────────────────────────────────────────────────
-
 function MonthCalendarPicker({
   availableMonths,
   selectedMonth,
@@ -159,9 +158,9 @@ function MonthCalendarPicker({
     const [y] = selectedMonth.split("-");
     return Number(y);
   });
+  const [yearPickerOpen, setYearPickerOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Derived range from available months
   const availableSet = new Set(availableMonths);
   const years = Array.from(
     new Set(availableMonths.map((k) => Number(k.split("-")[0])))
@@ -173,6 +172,10 @@ function MonthCalendarPicker({
     const [y] = selectedMonth.split("-");
     setCalYear(Number(y));
   }, [selectedMonth]);
+
+  useEffect(() => {
+    if (!open) setYearPickerOpen(false);
+  }, [open]);
 
   useEffect(() => {
     function handleOutside(e: MouseEvent) {
@@ -191,6 +194,11 @@ function MonthCalendarPicker({
     if (!availableSet.has(key)) return;
     onSelect(key);
     setOpen(false);
+  };
+
+  const handleYearSelect = (year: number) => {
+    setCalYear(year);
+    setYearPickerOpen(false);
   };
 
   return (
@@ -234,125 +242,212 @@ function MonthCalendarPicker({
         </svg>
       </button>
 
-      {/* Calendar dropdown */}
+      {/* Dropdown */}
       {open && (
         <div className='absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden'>
-          {/* Year navigation */}
+          {/* ── Year navigation bar ── */}
           <div className='flex items-center justify-between px-3 py-2.5 border-b border-gray-100 bg-gray-50/70'>
-            <button
-              onClick={() => setCalYear((y) => Math.max(y - 1, minYear))}
-              disabled={calYear <= minYear}
-              className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all'
-            >
-              <svg
-                className='w-3.5 h-3.5'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth={2.5}
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M15 19l-7-7 7-7'
-                />
-              </svg>
-            </button>
-
-            <div className='flex items-center gap-1.5'>
-              <span className='text-[12px] font-black text-gray-800 tracking-tight'>
-                {calYear}
-              </span>
-              {calYear === Number(currentMonth.split("-")[0]) && (
-                <span className='text-[8px] font-bold text-mf-red bg-red-50 border border-red-200 rounded-full px-1.5 py-0.5 uppercase tracking-wide leading-none'>
-                  Now
-                </span>
-              )}
-            </div>
-
-            <button
-              onClick={() => setCalYear((y) => Math.min(y + 1, maxYear))}
-              disabled={calYear >= maxYear}
-              className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all'
-            >
-              <svg
-                className='w-3.5 h-3.5'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth={2.5}
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M9 5l7 7-7 7'
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Month grid */}
-          <div className='grid grid-cols-4 gap-1 p-2.5'>
-            {MONTH_NAMES_SHORT.map((name, idx) => {
-              const key = `${calYear}-${String(idx + 1).padStart(2, "0")}`;
-              const isAvailable = availableSet.has(key);
-              const isSelected = key === selectedMonth;
-              const isCurrent = key === currentMonth;
-
-              return (
+            {!yearPickerOpen ? (
+              // Normal mode: prev arrow | clickable year | next arrow
+              <>
                 <button
-                  key={key}
-                  onClick={() => handleMonthClick(idx)}
-                  disabled={!isAvailable}
-                  className={`
-                    relative flex flex-col items-center justify-center py-2 px-1 rounded-xl text-[11px] font-bold
-                    transition-all duration-150
-                    ${
-                      isSelected
-                        ? "bg-mf-red text-white shadow-md scale-105"
-                        : isAvailable
-                          ? "text-gray-700 hover:bg-red-50 hover:text-mf-red cursor-pointer"
-                          : "text-gray-300 cursor-not-allowed"
-                    }
-                  `}
+                  onClick={() => setCalYear((y) => Math.max(y - 1, minYear))}
+                  disabled={calYear <= minYear}
+                  className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all'
                 >
-                  {name}
-                  {isCurrent && (
-                    <span
-                      className={`mt-0.5 w-1 h-1 rounded-full ${
-                        isSelected ? "bg-white/70" : "bg-mf-red"
-                      }`}
+                  <svg
+                    className='w-3.5 h-3.5'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth={2.5}
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M15 19l-7-7 7-7'
                     />
-                  )}
-                  {isAvailable && !isSelected && (
-                    <span className='absolute top-1 right-1 w-1 h-1 rounded-full bg-green-400 opacity-70' />
-                  )}
+                  </svg>
                 </button>
-              );
-            })}
+
+                {/* Clickable year — opens year picker */}
+                <button
+                  onClick={() => setYearPickerOpen(true)}
+                  className='flex items-center gap-1 px-2 py-0.5 rounded-lg hover:bg-red-50 hover:text-mf-red transition-all duration-150 group/yr'
+                >
+                  <span className='text-[12px] font-black text-gray-800 group-hover/yr:text-mf-red tracking-tight transition-colors'>
+                    {calYear}
+                  </span>
+                  {calYear === Number(currentMonth.split("-")[0]) && (
+                    <span className='text-[8px] font-bold text-mf-red bg-red-50 border border-red-200 rounded-full px-1.5 py-0.5 uppercase tracking-wide leading-none'>
+                      Now
+                    </span>
+                  )}
+                  <svg
+                    className='w-3 h-3 text-gray-400 group-hover/yr:text-mf-red transition-colors'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth={2.5}
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M19 9l-7 7-7-7'
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  onClick={() => setCalYear((y) => Math.min(y + 1, maxYear))}
+                  disabled={calYear >= maxYear}
+                  className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all'
+                >
+                  <svg
+                    className='w-3.5 h-3.5'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth={2.5}
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M9 5l7 7-7 7'
+                    />
+                  </svg>
+                </button>
+              </>
+            ) : (
+              // Year-picker mode: back arrow | "Select Year" label
+              <>
+                <button
+                  onClick={() => setYearPickerOpen(false)}
+                  className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white transition-all'
+                >
+                  <svg
+                    className='w-3.5 h-3.5'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth={2.5}
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M15 19l-7-7 7-7'
+                    />
+                  </svg>
+                </button>
+                <span className='text-[11px] font-black text-gray-700 uppercase tracking-widest'>
+                  Select Year
+                </span>
+                <div className='w-6' /> {/* spacer */}
+              </>
+            )}
           </div>
 
-          {/* Legend */}
-          <div className='flex items-center justify-center gap-3 px-3 pb-2.5 pt-0.5'>
-            <div className='flex items-center gap-1'>
-              <span className='w-1.5 h-1.5 rounded-full bg-green-400' />
-              <span className='text-[9px] text-gray-400 font-medium'>
-                Has data
-              </span>
+          {/* ── Year picker grid ── */}
+          {yearPickerOpen ? (
+            <div className='grid grid-cols-3 gap-1.5 p-3'>
+              {years.map((year) => {
+                const isSelectedYear = year === calYear;
+                const isCurrentYear =
+                  year === Number(currentMonth.split("-")[0]);
+                return (
+                  <button
+                    key={year}
+                    onClick={() => handleYearSelect(year)}
+                    className={`
+                      relative flex flex-col items-center justify-center py-2.5 px-1 rounded-xl
+                      text-[12px] font-bold transition-all duration-150
+                      ${
+                        isSelectedYear
+                          ? "bg-mf-red text-white shadow-md scale-105 ring-2 ring-red-200"
+                          : "text-gray-700 hover:bg-red-50 hover:text-mf-red hover:scale-105 cursor-pointer"
+                      }
+                    `}
+                  >
+                    {year}
+                    {isCurrentYear && (
+                      <span
+                        className={`mt-0.5 w-1 h-1 rounded-full ${
+                          isSelectedYear
+                            ? "bg-white/70"
+                            : "bg-mf-red animate-pulse"
+                        }`}
+                      />
+                    )}
+                  </button>
+                );
+              })}
             </div>
-            <div className='flex items-center gap-1'>
-              <span className='w-1.5 h-1.5 rounded-full bg-mf-red' />
-              <span className='text-[9px] text-gray-400 font-medium'>
-                Current month
-              </span>
+          ) : (
+            /* ── Month grid ── */
+            <div className='grid grid-cols-4 gap-1 p-2.5'>
+              {MONTH_NAMES_SHORT.map((name, idx) => {
+                const key = `${calYear}-${String(idx + 1).padStart(2, "0")}`;
+                const isAvailable = availableSet.has(key);
+                const isSelected = key === selectedMonth;
+                const isCurrent = key === currentMonth;
+
+                return (
+                  <button
+                    key={key}
+                    onClick={() => handleMonthClick(idx)}
+                    disabled={!isAvailable}
+                    className={`
+                      relative flex flex-col items-center justify-center py-2 px-1 rounded-xl text-[11px] font-bold
+                      transition-all duration-150
+                      ${
+                        isSelected
+                          ? "bg-mf-red text-white shadow-md scale-105"
+                          : isAvailable
+                            ? "text-gray-700 hover:bg-red-50 hover:text-mf-red cursor-pointer"
+                            : "text-gray-300 cursor-not-allowed"
+                      }
+                    `}
+                  >
+                    {name}
+                    {isCurrent && (
+                      <span
+                        className={`mt-0.5 w-1 h-1 rounded-full ${
+                          isSelected ? "bg-white/70" : "bg-mf-red"
+                        }`}
+                      />
+                    )}
+                    {isAvailable && !isSelected && (
+                      <span className='absolute top-1 right-1 w-1 h-1 rounded-full bg-green-400 opacity-70' />
+                    )}
+                  </button>
+                );
+              })}
             </div>
-            <div className='flex items-center gap-1'>
-              <span className='w-2 h-2 rounded-sm bg-mf-red' />
-              <span className='text-[9px] text-gray-400 font-medium'>
-                Selected
-              </span>
+          )}
+
+          {/* Legend — only in month view */}
+          {!yearPickerOpen && (
+            <div className='flex items-center justify-center gap-3 px-3 pb-2.5 pt-0.5'>
+              <div className='flex items-center gap-1'>
+                <span className='w-1.5 h-1.5 rounded-full bg-green-400' />
+                <span className='text-[9px] text-gray-400 font-medium'>
+                  Has data
+                </span>
+              </div>
+              <div className='flex items-center gap-1'>
+                <span className='w-1.5 h-1.5 rounded-full bg-mf-red' />
+                <span className='text-[9px] text-gray-400 font-medium'>
+                  Current month
+                </span>
+              </div>
+              <div className='flex items-center gap-1'>
+                <span className='w-2 h-2 rounded-sm bg-mf-red' />
+                <span className='text-[9px] text-gray-400 font-medium'>
+                  Selected
+                </span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </div>
