@@ -2,9 +2,7 @@ import https from "https";
 import fs from "fs";
 import path from "path";
 
-// ============================================================================
-// CONFIGURATION
-// ============================================================================
+/* CONFIGURATION */
 
 const CONFIG = {
   GITHUB_TOKEN: process.env.GITHUB_TOKEN || "",
@@ -17,7 +15,6 @@ const CONFIG = {
   CACHE_FILE: "./src/app/projects/assets/leaderboard-cache.json",
   UPCOMING_PROJECTS_FILE: "./src/app/projects/assets/upcomingProjects.json",
 
-  // Fix 4: Progress checkpoint file
   PROGRESS_FILE: "./src/app/projects/assets/leaderboard-progress.json",
 
   SPECIAL_PROJECTS: [
@@ -42,9 +39,7 @@ const CONFIG = {
   DELAY_MS: 100,
 };
 
-// ============================================================================
-// RATE LIMIT HELPERS
-// ============================================================================
+/* RATE LIMIT HELPERS */
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -85,10 +80,6 @@ class RequestQueue {
 }
 
 const githubQueue = new RequestQueue(1, 500);
-
-// ============================================================================
-// Fix 3: Smart retry that reads Retry-After / X-RateLimit-Reset headers
-// ============================================================================
 
 async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
   for (let attempt = 0; attempt < maxRetries; attempt++) {
@@ -150,11 +141,8 @@ async function fetchGitHub(url) {
   return githubQueue.add(() => fetchWithRetry(url));
 }
 
-// ============================================================================
-// HELPERS
-// ============================================================================
+/* HELPERS */
 
-// Fix 3: rawFetchGitHub now extracts rate-limit headers and attaches to error
 async function rawFetchGitHub(url) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -232,10 +220,6 @@ function writeJsonFile(filePath, data) {
   }
 }
 
-// ============================================================================
-// Fix 4: PROGRESS CHECKPOINT — resume from crash without re-fetching
-// ============================================================================
-
 function loadProgress() {
   try {
     const fullPath = path.resolve(CONFIG.PROGRESS_FILE);
@@ -273,9 +257,7 @@ function clearProgress() {
   } catch {}
 }
 
-// ============================================================================
-// FETCH DEFAULT BRANCH
-// ============================================================================
+/* FETCH DEFAULT BRANCH */
 
 async function fetchDefaultBranch(owner, repo) {
   try {
@@ -289,9 +271,7 @@ async function fetchDefaultBranch(owner, repo) {
   }
 }
 
-// ============================================================================
-// FETCH ALL COMMITS FROM DEFAULT BRANCH ONLY
-// ============================================================================
+/* FETCH ALL COMMITS FROM DEFAULT BRANCH ONLY */
 
 async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
   console.log(
@@ -329,9 +309,7 @@ async function fetchAllCommitsFromDefaultBranch(owner, repo, defaultBranch) {
   return allCommits;
 }
 
-// ============================================================================
-// ANALYZE PR COMPLEXITY
-// ============================================================================
+/* ANALYZE PR COMPLEXITY */
 
 function analyzePRComplexity(pr) {
   const filesChanged = pr.changed_files || 0;
@@ -346,9 +324,7 @@ function analyzePRComplexity(pr) {
   }
 }
 
-// ============================================================================
-// FETCH ALL MERGED PRS THAT LANDED ON DEFAULT BRANCH
-// ============================================================================
+/* FETCH ALL MERGED PRS THAT LANDED ON DEFAULT BRANCH */
 
 async function fetchAllMergedPRsToDefault(
   owner,
@@ -476,9 +452,7 @@ async function fetchAllMergedPRsToDefault(
   return enrichedPRs;
 }
 
-// ============================================================================
-// FETCH REAL ISSUE COMMENT AUTHORS
-// ============================================================================
+/* FETCH REAL ISSUE COMMENT AUTHORS */
 
 async function fetchIssueCommentAuthors(owner, repo, issueNumber) {
   let page = 1;
@@ -598,9 +572,7 @@ async function fetchCategorizedIssues(owner, repo) {
   return issues;
 }
 
-// ============================================================================
-// PROCESS SINGLE PROJECT
-// ============================================================================
+/* PROCESS SINGLE PROJECT */
 
 async function processProject(projectId, projectTitle, repoName) {
   console.log(`\n📊 Processing: ${projectTitle} (${repoName})`);
@@ -671,9 +643,7 @@ async function processProject(projectId, projectTitle, repoName) {
   }
 }
 
-// ============================================================================
-// MAIN
-// ============================================================================
+/* MAIN */
 
 async function cacheLeaderboardData() {
   console.log("\n" + "=".repeat(80));
@@ -688,10 +658,6 @@ async function cacheLeaderboardData() {
   console.log(`  🐛 Issues categorized (bugs / enhancements / docs / others)`);
   console.log(`  💬 Issue comments — real authors fetched per issue`);
   console.log(`  ⚙️  Queue: concurrency=1, 500ms delay`);
-  console.log(`  ✅ Fix 3: Reads Retry-After / X-RateLimit-Reset headers`);
-  console.log(
-    `  ✅ Fix 4: Checkpointed — crashes resume from last completed project\n`
-  );
 
   const contributors = readJsonFile(CONFIG.CONTRIBUTORS_FILE) || [];
   const projects = readJsonFile(CONFIG.PROJECTS_FILE) || [];
@@ -708,7 +674,6 @@ async function cacheLeaderboardData() {
   );
   console.log(`   Special projects: ${CONFIG.SPECIAL_PROJECTS.length}\n`);
 
-  // Fix 4: Load existing progress — skip already-completed projects
   const progress = loadProgress();
   const allProjectsData = { ...progress.partialCache };
   const skippedCount = Object.keys(progress.completed).length;
@@ -731,7 +696,6 @@ async function cacheLeaderboardData() {
       continue;
     }
 
-    // Fix 4: Skip if already done in a previous run
     if (progress.completed[project.id]) {
       console.log(
         `\n[${processedCount}/${totalProjects}] ⏭️  ${project.title} — already cached, skipping`
@@ -801,7 +765,6 @@ async function cacheLeaderboardData() {
     console.log(`   Total merged PRs (default branch): ${totalPRs}`);
     console.log(`📁 → ${CONFIG.CACHE_FILE}`);
 
-    // Fix 4: Clean up checkpoint now that everything succeeded
     clearProgress();
     console.log(`🧹 Progress checkpoint cleared`);
   }
