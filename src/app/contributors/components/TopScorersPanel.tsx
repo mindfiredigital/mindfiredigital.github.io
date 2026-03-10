@@ -241,13 +241,11 @@ function MonthCalendarPicker({
         </svg>
       </button>
 
-      {/* Dropdown */}
       {open && (
         <div className='absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden'>
           {/* ── Year navigation bar ── */}
           <div className='flex items-center justify-between px-3 py-2.5 border-b border-gray-100 bg-gray-50/70'>
             {!yearPickerOpen ? (
-              // Normal mode: prev arrow | clickable year | next arrow
               <>
                 <button
                   onClick={() => setCalYear((y) => Math.max(y - 1, minYear))}
@@ -318,7 +316,6 @@ function MonthCalendarPicker({
                 </button>
               </>
             ) : (
-              // Year-picker mode: back arrow | "Select Year" label
               <>
                 <button
                   onClick={() => setYearPickerOpen(false)}
@@ -341,7 +338,7 @@ function MonthCalendarPicker({
                 <span className='text-[11px] font-black text-gray-700 uppercase tracking-widest'>
                   Select Year
                 </span>
-                <div className='w-6' /> {/* spacer */}
+                <div className='w-6' />
               </>
             )}
           </div>
@@ -382,7 +379,6 @@ function MonthCalendarPicker({
               })}
             </div>
           ) : (
-            /* ── Month grid ── */
             <div className='grid grid-cols-4 gap-1 p-2.5'>
               {MONTH_NAMES_SHORT.map((name, idx) => {
                 const key = `${calYear}-${String(idx + 1).padStart(2, "0")}`;
@@ -424,7 +420,6 @@ function MonthCalendarPicker({
             </div>
           )}
 
-          {/* Legend — only in month view */}
           {!yearPickerOpen && (
             <div className='flex items-center justify-center gap-3 px-3 pb-2.5 pt-0.5'>
               <div className='flex items-center gap-1'>
@@ -476,7 +471,6 @@ export default function TopScorersPanel({
 
   const monthCache = useRef<Record<string, MonthlyPayload>>({});
 
-  // Fetch manifest once on first switch to monthly tab
   useEffect(() => {
     if (activeTab !== "monthly") return;
     fetch("/leaderboard/manifest.json")
@@ -776,7 +770,6 @@ export default function TopScorersPanel({
           </button>
         </div>
 
-        {/* Calendar month picker — only on monthly tab */}
         {activeTab === "monthly" && (
           <MonthCalendarPicker
             availableMonths={availableMonths}
