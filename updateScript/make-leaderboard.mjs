@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-// ============================================================================
-// CONFIGURATION
-// ============================================================================
+/* CONFIGURATION */
 
 const CONFIG = {
   INPUT_FILES: {
@@ -23,9 +21,7 @@ const CONFIG = {
   SPECIAL_PROJECT_IDS: ["special-website"],
 };
 
-// ============================================================================
-// SCORING SYSTEM
-// ============================================================================
+/* SCORING SYSTEM */
 
 const SCORING = {
   PR_MERGED_BASE: 5,
@@ -62,9 +58,7 @@ const SCORING = {
   },
 };
 
-// ============================================================================
-// HELPERS
-// ============================================================================
+/* HELPERS */
 
 function readJsonFile(filePath) {
   try {
@@ -93,9 +87,7 @@ function writeJsonFile(filePath, data) {
   }
 }
 
-// ============================================================================
-// APPLY MONTHLY CAPS — uses UTC so it matches toMonthKey() exactly
-// ============================================================================
+/* APPLY MONTHLY CAPS — uses UTC so it matches toMonthKey() exactly */
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
@@ -113,9 +105,7 @@ function applyMonthlyCaps(items, cap, dateField = "created_at") {
   return capped;
 }
 
-// ============================================================================
-// ANALYZE USER IN PROJECT
-// ============================================================================
+/* ANALYZE USER IN PROJECT */
 
 function analyzeUserInProject(username, projectData) {
   const stats = {
@@ -232,9 +222,7 @@ function analyzeUserInProject(username, projectData) {
   return stats;
 }
 
-// ============================================================================
-// CALCULATE SCORE
-// ============================================================================
+/* CALCULATE SCORE */
 
 function calculateScore(userStats) {
   let prScore = 0;
@@ -314,9 +302,7 @@ function calculateScore(userStats) {
   };
 }
 
-// ============================================================================
-// MONTHLY HELPERS
-// ============================================================================
+/* MONTHLY HELPERS */
 
 function toMonthKey(dateStr) {
   if (!dateStr) return null;
@@ -442,9 +428,7 @@ function buildEarliestContributionMap(cachedData, contributors, allProjectIds) {
   return map;
 }
 
-// ============================================================================
-// GENERATE ALL-TIME LEADERBOARD
-// ============================================================================
+/* GENERATE ALL-TIME LEADERBOARD */
 
 function generateLeaderboard() {
   console.log("\n" + "=".repeat(80));
@@ -585,9 +569,7 @@ function generateLeaderboard() {
   return { leaderboardData, contributors, contributorMapping, cachedData };
 }
 
-// ============================================================================
-// GENERATE MONTHLY BREAKDOWN FROM CACHE
-// ============================================================================
+/* GENERATE MONTHLY BREAKDOWN FROM CACHE */
 
 function generateMonthlyBreakdownFromCache(
   contributors,
@@ -726,11 +708,8 @@ function generateMonthlyBreakdownFromCache(
           userStats.prs.length > 0
             ? parseFloat((userStats.commits / userStats.prs.length).toFixed(2))
             : 0,
-        // Display: all projects active this month
         projectsWorkingOn: activeProjectTitles.length,
-        // The actual project titles worked on this month
         projects: activeProjectTitles,
-        // How many were brand-new this month (for transparency in breakdown)
         newProjectsThisMonth: userStats.projectsWorkingOn,
         prs_by_complexity: scoreData.prs_by_complexity,
         total_score: scoreData.total,
@@ -789,9 +768,7 @@ function generateMonthlyBreakdownFromCache(
   );
 }
 
-// ============================================================================
-// DISPLAY TOP SCORERS
-// ============================================================================
+/* DISPLAY TOP SCORERS */
 
 function displayTopScorers(leaderboard, topN = 10) {
   console.log("\n" + "=".repeat(80));
@@ -825,9 +802,7 @@ function displayTopScorers(leaderboard, topN = 10) {
   console.log("=".repeat(80) + "\n");
 }
 
-// ============================================================================
-// MAIN
-// ============================================================================
+/* MAIN */
 
 function main() {
   try {
