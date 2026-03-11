@@ -127,7 +127,6 @@ export default function Contributors() {
             />
           </aside>
 
-          {/* Scrollable main panel — ref attached here */}
           <main
             ref={mainPanelRef}
             className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'
@@ -175,7 +174,7 @@ export default function Contributors() {
                 onFilterChange={handleFilterChange}
                 onReset={handleReset}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchChange={handleSearchChange}
                 isMobileOpen={isMobileFilterOpen}
                 onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
               />
