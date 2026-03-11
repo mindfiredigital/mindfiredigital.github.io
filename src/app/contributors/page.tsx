@@ -31,8 +31,19 @@ export default function Contributors() {
   // Ref to the scrollable main panel
   const mainPanelRef = useRef<HTMLDivElement>(null);
 
+  const scrollToContributors = () => {
+    if (contributorsSectionRef.current && mainPanelRef.current) {
+      const sectionTop = contributorsSectionRef.current.offsetTop;
+      mainPanelRef.current.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const handleFilterChange = (partial: Partial<ContributorFilters>) => {
     setFilters((prev) => ({ ...prev, ...partial }));
+    scrollToContributors();
   };
 
   const handleReset = () => {
