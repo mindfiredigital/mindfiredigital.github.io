@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
 import TopScorersPanel from "./components/TopScorersPanel";
@@ -25,6 +25,11 @@ export default function Contributors() {
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [selectedContributor, setSelectedContributor] =
     useState<TopScorer | null>(null);
+
+  // Ref to scroll to contributors grid section
+  const contributorsSectionRef = useRef<HTMLDivElement>(null);
+  // Ref to the scrollable main panel
+  const mainPanelRef = useRef<HTMLDivElement>(null);
 
   const handleFilterChange = (partial: Partial<ContributorFilters>) => {
     setFilters((prev) => ({ ...prev, ...partial }));
@@ -106,7 +111,11 @@ export default function Contributors() {
             />
           </aside>
 
-          <main className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'>
+          {/* Scrollable main panel — ref attached here */}
+          <main
+            ref={mainPanelRef}
+            className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'
+          >
             <div className='flex flex-col items-center text-center pt-10 px-6'>
               <div className='flex items-center justify-center gap-4'>
                 <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
@@ -156,7 +165,8 @@ export default function Contributors() {
               />
             </div>
 
-            <div className='mt-12 pb-16 px-6'>
+            {/* ↓ This ref is the scroll target — placed right at the contributors heading */}
+            <div ref={contributorsSectionRef} className='mt-12 pb-16 px-6'>
               <div className='flex items-center justify-center gap-4 mb-8'>
                 <h2 className='text-3xl font-medium text-gray-800'>
                   Contributors
