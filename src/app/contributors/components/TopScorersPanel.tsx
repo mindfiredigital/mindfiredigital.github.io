@@ -459,7 +459,11 @@ export default function TopScorersPanel({
   const [isDownloading, setIsDownloading] = useState(false);
   const [isCopying, setIsCopying] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  // containerRef wraps the whole panel card
   const containerRef = useRef<HTMLDivElement>(null);
+  // bodyRef is the inner scrollable body — we'll expand it before capture
+  const bodyRef = useRef<HTMLDivElement>(null);
 
   const curKey = currentMonthKey();
   const [availableMonths, setAvailableMonths] = useState<string[]>([curKey]);
@@ -531,10 +535,48 @@ export default function TopScorersPanel({
   const rest = top10.slice(3);
   const maxScore = top10[0]?.total_score ?? 1;
 
+  /**
+   * Temporarily remove scroll constraints from the body div so html-to-image
+   * can see the full content height, then restore after capture.
+   */
   const captureImage = useCallback(async (): Promise<string> => {
     const { toPng } = await import("html-to-image");
+
+    const container = containerRef.current!;
+    const body = bodyRef.current;
+
+    // --- 1. Expand the body so all content is visible ---
+    const prevBodyStyle = body
+      ? {
+          maxHeight: body.style.maxHeight,
+          height: body.style.height,
+          overflow: body.style.overflow,
+          flex: body.style.flex,
+          minHeight: body.style.minHeight,
+        }
+      : null;
+
+    if (body) {
+      body.style.maxHeight = "none";
+      body.style.height = "auto";
+      body.style.overflow = "visible";
+      body.style.flex = "none";
+      body.style.minHeight = "unset";
+    }
+
+    // Also expand the ranks 4-10 on mobile (collapsed accordion) so they appear
+    const mobileRankList = container.querySelector<HTMLElement>(
+      "[data-mobile-rank-list]"
+    );
+    let prevMobileStyle: string | null = null;
+    if (mobileRankList) {
+      prevMobileStyle = mobileRankList.style.maxHeight;
+      mobileRankList.style.maxHeight = "none";
+    }
+
+    // --- 2. Convert avatar <img> tags to base64 so cross-origin images render ---
     const imgEls = Array.from(
-      containerRef.current!.querySelectorAll("img")
+      container.querySelectorAll("img")
     ) as HTMLImageElement[];
     const originalSrcs = imgEls.map((img) => img.src);
     await Promise.all(
@@ -546,16 +588,38 @@ export default function TopScorersPanel({
         }
       })
     );
+
+    // --- 3. Hide action buttons (download/copy/calendar picker) ---
     const actionBtns = Array.from(
-      containerRef.current!.querySelectorAll("[data-action-btn]")
+      container.querySelectorAll("[data-action-btn]")
     ) as HTMLElement[];
     actionBtns.forEach((btn) => (btn.style.visibility = "hidden"));
-    const dataUrl = await toPng(containerRef.current!, {
+
+    // --- 4. Capture ---
+    const dataUrl = await toPng(container, {
       cacheBust: true,
       pixelRatio: 2,
+      // Explicitly set dimensions to full scroll size
+      width: container.offsetWidth,
+      height: container.scrollHeight,
     });
+
+    // --- 5. Restore everything ---
     actionBtns.forEach((btn) => (btn.style.visibility = "visible"));
     imgEls.forEach((img, i) => (img.src = originalSrcs[i]));
+
+    if (body && prevBodyStyle) {
+      body.style.maxHeight = prevBodyStyle.maxHeight;
+      body.style.height = prevBodyStyle.height;
+      body.style.overflow = prevBodyStyle.overflow;
+      body.style.flex = prevBodyStyle.flex;
+      body.style.minHeight = prevBodyStyle.minHeight;
+    }
+
+    if (mobileRankList && prevMobileStyle !== null) {
+      mobileRankList.style.maxHeight = prevMobileStyle;
+    }
+
     return dataUrl;
   }, []);
 
@@ -782,8 +846,11 @@ export default function TopScorersPanel({
         )}
       </div>
 
-      {/* ── Body ── */}
-      <div className='lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain lg:[&::-webkit-scrollbar]:hidden lg:[-ms-overflow-style:none] lg:[scrollbar-width:none]'>
+      {/* ── Body — ref attached so we can temporarily remove scroll for capture ── */}
+      <div
+        ref={bodyRef}
+        className='lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain lg:[&::-webkit-scrollbar]:hidden lg:[-ms-overflow-style:none] lg:[scrollbar-width:none]'
+      >
         {isLoadingMonth ? (
           <div className='flex flex-col items-center justify-center py-14 px-4 gap-3'>
             <svg
@@ -945,6 +1012,7 @@ export default function TopScorersPanel({
                     </span>
                   </button>
                   <div
+                    data-mobile-rank-list
                     className='overflow-hidden transition-all duration-300 ease-in-out flex flex-col gap-1'
                     style={{
                       maxHeight: mobileRestOpen
