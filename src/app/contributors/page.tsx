@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
 import TopScorersPanel from "./components/TopScorersPanel";
@@ -26,8 +26,29 @@ export default function Contributors() {
   const [selectedContributor, setSelectedContributor] =
     useState<TopScorer | null>(null);
 
+  // Ref to scroll to contributors grid section
+  const contributorsSectionRef = useRef<HTMLDivElement>(null);
+  // Ref to the scrollable main panel
+  const mainPanelRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContributors = () => {
+    if (contributorsSectionRef.current && mainPanelRef.current) {
+      const sectionTop = contributorsSectionRef.current.offsetTop;
+      mainPanelRef.current.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const handleFilterChange = (partial: Partial<ContributorFilters>) => {
     setFilters((prev) => ({ ...prev, ...partial }));
+    scrollToContributors();
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    scrollToContributors();
   };
 
   const handleReset = () => {
@@ -100,13 +121,16 @@ export default function Contributors() {
               onFilterChange={handleFilterChange}
               onReset={handleReset}
               searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
+              onSearchChange={handleSearchChange}
               isMobileOpen={isMobileFilterOpen}
               onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
             />
           </aside>
 
-          <main className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'>
+          <main
+            ref={mainPanelRef}
+            className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'
+          >
             <div className='flex flex-col items-center text-center pt-10 px-6'>
               <div className='flex items-center justify-center gap-4'>
                 <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
@@ -150,13 +174,14 @@ export default function Contributors() {
                 onFilterChange={handleFilterChange}
                 onReset={handleReset}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchChange={handleSearchChange}
                 isMobileOpen={isMobileFilterOpen}
                 onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
               />
             </div>
 
-            <div className='mt-12 pb-16 px-6'>
+            {/* ↓ This ref is the scroll target — placed right at the contributors heading */}
+            <div ref={contributorsSectionRef} className='mt-12 pb-16 px-6'>
               <div className='flex items-center justify-center gap-4 mb-8'>
                 <h2 className='text-3xl font-medium text-gray-800'>
                   Contributors
