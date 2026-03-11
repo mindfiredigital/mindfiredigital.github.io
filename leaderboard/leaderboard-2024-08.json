@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T05:56:24.610Z",
+  "generated_at": "2026-03-11T11:23:17.121Z",
   "period": "monthly",
   "month_label": "August 2024",
   "month_key": "2024-08",
@@ -19,7 +19,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.58,
       "projectsWorkingOn": 1,
-      "projects": ["neo-pusher"],
+      "projects": [
+        "neo-pusher"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 23,
@@ -66,7 +68,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.33,
       "projectsWorkingOn": 2,
-      "projects": ["react-text-igniter", "Mindfire Foss Website"],
+      "projects": [
+        "react-text-igniter",
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 2,
@@ -97,7 +102,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -113,7 +118,11 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5,
       "projectsWorkingOn": 3,
-      "projects": ["neo-pusher", "react-text-igniter", "Mindfire Foss Website"],
+      "projects": [
+        "neo-pusher",
+        "react-text-igniter",
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 1,
@@ -144,7 +153,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 26
+      "lastActiveDays": 28
     },
     {
       "rank": 4,
@@ -160,7 +169,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["react-text-igniter"],
+      "projects": [
+        "react-text-igniter"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -191,7 +202,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 0
     },
     {
       "rank": 5,
@@ -207,7 +218,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["DeepScanBot"],
+      "projects": [
+        "DeepScanBot"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -254,7 +267,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["react-text-igniter"],
+      "projects": [
+        "react-text-igniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
