@@ -46,6 +46,11 @@ export default function Contributors() {
     scrollToContributors();
   };
 
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    scrollToContributors();
+  };
+
   const handleReset = () => {
     setFilters({
       sortBy: "total_score",
@@ -116,7 +121,7 @@ export default function Contributors() {
               onFilterChange={handleFilterChange}
               onReset={handleReset}
               searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
+              onSearchChange={handleSearchChange}
               isMobileOpen={isMobileFilterOpen}
               onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
             />
