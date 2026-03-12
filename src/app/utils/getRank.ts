@@ -57,3 +57,28 @@ export const getRankBadge = (rank: number) => {
     color: "bg-slate-100 text-slate-600 border-slate-300",
   };
 };
+
+export async function toBase64Url(url: string): Promise<string> {
+  const res = await fetch(url);
+  const blob = await res.blob();
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result as string);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+export function formatMonthKey(key: string): string {
+  const [year, month] = key.split("-");
+  const date = new Date(Number(year), Number(month) - 1, 1);
+  return date.toLocaleString("default", { month: "long", year: "numeric" });
+}
+
+export function currentMonthKey(): string {
+  const now = new Date();
+  return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(
+    2,
+    "0"
+  )}`;
+}
