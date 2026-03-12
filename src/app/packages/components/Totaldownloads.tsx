@@ -4,10 +4,7 @@ import Image from "next/image";
 import download from "../../../../public/images/bxs-download.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
-
-interface TotalDownloadsProps {
-  totalDownloads: number;
-}
+import { TotalDownloadsProps } from "@/types";
 
 const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
   const count = useAnimatedCounter(totalDownloads);

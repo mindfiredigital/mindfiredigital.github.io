@@ -1,3 +1,5 @@
+export * from "./contributors.constant";
+
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";
 import { SectionData } from "@/types";

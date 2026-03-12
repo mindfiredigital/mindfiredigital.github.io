@@ -77,3 +77,44 @@ export interface ContributorFilterSidebarProps {
   isMobileOpen: boolean;
   onMobileToggle: () => void;
 }
+
+export interface ContributorCardProps {
+  contributor: TopScorer;
+  displayRank: number;
+  onViewDetails: (contributor: TopScorer) => void;
+}
+
+export interface ContributorModalProps {
+  contributor: TopScorer | null;
+  onClose: () => void;
+}
+
+export interface TopContributorsProps {
+  contributors: Contributor[];
+  topScorers: TopScorer[];
+}
+
+export interface DisplayContributor {
+  login: string;
+  avatar_url: string;
+  html_url: string;
+  stat: string;
+}
+
+export interface TopScorersPanelProps {
+  topScorers: TopScorer[];
+  onViewDetails: (contributor: TopScorer) => void;
+}
+
+export type TabId = "alltime" | "monthly";
+
+export interface MonthlyPayload {
+  month_label: string;
+  month_key?: string;
+  leaderboard: TopScorer[];
+}
+
+export interface Manifest {
+  months: string[];
+  updated_at?: string;
+}

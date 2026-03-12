@@ -46,3 +46,9 @@ export type ProjectGroupedData = {
     status: "published" | "draft";
   }[];
 };
+
+export type FilterType = "all" | "npm" | "pypi";
+
+export interface TotalDownloadsProps {
+  totalDownloads: number;
+}
