@@ -115,3 +115,6 @@ export const SCORE_BARS = [
     bgColor: "bg-violet-50 border-violet-200",
   },
 ];
+
+export const INTERVAL_MS = 4000;
+export const PAUSE_ON_CLICK_MS = 8000;
