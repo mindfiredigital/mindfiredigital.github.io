@@ -10,14 +10,9 @@ import {
   AlertCircle,
   MessageSquare,
   Github,
-  Layers, // icon for multi-project
+  Layers,
 } from "lucide-react";
-import { TopScorer } from "@/types";
-
-interface ContributorModalProps {
-  contributor: TopScorer | null;
-  onClose: () => void;
-}
+import { ContributorModalProps } from "@/types";
 
 const SCORE_BARS = [
   {

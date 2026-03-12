@@ -3,19 +3,12 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Contributor, TopScorer } from "@/types";
-
-interface TopContributorsProps {
-  contributors: Contributor[];
-  topScorers: TopScorer[];
-}
-
-interface DisplayContributor {
-  login: string;
-  avatar_url: string;
-  html_url: string;
-  stat: string;
-}
+import {
+  Contributor,
+  TopScorer,
+  TopContributorsProps,
+  DisplayContributor,
+} from "@/types";
 
 function buildGroups(
   contributors: Contributor[],

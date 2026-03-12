@@ -8,13 +8,7 @@ import {
   AlertCircle,
   ArrowUpRight,
 } from "lucide-react";
-import { TopScorer } from "@/types";
-
-interface ContributorCardProps {
-  contributor: TopScorer;
-  displayRank: number;
-  onViewDetails: (contributor: TopScorer) => void;
-}
+import { ContributorCardProps } from "@/types";
 
 const getRankStyles = (rank: number) => {
   if (rank === 1)

@@ -2,26 +2,14 @@
 
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { TopScorer } from "@/types";
+import {
+  TopScorer,
+  TopScorersPanelProps,
+  TabId,
+  MonthlyPayload,
+  Manifest,
+} from "@/types";
 import currentMonthRaw from "../../projects/assets/leaderboard-monthly.json";
-
-interface TopScorersPanelProps {
-  topScorers: TopScorer[];
-  onViewDetails: (contributor: TopScorer) => void;
-}
-
-type TabId = "alltime" | "monthly";
-
-interface MonthlyPayload {
-  month_label: string;
-  month_key?: string;
-  leaderboard: TopScorer[];
-}
-
-interface Manifest {
-  months: string[];
-  updated_at?: string;
-}
 
 const TABS: { id: TabId; label: string }[] = [
   { id: "alltime", label: "All Time" },
