@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T11:23:17.070Z",
+  "generated_at": "2026-03-12T03:29:08.267Z",
   "period": "monthly",
   "month_label": "January 2024",
   "month_key": "2024-01",
@@ -12,12 +12,12 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
       "totalCommits": 34,
-      "totalPRs": 15,
+      "totalPRs": 14,
       "totalPRReviewsGiven": 1,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.27,
+      "avgCommitsPerPR": 2.43,
       "projectsWorkingOn": 5,
       "projects": [
         "Canvas Editor",
@@ -29,15 +29,15 @@
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 12,
-        "medium": 2,
+        "medium": 1,
         "large": 1
       },
-      "total_score": 203,
-      "code_score": 153,
+      "total_score": 194,
+      "code_score": 146,
       "community_score": 20,
-      "quality_score": 30,
+      "quality_score": 28,
       "score_breakdown": {
-        "pr_score": 82,
+        "pr_score": 75,
         "commits_score": 68,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
@@ -47,7 +47,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 30,
+        "zero_revisions_score": 28,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -56,7 +56,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 28
+      "lastActiveDays": 29
     },
     {
       "rank": 2,
@@ -65,28 +65,28 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/42381761?v=4",
       "html_url": "https://github.com/praliptarajoo",
       "totalCommits": 14,
-      "totalPRs": 13,
+      "totalPRs": 12,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.08,
+      "avgCommitsPerPR": 1.17,
       "projectsWorkingOn": 1,
       "projects": [
         "Mindfire Foss Website"
       ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
-        "small": 10,
+        "small": 9,
         "medium": 3,
         "large": 0
       },
-      "total_score": 134,
-      "code_score": 98,
+      "total_score": 126,
+      "code_score": 93,
       "community_score": 10,
-      "quality_score": 26,
+      "quality_score": 23,
       "score_breakdown": {
-        "pr_score": 70,
+        "pr_score": 65,
         "commits_score": 28,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -94,9 +94,9 @@
         "issue_comments_score": 0,
         "projects_score": 10,
         "tests_score": 0,
-        "docs_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 24,
+        "zero_revisions_score": 22,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -154,7 +154,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 4,

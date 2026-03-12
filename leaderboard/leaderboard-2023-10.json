@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T11:23:17.044Z",
+  "generated_at": "2026-03-12T03:29:08.246Z",
   "period": "monthly",
   "month_label": "October 2023",
   "month_key": "2023-10",
@@ -52,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 2,
@@ -61,12 +61,12 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/148045555?v=4",
       "html_url": "https://github.com/prashant-mindfire",
       "totalCommits": 16,
-      "totalPRs": 5,
+      "totalPRs": 4,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.2,
+      "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
       "projects": [
         "Mindfire Foss Website"
@@ -75,14 +75,14 @@
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
-        "large": 3
+        "large": 2
       },
-      "total_score": 80,
-      "code_score": 68,
+      "total_score": 71,
+      "code_score": 59,
       "community_score": 10,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 36,
+        "pr_score": 27,
         "commits_score": 32,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -111,7 +111,7 @@
       "html_url": "https://github.com/lakinmindfire",
       "totalCommits": 17,
       "totalPRs": 0,
-      "totalPRReviewsGiven": 5,
+      "totalPRReviewsGiven": 4,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
@@ -127,14 +127,14 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 59,
-      "code_score": 49,
+      "total_score": 56,
+      "code_score": 46,
       "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
         "commits_score": 34,
-        "pr_reviews_score": 15,
+        "pr_reviews_score": 12,
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
@@ -151,7 +151,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 28
+      "lastActiveDays": 29
     },
     {
       "rank": 4,
