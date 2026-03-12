@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T03:29:08.362Z",
+  "generated_at": "2026-03-10T05:56:24.766Z",
   "period": "monthly",
   "month_label": "June 2025",
   "month_key": "2025-06",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.91,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 6,
@@ -52,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 6
     },
     {
       "rank": 2,
@@ -68,10 +66,7 @@
       "totalIssueComments": 2,
       "avgCommitsPerPR": 2.27,
       "projectsWorkingOn": 2,
-      "projects": [
-        "ESLint Plugin Hub",
-        "Ignix UI"
-      ],
+      "projects": ["ESLint Plugin Hub", "Ignix UI"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 3,
@@ -102,7 +97,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 4
     },
     {
       "rank": 3,
@@ -118,10 +113,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 1.17,
       "projectsWorkingOn": 2,
-      "projects": [
-        "ESLint Plugin Hub",
-        "TextIgniter"
-      ],
+      "projects": ["ESLint Plugin Hub", "TextIgniter"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -152,7 +144,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -168,11 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.33,
       "projectsWorkingOn": 3,
-      "projects": [
-        "ESLint Plugin Hub",
-        "Pivothead",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["ESLint Plugin Hub", "Pivothead", "Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -203,7 +191,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 5,
@@ -219,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.25,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -252,7 +238,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 28
     },
     {
       "rank": 6,
@@ -268,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.67,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -317,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -366,9 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FileMaker List View Addon"
-      ],
+      "projects": ["FileMaker List View Addon"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -415,10 +395,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 2,
-      "projects": [
-        "ESLint Plugin Hub",
-        "Pivothead"
-      ],
+      "projects": ["ESLint Plugin Hub", "Pivothead"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -449,7 +426,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 10
     },
     {
       "rank": 10,
@@ -465,9 +442,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -514,9 +489,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["ESLint Plugin Hub"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -547,7 +520,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 3
     },
     {
       "rank": 12,
@@ -563,9 +536,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 7,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -612,9 +583,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -645,7 +614,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 6
     },
     {
       "rank": 14,
@@ -661,9 +630,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["ESLint Plugin Hub"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

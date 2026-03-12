@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T03:29:08.353Z",
+  "generated_at": "2026-03-10T05:56:24.737Z",
   "period": "monthly",
   "month_label": "April 2025",
   "month_key": "2025-04",
@@ -55,7 +55,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 2,
@@ -122,9 +122,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.56,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 9,
@@ -155,7 +153,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 6
     },
     {
       "rank": 4,
@@ -171,9 +169,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.64,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 8,
@@ -220,10 +216,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Canvas Editor",
-        "Document Editor"
-      ],
+      "projects": ["Canvas Editor", "Document Editor"],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 1,
@@ -254,7 +247,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 3
     },
     {
       "rank": 6,
@@ -270,10 +263,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Page Builder",
-        "Pivothead"
-      ],
+      "projects": ["Page Builder", "Pivothead"],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 0,
@@ -320,9 +310,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "OpenRecap"
-      ],
+      "projects": ["OpenRecap"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -353,7 +341,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 29
+      "lastActiveDays": 26
     },
     {
       "rank": 8,
@@ -369,9 +357,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Document Editor"
-      ],
+      "projects": ["Document Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -418,9 +404,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "OpenRecap"
-      ],
+      "projects": ["OpenRecap"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -467,9 +451,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -500,7 +482,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 4
     }
   ]
 }
