@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { ContributorModalProps } from "@/types";
 import { SCORE_BARS } from "@/constants";
+import { getRankBadge } from "@/app/utils";
 
 const ContributorModal: React.FC<ContributorModalProps> = ({
   contributor,
@@ -58,28 +59,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
   ];
 
   const maxScore = Math.max(...scoreItems.map((s) => s.value), 1);
-
-  const getRankBadge = (rank: number) => {
-    if (rank === 1)
-      return {
-        label: "🥇 #1",
-        color: "bg-yellow-100 text-yellow-700 border-yellow-300",
-      };
-    if (rank === 2)
-      return {
-        label: "🥈 #2",
-        color: "bg-gray-100 text-gray-600 border-gray-300",
-      };
-    if (rank === 3)
-      return {
-        label: "🥉 #3",
-        color: "bg-orange-100 text-orange-600 border-orange-300",
-      };
-    return {
-      label: `#${rank}`,
-      color: "bg-slate-100 text-slate-600 border-slate-300",
-    };
-  };
 
   const badge = getRankBadge(contributor.rank);
   const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;
