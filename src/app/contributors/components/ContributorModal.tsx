@@ -51,7 +51,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
     { label: "Mentor", value: score_breakdown.mentor_score },
     { label: "Zero Revisions", value: score_breakdown.zero_revisions_score },
     { label: "Impact Bonus", value: score_breakdown.impact_bonus_score },
-    // ── NEW ──
     {
       label: "Multi-Project Bonus",
       value: score_breakdown.projects_score ?? 0,
