@@ -3,101 +3,15 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Contributor, TopScorer } from "@/types";
-
-interface TopContributorsProps {
-  contributors: Contributor[];
-  topScorers: TopScorer[];
-}
-
-interface DisplayContributor {
-  login: string;
-  avatar_url: string;
-  html_url: string;
-  stat: string;
-}
-
-function buildGroups(
-  contributors: Contributor[],
-  topScorers: TopScorer[]
-): { label: string; icon: string; items: DisplayContributor[] }[] {
-  const activeThisWeek = [...contributors]
-    .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 7)
-    .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))
-    .slice(0, 6)
-    .map((c) => ({
-      login: c.login,
-      avatar_url: c.avatar_url,
-      html_url: c.html_url,
-      stat:
-        c.lastActiveDays === 0
-          ? "Active today"
-          : c.lastActiveDays === 1
-            ? "Active yesterday"
-            : `Active ${c.lastActiveDays}d ago`,
-    }));
-
-  const activeThisMonth = [...contributors]
-    .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 30)
-    .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))
-    .slice(0, 6)
-    .map((c) => ({
-      login: c.login,
-      avatar_url: c.avatar_url,
-      html_url: c.html_url,
-      stat: `Active ${c.lastActiveDays}d ago`,
-    }));
-
-  const topByPRs = [...topScorers]
-    .sort((a, b) => b.totalPRs - a.totalPRs)
-    .slice(0, 6)
-    .map((s) => ({
-      login: s.username,
-      avatar_url: s.avatar_url,
-      html_url: s.html_url,
-      stat: `${s.totalPRs} PRs`,
-    }));
-
-  const topByCommits = [...topScorers]
-    .sort((a, b) => b.totalCommits - a.totalCommits)
-    .slice(0, 6)
-    .map((s) => ({
-      login: s.username,
-      avatar_url: s.avatar_url,
-      html_url: s.html_url,
-      stat: `${s.totalCommits} commits`,
-    }));
-
-  return [
-    {
-      label: "Active This Week",
-      icon: "",
-      items:
-        activeThisWeek.length > 0
-          ? activeThisWeek
-          : activeThisMonth.slice(0, 6),
-    },
-    {
-      label: "Most PRs Raised",
-      icon: "",
-      items: topByPRs,
-    },
-    {
-      label: "Top by Commits",
-      icon: "",
-      items: topByCommits,
-    },
-  ];
-}
-
-const INTERVAL_MS = 4000;
-const PAUSE_ON_CLICK_MS = 8000;
+import { TopContributorsProps } from "@/types";
+import { BuildGroups } from "./BuildGroups";
+import { INTERVAL_MS, PAUSE_ON_CLICK_MS } from "@/constants";
 
 const TopContributors = ({
   contributors,
   topScorers,
 }: TopContributorsProps) => {
-  const groups = buildGroups(contributors, topScorers);
+  const groups = BuildGroups(contributors, topScorers);
   const [activeIndex, setActiveIndex] = useState(0);
   const pausedUntilRef = useRef<number>(0);
 

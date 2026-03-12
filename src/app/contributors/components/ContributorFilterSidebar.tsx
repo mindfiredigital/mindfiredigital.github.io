@@ -1,14 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Search,
-  ChevronDown,
-  ChevronUp,
-  X,
-  SlidersHorizontal,
-} from "lucide-react";
+import { Search, X, SlidersHorizontal } from "lucide-react";
 import { ContributorFilterSidebarProps } from "@/types";
+import { FilterSection } from "./FilterSection";
+import { RadioGroup } from "./RadioGroup";
 
 const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
   filters,
@@ -186,86 +182,5 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
     </>
   );
 };
-
-function FilterSection({
-  title,
-  expanded,
-  onToggle,
-  children,
-}: {
-  title: string;
-  expanded: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className='rounded-lg overflow-hidden'>
-      <button
-        onClick={onToggle}
-        className='flex items-center justify-between w-full px-3 py-2.5 text-left hover:bg-gray-50 rounded-lg transition-colors'
-      >
-        <span className='text-xs font-bold text-gray-700 uppercase tracking-wider'>
-          {title}
-        </span>
-        {expanded ? (
-          <ChevronUp className='w-3.5 h-3.5 text-gray-400' />
-        ) : (
-          <ChevronDown className='w-3.5 h-3.5 text-gray-400' />
-        )}
-      </button>
-      {expanded && <div className='px-3 pb-3 pt-1'>{children}</div>}
-    </div>
-  );
-}
-
-function RadioGroup({
-  name,
-  value,
-  onChange,
-  options,
-}: {
-  name: string;
-  value: string;
-  onChange: (val: string) => void;
-  options: { id: string; label: string }[];
-  activeColor?: boolean;
-}) {
-  return (
-    <div className='space-y-1'>
-      {options.map((opt) => {
-        const isActive = value === opt.id;
-        return (
-          <label
-            key={opt.id}
-            className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg cursor-pointer transition-colors text-xs
-              ${
-                isActive
-                  ? "bg-red-50 text-mf-red font-semibold"
-                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-              }`}
-          >
-            <span
-              className={`w-3.5 h-3.5 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors
-                ${isActive ? "border-mf-red" : "border-gray-300"}`}
-            >
-              {isActive && (
-                <span className='w-1.5 h-1.5 rounded-full bg-mf-red block' />
-              )}
-            </span>
-            <input
-              type='radio'
-              name={name}
-              value={opt.id}
-              checked={isActive}
-              onChange={() => onChange(opt.id)}
-              className='sr-only'
-            />
-            {opt.label}
-          </label>
-        );
-      })}
-    </div>
-  );
-}
 
 export default ContributorFilterSidebar;

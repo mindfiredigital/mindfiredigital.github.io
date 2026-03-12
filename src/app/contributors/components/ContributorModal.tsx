@@ -10,41 +10,11 @@ import {
   AlertCircle,
   MessageSquare,
   Github,
-  Layers, // icon for multi-project
+  Layers,
 } from "lucide-react";
-import { TopScorer } from "@/types";
-
-interface ContributorModalProps {
-  contributor: TopScorer | null;
-  onClose: () => void;
-}
-
-const SCORE_BARS = [
-  {
-    key: "code_score" as const,
-    label: "Code",
-    color: "bg-blue-400",
-    track: "bg-blue-100",
-    textColor: "text-blue-700",
-    bgColor: "bg-blue-50 border-blue-200",
-  },
-  {
-    key: "quality_score" as const,
-    label: "Quality",
-    color: "bg-emerald-400",
-    track: "bg-emerald-100",
-    textColor: "text-emerald-700",
-    bgColor: "bg-emerald-50 border-emerald-200",
-  },
-  {
-    key: "community_score" as const,
-    label: "Community",
-    color: "bg-violet-400",
-    track: "bg-violet-100",
-    textColor: "text-violet-700",
-    bgColor: "bg-violet-50 border-violet-200",
-  },
-];
+import { ContributorModalProps } from "@/types";
+import { SCORE_BARS } from "@/constants";
+import { getRankBadge } from "@/app/utils";
 
 const ContributorModal: React.FC<ContributorModalProps> = ({
   contributor,
@@ -82,7 +52,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
     { label: "Mentor", value: score_breakdown.mentor_score },
     { label: "Zero Revisions", value: score_breakdown.zero_revisions_score },
     { label: "Impact Bonus", value: score_breakdown.impact_bonus_score },
-    // ── NEW ──
     {
       label: "Multi-Project Bonus",
       value: score_breakdown.projects_score ?? 0,
@@ -90,28 +59,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
   ];
 
   const maxScore = Math.max(...scoreItems.map((s) => s.value), 1);
-
-  const getRankBadge = (rank: number) => {
-    if (rank === 1)
-      return {
-        label: "🥇 #1",
-        color: "bg-yellow-100 text-yellow-700 border-yellow-300",
-      };
-    if (rank === 2)
-      return {
-        label: "🥈 #2",
-        color: "bg-gray-100 text-gray-600 border-gray-300",
-      };
-    if (rank === 3)
-      return {
-        label: "🥉 #3",
-        color: "bg-orange-100 text-orange-600 border-orange-300",
-      };
-    return {
-      label: `#${rank}`,
-      color: "bg-slate-100 text-slate-600 border-slate-300",
-    };
-  };
 
   const badge = getRankBadge(contributor.rank);
   const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;

@@ -20,7 +20,7 @@ import nuget from "../../../public/images/social-media/nuget-svgrepo-com.png";
 
 import projectsGroupedData from "../projects/assets/projects_grouped.json";
 
-type FilterType = "all" | "npm" | "pypi";
+import { FilterType } from "@/types";
 
 const Stats = () => {
   const {
