@@ -88,3 +88,30 @@ export const MONTH_NAMES_SHORT = [
   "Nov",
   "Dec",
 ];
+
+export const SCORE_BARS = [
+  {
+    key: "code_score" as const,
+    label: "Code",
+    color: "bg-blue-400",
+    track: "bg-blue-100",
+    textColor: "text-blue-700",
+    bgColor: "bg-blue-50 border-blue-200",
+  },
+  {
+    key: "quality_score" as const,
+    label: "Quality",
+    color: "bg-emerald-400",
+    track: "bg-emerald-100",
+    textColor: "text-emerald-700",
+    bgColor: "bg-emerald-50 border-emerald-200",
+  },
+  {
+    key: "community_score" as const,
+    label: "Community",
+    color: "bg-violet-400",
+    track: "bg-violet-100",
+    textColor: "text-violet-700",
+    bgColor: "bg-violet-50 border-violet-200",
+  },
+];
