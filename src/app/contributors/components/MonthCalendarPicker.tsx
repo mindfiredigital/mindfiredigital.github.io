@@ -1,4 +1,4 @@
-import { MONTH_NAMES_SHORT } from "@/constants";
+import { CALENDAR_PICKER_LABELS, MONTH_NAMES_SHORT } from "@/constants";
 import { useEffect, useRef, useState } from "react";
 
 export function MonthCalendarPicker({
@@ -141,7 +141,7 @@ export function MonthCalendarPicker({
                   </span>
                   {calYear === Number(currentMonth.split("-")[0]) && (
                     <span className='text-[8px] font-bold text-mf-red bg-red-50 border border-red-200 rounded-full px-1.5 py-0.5 uppercase tracking-wide leading-none'>
-                      Now
+                      {CALENDAR_PICKER_LABELS.nowBadge}
                     </span>
                   )}
                   <svg
@@ -200,7 +200,7 @@ export function MonthCalendarPicker({
                   </svg>
                 </button>
                 <span className='text-[11px] font-black text-gray-700 uppercase tracking-widest'>
-                  Select Year
+                  {CALENDAR_PICKER_LABELS.selectYearHeading}
                 </span>
                 <div className='w-6' />
               </>
@@ -289,19 +289,19 @@ export function MonthCalendarPicker({
               <div className='flex items-center gap-1'>
                 <span className='w-1.5 h-1.5 rounded-full bg-green-400' />
                 <span className='text-[9px] text-gray-400 font-medium'>
-                  Has data
+                  {CALENDAR_PICKER_LABELS.legendHasData}
                 </span>
               </div>
               <div className='flex items-center gap-1'>
                 <span className='w-1.5 h-1.5 rounded-full bg-mf-red' />
                 <span className='text-[9px] text-gray-400 font-medium'>
-                  Current month
+                  {CALENDAR_PICKER_LABELS.legendCurrentMonth}
                 </span>
               </div>
               <div className='flex items-center gap-1'>
                 <span className='w-2 h-2 rounded-sm bg-mf-red' />
                 <span className='text-[9px] text-gray-400 font-medium'>
-                  Selected
+                  {CALENDAR_PICKER_LABELS.legendSelected}
                 </span>
               </div>
             </div>

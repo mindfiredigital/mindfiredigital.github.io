@@ -46,3 +46,11 @@ export const COMMUNITY_SCORE_ITEMS = [
   { label: "Issue comments", multiplier: 1, cap: "cap: 20/month" },
   { label: "Projects worked on", multiplier: 10, cap: "" },
 ] as const;
+
+export const CALENDAR_PICKER_LABELS = {
+  nowBadge: "Now",
+  selectYearHeading: "Select Year",
+  legendHasData: "Has data",
+  legendCurrentMonth: "Current month",
+  legendSelected: "Selected",
+} as const;
