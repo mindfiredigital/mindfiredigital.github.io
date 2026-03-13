@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { ContributorCardProps } from "@/types";
 import { getRankStyles } from "@/app/utils";
+import { CONTRIBUTOR_CARD_LABELS } from "@/constants";
 
 export default function ContributorCard({
   contributor,
@@ -77,10 +78,12 @@ export default function ContributorCard({
             >
               {contributor.total_score.toLocaleString()}
             </span>
-            <span className='text-xs text-gray-400 font-medium'>pts</span>
+            <span className='text-xs text-gray-400 font-medium'>
+              {CONTRIBUTOR_CARD_LABELS.scoreSuffix}
+            </span>
           </div>
           <p className='text-[10px] text-gray-400 mt-1 uppercase tracking-wide font-medium'>
-            Total Score
+            {CONTRIBUTOR_CARD_LABELS.totalScoreLabel}
           </p>
         </div>
 
@@ -136,7 +139,7 @@ export default function ContributorCard({
             border border-gray-100 hover:border-red-100
             transition-all duration-200 group/btn'
         >
-          View full profile
+          {CONTRIBUTOR_CARD_LABELS.viewProfileLabel}
           <ArrowUpRight className='w-3.5 h-3.5 opacity-50 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform' />
         </button>
       </div>

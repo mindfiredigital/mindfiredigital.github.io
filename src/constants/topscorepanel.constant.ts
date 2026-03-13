@@ -67,3 +67,9 @@ export const FILTER_LABELS = {
   heading: "Filters",
   searchPlaceholder: "Search contributors...",
 } as const;
+
+export const CONTRIBUTOR_CARD_LABELS = {
+  scoreSuffix: "pts",
+  totalScoreLabel: "Total Score",
+  viewProfileLabel: "View full profile",
+} as const;
