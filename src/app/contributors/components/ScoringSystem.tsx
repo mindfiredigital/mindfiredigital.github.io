@@ -94,7 +94,7 @@ const ScoringSystem = () => {
                 <div className='flex items-start gap-1.5'>
                   <span className='text-blue-400 mt-0.5'>+</span>
                   <span>
-                    [CODE_SCORE_ITEMS[2].label] ×{" "}
+                    {[CODE_SCORE_ITEMS[2].label]} ×{" "}
                     <strong>{CODE_SCORE_ITEMS[2].multiplier}</strong>
                   </span>
                 </div>
