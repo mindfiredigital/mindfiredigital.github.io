@@ -62,3 +62,8 @@ export const MODAL_SECTION_TITLES = {
   scoreBreakdown: "Score Breakdown",
   totalScore: "Total Score",
 } as const;
+
+export const FILTER_LABELS = {
+  heading: "Filters",
+  searchPlaceholder: "Search contributors...",
+} as const;
