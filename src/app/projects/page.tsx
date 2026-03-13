@@ -13,7 +13,6 @@ import projectData from "./assets/projects.json";
 import upcomingProjectData from "./assets/upcomingProjects.json";
 import contributorsData from "./assets/contributors.json";
 import contributorMapping from "./assets/contributor-mapping.json";
-import leaderboardData from "./assets/leaderboard.json";
 import {
   Project,
   Filters,
@@ -33,12 +32,24 @@ export default function ProjectsPage() {
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
 
   const typedMapping = contributorMapping as ContributorMap;
 
-  // Enrich contributors with total_score from leaderboard.json, sorted highest first
+  useEffect(() => {
+    fetch("/asset/leaderboard.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setTopScorers(data.leaderboard as TopScorer[]);
+      })
+      .catch((err) => console.error("Failed to load leaderboard:", err));
+  }, []);
+
+  // Enrich contributors with total_score from leaderboard, sorted highest first
   const enrichedContributors = useMemo((): ContributorProject[] => {
-    const topScorers = leaderboardData.leaderboard as unknown as TopScorer[];
     return (contributorsData as unknown as ContributorProject[])
       .map((contributor) => {
         const match = topScorers.find(
@@ -47,7 +58,7 @@ export default function ProjectsPage() {
         return { ...contributor, total_score: match?.total_score ?? 0 };
       })
       .sort((a, b) => (b.total_score ?? 0) - (a.total_score ?? 0));
-  }, []);
+  }, [topScorers]);
 
   // Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
@@ -94,7 +105,6 @@ export default function ProjectsPage() {
   // Filter projects
   const filterProjects = (projects: Project[]) => {
     return projects.filter((project) => {
-      // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         const matchesSearch =
@@ -103,7 +113,6 @@ export default function ProjectsPage() {
         if (!matchesSearch) return false;
       }
 
-      // Tags filter
       if (filters.tags.length > 0) {
         const hasTag = filters.tags.some(
           (tag) =>
@@ -114,7 +123,6 @@ export default function ProjectsPage() {
         if (!hasTag) return false;
       }
 
-      // Technology filter
       if (filters.technologies.length > 0) {
         const hasTech = filters.technologies.some(
           (tech) =>
@@ -142,7 +150,6 @@ export default function ProjectsPage() {
         if (contributorCount < minContributors) return false;
       }
 
-      // Contributor multi-select filter (AND logic)
       if (filters.selectedContributor.length > 0) {
         const hasAllContributors = filters.selectedContributor.every(
           (login) => {
