@@ -2,6 +2,7 @@ export * from "./contributors.constant";
 export * from "./about.constant";
 export * from "./topscorepanel.constant";
 export * from "./cookiePolicy.constant";
+export * from "./privacyPolicy.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";
