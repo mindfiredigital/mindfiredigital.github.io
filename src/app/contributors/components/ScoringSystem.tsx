@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Info } from "lucide-react";
+import {
+  CODE_SCORE_ITEMS,
+  COMMUNITY_SCORE_ITEMS,
+  QUALITY_SCORE_ITEMS,
+  SCORING_SYSTEM_LABELS,
+} from "@/constants";
 
 const ScoringSystem = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +24,10 @@ const ScoringSystem = () => {
           </div>
           <div className='text-left'>
             <p className='text-sm font-semibold text-gray-800'>
-              How is the score calculated?
+              {SCORING_SYSTEM_LABELS.triggerHeading}
             </p>
             <p className='text-xs text-gray-400'>
-              View the complete scoring formula
+              {SCORING_SYSTEM_LABELS.triggerSubheading}
             </p>
           </div>
         </div>
@@ -42,23 +48,23 @@ const ScoringSystem = () => {
         <div className='bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-6'>
           <div className='text-center'>
             <span className='inline-block px-3 py-1 bg-red-50 border border-red-100 rounded-full text-xs font-bold text-mf-red uppercase tracking-wider mb-3'>
-              Scoring Formula
+              {SCORING_SYSTEM_LABELS.badge}
             </span>
             <div className='flex items-center justify-center gap-2 flex-wrap text-sm font-mono'>
               <span className='px-3 py-1.5 bg-red-50 border border-red-200 text-mindfire-text-red rounded-lg font-bold'>
-                Total Score
+                {SCORING_SYSTEM_LABELS.totalScore}
               </span>
               <span className='text-gray-400 font-sans'>=</span>
               <span className='px-3 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 rounded-lg font-bold'>
-                Code Score
+                {SCORING_SYSTEM_LABELS.codeScore}
               </span>
               <span className='text-gray-400 font-sans'>+</span>
               <span className='px-3 py-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-lg font-bold'>
-                Quality Score
+                {SCORING_SYSTEM_LABELS.qualityScore}
               </span>
               <span className='text-gray-400 font-sans'>+</span>
               <span className='px-3 py-1.5 bg-violet-50 border border-violet-200 text-violet-700 rounded-lg font-bold'>
-                Community Score
+                {SCORING_SYSTEM_LABELS.communityScore}
               </span>
             </div>
           </div>
@@ -67,31 +73,36 @@ const ScoringSystem = () => {
             <div className='bg-blue-50 border border-blue-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-blue-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-blue-400 inline-block' />
-                Code Score
+                {SCORING_SYSTEM_LABELS.codeScore}
               </h4>
               <div className='space-y-2 text-xs text-blue-900/80 font-mono'>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-blue-400 mt-0.5'>+</span>
                   <span>
-                    PR merged × <strong>5</strong> × complexity
+                    {CODE_SCORE_ITEMS[0].label} ×{" "}
+                    <strong>{CODE_SCORE_ITEMS[0].multiplier}</strong>{" "}
+                    {CODE_SCORE_ITEMS[0].suffix}
                   </span>
                 </div>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-blue-400 mt-0.5'>+</span>
                   <span>
-                    Commits × <strong>2</strong>
+                    {CODE_SCORE_ITEMS[1].label} ×{" "}
+                    <strong>{CODE_SCORE_ITEMS[1].multiplier}</strong>
                   </span>
                 </div>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-blue-400 mt-0.5'>+</span>
                   <span>
-                    PR reviews × <strong>3</strong>
+                    [CODE_SCORE_ITEMS[2].label] ×{" "}
+                    <strong>{CODE_SCORE_ITEMS[2].multiplier}</strong>
                   </span>
                 </div>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-blue-400 mt-0.5'>+</span>
                   <span>
-                    Code comments × <strong>1</strong>
+                    {CODE_SCORE_ITEMS[3].label} ×{" "}
+                    <strong>{CODE_SCORE_ITEMS[3].multiplier}</strong>
                   </span>
                 </div>
               </div>
@@ -100,31 +111,39 @@ const ScoringSystem = () => {
             <div className='bg-emerald-50 border border-emerald-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-emerald-400 inline-block' />
-                Quality Score
+                {SCORING_SYSTEM_LABELS.qualityScore}
               </h4>
+
               <div className='space-y-2 text-xs text-emerald-900/80 font-mono'>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Has tests × <strong>1</strong>
+                    {QUALITY_SCORE_ITEMS[0].label} ×{" "}
+                    <strong>{QUALITY_SCORE_ITEMS[0].multiplier}</strong>
                   </span>
                 </div>
+
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Has docs × <strong>1</strong>
+                    {QUALITY_SCORE_ITEMS[1].label} ×{" "}
+                    <strong>{QUALITY_SCORE_ITEMS[1].multiplier}</strong>
                   </span>
                 </div>
+
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    First-time mentor × <strong>5</strong>
+                    {QUALITY_SCORE_ITEMS[2].label} ×{" "}
+                    <strong>{QUALITY_SCORE_ITEMS[2].multiplier}</strong>
                   </span>
                 </div>
+
                 <div className='flex items-start gap-1.5'>
                   <span className='text-emerald-400 mt-0.5'>+</span>
                   <span>
-                    Zero revisions × <strong>2</strong>
+                    {QUALITY_SCORE_ITEMS[3].label} ×{" "}
+                    <strong>{QUALITY_SCORE_ITEMS[3].multiplier}</strong>
                   </span>
                 </div>
               </div>
@@ -133,33 +152,45 @@ const ScoringSystem = () => {
             <div className='bg-violet-50 border border-violet-100 rounded-xl p-4'>
               <h4 className='text-xs font-bold text-violet-700 uppercase tracking-wider mb-3 flex items-center gap-1.5'>
                 <span className='w-2 h-2 rounded-full bg-violet-400 inline-block' />
-                Community Score
+                {SCORING_SYSTEM_LABELS.communityScore}
               </h4>
+
               <div className='space-y-2 text-xs text-violet-900/80 font-mono'>
                 <div className='flex items-start gap-1.5'>
                   <span className='text-violet-400 mt-0.5'>+</span>
                   <span>
-                    Issues opened × <strong>2</strong>
+                    {COMMUNITY_SCORE_ITEMS[0].label} ×{" "}
+                    <strong>{COMMUNITY_SCORE_ITEMS[0].multiplier}</strong>
                   </span>
                 </div>
+
                 <div className='flex items-start gap-1.5'>
                   <span className='text-violet-400 mt-0.5'></span>
-                  <span className='text-violet-400'>(cap: 10/month)</span>
+                  <span className='text-violet-400'>
+                    ({COMMUNITY_SCORE_ITEMS[0].cap})
+                  </span>
                 </div>
+
                 <div className='flex items-start gap-1.5 mt-1'>
                   <span className='text-violet-400 mt-0.5'>+</span>
                   <span>
-                    Issue comments × <strong>1</strong>
+                    {COMMUNITY_SCORE_ITEMS[1].label} ×{" "}
+                    <strong>{COMMUNITY_SCORE_ITEMS[1].multiplier}</strong>
                   </span>
                 </div>
+
                 <div className='flex items-start gap-1.5'>
                   <span className='text-violet-400 mt-0.5'></span>
-                  <span className='text-violet-400'>(cap: 20/month)</span>
+                  <span className='text-violet-400'>
+                    ({COMMUNITY_SCORE_ITEMS[1].cap})
+                  </span>
                 </div>
+
                 <div className='flex items-start gap-1.5 mt-1 pt-1.5'>
                   <span className='text-violet-400 mt-0.5'>+</span>
                   <span>
-                    Projects worked on × <strong>10</strong>
+                    {COMMUNITY_SCORE_ITEMS[2].label} ×{" "}
+                    <strong>{COMMUNITY_SCORE_ITEMS[2].multiplier}</strong>
                   </span>
                 </div>
               </div>
