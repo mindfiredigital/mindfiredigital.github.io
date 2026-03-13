@@ -5,6 +5,7 @@ export * from "./cookiePolicy.constant";
 export * from "./privacyPolicy.constant";
 export * from "./termsOfUse.constant";
 export * from "./upcomingProject.constant";
+export * from "./joinUs.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";
