@@ -1,5 +1,6 @@
 export * from "./contributors.constant";
 export * from "./about.constant";
+export * from "./topscorepanel.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";

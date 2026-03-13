@@ -13,7 +13,12 @@ import currentMonthRaw from "../../projects/assets/leaderboard-monthly.json";
 import { toBase64Url, formatMonthKey, currentMonthKey } from "@/app/utils";
 import { MonthCalendarPicker } from "./MonthCalendarPicker";
 import { RankRow } from "./RankRow";
-import { TABS, RANK_ROW_ACCENT } from "@/constants";
+import {
+  TABS,
+  RANK_ROW_ACCENT,
+  PANEL_HEADER,
+  COPIED_RESET_MS,
+} from "@/constants";
 
 const PODIUM_SLOTS = [
   {
@@ -250,7 +255,10 @@ export default function TopScorersPanel({
   }, []);
 
   const getFileName = useCallback(
-    () => `hall-of-fame-${displayLabel.toLowerCase().replace(/\s+/g, "-")}.png`,
+    () =>
+      `${PANEL_HEADER.fileNamePrefix}${displayLabel
+        .toLowerCase()
+        .replace(/\s+/g, "-")}.png`,
     [displayLabel]
   );
 
@@ -280,7 +288,7 @@ export default function TopScorersPanel({
         new ClipboardItem({ "image/png": blob }),
       ]);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), COPIED_RESET_MS);
     } catch (err) {
       console.error("Failed to copy image:", err);
     } finally {
@@ -317,21 +325,22 @@ export default function TopScorersPanel({
                 animation: "trophyFloat 3s ease-in-out infinite",
               }}
             >
-              🏆
+              {PANEL_HEADER.trophy}
             </span>
           </div>
           <div>
             <h3 className='text-sm font-extrabold text-gray-900 tracking-tight leading-none'>
-              Hall of Fame
+              {PANEL_HEADER.title}
             </h3>
             <p className='text-[10px] text-gray-400 mt-0.5 uppercase tracking-widest font-semibold'>
-              Top {top10.length} Contributors
+              {PANEL_HEADER.topCountPrefix} {top10.length}{" "}
+              {PANEL_HEADER.topCountSuffix}
             </p>
           </div>
           <div className='ml-auto flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 border border-red-100 flex-shrink-0'>
             <span className='w-1.5 h-1.5 rounded-full bg-mf-red animate-pulse' />
             <span className='text-[10px] font-bold text-mf-red uppercase tracking-wide'>
-              Live
+              {PANEL_HEADER.liveLabel}
             </span>
           </div>
         </div>
@@ -357,7 +366,7 @@ export default function TopScorersPanel({
             data-action-btn
             onClick={handleDownload}
             disabled={isDownloading || isCopying}
-            title='Download image'
+            title={PANEL_HEADER.downloadTitle}
             className='flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-lg border border-mf-red text-mf-red hover:bg-mf-red hover:text-white transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed'
           >
             {isDownloading ? (
@@ -504,9 +513,9 @@ export default function TopScorersPanel({
           </div>
         ) : top10.length === 0 ? (
           <div className='flex flex-col items-center justify-center py-14 px-4 text-center gap-2'>
-            <span className='text-4xl'>😴</span>
+            <span className='text-4xl'>{PANEL_HEADER.noActivityEmoji}</span>
             <p className='text-sm font-semibold text-gray-500 mt-1'>
-              No activity yet
+              {PANEL_HEADER.noActivityHeading}
             </p>
             <p className='text-xs text-gray-400'>
               No contributions recorded for {displayLabel}.
@@ -542,7 +551,7 @@ export default function TopScorersPanel({
                           filter: slot.crownFilter,
                         }}
                       >
-                        👑
+                        {PANEL_HEADER.crown}
                       </span>
                       <div className='relative mb-1'>
                         <div
@@ -583,7 +592,8 @@ export default function TopScorersPanel({
                       <p
                         className={`${slot.scoreSz} font-semibold ${slot.scoreColor} mb-2 tabular-nums`}
                       >
-                        {scorer.total_score.toLocaleString()} pts
+                        {scorer.total_score.toLocaleString()}{" "}
+                        {PANEL_HEADER.scoreSuffix}
                       </p>
                       <div
                         className={`w-[72px] ${slot.podiumHeight} rounded-t-xl bg-gradient-to-b ${slot.podiumGradient} relative overflow-hidden shadow-lg`}
@@ -671,7 +681,7 @@ export default function TopScorersPanel({
       {/* ── Footer ── */}
       <div className='px-5 py-2.5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0'>
         <p className='text-[10px] text-center text-gray-400 font-medium uppercase tracking-wider'>
-          Click any contributor to view full profile
+          {PANEL_HEADER.footerHint}
         </p>
       </div>
 
