@@ -54,3 +54,11 @@ export const CALENDAR_PICKER_LABELS = {
   legendCurrentMonth: "Current month",
   legendSelected: "Selected",
 } as const;
+
+export const MODAL_SECTION_TITLES = {
+  scoreComposition: "Score Composition",
+  activity: "Activity",
+  prComplexity: "PR Complexity Breakdown",
+  scoreBreakdown: "Score Breakdown",
+  totalScore: "Total Score",
+} as const;
