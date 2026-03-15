@@ -21,6 +21,7 @@ import nuget from "../../../public/images/social-media/nuget-svgrepo-com.png";
 import projectsGroupedData from "../projects/assets/projects_grouped.json";
 
 import { FilterType } from "@/types";
+import { PACKAGE_CARD_LABELS, STATS_HERO } from "@/constants";
 
 const Stats = () => {
   const {
@@ -94,14 +95,13 @@ const Stats = () => {
         {/* Header */}
         <div className='flex items-center gap-4 mt-10'>
           <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-            Our Packages
+            {STATS_HERO.heading}
           </h1>
           <PackageCount totalPackages={totalPackageCount} />
         </div>
 
         <p className='mt-6 text-xl text-mf-light-grey tracking-wide text-center px-4'>
-          Elevate your projects with Mindfire&apos;s game-changing open-source
-          packages.
+          {STATS_HERO.subheading}
         </p>
 
         {/* Total Downloads Badge */}
@@ -141,7 +141,7 @@ const Stats = () => {
                     </h3>
                     {group.isMonorepo && (
                       <span className='ml-2 inline-block bg-gradient-to-r from-mindfire-text-red to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>
-                        Monorepo
+                        {PACKAGE_CARD_LABELS.monorepoLabel}
                       </span>
                     )}
                   </div>
@@ -163,7 +163,7 @@ const Stats = () => {
                       </h6>
                     </div>
                     <p className='text-gray-500 text-xs mt-1 text-right'>
-                      Total Downloads
+                      {PACKAGE_CARD_LABELS.totalDownloads}
                     </p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Stats = () => {
                       onClick={() => handleViewAllPackages(group)}
                       className='flex-1 mr-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'
                     >
-                      View All Packages
+                      {PACKAGE_CARD_LABELS.viewAllPackages}
                       <svg
                         className='w-4 h-4'
                         fill='none'
@@ -312,7 +312,7 @@ const Stats = () => {
                     <div className='border p-4 rounded bg-white flex flex-col justify-stretch'>
                       <div className='mb-4 flex justify-center items-center'>
                         <p className='text-mindfire-text-black text-xm font-bold mr-2'>
-                          Select
+                          {PACKAGE_CARD_LABELS.selectLabel}
                         </p>
                         <div className='relative inline-block w-32'>
                           {selectedPackage?.type === "npm" ? (
@@ -517,7 +517,7 @@ const Stats = () => {
                         </Dialog.Title>
 
                         <h2 className='text-lg font-semibold mb-4 text-gray-800'>
-                          Available Packages
+                          {PACKAGE_CARD_LABELS.availablePackages}
                         </h2>
                         <div className='space-y-3 max-h-96 overflow-y-auto'>
                           {selectedGroup.packages.map((pkg) => (
@@ -549,7 +549,9 @@ const Stats = () => {
                                         pkg.total || 0
                                       )}
                                     </span>
-                                    <span>downloads</span>
+                                    <span>
+                                      {PACKAGE_CARD_LABELS.downloadsLabel}
+                                    </span>
                                   </div>
                                 </div>
 

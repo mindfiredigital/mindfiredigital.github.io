@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
 import TopScorersPanel from "./components/TopScorersPanel";
@@ -9,27 +9,42 @@ import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorCard from "./components/ContributorCard";
 import ContributorModal from "./components/ContributorModal";
 import contributorList from "../projects/assets/contributors.json";
-import leaderboardData from "../projects/assets/leaderboard.json";
 import { Contributor, ContributorFilters, TopScorer } from "@/types";
+import {
+  CONTRIBUTORS_FILTERS_DEFAULT,
+  CONTRIBUTORS_HERO,
+  CONTRIBUTORS_LIST,
+} from "@/constants";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
-  const topScorers = leaderboardData.leaderboard as unknown as TopScorer[];
 
-  const [filters, setFilters] = useState<ContributorFilters>({
-    sortBy: "total_score",
-    activityFilter: "all",
-    scoreRange: "all",
-  });
+  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [filters, setFilters] = useState<ContributorFilters>(
+    CONTRIBUTORS_FILTERS_DEFAULT
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [selectedContributor, setSelectedContributor] =
     useState<TopScorer | null>(null);
 
-  // Ref to scroll to contributors grid section
   const contributorsSectionRef = useRef<HTMLDivElement>(null);
-  // Ref to the scrollable main panel
   const mainPanelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetch("/asset/leaderboard.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setTopScorers(data.leaderboard as TopScorer[]);
+      })
+      .catch((err) => console.error("Failed to load leaderboard:", err))
+      .finally(() => setIsLoading(false));
+  }, []);
 
   const scrollToContributors = () => {
     if (contributorsSectionRef.current && mainPanelRef.current) {
@@ -108,6 +123,19 @@ export default function Contributors() {
     return result;
   }, [topScorers, filters, searchQuery]);
 
+  if (isLoading) {
+    return (
+      <section className='bg-slate-50 min-h-screen overflow-x-hidden flex items-center justify-center'>
+        <div className='flex flex-col items-center gap-4'>
+          <div className='w-10 h-10 border-4 border-gray-200 border-t-mindfire-text-red rounded-full animate-spin' />
+          <p className='text-mf-light-grey text-sm tracking-wide'>
+            {CONTRIBUTORS_LIST.loadingMessage}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       <section className='bg-slate-50 min-h-screen overflow-x-hidden'>
@@ -134,18 +162,17 @@ export default function Contributors() {
             <div className='flex flex-col items-center text-center pt-10 px-6'>
               <div className='flex items-center justify-center gap-4'>
                 <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-                  Our Contributors
+                  {CONTRIBUTORS_HERO.heading}
                 </h1>
                 <ContributorCount totalContributors={topScorers.length} />
               </div>
 
               <div className='mt-6'>
                 <h2 className='text-2xl font-medium text-gray-800 mb-3'>
-                  Our Top Contributors
+                  {CONTRIBUTORS_HERO.topContributorsHeading}
                 </h2>
                 <p className='text-xl text-mf-light-grey tracking-wide'>
-                  Meet our top contributors — the people who help turn ideas
-                  into impact.
+                  {CONTRIBUTORS_HERO.topContributorsSubheading}
                 </p>
               </div>
 
@@ -180,11 +207,10 @@ export default function Contributors() {
               />
             </div>
 
-            {/* ↓ This ref is the scroll target — placed right at the contributors heading */}
             <div ref={contributorsSectionRef} className='mt-12 pb-16 px-6'>
               <div className='flex items-center justify-center gap-4 mb-8'>
                 <h2 className='text-3xl font-medium text-gray-800'>
-                  Contributors
+                  {CONTRIBUTORS_LIST.heading}
                 </h2>
                 <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
                   {filteredAndSorted.length} of {topScorers.length}
@@ -205,13 +231,13 @@ export default function Contributors() {
               ) : (
                 <div className='flex flex-col justify-center items-center h-64 gap-3'>
                   <p className='text-xl text-mf-light-grey tracking-wide'>
-                    No contributors found.
+                    {CONTRIBUTORS_LIST.emptyMessage}
                   </p>
                   <button
                     onClick={handleReset}
                     className='text-sm text-mf-red hover:underline font-medium'
                   >
-                    Clear filters
+                    {CONTRIBUTORS_LIST.clearFiltersLabel}
                   </button>
                 </div>
               )}

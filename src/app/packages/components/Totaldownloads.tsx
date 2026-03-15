@@ -5,6 +5,7 @@ import download from "../../../../public/images/bxs-download.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { TotalDownloadsProps } from "@/types";
+import { PACKAGE_CARD_LABELS } from "@/constants";
 
 const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
   const count = useAnimatedCounter(totalDownloads);
@@ -29,7 +30,7 @@ const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
           {formatted}
         </span>
         <span className='text-sm font-medium text-gray-500 ml-1'>
-          Total Downloads
+          {PACKAGE_CARD_LABELS.totalDownloads}
         </span>
       </div>
       <BorderBeam

@@ -12,8 +12,8 @@ const CONFIG = {
   },
 
   OUTPUT_FILES: {
-    leaderboard: "./src/app/projects/assets/leaderboard.json",
-    topScorers: "./src/app/projects/assets/top-scorers.json",
+    leaderboard: "./public/asset/leaderboard.json",
+    topScorers: "./public/asset/top-scorers.json",
     monthlyArchiveDir: "./public/leaderboard",
     manifest: "./public/leaderboard/manifest.json",
   },
