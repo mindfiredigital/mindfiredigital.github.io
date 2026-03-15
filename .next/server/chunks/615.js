@@ -1,0 +1,59 @@
+"use strict";exports.id=615,exports.ids=[615],exports.modules={280:(e,t,i)=>{i.d(t,{Je:()=>s,dI:()=>o,uM:()=>r,c8:()=>n,ZG:()=>c,El:()=>g,T9:()=>p,e1:()=>a,V3:()=>d,c3:()=>h,dV:()=>y,RZ:()=>u,yl:()=>l,_r:()=>f,JZ:()=>b,jY:()=>v,Tl:()=>m});let o={heading:"Where Innovation Knows no Boundaries.",subheading:"We code, we collaborate, and together we create open source wonders.",exploreLabel:"explore projects",contactLabel:"contact us",contactHref:"https://www.mindfiresolutions.com/contact-us/"},r={title:"our mission",description:"Our mission is to collaborate with the open source community, ignite creativity, share knowledge, and develop solutions that drive positive global change."},n={title:"why open source?",description:"Open source fuels collaboration, transparency, and perpetual advancement, inspiring innovation and fostering a culture of shared knowledge and growth."},s={title:"Our Contributions",description:"Explore our growing list of open source projects, ranging from software libraries and frameworks to tools and utilities. We are committed to actively contributing to these projects and maintaining a strong presence in the open source ecosystem.",exploreLabel:"Explore projects"},a=[{title:"collaborative creativity",description:" Fostering a culture of collaboration and creativity where diverse minds come together to innovate."},{title:"knowledge sharing",description:"Sharing knowledge openly and freely, enabling continuous learning and growth within our community."},{title:"positive global impact",description:"Building open source solutions that address real-world challenges and bring about positive change on a global scale"}],l=[{title:"Collaboration",description:"Embracing the power of collective effort to drive progress and create better solutions"},{title:"Transparency",description:"Promoting openness and clarity, ensuring trust and shared understanding in our work"},{title:"Innovation",description:"Sparking creativity and new ideas, pushing boundaries, and evolving through shared knowledge and learning"}],c='Cookies are small pieces of text that are used to store information on web browsers. They help in storing and receiving identifiers and other data on computers, smartphones, and other devices. In this policy, we collectively refer to all such technologies as "cookies." We utilize cookies to enhance your experience on our open source websites, including all associated content, documentation, information,collectively known as the &quot;Website.&quot',d={text:'This Privacy Policy governs the manner in which mindfiredigital.github.io collects, uses, maintains and discloses information collected from users (each, a "User") of the',linkHref:"https://mindfiredigital.github.io/",linkLabel:"https://mindfiredigital.github.io/",suffix:'website ("Site"). This privacy policy applies to the Site and all products and services offered by Mindfire Digital GitHub.'},u=['These "Terms" regulate your use of the website provided by the platform and the services it offers ("Services"). They constitute a legally binding agreement between you and the platform, so review them carefully.',"These Terms exclusively apply to this Website and do not extend to open source code on GitHub or other websites, each governed by their respective terms.","The platform may modify these Terms and Website features at any time. Such changes become effective upon posting, and your continued use of the Website implies acceptance of these changes."],h={heading:"Inspiring Innovation on Your Creative Endeavors.",subheading:"Harness the potential of your innovative spirit.",ctaLabel:"find projects"},p={heading:"Eager to Contribute to Open Source Ecosystems",subheading:"Explore projects and start working, or discover our beginner-friendly open source checklist to learn more.",ctaLabel:"explore projects",imageAlt:"Join Us"},g={title:"getting started with",description:"Here's a simple guide to help you navigate your way."},y={INSPIRING_TITLE:"Inspiring Innovation on Your Creative Endeavors.",HARNESS_POTENTIAL:"Harness the potential of your innovative spirit.",FIND_PROJECT:"find projects"},f=[{title:"Why Do We Use Cookies?",description:`Cookies serve several essential purposes for our website. First,
+            they enhance security by identifying and mitigating potential
+            threats, thus ensuring a safer user experience. Additionally,
+            cookies optimize the website's performance by efficiently
+            routing traffic between servers and adapting to individual
+            preferences, resulting in faster loading times and a personalized
+            feel. Furthermore, they enable seamless integration with third-party
+            services, like GitHub, enhancing functionality and enriching the
+            user experience. Finally, cookies gather valuable data through tools
+            such as Google Analytics, providing insights into user behavior and
+            preferences, which we use to continually improve and tailor our
+            website to your needs.`},{title:"How Can You Control Our Website's Use of Cookies?",description:`You may have the option to refuse or disable cookies by adjusting
+            your web browser settings or by visiting a relevant website. The
+            process for doing this can vary depending on your specific web
+            browser, and instructions are typically available in the
+            browser's "help" section. Please be aware that if you
+            choose to refuse, disable, or delete these technologies, some
+            functionality of the Website may not be available to you.`},{title:"How Often Will We Update This Cookie Policy?",description:`We may periodically update this Cookie Policy to reflect changes in
+            the cookies and related technologies we use, or for other
+            operational, legal, or regulatory reasons. Each time you use our
+            Website, the current version of the Cookie Policy will apply.
+            Therefore, we recommend checking the date of this Cookie Policy at
+            the top of the document and reviewing any changes since the last
+            version.`},{title:"",description:""}],m=[{title:"Third-Party Links",description:"The Website may include links to third-party content, but the platform has no control or responsibility over such platforms. Review their terms and policies before participation."},{title:"Limitation of Liability",description:'The Website and Services are provided "as is" without guarantees of safety, security, or error-free use. The platform disclaims all warranties. The platform is not responsible for user conduct or content. Liability is limited to the fullest extent permitted by law, and the platform is not liable for lost profits, data, or indirect damages.'},{title:"Dispute Resolution",description:"Disputes related to these Terms shall be resolved in specific courts, with applicable law governing. Users subject to European Union law may be subject to their country's laws and courts."},{title:"Privacy",description:"Data protection details are outlined in the Privacy Policy. The Cookie Policy explains website cookie usage."},{title:"Additional Terms",description:"These Terms constitute the entire agreement between you and the platform. Unenforceable portions do not affect the remainder. No transfer of rights or obligations is allowed without the platform's consent. These Terms do not create a partnership or agency relationship. No third-party beneficiary rights exist, and the platform's rights and obligations are freely assignable. All rights not explicitly granted are reserved by the platform."}],b=[{title:"Create a GitHub account",description:"Projects are hosted on GitHub, requiring a GitHub account for contributions through issue submissions and pull requests."},{title:"Find a project",description:"From web and mobile to AI and machine learning, we have diverse projects. Please visit our Projects page to explore."},{title:"Read the docs",description:"GitHub repos include README with project info and optional website links. Some projects use Docusaurus for docs."},{title:"Submit your first pull request",description:"You're all set to begin contributing! Explore this GitHub guide to understand pull requests, a way to notify others about your repository changes."}],v=[{title:"PERSONAL IDENTIFICATION INFORMATION",description:`We may collect personal identification information from Users in a
+       variety of ways, including, but not limited to, when Users visit our
+       site, register on the site, place a request, and in connection with
+       other activities, services, features or resources we make available on
+       our Site. Users may be asked for, as appropriate, name, email address,
+       mailing address, phone number. Users may, however, visit our Site
+       anonymously. We will collect personal identification information from
+       Users only if they voluntarily submit such information to us. Users can
+       always refuse to supply personal identification information, except that
+       it may prevent them from engaging in certain Site related activities.`},{title:"NON-PERSONAL IDENTIFICATION INFORMATION",description:`We may collect non-personal identification information about Users
+        whenever they interact with our Site. Non-personal identification
+        information may include the browser name, the type of computer and
+        technical information about Users’ means of connection to our Site, such
+        as the operating system, the Internet service provider utilised, and
+        other similar information.`},{title:"WEB BROWSER COOKIES",description:`Our Site may use “cookies” to enhance User experience. User’s web
+        browser places cookies on their hard drive for record-keeping purposes
+        and sometimes to track information about them. User may choose to set
+        their web browser to refuse cookies, or to alert you when cookies are
+        being sent. If they do so, note that some parts of the Site may not
+        function properly.`},{title:"HOW WE PROTECT YOUR INFORMATION",description:`We adopt appropriate data collection, storage and processing practices
+        and security measures to protect against reauthorized access,
+        alteration, disclosure or destruction of your personal information
+        stored on our site. Sensitive and private data exchange between the Site
+        and its Users happens over a SSL secured communication channel.`},{title:"SHARING YOUR PERSONAL INFORMATION",description:`We may share information if we think we have to in order to comply with
+        the law or to protect ourselves. We will share information to respond to
+        a court order or subpoena. We may also share it if a government agency
+        or investigatory body requests. Or, we might also share information when
+        we are investigating potential fraud.`},{title:"CHANGES TO THIS PRIVACY POLICY",description:`Mindfire Digital GitHub has the discretion to update this privacy policy
+        at any time. We encourage Users to frequently check this page for any
+        changes to stay informed about how we are helping to protect the
+        personal information we collect. You acknowledge and agree that it is
+        your responsibility to review this privacy policy periodically and
+        become aware of modifications.`},{title:"JURISDICTION",description:`If you choose to visit the website, your visit and any dispute over
+        privacy is subject to this Policy and the website’s terms of use. In
+        addition to the foregoing, any disputes arising under this Policy shall
+        be governed by the laws of India.`}]},3881:(e,t,i)=>{i.r(t),i.d(t,{default:()=>__WEBPACK_DEFAULT_EXPORT__});var o=i(6885);let __WEBPACK_DEFAULT_EXPORT__=e=>{let t=(0,o.fillMetadataSegment)(".",e.params,"favicon.ico");return[{type:"image/x-icon",sizes:"32x32",url:t+""}]}}};

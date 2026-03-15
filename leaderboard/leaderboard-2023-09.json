@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T03:45:15.711Z",
+  "generated_at": "2026-03-13T07:17:35.319Z",
   "period": "monthly",
   "month_label": "September 2023",
   "month_key": "2023-09",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -52,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 26
     },
     {
       "rank": 2,
@@ -68,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FMDAPI Node Weaver"
-      ],
+      "projects": ["FMDAPI Node Weaver"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -117,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

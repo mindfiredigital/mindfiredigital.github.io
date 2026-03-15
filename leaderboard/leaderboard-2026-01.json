@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T03:45:15.901Z",
+  "generated_at": "2026-03-13T07:17:35.507Z",
   "period": "monthly",
   "month_label": "January 2026",
   "month_key": "2026-01",
@@ -19,10 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.75,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Next.js Fortress",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Next.js Fortress", "Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 19,
@@ -53,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 2,
@@ -106,7 +103,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 3
     },
     {
       "rank": 3,
@@ -122,9 +119,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.4,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -155,7 +150,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 0
     },
     {
       "rank": 4,
@@ -171,9 +166,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 7.56,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -204,7 +197,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 10
     },
     {
       "rank": 5,
@@ -220,9 +213,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.27,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -253,7 +244,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 6
     },
     {
       "rank": 6,
@@ -269,9 +260,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.86,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -318,9 +307,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.71,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -351,7 +338,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 8,
@@ -367,9 +354,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.75,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MonoDog"
-      ],
+      "projects": ["MonoDog"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -416,9 +401,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -465,10 +448,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Pivothead",
-        "Next.js Fortress"
-      ],
+      "projects": ["Pivothead", "Next.js Fortress"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -499,7 +479,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 26
     }
   ]
 }
