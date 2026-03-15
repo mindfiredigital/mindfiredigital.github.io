@@ -13,7 +13,6 @@ import projectData from "./assets/projects.json";
 import upcomingProjectData from "./assets/upcomingProjects.json";
 import contributorsData from "./assets/contributors.json";
 import contributorMapping from "./assets/contributor-mapping.json";
-import leaderboardData from "./assets/leaderboard.json";
 import {
   Project,
   Filters,
@@ -21,6 +20,11 @@ import {
   ContributorProject,
   TopScorer,
 } from "../../types";
+import {
+  CURRENT_PROJECTS,
+  PROJECTS_HEROZ,
+  UPCOMING_PROJECTS,
+} from "@/constants";
 
 export default function ProjectsPage() {
   const [filters, setFilters] = useState<Filters>({
@@ -33,12 +37,24 @@ export default function ProjectsPage() {
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
 
   const typedMapping = contributorMapping as ContributorMap;
 
-  // Enrich contributors with total_score from leaderboard.json, sorted highest first
+  useEffect(() => {
+    fetch("/asset/leaderboard.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setTopScorers(data.leaderboard as TopScorer[]);
+      })
+      .catch((err) => console.error("Failed to load leaderboard:", err));
+  }, []);
+
+  // Enrich contributors with total_score from leaderboard, sorted highest first
   const enrichedContributors = useMemo((): ContributorProject[] => {
-    const topScorers = leaderboardData.leaderboard as unknown as TopScorer[];
     return (contributorsData as unknown as ContributorProject[])
       .map((contributor) => {
         const match = topScorers.find(
@@ -47,7 +63,7 @@ export default function ProjectsPage() {
         return { ...contributor, total_score: match?.total_score ?? 0 };
       })
       .sort((a, b) => (b.total_score ?? 0) - (a.total_score ?? 0));
-  }, []);
+  }, [topScorers]);
 
   // Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
@@ -94,7 +110,6 @@ export default function ProjectsPage() {
   // Filter projects
   const filterProjects = (projects: Project[]) => {
     return projects.filter((project) => {
-      // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         const matchesSearch =
@@ -103,7 +118,6 @@ export default function ProjectsPage() {
         if (!matchesSearch) return false;
       }
 
-      // Tags filter
       if (filters.tags.length > 0) {
         const hasTag = filters.tags.some(
           (tag) =>
@@ -114,7 +128,6 @@ export default function ProjectsPage() {
         if (!hasTag) return false;
       }
 
-      // Technology filter
       if (filters.technologies.length > 0) {
         const hasTech = filters.technologies.some(
           (tech) =>
@@ -142,7 +155,6 @@ export default function ProjectsPage() {
         if (contributorCount < minContributors) return false;
       }
 
-      // Contributor multi-select filter (AND logic)
       if (filters.selectedContributor.length > 0) {
         const hasAllContributors = filters.selectedContributor.every(
           (login) => {
@@ -265,17 +277,17 @@ export default function ProjectsPage() {
         <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
           <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
             <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-              Discover Amazing Open Source Projects
+              {PROJECTS_HEROZ.heading}
             </h1>
             <p className='mt-6 text-xl text-mf-light-grey tracking-wide'>
-              Explore our collection of innovative open source projects.
+              {PROJECTS_HEROZ.subheading}
             </p>
             <div className='flex flex-wrap items-start gap-6 mt-10'>
               <Link
                 href='#current-projects'
                 className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
               >
-                Browse Projects
+                {PROJECTS_HEROZ.ctaLabel}
               </Link>
             </div>
           </div>
@@ -295,7 +307,7 @@ export default function ProjectsPage() {
           <div id='current-projects' className='mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
-                Current Projects
+                {PROJECTS_HEROZ.ctaHref}
               </h2>
               <ProjectCount totalProjects={sortedCurrentProjects.length} />
             </div>
@@ -324,7 +336,7 @@ export default function ProjectsPage() {
                 {sortedCurrentProjects.length === 0 ? (
                   <div className='text-center py-12'>
                     <p className='text-lg text-gray-500'>
-                      No current projects found.
+                      {CURRENT_PROJECTS.emptyMessage}
                     </p>
                   </div>
                 ) : (
@@ -350,7 +362,7 @@ export default function ProjectsPage() {
           <div id='upcoming-projects' className='mt-16 mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
-                Upcoming Projects
+                {UPCOMING_PROJECTS.heading}
               </h2>
               <ProjectCount totalProjects={sortedUpcomingProjects.length} />
             </div>
@@ -363,7 +375,7 @@ export default function ProjectsPage() {
               {sortedUpcomingProjects.length === 0 ? (
                 <div className='text-center py-12'>
                   <p className='text-lg text-gray-500'>
-                    No upcoming projects found.
+                    {UPCOMING_PROJECTS.emptyMessage}
                   </p>
                 </div>
               ) : (

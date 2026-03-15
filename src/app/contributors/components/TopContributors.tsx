@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TopContributorsProps } from "@/types";
 import { BuildGroups } from "./BuildGroups";
-import { INTERVAL_MS, PAUSE_ON_CLICK_MS } from "@/constants";
+import { INTERVAL_MS, PANEL_HEADER, PAUSE_ON_CLICK_MS } from "@/constants";
 
 const TopContributors = ({
   contributors,
@@ -91,7 +91,7 @@ const TopContributors = ({
 
                 {group.items.length === 0 && (
                   <p className='text-sm text-gray-400 py-8'>
-                    No contributors found
+                    {PANEL_HEADER.noContributor}
                   </p>
                 )}
               </div>

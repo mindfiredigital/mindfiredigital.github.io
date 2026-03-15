@@ -5,6 +5,7 @@ import { Search, X, SlidersHorizontal } from "lucide-react";
 import { ContributorFilterSidebarProps } from "@/types";
 import { FilterSection } from "./FilterSection";
 import { RadioGroup } from "./RadioGroup";
+import { FILTER_LABELS } from "@/constants";
 
 const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
   filters,
@@ -82,7 +83,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             <div className='flex items-center gap-2'>
               <SlidersHorizontal className='w-4 h-4 text-gray-600' />
               <h3 className='text-sm font-bold text-gray-900 uppercase tracking-wider'>
-                Filters
+                {FILTER_LABELS.heading}
               </h3>
             </div>
             {activeFiltersCount > 0 && (
@@ -100,7 +101,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             <Search className='absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-3.5 h-3.5' />
             <input
               type='text'
-              placeholder='Search contributors...'
+              placeholder={FILTER_LABELS.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className='w-full pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mf-red/30 focus:border-mf-red transition-all bg-gray-50 placeholder:text-gray-400'

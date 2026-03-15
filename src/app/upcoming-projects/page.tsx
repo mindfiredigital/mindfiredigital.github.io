@@ -6,6 +6,7 @@ import projectsImage from "../../../public/images/projects.webp";
 import ProjectGrid from "../projects/components/ProjectGrid";
 import upcomingProjectData from "../projects/assets/upcomingProjects.json";
 import meta from "../../metadata/metadata.json";
+import { PROJECTS_HERO } from "@/constants";
 
 export const metadata: Metadata = {
   title: meta["Upcoming-Projects"].title,
@@ -48,17 +49,17 @@ export default function ProjectsPage() {
         <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
           <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
             <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-              Inspiring Innovation on Your Creative Endeavors.
+              {PROJECTS_HERO.heading}
             </h1>
             <p className='mt-6 text-xl text-mf-light-grey tracking-wide'>
-              Harness the potential of your innovative spirit.
+              {PROJECTS_HERO.subheading}
             </p>
             <div className='flex flex-wrap items-start gap-6 mt-10'>
               <Link
                 href='#upcoming-projects'
                 className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
               >
-                find projects
+                {PROJECTS_HERO.ctaLabel}
               </Link>
             </div>
           </div>

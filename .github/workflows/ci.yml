@@ -45,8 +45,6 @@ jobs:
           git restore src/app/projects/assets/contributor-mapping.json
           git restore src/app/projects/assets/leaderboard-cache.json
           git restore src/app/projects/assets/leaderboard-monthly.json
-          git restore src/app/projects/assets/leaderboard.json
-          git restore src/app/projects/assets/top-scorers.json
 
       - name: 'Fetch branches'
         run: git fetch origin
@@ -60,9 +58,12 @@ jobs:
         run: |
           mkdir -p /tmp/leaderboard-data
           cp -r public/leaderboard/* /tmp/leaderboard-data/
+          cp public/asset/*.json /tmp/leaderboard-data/
 
-      - name: 'Restore generated leaderboard files to allow branch switch'   
-        run: git restore public/leaderboard/
+      - name: 'Restore generated leaderboard files to allow branch switch'
+        run: |
+          git restore public/leaderboard/
+          git restore public/asset/
 
       - name: 'Copy build artifacts to gh-pages branch'
         run: |
@@ -70,7 +71,7 @@ jobs:
           shopt -s dotglob
           cp -r build/* /tmp/temp-directory/
           shopt -u dotglob
-          # Also include the generated leaderboard data
+          # Include generated leaderboard data
           mkdir -p /tmp/temp-directory/leaderboard
           cp -r /tmp/leaderboard-data/* /tmp/temp-directory/leaderboard/
           git checkout gh-pages

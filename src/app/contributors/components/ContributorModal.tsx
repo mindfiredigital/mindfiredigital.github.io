@@ -13,7 +13,7 @@ import {
   Layers,
 } from "lucide-react";
 import { ContributorModalProps } from "@/types";
-import { SCORE_BARS } from "@/constants";
+import { MODAL_SECTION_TITLES, SCORE_BARS } from "@/constants";
 import { getRankBadge } from "@/app/utils";
 
 const ContributorModal: React.FC<ContributorModalProps> = ({
@@ -163,7 +163,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
 
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
-              Score Composition
+              {MODAL_SECTION_TITLES.scoreComposition}
             </h3>
             <div className='space-y-2.5'>
               {SCORE_BARS.map((bar) => {
@@ -203,7 +203,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
 
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
-              Activity
+              {MODAL_SECTION_TITLES.activity}
             </h3>
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-3'>
               {[
@@ -262,7 +262,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
 
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
-              PR Complexity Breakdown
+              {MODAL_SECTION_TITLES.prComplexity}
             </h3>
             <div className='grid grid-cols-3 gap-3'>
               {[
@@ -313,7 +313,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
 
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
-              Score Breakdown
+              {MODAL_SECTION_TITLES.scoreBreakdown}
             </h3>
             <div className='space-y-2'>
               {scoreItems
