@@ -20,6 +20,11 @@ import {
   ContributorProject,
   TopScorer,
 } from "../../types";
+import {
+  CURRENT_PROJECTS,
+  PROJECTS_HEROZ,
+  UPCOMING_PROJECTS,
+} from "@/constants";
 
 export default function ProjectsPage() {
   const [filters, setFilters] = useState<Filters>({
@@ -272,17 +277,17 @@ export default function ProjectsPage() {
         <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
           <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
             <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-              Discover Amazing Open Source Projects
+              {PROJECTS_HEROZ.heading}
             </h1>
             <p className='mt-6 text-xl text-mf-light-grey tracking-wide'>
-              Explore our collection of innovative open source projects.
+              {PROJECTS_HEROZ.subheading}
             </p>
             <div className='flex flex-wrap items-start gap-6 mt-10'>
               <Link
                 href='#current-projects'
                 className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
               >
-                Browse Projects
+                {PROJECTS_HEROZ.ctaLabel}
               </Link>
             </div>
           </div>
@@ -302,7 +307,7 @@ export default function ProjectsPage() {
           <div id='current-projects' className='mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
-                Current Projects
+                {PROJECTS_HEROZ.ctaHref}
               </h2>
               <ProjectCount totalProjects={sortedCurrentProjects.length} />
             </div>
@@ -331,7 +336,7 @@ export default function ProjectsPage() {
                 {sortedCurrentProjects.length === 0 ? (
                   <div className='text-center py-12'>
                     <p className='text-lg text-gray-500'>
-                      No current projects found.
+                      {CURRENT_PROJECTS.emptyMessage}
                     </p>
                   </div>
                 ) : (
@@ -357,7 +362,7 @@ export default function ProjectsPage() {
           <div id='upcoming-projects' className='mt-16 mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
-                Upcoming Projects
+                {UPCOMING_PROJECTS.heading}
               </h2>
               <ProjectCount totalProjects={sortedUpcomingProjects.length} />
             </div>
@@ -370,7 +375,7 @@ export default function ProjectsPage() {
               {sortedUpcomingProjects.length === 0 ? (
                 <div className='text-center py-12'>
                   <p className='text-lg text-gray-500'>
-                    No upcoming projects found.
+                    {UPCOMING_PROJECTS.emptyMessage}
                   </p>
                 </div>
               ) : (

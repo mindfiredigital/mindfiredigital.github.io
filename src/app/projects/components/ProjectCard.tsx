@@ -7,6 +7,7 @@ import docs from "../../../../public/images/social-media/docs.svg";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { ProjectProps } from "@/types";
+import { PROJECT_CARD_LABELS } from "@/constants";
 
 export default function ProjectCard({
   title,
@@ -107,7 +108,9 @@ export default function ProjectCard({
                     alt='Repository'
                     className='rounded-full'
                   />
-                  <span className='text-sm text-gray-600'>Repository</span>
+                  <span className='text-sm text-gray-600'>
+                    {PROJECT_CARD_LABELS.repositoryLabel}
+                  </span>
                 </Link>
               )}
               {documentationUrl && documentationUrl !== "NA" && (
@@ -122,7 +125,9 @@ export default function ProjectCard({
                     width={20}
                     alt='Documentation'
                   />
-                  <span className='text-sm text-gray-600'>Docs</span>
+                  <span className='text-sm text-gray-600'>
+                    {PROJECT_CARD_LABELS.docsLabel}
+                  </span>
                 </Link>
               )}
             </div>

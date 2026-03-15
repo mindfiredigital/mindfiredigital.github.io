@@ -8,6 +8,7 @@ export * from "./upcomingProject.constant";
 export * from "./joinUs.constant";
 export * from "./currentProject.constant";
 export * from "./packages.constant";
+export * from "./project.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";
