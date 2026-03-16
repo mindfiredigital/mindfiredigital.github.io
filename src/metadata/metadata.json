@@ -50,5 +50,13 @@
       "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
       "url": "https://mindfiredigital.github.io/join-us"
     }
+  },
+  "Terms-Of-Use": {
+    "title": "Mindfire | FOSS: Terms of Use",
+    "description": "Read the Terms of Use for Mindfire Digital LLP's open source platform. Understand your rights and responsibilities when using our services.",
+    "openGraph": {
+      "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
+      "url": "https://mindfiredigital.github.io/terms-of-use"
+    }
   }
 }
