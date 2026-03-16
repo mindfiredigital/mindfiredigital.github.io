@@ -58,5 +58,14 @@
       "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
       "url": "https://mindfiredigital.github.io/terms-of-use"
     }
+  },
+
+  "Privacy-Policy": {
+    "title": "Mindfire | FOSS : Privacy Policy",
+    "description": "Read the Privacy Policy for Mindfire Digital LLP's open source platform. Learn how we collect, use, and protect your information while interacting with our projects, services, and community.",
+    "openGraph": {
+      "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
+      "url": "https://mindfiredigital.github.io/privacy-policy"
+    }
   }
 }
