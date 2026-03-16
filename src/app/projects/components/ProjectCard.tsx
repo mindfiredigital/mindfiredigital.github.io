@@ -9,6 +9,7 @@ import { AiFillStar } from "react-icons/ai";
 import { ProjectProps } from "@/types";
 import { PROJECT_CARD_LABELS } from "@/constants";
 
+/* Card component used to display individual project details */
 export default function ProjectCard({
   title,
   shortDescription,
@@ -18,6 +19,7 @@ export default function ProjectCard({
   stars,
   tags,
 }: ProjectProps) {
+  /* State to toggle expanded/collapsed description */
   const [expandDescription, setExpandDescription] = useState(false);
 
   return (
@@ -27,11 +29,13 @@ export default function ProjectCard({
       }`}
     >
       <div className='flex-1 flex flex-col overflow-hidden'>
+        {/* Header section containing project title and GitHub star count */}
         <div className='flex justify-between items-start mb-2 h-[60px]'>
           <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black line-clamp-2 capitalize pr-2 overflow-hidden'>
             {title}
           </h3>
 
+          {/* Star count badge (shown only if stars exist) */}
           {stars !== undefined && (
             <div className='flex items-center gap-1 bg-gray-100 rounded-full p-1 flex-shrink-0'>
               <AiFillStar className='text-yellow-400' />
@@ -40,7 +44,7 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/* Description - fixed height with toggleable expansion */}
+        {/* Project description with expandable/collapsible behavior */}
         <div
           className={`relative cursor-pointer transition-all duration-300 ${
             expandDescription
@@ -61,7 +65,7 @@ export default function ProjectCard({
           </p>
         </div>
 
-        {/* Show toggle outside the description div - now clickable */}
+        {/* Toggle text to expand or collapse description */}
         {shortDescription.length > 120 && (
           <span
             className='text-xs text-mindfire-text-red block -mt-2 mb-2 cursor-pointer'
@@ -71,7 +75,7 @@ export default function ProjectCard({
           </span>
         )}
 
-        {/* Tags section - fixed height + horizontal scroll if overflow */}
+        {/* Technology tags (shown only for current projects) */}
         {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
           <div className='h-[2.5rem]'>
             <div className='flex gap-2 max-w-full overflow-x-auto pb-1'>
@@ -88,13 +92,14 @@ export default function ProjectCard({
         )}
       </div>
 
-      {/* Footer section  */}
+      {/* Footer section containing repository and documentation links */}
       {parentTitle !== "Upcoming Projects" &&
         (githubUrl || documentationUrl) &&
         (githubUrl !== "NA" || documentationUrl !== "NA") && (
           <div className='mt-2'>
             <div className='border-t-2'></div>
             <div className='flex gap-4 justify-center mt-2'>
+              {/* GitHub repository link */}
               {githubUrl && githubUrl !== "NA" && (
                 <Link
                   href={githubUrl}
@@ -113,6 +118,8 @@ export default function ProjectCard({
                   </span>
                 </Link>
               )}
+
+              {/* Documentation link */}
               {documentationUrl && documentationUrl !== "NA" && (
                 <Link
                   href={documentationUrl}

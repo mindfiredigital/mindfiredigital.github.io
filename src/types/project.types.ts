@@ -80,3 +80,7 @@ export interface FilterSidebarProps {
   isMobileOpen: boolean;
   onMobileToggle: () => void;
 }
+
+export interface UpcomingProjectsSectionProps {
+  projects: Project[];
+}

@@ -1,0 +1,45 @@
+import Image from "next/image";
+import Link from "next/link";
+import projectsImage from "../../../../public/images/projects.webp";
+import { PROJECTS_HEROZ } from "@/constants";
+
+/* Hero banner section displayed at the top of the Projects page */
+export default function ProjectsHero() {
+  return (
+    <section className='bg-slate-50'>
+      <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
+        {/* Left content: heading, description, and call-to-action */}
+        <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
+          <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+            {PROJECTS_HEROZ.heading}
+          </h1>
+
+          {/* Subheading describing the projects section */}
+          <p className='mt-6 text-xl text-mf-light-grey tracking-wide'>
+            {PROJECTS_HEROZ.subheading}
+          </p>
+
+          {/* CTA button that scrolls to the current projects section */}
+          <div className='flex flex-wrap items-start gap-6 mt-10'>
+            <Link
+              href='#current-projects'
+              className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
+            >
+              {PROJECTS_HEROZ.ctaLabel}
+            </Link>
+          </div>
+        </div>
+
+        {/* Right side illustration for the hero section */}
+        <Image
+          src={projectsImage}
+          alt='projects'
+          className='max-lg:w-full object-contain'
+          height='500'
+          width='600'
+          priority
+        />
+      </div>
+    </section>
+  );
+}
