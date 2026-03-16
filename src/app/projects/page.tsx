@@ -24,10 +24,10 @@ import { useHashScroll } from "@/hooks/useHashScroll";
 import { PROJECTS_HEROZ } from "@/constants";
 
 export default function ProjectsPage() {
-  // Extract top contributors from leaderboard data
+  /* Extract top contributors from leaderboard data */
   const topScorers = leaderboardData.leaderboard as TopScorer[];
 
-  // Custom hook that manages project filtering, searching, sorting, and derived data
+  /* Custom hook that manages project filtering, searching, sorting, and derived data */
   const {
     filters,
     searchQuery,

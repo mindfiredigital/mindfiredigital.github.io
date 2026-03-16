@@ -1,16 +1,14 @@
 import ProjectCard from "./ProjectCard";
-import { Project } from "@/types";
 import { CURRENT_PROJECTS } from "@/constants";
+import { CurrentProjectsSectionProps } from "@/types";
 
-interface CurrentProjectsSectionProps {
-  projects: Project[];
-}
-
+/* Section component that displays the list of current projects */
 export default function CurrentProjectsSection({
   projects,
 }: CurrentProjectsSectionProps) {
   return (
     <div className='mb-16'>
+      {/* Show empty state message when no projects are available */}
       {projects.length === 0 ? (
         <div className='text-center py-12'>
           <p className='text-lg text-gray-500'>
@@ -18,6 +16,7 @@ export default function CurrentProjectsSection({
           </p>
         </div>
       ) : (
+        /* Grid layout displaying project cards */
         <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
           {projects.map((project) => (
             <ProjectCard

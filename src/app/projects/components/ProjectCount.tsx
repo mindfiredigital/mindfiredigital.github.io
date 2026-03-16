@@ -5,10 +5,11 @@ import project from "../../../../public/images/social-media/project.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 import { ProjectCountProps } from "@/types";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { COUNT_DURATION } from "@/constants";
 
 /* Displays an animated project count badge with visual effects */
 const ProjectCount = ({ totalProjects }: ProjectCountProps) => {
-  const duration = 800;
+  const duration = COUNT_DURATION;
 
   /* Custom hook to animate the counter from 0 to totalProjects */
   const count = useAnimatedCounter(totalProjects, duration);
