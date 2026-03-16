@@ -52,3 +52,40 @@ export type FilterType = "all" | "npm" | "pypi";
 export interface TotalDownloadsProps {
   totalDownloads: number;
 }
+
+export interface PackageStatsModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  selectedPackage: Package | null;
+  selectedRange: boolean;
+  loading: boolean;
+  count: number;
+  startDate: string;
+  endDate: string;
+  onStartDateChange: (val: string) => void;
+  onEndDateChange: (val: string) => void;
+  onRangeChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+export interface FilterOption {
+  label: string;
+  value: string;
+}
+
+export interface PackageFilterToggleProps {
+  activeFilter: FilterType;
+  onChange: (value: FilterType) => void;
+}
+
+export interface PackageCardProps {
+  group: GroupedPackage;
+  onFilterClick: () => void;
+  onViewAllClick: () => void;
+}
+
+export interface MonorepoPackagesModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  selectedGroup: GroupedPackage | null;
+  onPackageFilterClick: (pkg: Package) => void;
+}

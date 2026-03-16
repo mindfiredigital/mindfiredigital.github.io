@@ -8,10 +8,19 @@ export const PACKAGE_CARD_LABELS = {
   totalDownloads: "Total Downloads",
   monorepoLabel: "Monorepo",
   viewAllPackages: "View All Packages",
+  filterTitle: "Filter",
+  githubTitle: "GitHub",
+  viewPackageTitle: "View Package",
   availablePackages: "Available Packages",
   downloadsLabel: "downloads",
   selectLabel: "Select",
 } as const;
+
+export const FILTER_OPTIONS = [
+  { label: "All", value: "all" },
+  { label: "NPM", value: "npm" },
+  { label: "PyPI", value: "pypi" },
+] as const;
 
 export const NPM_RANGE_OPTIONS = [
   { label: "Total", value: "total" },
