@@ -9,6 +9,17 @@ export interface Contributor {
   issueCount: number;
 }
 
+export interface ContributorUtil {
+  login: string;
+  id: number;
+  avatar_url: string;
+  html_url: string;
+  contributions: number;
+  lastActiveDays: number;
+  pullRequestCount: number;
+  issueCount: number;
+}
+
 export interface ContributorCountProps {
   totalContributors: number;
 }

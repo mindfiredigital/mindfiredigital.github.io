@@ -1,18 +1,8 @@
 import contributorsData from "@/asset/contributors.json";
-
-interface Contributor {
-  login: string;
-  id: number;
-  avatar_url: string;
-  html_url: string;
-  contributions: number;
-  lastActiveDays: number;
-  pullRequestCount: number;
-  issueCount: number;
-}
+import { ContributorUtil } from "@/types";
 
 // Type-safe contributors data
-const contributors = contributorsData as Contributor[];
+const contributors = contributorsData as ContributorUtil[];
 
 // Create a map for quick lookup
 const contributorMap = new Map(
@@ -26,7 +16,7 @@ const contributorMap = new Map(
  */
 export function getContributorByUrl(
   githubUrl: string
-): Contributor | undefined {
+): ContributorUtil | undefined {
   const match = githubUrl.match(/github\.com\/([^/]+)/);
   if (match) {
     return contributorMap.get(match[1]);
@@ -38,7 +28,7 @@ export function getContributorByUrl(
  * Get all contributors
  * @returns Array of all contributors
  */
-export function getAllContributors(): Contributor[] {
+export function getAllContributors(): ContributorUtil[] {
   return contributors;
 }
 
@@ -47,11 +37,11 @@ export function getAllContributors(): Contributor[] {
  * @param logins - Array of GitHub login names
  * @returns Array of contributors
  */
-export function getContributorsByLogins(logins: string[]): Contributor[] {
+export function getContributorsByLogins(logins: string[]): ContributorUtil[] {
   return logins
     .map((login) => contributorMap.get(login))
     .filter(
-      (contributor): contributor is Contributor => contributor !== undefined
+      (contributor): contributor is ContributorUtil => contributor !== undefined
     );
 }
 
@@ -60,7 +50,7 @@ export function getContributorsByLogins(logins: string[]): Contributor[] {
  * @param query - Search query
  * @returns Array of matching contributors
  */
-export function searchContributors(query: string): Contributor[] {
+export function searchContributors(query: string): ContributorUtil[] {
   const lowercaseQuery = query.toLowerCase();
   return contributors.filter((contributor) =>
     contributor.login.toLowerCase().includes(lowercaseQuery)
@@ -72,7 +62,7 @@ export function searchContributors(query: string): Contributor[] {
  * @param limit - Number of top contributors to return
  * @returns Array of top contributors
  */
-export function getTopContributors(limit = 10): Contributor[] {
+export function getTopContributors(limit = 10): ContributorUtil[] {
   return [...contributors]
     .sort((a, b) => b.contributions - a.contributions)
     .slice(0, limit);
@@ -103,4 +93,4 @@ export function getContributorStats() {
   };
 }
 
-export type { Contributor };
+export type { ContributorUtil };
