@@ -5,6 +5,7 @@ export const PROJECTS_HEROZ = {
   subheading: "Explore our collection of innovative open source projects.",
   ctaLabel: "Browse Projects",
   ctaHref: "#current-projects",
+  currProject: "Current Project",
   imageAlt: "projects",
 } as const;
 

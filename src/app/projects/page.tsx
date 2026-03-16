@@ -9,10 +9,11 @@ import FilterSidebar from "./components/FilterSidebar";
 import projectsImage from "../../../public/images/projects.webp";
 
 // Static Assets
-import projectData from "./assets/projects.json";
-import upcomingProjectData from "./assets/upcomingProjects.json";
-import contributorsData from "./assets/contributors.json";
-import contributorMapping from "./assets/contributor-mapping.json";
+import projectData from "@/asset/projects.json";
+import upcomingProjectData from "@/asset/upcomingProjects.json";
+import contributorsData from "@/asset/contributors.json";
+import contributorMapping from "@/asset/contributor-mapping.json";
+import leaderboardData from "@/asset/leaderboard.json";
 import {
   Project,
   Filters,
@@ -37,21 +38,10 @@ export default function ProjectsPage() {
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
 
   const typedMapping = contributorMapping as ContributorMap;
 
-  useEffect(() => {
-    fetch("/asset/leaderboard.json")
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
-        return res.json();
-      })
-      .then((data) => {
-        setTopScorers(data.leaderboard as TopScorer[]);
-      })
-      .catch((err) => console.error("Failed to load leaderboard:", err));
-  }, []);
+  const topScorers = leaderboardData.leaderboard as TopScorer[];
 
   // Enrich contributors with total_score from leaderboard, sorted highest first
   const enrichedContributors = useMemo((): ContributorProject[] => {
@@ -63,7 +53,7 @@ export default function ProjectsPage() {
         return { ...contributor, total_score: match?.total_score ?? 0 };
       })
       .sort((a, b) => (b.total_score ?? 0) - (a.total_score ?? 0));
-  }, [topScorers]);
+  }, []);
 
   // Extract unique tags and technologies from BOTH current and upcoming projects
   const { allTags, allTechnologies } = useMemo(() => {
@@ -262,6 +252,8 @@ export default function ProjectsPage() {
     }
   };
 
+  // ← kept this useEffect because it handles hash-based scroll on page load
+  // which is a genuine browser-side concern, not data fetching
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
@@ -307,7 +299,7 @@ export default function ProjectsPage() {
           <div id='current-projects' className='mb-8'>
             <div className='flex justify-center items-center gap-4'>
               <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black ml-0 lg:ml-72'>
-                {PROJECTS_HEROZ.ctaHref}
+                {PROJECTS_HEROZ.currProject}
               </h2>
               <ProjectCount totalProjects={sortedCurrentProjects.length} />
             </div>

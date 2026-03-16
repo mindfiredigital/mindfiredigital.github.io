@@ -5,15 +5,15 @@ import path from "path";
 
 const CONFIG = {
   INPUT_FILES: {
-    contributors: "./src/app/projects/assets/contributors.json",
-    projects: "./src/app/projects/assets/projects.json",
-    contributorMapping: "./src/app/projects/assets/contributor-mapping.json",
-    cachedData: "./src/app/projects/assets/leaderboard-cache.json",
+    contributors: "./src/asset/contributors.json",
+    projects: "./src/asset/projects.json",
+    contributorMapping: "./src/asset/contributor-mapping.json",
+    cachedData: "./src/asset/leaderboard-cache.json",
   },
 
   OUTPUT_FILES: {
-    leaderboard: "./public/asset/leaderboard.json",
-    topScorers: "./public/asset/top-scorers.json",
+    leaderboard: "./src/asset/leaderboard.json",
+    topScorers: "./src/asset/top-scorers.json",
     monthlyArchiveDir: "./public/leaderboard",
     manifest: "./public/leaderboard/manifest.json",
   },

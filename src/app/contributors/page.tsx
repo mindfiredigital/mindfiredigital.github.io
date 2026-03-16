@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import ContributorCount from "./components/ContributorCount";
 import TopContributors from "./components/TopContributors";
 import TopScorersPanel from "./components/TopScorersPanel";
@@ -8,7 +8,8 @@ import ScoringSystem from "./components/ScoringSystem";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorCard from "./components/ContributorCard";
 import ContributorModal from "./components/ContributorModal";
-import contributorList from "../projects/assets/contributors.json";
+import contributorList from "@/asset/contributors.json";
+import leaderboardData from "@/asset/leaderboard.json";
 import { Contributor, ContributorFilters, TopScorer } from "@/types";
 import {
   CONTRIBUTORS_FILTERS_DEFAULT,
@@ -18,9 +19,7 @@ import {
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
-
-  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const topScorers = leaderboardData.leaderboard as TopScorer[];
 
   const [filters, setFilters] = useState<ContributorFilters>(
     CONTRIBUTORS_FILTERS_DEFAULT
@@ -32,19 +31,6 @@ export default function Contributors() {
 
   const contributorsSectionRef = useRef<HTMLDivElement>(null);
   const mainPanelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    fetch("/asset/leaderboard.json")
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
-        return res.json();
-      })
-      .then((data) => {
-        setTopScorers(data.leaderboard as TopScorer[]);
-      })
-      .catch((err) => console.error("Failed to load leaderboard:", err))
-      .finally(() => setIsLoading(false));
-  }, []);
 
   const scrollToContributors = () => {
     if (contributorsSectionRef.current && mainPanelRef.current) {
@@ -122,19 +108,6 @@ export default function Contributors() {
     });
     return result;
   }, [topScorers, filters, searchQuery]);
-
-  if (isLoading) {
-    return (
-      <section className='bg-slate-50 min-h-screen overflow-x-hidden flex items-center justify-center'>
-        <div className='flex flex-col items-center gap-4'>
-          <div className='w-10 h-10 border-4 border-gray-200 border-t-mindfire-text-red rounded-full animate-spin' />
-          <p className='text-mf-light-grey text-sm tracking-wide'>
-            {CONTRIBUTORS_LIST.loadingMessage}
-          </p>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <>

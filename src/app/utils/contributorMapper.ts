@@ -1,4 +1,4 @@
-import contributorsData from "../projects/assets/contributors.json";
+import contributorsData from "@/asset/contributors.json";
 
 interface Contributor {
   login: string;

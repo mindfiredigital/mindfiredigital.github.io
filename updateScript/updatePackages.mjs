@@ -283,7 +283,7 @@ async function updatePackages() {
     );
 
     // Save to the assets folder
-    writeJsonToFile("../src/app/projects/assets/packages.json", allPackages);
+    writeJsonToFile("../src/asset/packages.json", allPackages);
 
     const projectData = projects.map((project) => ({
       id: project.id,
@@ -299,10 +299,7 @@ async function updatePackages() {
       })),
     }));
 
-    writeJsonToFile(
-      "../src/app/projects/assets/projects_grouped.json",
-      projectData
-    );
+    writeJsonToFile("../src/asset/projects_grouped.json", projectData);
 
     console.log("Successfully updated packages.json");
   } catch (error) {

@@ -9,7 +9,7 @@ import {
   MonthlyPayload,
   Manifest,
 } from "@/types";
-import currentMonthRaw from "../../projects/assets/leaderboard-monthly.json";
+import currentMonthRaw from "@/asset/leaderboard-monthly.json";
 import { toBase64Url, formatMonthKey, currentMonthKey } from "@/app/utils";
 import { MonthCalendarPicker } from "./MonthCalendarPicker";
 import { RankRow } from "./RankRow";

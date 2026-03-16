@@ -18,7 +18,7 @@ import download from "../../../public/images/bxs-download.svg";
 import github from "../../../public/images/bxl-github.svg";
 import nuget from "../../../public/images/social-media/nuget-svgrepo-com.png";
 
-import projectsGroupedData from "../projects/assets/projects_grouped.json";
+import projectsGroupedData from "@/asset/projects_grouped.json";
 
 import { FilterType } from "@/types";
 import { PACKAGE_CARD_LABELS, STATS_HERO } from "@/constants";

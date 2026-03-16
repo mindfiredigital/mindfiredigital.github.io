@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import projectsImage from "../../../public/images/projects.webp";
 import ProjectGrid from "../projects/components/ProjectGrid";
-import upcomingProjectData from "../projects/assets/upcomingProjects.json";
+import upcomingProjectData from "@/asset/upcomingProjects.json";
 import meta from "../../metadata/metadata.json";
 import { PROJECTS_HERO } from "@/constants";
 
