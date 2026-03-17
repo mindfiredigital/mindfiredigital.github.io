@@ -17,7 +17,10 @@ export default function ContributorCard({
   displayRank,
   onViewDetails,
 }: ContributorCardProps) {
+  /* Get styles based on rank */
   const rs = getRankStyles(displayRank);
+
+  /* Check if contributor is in top 3 */
   const isTopThree = displayRank <= 3;
 
   return (
@@ -31,6 +34,7 @@ export default function ContributorCard({
         ${isTopThree ? "shadow-md" : "shadow-sm"}
       `}
     >
+      {/* Top 3 highlight bar */}
       {isTopThree && (
         <div className={`h-0.5 w-full bg-gradient-to-r ${rs.scoreGradient}`} />
       )}
@@ -38,7 +42,7 @@ export default function ContributorCard({
       <div className='p-5 flex flex-col flex-1'>
         <div className='flex items-start justify-between mb-4'>
           <div className='flex items-center gap-3'>
-            {/* Avatar — no online dot */}
+            {/* Avatar */}
             <div className='relative flex-shrink-0'>
               <img
                 src={contributor.avatar_url}
@@ -46,6 +50,8 @@ export default function ContributorCard({
                 className='w-11 h-11 rounded-full ring-2 ring-gray-100 object-cover'
               />
             </div>
+
+            {/* Username + projects */}
             <div className='min-w-0'>
               <a
                 href={contributor.html_url}
@@ -63,6 +69,7 @@ export default function ContributorCard({
             </div>
           </div>
 
+          {/* Rank badge */}
           <div
             className={`flex items-center gap-1 px-2 py-1 rounded-lg border text-xs font-bold ${rs.badge} flex-shrink-0`}
           >
@@ -71,6 +78,7 @@ export default function ContributorCard({
           </div>
         </div>
 
+        {/* Score section */}
         <div className='mb-4'>
           <div className='flex items-baseline gap-1.5'>
             <span
@@ -87,8 +95,10 @@ export default function ContributorCard({
           </p>
         </div>
 
+        {/* Spacer */}
         <div className='flex-1' />
 
+        {/* Stats section */}
         <div className='flex items-center justify-between pt-3.5 border-t border-gray-100 mb-3'>
           {[
             {
@@ -130,6 +140,7 @@ export default function ContributorCard({
           ))}
         </div>
 
+        {/* View profile button */}
         <button
           onClick={() => onViewDetails(contributor)}
           className='w-full flex items-center justify-center gap-1.5 py-2 rounded-xl

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TopContributorsProps } from "@/types";
-import { BuildGroups } from "./BuildGroups";
+import { BuildGroups } from "@/app/utils/buildGroups";
 import { INTERVAL_MS, PANEL_HEADER, PAUSE_ON_CLICK_MS } from "@/constants";
 
 const TopContributors = ({

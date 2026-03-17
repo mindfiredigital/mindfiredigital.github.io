@@ -1,41 +1,44 @@
 import React from "react";
-import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper";
-import Image from "next/image";
-import particleAnimation from "../../public/images/particle_animation_optimised.gif";
-import Link from "next/link";
+import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper"; // Custom component for typing animation effect
+import Image from "next/image"; // Next.js optimized image component
+import particleAnimation from "../../public/images/particle_animation_optimised.gif"; // Hero section animation
+import Link from "next/link"; // Next.js client-side navigation
+import { HOME } from "@/constants"; // Centralized text/content constants
 
 export default function Home() {
   return (
+    // Main hero section container with responsive layout
     <div className='flex flex-col-reverse items-center lg:flex-row justify-between px-6 pr-12 py-12'>
+      {/* Left section: Heading, subheading and CTA */}
       <div className='max-w-2xl mt-7'>
+        {/* Main heading with animated text */}
         <div className='text-mf-dark font-bold text-3xl tracking-wider leading-10'>
-          Igniting Innovation through Open Source Collaboration: Mindfire |{" "}
-          <TypeAnimationWrapper
-            sequence={[
-              "FOSS", // initially rendered starting point
-              2000,
-              "",
-            ]}
-          />
-          {/* <span className="text-mf-red animate-typing">FOSS</span> */}
+          {HOME.heading} |{" "}
+          {/* Typing animation cycling through provided text sequence */}
+          <TypeAnimationWrapper sequence={[HOME.foss, HOME.TWO_THOUSAND, ""]} />
         </div>
+
+        {/* Subheading / description text */}
         <div className='text-mf-light-grey text-lg leading-6 mt-4 mb-10'>
-          A community pushing boundaries through open source projects, fostering
-          an ecosystem of transparency, learning, and impactful technology.
+          {HOME.subheading}
         </div>
+
+        {/* Call-to-action button linking to projects page */}
         <Link
           href='/projects'
           className='text-white bg-mf-red font-medium text-base rounded-full px-6 py-3 text-center tracking-wide'
         >
-          Explore Projects
+          {HOME.explore_project}
         </Link>
       </div>
+
+      {/* Right section: Animated illustration */}
       <Image
         src={particleAnimation}
         height='410'
         width='410'
         alt='particle_animation'
-        priority
+        priority // Ensures this hero image loads immediately for better UX
       />
     </div>
   );

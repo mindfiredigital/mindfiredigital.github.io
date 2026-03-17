@@ -1,3 +1,5 @@
+/* Returns styling configuration based on contributor rank (1st, 2nd, 3rd, or others).  
+Used to visually highlight top contributors with special colors, badges, and gradients */
 export const getRankStyles = (rank: number) => {
   if (rank === 1)
     return {
@@ -36,6 +38,7 @@ export const getRankStyles = (rank: number) => {
   };
 };
 
+/* Returns badge label and color styling for displaying contributor rank */
 export const getRankBadge = (rank: number) => {
   if (rank === 1)
     return {
@@ -58,6 +61,7 @@ export const getRankBadge = (rank: number) => {
   };
 };
 
+/* Useful when embedding remote images directly in HTML or canvas */
 export async function toBase64Url(url: string): Promise<string> {
   const res = await fetch(url);
   const blob = await res.blob();
@@ -69,12 +73,14 @@ export async function toBase64Url(url: string): Promise<string> {
   });
 }
 
+/* Formats a month key (YYYY-MM) into a readable string like "March 2026" */
 export function formatMonthKey(key: string): string {
   const [year, month] = key.split("-");
   const date = new Date(Number(year), Number(month) - 1, 1);
   return date.toLocaleString("default", { month: "long", year: "numeric" });
 }
 
+/* Returns the current month in "YYYY-MM" format using UTC time */
 export function currentMonthKey(): string {
   const now = new Date();
   return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(

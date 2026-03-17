@@ -1,31 +1,29 @@
 "use client";
 
-import React, { useState, useMemo, useRef, useEffect } from "react";
-import ContributorCount from "./components/ContributorCount";
-import TopContributors from "./components/TopContributors";
+import React, { useState, useRef } from "react";
 import TopScorersPanel from "./components/TopScorersPanel";
-import ScoringSystem from "./components/ScoringSystem";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
-import ContributorCard from "./components/ContributorCard";
 import ContributorModal from "./components/ContributorModal";
-import contributorList from "../projects/assets/contributors.json";
-import { Contributor, ContributorFilters, TopScorer } from "@/types";
-import {
-  CONTRIBUTORS_FILTERS_DEFAULT,
-  CONTRIBUTORS_HERO,
-  CONTRIBUTORS_LIST,
-} from "@/constants";
+import ContributorHero from "./components/Contributorhero";
+import ContributorListSection from "./components/Contributorlistsection";
+import contributorList from "@/asset/contributors.json";
+import leaderboardData from "@/asset/leaderboard.json";
+import { Contributor, TopScorer } from "@/types";
+import { useContributorFilters } from "@/hooks/Usecontributorfilters";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
+  const topScorers = leaderboardData.leaderboard as TopScorer[];
 
-  const [topScorers, setTopScorers] = useState<TopScorer[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const {
+    filters,
+    searchQuery,
+    filteredAndSorted,
+    handleFilterChange,
+    handleSearchChange,
+    handleReset,
+  } = useContributorFilters(contributorsArray, topScorers);
 
-  const [filters, setFilters] = useState<ContributorFilters>(
-    CONTRIBUTORS_FILTERS_DEFAULT
-  );
-  const [searchQuery, setSearchQuery] = useState("");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [selectedContributor, setSelectedContributor] =
     useState<TopScorer | null>(null);
@@ -33,108 +31,28 @@ export default function Contributors() {
   const contributorsSectionRef = useRef<HTMLDivElement>(null);
   const mainPanelRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    fetch("/asset/leaderboard.json")
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
-        return res.json();
-      })
-      .then((data) => {
-        setTopScorers(data.leaderboard as TopScorer[]);
-      })
-      .catch((err) => console.error("Failed to load leaderboard:", err))
-      .finally(() => setIsLoading(false));
-  }, []);
-
   const scrollToContributors = () => {
     if (contributorsSectionRef.current && mainPanelRef.current) {
       const sectionTop = contributorsSectionRef.current.offsetTop;
-      mainPanelRef.current.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      });
+      mainPanelRef.current.scrollTo({ top: sectionTop, behavior: "smooth" });
     }
   };
 
-  const handleFilterChange = (partial: Partial<ContributorFilters>) => {
-    setFilters((prev) => ({ ...prev, ...partial }));
-    scrollToContributors();
+  const filterSidebarProps = {
+    filters,
+    onFilterChange: (partial: Parameters<typeof handleFilterChange>[0]) => {
+      handleFilterChange(partial);
+      scrollToContributors();
+    },
+    onReset: handleReset,
+    searchQuery,
+    onSearchChange: (value: string) => {
+      handleSearchChange(value);
+      scrollToContributors();
+    },
+    isMobileOpen: isMobileFilterOpen,
+    onMobileToggle: () => setIsMobileFilterOpen((v) => !v),
   };
-
-  const handleSearchChange = (value: string) => {
-    setSearchQuery(value);
-    scrollToContributors();
-  };
-
-  const handleReset = () => {
-    setFilters({
-      sortBy: "total_score",
-      activityFilter: "all",
-      scoreRange: "all",
-    });
-    setSearchQuery("");
-  };
-
-  const getLastActiveDays = (username: string): number | null => {
-    const match = contributorsArray.find(
-      (c) => c.login.toLowerCase() === username.toLowerCase()
-    );
-    return match?.lastActiveDays ?? null;
-  };
-
-  const filteredAndSorted = useMemo(() => {
-    let result = [...topScorers];
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      result = result.filter((c) => c.username.toLowerCase().includes(q));
-    }
-    if (filters.activityFilter !== "all") {
-      const maxDays = parseInt(filters.activityFilter, 10);
-      result = result.filter((c) => {
-        const days = getLastActiveDays(c.username);
-        return days !== null && days <= maxDays;
-      });
-    }
-    if (filters.scoreRange !== "all") {
-      const min = parseInt(filters.scoreRange.replace("+", ""), 10);
-      if (!isNaN(min)) result = result.filter((c) => c.total_score >= min);
-    }
-    result.sort((a, b) => {
-      switch (filters.sortBy) {
-        case "code_score":
-          return b.code_score - a.code_score;
-        case "quality_score":
-          return b.quality_score - a.quality_score;
-        case "community_score":
-          return b.community_score - a.community_score;
-        case "totalCommits":
-          return b.totalCommits - a.totalCommits;
-        case "totalPRs":
-          return b.totalPRs - a.totalPRs;
-        case "totalPRReviewsGiven":
-          return b.totalPRReviewsGiven - a.totalPRReviewsGiven;
-        case "totalIssuesOpened":
-          return b.totalIssuesOpened - a.totalIssuesOpened;
-        case "total_score":
-        default:
-          return b.total_score - a.total_score;
-      }
-    });
-    return result;
-  }, [topScorers, filters, searchQuery]);
-
-  if (isLoading) {
-    return (
-      <section className='bg-slate-50 min-h-screen overflow-x-hidden flex items-center justify-center'>
-        <div className='flex flex-col items-center gap-4'>
-          <div className='w-10 h-10 border-4 border-gray-200 border-t-mindfire-text-red rounded-full animate-spin' />
-          <p className='text-mf-light-grey text-sm tracking-wide'>
-            {CONTRIBUTORS_LIST.loadingMessage}
-          </p>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <>
@@ -143,107 +61,41 @@ export default function Contributors() {
           className='flex w-full overflow-hidden'
           style={{ height: "calc(100vh - 4.5rem)", maxWidth: "100vw" }}
         >
+          {/* Desktop left sidebar — filter panel */}
           <aside className='hidden lg:flex flex-col w-64 flex-shrink-0 border-r border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
-            <ContributorFilterSidebar
-              filters={filters}
-              onFilterChange={handleFilterChange}
-              onReset={handleReset}
-              searchQuery={searchQuery}
-              onSearchChange={handleSearchChange}
-              isMobileOpen={isMobileFilterOpen}
-              onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
-            />
+            <ContributorFilterSidebar {...filterSidebarProps} />
           </aside>
 
           <main
             ref={mainPanelRef}
             className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'
           >
-            <div className='flex flex-col items-center text-center pt-10 px-6'>
-              <div className='flex items-center justify-center gap-4'>
-                <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
-                  {CONTRIBUTORS_HERO.heading}
-                </h1>
-                <ContributorCount totalContributors={topScorers.length} />
-              </div>
+            <ContributorHero
+              contributorsArray={contributorsArray}
+              topScorers={topScorers}
+            />
 
-              <div className='mt-6'>
-                <h2 className='text-2xl font-medium text-gray-800 mb-3'>
-                  {CONTRIBUTORS_HERO.topContributorsHeading}
-                </h2>
-                <p className='text-xl text-mf-light-grey tracking-wide'>
-                  {CONTRIBUTORS_HERO.topContributorsSubheading}
-                </p>
-              </div>
-
-              <div className='mt-8 w-full flex justify-center'>
-                <TopContributors
-                  contributors={contributorsArray}
-                  topScorers={topScorers}
-                />
-              </div>
-
-              <div className='mt-4 pb-2 w-full max-w-3xl'>
-                <ScoringSystem />
-              </div>
-            </div>
-
+            {/* Mobile-only: top scorers panel + filter sidebar */}
             <div className='lg:hidden px-4 mt-6'>
               <TopScorersPanel
                 topScorers={topScorers}
                 onViewDetails={setSelectedContributor}
               />
             </div>
-
             <div className='lg:hidden'>
-              <ContributorFilterSidebar
-                filters={filters}
-                onFilterChange={handleFilterChange}
-                onReset={handleReset}
-                searchQuery={searchQuery}
-                onSearchChange={handleSearchChange}
-                isMobileOpen={isMobileFilterOpen}
-                onMobileToggle={() => setIsMobileFilterOpen((v) => !v)}
-              />
+              <ContributorFilterSidebar {...filterSidebarProps} />
             </div>
 
-            <div ref={contributorsSectionRef} className='mt-12 pb-16 px-6'>
-              <div className='flex items-center justify-center gap-4 mb-8'>
-                <h2 className='text-3xl font-medium text-gray-800'>
-                  {CONTRIBUTORS_LIST.heading}
-                </h2>
-                <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
-                  {filteredAndSorted.length} of {topScorers.length}
-                </span>
-              </div>
-
-              {filteredAndSorted.length > 0 ? (
-                <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {filteredAndSorted.map((contributor, index) => (
-                    <ContributorCard
-                      key={contributor.id}
-                      contributor={contributor}
-                      displayRank={index + 1}
-                      onViewDetails={setSelectedContributor}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className='flex flex-col justify-center items-center h-64 gap-3'>
-                  <p className='text-xl text-mf-light-grey tracking-wide'>
-                    {CONTRIBUTORS_LIST.emptyMessage}
-                  </p>
-                  <button
-                    onClick={handleReset}
-                    className='text-sm text-mf-red hover:underline font-medium'
-                  >
-                    {CONTRIBUTORS_LIST.clearFiltersLabel}
-                  </button>
-                </div>
-              )}
-            </div>
+            <ContributorListSection
+              filteredAndSorted={filteredAndSorted}
+              totalCount={topScorers.length}
+              onViewDetails={setSelectedContributor}
+              onReset={handleReset}
+              sectionRef={contributorsSectionRef}
+            />
           </main>
 
+          {/* Desktop right sidebar — top scorers hall of fame */}
           <div className='hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-l border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
             <TopScorersPanel
               topScorers={topScorers}
