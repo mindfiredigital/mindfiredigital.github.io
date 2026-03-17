@@ -98,7 +98,7 @@ export interface ContributorCardProps {
 }
 
 export interface ContributorModalProps {
-  contributor: TopScorer | null;
+  contributor: TopScorer;
   onClose: () => void;
 }
 
