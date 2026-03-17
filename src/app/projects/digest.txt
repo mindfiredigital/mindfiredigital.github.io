@@ -1,0 +1,1182 @@
+Directory structure:
+└── projects/
+    ├── layout.tsx
+    ├── page.tsx
+    └── components/
+        ├── ContributorsCountFilter.tsx
+        ├── ContributorsFilter.tsx
+        ├── CurrentProjectsSection.tsx
+        ├── FilterSection.tsx
+        ├── FilterSidebar.tsx
+        ├── FilterSidebarHeader.tsx
+        ├── ProjectCard.tsx
+        ├── ProjectCount.tsx
+        ├── ProjectGrid.tsx
+        ├── ProjectsHero.tsx
+        ├── SortByFilter.tsx
+        ├── StarsFilter.tsx
+        ├── TagsFilter.tsx
+        ├── TechnologyFilter.tsx
+        └── UpcomingProjectsSection.tsx
+
+================================================
+FILE: layout.tsx
+================================================
+import type { Metadata } from "next";
+import meta from "../../metadata/metadata.json";
+
+export const metadata: Metadata = {
+  title: meta["Projects"].title,
+  description: meta["Projects"].description,
+  openGraph: {
+    title: meta["Projects"].title,
+    description: meta["Projects"].description,
+    images: {
+      url: meta["Projects"].openGraph.images,
+      height: "627",
+      width: "1200",
+    },
+    url: meta["Projects"].openGraph.url,
+    type: "website",
+    siteName: "Mindfire Digital LLP",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "app",
+    title: meta["Projects"].title,
+    description: meta["Projects"].description,
+    site: "@mindfires",
+    creator: "@mindfires",
+    app: {
+      name: "twitter_app",
+      id: {
+        iphone: "twitter_app://iphone",
+        ipad: "twitter_app://ipad",
+        googleplay: "twitter_app://googleplay",
+      },
+    },
+  },
+};
+
+export default function ProjectsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
+
+
+
+================================================
+FILE: page.tsx
+================================================
+"use client";
+
+import React from "react";
+import FilterSidebar from "./components/FilterSidebar";
+import ProjectsHero from "./components/ProjectsHero";
+import CurrentProjectsSection from "./components/CurrentProjectsSection";
+import UpcomingProjectsSection from "./components/UpcomingProjectsSection";
+import ProjectCount from "./components/ProjectCount";
+
+import projectData from "@/asset/projects.json";
+import upcomingProjectData from "@/asset/upcomingProjects.json";
+import contributorsData from "@/asset/contributors.json";
+import contributorMapping from "@/asset/contributor-mapping.json";
+import leaderboardData from "@/asset/leaderboard.json";
+
+import {
+  Project,
+  ContributorProject,
+  TopScorer,
+  ContributorMap,
+} from "../../types";
+import { useProjectFilters } from "@/hooks/useProjectFilters";
+import { useHashScroll } from "@/hooks/useHashScroll";
+import { PROJECTS_HEROZ } from "@/constants";
+
+export default function ProjectsPage() {
+  /* Extract top contributors from leaderboard data */
+  const topScorers = leaderboardData.leaderboard as TopScorer[];
+
+  /* Custom hook that manages project filtering, searching, sorting, and derived data */
+  const {
+    filters,
+    searchQuery,
+    setSearchQuery,
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    enrichedContributors,
+    allTags,
+    allTechnologies,
+    sortedCurrentProjects,
+    sortedUpcomingProjects,
+    handleFilterChange,
+    handleResetFilters,
+  } = useProjectFilters(
+    projectData as Project[],
+    upcomingProjectData as Project[],
+    contributorsData as unknown as ContributorProject[],
+    contributorMapping as ContributorMap,
+    topScorers
+  );
+
+  useHashScroll();
+
+  return (
+    <>
+      <ProjectsHero />
+
+      <section className='mt-10 mb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          {/* Current Projects heading â€” sits above the sidebar+cards row */}
+          <div id='current-projects' className='mb-8'>
+            <div className='flex justify-center items-center gap-4'>
+              <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
+                {PROJECTS_HEROZ.currProject}
+              </h2>
+              <ProjectCount totalProjects={sortedCurrentProjects.length} />
+            </div>
+          </div>
+
+          {/* Sidebar + cards row â€” sidebar sticks at this level, not at heading level */}
+          <div className='flex flex-col lg:flex-row gap-6 items-start'>
+            {/* Sticky sidebar â€” sticks to top of viewport when scrolling */}
+            <aside className='lg:w-72 flex-shrink-0 lg:sticky lg:top-20 lg:self-start'>
+              <FilterSidebar
+                allTags={allTags}
+                allTechnologies={allTechnologies}
+                contributors={enrichedContributors}
+                filters={filters}
+                onFilterChange={handleFilterChange}
+                onReset={handleResetFilters}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                isMobileOpen={isMobileFilterOpen}
+                onMobileToggle={() =>
+                  setIsMobileFilterOpen(!isMobileFilterOpen)
+                }
+              />
+            </aside>
+
+            {/* Scrollable content â€” current + upcoming projects */}
+            <div className='flex-1 min-w-0'>
+              <CurrentProjectsSection projects={sortedCurrentProjects} />
+              <UpcomingProjectsSection projects={sortedUpcomingProjects} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+
+
+================================================
+FILE: components/ContributorsCountFilter.tsx
+================================================
+import FilterSection from "./FilterSection";
+import { ContributorsCountFilterProps } from "@/types";
+import { CONTRIBUTOR_RANGES } from "@/constants";
+
+/* Filter component for selecting projects based on contributor count ranges */
+export default function ContributorsCountFilter({
+  value,
+  isExpanded,
+  onToggle,
+  onChange,
+}: ContributorsCountFilterProps) {
+  return (
+    <FilterSection
+      title='Contributors Count'
+      isExpanded={isExpanded}
+      onToggle={onToggle}
+    >
+      {/* Radio options for contributor count ranges */}
+      <div className='space-y-2'>
+        {CONTRIBUTOR_RANGES.map((range) => (
+          <label key={range} className='flex items-center cursor-pointer group'>
+            <input
+              type='radio'
+              name='contributorRange'
+              value={range}
+              checked={value === range}
+              onChange={() => onChange(range)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
+            />
+            {/* Display label for each contributor range */}
+            <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+              {range === "all" ? "All" : range}
+            </span>
+          </label>
+        ))}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/ContributorsFilter.tsx
+================================================
+import { useState } from "react";
+import { Search, X } from "lucide-react";
+import FilterSection from "./FilterSection";
+import { ContributorsFilterProps } from "@/types";
+import { PROJECT_SIDEBAR } from "@/constants";
+
+/* Filter component for selecting contributors with search and multi-select support */
+export default function ContributorsFilter({
+  contributors,
+  selected,
+  isExpanded,
+  onToggle,
+  onSelect,
+  onClearAll,
+}: ContributorsFilterProps) {
+  const [contributorSearch, setContributorSearch] = useState("");
+
+  const filtered = contributors.filter((c) =>
+    c.login.toLowerCase().includes(contributorSearch.toLowerCase())
+  );
+
+  const title = `Contributors${
+    selected.length > 0 ? ` (${selected.length})` : ""
+  }`;
+
+  return (
+    <FilterSection title={title} isExpanded={isExpanded} onToggle={onToggle}>
+      {/* Contributor search input */}
+      <div className='relative mb-3'>
+        <Search className='absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-3.5 h-3.5' />
+        <input
+          type='text'
+          placeholder='Search contributors...'
+          value={contributorSearch}
+          onChange={(e) => setContributorSearch(e.target.value)}
+          className='w-full pl-8 pr-3 py-1.5 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mf-red focus:border-transparent'
+        />
+      </div>
+
+      {/* Selected contributor chips */}
+      {selected.length > 0 && (
+        <div className='mb-3 p-2 bg-red-50 rounded-md border border-red-200'>
+          <div className='flex items-center justify-between mb-1.5'>
+            <p className='text-[10px] text-gray-600 font-medium'>Selected:</p>
+            <button
+              onClick={onClearAll}
+              className='text-[10px] text-mf-red hover:text-red-800 font-medium flex items-center gap-0.5'
+            >
+              <X className='w-3 h-3' />
+              {PROJECT_SIDEBAR.CLEAR}
+            </button>
+          </div>
+          <div className='flex flex-wrap gap-1.5'>
+            {selected.map((login) => {
+              const contributor = contributors.find((c) => c.login === login);
+              return contributor ? (
+                <div
+                  key={login}
+                  className='flex items-center gap-1 bg-white px-2 py-1 rounded-md text-[10px] border border-red-300'
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={login}
+                    className='w-4 h-4 rounded-full'
+                  />
+                  <span className='text-gray-900 font-medium'>{login}</span>
+                  <button
+                    onClick={() => onSelect(login)}
+                    className='ml-1 text-red-600 hover:text-red-800'
+                  >
+                    <X className='w-3 h-3' />
+                  </button>
+                </div>
+              ) : null;
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Contributor list */}
+      <div className='max-h-72 overflow-y-auto space-y-1.5'>
+        {filtered.slice(0, 50).map((contributor) => (
+          <label
+            key={contributor.id}
+            className='w-full flex items-center gap-2.5 p-2 rounded-md hover:bg-gray-50 transition-colors cursor-pointer border border-transparent'
+          >
+            <input
+              type='checkbox'
+              checked={selected.includes(contributor.login)}
+              onChange={() => onSelect(contributor.login)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red flex-shrink-0'
+            />
+            <img
+              src={contributor.avatar_url}
+              alt={contributor.login}
+              className='w-8 h-8 rounded-full flex-shrink-0'
+            />
+            <div className='flex-1 min-w-0'>
+              <p className='text-xs font-medium text-gray-900 truncate'>
+                {contributor.login}
+              </p>
+              <p className='text-[10px] text-gray-500'>
+                Score: {contributor.total_score}
+              </p>
+            </div>
+          </label>
+        ))}
+        {filtered.length > 50 && (
+          <p className='text-[10px] text-gray-500 text-center py-2'>
+            {PROJECT_SIDEBAR.FIRST_50}
+          </p>
+        )}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/CurrentProjectsSection.tsx
+================================================
+import ProjectCard from "./ProjectCard";
+import { CURRENT_PROJECTS } from "@/constants";
+import { CurrentProjectsSectionProps } from "@/types";
+
+/* Section component that displays the list of current projects */
+export default function CurrentProjectsSection({
+  projects,
+}: CurrentProjectsSectionProps) {
+  return (
+    <div className='mb-16'>
+      {/* Show empty state message when no projects are available */}
+      {projects.length === 0 ? (
+        <div className='text-center py-12'>
+          <p className='text-lg text-gray-500'>
+            {CURRENT_PROJECTS.emptyMessage}
+          </p>
+        </div>
+      ) : (
+        /* Grid layout displaying project cards */
+        <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              parentTitle='Current Projects'
+              shortDescription={project.short_description}
+              githubUrl={project.github_repository_link}
+              documentationUrl={project.documentation_link}
+              stars={project.stars || 0}
+              tags={project.tags || []}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+
+================================================
+FILE: components/FilterSection.tsx
+================================================
+import { ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
+import { FilterSectionProps } from "@/types";
+
+// Reusable collapsible section used by every filter group in the sidebar
+export default function FilterSection({
+  title,
+  isExpanded,
+  onToggle,
+  children,
+}: FilterSectionProps) {
+  return (
+    <div className='mb-5 border-b border-gray-200 pb-4'>
+      <button
+        onClick={onToggle}
+        className='flex items-center justify-between w-full text-left py-1'
+      >
+        <h4 className='text-sm font-semibold text-gray-900'>{title}</h4>
+        {isExpanded ? (
+          <ChevronUp className='w-4 h-4 text-gray-500' />
+        ) : (
+          <ChevronDown className='w-4 h-4 text-gray-500' />
+        )}
+      </button>
+      {isExpanded && <div className='mt-3'>{children}</div>}
+    </div>
+  );
+}
+
+
+
+================================================
+FILE: components/FilterSidebar.tsx
+================================================
+import React, { useState } from "react";
+import { Filter, X } from "lucide-react";
+import { FilterSidebarProps } from "@/types";
+import FilterSidebarHeader from "./FilterSidebarHeader";
+import SortByFilter from "./SortByFilter";
+import ContributorsFilter from "./ContributorsFilter";
+import StarsFilter from "./StarsFilter";
+import ContributorsCountFilter from "./ContributorsCountFilter";
+import TechnologyFilter from "./TechnologyFilter";
+import TagsFilter from "./TagsFilter";
+
+/* Sidebar component that manages all project filtering options */
+const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  allTags,
+  allTechnologies,
+  contributors,
+  filters,
+  onFilterChange,
+  onReset,
+  searchQuery,
+  onSearchChange,
+  isMobileOpen,
+  onMobileToggle,
+}) => {
+  /* Tracks which filter sections are expanded/collapsed */
+  const [expandedSections, setExpandedSections] = useState({
+    sortBy: true,
+    tags: true,
+    technology: true,
+    stars: true,
+    contributors: true,
+    contributorList: true,
+  });
+
+  /* Toggle visibility of a filter section */
+  const toggleSection = (section: keyof typeof expandedSections) => {
+    setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
+
+  /* Calculate number of active filters to display indicator */
+  const activeFiltersCount =
+    filters.tags.length +
+    filters.technologies.length +
+    (filters.starRange !== "all" ? 1 : 0) +
+    (filters.contributorRange !== "all" ? 1 : 0) +
+    filters.selectedContributor.length;
+
+  return (
+    <>
+      {/* Floating filter button for mobile view */}
+      <button
+        onClick={onMobileToggle}
+        className='lg:hidden fixed bottom-6 right-6 z-40 bg-mf-red text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition-colors flex items-center gap-2'
+      >
+        <Filter className='w-5 h-5' />
+
+        {/* Show number of active filters */}
+        {activeFiltersCount > 0 && (
+          <span className='bg-white text-mf-red text-xs font-bold px-2 py-0.5 rounded-full'>
+            {activeFiltersCount}
+          </span>
+        )}
+      </button>
+
+      {/* Background overlay when mobile sidebar is open */}
+      {isMobileOpen && (
+        <div
+          className='lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40'
+          onClick={onMobileToggle}
+        />
+      )}
+
+      {/* Sidebar container */}
+      <div
+        className={`
+          fixed lg:static inset-y-0 left-0 z-50 lg:z-auto
+          w-80 lg:w-full
+          transform transition-transform duration-300 ease-in-out
+          ${
+            isMobileOpen
+              ? "translate-x-0"
+              : "-translate-x-full lg:translate-x-0"
+          }
+          bg-white rounded-lg shadow-sm border border-gray-200
+          lg:max-h-[calc(100vh-2rem)]
+          max-h-screen
+          flex flex-col
+        `}
+      >
+        {/* Close button for mobile sidebar */}
+        <button
+          onClick={onMobileToggle}
+          className='lg:hidden absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10'
+        >
+          <X className='w-6 h-6' />
+        </button>
+
+        {/* Sidebar header containing search and reset controls */}
+        <FilterSidebarHeader
+          activeFiltersCount={activeFiltersCount}
+          searchQuery={searchQuery}
+          onSearchChange={onSearchChange}
+          onReset={onReset}
+          onMobileToggle={onMobileToggle}
+        />
+
+        {/* Scrollable filter sections */}
+        <div className='overflow-y-auto flex-1 p-5 pt-3'>
+          {/* Sorting options */}
+          <SortByFilter
+            value={filters.sortBy}
+            isExpanded={expandedSections.sortBy}
+            onToggle={() => toggleSection("sortBy")}
+            onChange={(v) => onFilterChange({ sortBy: v })}
+          />
+
+          {/* Contributor selection filter */}
+          <ContributorsFilter
+            contributors={contributors}
+            selected={filters.selectedContributor}
+            isExpanded={expandedSections.contributorList}
+            onToggle={() => toggleSection("contributorList")}
+            onSelect={(login) =>
+              onFilterChange({
+                selectedContributor: filters.selectedContributor.includes(login)
+                  ? filters.selectedContributor.filter((c) => c !== login)
+                  : [...filters.selectedContributor, login],
+              })
+            }
+            onClearAll={() => onFilterChange({ selectedContributor: [] })}
+          />
+
+          {/* Star range filter */}
+          <StarsFilter
+            value={filters.starRange}
+            isExpanded={expandedSections.stars}
+            onToggle={() => toggleSection("stars")}
+            onChange={(v) => onFilterChange({ starRange: v })}
+          />
+
+          {/* Contributor count range filter */}
+          <ContributorsCountFilter
+            value={filters.contributorRange}
+            isExpanded={expandedSections.contributors}
+            onToggle={() => toggleSection("contributors")}
+            onChange={(v) => onFilterChange({ contributorRange: v })}
+          />
+
+          {/* Technology filter */}
+          <TechnologyFilter
+            technologies={allTechnologies}
+            selected={filters.technologies}
+            isExpanded={expandedSections.technology}
+            onToggle={() => toggleSection("technology")}
+            onChange={(tech) =>
+              onFilterChange({
+                technologies: filters.technologies.includes(tech)
+                  ? filters.technologies.filter((t) => t !== tech)
+                  : [...filters.technologies, tech],
+              })
+            }
+          />
+
+          {/* Tags filter */}
+          <TagsFilter
+            tags={allTags}
+            selected={filters.tags}
+            isExpanded={expandedSections.tags}
+            onToggle={() => toggleSection("tags")}
+            onChange={(tag) =>
+              onFilterChange({
+                tags: filters.tags.includes(tag)
+                  ? filters.tags.filter((t) => t !== tag)
+                  : [...filters.tags, tag],
+              })
+            }
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FilterSidebar;
+
+
+
+================================================
+FILE: components/FilterSidebarHeader.tsx
+================================================
+import { Search, X } from "lucide-react";
+import { FilterSidebarHeaderProps } from "@/types";
+
+// Sticky header section of the sidebar â€” always visible while filters scroll below
+export default function FilterSidebarHeader({
+  activeFiltersCount,
+  searchQuery,
+  onSearchChange,
+  onReset,
+}: FilterSidebarHeaderProps) {
+  return (
+    <div className='sticky top-0 bg-white z-10 p-5 pb-0 border-b border-gray-200'>
+      <div className='flex items-center justify-between mb-5'>
+        <h3 className='text-xl font-semibold text-gray-900'>Filters</h3>
+        {activeFiltersCount > 0 && (
+          <button
+            onClick={onReset}
+            className='text-xs text-mf-red hover:text-red-700 flex items-center gap-1 font-medium'
+          >
+            <X className='w-3.5 h-3.5' />
+            Clear ({activeFiltersCount})
+          </button>
+        )}
+      </div>
+
+      {/* Project search box */}
+      <div className='mb-5'>
+        <div className='relative'>
+          <Search className='absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4' />
+          <input
+            type='text'
+            placeholder='Search projects...'
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
+            className='w-full pl-9 pr-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mf-red focus:border-transparent'
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+================================================
+FILE: components/ProjectCard.tsx
+================================================
+"use client";
+import Link from "next/link";
+import React from "react";
+import { useState } from "react";
+import github from "../../../../public/images/social-media/github.png";
+import docs from "../../../../public/images/social-media/docs.svg";
+import Image from "next/image";
+import { AiFillStar } from "react-icons/ai";
+import { ProjectProps } from "@/types";
+import { PROJECT_CARD_LABELS } from "@/constants";
+
+/* Card component used to display individual project details */
+export default function ProjectCard({
+  title,
+  shortDescription,
+  githubUrl,
+  documentationUrl,
+  parentTitle,
+  stars,
+  tags,
+}: ProjectProps) {
+  /* State to toggle expanded/collapsed description */
+  const [expandDescription, setExpandDescription] = useState(false);
+
+  return (
+    <div
+      className={`border-2 p-6 transition-[box-shadow] shadow-none hover:shadow-xl bg-slate-50/70 max-w-full flex flex-col relative ${
+        parentTitle === "Upcoming Projects" ? "h-52" : "h-80"
+      }`}
+    >
+      <div className='flex-1 flex flex-col overflow-hidden'>
+        {/* Header section containing project title and GitHub star count */}
+        <div className='flex justify-between items-start mb-2 h-[60px]'>
+          <h3 className='font-bold text-lg tracking-widest text-mindfire-text-black line-clamp-2 capitalize pr-2 overflow-hidden'>
+            {title}
+          </h3>
+
+          {/* Star count badge (shown only if stars exist) */}
+          {stars !== undefined && (
+            <div className='flex items-center gap-1 bg-gray-100 rounded-full p-1 flex-shrink-0'>
+              <AiFillStar className='text-yellow-400' />
+              <span className='text-sm text-gray-600'>{stars}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Project description with expandable/collapsible behavior */}
+        <div
+          className={`relative cursor-pointer transition-all duration-300 ${
+            expandDescription
+              ? "max-h-[90px] overflow-y-auto"
+              : "max-h-[5.5rem] overflow-hidden"
+          } ${parentTitle === "Upcoming Projects" ? "mb-2" : "mb-4"}`}
+          onClick={() => {
+            if (shortDescription.length > 120)
+              setExpandDescription(!expandDescription);
+          }}
+        >
+          <p
+            className={`text-mf-dark tracking-wide leading-6 ${
+              expandDescription ? "" : "line-clamp-3"
+            }`}
+          >
+            {shortDescription}
+          </p>
+        </div>
+
+        {/* Toggle text to expand or collapse description */}
+        {shortDescription.length > 120 && (
+          <span
+            className='text-xs text-mindfire-text-red block -mt-2 mb-2 cursor-pointer'
+            onClick={() => setExpandDescription(!expandDescription)}
+          >
+            {expandDescription ? "less" : "more"}
+          </span>
+        )}
+
+        {/* Technology tags (shown only for current projects) */}
+        {parentTitle !== "Upcoming Projects" && tags && tags.length > 0 && (
+          <div className='h-[2.5rem]'>
+            <div className='flex gap-2 max-w-full overflow-x-auto pb-1'>
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className='px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full border border-red-500 truncate flex-shrink-0'
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Footer section containing repository and documentation links */}
+      {parentTitle !== "Upcoming Projects" &&
+        (githubUrl || documentationUrl) &&
+        (githubUrl !== "NA" || documentationUrl !== "NA") && (
+          <div className='mt-2'>
+            <div className='border-t-2'></div>
+            <div className='flex gap-4 justify-center mt-2'>
+              {/* GitHub repository link */}
+              {githubUrl && githubUrl !== "NA" && (
+                <Link
+                  href={githubUrl}
+                  target='_blank'
+                  className='flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors'
+                >
+                  <Image
+                    src={github}
+                    height={20}
+                    width={20}
+                    alt='Repository'
+                    className='rounded-full'
+                  />
+                  <span className='text-sm text-gray-600'>
+                    {PROJECT_CARD_LABELS.repositoryLabel}
+                  </span>
+                </Link>
+              )}
+
+              {/* Documentation link */}
+              {documentationUrl && documentationUrl !== "NA" && (
+                <Link
+                  href={documentationUrl}
+                  target='_blank'
+                  className='flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors'
+                >
+                  <Image
+                    src={docs}
+                    height={20}
+                    width={20}
+                    alt='Documentation'
+                  />
+                  <span className='text-sm text-gray-600'>
+                    {PROJECT_CARD_LABELS.docsLabel}
+                  </span>
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
+    </div>
+  );
+}
+
+
+
+================================================
+FILE: components/ProjectCount.tsx
+================================================
+"use client";
+
+import Image from "next/image";
+import project from "../../../../public/images/social-media/project.svg";
+import { BorderBeam } from "../../../components/shared/BorderBeam";
+import { ProjectCountProps } from "@/types";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { COUNT_DURATION } from "@/constants";
+
+/* Displays an animated project count badge with visual effects */
+const ProjectCount = ({ totalProjects }: ProjectCountProps) => {
+  const duration = COUNT_DURATION;
+
+  /* Custom hook to animate the counter from 0 to totalProjects */
+  const count = useAnimatedCounter(totalProjects, duration);
+
+  return (
+    <div className='relative rounded-full'>
+      {/* Badge container with glass effect and hover shadow */}
+      <div className='relative flex items-center gap-2 bg-white/90 border border-gray-200 backdrop-blur-sm rounded-full shadow-md shadow-red-300 py-2 px-4 hover:shadow-xl transition-shadow duration-300'>
+        {/* Animated numeric counter */}
+        <span className='text-3xl font-bold bg-gradient-to-r from-mindfire-text-red to-orange-500 bg-clip-text text-transparent'>
+          {count}
+        </span>
+
+        {/* Decorative project icon */}
+        <Image
+          src={project}
+          height={30}
+          width={30}
+          alt='total_projects'
+          className='rounded-3xl animate-bounce'
+        />
+      </div>
+
+      {/* Animated border glow effect */}
+      <BorderBeam
+        duration={4}
+        size={70}
+        className='from-transparent via-mindfire-text-red to-orange-500'
+      />
+    </div>
+  );
+};
+
+export default ProjectCount;
+
+
+
+================================================
+FILE: components/ProjectGrid.tsx
+================================================
+import React from "react";
+import ProjectCard from "./ProjectCard";
+import ProjectCount from "./ProjectCount";
+import { ProjectGridProps } from "@/types";
+
+/* Displays a grid of projects with a heading and project count */
+export default function ProjectGrid({ title, projectData }: ProjectGridProps) {
+  /* Sort projects by GitHub stars in descending order */
+  const sortedProjects = [...projectData].sort(
+    (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
+  );
+
+  return (
+    <section className='mt-20' id='all-projects'>
+      {/* Section header showing title and total project count */}
+      <div className='flex justify-center items-center gap-4'>
+        <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+          {title}
+        </h1>
+        <ProjectCount totalProjects={projectData.length} />
+      </div>
+
+      {/* Responsive grid layout rendering project cards */}
+      <div className='mt-12 px-8 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
+        {sortedProjects.map(
+          (
+            {
+              title: projectTitle,
+              shortDescription,
+              githubUrl,
+              documentationUrl,
+              stars,
+              tags,
+            },
+            index
+          ) => {
+            return (
+              <ProjectCard
+                key={index}
+                title={projectTitle}
+                parentTitle={title}
+                shortDescription={shortDescription}
+                githubUrl={githubUrl}
+                documentationUrl={documentationUrl}
+                stars={stars}
+                tags={tags}
+              />
+            );
+          }
+        )}
+      </div>
+    </section>
+  );
+}
+
+
+
+================================================
+FILE: components/ProjectsHero.tsx
+================================================
+import Image from "next/image";
+import Link from "next/link";
+import projectsImage from "../../../../public/images/projects.webp";
+import { PROJECTS_HEROZ } from "@/constants";
+
+/* Hero banner section displayed at the top of the Projects page */
+export default function ProjectsHero() {
+  return (
+    <section className='bg-slate-50'>
+      <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
+        {/* Left content: heading, description, and call-to-action */}
+        <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
+          <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+            {PROJECTS_HEROZ.heading}
+          </h1>
+
+          {/* Subheading describing the projects section */}
+          <p className='mt-6 text-xl text-mf-light-grey tracking-wide'>
+            {PROJECTS_HEROZ.subheading}
+          </p>
+
+          {/* CTA button that scrolls to the current projects section */}
+          <div className='flex flex-wrap items-start gap-6 mt-10'>
+            <Link
+              href='#current-projects'
+              className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
+            >
+              {PROJECTS_HEROZ.ctaLabel}
+            </Link>
+          </div>
+        </div>
+
+        {/* Right side illustration for the hero section */}
+        <Image
+          src={projectsImage}
+          alt='projects'
+          className='max-lg:w-full object-contain'
+          height='500'
+          width='600'
+          priority
+        />
+      </div>
+    </section>
+  );
+}
+
+
+
+================================================
+FILE: components/SortByFilter.tsx
+================================================
+import FilterSection from "./FilterSection";
+import { SortByFilterProps } from "@/types";
+import { SORT_OPTIONS } from "@/constants";
+
+/* Filter component for selecting how projects should be sorted */
+export default function SortByFilter({
+  value,
+  isExpanded,
+  onToggle,
+  onChange,
+}: SortByFilterProps) {
+  return (
+    <FilterSection title='Sort By' isExpanded={isExpanded} onToggle={onToggle}>
+      <div className='space-y-2'>
+        {SORT_OPTIONS.map((option) => (
+          <label
+            key={option.id}
+            className='flex items-center cursor-pointer group'
+          >
+            <input
+              type='radio'
+              name='sortBy'
+              value={option.id}
+              checked={value === option.id}
+              onChange={() => onChange(option.id)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
+            />
+            <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+              {option.label}
+            </span>
+          </label>
+        ))}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/StarsFilter.tsx
+================================================
+import FilterSection from "./FilterSection";
+import { StarsFilterProps } from "@/types";
+import { STAR_RANGES } from "@/constants";
+
+/* Filter component for selecting projects based on star count ranges */
+export default function StarsFilter({
+  value,
+  isExpanded,
+  onToggle,
+  onChange,
+}: StarsFilterProps) {
+  return (
+    <FilterSection title='Stars' isExpanded={isExpanded} onToggle={onToggle}>
+      <div className='space-y-2'>
+        {STAR_RANGES.map((range) => (
+          <label key={range} className='flex items-center cursor-pointer group'>
+            <input
+              type='radio'
+              name='starRange'
+              value={range}
+              checked={value === range}
+              onChange={() => onChange(range)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 focus:ring-mf-red'
+            />
+            <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+              {range === "all" ? "All" : range}
+            </span>
+          </label>
+        ))}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/TagsFilter.tsx
+================================================
+import FilterSection from "./FilterSection";
+import { TagsFilterProps } from "@/types";
+
+/* Filter component that allows users to select project tags */
+export default function TagsFilter({
+  tags,
+  selected,
+  isExpanded,
+  onToggle,
+  onChange,
+}: TagsFilterProps) {
+  return (
+    <FilterSection title='Tags' isExpanded={isExpanded} onToggle={onToggle}>
+      <div className='space-y-2 max-h-48 overflow-y-auto pr-1'>
+        {tags.map((tag) => (
+          <label key={tag} className='flex items-center cursor-pointer group'>
+            <input
+              type='checkbox'
+              checked={selected.includes(tag)}
+              onChange={() => onChange(tag)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
+            />
+            <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+              {tag}
+            </span>
+          </label>
+        ))}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/TechnologyFilter.tsx
+================================================
+import FilterSection from "./FilterSection";
+import { TechnologyFilterProps } from "@/types";
+
+/* Filter component that allows users to select technologies */
+export default function TechnologyFilter({
+  technologies,
+  selected,
+  isExpanded,
+  onToggle,
+  onChange,
+}: TechnologyFilterProps) {
+  return (
+    <FilterSection
+      title='Technology'
+      isExpanded={isExpanded}
+      onToggle={onToggle}
+    >
+      <div className='space-y-2 max-h-48 overflow-y-auto pr-1'>
+        {technologies.map((tech) => (
+          <label key={tech} className='flex items-center cursor-pointer group'>
+            <input
+              type='checkbox'
+              checked={selected.includes(tech)}
+              onChange={() => onChange(tech)}
+              className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red'
+            />
+            <span className='ml-2 text-xs text-gray-700 group-hover:text-gray-900'>
+              {tech}
+            </span>
+          </label>
+        ))}
+      </div>
+    </FilterSection>
+  );
+}
+
+
+
+================================================
+FILE: components/UpcomingProjectsSection.tsx
+================================================
+import ProjectCard from "./ProjectCard";
+import ProjectCount from "./ProjectCount";
+import { UPCOMING_PROJECTS } from "@/constants";
+import { UpcomingProjectsSectionProps } from "@/types";
+
+// Section component responsible for displaying the list of upcoming projects
+export default function UpcomingProjectsSection({
+  projects,
+}: UpcomingProjectsSectionProps) {
+  return (
+    <>
+      <div id='upcoming-projects' className='mt-16 mb-8'>
+        <div className='flex justify-center items-center gap-4'>
+          <h2 className='text-2xl font-semibold tracking-wide text-mindfire-text-black'>
+            {UPCOMING_PROJECTS.heading}
+          </h2>
+          <ProjectCount totalProjects={projects.length} />
+        </div>
+      </div>
+
+      {/* If no projects are available, show empty state message */}
+      {projects.length === 0 ? (
+        <div className='text-center py-12'>
+          <p className='text-lg text-gray-500'>
+            {UPCOMING_PROJECTS.emptyMessage}
+          </p>
+        </div>
+      ) : (
+        /* Grid layout displaying project cards */
+        <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              parentTitle='Upcoming Projects'
+              shortDescription={project.short_description}
+              githubUrl={project.github_repository_link}
+              documentationUrl={project.documentation_link}
+              stars={project.stars || 0}
+              tags={project.tags || []}
+            />
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+
