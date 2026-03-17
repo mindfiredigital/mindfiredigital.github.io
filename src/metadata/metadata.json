@@ -76,5 +76,13 @@
       "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
       "url": "https://mindfiredigital.github.io/packages"
     }
+  },
+  "Cookie-Policy": {
+    "title": "Mindfire | FOSS : Cookie Policy",
+    "description": "Learn how Mindfire Digital LLP uses cookies on its open source platform. Understand what cookies we use, why we use them, and how you can manage your preferences.",
+    "openGraph": {
+      "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
+      "url": "https://mindfiredigital.github.io/cookie-policy"
+    }
   }
 }
