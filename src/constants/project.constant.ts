@@ -5,6 +5,7 @@ export const PROJECTS_HEROZ = {
   subheading: "Explore our collection of innovative open source projects.",
   ctaLabel: "Browse Projects",
   ctaHref: "#current-projects",
+  currProject: "Current Project",
   imageAlt: "projects",
 } as const;
 
@@ -50,6 +51,8 @@ export const CONTRIBUTOR_RANGE_OPTIONS = [
   "50+",
 ] as const;
 
+export const STAR_RANGES = ["all", "10+", "50+", "100+", "500+"];
+
 export const CONTRIBUTOR_LIST_LIMIT = 50 as const;
 
 export const PROJECT_FILTER_SIDEBAR_LABELS = {
@@ -84,9 +87,24 @@ export const PROJECT_TECHNOLOGY_TAGS = [
   "html",
 ] as const;
 
-// ── ProjectCard ───────────────────────────────────────────────────────────────
+export const SORT_OPTIONS = [
+  { id: "activity", label: "Most Active (Recent Commits)" },
+  { id: "stars", label: "Stars (Highest to Lowest)" },
+  { id: "newest", label: "Recently Created" },
+  { id: "oldest", label: "Oldest Projects" },
+  { id: "name", label: "Name (A to Z)" },
+];
 
 export const PROJECT_CARD_LABELS = {
   repositoryLabel: "Repository",
   docsLabel: "Docs",
 } as const;
+
+export const CONTRIBUTOR_RANGES = ["all", "5+", "10+", "20+", "50+"];
+
+export const PROJECT_SIDEBAR = {
+  CLEAR: "Clear All",
+  FIRST_50: "Showing first 50 contributors",
+};
+
+export const COUNT_DURATION = 800;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { privacyPolicyContentData, PRIVACY_POLICY_INTRO } from "@/constants";
 
+/* Privacy Policy page displaying introductory text and policy sections */
 const PrivacyPolicy = () => {
   return (
     <div className='max-w-4xl mx-auto my-10 px-6'>

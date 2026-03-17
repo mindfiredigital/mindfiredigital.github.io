@@ -7,13 +7,13 @@ const CONFIG = {
   OWNER: "mindfiredigital",
 
   INPUT_FILES: {
-    contributors: "./src/app/projects/assets/contributors.json",
-    projects: "./src/app/projects/assets/projects.json",
-    contributorMapping: "./src/app/projects/assets/contributor-mapping.json",
+    contributors: "./src/asset/contributors.json",
+    projects: "./src/asset/projects.json",
+    contributorMapping: "./src/asset/contributor-mapping.json",
   },
   OUTPUT_FILES: {
     // Current month live file — also written to public/leaderboard/ below
-    monthly: "./src/app/projects/assets/leaderboard-monthly.json",
+    monthly: "./src/asset/leaderboard-monthly.json",
     monthlyArchive: "./public/leaderboard",
     manifest: "./public/leaderboard/manifest.json",
   },

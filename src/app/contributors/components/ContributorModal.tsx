@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import {
   X,
   ExternalLink,
@@ -14,54 +14,23 @@ import {
 } from "lucide-react";
 import { ContributorModalProps } from "@/types";
 import { MODAL_SECTION_TITLES, SCORE_BARS } from "@/constants";
-import { getRankBadge } from "@/app/utils";
+import { useContributorModal } from "@/hooks/useContributorModal";
 
-const ContributorModal: React.FC<ContributorModalProps> = ({
+// Inner component — only rendered when contributor is guaranteed non-null
+function ContributorModalInner({
   contributor,
   onClose,
-}) => {
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handleEsc);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = "";
-    };
-  }, [onClose]);
-
-  if (!contributor) return null;
-
-  const { score_breakdown, prs_by_complexity } = contributor;
-  const totalPRs = contributor.totalPRs || 1;
-  const smallPct = Math.round((prs_by_complexity.small / totalPRs) * 100);
-  const mediumPct = Math.round((prs_by_complexity.medium / totalPRs) * 100);
-  const largePct = Math.round((prs_by_complexity.large / totalPRs) * 100);
-
-  const scoreItems = [
-    { label: "PR Score", value: score_breakdown.pr_score },
-    { label: "Commits Score", value: score_breakdown.commits_score },
-    { label: "PR Reviews", value: score_breakdown.pr_reviews_score },
-    { label: "Code Comments", value: score_breakdown.code_comments_score },
-    { label: "Issues Opened", value: score_breakdown.issues_opened_score },
-    { label: "Issue Comments", value: score_breakdown.issue_comments_score },
-    { label: "Tests", value: score_breakdown.tests_score },
-    { label: "Docs", value: score_breakdown.docs_score },
-    { label: "Mentor", value: score_breakdown.mentor_score },
-    { label: "Zero Revisions", value: score_breakdown.zero_revisions_score },
-    { label: "Impact Bonus", value: score_breakdown.impact_bonus_score },
-    {
-      label: "Multi-Project Bonus",
-      value: score_breakdown.projects_score ?? 0,
-    },
-  ];
-
-  const maxScore = Math.max(...scoreItems.map((s) => s.value), 1);
-
-  const badge = getRankBadge(contributor.rank);
-  const projectsWorkedOn = contributor.projectsWorkingOn ?? 0;
+}: Required<ContributorModalProps>) {
+  const {
+    prs_by_complexity,
+    smallPct,
+    mediumPct,
+    largePct,
+    scoreItems,
+    maxScore,
+    badge,
+    projectsWorkedOn,
+  } = useContributorModal(contributor, onClose);
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center p-4'>
@@ -126,6 +95,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
         </div>
 
         <div className='p-6 space-y-6'>
+          {/* Score tiles */}
           <div className='grid grid-cols-2 sm:grid-cols-4 gap-3'>
             {[
               {
@@ -161,6 +131,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             ))}
           </div>
 
+          {/* Score composition bars */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               {MODAL_SECTION_TITLES.scoreComposition}
@@ -201,6 +172,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
+          {/* Activity stats */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               {MODAL_SECTION_TITLES.activity}
@@ -237,7 +209,6 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                   label: "Avg Commits/PR",
                   value: contributor.avgCommitsPerPR.toFixed(1),
                 },
-                // ── NEW: projects stat tile ──
                 {
                   icon: <Layers className='w-4 h-4' />,
                   label: "Projects",
@@ -260,6 +231,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
+          {/* PR complexity */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               {MODAL_SECTION_TITLES.prComplexity}
@@ -311,6 +283,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
+          {/* Score breakdown bars */}
           <div>
             <h3 className='text-sm font-semibold text-gray-700 mb-3'>
               {MODAL_SECTION_TITLES.scoreBreakdown}
@@ -326,7 +299,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
                     </span>
                     <div className='flex-1 bg-gray-100 rounded-full h-2'>
                       <div
-                        className={`h-2 rounded-full transition-all duration-500 bg-gradient-to-r from-mindfire-text-red to-orange-400`}
+                        className='h-2 rounded-full transition-all duration-500 bg-gradient-to-r from-mindfire-text-red to-orange-400'
                         style={{ width: `${(item.value / maxScore) * 100}%` }}
                       />
                     </div>
@@ -338,6 +311,7 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
             </div>
           </div>
 
+          {/* Projects */}
           {contributor.projects && contributor.projects.length > 0 && (
             <div>
               <h3 className='text-sm font-semibold text-gray-700 mb-3'>
@@ -359,6 +333,15 @@ const ContributorModal: React.FC<ContributorModalProps> = ({
       </div>
     </div>
   );
+}
+
+// Outer wrapper — handles the null guard before rendering the inner component
+const ContributorModal: React.FC<ContributorModalProps> = ({
+  contributor,
+  onClose,
+}) => {
+  if (!contributor) return null;
+  return <ContributorModalInner contributor={contributor} onClose={onClose} />;
 };
 
 export default ContributorModal;

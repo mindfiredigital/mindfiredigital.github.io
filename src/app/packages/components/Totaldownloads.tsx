@@ -7,9 +7,11 @@ import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { TotalDownloadsProps } from "@/types";
 import { PACKAGE_CARD_LABELS } from "@/constants";
 
+/* Component that displays the total downloads with an animated counter */
 const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
   const count = useAnimatedCounter(totalDownloads);
 
+  /* Format the number into compact format (e.g., 1200 → 1.2K) */
   const formatted = new Intl.NumberFormat("en-US", {
     notation: "compact",
     maximumFractionDigits: 1,

@@ -33,22 +33,14 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
-      
+
       - name: 'Restore changes in json'
         run: |
-          git restore src/app/projects/assets/upcomingProjects.json
-          git restore src/app/projects/assets/projects.json
-          git restore src/app/projects/assets/contributors.json
-          git restore src/app/projects/assets/stats.json
-          git restore src/app/projects/assets/packages.json
-          git restore src/app/projects/assets/projects_grouped.json
-          git restore src/app/projects/assets/contributor-mapping.json
-          git restore src/app/projects/assets/leaderboard-cache.json
-          git restore src/app/projects/assets/leaderboard-monthly.json
+          git restore src/asset/*.json
 
       - name: 'Fetch branches'
         run: git fetch origin
-      
+
       - name: 'Set Git user name and email'
         run: |
           git config --local user.email "github-actions@github.com"
@@ -58,12 +50,10 @@ jobs:
         run: |
           mkdir -p /tmp/leaderboard-data
           cp -r public/leaderboard/* /tmp/leaderboard-data/
-          cp public/asset/*.json /tmp/leaderboard-data/
 
       - name: 'Restore generated leaderboard files to allow branch switch'
         run: |
           git restore public/leaderboard/
-          git restore public/asset/
 
       - name: 'Copy build artifacts to gh-pages branch'
         run: |
@@ -71,7 +61,6 @@ jobs:
           shopt -s dotglob
           cp -r build/* /tmp/temp-directory/
           shopt -u dotglob
-          # Include generated leaderboard data
           mkdir -p /tmp/temp-directory/leaderboard
           cp -r /tmp/leaderboard-data/* /tmp/temp-directory/leaderboard/
           git checkout gh-pages
@@ -95,16 +84,16 @@ jobs:
 
       - name: 'Switch back to main branch'
         run: |
-          git checkout main 
-          
+          git checkout main
+
   create-github-release:
     name: Create Github release document
     runs-on: ubuntu-latest
     permissions:
       contents: write
     needs: build
-    steps: 
-      - name: Checkout code 
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Semantic Release

@@ -9,6 +9,7 @@ export * from "./joinUs.constant";
 export * from "./currentProject.constant";
 export * from "./packages.constant";
 export * from "./project.constant";
+export * from "./home.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";

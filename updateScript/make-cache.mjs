@@ -8,14 +8,13 @@ const CONFIG = {
   GITHUB_TOKEN: process.env.GITHUB_TOKEN || "",
   OWNER: "mindfiredigital",
 
-  CONTRIBUTORS_FILE: "./src/app/projects/assets/contributors.json",
-  PROJECTS_FILE: "./src/app/projects/assets/projects.json",
-  CONTRIBUTOR_MAPPING_FILE:
-    "./src/app/projects/assets/contributor-mapping.json",
-  CACHE_FILE: "./src/app/projects/assets/leaderboard-cache.json",
-  UPCOMING_PROJECTS_FILE: "./src/app/projects/assets/upcomingProjects.json",
+  CONTRIBUTORS_FILE: "./src/asset/contributors.json",
+  PROJECTS_FILE: "./src/asset/projects.json",
+  CONTRIBUTOR_MAPPING_FILE: "./src/asset/contributor-mapping.json",
+  CACHE_FILE: "./src/asset/leaderboard-cache.json",
+  UPCOMING_PROJECTS_FILE: "./src/asset/upcomingProjects.json",
 
-  PROGRESS_FILE: "./src/app/projects/assets/leaderboard-progress.json",
+  PROGRESS_FILE: "./src/asset/leaderboard-progress.json",
 
   SPECIAL_PROJECTS: [
     {

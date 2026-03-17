@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { Package, NpmStats } from "@/types";
-import packagesList from "../app/projects/assets/packages.json";
-import statsData from "../app/projects/assets/stats.json";
+import packagesList from "@/asset/packages.json";
+import statsData from "@/asset/stats.json";
 
 // Helper to extract package name from URL
 function extractPackageNameFromUrl(url: string): string | null {

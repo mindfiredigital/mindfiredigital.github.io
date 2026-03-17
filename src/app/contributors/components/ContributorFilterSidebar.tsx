@@ -16,12 +16,14 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
   isMobileOpen,
   onMobileToggle,
 }) => {
+  /* State to manage expanded/collapsed filter sections */
   const [expandedSections, setExpandedSections] = useState({
     sortBy: true,
     activity: true,
     scoreRange: true,
   });
 
+  /* Toggle visibility of a filter section */
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections((prev) => ({
       ...prev,
@@ -29,12 +31,14 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
     }));
   };
 
+  /* Count active filters (excluding default values) */
   const activeFiltersCount =
     (filters.activityFilter !== "all" ? 1 : 0) +
     (filters.scoreRange !== "all" ? 1 : 0);
 
   return (
     <>
+      {/* Mobile floating filter button */}
       <button
         onClick={onMobileToggle}
         className='lg:hidden fixed bottom-6 right-6 z-40 bg-mf-red text-white px-5 py-3 rounded-full shadow-lg hover:bg-red-700 transition-colors flex items-center gap-2'
@@ -48,6 +52,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
         )}
       </button>
 
+      {/* Mobile overlay backdrop */}
       {isMobileOpen && (
         <div
           className='lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40'
@@ -55,6 +60,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
         />
       )}
 
+      {/* Sidebar container */}
       <div
         className={`
           fixed lg:static inset-y-0 left-0 z-50 lg:z-auto
@@ -71,6 +77,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           flex flex-col
         `}
       >
+        {/* Close button (mobile) */}
         <button
           onClick={onMobileToggle}
           className='lg:hidden absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10 p-1 rounded-full hover:bg-gray-100 transition-colors'
@@ -78,6 +85,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           <X className='w-5 h-5' />
         </button>
 
+        {/* Header section with title and reset */}
         <div className='p-5 pb-4 border-b border-gray-100'>
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center gap-2'>
@@ -86,6 +94,8 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
                 {FILTER_LABELS.heading}
               </h3>
             </div>
+
+            {/* Reset filters button */}
             {activeFiltersCount > 0 && (
               <button
                 onClick={onReset}
@@ -97,6 +107,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             )}
           </div>
 
+          {/* Search input */}
           <div className='relative'>
             <Search className='absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-3.5 h-3.5' />
             <input
@@ -106,6 +117,8 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
               onChange={(e) => onSearchChange(e.target.value)}
               className='w-full pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mf-red/30 focus:border-mf-red transition-all bg-gray-50 placeholder:text-gray-400'
             />
+
+            {/* Clear search button */}
             {searchQuery && (
               <button
                 onClick={() => onSearchChange("")}
@@ -117,7 +130,9 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
           </div>
         </div>
 
+        {/* Filter sections */}
         <div className='overflow-y-auto flex-1 p-4 space-y-1'>
+          {/* Sort By filter */}
           <FilterSection
             title='Sort By'
             expanded={expandedSections.sortBy}
@@ -140,6 +155,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             />
           </FilterSection>
 
+          {/* Activity filter */}
           <FilterSection
             title='Last Active'
             expanded={expandedSections.activity}
@@ -159,6 +175,7 @@ const ContributorFilterSidebar: React.FC<ContributorFilterSidebarProps> = ({
             />
           </FilterSection>
 
+          {/* Score range filter */}
           <FilterSection
             title='Min Total Score'
             expanded={expandedSections.scoreRange}

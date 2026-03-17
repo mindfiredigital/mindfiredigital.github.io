@@ -14,7 +14,7 @@
     "documentationUrl": "https://github.com/mindfiredigital/adac-tools/blob/main/README.md",
     "stars": 15,
     "tags": [],
-    "lastPushedAt": "2026-03-09T05:06:56Z"
+    "lastPushedAt": "2026-03-16T07:48:01Z"
   },
   {
     "id": 35,
@@ -29,8 +29,8 @@
     "shortDescription": "Agentic Web Starter is a FastAPI-based backend template for building agentic and RAG-driven applications. It provides ready-to-use ingestion, retrieval, and chat APIs with integrated vector search (Qdrant) and persistent session memory (Redis), enabling teams to quickly develop, extend, and deploy production-oriented agentic workflows without rebuilding foundational backend infrastructure.",
     "githubUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter",
     "documentationUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter/blob/main/LICENSE",
-    "stars": 14,
+    "stars": 17,
     "tags": ["agent", "ai", "ai-agents", "aiagent", "fastapi"],
-    "lastPushedAt": "2026-02-17T10:36:56Z"
+    "lastPushedAt": "2026-03-10T07:28:56Z"
   }
 ]

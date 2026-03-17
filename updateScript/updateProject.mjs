@@ -85,10 +85,9 @@ async function fetchAllGithubRepos(username, token) {
 async function updateProjects() {
   try {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-    // Fetch data for current projects and upcoming projects
+
     const [currentProjectsData, upcomingProjectsData, repositories] =
       await Promise.all([
-        // Fetch current projects data
         fetchData("https://directus.ourgoalplan.co.in/graphql", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -111,7 +110,6 @@ async function updateProjects() {
           }`,
           }),
         }),
-        // Fetch upcoming projects data
         fetchData("https://directus.ourgoalplan.co.in/graphql", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -189,11 +187,12 @@ async function updateProjects() {
     // Fetch and process contributors data for repositories
     const repoNames = repositories.map((repo) => repo.name);
     const contributorsObject = {};
+
     for (const repoName of repoNames) {
       try {
         const contributorsWithBot = await getCollaboratorsWithDefault(
-          gitOwner, // owner
-          repoName, // repository name
+          gitOwner,
+          repoName,
           githubToken
         );
         const contributors = contributorsWithBot.filter(
@@ -203,7 +202,6 @@ async function updateProjects() {
         );
 
         if (contributors.length > 0) {
-          // Get last active days for each contributor
           const contributorsWithActivity = await Promise.all(
             contributors.map(getContributorData)
           );
@@ -213,14 +211,11 @@ async function updateProjects() {
         console.error(`Error processing contributors for ${repoName}:`, error);
       }
     }
-
-    // Write contributors data to file
     writeJsonToFile(`${pathForJson}/contributors.json`, contributorsObject);
-    // Aggregate contributor from contributors
+    // Aggregate contributors across all repos
     const contributionsMap = {};
 
     for (const repo in contributorsObject) {
-      // eslint-disable-next-line no-prototype-builtins
       if (contributorsObject.hasOwnProperty(repo)) {
         contributorsObject[repo].forEach((contributor) => {
           const {
@@ -232,37 +227,45 @@ async function updateProjects() {
             pullRequestCount,
             issueCount,
           } = contributor;
-          // Update contributions map
+
+          const existing = contributionsMap[login];
           contributionsMap[login] = {
             id,
-            contributions:
-              (contributionsMap[login]?.contributions || 0) + contributions,
+            contributions: (existing?.contributions || 0) + contributions,
             html_url,
             avatar_url,
             login,
-            lastActiveDays: contributor.lastActiveDays,
+            // ← keep the smallest lastActiveDays (most recent activity)
+            lastActiveDays:
+              existing?.lastActiveDays !== undefined &&
+              existing?.lastActiveDays !== null &&
+              contributor.lastActiveDays !== null
+                ? Math.min(existing.lastActiveDays, contributor.lastActiveDays)
+                : contributor.lastActiveDays ??
+                  existing?.lastActiveDays ??
+                  null,
             pullRequestCount:
-              (contributionsMap[login]?.pullRequestCount || 0) +
-              pullRequestCount,
-            issueCount: (contributionsMap[login]?.issueCount || 0) + issueCount,
+              (existing?.pullRequestCount || 0) + pullRequestCount,
+            issueCount: (existing?.issueCount || 0) + issueCount,
           };
         });
       }
     }
 
-    // Sort contributions and write data to file
+    // Sort by contributions descending and write
     const sortedContributions = Object.values(contributionsMap).sort(
       (a, b) => b.contributions - a.contributions
     );
     writeJsonToFile(`${pathForJson}/contributors.json`, sortedContributions);
-    console.log("Contributors list updated successfully.");
+    console.log(
+      `Contributors list updated successfully. Total: ${sortedContributions.length}`
+    );
 
     getAllStats(
       npmPackages.map((p) => p.name),
       pypiPackages.map((p) => p.name)
     )
       .then((statsMap) => {
-        // Add titles to the stats array
         const statsWithTitles = Object.values(statsMap)
           .map((value) => {
             const npmPackage = npmPackages.find((p) => p.name === value.name);
@@ -273,7 +276,6 @@ async function updateProjects() {
           .sort((a, b) => b.total - a.total);
 
         writeJsonToFile(`${pathForJson}/stats.json`, statsWithTitles);
-
         console.log("Stats list updated successfully.");
       })
       .catch((error) => {
@@ -284,4 +286,8 @@ async function updateProjects() {
   }
 }
 
-updateProjects();
+// ← graceful catch so && chain continues even on failure
+updateProjects().catch((e) => {
+  console.error("⚠️  updateProjects failed, continuing:", e.message);
+  process.exit(0);
+});

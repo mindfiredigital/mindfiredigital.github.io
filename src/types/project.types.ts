@@ -80,3 +80,72 @@ export interface FilterSidebarProps {
   isMobileOpen: boolean;
   onMobileToggle: () => void;
 }
+
+export interface UpcomingProjectsSectionProps {
+  projects: Project[];
+}
+
+export interface TechnologyFilterProps {
+  technologies: string[];
+  selected: string[];
+  isExpanded: boolean;
+  onToggle: () => void;
+  onChange: (tech: string) => void;
+}
+
+export interface TagsFilterProps {
+  tags: string[];
+  selected: string[];
+  isExpanded: boolean;
+  onToggle: () => void;
+  onChange: (tag: string) => void;
+}
+
+export interface StarsFilterProps {
+  value: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+  onChange: (value: string) => void;
+}
+
+export interface SortByFilterProps {
+  value: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+  onChange: (value: string) => void;
+}
+
+export interface FilterSectionProps {
+  title: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}
+
+export interface FilterSidebarHeaderProps {
+  activeFiltersCount: number;
+  searchQuery: string;
+  onSearchChange: (value: string) => void;
+  onReset: () => void;
+  onMobileToggle: () => void;
+}
+
+export interface CurrentProjectsSectionProps {
+  projects: Project[];
+}
+
+export interface ContributorsFilterProps {
+  contributors: ContributorProject[];
+  selected: string[];
+  isExpanded: boolean;
+  onToggle: () => void;
+  onSelect: (login: string) => void;
+  onClearAll: () => void;
+}
+
+export interface ContributorsCountFilterProps {
+  value: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+  onChange: (value: string) => void;
+}

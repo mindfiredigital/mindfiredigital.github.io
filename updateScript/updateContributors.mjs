@@ -3,8 +3,8 @@ import { fetchData } from "./config.mjs";
 import fs from "fs";
 import axios from "axios";
 
-const PROJECTS_PATH = "./src/app/projects/assets/projects.json";
-const MAPPING_PATH = "./src/app/projects/assets/contributor-mapping.json";
+const PROJECTS_PATH = "./src/asset/projects.json";
+const MAPPING_PATH = "./src/asset/contributor-mapping.json";
 const TOKEN = process.env.GITHUB_TOKEN;
 
 async function fetchDefaultBranch(owner, repo, token) {
@@ -323,8 +323,7 @@ export async function getContributorData(contributor) {
 
 async function generateMapping() {
   const currentProjects = JSON.parse(fs.readFileSync(PROJECTS_PATH, "utf8"));
-  const UPCOMING_PROJECTS_PATH =
-    "./src/app/projects/assets/upcomingProjects.json";
+  const UPCOMING_PROJECTS_PATH = "./src/asset/upcomingProjects.json";
   let upcomingProjects = [];
   try {
     upcomingProjects = JSON.parse(

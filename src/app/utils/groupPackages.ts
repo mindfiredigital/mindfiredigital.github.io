@@ -24,7 +24,6 @@ export function groupPackages(
   const groupedPackages: GroupedPackage[] = projectsGrouped
     .filter((project) => project.packages && project.packages.length > 0)
     .map((project) => {
-      // Match published packages with their stats
       const packagesWithStats = project.packages
         .filter((pkg) => pkg.status === "published")
         .map((pkg) => {
