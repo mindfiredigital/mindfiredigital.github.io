@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-16T09:47:08.841Z",
+  "generated_at": "2026-03-17T10:25:50.979Z",
   "period": "monthly",
   "month_label": "January 2024",
   "month_key": "2024-01",
-  "total_contributors": 3,
+  "total_contributors": 4,
   "leaderboard": [
     {
       "rank": 1,
@@ -11,15 +11,16 @@
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
-      "totalCommits": 33,
+      "totalCommits": 34,
       "totalPRs": 15,
       "totalPRReviewsGiven": 1,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.2,
-      "projectsWorkingOn": 4,
+      "avgCommitsPerPR": 2.27,
+      "projectsWorkingOn": 5,
       "projects": [
+        "Canvas Editor",
         "FMDAPI Node Weaver",
         "MobileQuickLaunchKit-iOS",
         "MobileQuickLaunchKit-Android",
@@ -31,13 +32,13 @@
         "medium": 2,
         "large": 1
       },
-      "total_score": 201,
-      "code_score": 151,
+      "total_score": 203,
+      "code_score": 153,
       "community_score": 20,
       "quality_score": 30,
       "score_breakdown": {
         "pr_score": 82,
-        "commits_score": 66,
+        "commits_score": 68,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -71,7 +72,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.08,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 10,
@@ -106,6 +109,55 @@
     },
     {
       "rank": 3,
+      "username": "ashutosh-jena-mindfire",
+      "id": 116242186,
+      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
+      "html_url": "https://github.com/ashutosh-jena-mindfire",
+      "totalCommits": 3,
+      "totalPRs": 2,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1.5,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Canvas Editor"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 1
+      },
+      "total_score": 25,
+      "code_score": 21,
+      "community_score": 0,
+      "quality_score": 4,
+      "score_breakdown": {
+        "pr_score": 15,
+        "commits_score": 6,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 4,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 0
+    },
+    {
+      "rank": 4,
       "username": "BasudevBharatBhushan",
       "id": 64151314,
       "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
@@ -118,7 +170,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["FMDAPI Node Weaver"],
+      "projects": [
+        "FMDAPI Node Weaver"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
