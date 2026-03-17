@@ -4,14 +4,21 @@ export const PANEL_HEADER = {
   title: "Hall of Fame",
   liveLabel: "Live",
   footerHint: "Click any contributor to view full profile",
+  displayLabelAllTime: "All Time",
   topCountPrefix: "Top",
   topCountSuffix: "Contributors",
   scoreSuffix: "pts",
   downloadTitle: "Download image",
+  copyTitle: "Copy image to clipboard",
+  copiedTitle: "Copied!",
+  mobileRanksLabel: (end: number) => `Ranks 4–${end}`,
+  loadingMonth: (month: string) => `Loading ${month}…`,
   noActivityEmoji: "😴",
   noActivityHeading: "No activity yet",
-  fileNamePrefix: "hall-of-fame-",
-  noContributor: "No contributors found",
+  noActivitySubtext: (label: string) =>
+    `No contributions recorded for ${label}.`,
+  fileNamePrefix: "hall-of-fame",
+  noContributor: "No Contributors found",
 } as const;
 
 export const COPIED_RESET_MS = 2000 as const;

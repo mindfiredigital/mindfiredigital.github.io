@@ -1,3 +1,5 @@
+import { PODIUM_SLOTS } from "@/app/contributors/components/Podiumsection";
+
 export interface Contributor {
   id: number;
   contributions: number;
@@ -128,4 +130,64 @@ export interface MonthlyPayload {
 export interface Manifest {
   months: string[];
   updated_at?: string;
+}
+
+export interface ContributorListSectionProps {
+  filteredAndSorted: TopScorer[];
+  totalCount: number;
+  onViewDetails: (contributor: TopScorer) => void;
+  onReset: () => void;
+  sectionRef: React.RefObject<HTMLDivElement>;
+}
+
+export interface ContributorHeroProps {
+  contributorsArray: Contributor[];
+  topScorers: TopScorer[];
+}
+
+export interface PanelBodyProps {
+  bodyRef: React.RefObject<HTMLDivElement>;
+  isLoadingMonth: boolean;
+  selectedMonth: string;
+  top10: TopScorer[];
+  podium3: TopScorer[];
+  rest: TopScorer[];
+  maxScore: number;
+  displayLabel: string;
+  mobileRestOpen: boolean;
+  onMobileToggle: () => void;
+  onViewDetails: (scorer: TopScorer) => void;
+}
+
+export interface PanelHeaderProps {
+  activeTab: TabId;
+  top10Length: number;
+  isDownloading: boolean;
+  isCopying: boolean;
+  copied: boolean;
+  onTabChange: (tab: TabId) => void;
+  onDownload: () => void;
+  onCopy: () => void;
+  // monthly calendar picker props
+  availableMonths: string[];
+  selectedMonth: string;
+  curKey: string;
+  isLoadingMonth: boolean;
+  displayLabel: string;
+  onMonthSelect: (key: string) => void;
+}
+
+export type PodiumSlot = (typeof PODIUM_SLOTS)[number];
+
+export interface PodiumSectionProps {
+  podium3: TopScorer[];
+  onViewDetails: (scorer: TopScorer) => void;
+}
+
+export interface RankListSectionProps {
+  rest: TopScorer[];
+  maxScore: number;
+  mobileRestOpen: boolean;
+  onMobileToggle: () => void;
+  onViewDetails: (scorer: TopScorer) => void;
 }
