@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T03:29:08.719Z",
+  "generated_at": "2026-03-16T09:47:08.869Z",
   "period": "monthly",
   "month_label": "April 2024",
   "month_key": "2024-04",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.75,
       "projectsWorkingOn": 1,
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 9,
@@ -68,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FMDAPI Node Weaver"
-      ],
+      "projects": ["FMDAPI Node Weaver"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -117,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -166,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -215,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -264,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -297,7 +285,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 6
     },
     {
       "rank": 7,
@@ -313,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -362,10 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "MobileQuickLaunchKit-iOS",
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

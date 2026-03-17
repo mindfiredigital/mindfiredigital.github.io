@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T03:29:08.713Z",
+  "generated_at": "2026-03-16T09:47:08.856Z",
   "period": "monthly",
   "month_label": "March 2024",
   "month_key": "2024-03",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -68,10 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.6,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Angular Canvas Editor",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Angular Canvas Editor", "Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -102,7 +97,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 6
     },
     {
       "rank": 3,
@@ -118,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -167,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.33,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -216,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -265,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -314,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Angular Canvas Editor"
-      ],
+      "projects": ["Angular Canvas Editor"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -363,9 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -412,10 +395,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "MobileQuickLaunchKit-iOS",
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
