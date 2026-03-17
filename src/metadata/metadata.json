@@ -84,5 +84,13 @@
       "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
       "url": "https://mindfiredigital.github.io/cookie-policy"
     }
+  },
+  "Contributors": {
+    "title": "Mindfire | FOSS : Contributors",
+    "description": "Meet the contributors behind Mindfire Digital LLP's open source projects. Explore scores, activity, pull requests, commits, and more from our growing community.",
+    "openGraph": {
+      "images": "https://res.cloudinary.com/dpey91b5a/image/upload/v1701939942/x9zenpz9n5hvyjrej3sj.png",
+      "url": "https://mindfiredigital.github.io/contributors"
+    }
   }
 }
