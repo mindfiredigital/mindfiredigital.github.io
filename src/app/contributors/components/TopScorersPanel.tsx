@@ -7,6 +7,7 @@ import { useTopScorersPanel } from "@/hooks/useTopScorePanel";
 import PanelHeader from "./Panelheader";
 import PanelBody from "./Panelbody";
 
+/* Main panel combining header, body, and footer for leaderboard */
 export default function TopScorersPanel({
   topScorers,
   onViewDetails,
@@ -40,6 +41,7 @@ export default function TopScorersPanel({
       ref={containerRef}
       className='flex flex-col rounded-2xl border border-gray-100 shadow-lg bg-white overflow-hidden lg:h-full'
     >
+      {/* Panel header (tabs, actions, filters) */}
       <PanelHeader
         activeTab={activeTab}
         top10Length={top10.length}
@@ -57,6 +59,7 @@ export default function TopScorersPanel({
         onMonthSelect={setSelectedMonth}
       />
 
+      {/* Panel body (podium + rank list) */}
       <PanelBody
         bodyRef={bodyRef}
         isLoadingMonth={isLoadingMonth}
@@ -71,13 +74,14 @@ export default function TopScorersPanel({
         onViewDetails={onViewDetails}
       />
 
-      {/* Footer */}
+      {/* Footer hint */}
       <div className='px-5 py-2.5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0'>
         <p className='text-[10px] text-center text-gray-400 font-medium uppercase tracking-wider'>
           {PANEL_HEADER.footerHint}
         </p>
       </div>
 
+      {/* Local animation for podium crowns */}
       <style>{`
         @keyframes trophyFloat {
           0%, 100% { transform: translateY(0px); }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PodiumSlot, PodiumSectionProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
 
+/* Configuration for each podium position (2nd, 1st, 3rd) */
 export const PODIUM_SLOTS = [
   {
     rankIndex: 1,
@@ -64,12 +65,14 @@ export const PODIUM_SLOTS = [
   },
 ] as const;
 
+/* Podium UI showing top 3 contributors */
 export default function PodiumSection({
   podium3,
   onViewDetails,
 }: PodiumSectionProps) {
   return (
     <div className='relative px-4 pt-4 pb-1'>
+      {/* Background glow effect */}
       <div
         className='absolute inset-0 pointer-events-none'
         style={{
@@ -77,10 +80,13 @@ export default function PodiumSection({
             "radial-gradient(ellipse at 50% 100%, rgba(251,191,36,0.08) 0%, transparent 70%)",
         }}
       />
+
+      {/* Podium layout */}
       <div className='relative flex items-end justify-center gap-2'>
         {(PODIUM_SLOTS as readonly PodiumSlot[]).map((slot) => {
           const scorer = podium3[slot.rankIndex];
           if (!scorer) return null;
+
           return (
             <button
               key={scorer.username}
@@ -89,6 +95,7 @@ export default function PodiumSection({
                 slot.selfEnd ? "self-end" : ""
               }`}
             >
+              {/* Crown icon */}
               <span
                 className={`${slot.crownSize} select-none mb-1 block`}
                 style={{
@@ -98,11 +105,14 @@ export default function PodiumSection({
               >
                 {PANEL_HEADER.crown}
               </span>
+
+              {/* Avatar with glow + rank badge */}
               <div className='relative mb-1'>
                 <div
                   className='absolute inset-0 rounded-full blur-lg scale-[1.3] opacity-75'
                   style={{ background: slot.glowColor }}
                 />
+
                 <div
                   className='relative p-[2.5px] rounded-full'
                   style={{
@@ -123,22 +133,30 @@ export default function PodiumSection({
                     </div>
                   </div>
                 </div>
+
+                {/* Rank badge */}
                 <span
                   className={`absolute -bottom-1 -right-1 w-[22px] h-[22px] rounded-full ${slot.badgeBg} border-2 border-white flex items-center justify-center text-[10px] font-black text-white shadow-lg`}
                 >
                   {slot.podiumNum}
                 </span>
               </div>
+
+              {/* Username */}
               <p
                 className={`${slot.nameSz} font-bold text-gray-800 truncate max-w-[72px] mt-2 group-hover:text-mf-red transition-colors duration-150`}
               >
                 {scorer.username}
               </p>
+
+              {/* Score */}
               <p
                 className={`${slot.scoreSz} font-semibold ${slot.scoreColor} mb-2 tabular-nums`}
               >
                 {scorer.total_score.toLocaleString()} {PANEL_HEADER.scoreSuffix}
               </p>
+
+              {/* Podium base */}
               <div
                 className={`w-[72px] ${slot.podiumHeight} rounded-t-xl bg-gradient-to-b ${slot.podiumGradient} relative overflow-hidden shadow-lg`}
               >
@@ -153,6 +171,8 @@ export default function PodiumSection({
           );
         })}
       </div>
+
+      {/* Bottom divider */}
       <div className='h-0.5 mt-1 rounded-full bg-gradient-to-r from-transparent via-gray-200 to-transparent' />
     </div>
   );

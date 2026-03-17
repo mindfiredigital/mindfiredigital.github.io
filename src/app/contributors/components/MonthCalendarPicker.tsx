@@ -1,6 +1,7 @@
 import { CALENDAR_PICKER_LABELS, MONTH_NAMES_SHORT } from "@/constants";
 import { useMonthCalendarPicker } from "@/hooks/useMonthcalendarpicker";
 
+/* Month + Year calendar picker dropdown */
 export function MonthCalendarPicker({
   availableMonths,
   selectedMonth,
@@ -16,6 +17,7 @@ export function MonthCalendarPicker({
   displayLabel: string;
   onSelect: (key: string) => void;
 }) {
+  /* Hook managing calendar state and logic */
   const {
     open,
     setOpen,
@@ -34,12 +36,13 @@ export function MonthCalendarPicker({
 
   return (
     <div className='relative mt-2.5' ref={dropdownRef} data-action-btn>
-      {/* Trigger */}
+      {/* Trigger button */}
       <button
         onClick={() => setOpen((v) => !v)}
         className='w-full flex items-center justify-between px-3 py-2 rounded-xl bg-gray-50 border border-gray-200 hover:border-red-200 hover:bg-red-50 transition-all duration-150 group'
       >
         <div className='flex items-center gap-2 min-w-0'>
+          {/* Calendar icon */}
           <svg
             className='w-3.5 h-3.5 text-mf-red flex-shrink-0'
             fill='none'
@@ -53,10 +56,14 @@ export function MonthCalendarPicker({
               d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
             />
           </svg>
+
+          {/* Selected label */}
           <span className='text-[11px] font-bold text-gray-700 group-hover:text-mf-red transition-colors truncate'>
             {isLoading ? "Loading..." : displayLabel}
           </span>
         </div>
+
+        {/* Dropdown arrow */}
         <svg
           className='w-3.5 h-3.5 text-gray-400 flex-shrink-0 transition-transform duration-200'
           style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -73,12 +80,14 @@ export function MonthCalendarPicker({
         </svg>
       </button>
 
+      {/* Dropdown panel */}
       {open && (
         <div className='absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden'>
-          {/* ── Year navigation bar ── */}
+          {/* Year navigation bar */}
           <div className='flex items-center justify-between px-3 py-2.5 border-b border-gray-100 bg-gray-50/70'>
             {!yearPickerOpen ? (
               <>
+                {/* Previous year */}
                 <button
                   onClick={() => setCalYear((y) => Math.max(y - 1, minYear))}
                   disabled={calYear <= minYear}
@@ -99,6 +108,7 @@ export function MonthCalendarPicker({
                   </svg>
                 </button>
 
+                {/* Current year display / open year picker */}
                 <button
                   onClick={() => setYearPickerOpen(true)}
                   className='flex items-center gap-1 px-2 py-0.5 rounded-lg hover:bg-red-50 hover:text-mf-red transition-all duration-150 group/yr'
@@ -106,11 +116,14 @@ export function MonthCalendarPicker({
                   <span className='text-[12px] font-black text-gray-800 group-hover/yr:text-mf-red tracking-tight transition-colors'>
                     {calYear}
                   </span>
+
+                  {/* Current year badge */}
                   {calYear === Number(currentMonth.split("-")[0]) && (
                     <span className='text-[8px] font-bold text-mf-red bg-red-50 border border-red-200 rounded-full px-1.5 py-0.5 uppercase tracking-wide leading-none'>
                       {CALENDAR_PICKER_LABELS.nowBadge}
                     </span>
                   )}
+
                   <svg
                     className='w-3 h-3 text-gray-400 group-hover/yr:text-mf-red transition-colors'
                     fill='none'
@@ -126,6 +139,7 @@ export function MonthCalendarPicker({
                   </svg>
                 </button>
 
+                {/* Next year */}
                 <button
                   onClick={() => setCalYear((y) => Math.min(y + 1, maxYear))}
                   disabled={calYear >= maxYear}
@@ -148,6 +162,7 @@ export function MonthCalendarPicker({
               </>
             ) : (
               <>
+                {/* Back to month view */}
                 <button
                   onClick={() => setYearPickerOpen(false)}
                   className='w-6 h-6 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-white transition-all'
@@ -166,21 +181,25 @@ export function MonthCalendarPicker({
                     />
                   </svg>
                 </button>
+
+                {/* Year picker heading */}
                 <span className='text-[11px] font-black text-gray-700 uppercase tracking-widest'>
                   {CALENDAR_PICKER_LABELS.selectYearHeading}
                 </span>
+
                 <div className='w-6' />
               </>
             )}
           </div>
 
-          {/* ── Year picker grid ── */}
+          {/* Year picker grid */}
           {yearPickerOpen ? (
             <div className='grid grid-cols-3 gap-1.5 p-3'>
               {years.map((year) => {
                 const isSelectedYear = year === calYear;
                 const isCurrentYear =
                   year === Number(currentMonth.split("-")[0]);
+
                 return (
                   <button
                     key={year}
@@ -196,6 +215,8 @@ export function MonthCalendarPicker({
                     `}
                   >
                     {year}
+
+                    {/* Indicator for current year */}
                     {isCurrentYear && (
                       <span
                         className={`mt-0.5 w-1 h-1 rounded-full ${
@@ -210,12 +231,14 @@ export function MonthCalendarPicker({
               })}
             </div>
           ) : (
+            /* Month grid */
             <div className='grid grid-cols-4 gap-1 p-2.5'>
               {MONTH_NAMES_SHORT.map((name, idx) => {
                 const key = `${calYear}-${String(idx + 1).padStart(2, "0")}`;
                 const isAvailable = availableSet.has(key);
                 const isSelected = key === selectedMonth;
                 const isCurrent = key === currentMonth;
+
                 return (
                   <button
                     key={key}
@@ -234,6 +257,8 @@ export function MonthCalendarPicker({
                     `}
                   >
                     {name}
+
+                    {/* Current month indicator */}
                     {isCurrent && (
                       <span
                         className={`mt-0.5 w-1 h-1 rounded-full ${
@@ -241,6 +266,8 @@ export function MonthCalendarPicker({
                         }`}
                       />
                     )}
+
+                    {/* Available data indicator */}
                     {isAvailable && !isSelected && (
                       <span className='absolute top-1 right-1 w-1 h-1 rounded-full bg-green-400 opacity-70' />
                     )}
@@ -250,6 +277,7 @@ export function MonthCalendarPicker({
             </div>
           )}
 
+          {/* Legend */}
           {!yearPickerOpen && (
             <div className='flex items-center justify-center gap-3 px-3 pb-2.5 pt-0.5'>
               <div className='flex items-center gap-1'>
@@ -258,12 +286,14 @@ export function MonthCalendarPicker({
                   {CALENDAR_PICKER_LABELS.legendHasData}
                 </span>
               </div>
+
               <div className='flex items-center gap-1'>
                 <span className='w-1.5 h-1.5 rounded-full bg-mf-red' />
                 <span className='text-[9px] text-gray-400 font-medium'>
                   {CALENDAR_PICKER_LABELS.legendCurrentMonth}
                 </span>
               </div>
+
               <div className='flex items-center gap-1'>
                 <span className='w-2 h-2 rounded-sm bg-mf-red' />
                 <span className='text-[9px] text-gray-400 font-medium'>
