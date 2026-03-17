@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useRef } from "react";
 import TopScorersPanel from "./components/TopScorersPanel";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorModal from "./components/ContributorModal";
@@ -8,17 +8,22 @@ import ContributorHero from "./components/Contributorhero";
 import ContributorListSection from "./components/Contributorlistsection";
 import contributorList from "@/asset/contributors.json";
 import leaderboardData from "@/asset/leaderboard.json";
-import { Contributor, ContributorFilters, TopScorer } from "@/types";
-import { CONTRIBUTORS_FILTERS_DEFAULT } from "@/constants";
+import { Contributor, TopScorer } from "@/types";
+import { useContributorFilters } from "@/hooks/Usecontributorfilters";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
   const topScorers = leaderboardData.leaderboard as TopScorer[];
 
-  const [filters, setFilters] = useState<ContributorFilters>(
-    CONTRIBUTORS_FILTERS_DEFAULT
-  );
-  const [searchQuery, setSearchQuery] = useState("");
+  const {
+    filters,
+    searchQuery,
+    filteredAndSorted,
+    handleFilterChange,
+    handleSearchChange,
+    handleReset,
+  } = useContributorFilters(contributorsArray, topScorers);
+
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [selectedContributor, setSelectedContributor] =
     useState<TopScorer | null>(null);
@@ -33,80 +38,18 @@ export default function Contributors() {
     }
   };
 
-  const handleFilterChange = (partial: Partial<ContributorFilters>) => {
-    setFilters((prev) => ({ ...prev, ...partial }));
-    scrollToContributors();
-  };
-
-  const handleSearchChange = (value: string) => {
-    setSearchQuery(value);
-    scrollToContributors();
-  };
-
-  const handleReset = () => {
-    setFilters({ ...CONTRIBUTORS_FILTERS_DEFAULT });
-    setSearchQuery("");
-  };
-
-  const getLastActiveDays = (username: string): number | null => {
-    const match = contributorsArray.find(
-      (c) => c.login.toLowerCase() === username.toLowerCase()
-    );
-    return match?.lastActiveDays ?? null;
-  };
-
-  /*
-   * filteredAndSorted — derived from topScorers on every filter/search change.
-   * Applies search → activity filter → score range → sort in that order.
-   */
-  const filteredAndSorted = useMemo(() => {
-    let result = [...topScorers];
-
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      result = result.filter((c) => c.username.toLowerCase().includes(q));
-    }
-    if (filters.activityFilter !== "all") {
-      const maxDays = parseInt(filters.activityFilter, 10);
-      result = result.filter((c) => {
-        const days = getLastActiveDays(c.username);
-        return days !== null && days <= maxDays;
-      });
-    }
-    if (filters.scoreRange !== "all") {
-      const min = parseInt(filters.scoreRange.replace("+", ""), 10);
-      if (!isNaN(min)) result = result.filter((c) => c.total_score >= min);
-    }
-    result.sort((a, b) => {
-      switch (filters.sortBy) {
-        case "code_score":
-          return b.code_score - a.code_score;
-        case "quality_score":
-          return b.quality_score - a.quality_score;
-        case "community_score":
-          return b.community_score - a.community_score;
-        case "totalCommits":
-          return b.totalCommits - a.totalCommits;
-        case "totalPRs":
-          return b.totalPRs - a.totalPRs;
-        case "totalPRReviewsGiven":
-          return b.totalPRReviewsGiven - a.totalPRReviewsGiven;
-        case "totalIssuesOpened":
-          return b.totalIssuesOpened - a.totalIssuesOpened;
-        case "total_score":
-        default:
-          return b.total_score - a.total_score;
-      }
-    });
-    return result;
-  }, [topScorers, filters, searchQuery]);
-
   const filterSidebarProps = {
     filters,
-    onFilterChange: handleFilterChange,
+    onFilterChange: (partial: Parameters<typeof handleFilterChange>[0]) => {
+      handleFilterChange(partial);
+      scrollToContributors();
+    },
     onReset: handleReset,
     searchQuery,
-    onSearchChange: handleSearchChange,
+    onSearchChange: (value: string) => {
+      handleSearchChange(value);
+      scrollToContributors();
+    },
     isMobileOpen: isMobileFilterOpen,
     onMobileToggle: () => setIsMobileFilterOpen((v) => !v),
   };
