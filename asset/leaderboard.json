@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T03:46:50.898Z",
+  "generated_at": "2026-03-17T03:29:08.463Z",
   "scoring_formula": {
     "description": "Total_Score = Code_Score + Community_Score + Quality_Score",
     "code_formula": "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
@@ -38,10 +38,10 @@
   "summary": {
     "total_contributors": 80,
     "total_commits": 5427,
-    "total_prs": 1280,
+    "total_prs": 1286,
     "total_pr_reviews": 120,
     "total_issues": 503,
-    "avg_score": 313
+    "avg_score": 314
   },
   "leaderboard": [
     {
@@ -4931,7 +4931,7 @@
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 3,
@@ -6289,24 +6289,24 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
       "totalCommits": 234,
-      "totalPRs": 55,
+      "totalPRs": 57,
       "totalPRReviewsGiven": 20,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 31,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 4.25,
+      "avgCommitsPerPR": 4.11,
       "projectsWorkingOn": 20,
       "prs_by_complexity": {
-        "small": 23,
+        "small": 24,
         "medium": 16,
-        "large": 16
+        "large": 17
       },
-      "total_score": 1257,
-      "code_score": 883,
+      "total_score": 1275,
+      "code_score": 897,
       "community_score": 263,
-      "quality_score": 111,
+      "quality_score": 115,
       "score_breakdown": {
-        "pr_score": 355,
+        "pr_score": 369,
         "commits_score": 468,
         "pr_reviews_score": 60,
         "code_comments_score": 0,
@@ -6316,7 +6316,7 @@
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 110,
+        "zero_revisions_score": 114,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -7228,6 +7228,16 @@
               "reviews_count": 0
             },
             {
+              "number": 83,
+              "merged_at": "2024-01-18T08:09:33Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 8,
+              "deletions": 4,
+              "reviews_count": 0
+            },
+            {
               "number": 81,
               "merged_at": "2024-01-18T06:13:55Z",
               "complexity": "medium",
@@ -7406,6 +7416,16 @@
               "additions": 130,
               "deletions": 80,
               "reviews_count": 0
+            },
+            {
+              "number": 32,
+              "merged_at": "2023-12-05T16:25:12Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 32,
+              "additions": 61,
+              "deletions": 61,
+              "reviews_count": 0
             }
           ],
           "pr_reviews_given": 16,
@@ -7529,7 +7549,7 @@
             "has_tests": 0,
             "has_docs": 1,
             "first_time_mentor": 0,
-            "zero_revisions": 53,
+            "zero_revisions": 55,
             "impact_bonuses": []
           }
         }
@@ -8292,8 +8312,13 @@
               "author": "jyotiprakashmfsi",
               "title": "[Feature]: Implement <DebugBox> Development Utility",
               "created_at": "2025-08-26T07:34:40Z",
-              "comments": 0,
-              "comment_authors": []
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "prakersh",
+                  "created_at": "2026-03-16T05:37:40Z"
+                }
+              ]
             },
             {
               "number": 212,
@@ -8976,7 +9001,7 @@
           }
         }
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 6,
@@ -8985,24 +9010,24 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/182596903?v=4",
       "html_url": "https://github.com/ayusmanmindfire",
       "totalCommits": 134,
-      "totalPRs": 61,
+      "totalPRs": 62,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 1,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.2,
+      "avgCommitsPerPR": 2.16,
       "projectsWorkingOn": 3,
       "prs_by_complexity": {
-        "small": 10,
+        "small": 11,
         "medium": 24,
         "large": 27
       },
-      "total_score": 862,
-      "code_score": 704,
+      "total_score": 870,
+      "code_score": 709,
       "community_score": 32,
-      "quality_score": 126,
+      "quality_score": 129,
       "score_breakdown": {
-        "pr_score": 436,
+        "pr_score": 441,
         "commits_score": 268,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -9010,9 +9035,9 @@
         "issue_comments_score": 0,
         "projects_score": 30,
         "tests_score": 2,
-        "docs_score": 4,
+        "docs_score": 5,
         "mentor_score": 0,
-        "zero_revisions_score": 120,
+        "zero_revisions_score": 122,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -9068,6 +9093,16 @@
               "changed_files": 4,
               "additions": 287,
               "deletions": 263,
+              "reviews_count": 0
+            },
+            {
+              "number": 101,
+              "merged_at": "2025-04-01T12:36:28Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 56,
+              "deletions": 3,
               "reviews_count": 0
             },
             {
@@ -9566,9 +9601,9 @@
           "issue_comments_given": [],
           "quality_metrics": {
             "has_tests": 0,
-            "has_docs": 4,
+            "has_docs": 5,
             "first_time_mentor": 0,
-            "zero_revisions": 51,
+            "zero_revisions": 52,
             "impact_bonuses": []
           }
         },
@@ -10376,7 +10411,7 @@
           }
         }
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 8,
@@ -11076,7 +11111,7 @@
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -11731,7 +11766,7 @@
           }
         }
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 10,
@@ -13289,7 +13324,7 @@
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 13,
@@ -13715,7 +13750,7 @@
           }
         }
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 14,
@@ -15368,7 +15403,7 @@
           }
         }
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 1
     },
     {
       "rank": 17,
@@ -17761,7 +17796,7 @@
           }
         }
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 25,
@@ -19443,24 +19478,24 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/42381761?v=4",
       "html_url": "https://github.com/praliptarajoo",
       "totalCommits": 21,
-      "totalPRs": 17,
+      "totalPRs": 18,
       "totalPRReviewsGiven": 2,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.24,
+      "avgCommitsPerPR": 1.17,
       "projectsWorkingOn": 2,
       "prs_by_complexity": {
         "small": 14,
-        "medium": 3,
+        "medium": 4,
         "large": 0
       },
-      "total_score": 190,
-      "code_score": 138,
+      "total_score": 198,
+      "code_score": 144,
       "community_score": 20,
-      "quality_score": 32,
+      "quality_score": 34,
       "score_breakdown": {
-        "pr_score": 90,
+        "pr_score": 96,
         "commits_score": 42,
         "pr_reviews_score": 6,
         "code_comments_score": 0,
@@ -19470,7 +19505,7 @@
         "tests_score": 0,
         "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 28,
+        "zero_revisions_score": 30,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19654,6 +19689,16 @@
               "reviews_count": 0
             },
             {
+              "number": 76,
+              "merged_at": "2024-01-11T12:29:39Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 7,
+              "deletions": 13,
+              "reviews_count": 0
+            },
+            {
               "number": 74,
               "merged_at": "2024-01-10T09:48:34Z",
               "complexity": "small",
@@ -19682,7 +19727,7 @@
             "has_tests": 0,
             "has_docs": 3,
             "first_time_mentor": 0,
-            "zero_revisions": 14,
+            "zero_revisions": 15,
             "impact_bonuses": []
           }
         }
@@ -19837,24 +19882,24 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/103591425?v=4",
       "html_url": "https://github.com/ArnabKMindfire",
       "totalCommits": 25,
-      "totalPRs": 10,
+      "totalPRs": 11,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.5,
+      "avgCommitsPerPR": 2.27,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 5,
         "medium": 1,
-        "large": 4
+        "large": 5
       },
-      "total_score": 148,
-      "code_score": 116,
+      "total_score": 158,
+      "code_score": 124,
       "community_score": 10,
-      "quality_score": 22,
+      "quality_score": 24,
       "score_breakdown": {
-        "pr_score": 66,
+        "pr_score": 74,
         "commits_score": 50,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -19864,7 +19909,7 @@
         "tests_score": 0,
         "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 18,
+        "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -19941,6 +19986,16 @@
               "reviews_count": 0
             },
             {
+              "number": 46,
+              "merged_at": "2023-12-07T09:26:52Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 48,
+              "additions": 264,
+              "deletions": 108,
+              "reviews_count": 0
+            },
+            {
               "number": 42,
               "merged_at": "2023-12-06T11:29:41Z",
               "complexity": "small",
@@ -19989,7 +20044,7 @@
             "has_tests": 0,
             "has_docs": 4,
             "first_time_mentor": 0,
-            "zero_revisions": 9,
+            "zero_revisions": 10,
             "impact_bonuses": []
           }
         }
@@ -20003,24 +20058,24 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134675427?v=4",
       "html_url": "https://github.com/VershalaT",
       "totalCommits": 1,
-      "totalPRs": 13,
+      "totalPRs": 14,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 0.08,
+      "avgCommitsPerPR": 0.07,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
-        "large": 11
+        "large": 12
       },
-      "total_score": 135,
-      "code_score": 106,
+      "total_score": 145,
+      "code_score": 114,
       "community_score": 10,
-      "quality_score": 19,
+      "quality_score": 21,
       "score_breakdown": {
-        "pr_score": 104,
+        "pr_score": 112,
         "commits_score": 2,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -20030,7 +20085,7 @@
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 18,
+        "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -20105,6 +20160,16 @@
               "additions": 22,
               "deletions": 21,
               "reviews_count": 1
+            },
+            {
+              "number": 29,
+              "merged_at": "2023-12-05T13:13:44Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 20,
+              "additions": 22,
+              "deletions": 21,
+              "reviews_count": 0
             },
             {
               "number": 28,
@@ -20185,7 +20250,7 @@
             "has_tests": 0,
             "has_docs": 1,
             "first_time_mentor": 0,
-            "zero_revisions": 9,
+            "zero_revisions": 10,
             "impact_bonuses": []
           }
         }
@@ -23803,7 +23868,7 @@
           }
         }
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 1
     },
     {
       "rank": 73,
@@ -24063,7 +24128,7 @@
           }
         }
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 77,
