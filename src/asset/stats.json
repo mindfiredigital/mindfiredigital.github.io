@@ -2,18 +2,18 @@
   {
     "name": "eslint-plugin-hub",
     "type": "npm",
-    "day": 20,
-    "week": 91,
-    "year": 47605,
-    "total": 109994,
+    "day": 38,
+    "week": 119,
+    "year": 47642,
+    "total": 110032,
     "title": "eslint-plugin-hub"
   },
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "day": 0,
-    "week": 5,
-    "month": 29,
+    "day": 19,
+    "week": 21,
+    "month": 47,
     "year": 0,
     "total": 21000,
     "title": "neo-pusher"
@@ -22,8 +22,8 @@
     "name": "sqlrag",
     "type": "pypi",
     "day": 0,
-    "week": 17,
-    "month": 33,
+    "week": 8,
+    "month": 21,
     "year": 0,
     "total": 7000,
     "title": "sqlrag"
@@ -31,8 +31,8 @@
   {
     "name": "page-builder-react",
     "type": "npm",
-    "day": 1,
-    "week": 3,
+    "day": 0,
+    "week": 1,
     "year": 3421,
     "total": 4055,
     "title": "page-builder-react"
@@ -40,80 +40,80 @@
   {
     "name": "pivothead",
     "type": "npm",
-    "day": 3,
-    "week": 137,
-    "year": 3149,
-    "total": 3660,
+    "day": 6,
+    "week": 30,
+    "year": 3155,
+    "total": 3666,
     "title": "pivothead"
   },
   {
     "name": "page-builder-web-component",
     "type": "npm",
-    "day": 1,
-    "week": 3,
-    "year": 2174,
+    "day": 0,
+    "week": 1,
+    "year": 2173,
     "total": 2372,
     "title": "page-builder-web-component"
   },
   {
     "name": "canvas-editor",
     "type": "npm",
-    "day": 3,
-    "week": 13,
-    "year": 1624,
-    "total": 2158,
+    "day": 0,
+    "week": 12,
+    "year": 1623,
+    "total": 2153,
     "title": "canvas-editor"
   },
   {
     "name": "page-builder-core",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 5,
     "year": 568,
     "total": 1626,
     "title": "page-builder-core"
   },
   {
+    "name": "react-canvas-editor",
+    "type": "npm",
+    "day": 0,
+    "week": 6,
+    "year": 1089,
+    "total": 1369,
+    "title": "react-canvas-editor"
+  },
+  {
     "name": "react-text-igniter",
     "type": "npm",
     "day": 1,
-    "week": 12,
-    "year": 865,
-    "total": 1378,
+    "week": 9,
+    "year": 866,
+    "total": 1359,
     "title": "react-text-igniter"
-  },
-  {
-    "name": "react-canvas-editor",
-    "type": "npm",
-    "day": 1,
-    "week": 8,
-    "year": 1090,
-    "total": 1371,
-    "title": "react-canvas-editor"
   },
   {
     "name": "pivothead-web-component",
     "type": "npm",
     "day": 2,
-    "week": 110,
-    "year": 1277,
-    "total": 1277,
+    "week": 18,
+    "year": 1279,
+    "total": 1279,
     "title": "pivothead-web-component"
   },
   {
     "name": "pivothead-react",
     "type": "npm",
-    "day": 2,
-    "week": 101,
-    "year": 1171,
-    "total": 1171,
+    "day": 3,
+    "week": 19,
+    "year": 1174,
+    "total": 1174,
     "title": "pivothead-react"
   },
   {
     "name": "nextjs-fortress",
     "type": "npm",
-    "day": 1,
-    "week": 5,
+    "day": 0,
+    "week": 4,
     "year": 1024,
     "total": 1024,
     "title": "nextjs-fortress"
@@ -121,16 +121,16 @@
   {
     "name": "pivothead-vue",
     "type": "npm",
-    "day": 1,
-    "week": 91,
-    "year": 936,
-    "total": 936,
+    "day": 3,
+    "week": 17,
+    "year": 939,
+    "total": 939,
     "title": "pivothead-vue"
   },
   {
     "name": "angular-canvas-editor",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 1,
     "year": 237,
     "total": 842,
@@ -139,8 +139,8 @@
   {
     "name": "ignix-cli",
     "type": "npm",
-    "day": 3,
-    "week": 15,
+    "day": 0,
+    "week": 14,
     "year": 840,
     "total": 840,
     "title": "ignix-cli"
@@ -148,8 +148,8 @@
   {
     "name": "ignix-ui",
     "type": "npm",
-    "day": 3,
-    "week": 14,
+    "day": 0,
+    "week": 13,
     "year": 773,
     "total": 773,
     "title": "ignix-ui"
@@ -157,7 +157,7 @@
   {
     "name": "textigniter-angular",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 10,
     "year": 580,
     "total": 580,
@@ -166,10 +166,10 @@
   {
     "name": "pivothead-analytics",
     "type": "npm",
-    "day": 1,
-    "week": 95,
-    "year": 576,
-    "total": 576,
+    "day": 3,
+    "week": 18,
+    "year": 579,
+    "total": 579,
     "title": "pivothead-analytics"
   },
   {
@@ -177,32 +177,32 @@
     "type": "npm",
     "day": 1,
     "week": 9,
-    "year": 462,
-    "total": 462,
+    "year": 463,
+    "total": 463,
     "title": "textigniter-web-component"
   },
   {
     "name": "monodog",
     "type": "npm",
-    "day": 1,
-    "week": 98,
-    "year": 420,
-    "total": 420,
+    "day": 5,
+    "week": 14,
+    "year": 425,
+    "total": 425,
     "title": "monodog"
   },
   {
     "name": "textigniter-react",
     "type": "npm",
     "day": 1,
-    "week": 4,
-    "year": 319,
-    "total": 319,
+    "week": 5,
+    "year": 320,
+    "total": 320,
     "title": "textigniter-react"
   },
   {
     "name": "textigniter",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 3,
     "year": 307,
     "total": 307,
@@ -211,8 +211,8 @@
   {
     "name": "pivothead-angular",
     "type": "npm",
-    "day": 1,
-    "week": 2,
+    "day": 0,
+    "week": 1,
     "year": 96,
     "total": 96,
     "title": "pivothead-angular"
