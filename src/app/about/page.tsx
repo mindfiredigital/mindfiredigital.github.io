@@ -10,7 +10,6 @@ import {
   ABOUT_WHY_OPEN_SOURCE,
   ABOUT_CONTRIBUTIONS,
 } from "@/constants";
-import aboutUs from "../../../public/images/about-us.webp";
 
 /* About page with hero + informational sections */
 const About = () => {
@@ -50,7 +49,7 @@ const About = () => {
 
           {/* Hero image */}
           <Image
-            src={aboutUs}
+            src='/images/about-us.webp'
             alt='women-standing-beside-corkboard'
             className='max-lg:w-full object-contain'
             height='500'

@@ -8,7 +8,7 @@ import PackageCard from "./components/Packagecard";
 import PackageStatsModal from "./components/Packagestatsmodal";
 import MonorepoPackagesModal from "./components/Monorepopackagesmodal";
 import { usePackageStats } from "@/hooks/usePackageStats";
-import { groupPackages } from "../utils";
+import { groupPackages } from "@/app/utils";
 import { GroupedPackage, ProjectGroupedData, FilterType } from "@/types";
 import { STATS_HERO } from "@/constants";
 

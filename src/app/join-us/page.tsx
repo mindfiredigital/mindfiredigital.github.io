@@ -6,7 +6,6 @@ import {
 } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import joinUsPage from "../../../public/images/join-us.webp";
 import JoinUsSegmentSection from "./components/JoinUsSegmentSection";
 
 const JoinUs = () => {
@@ -40,7 +39,7 @@ const JoinUs = () => {
 
           {/* Hero image for Join Us section */}
           <Image
-            src={joinUsPage}
+            src='/images/join-us.webp'
             alt={JOIN_US_HERO.imageAlt}
             className='max-lg:w-full object-contain'
             height='500'

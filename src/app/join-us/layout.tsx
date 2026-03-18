@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import meta from "../../metadata/metadata.json";
+import meta from "@/metadata/metadata.json";
 
 export const metadata: Metadata = {
   title: meta["Join-Us"].title,
