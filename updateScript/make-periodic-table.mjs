@@ -1,23 +1,21 @@
 import https from "https";
 import fs from "fs";
 import path from "path";
+import logger from "../src/app/utils/logger.ts";
 
 const CONFIG = {
   GITHUB_TOKEN: process.env.GITHUB_TOKEN || "",
   OWNER: "mindfiredigital",
-
   INPUT_FILES: {
     contributors: "./src/asset/contributors.json",
     projects: "./src/asset/projects.json",
     contributorMapping: "./src/asset/contributor-mapping.json",
   },
   OUTPUT_FILES: {
-    // Current month live file — also written to public/leaderboard/ below
     monthly: "./src/asset/leaderboard-monthly.json",
     monthlyArchive: "./public/leaderboard",
     manifest: "./public/leaderboard/manifest.json",
   },
-
   SPECIAL_PROJECTS: [
     {
       id: "special-website",
@@ -25,7 +23,6 @@ const CONFIG = {
       repoName: "mindfiredigital.github.io",
     },
   ],
-
   SKIP_BOTS: true,
   BOT_PATTERNS: [
     "github-actions",
@@ -50,7 +47,6 @@ const SCORING = {
   HAS_TESTS: 1,
   HAS_DOCS: 1,
   ZERO_REVISIONS: 2,
-  // Monthly: 10 pts only in the first month a user contributes to a project
   PROJECT_DIVERSITY: 10,
   CAPS: { ISSUES_PER_MONTH: 10, ISSUE_COMMENTS_PER_MONTH: 20 },
 };
@@ -101,8 +97,8 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
       if (isRateLimit && attempt < maxRetries - 1) {
         const waitTime =
           initialDelay * Math.pow(2, attempt) + Math.random() * 1000;
-        console.warn(
-          `⏳ Rate limited. Waiting ${Math.round(waitTime / 1000)}s (attempt ${
+        logger.warn(
+          `Rate limited. Waiting ${Math.round(waitTime / 1000)}s (attempt ${
             attempt + 1
           }/${maxRetries - 1})`
         );
@@ -110,7 +106,7 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
         continue;
       }
       if (attempt === maxRetries - 1)
-        console.error(`❌ Failed after ${maxRetries} attempts: ${url}`);
+        logger.error(`Failed after ${maxRetries} attempts: ${url}`);
       throw error;
     }
   }
@@ -162,12 +158,12 @@ function readJsonFile(filePath) {
   try {
     const fullPath = path.resolve(filePath);
     if (!fs.existsSync(fullPath)) {
-      console.warn(`⚠️  Not found: ${filePath}`);
+      logger.warn(`Not found: ${filePath}`);
       return null;
     }
     return JSON.parse(fs.readFileSync(fullPath, "utf8"));
   } catch (e) {
-    console.error(`❌ Read error ${filePath}:`, e.message);
+    logger.error(`Read error ${filePath}: ${e.message}`);
     return null;
   }
 }
@@ -177,9 +173,9 @@ function writeJsonFile(filePath, data) {
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
-    console.log(`✅ Wrote ${filePath}`);
+    logger.info(`Wrote ${filePath}`);
   } catch (e) {
-    console.error(`❌ Write error ${filePath}:`, e.message);
+    logger.error(`Write error ${filePath}: ${e.message}`);
   }
 }
 
@@ -220,7 +216,7 @@ async function fetchAllPages(baseUrl, since = null) {
       if (data.length < 100) break;
       page++;
     } catch (e) {
-      console.error(`   ⚠️ ${e.message}`);
+      logger.error(`${e.message}`);
       break;
     }
   }
@@ -239,8 +235,8 @@ async function fetchDefaultBranch(repo) {
 }
 
 async function fetchCommitsSince(repo, branch, since) {
-  console.log(
-    `      → commits on ${branch} since ${since.toISOString().slice(0, 10)}`
+  logger.info(
+    `→ commits on ${branch} since ${since.toISOString().slice(0, 10)}`
   );
   const raw = await fetchAllPages(
     `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/commits?sha=${branch}`,
@@ -254,7 +250,7 @@ async function fetchCommitsSince(repo, branch, since) {
       author_name: c.commit?.author?.name || null,
       date: c.commit?.author?.date || null,
     }));
-  console.log(`         ${commits.length} commits`);
+  logger.info(`   ${commits.length} commits`);
   return commits;
 }
 
@@ -264,10 +260,8 @@ async function fetchMergedPRsSince(
   since,
   defaultBranchSHAs
 ) {
-  console.log(
-    `      → merged PRs on ${defaultBranch} since ${since
-      .toISOString()
-      .slice(0, 10)}`
+  logger.info(
+    `→ merged PRs on ${defaultBranch} since ${since.toISOString().slice(0, 10)}`
   );
   let page = 1;
   const candidates = [];
@@ -292,7 +286,7 @@ async function fetchMergedPRsSince(
       if (prs.length < 100) break;
       page++;
     } catch (e) {
-      console.error(`   ⚠️ PR fetch error: ${e.message}`);
+      logger.error(`PR fetch error: ${e.message}`);
       break;
     }
   }
@@ -352,14 +346,14 @@ async function fetchMergedPRsSince(
         review_comments: humanComments.map((c) => ({ author: c.user?.login })),
       });
     } catch (e) {
-      console.error(`   ⚠️ Enrich PR #${pr.number}: ${e.message}`);
+      logger.error(`Enrich PR #${pr.number}: ${e.message}`);
     }
   }
   return enriched;
 }
 
 async function fetchIssuesSince(repo, since) {
-  console.log(`      → issues since ${since.toISOString().slice(0, 10)}`);
+  logger.info(`→ issues since ${since.toISOString().slice(0, 10)}`);
   const raw = await fetchAllPages(
     `https://api.github.com/repos/${CONFIG.OWNER}/${repo}/issues?state=all&sort=created&direction=desc`,
     since
@@ -394,9 +388,7 @@ async function fetchIssuesSince(repo, since) {
           if (comments.length < 100) break;
           page++;
         } catch (err) {
-          console.error(
-            `   ⚠️ Comments issue #${issue.number}: ${err.message}`
-          );
+          logger.error(`Comments issue #${issue.number}: ${err.message}`);
           break;
         }
       }
@@ -431,7 +423,7 @@ async function fetchIssuesSince(repo, since) {
 }
 
 async function processRepo(repoName, projectTitle, since) {
-  console.log(`\n   📁 ${projectTitle} (${repoName})`);
+  logger.info(`${projectTitle} (${repoName})`);
   try {
     const branch = await fetchDefaultBranch(repoName);
     const commits = await fetchCommitsSince(repoName, branch, since);
@@ -450,7 +442,7 @@ async function processRepo(repoName, projectTitle, since) {
       issues,
     };
   } catch (e) {
-    console.error(`   ❌ ${projectTitle}: ${e.message}`);
+    logger.error(`${projectTitle}: ${e.message}`);
     return null;
   }
 }
@@ -560,17 +552,13 @@ function scoreUser(username, projectDataList, pastMonthKeys) {
           issue_comments_given.push({ created_at: comment.created_at });
       }
     }
-
     const hasActivity =
       userCommits.length > 0 ||
       userPRs.length > 0 ||
       allIssues.filter((i) => i.author === username).length > 0;
-
     if (hasActivity) {
       projectNames.push(pd.project_title);
-      if (!alreadyBonused.has(pd.project_title)) {
-        newProjectsCount++;
-      }
+      if (!alreadyBonused.has(pd.project_title)) newProjectsCount++;
     }
   }
 
@@ -593,7 +581,6 @@ function scoreUser(username, projectDataList, pastMonthKeys) {
     commits * SCORING.COMMIT +
     pr_reviews_given * SCORING.PR_REVIEW_GIVEN +
     code_review_comments * SCORING.CODE_REVIEW_COMMENT;
-
   const cappedIssues = applyMonthlyCaps(
     issues_opened,
     SCORING.CAPS.ISSUES_PER_MONTH
@@ -602,20 +589,15 @@ function scoreUser(username, projectDataList, pastMonthKeys) {
     issue_comments_given,
     SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH
   );
-
-  // Monthly diversity bonus: only new projects this month
   const projectDiversityScore = newProjectsCount * SCORING.PROJECT_DIVERSITY;
-
   const communityScore =
     cappedIssues.length * SCORING.ISSUE_OPENED +
     cappedComments.length * SCORING.ISSUE_COMMENT +
     projectDiversityScore;
-
   const qualityScore =
     qm.has_tests * SCORING.HAS_TESTS +
     qm.has_docs * SCORING.HAS_DOCS +
     qm.zero_revisions * SCORING.ZERO_REVISIONS;
-
   const total = Math.round(codeScore + communityScore + qualityScore);
   if (total === 0) return null;
 
@@ -669,7 +651,8 @@ async function generateLeaderboard(
   label,
   pastMonthKeys
 ) {
-  console.log(`\n${"=".repeat(60)}\n🏆 Building ${label} leaderboard...`);
+  logger.info("=".repeat(60));
+  logger.info(`Building ${label} leaderboard...`);
   const results = [];
   for (const contributor of contributors) {
     const username = contributor.login;
@@ -703,15 +686,15 @@ async function generateLeaderboard(
       capped_counts: result.scores.capped_counts,
       lastActiveDays: contributor.lastActiveDays ?? null,
     });
-    console.log(
-      `   ✅ ${username}: ${result.scores.total} pts (+${result.newProjectsCount} new project bonus)`
+    logger.info(
+      `   ${username}: ${result.scores.total} pts (+${result.newProjectsCount} new project bonus)`
     );
   }
   results.sort((a, b) => b.total_score - a.total_score);
   results.forEach((c, i) => {
     c.rank = i + 1;
   });
-  console.log(`\n   📊 ${results.length} contributors active this month`);
+  logger.info(`   ${results.length} contributors active this month`);
   return results;
 }
 
@@ -725,7 +708,7 @@ function updateManifest(monthKey, nowIso) {
   if (!Array.isArray(manifest.months)) manifest.months = [];
   if (!manifest.months.includes(monthKey)) {
     manifest.months.push(monthKey);
-    console.log(`📋 Added ${monthKey} to manifest`);
+    logger.info(`Added ${monthKey} to manifest`);
   }
   manifest.months.sort((a, b) => b.localeCompare(a));
   manifest.updated_at = nowIso;
@@ -733,19 +716,19 @@ function updateManifest(monthKey, nowIso) {
 }
 
 async function main() {
-  console.log("\n" + "=".repeat(60));
-  console.log("🔄 FETCH MONTHLY LEADERBOARD DATA");
-  console.log("=".repeat(60));
+  logger.info("=".repeat(60));
+  logger.info("FETCH MONTHLY LEADERBOARD DATA");
+  logger.info("=".repeat(60));
 
   if (!CONFIG.GITHUB_TOKEN) {
-    console.error("❌ GITHUB_TOKEN env var is required");
+    logger.error("GITHUB_TOKEN env var is required");
     process.exit(1);
   }
 
   const contributors = readJsonFile(CONFIG.INPUT_FILES.contributors) || [];
   const projects = readJsonFile(CONFIG.INPUT_FILES.projects) || [];
   if (!contributors.length) {
-    console.error("❌ No contributors found");
+    logger.error("No contributors found");
     process.exit(1);
   }
 
@@ -754,17 +737,16 @@ async function main() {
   const nowIso = now.toISOString();
   const monthKey = monthStart.toISOString().slice(0, 7);
 
-  console.log(
-    `\n📅 Window: ${monthStart.toISOString().slice(0, 10)} → ${now
+  logger.info(
+    `Window: ${monthStart.toISOString().slice(0, 10)} → ${now
       .toISOString()
       .slice(0, 10)}`
   );
 
-  // Load all past month keys (exclude current month — that's what we're building now)
   const allManifestMonths = loadManifestMonths();
   const pastMonthKeys = allManifestMonths.filter((mk) => mk !== monthKey);
-  console.log(
-    `📋 Past months in manifest: ${pastMonthKeys.length} (used for project diversity deduplication)`
+  logger.info(
+    `Past months in manifest: ${pastMonthKeys.length} (used for project diversity deduplication)`
   );
 
   const repoList = [];
@@ -779,7 +761,7 @@ async function main() {
   for (const sp of CONFIG.SPECIAL_PROJECTS)
     repoList.push({ repoName: sp.repoName, title: sp.title });
 
-  console.log(`\n📦 Repos: ${repoList.length}`);
+  logger.info(`Repos: ${repoList.length}`);
 
   const projectDataList = [];
   for (const repo of repoList) {
@@ -811,27 +793,24 @@ async function main() {
     leaderboard: monthly,
   };
 
-  // 1. Legacy file for any existing static imports
   writeJsonFile(CONFIG.OUTPUT_FILES.monthly, payload);
 
-  // 2. Public archive file: public/leaderboard/leaderboard-2026-03.json
   const archivePath = path.join(
     CONFIG.OUTPUT_FILES.monthlyArchive,
     `leaderboard-${monthKey}.json`
   );
   writeJsonFile(archivePath, payload);
 
-  // 3. Update manifest
   updateManifest(monthKey, nowIso);
 
-  console.log("\n" + "=".repeat(60));
-  console.log(
-    `✅ Done! Month: ${monthKey}  Active contributors: ${monthly.length}`
+  logger.info("=".repeat(60));
+  logger.info(
+    `Done! Month: ${monthKey}  Active contributors: ${monthly.length}`
   );
-  console.log("=".repeat(60) + "\n");
+  logger.info("=".repeat(60));
 }
 
 main().catch((e) => {
-  console.error("❌ Fatal:", e);
+  logger.error(`Fatal: ${e}`);
   process.exit(1);
 });

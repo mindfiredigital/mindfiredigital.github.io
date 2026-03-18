@@ -11,16 +11,14 @@ import {
   npmPackages,
   pypiPackages,
 } from "./config.mjs";
+import logger from "../src/app/utils/logger.ts";
 
-// Function to get repository data including topics
 async function getRepoData(owner, repo) {
   if (!owner || !repo) return null;
   try {
     const [repoResponse, topicsResponse] = await Promise.all([
       fetch(`${gitBaseUrl}/${owner}/${repo}`, {
-        headers: {
-          Authorization: `Bearer ${githubToken}`,
-        },
+        headers: { Authorization: `Bearer ${githubToken}` },
       }),
       fetch(`${gitBaseUrl}/${owner}/${repo}/topics`, {
         headers: {
@@ -31,19 +29,15 @@ async function getRepoData(owner, repo) {
     ]);
 
     if (!repoResponse.ok || !topicsResponse.ok) {
-      console.error(`Failed to fetch data for ${owner}/${repo}`);
+      logger.error(`Failed to fetch data for ${owner}/${repo}`);
       return null;
     }
 
     const repoData = await repoResponse.json();
     const topicsData = await topicsResponse.json();
-
-    return {
-      ...repoData,
-      topics: topicsData.names || [],
-    };
+    return { ...repoData, topics: topicsData.names || [] };
   } catch (error) {
-    console.error(`Error fetching repo data for ${owner}/${repo}:`, error);
+    logger.error(`Error fetching repo data for ${owner}/${repo}: ${error}`);
     return null;
   }
 }
@@ -56,7 +50,6 @@ async function fetchAllGithubRepos(username, token) {
   while (true) {
     const url = `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${page}`;
     let data;
-
     try {
       data = await fetchData(url, {
         headers: {
@@ -65,23 +58,18 @@ async function fetchAllGithubRepos(username, token) {
         },
       });
     } catch (error) {
-      console.error(
-        `Error fetching repositories for ${username}:`,
-        error.message
+      logger.error(
+        `Error fetching repositories for ${username}: ${error.message}`
       );
       break;
     }
-
     if (!Array.isArray(data) || data.length === 0) break;
-
     allRepos = allRepos.concat(data);
     page++;
   }
-
   return allRepos;
 }
 
-// Main function to update projects data
 async function updateProjects() {
   try {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
@@ -92,47 +80,19 @@ async function updateProjects() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            query: `query getCurrentProjects {
-            foss_projects(filter: { _and: [
-              { project_type: { _eq: "current" }},
-              { status: { _eq: "published" }}
-            ]}) {
-              id,
-              title,
-              short_description,
-              github_repository_link,
-              documentation_link,
-              project_type,
-              date_created,
-              date_updated,
-              status,
-            }
-          }`,
+            query: `query getCurrentProjects { foss_projects(filter: { _and: [{ project_type: { _eq: "current" }},{ status: { _eq: "published" }}]}) { id, title, short_description, github_repository_link, documentation_link, project_type, date_created, date_updated, status } }`,
           }),
         }),
         fetchData("https://directus.ourgoalplan.co.in/graphql", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            query: `query getUpcomingProjects {
-            foss_projects(filter: {project_type: { _eq: "upcoming" }}) {
-              id,
-              title,
-              short_description,
-              github_repository_link,
-              documentation_link,
-              project_type,
-              date_created,
-              date_updated,
-              status,
-            }
-          }`,
+            query: `query getUpcomingProjects { foss_projects(filter: {project_type: { _eq: "upcoming" }}) { id, title, short_description, github_repository_link, documentation_link, project_type, date_created, date_updated, status } }`,
           }),
         }),
         await fetchAllGithubRepos(gitOwner, githubToken),
       ]);
 
-    // Process and write data for current projects
     const currentProjects = await Promise.all(
       currentProjectsData.data.foss_projects.map(async (entry) => {
         const repoUrl = entry.github_repository_link;
@@ -140,9 +100,7 @@ async function updateProjects() {
           repoUrl && repoUrl !== "NA"
             ? repoUrl.replace("https://github.com/", "").split("/")
             : [null, null];
-
         const repoData = await getRepoData(owner, repo);
-
         return {
           ...entry,
           id: parseInt(entry.id),
@@ -156,9 +114,8 @@ async function updateProjects() {
       })
     );
     writeJsonToFile(`${pathForJson}/projects.json`, currentProjects);
-    console.log("Current projects updated successfully.");
+    logger.info("Current projects updated successfully.");
 
-    // Process and write data for upcoming projects
     const upcomingProjects = await Promise.all(
       upcomingProjectsData.data.foss_projects.map(async (entry) => {
         const repoUrl = entry.github_repository_link;
@@ -166,9 +123,7 @@ async function updateProjects() {
           repoUrl && repoUrl !== "NA"
             ? repoUrl.replace("https://github.com/", "").split("/")
             : [null, null];
-
         const repoData = await getRepoData(owner, repo);
-
         return {
           ...entry,
           id: parseInt(entry.id),
@@ -182,9 +137,8 @@ async function updateProjects() {
       })
     );
     writeJsonToFile(`${pathForJson}/upcomingProjects.json`, upcomingProjects);
-    console.log("Upcoming projects updated successfully.");
+    logger.info("Upcoming projects updated successfully.");
 
-    // Fetch and process contributors data for repositories
     const repoNames = repositories.map((repo) => repo.name);
     const contributorsObject = {};
 
@@ -200,7 +154,6 @@ async function updateProjects() {
             contributor.type !== "Bot" &&
             !contributor.login.startsWith("github-actions")
         );
-
         if (contributors.length > 0) {
           const contributorsWithActivity = await Promise.all(
             contributors.map(getContributorData)
@@ -208,13 +161,12 @@ async function updateProjects() {
           contributorsObject[repoName] = contributorsWithActivity;
         }
       } catch (error) {
-        console.error(`Error processing contributors for ${repoName}:`, error);
+        logger.error(`Error processing contributors for ${repoName}: ${error}`);
       }
     }
     writeJsonToFile(`${pathForJson}/contributors.json`, contributorsObject);
-    // Aggregate contributors across all repos
-    const contributionsMap = {};
 
+    const contributionsMap = {};
     for (const repo in contributorsObject) {
       if (contributorsObject.hasOwnProperty(repo)) {
         contributorsObject[repo].forEach((contributor) => {
@@ -227,7 +179,6 @@ async function updateProjects() {
             pullRequestCount,
             issueCount,
           } = contributor;
-
           const existing = contributionsMap[login];
           contributionsMap[login] = {
             id,
@@ -235,7 +186,6 @@ async function updateProjects() {
             html_url,
             avatar_url,
             login,
-            // ← keep the smallest lastActiveDays (most recent activity)
             lastActiveDays:
               existing?.lastActiveDays !== undefined &&
               existing?.lastActiveDays !== null &&
@@ -252,12 +202,11 @@ async function updateProjects() {
       }
     }
 
-    // Sort by contributions descending and write
     const sortedContributions = Object.values(contributionsMap).sort(
       (a, b) => b.contributions - a.contributions
     );
     writeJsonToFile(`${pathForJson}/contributors.json`, sortedContributions);
-    console.log(
+    logger.info(
       `Contributors list updated successfully. Total: ${sortedContributions.length}`
     );
 
@@ -274,20 +223,18 @@ async function updateProjects() {
             return { ...value, title };
           })
           .sort((a, b) => b.total - a.total);
-
         writeJsonToFile(`${pathForJson}/stats.json`, statsWithTitles);
-        console.log("Stats list updated successfully.");
+        logger.info("Stats list updated successfully.");
       })
       .catch((error) => {
-        console.error("Error fetching stats:", error);
+        logger.error(`Error fetching stats: ${error}`);
       });
   } catch (error) {
-    console.error("An error occurred:", error);
+    logger.error(`An error occurred: ${error}`);
   }
 }
 
-// ← graceful catch so && chain continues even on failure
 updateProjects().catch((e) => {
-  console.error("⚠️  updateProjects failed, continuing:", e.message);
+  logger.warn(`updateProjects failed, continuing: ${e.message}`);
   process.exit(0);
 });

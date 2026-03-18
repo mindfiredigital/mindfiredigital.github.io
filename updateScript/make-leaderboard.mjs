@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import logger from "../src/app/utils/logger.ts";
 
 /* CONFIGURATION */
 
@@ -28,34 +29,16 @@ const SCORING = {
   COMMIT: 2,
   PR_REVIEW_GIVEN: 3,
   CODE_REVIEW_COMMENT: 1,
-
-  COMPLEXITY_MULTIPLIER: {
-    small: 1.0,
-    medium: 1.3,
-    large: 1.7,
-  },
-
+  COMPLEXITY_MULTIPLIER: { small: 1.0, medium: 1.3, large: 1.7 },
   ISSUE_OPENED: 2,
   ISSUE_COMMENT: 1,
-
   HAS_TESTS: 1,
   HAS_DOCS: 1,
   FIRST_TIME_MENTOR: 5,
   ZERO_REVISIONS: 2,
-
-  IMPACT_BONUS: {
-    low: 0,
-    medium: 3,
-    high: 7,
-    critical: 10,
-  },
-
+  IMPACT_BONUS: { low: 0, medium: 3, high: 7, critical: 10 },
   PROJECT_DIVERSITY: 10,
-
-  CAPS: {
-    ISSUES_PER_MONTH: 10,
-    ISSUE_COMMENTS_PER_MONTH: 20,
-  },
+  CAPS: { ISSUES_PER_MONTH: 10, ISSUE_COMMENTS_PER_MONTH: 20 },
 };
 
 /* HELPERS */
@@ -64,12 +47,12 @@ function readJsonFile(filePath) {
   try {
     const fullPath = path.resolve(filePath);
     if (!fs.existsSync(fullPath)) {
-      console.warn(`⚠️  File not found: ${filePath}`);
+      logger.warn(`File not found: ${filePath}`);
       return null;
     }
     return JSON.parse(fs.readFileSync(fullPath, "utf8"));
   } catch (error) {
-    console.error(`❌ Error reading ${filePath}:`, error.message);
+    logger.error(`Error reading ${filePath}: ${error.message}`);
     return null;
   }
 }
@@ -79,10 +62,10 @@ function writeJsonFile(filePath, data) {
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
-    console.log(`✅ Successfully wrote to ${filePath}`);
+    logger.info(`Successfully wrote to ${filePath}`);
     return true;
   } catch (error) {
-    console.error(`❌ Error writing to ${filePath}:`, error.message);
+    logger.error(`Error writing to ${filePath}: ${error.message}`);
     return false;
   }
 }
@@ -93,7 +76,6 @@ function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
   for (const item of items) {
     const d = new Date(item[dateField]);
-    // UTC month key — must match toMonthKey() which also uses UTC
     const monthKey = `${d.getUTCFullYear()}-${String(
       d.getUTCMonth() + 1
     ).padStart(2, "0")}`;
@@ -124,7 +106,6 @@ function analyzeUserInProject(username, projectData) {
     },
   };
 
-  // 1. Commits
   if (projectData.commits) {
     stats.commits = projectData.commits.filter(
       (commit) =>
@@ -133,7 +114,6 @@ function analyzeUserInProject(username, projectData) {
     ).length;
   }
 
-  // 2. PRs
   if (projectData.merged_prs) {
     const userPRs = projectData.merged_prs.filter(
       (pr) => pr.author === username
@@ -157,7 +137,6 @@ function analyzeUserInProject(username, projectData) {
       ) {
         stats.quality_metrics.has_tests++;
       }
-
       if (
         pr.title?.toLowerCase().includes("doc") ||
         pr.title?.toLowerCase().includes("readme") ||
@@ -165,14 +144,12 @@ function analyzeUserInProject(username, projectData) {
       ) {
         stats.quality_metrics.has_docs++;
       }
-
       if (pr.reviews_count === 0) {
         stats.quality_metrics.zero_revisions++;
       }
     }
   }
 
-  // 3. PR reviews GIVEN by this user on other people's PRs
   if (projectData.merged_prs) {
     for (const pr of projectData.merged_prs) {
       if (pr.reviews) {
@@ -188,7 +165,6 @@ function analyzeUserInProject(username, projectData) {
     }
   }
 
-  // 4. Issues opened
   if (projectData.issues) {
     stats.issues_opened = [
       ...projectData.issues.bugs.filter((i) => i.author === username),
@@ -198,7 +174,6 @@ function analyzeUserInProject(username, projectData) {
     ];
   }
 
-  // 5. Issue comments on OTHER people's issues
   if (projectData.issues) {
     const allIssues = [
       ...projectData.issues.bugs,
@@ -210,7 +185,6 @@ function analyzeUserInProject(username, projectData) {
     for (const issue of allIssues) {
       if (!issue.comment_authors) continue;
       if (issue.author === username) continue;
-
       for (const comment of issue.comment_authors) {
         if (comment.author === username) {
           stats.issue_comments_given.push({ created_at: comment.created_at });
@@ -344,10 +318,7 @@ function sliceIssues(issues, monthKey) {
   const result = [];
   for (const issue of issues) {
     if (toMonthKey(issue.created_at) !== monthKey) continue;
-    result.push({
-      ...issue,
-      comment_authors: issue.comment_authors || [], // ← remove the month filter
-    });
+    result.push({ ...issue, comment_authors: issue.comment_authors || [] });
   }
   return result;
 }
@@ -379,7 +350,7 @@ function sliceCachedDataToMonth(cachedData, monthKey) {
   }
   return sliced;
 }
-// Build Map<username, Map<projectId, earliestMonthKey>>
+
 function buildEarliestContributionMap(cachedData, contributors, allProjectIds) {
   const map = new Map();
 
@@ -431,9 +402,9 @@ function buildEarliestContributionMap(cachedData, contributors, allProjectIds) {
 /* GENERATE ALL-TIME LEADERBOARD */
 
 function generateLeaderboard() {
-  console.log("\n" + "=".repeat(80));
-  console.log("🏆 GENERATING ALL-TIME LEADERBOARD");
-  console.log("=".repeat(80) + "\n");
+  logger.info("=".repeat(80));
+  logger.info("GENERATING ALL-TIME LEADERBOARD");
+  logger.info("=".repeat(80));
 
   const contributors = readJsonFile(CONFIG.INPUT_FILES.contributors) || [];
   const projects = readJsonFile(CONFIG.INPUT_FILES.projects) || [];
@@ -441,16 +412,16 @@ function generateLeaderboard() {
     readJsonFile(CONFIG.INPUT_FILES.contributorMapping) || {};
   const cachedData = readJsonFile(CONFIG.INPUT_FILES.cachedData) || {};
 
-  console.log(`📦 Loaded:`);
-  console.log(`   Contributors: ${contributors.length}`);
-  console.log(`   Projects: ${projects.length}`);
-  console.log(`   Cached Projects: ${Object.keys(cachedData).length}\n`);
+  logger.info(`Loaded:`);
+  logger.info(`   Contributors: ${contributors.length}`);
+  logger.info(`   Projects: ${projects.length}`);
+  logger.info(`   Cached Projects: ${Object.keys(cachedData).length}`);
 
   const leaderboardData = [];
 
   for (const contributor of contributors) {
     const username = contributor.login;
-    console.log(`📌 Processing ${username}...`);
+    logger.info(`Processing ${username}...`);
 
     const userMappedProjectIds = contributorMapping[username] || [];
     const allProjectIds = Array.from(
@@ -479,7 +450,7 @@ function generateLeaderboard() {
     for (const projectId of allProjectIds) {
       const projectData = cachedData[projectId];
       if (!projectData) {
-        console.log(`   ⚠️ No cached data for project ID ${projectId}`);
+        logger.warn(`No cached data for project ID ${projectId}`);
         continue;
       }
 
@@ -508,19 +479,18 @@ function generateLeaderboard() {
           projectStats.quality_metrics.has_docs;
         userStats.quality_metrics.zero_revisions +=
           projectStats.quality_metrics.zero_revisions;
-
         userStats.byProject[projectData.project_title] = projectStats;
         userStats.projects.push(projectData.project_title);
         userStats.projectsWorkingOn++;
 
-        console.log(
+        logger.info(
           `   ✓ ${projectData.project_title}: ${projectStats.commits} commits, ${projectStats.prs.length} PRs, ${projectStats.pr_reviews_given} reviews, ${projectStats.issue_comments_given.length} issue comments`
         );
       }
     }
 
     if (userStats.projectsWorkingOn === 0) {
-      console.log(`   ⚠️ ${username}: No contributions found, skipping\n`);
+      logger.warn(`${username}: No contributions found, skipping`);
       continue;
     }
 
@@ -556,8 +526,8 @@ function generateLeaderboard() {
       lastActiveDays: contributor.lastActiveDays || null,
     });
 
-    console.log(
-      `   ✅ Score: ${scoreData.total} (Code: ${scoreData.code_score}, Community: ${scoreData.community_score} [+${scoreData.breakdown.projects_score} project bonus], Quality: ${scoreData.quality_score})\n`
+    logger.info(
+      `   Score: ${scoreData.total} (Code: ${scoreData.code_score}, Community: ${scoreData.community_score} [+${scoreData.breakdown.projects_score} project bonus], Quality: ${scoreData.quality_score})`
     );
   }
 
@@ -576,22 +546,20 @@ function generateMonthlyBreakdownFromCache(
   contributorMapping,
   cachedData
 ) {
-  console.log("\n" + "=".repeat(80));
-  console.log("📅 GENERATING MONTHLY BREAKDOWN FROM CACHE");
-  console.log("=".repeat(80));
+  logger.info("=".repeat(80));
+  logger.info("GENERATING MONTHLY BREAKDOWN FROM CACHE");
+  logger.info("=".repeat(80));
 
   const allMonths = getAllMonthKeys(cachedData);
   if (allMonths.length === 0) {
-    console.log(
-      "⚠️  No month keys found in cache — skipping monthly breakdown"
-    );
+    logger.warn("No month keys found in cache — skipping monthly breakdown");
     return;
   }
 
-  console.log(
-    `\n   Found ${allMonths.length} months: ${allMonths[0]} → ${
+  logger.info(
+    `Found ${allMonths.length} months: ${allMonths[0]} → ${
       allMonths[allMonths.length - 1]
-    }\n`
+    }`
   );
 
   const allProjectIds = new Set(CONFIG.SPECIAL_PROJECT_IDS);
@@ -605,16 +573,14 @@ function generateMonthlyBreakdownFromCache(
     Array.from(allProjectIds)
   );
 
-  // Build a reverse lookup: projectId → project_title (from cached data)
   const projectTitleById = {};
   for (const [projectId, projectData] of Object.entries(cachedData)) {
-    if (projectData.project_title) {
+    if (projectData.project_title)
       projectTitleById[projectId] = projectData.project_title;
-    }
   }
 
   for (const monthKey of allMonths) {
-    console.log(`\n📊 Scoring ${monthKey}...`);
+    logger.info(`Scoring ${monthKey}...`);
     const monthSlice = sliceCachedDataToMonth(cachedData, monthKey);
     const monthResults = [];
 
@@ -632,7 +598,7 @@ function generateMonthlyBreakdownFromCache(
         code_review_comments: 0,
         issues_opened: [],
         issue_comments_given: [],
-        projectsWorkingOn: 0, // new-project diversity bonus count
+        projectsWorkingOn: 0,
         quality_metrics: {
           has_tests: 0,
           has_docs: 0,
@@ -642,7 +608,6 @@ function generateMonthlyBreakdownFromCache(
         },
       };
 
-      // Track projects with any activity this month (for display + projects field)
       const activeProjectTitles = [];
       const userEarliestMap = earliestMap.get(username) || new Map();
 
@@ -650,7 +615,6 @@ function generateMonthlyBreakdownFromCache(
         const projectData = monthSlice[projectId];
         if (!projectData) continue;
 
-        // Called exactly ONCE per project — no double calls
         const projectStats = analyzeUserInProject(username, projectData);
 
         const hasContributions =
@@ -663,7 +627,6 @@ function generateMonthlyBreakdownFromCache(
 
         if (!hasContributions) continue;
 
-        // Track this project as active this month
         const title = projectTitleById[projectId] || projectId;
         activeProjectTitles.push(title);
 
@@ -682,11 +645,8 @@ function generateMonthlyBreakdownFromCache(
         userStats.quality_metrics.zero_revisions +=
           projectStats.quality_metrics.zero_revisions;
 
-        // Diversity bonus: only in the month user FIRST ever touched this project
         const firstMonth = userEarliestMap.get(projectId);
-        if (firstMonth === monthKey) {
-          userStats.projectsWorkingOn++;
-        }
+        if (firstMonth === monthKey) userStats.projectsWorkingOn++;
       }
 
       const scoreData = calculateScore(userStats);
@@ -750,11 +710,11 @@ function generateMonthlyBreakdownFromCache(
     writeJsonFile(filePath, payload);
 
     if (monthResults[0]) {
-      console.log(
+      logger.info(
         `   🥇 ${monthResults[0].username} — ${monthResults[0].total_score} pts (${monthResults.length} active contributors)`
       );
     } else {
-      console.log(`   😴 No active contributors`);
+      logger.info(`   No active contributors`);
     }
   }
 
@@ -763,50 +723,44 @@ function generateMonthlyBreakdownFromCache(
     updated_at: new Date().toISOString(),
   };
   writeJsonFile(CONFIG.OUTPUT_FILES.manifest, manifest);
-  console.log(
-    `\n📋 manifest.json written — ${allMonths.length} months indexed`
-  );
+  logger.info(`manifest.json written — ${allMonths.length} months indexed`);
 }
 
 /* DISPLAY TOP SCORERS */
 
 function displayTopScorers(leaderboard, topN = 10) {
-  console.log("\n" + "=".repeat(80));
-  console.log(`🏆 TOP ${topN} CONTRIBUTORS`);
-  console.log("=".repeat(80) + "\n");
+  logger.info("=".repeat(80));
+  logger.info(`TOP ${topN} CONTRIBUTORS`);
+  logger.info("=".repeat(80));
 
   leaderboard.slice(0, topN).forEach((contributor, index) => {
     const rank = index + 1;
-    const medal =
-      rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : `${rank}.`;
-
-    console.log(`${medal} ${contributor.username}`);
-    console.log(
+    logger.info(`${rank}. ${contributor.username}`);
+    logger.info(
       `   Total Score: ${contributor.total_score} (Rank #${contributor.rank})`
     );
-    console.log(
-      `   ├─ Code:      ${contributor.code_score} (PRs: ${contributor.score_breakdown.pr_score}, Commits: ${contributor.score_breakdown.commits_score}, Reviews: ${contributor.score_breakdown.pr_reviews_score})`
+    logger.info(
+      `   Code:      ${contributor.code_score} (PRs: ${contributor.score_breakdown.pr_score}, Commits: ${contributor.score_breakdown.commits_score}, Reviews: ${contributor.score_breakdown.pr_reviews_score})`
     );
-    console.log(
-      `   ├─ Community: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score}, Projects: ${contributor.score_breakdown.projects_score})`
+    logger.info(
+      `   Community: ${contributor.community_score} (Issues: ${contributor.score_breakdown.issues_opened_score}, Comments: ${contributor.score_breakdown.issue_comments_score}, Projects: ${contributor.score_breakdown.projects_score})`
     );
-    console.log(
-      `   └─ Quality:   ${contributor.quality_score} (Tests: ${contributor.score_breakdown.tests_score}, Docs: ${contributor.score_breakdown.docs_score}, ZeroRev: ${contributor.score_breakdown.zero_revisions_score})`
+    logger.info(
+      `   Quality:   ${contributor.quality_score} (Tests: ${contributor.score_breakdown.tests_score}, Docs: ${contributor.score_breakdown.docs_score}, ZeroRev: ${contributor.score_breakdown.zero_revisions_score})`
     );
-    console.log(
+    logger.info(
       `   Metrics: ${contributor.totalCommits} commits, ${contributor.totalPRs} PRs (S:${contributor.prs_by_complexity.small} M:${contributor.prs_by_complexity.medium} L:${contributor.prs_by_complexity.large}), ${contributor.totalPRReviewsGiven} reviews, ${contributor.projectsWorkingOn} projects`
     );
-    console.log("");
   });
 
-  console.log("=".repeat(80) + "\n");
+  logger.info("=".repeat(80));
 }
 
 /* MAIN */
 
 function main() {
   try {
-    console.log("🚀 Starting Leaderboard Generation...\n");
+    logger.info("Starting Leaderboard Generation...");
 
     const { leaderboardData, contributors, contributorMapping, cachedData } =
       generateLeaderboard();
@@ -864,14 +818,14 @@ function main() {
 
     displayTopScorers(leaderboardData, 10);
 
-    console.log("📈 SUMMARY:");
-    console.log(`   Contributors: ${summary.total_contributors}`);
-    console.log(`   Commits:      ${summary.total_commits}`);
-    console.log(`   PRs:          ${summary.total_prs}`);
-    console.log(`   PR Reviews:   ${summary.total_pr_reviews}`);
-    console.log(`   Issues:       ${summary.total_issues}`);
-    console.log(`   Avg Score:    ${summary.avg_score}`);
-    console.log(
+    logger.info("SUMMARY:");
+    logger.info(`   Contributors: ${summary.total_contributors}`);
+    logger.info(`   Commits:      ${summary.total_commits}`);
+    logger.info(`   PRs:          ${summary.total_prs}`);
+    logger.info(`   PR Reviews:   ${summary.total_pr_reviews}`);
+    logger.info(`   Issues:       ${summary.total_issues}`);
+    logger.info(`   Avg Score:    ${summary.avg_score}`);
+    logger.info(
       `   Top Score:    ${leaderboardData[0]?.total_score || 0} (${
         leaderboardData[0]?.username || "N/A"
       })`
@@ -883,12 +837,12 @@ function main() {
       cachedData
     );
 
-    console.log("\n✅ Done!\n");
+    logger.info("Done!");
 
     return leaderboardData;
   } catch (error) {
-    console.error("\n❌ Fatal error:", error);
-    console.error(error.stack);
+    logger.error(`Fatal error: ${error}`);
+    logger.error(error.stack);
     process.exit(1);
   }
 }
