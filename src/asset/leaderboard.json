@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T09:47:08.637Z",
+  "generated_at": "2026-03-18T06:06:59.004Z",
   "scoring_formula": {
     "description": "Total_Score = Code_Score + Community_Score + Quality_Score",
     "code_formula": "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
@@ -36,11 +36,11 @@
     }
   },
   "summary": {
-    "total_contributors": 78,
-    "total_commits": 5294,
-    "total_prs": 1263,
-    "total_pr_reviews": 112,
-    "total_issues": 498,
+    "total_contributors": 80,
+    "total_commits": 5455,
+    "total_prs": 1288,
+    "total_pr_reviews": 121,
+    "total_issues": 503,
     "avg_score": 315
   },
   "leaderboard": [
@@ -50,27 +50,27 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 1081,
-      "totalPRs": 151,
-      "totalPRReviewsGiven": 37,
+      "totalCommits": 1083,
+      "totalPRs": 152,
+      "totalPRReviewsGiven": 38,
       "totalCodeReviewComments": 19,
       "totalIssuesOpened": 51,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 7.16,
+      "avgCommitsPerPR": 7.13,
       "projectsWorkingOn": 10,
       "prs_by_complexity": {
         "small": 58,
         "medium": 33,
-        "large": 60
+        "large": 61
       },
-      "total_score": 3787,
-      "code_score": 3307,
+      "total_score": 3804,
+      "code_score": 3322,
       "community_score": 175,
-      "quality_score": 305,
+      "quality_score": 307,
       "score_breakdown": {
-        "pr_score": 1015,
-        "commits_score": 2162,
-        "pr_reviews_score": 111,
+        "pr_score": 1023,
+        "commits_score": 2166,
+        "pr_reviews_score": 114,
         "code_comments_score": 19,
         "issues_opened_score": 74,
         "issue_comments_score": 1,
@@ -78,7 +78,7 @@
         "tests_score": 1,
         "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 302,
+        "zero_revisions_score": 304,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -1759,8 +1759,18 @@
           }
         },
         "Mindfire Foss Website": {
-          "commits": 133,
+          "commits": 135,
           "prs": [
+            {
+              "number": 268,
+              "merged_at": "2026-03-17T09:18:34Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 180,
+              "additions": 31406,
+              "deletions": 75732,
+              "reviews_count": 0
+            },
             {
               "number": 266,
               "merged_at": "2026-03-15T15:29:43Z",
@@ -2312,7 +2322,7 @@
               "reviews_count": 0
             }
           ],
-          "pr_reviews_given": 9,
+          "pr_reviews_given": 10,
           "code_review_comments": 0,
           "issues_opened": [],
           "issue_comments_given": [],
@@ -2320,7 +2330,7 @@
             "has_tests": 0,
             "has_docs": 1,
             "first_time_mentor": 0,
-            "zero_revisions": 55,
+            "zero_revisions": 56,
             "impact_bonuses": []
           }
         }
@@ -4931,7 +4941,7 @@
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 5
     },
     {
       "rank": 3,
@@ -4939,26 +4949,26 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "totalCommits": 315,
-      "totalPRs": 63,
+      "totalCommits": 341,
+      "totalPRs": 64,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 66,
       "totalIssueComments": 5,
-      "avgCommitsPerPR": 5,
+      "avgCommitsPerPR": 5.33,
       "projectsWorkingOn": 4,
       "prs_by_complexity": {
         "small": 26,
         "medium": 11,
-        "large": 26
+        "large": 27
       },
-      "total_score": 1304,
-      "code_score": 1053,
+      "total_score": 1364,
+      "code_score": 1113,
       "community_score": 127,
       "quality_score": 124,
       "score_breakdown": {
-        "pr_score": 423,
-        "commits_score": 630,
+        "pr_score": 431,
+        "commits_score": 682,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 82,
@@ -5770,8 +5780,18 @@
           }
         },
         "Mindfire Foss Website": {
-          "commits": 150,
+          "commits": 176,
           "prs": [
+            {
+              "number": 267,
+              "merged_at": "2026-03-17T09:17:45Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 180,
+              "additions": 31406,
+              "deletions": 75732,
+              "reviews_count": 1
+            },
             {
               "number": 265,
               "merged_at": "2026-03-15T15:28:46Z",
@@ -6288,31 +6308,31 @@
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
-      "totalCommits": 227,
+      "totalCommits": 234,
       "totalPRs": 57,
       "totalPRReviewsGiven": 20,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 31,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 3.98,
-      "projectsWorkingOn": 18,
+      "avgCommitsPerPR": 4.11,
+      "projectsWorkingOn": 20,
       "prs_by_complexity": {
         "small": 24,
         "medium": 16,
         "large": 17
       },
-      "total_score": 1241,
-      "code_score": 883,
-      "community_score": 243,
+      "total_score": 1275,
+      "code_score": 897,
+      "community_score": 263,
       "quality_score": 115,
       "score_breakdown": {
         "pr_score": 369,
-        "commits_score": 454,
+        "commits_score": 468,
         "pr_reviews_score": 60,
         "code_comments_score": 0,
         "issues_opened_score": 62,
         "issue_comments_score": 1,
-        "projects_score": 180,
+        "projects_score": 200,
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
@@ -6326,6 +6346,7 @@
         "issue_comments_total": 1
       },
       "projects": [
+        "Canvas Editor",
         "FMDAPI Node Weaver",
         "Extension Methods",
         "Angular Canvas Editor",
@@ -6343,9 +6364,25 @@
         "AUTOTEST",
         "Next.js Fortress",
         "ADAC (Architecture Diagram as Code)",
+        "Agentic Web Starter",
         "Mindfire Foss Website"
       ],
       "byProject": {
+        "Canvas Editor": {
+          "commits": 6,
+          "prs": [],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        },
         "FMDAPI Node Weaver": {
           "commits": 6,
           "prs": [
@@ -6833,6 +6870,21 @@
               "comment_authors": []
             }
           ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        },
+        "Agentic Web Starter": {
+          "commits": 1,
+          "prs": [],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
           "issue_comments_given": [],
           "quality_metrics": {
             "has_tests": 0,
@@ -8965,7 +9017,7 @@
           }
         }
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 8
     },
     {
       "rank": 6,
@@ -10371,7 +10423,7 @@
           }
         }
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 1
     },
     {
       "rank": 8,
@@ -11069,7 +11121,7 @@
           }
         }
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 5
     },
     {
       "rank": 9,
@@ -11722,7 +11774,7 @@
           }
         }
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 7
     },
     {
       "rank": 10,
@@ -13273,7 +13325,7 @@
           }
         }
       },
-      "lastActiveDays": null
+      "lastActiveDays": 2
     },
     {
       "rank": 13,
@@ -13697,7 +13749,7 @@
           }
         }
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 15
     },
     {
       "rank": 14,
@@ -15003,6 +15055,352 @@
     },
     {
       "rank": 16,
+      "username": "ashutosh-jena-mindfire",
+      "id": 116242186,
+      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
+      "html_url": "https://github.com/ashutosh-jena-mindfire",
+      "totalCommits": 135,
+      "totalPRs": 20,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 5,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 6.75,
+      "projectsWorkingOn": 3,
+      "prs_by_complexity": {
+        "small": 4,
+        "medium": 4,
+        "large": 12
+      },
+      "total_score": 511,
+      "code_score": 430,
+      "community_score": 40,
+      "quality_score": 41,
+      "score_breakdown": {
+        "pr_score": 148,
+        "commits_score": 270,
+        "pr_reviews_score": 12,
+        "code_comments_score": 0,
+        "issues_opened_score": 10,
+        "issue_comments_score": 0,
+        "projects_score": 30,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 38,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 5,
+        "issues_total": 5,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": [
+        "Canvas Editor",
+        "Angular Canvas Editor",
+        "Mindfire Foss Website"
+      ],
+      "byProject": {
+        "Canvas Editor": {
+          "commits": 81,
+          "prs": [
+            {
+              "number": 22,
+              "merged_at": "2024-02-21T13:23:31Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 39,
+              "deletions": 18,
+              "reviews_count": 0
+            },
+            {
+              "number": 20,
+              "merged_at": "2024-02-05T11:35:13Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 12,
+              "additions": 6041,
+              "deletions": 1033,
+              "reviews_count": 0
+            },
+            {
+              "number": 18,
+              "merged_at": "2024-02-05T10:32:31Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 8,
+              "additions": 8637,
+              "deletions": 195,
+              "reviews_count": 0
+            },
+            {
+              "number": 15,
+              "merged_at": "2024-01-25T08:25:05Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 24,
+              "additions": 4166,
+              "deletions": 358,
+              "reviews_count": 0
+            },
+            {
+              "number": 14,
+              "merged_at": "2024-01-24T10:54:50Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 11,
+              "deletions": 6,
+              "reviews_count": 0
+            },
+            {
+              "number": 11,
+              "merged_at": "2023-10-24T07:30:47Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 9,
+              "merged_at": "2023-10-20T12:35:20Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 0,
+              "additions": 0,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 8,
+              "merged_at": "2023-10-20T11:57:43Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 19,
+              "additions": 36,
+              "deletions": 36,
+              "reviews_count": 0
+            },
+            {
+              "number": 7,
+              "merged_at": "2023-10-20T11:37:26Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 55,
+              "additions": 15280,
+              "deletions": 1444,
+              "reviews_count": 0
+            },
+            {
+              "number": 6,
+              "merged_at": "2023-10-19T14:01:09Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 137,
+              "additions": 13012,
+              "deletions": 4189,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 12,
+              "author": "ashutosh-jena-mindfire",
+              "title": "A warning is showing when using the React Canvas editor",
+              "created_at": "2023-10-24T08:43:47Z",
+              "comments": 1,
+              "comment_authors": [
+                {
+                  "author": "ashutosh-jena-mindfire",
+                  "created_at": "2023-10-24T08:44:49Z"
+                }
+              ]
+            },
+            {
+              "number": 21,
+              "author": "ashutosh-jena-mindfire",
+              "title": "Add commitlint",
+              "created_at": "2024-02-07T09:01:43Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 17,
+              "author": "ashutosh-jena-mindfire",
+              "title": "Resolving the range issue in the canvas. ",
+              "created_at": "2024-02-01T07:34:44Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 16,
+              "author": "ashutosh-jena-mindfire",
+              "title": "Auto deploy",
+              "created_at": "2024-02-01T06:59:53Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 13,
+              "author": "ashutosh-jena-mindfire",
+              "title": "Reduce the build file size",
+              "created_at": "2023-11-20T10:07:34Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 2,
+            "first_time_mentor": 0,
+            "zero_revisions": 10,
+            "impact_bonuses": []
+          }
+        },
+        "Angular Canvas Editor": {
+          "commits": 30,
+          "prs": [
+            {
+              "number": 6,
+              "merged_at": "2024-03-13T11:02:50Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10744,
+              "additions": 1358,
+              "deletions": 2256,
+              "reviews_count": 0
+            },
+            {
+              "number": 5,
+              "merged_at": "2024-03-12T18:10:53Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 755,
+              "additions": 54194,
+              "deletions": 165,
+              "reviews_count": 0
+            },
+            {
+              "number": 4,
+              "merged_at": "2024-03-11T11:48:34Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 10012,
+              "additions": 1059358,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 3,
+              "merged_at": "2024-03-11T09:55:56Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 9944,
+              "additions": 1036039,
+              "deletions": 10,
+              "reviews_count": 0
+            },
+            {
+              "number": 2,
+              "merged_at": "2024-03-11T09:13:07Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 72,
+              "additions": 23329,
+              "deletions": 0,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 3,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 1,
+            "first_time_mentor": 0,
+            "zero_revisions": 5,
+            "impact_bonuses": []
+          }
+        },
+        "Mindfire Foss Website": {
+          "commits": 24,
+          "prs": [
+            {
+              "number": 114,
+              "merged_at": "2024-05-07T09:41:27Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 945,
+              "deletions": 29,
+              "reviews_count": 0
+            },
+            {
+              "number": 112,
+              "merged_at": "2024-02-23T12:46:11Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 8,
+              "reviews_count": 0
+            },
+            {
+              "number": 110,
+              "merged_at": "2024-02-23T12:19:21Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 6,
+              "additions": 233,
+              "deletions": 177,
+              "reviews_count": 0
+            },
+            {
+              "number": 107,
+              "merged_at": "2024-02-22T06:33:14Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 1,
+              "additions": 97,
+              "deletions": 59,
+              "reviews_count": 2
+            },
+            {
+              "number": 105,
+              "merged_at": "2024-02-20T12:13:57Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 1,
+              "additions": 122,
+              "deletions": 176,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 1,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 4,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 17,
       "username": "akashdeep-singh-multani",
       "id": 184540593,
       "avatar_url": "https://avatars.githubusercontent.com/u/184540593?v=4",
@@ -15451,7 +15849,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 17,
+      "rank": 18,
       "username": "Siddharth-1698",
       "id": 66638045,
       "avatar_url": "https://avatars.githubusercontent.com/u/66638045?v=4",
@@ -15775,7 +16173,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 18,
+      "rank": 19,
       "username": "SsagarikaR",
       "id": 193941133,
       "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
@@ -16181,7 +16579,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 19,
+      "rank": 20,
       "username": "jagdish-mindfire",
       "id": 180177757,
       "avatar_url": "https://avatars.githubusercontent.com/u/180177757?v=4",
@@ -16638,7 +17036,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 20,
+      "rank": 21,
       "username": "manojkmfsi",
       "id": 134362545,
       "avatar_url": "https://avatars.githubusercontent.com/u/134362545?v=4",
@@ -16842,7 +17240,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 21,
+      "rank": 22,
       "username": "ssswagatss",
       "id": 7521181,
       "avatar_url": "https://avatars.githubusercontent.com/u/7521181?v=4",
@@ -16982,7 +17380,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 22,
+      "rank": 23,
       "username": "Bhupesh-MS",
       "id": 120394376,
       "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
@@ -17045,7 +17443,338 @@
       "lastActiveDays": null
     },
     {
-      "rank": 23,
+      "rank": 24,
+      "username": "biswalom22",
+      "id": 125389787,
+      "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
+      "html_url": "https://github.com/biswalom22",
+      "totalCommits": 26,
+      "totalPRs": 19,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 2,
+      "totalIssueComments": 9,
+      "avgCommitsPerPR": 1.37,
+      "projectsWorkingOn": 3,
+      "prs_by_complexity": {
+        "small": 9,
+        "medium": 6,
+        "large": 4
+      },
+      "total_score": 251,
+      "code_score": 170,
+      "community_score": 43,
+      "quality_score": 38,
+      "score_breakdown": {
+        "pr_score": 118,
+        "commits_score": 52,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 4,
+        "issue_comments_score": 9,
+        "projects_score": 30,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 38,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 2,
+        "issues_total": 2,
+        "issue_comments": 9,
+        "issue_comments_total": 9
+      },
+      "projects": ["Canvas Editor", "ESLint Plugin Hub", "Document Editor"],
+      "byProject": {
+        "Canvas Editor": {
+          "commits": 10,
+          "prs": [
+            {
+              "number": 30,
+              "merged_at": "2025-12-16T14:33:45Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 4,
+              "deletions": 2,
+              "reviews_count": 0
+            },
+            {
+              "number": 29,
+              "merged_at": "2025-12-10T15:00:38Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 72,
+              "deletions": 17,
+              "reviews_count": 0
+            },
+            {
+              "number": 28,
+              "merged_at": "2025-12-09T15:28:43Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 3,
+              "additions": 8,
+              "deletions": 8,
+              "reviews_count": 0
+            },
+            {
+              "number": 27,
+              "merged_at": "2025-12-09T11:39:38Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 6,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 26,
+              "merged_at": "2025-12-08T11:49:05Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 25,
+              "merged_at": "2025-12-04T07:37:26Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 10,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 24,
+              "merged_at": "2025-11-18T06:14:25Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 23,
+              "merged_at": "2025-04-22T08:17:50Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 2,
+              "deletions": 1,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 8,
+            "impact_bonuses": []
+          }
+        },
+        "ESLint Plugin Hub": {
+          "commits": 11,
+          "prs": [
+            {
+              "number": 70,
+              "merged_at": "2025-07-07T08:35:45Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 18,
+              "deletions": 23,
+              "reviews_count": 0
+            },
+            {
+              "number": 67,
+              "merged_at": "2025-07-02T12:38:15Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 4,
+              "additions": 536,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 49,
+              "merged_at": "2025-06-06T07:03:00Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 27,
+              "additions": 23,
+              "deletions": 22,
+              "reviews_count": 0
+            },
+            {
+              "number": 50,
+              "merged_at": "2025-06-06T07:02:59Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 27,
+              "additions": 29,
+              "deletions": 824,
+              "reviews_count": 0
+            },
+            {
+              "number": 31,
+              "merged_at": "2025-05-29T15:12:52Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 3,
+              "additions": 630,
+              "deletions": 0,
+              "reviews_count": 0
+            },
+            {
+              "number": 14,
+              "merged_at": "2025-05-28T10:47:33Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 7,
+              "additions": 378,
+              "deletions": 1,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [],
+          "issue_comments_given": [
+            {
+              "created_at": "2025-06-20T10:29:17Z"
+            },
+            {
+              "created_at": "2025-06-05T12:36:45Z"
+            },
+            {
+              "created_at": "2025-05-28T10:55:01Z"
+            },
+            {
+              "created_at": "2025-06-03T08:11:50Z"
+            },
+            {
+              "created_at": "2025-05-27T05:28:08Z"
+            },
+            {
+              "created_at": "2025-06-03T08:00:45Z"
+            },
+            {
+              "created_at": "2025-05-30T05:41:43Z"
+            },
+            {
+              "created_at": "2025-05-30T05:42:23Z"
+            },
+            {
+              "created_at": "2025-06-05T12:10:03Z"
+            }
+          ],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 6,
+            "impact_bonuses": []
+          }
+        },
+        "Document Editor": {
+          "commits": 5,
+          "prs": [
+            {
+              "number": 28,
+              "merged_at": "2025-12-18T08:14:32Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 4,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 25,
+              "merged_at": "2025-12-16T09:32:10Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 2,
+              "additions": 1,
+              "deletions": 3,
+              "reviews_count": 0
+            },
+            {
+              "number": 24,
+              "merged_at": "2025-12-08T13:43:32Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 4,
+              "additions": 31,
+              "deletions": 7,
+              "reviews_count": 0
+            },
+            {
+              "number": 22,
+              "merged_at": "2025-05-06T11:39:27Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 1,
+              "deletions": 1,
+              "reviews_count": 0
+            },
+            {
+              "number": 21,
+              "merged_at": "2025-04-18T09:02:03Z",
+              "complexity": "medium",
+              "multiplier": 1.3,
+              "changed_files": 5,
+              "additions": 32,
+              "deletions": 8,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 0,
+          "code_review_comments": 0,
+          "issues_opened": [
+            {
+              "number": 34,
+              "author": "biswalom22",
+              "title": "[Feature]:(react): add Jest + React Testing Library test suite",
+              "created_at": "2026-03-06T10:01:39Z",
+              "comments": 0,
+              "comment_authors": []
+            },
+            {
+              "number": 33,
+              "author": "biswalom22",
+              "title": "fix(react): 10 runtime, memory leak, and production bugs in react-canvas-editor",
+              "created_at": "2026-03-06T09:59:35Z",
+              "comments": 0,
+              "comment_authors": []
+            }
+          ],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 5,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": 6
+    },
+    {
+      "rank": 25,
       "username": "anilkumarswain140",
       "id": 142868838,
       "avatar_url": "https://avatars.githubusercontent.com/u/142868838?v=4",
@@ -17255,7 +17984,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 24,
+      "rank": 26,
       "username": "abdulla-mindfire",
       "id": 105473459,
       "avatar_url": "https://avatars.githubusercontent.com/u/105473459?v=4",
@@ -17519,187 +18248,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 25,
-      "username": "ashutosh-jena-mindfire",
-      "id": 116242186,
-      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
-      "html_url": "https://github.com/ashutosh-jena-mindfire",
-      "totalCommits": 54,
-      "totalPRs": 10,
-      "totalPRReviewsGiven": 4,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 5.4,
-      "projectsWorkingOn": 2,
-      "prs_by_complexity": {
-        "small": 1,
-        "medium": 3,
-        "large": 6
-      },
-      "total_score": 235,
-      "code_score": 196,
-      "community_score": 20,
-      "quality_score": 19,
-      "score_breakdown": {
-        "pr_score": 76,
-        "commits_score": 108,
-        "pr_reviews_score": 12,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 20,
-        "tests_score": 0,
-        "docs_score": 1,
-        "mentor_score": 0,
-        "zero_revisions_score": 18,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "projects": ["Angular Canvas Editor", "Mindfire Foss Website"],
-      "byProject": {
-        "Angular Canvas Editor": {
-          "commits": 30,
-          "prs": [
-            {
-              "number": 6,
-              "merged_at": "2024-03-13T11:02:50Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 10744,
-              "additions": 1358,
-              "deletions": 2256,
-              "reviews_count": 0
-            },
-            {
-              "number": 5,
-              "merged_at": "2024-03-12T18:10:53Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 755,
-              "additions": 54194,
-              "deletions": 165,
-              "reviews_count": 0
-            },
-            {
-              "number": 4,
-              "merged_at": "2024-03-11T11:48:34Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 10012,
-              "additions": 1059358,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 3,
-              "merged_at": "2024-03-11T09:55:56Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 9944,
-              "additions": 1036039,
-              "deletions": 10,
-              "reviews_count": 0
-            },
-            {
-              "number": 2,
-              "merged_at": "2024-03-11T09:13:07Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 72,
-              "additions": 23329,
-              "deletions": 0,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 3,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 1,
-            "first_time_mentor": 0,
-            "zero_revisions": 5,
-            "impact_bonuses": []
-          }
-        },
-        "Mindfire Foss Website": {
-          "commits": 24,
-          "prs": [
-            {
-              "number": 114,
-              "merged_at": "2024-05-07T09:41:27Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 11,
-              "additions": 945,
-              "deletions": 29,
-              "reviews_count": 0
-            },
-            {
-              "number": 112,
-              "merged_at": "2024-02-23T12:46:11Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 10,
-              "deletions": 8,
-              "reviews_count": 0
-            },
-            {
-              "number": 110,
-              "merged_at": "2024-02-23T12:19:21Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 6,
-              "additions": 233,
-              "deletions": 177,
-              "reviews_count": 0
-            },
-            {
-              "number": 107,
-              "merged_at": "2024-02-22T06:33:14Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 1,
-              "additions": 97,
-              "deletions": 59,
-              "reviews_count": 2
-            },
-            {
-              "number": 105,
-              "merged_at": "2024-02-20T12:13:57Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 1,
-              "additions": 122,
-              "deletions": 176,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 1,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 4,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": 6
-    },
-    {
-      "rank": 26,
+      "rank": 27,
       "username": "rohitrg96",
       "id": 190622750,
       "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
@@ -18003,7 +18552,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 27,
+      "rank": 28,
       "username": "MohdAasim",
       "id": 79627135,
       "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
@@ -18325,7 +18874,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 28,
+      "rank": 29,
       "username": "patisubhakanta",
       "id": 59618850,
       "avatar_url": "https://avatars.githubusercontent.com/u/59618850?v=4",
@@ -18582,7 +19131,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 29,
+      "rank": 30,
       "username": "ankitsingh252225",
       "id": 227138911,
       "avatar_url": "https://avatars.githubusercontent.com/u/227138911?v=4",
@@ -18883,7 +19432,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 30,
+      "rank": 31,
       "username": "praliptarajoo",
       "id": 42381761,
       "avatar_url": "https://avatars.githubusercontent.com/u/42381761?v=4",
@@ -19141,241 +19690,6 @@
         }
       },
       "lastActiveDays": null
-    },
-    {
-      "rank": 31,
-      "username": "biswalom22",
-      "id": 125389787,
-      "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
-      "html_url": "https://github.com/biswalom22",
-      "totalCommits": 16,
-      "totalPRs": 11,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 2,
-      "totalIssueComments": 9,
-      "avgCommitsPerPR": 1.45,
-      "projectsWorkingOn": 2,
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 4,
-        "large": 4
-      },
-      "total_score": 162,
-      "code_score": 107,
-      "community_score": 33,
-      "quality_score": 22,
-      "score_breakdown": {
-        "pr_score": 75,
-        "commits_score": 32,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 4,
-        "issue_comments_score": 9,
-        "projects_score": 20,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 22,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 2,
-        "issues_total": 2,
-        "issue_comments": 9,
-        "issue_comments_total": 9
-      },
-      "projects": ["ESLint Plugin Hub", "Document Editor"],
-      "byProject": {
-        "ESLint Plugin Hub": {
-          "commits": 11,
-          "prs": [
-            {
-              "number": 70,
-              "merged_at": "2025-07-07T08:35:45Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 18,
-              "deletions": 23,
-              "reviews_count": 0
-            },
-            {
-              "number": 67,
-              "merged_at": "2025-07-02T12:38:15Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 4,
-              "additions": 536,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 49,
-              "merged_at": "2025-06-06T07:03:00Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 27,
-              "additions": 23,
-              "deletions": 22,
-              "reviews_count": 0
-            },
-            {
-              "number": 50,
-              "merged_at": "2025-06-06T07:02:59Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 27,
-              "additions": 29,
-              "deletions": 824,
-              "reviews_count": 0
-            },
-            {
-              "number": 31,
-              "merged_at": "2025-05-29T15:12:52Z",
-              "complexity": "large",
-              "multiplier": 1.7,
-              "changed_files": 3,
-              "additions": 630,
-              "deletions": 0,
-              "reviews_count": 0
-            },
-            {
-              "number": 14,
-              "merged_at": "2025-05-28T10:47:33Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 7,
-              "additions": 378,
-              "deletions": 1,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [],
-          "issue_comments_given": [
-            {
-              "created_at": "2025-06-20T10:29:17Z"
-            },
-            {
-              "created_at": "2025-06-05T12:36:45Z"
-            },
-            {
-              "created_at": "2025-05-28T10:55:01Z"
-            },
-            {
-              "created_at": "2025-06-03T08:11:50Z"
-            },
-            {
-              "created_at": "2025-05-27T05:28:08Z"
-            },
-            {
-              "created_at": "2025-06-03T08:00:45Z"
-            },
-            {
-              "created_at": "2025-05-30T05:41:43Z"
-            },
-            {
-              "created_at": "2025-05-30T05:42:23Z"
-            },
-            {
-              "created_at": "2025-06-05T12:10:03Z"
-            }
-          ],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 6,
-            "impact_bonuses": []
-          }
-        },
-        "Document Editor": {
-          "commits": 5,
-          "prs": [
-            {
-              "number": 28,
-              "merged_at": "2025-12-18T08:14:32Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 4,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 25,
-              "merged_at": "2025-12-16T09:32:10Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 2,
-              "additions": 1,
-              "deletions": 3,
-              "reviews_count": 0
-            },
-            {
-              "number": 24,
-              "merged_at": "2025-12-08T13:43:32Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 4,
-              "additions": 31,
-              "deletions": 7,
-              "reviews_count": 0
-            },
-            {
-              "number": 22,
-              "merged_at": "2025-05-06T11:39:27Z",
-              "complexity": "small",
-              "multiplier": 1,
-              "changed_files": 1,
-              "additions": 1,
-              "deletions": 1,
-              "reviews_count": 0
-            },
-            {
-              "number": 21,
-              "merged_at": "2025-04-18T09:02:03Z",
-              "complexity": "medium",
-              "multiplier": 1.3,
-              "changed_files": 5,
-              "additions": 32,
-              "deletions": 8,
-              "reviews_count": 0
-            }
-          ],
-          "pr_reviews_given": 0,
-          "code_review_comments": 0,
-          "issues_opened": [
-            {
-              "number": 34,
-              "author": "biswalom22",
-              "title": "[Feature]:(react): add Jest + React Testing Library test suite",
-              "created_at": "2026-03-06T10:01:39Z",
-              "comments": 0,
-              "comment_authors": []
-            },
-            {
-              "number": 33,
-              "author": "biswalom22",
-              "title": "fix(react): 10 runtime, memory leak, and production bugs in react-canvas-editor",
-              "created_at": "2026-03-06T09:59:35Z",
-              "comments": 0,
-              "comment_authors": []
-            }
-          ],
-          "issue_comments_given": [],
-          "quality_metrics": {
-            "has_tests": 0,
-            "has_docs": 0,
-            "first_time_mentor": 0,
-            "zero_revisions": 5,
-            "impact_bonuses": []
-          }
-        }
-      },
-      "lastActiveDays": 4
     },
     {
       "rank": 32,
@@ -20968,6 +21282,120 @@
     },
     {
       "rank": 43,
+      "username": "asishmindfire",
+      "id": 118360815,
+      "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
+      "html_url": "https://github.com/asishmindfire",
+      "totalCommits": 15,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 4,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 0,
+        "large": 3
+      },
+      "total_score": 96,
+      "code_score": 82,
+      "community_score": 10,
+      "quality_score": 4,
+      "score_breakdown": {
+        "pr_score": 36,
+        "commits_score": 30,
+        "pr_reviews_score": 12,
+        "code_comments_score": 4,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 4,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["Canvas Editor"],
+      "byProject": {
+        "Canvas Editor": {
+          "commits": 15,
+          "prs": [
+            {
+              "number": 5,
+              "merged_at": "2023-08-24T11:04:10Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 11,
+              "additions": 135,
+              "deletions": 12,
+              "reviews_count": 0
+            },
+            {
+              "number": 4,
+              "merged_at": "2023-08-09T07:11:43Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 4,
+              "deletions": 0,
+              "reviews_count": 1
+            },
+            {
+              "number": 3,
+              "merged_at": "2023-08-08T08:04:36Z",
+              "complexity": "small",
+              "multiplier": 1,
+              "changed_files": 1,
+              "additions": 6,
+              "deletions": 1,
+              "reviews_count": 1
+            },
+            {
+              "number": 2,
+              "merged_at": "2023-08-03T11:42:45Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 6,
+              "additions": 9949,
+              "deletions": 2371,
+              "reviews_count": 6
+            },
+            {
+              "number": 1,
+              "merged_at": "2023-07-19T06:25:49Z",
+              "complexity": "large",
+              "multiplier": 1.7,
+              "changed_files": 13,
+              "additions": 3470,
+              "deletions": 26,
+              "reviews_count": 0
+            }
+          ],
+          "pr_reviews_given": 4,
+          "code_review_comments": 4,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 2,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 44,
       "username": "iabhishekkumarms",
       "id": 87860388,
       "avatar_url": "https://avatars.githubusercontent.com/u/87860388?v=4",
@@ -21091,7 +21519,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 44,
+      "rank": 45,
       "username": "prashant-mindfire",
       "id": 148045555,
       "avatar_url": "https://avatars.githubusercontent.com/u/148045555?v=4",
@@ -21205,7 +21633,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 45,
+      "rank": 46,
       "username": "pratul-mindfire",
       "id": 104986454,
       "avatar_url": "https://avatars.githubusercontent.com/u/104986454?v=4",
@@ -21268,7 +21696,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 46,
+      "rank": 47,
       "username": "100xmanas",
       "id": 147431910,
       "avatar_url": "https://avatars.githubusercontent.com/u/147431910?v=4",
@@ -21401,7 +21829,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 47,
+      "rank": 48,
       "username": "Shubh2694",
       "id": 108745749,
       "avatar_url": "https://avatars.githubusercontent.com/u/108745749?v=4",
@@ -21464,7 +21892,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 48,
+      "rank": 49,
       "username": "Satyam-Mindfire",
       "id": 138189810,
       "avatar_url": "https://avatars.githubusercontent.com/u/138189810?v=4",
@@ -21568,7 +21996,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 49,
+      "rank": 50,
       "username": "chaudharyvivek",
       "id": 10649999,
       "avatar_url": "https://avatars.githubusercontent.com/u/10649999?v=4",
@@ -21646,7 +22074,70 @@
       "lastActiveDays": null
     },
     {
-      "rank": 50,
+      "rank": 51,
+      "username": "Harshita-mindfire",
+      "id": 84971366,
+      "avatar_url": "https://avatars.githubusercontent.com/u/84971366?v=4",
+      "html_url": "https://github.com/Harshita-mindfire",
+      "totalCommits": 20,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 3,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 65,
+      "code_score": 55,
+      "community_score": 10,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 40,
+        "pr_reviews_score": 12,
+        "code_comments_score": 3,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "projects": ["Canvas Editor"],
+      "byProject": {
+        "Canvas Editor": {
+          "commits": 20,
+          "prs": [],
+          "pr_reviews_given": 4,
+          "code_review_comments": 3,
+          "issues_opened": [],
+          "issue_comments_given": [],
+          "quality_metrics": {
+            "has_tests": 0,
+            "has_docs": 0,
+            "first_time_mentor": 0,
+            "zero_revisions": 0,
+            "impact_bonuses": []
+          }
+        }
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 52,
       "username": "VershalaTandon",
       "id": 63102290,
       "avatar_url": "https://avatars.githubusercontent.com/u/63102290?v=4",
@@ -21709,7 +22200,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 51,
+      "rank": 53,
       "username": "swain1467",
       "id": 56427833,
       "avatar_url": "https://avatars.githubusercontent.com/u/56427833?v=4",
@@ -21787,7 +22278,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 52,
+      "rank": 54,
       "username": "hitesh-mindfire",
       "id": 172278187,
       "avatar_url": "https://avatars.githubusercontent.com/u/172278187?v=4",
@@ -21850,7 +22341,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 53,
+      "rank": 55,
       "username": "ankitmindfiretraining-99",
       "id": 224015823,
       "avatar_url": "https://avatars.githubusercontent.com/u/224015823?v=4",
@@ -21913,7 +22404,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 54,
+      "rank": 56,
       "username": "narayan-mindfire",
       "id": 194910262,
       "avatar_url": "https://avatars.githubusercontent.com/u/194910262?v=4",
@@ -22004,7 +22495,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 55,
+      "rank": 57,
       "username": "JKAryan2003",
       "id": 138751636,
       "avatar_url": "https://avatars.githubusercontent.com/u/138751636?v=4",
@@ -22091,7 +22582,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 56,
+      "rank": 58,
       "username": "preetiganagi",
       "id": 34021994,
       "avatar_url": "https://avatars.githubusercontent.com/u/34021994?v=4",
@@ -22185,7 +22676,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 57,
+      "rank": 59,
       "username": "poonam-mindfire",
       "id": 109733267,
       "avatar_url": "https://avatars.githubusercontent.com/u/109733267?v=4",
@@ -22248,7 +22739,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 58,
+      "rank": 60,
       "username": "avishekthapamindfire0822",
       "id": 123073226,
       "avatar_url": "https://avatars.githubusercontent.com/u/123073226?v=4",
@@ -22322,7 +22813,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 59,
+      "rank": 61,
       "username": "vcs-anandkr",
       "id": 215844540,
       "avatar_url": "https://avatars.githubusercontent.com/u/215844540?v=4",
@@ -22415,7 +22906,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 60,
+      "rank": 62,
       "username": "Abhiadi12",
       "id": 57040284,
       "avatar_url": "https://avatars.githubusercontent.com/u/57040284?v=4",
@@ -22499,7 +22990,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 61,
+      "rank": 63,
       "username": "adityagantayat",
       "id": 68806094,
       "avatar_url": "https://avatars.githubusercontent.com/u/68806094?v=4",
@@ -22583,7 +23074,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 62,
+      "rank": 64,
       "username": "geekychandan",
       "id": 110468423,
       "avatar_url": "https://avatars.githubusercontent.com/u/110468423?v=4",
@@ -22702,7 +23193,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 63,
+      "rank": 65,
       "username": "101yogeshsharma",
       "id": 35485702,
       "avatar_url": "https://avatars.githubusercontent.com/u/35485702?v=4",
@@ -22765,7 +23256,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 64,
+      "rank": 66,
       "username": "taditdash",
       "id": 11786875,
       "avatar_url": "https://avatars.githubusercontent.com/u/11786875?v=4",
@@ -22849,7 +23340,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 65,
+      "rank": 67,
       "username": "jyotiprakashh",
       "id": 96424607,
       "avatar_url": "https://avatars.githubusercontent.com/u/96424607?v=4",
@@ -22912,7 +23403,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 66,
+      "rank": 68,
       "username": "Bhupesh-mfsi",
       "id": 137804674,
       "avatar_url": "https://avatars.githubusercontent.com/u/137804674?v=4",
@@ -22975,7 +23466,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 67,
+      "rank": 69,
       "username": "divyarbehera",
       "id": 20682504,
       "avatar_url": "https://avatars.githubusercontent.com/u/20682504?v=4",
@@ -23049,7 +23540,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 68,
+      "rank": 70,
       "username": "alokrajmindfire",
       "id": 225856934,
       "avatar_url": "https://avatars.githubusercontent.com/u/225856934?v=4",
@@ -23123,7 +23614,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 69,
+      "rank": 71,
       "username": "dipika-mindfire",
       "id": 236581176,
       "avatar_url": "https://avatars.githubusercontent.com/u/236581176?v=4",
@@ -23186,7 +23677,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 70,
+      "rank": 72,
       "username": "SiriMuramulla268",
       "id": 55407033,
       "avatar_url": "https://avatars.githubusercontent.com/u/55407033?v=4",
@@ -23246,10 +23737,10 @@
           }
         }
       },
-      "lastActiveDays": null
+      "lastActiveDays": 2
     },
     {
-      "rank": 71,
+      "rank": 73,
       "username": "jagannathmfs",
       "id": 87357401,
       "avatar_url": "https://avatars.githubusercontent.com/u/87357401?v=4",
@@ -23312,7 +23803,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 72,
+      "rank": 74,
       "username": "vamsivallepu",
       "id": 53989958,
       "avatar_url": "https://avatars.githubusercontent.com/u/53989958?v=4",
@@ -23375,7 +23866,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 73,
+      "rank": 75,
       "username": "VenkataSaiChandrakanthReddyVemireddy",
       "id": 52132401,
       "avatar_url": "https://avatars.githubusercontent.com/u/52132401?v=4",
@@ -23438,7 +23929,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 74,
+      "rank": 76,
       "username": "uzerjamal-mfsi",
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
@@ -23498,10 +23989,10 @@
           }
         }
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
-      "rank": 75,
+      "rank": 77,
       "username": "rsumit123",
       "id": 24500659,
       "avatar_url": "https://avatars.githubusercontent.com/u/24500659?v=4",
@@ -23564,7 +24055,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 76,
+      "rank": 78,
       "username": "nowoptics-deepak",
       "id": 205750247,
       "avatar_url": "https://avatars.githubusercontent.com/u/205750247?v=4",
@@ -23627,7 +24118,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 77,
+      "rank": 79,
       "username": "sumanb-mindfire",
       "id": 190595003,
       "avatar_url": "https://avatars.githubusercontent.com/u/190595003?v=4",
@@ -23690,7 +24181,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 78,
+      "rank": 80,
       "username": "mfsi-waseema",
       "id": 5079169,
       "avatar_url": "https://avatars.githubusercontent.com/u/5079169?v=4",

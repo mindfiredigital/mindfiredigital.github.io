@@ -108,9 +108,6 @@ export function usePackageStats() {
       const response = await fetch(url);
 
       if (!response.ok) {
-        console.log(
-          `Failed to fetch download stats for ${packageName} (${period}): ${response.statusText}`
-        );
         setLoading(false);
         return { downloads: [] }; // ← RETURN EMPTY instead of throwing
       }
@@ -119,7 +116,6 @@ export function usePackageStats() {
       setLoading(false);
       return data;
     } catch (error) {
-      console.error(`Error fetching stats for ${packageName}:`, error);
       setLoading(false);
       return { downloads: [] }; // ← RETURN EMPTY on error
     }

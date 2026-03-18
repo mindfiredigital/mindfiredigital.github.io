@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import packagesData from "../src/asset/packages.json" with { type: "json" };
+import logger from "../src/app/utils/logger.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,7 +46,7 @@ export async function fetchData(
       clearTimeout(timeoutId);
       const isLastAttempt = attempt === retries;
       const isAbort = error.name === "AbortError";
-      console.warn(
+      logger.warn(
         `Fetch attempt ${attempt} failed for ${url}: ${error.message}`
       );
       if (isLastAttempt || isAbort) {

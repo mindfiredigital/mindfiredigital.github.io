@@ -183,7 +183,7 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
       link.href = dataUrl;
       link.click();
     } catch (err) {
-      console.error("Failed to download image:", err);
+      return void err;
     } finally {
       setIsDownloading(false);
     }
@@ -201,7 +201,7 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
       setCopied(true);
       setTimeout(() => setCopied(false), COPIED_RESET_MS);
     } catch (err) {
-      console.error("Failed to copy image:", err);
+      return void err;
     } finally {
       setIsCopying(false);
     }
