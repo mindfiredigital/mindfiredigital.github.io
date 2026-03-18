@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import projectsImage from "../../../../public/images/projects.webp";
 import { PROJECTS_HEROZ } from "@/constants";
 
 /* Hero banner section displayed at the top of the Projects page */
@@ -32,7 +31,7 @@ export default function ProjectsHero() {
 
         {/* Right side illustration for the hero section */}
         <Image
-          src={projectsImage}
+          src='/images/projects.webp'
           alt='projects'
           className='max-lg:w-full object-contain'
           height='500'

@@ -1,7 +1,6 @@
 import React from "react";
 import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper"; // Custom component for typing animation effect
 import Image from "next/image"; // Next.js optimized image component
-import particleAnimation from "../../public/images/particle_animation_optimised.gif"; // Hero section animation
 import Link from "next/link"; // Next.js client-side navigation
 import { HOME } from "@/constants"; // Centralized text/content constants
 
@@ -34,7 +33,7 @@ export default function Home() {
 
       {/* Right section: Animated illustration */}
       <Image
-        src={particleAnimation}
+        src='/images/particle_animation_optimised.gif'
         height='410'
         width='410'
         alt='particle_animation'

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "update-all": "node updateScript/updateProject.mjs && node updateScript/updatePackages.mjs && node updateScript/make-cache.mjs && node updateScript/make-leaderboard.mjs && node updateScript/make-periodic-table.mjs",
+    "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "build:ci": "next build && touch ./build/.nojekyll",
     "test": "npm run test:unit && npm run test:components && npm run test:integration",
@@ -76,6 +76,7 @@
     "prettier": "^3.1.1",
     "serve": "^14.2.1",
     "tailwindcss": "^3",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   },
   "release": {

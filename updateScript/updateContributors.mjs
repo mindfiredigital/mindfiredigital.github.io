@@ -2,7 +2,7 @@ import { gitBaseUrl, gitOwner, githubToken } from "./config.mjs";
 import { fetchData } from "./config.mjs";
 import fs from "fs";
 import axios from "axios";
-import logger from "../src/app/utils/logger.ts";
+import logger from "../src/app/utils/logger.mjs";
 
 const PROJECTS_PATH = "./src/asset/projects.json";
 const MAPPING_PATH = "./src/asset/contributor-mapping.json";

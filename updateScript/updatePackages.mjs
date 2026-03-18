@@ -1,6 +1,6 @@
 import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
 import { fetchData, writeJsonToFile } from "./config.mjs";
-import logger from "../src/app/utils/logger.ts";
+import logger from "../src/app/utils/logger.mjs";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

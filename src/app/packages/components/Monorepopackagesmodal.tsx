@@ -6,13 +6,7 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { MonorepoPackagesModalProps } from "@/types";
 import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL } from "@/constants";
-import { getFrameworkName } from "../../utils";
-
-import npm from "../../../../public/images/social-media/npm-svgrepo-com.svg";
-import pypi from "../../../../public/images/social-media/pypi-svg.svg";
-import filter from "../../../../public/images/social-media/bx-filter-alt.svg";
-import download from "../../../../public/images/bxs-download.svg";
-import github from "../../../../public/images/bxl-github.svg";
+import { getFrameworkName } from "@/app/utils";
 
 /**
  * MonorepoPackagesModal
@@ -113,7 +107,7 @@ export default function MonorepoPackagesModal({
                               </div>
                               <div className='flex items-center gap-2 text-sm text-gray-600'>
                                 <Image
-                                  src={download}
+                                  src='/images/bxs-download.svg'
                                   height={16}
                                   width={16}
                                   alt='downloads'
@@ -138,7 +132,7 @@ export default function MonorepoPackagesModal({
                                 title={PACKAGE_CARD_LABELS.filterTitle}
                               >
                                 <Image
-                                  src={filter}
+                                  src='/images/social-media/bx-filter-alt.svg'
                                   height={20}
                                   width={20}
                                   alt='filter'
@@ -156,7 +150,11 @@ export default function MonorepoPackagesModal({
                                   className='hover:opacity-75 transition-opacity'
                                 >
                                   <Image
-                                    src={pkg.type === "pypi" ? pypi : npm}
+                                    src={
+                                      pkg.type === "pypi"
+                                        ? "/images/social-media/pypi-svg.svg"
+                                        : "/images/social-media/npm-svgrepo-com.svg"
+                                    }
                                     height={35}
                                     width={35}
                                     alt='package'
@@ -174,7 +172,7 @@ export default function MonorepoPackagesModal({
                                 className='hover:opacity-75 transition-opacity'
                               >
                                 <Image
-                                  src={github}
+                                  src='/images/bxl-github.svg'
                                   height={30}
                                   width={30}
                                   alt='github'

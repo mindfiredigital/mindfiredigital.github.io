@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import download from "../../../../public/images/bxs-download.svg";
-import { BorderBeam } from "../../../components/shared/BorderBeam";
+import { BorderBeam } from "@/components/shared/BorderBeam";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { TotalDownloadsProps } from "@/types";
 import { PACKAGE_CARD_LABELS } from "@/constants";
@@ -21,7 +20,7 @@ const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
     <div className='relative rounded-full'>
       <div className='relative flex items-center gap-2 bg-white/90 border border-gray-200 backdrop-blur-sm rounded-full shadow-md shadow-orange-200 py-2 px-5 hover:shadow-xl transition-shadow duration-300'>
         <Image
-          src={download}
+          src='/images/bxs-download.svg'
           height={22}
           width={22}
           loading='lazy'
