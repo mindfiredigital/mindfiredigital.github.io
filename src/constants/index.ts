@@ -10,6 +10,7 @@ export * from "./currentProject.constant";
 export * from "./packages.constant";
 export * from "./project.constant";
 export * from "./home.constant";
+export * from "./footer.constant";
 
 import redirectIcon from "../../public/images/social-media/maximize.png";
 import { Navigation } from "@/types";
