@@ -65,3 +65,36 @@
 }
 2026-03-18 10:34:39 [error]: Error fetching events for anandmindfire: Error: HTTP 422: In order to keep the API fast for everyone, pagination is limited for this resource.
 2026-03-18 10:39:07 [error]: Failed to update packages: Error: Failed to fetch https://directus.ourgoalplan.co.in/graphql after 3 attempts: fetch failed
+2026-03-18 12:46:59 [error]: Error fetching repositories for mindfiredigital: Failed to fetch https://api.github.com/users/mindfiredigital/repos?per_page=100&page=1 after 3 attempts: HTTP 401 - Unauthorized: {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/neo-pusher
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/MobileQuickLaunchKit-iOS
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/nft-marketplace
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/fmdapi-node-weaver
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/MobileQuickLaunchKit-Android
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/extension-methods
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/document-editor
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/js-serverless-monorepo-boilerplate
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/angular-canvas-document-editor
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/OpenRecap
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/eslint-plugin-hub
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/TextIgniterJS
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/FireKubeX
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/ignix-ui
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/SQLRAG
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/react-text-igniter
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/AIHealthCounsellor
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/DeepScanBot
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/QuickLaunchReactNativeKit
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/nextjs-fortress
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/canvas-editor
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/AUTOTEST
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/page-builder
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/MonoDog
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/PivotHead
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/filemaker-listview-addon
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/Multi-Agent-Knowledge-Graph-Chatbot
+2026-03-18 12:47:00 [error]: Failed to fetch data for mindfiredigital/Smart-CodeGen-ML-Agent
