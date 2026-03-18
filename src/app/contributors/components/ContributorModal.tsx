@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { ContributorModalProps } from "@/types";
 import { MODAL_SECTION_TITLES, SCORE_BARS } from "@/constants";
-import { useContributorModal } from "@/hooks/useContributorModal";
+import { useContributorModal } from "@/hooks";
 
 // Inner component — only rendered when contributor is guaranteed non-null
 function ContributorModalInner({

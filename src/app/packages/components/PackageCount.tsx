@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { BorderBeam } from "@/components/shared/BorderBeam";
 import { PackageCountProps } from "@/types";
-import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "@/hooks";
 
 /**
  * PackageCount Component

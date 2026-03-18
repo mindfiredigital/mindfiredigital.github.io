@@ -4,7 +4,7 @@ import Image from "next/image";
 import project from "../../../../public/images/social-media/project.svg";
 import { BorderBeam } from "../../../components/shared/BorderBeam";
 import { ProjectCountProps } from "@/types";
-import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "@/hooks";
 import { COUNT_DURATION } from "@/constants";
 
 /* Displays an animated project count badge with visual effects */

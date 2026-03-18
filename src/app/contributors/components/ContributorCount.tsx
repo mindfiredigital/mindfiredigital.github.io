@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { BorderBeam } from "@/components/shared/BorderBeam";
 import { ContributorCountProps } from "@/types";
-import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "@/hooks";
 
 const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
   /* Animate contributor count */

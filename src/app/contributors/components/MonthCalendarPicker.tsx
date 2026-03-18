@@ -1,5 +1,5 @@
 import { CALENDAR_PICKER_LABELS, MONTH_NAMES_SHORT } from "@/constants";
-import { useMonthCalendarPicker } from "@/hooks/useMonthcalendarpicker";
+import { useMonthCalendarPicker } from "@/hooks";
 
 /* Month + Year calendar picker dropdown */
 export function MonthCalendarPicker({
