@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T03:36:43.866Z",
+  "generated_at": "2026-03-18T06:06:59.387Z",
   "period": "monthly",
   "month_label": "January 2024",
   "month_key": "2024-01",
@@ -72,9 +72,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.08,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 10,
@@ -121,9 +119,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -170,9 +166,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FMDAPI Node Weaver"
-      ],
+      "projects": ["FMDAPI Node Weaver"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
