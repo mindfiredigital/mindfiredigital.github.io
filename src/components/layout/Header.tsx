@@ -9,6 +9,7 @@ import ExternalRedirectIcon from "../shared/icons/ExternalRedirectIcon";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/app/utils";
 
+/* Header with navigation, dropdowns, and mobile menu */
 const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -40,8 +41,9 @@ const Header = () => {
               />
             </Link>
 
+            {/* Mobile menu toggle */}
             <Disclosure.Button className='md:hidden focus:outline-none'>
-              <span className='sr-only'>Open main menu</span>
+              <span className='sr-only'>{HEADER.opneMainMenu}</span>
               <div className='flex flex-col gap-1'>
                 <span
                   className={cn(
@@ -64,6 +66,7 @@ const Header = () => {
               </div>
             </Disclosure.Button>
 
+            {/* Desktop navigation */}
             <div className='hidden md:flex items-center gap-20'>
               <ul className='flex gap-9'>
                 {navigations.map((navigation, index) => (

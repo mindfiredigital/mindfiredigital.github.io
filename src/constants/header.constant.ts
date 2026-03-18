@@ -3,4 +3,5 @@ export const HEADER = {
   currentProject: "Current Projects",
   upcomingProject: "Upcoming Projects",
   joinUs: "Join Us!",
+  opneMainMenu: "Open main menu",
 };
