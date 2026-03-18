@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import github from "../../../../public/images/social-media/gitprofile.png";
-import { BorderBeam } from "../../../components/shared/BorderBeam";
+import { BorderBeam } from "@/components/shared/BorderBeam";
 import { ContributorCountProps } from "@/types";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
@@ -21,7 +20,7 @@ const ContributorCount = ({ totalContributors }: ContributorCountProps) => {
 
         {/* GitHub icon */}
         <Image
-          src={github}
+          src='/images/social-media/gitprofile.png'
           height={20}
           width={20}
           alt='github_contributors'

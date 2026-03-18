@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import npm from "../../../../public/images/social-media/package.svg";
-import { BorderBeam } from "../../../components/shared/BorderBeam";
+import { BorderBeam } from "@/components/shared/BorderBeam";
 import { PackageCountProps } from "@/types";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
@@ -36,7 +35,7 @@ const PackageCount = ({ totalPackages }: PackageCountProps) => {
 
         {/* Package icon with bounce animation */}
         <Image
-          src={npm}
+          src='/images/social-media/package.svg'
           height={30}
           width={30}
           loading='lazy'

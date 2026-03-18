@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import logger from "../src/app/utils/logger.ts";
+import logger from "../src/app/utils/logger.mjs";
 
 /* CONFIGURATION */
 

@@ -6,13 +6,6 @@ import Image from "next/image";
 import { PackageCardProps } from "@/types";
 import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL } from "@/constants";
 
-import npm from "../../../../public/images/social-media/npm-svgrepo-com.svg";
-import pypi from "../../../../public/images/social-media/pypi-svg.svg";
-import filter from "../../../../public/images/social-media/bx-filter-alt.svg";
-import download from "../../../../public/images/bxs-download.svg";
-import github from "../../../../public/images/bxl-github.svg";
-import nuget from "../../../../public/images/social-media/nuget-svgrepo-com.png";
-
 /**
  * PackageCard Component
  *
@@ -52,7 +45,7 @@ export default function PackageCard({
         <div className='flex flex-col items-end'>
           <div className='flex flex-row items-center space-x-1'>
             <Image
-              src={download}
+              src='/images/bxs-download.svg'
               height={18}
               width={18}
               alt='downloads'
@@ -78,7 +71,7 @@ export default function PackageCard({
             title={PACKAGE_CARD_LABELS.filterTitle}
           >
             <Image
-              src={filter}
+              src='/images/social-media/bx-filter-alt.svg'
               height={20}
               width={20}
               alt='filter'
@@ -119,10 +112,10 @@ export default function PackageCard({
               <Image
                 src={
                   group.packages[0].type?.toLowerCase() === "pypi"
-                    ? pypi
+                    ? "/images/social-media/pypi-svg.svg"
                     : group.packages[0].type === "Nuget"
-                      ? nuget
-                      : npm
+                      ? "/images/social-media/nuget-svgrepo-com.png"
+                      : "/images/social-media/npm-svgrepo-com.svg"
                 }
                 height={35}
                 width={35}
@@ -140,7 +133,7 @@ export default function PackageCard({
             title={PACKAGE_CARD_LABELS.githubTitle}
           >
             <Image
-              src={github}
+              src='/images/bxl-github.svg'
               height={30}
               width={30}
               alt='github'

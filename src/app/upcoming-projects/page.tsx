@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import projectsImage from "../../../public/images/projects.webp";
 import ProjectGrid from "../projects/components/ProjectGrid";
 import upcomingProjectData from "@/asset/upcomingProjects.json";
 import { PROJECTS_HERO } from "@/constants";
@@ -36,7 +35,7 @@ export default function ProjectsPage() {
 
           {/* Right section hero illustration */}
           <Image
-            src={projectsImage}
+            src='/images/projects.webp'
             alt='group-of-people-gathered-around-wooden-table'
             className='max-lg:w-full object-contain'
             height='500'

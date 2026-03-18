@@ -11,7 +11,7 @@ import {
   npmPackages,
   pypiPackages,
 } from "./config.mjs";
-import logger from "../src/app/utils/logger.ts";
+import logger from "../src/app/utils/logger.mjs";
 
 async function getRepoData(owner, repo) {
   if (!owner || !repo) return null;

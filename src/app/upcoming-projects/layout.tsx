@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import meta from "../../metadata/metadata.json";
+import meta from "@/metadata/metadata.json";
 
 export const metadata: Metadata = {
   title: meta["Upcoming-Projects"].title,

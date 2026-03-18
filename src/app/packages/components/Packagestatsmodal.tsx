@@ -11,8 +11,6 @@ import {
   DATE_PICKER_LABELS,
 } from "@/constants";
 
-import download from "../../../../public/images/bxs-download.svg";
-
 /**
  * PackageStatsModal
  *
@@ -193,7 +191,7 @@ export default function PackageStatsModal({
                         <div className='flex flex-col items-center'>
                           <div className='flex flex-row items-center space-x-1'>
                             <Image
-                              src={download}
+                              src='/images/bxs-download.svg'
                               height={20}
                               width={20}
                               alt='downloads'
