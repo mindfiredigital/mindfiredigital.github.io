@@ -6,7 +6,9 @@ import { FOOTER } from "@/constants";
 
 const Footer = () => {
   return (
+    /* Main footer container */
     <footer className='flex flex-col-reverse lg:flex-row gap-4 lg:justify-between items-center px-6 py-5 text-sm'>
+      {/* Copyright + brand */}
       <div className='tracking-wider'>
         <span>&copy; {new Date().getFullYear()} </span>
         <Link href='https://www.mindfiredigitalllp.com/' target='_blank'>
@@ -14,12 +16,15 @@ const Footer = () => {
         </Link>
         <span>{FOOTER.subheading}</span>
       </div>
+      {/* Policy links */}
       <div className='flex flex-col md:flex-row md:items-center md:gap-10'>
         <Link href='/privacy-policy'>{FOOTER.privacyPolicy}</Link>
         <Link href='/cookie-policy'>{FOOTER.cookiePolicy}</Link>
         <Link href='/terms-of-use'>{FOOTER.termsOfUse}</Link>
       </div>
+      {/* Divider for mobile */}
       <div className='h-[0.2px] bg-mf-light-grey w-full my-4 lg:hidden'></div>
+      {/* Social media icons */}
       <div className='flex flex-wrap gap-4'>
         <Link href='https://www.facebook.com/MindfireSolutions' target='_blank'>
           <Image
@@ -29,6 +34,7 @@ const Footer = () => {
             alt='facebook_img'
           />
         </Link>
+
         <Link
           href='https://www.instagram.com/mindfiresolutions/'
           target='_blank'
@@ -40,6 +46,7 @@ const Footer = () => {
             alt='instagram_img'
           />
         </Link>
+
         <Link href='https://twitter.com/mindfires' target='_blank'>
           <Image
             src='/images/social-media/twitter.png'
@@ -48,6 +55,7 @@ const Footer = () => {
             alt='twitter_img'
           />
         </Link>
+
         <Link
           href='https://www.linkedin.com/company/mindfire-solutions/'
           target='_blank'
