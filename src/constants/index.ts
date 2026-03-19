@@ -13,3 +13,4 @@ export * from "./home.constant";
 export * from "./footer.constant";
 export * from "./header.constant";
 export * from "./notFound.constant";
+export * from "./error.constant";
