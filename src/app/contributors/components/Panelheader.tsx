@@ -1,9 +1,26 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { PanelHeaderProps } from "@/types";
 import { TABS, PANEL_HEADER } from "@/constants";
-import { MonthCalendarPicker } from "./MonthCalendarPicker";
+
+/* Dynamically imported — only needed when user switches to monthly tab */
+/* Named export requires .then() remapping for Next.js dynamic to work */
+const MonthCalendarPicker = dynamic(
+  () =>
+    import("./MonthCalendarPicker").then((mod) => ({
+      default: mod.MonthCalendarPicker,
+    })),
+  {
+    /* Pulse placeholder matching the trigger button height while loading */
+    loading: () => (
+      <div className='mt-2.5 w-full h-9 rounded-xl bg-gray-100 animate-pulse' />
+    ),
+    /* No SSR — purely interactive client-only dropdown with refs and state */
+    ssr: false,
+  }
+);
 
 export default function PanelHeader({
   activeTab,
@@ -58,6 +75,8 @@ export default function PanelHeader({
             {PANEL_HEADER.topCountSuffix}
           </p>
         </div>
+
+        {/* Live indicator badge */}
         <div className='ml-auto flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 border border-red-100 flex-shrink-0'>
           <span className='w-1.5 h-1.5 rounded-full bg-mf-red animate-pulse' />
           <span className='text-[10px] font-bold text-mf-red uppercase tracking-wide'>
@@ -193,7 +212,7 @@ export default function PanelHeader({
         </button>
       </div>
 
-      {/* Monthly calendar picker — only visible on monthly tab */}
+      {/* Monthly calendar picker — dynamically loaded only when monthly tab is active */}
       {activeTab === "monthly" && (
         <MonthCalendarPicker
           availableMonths={availableMonths}
