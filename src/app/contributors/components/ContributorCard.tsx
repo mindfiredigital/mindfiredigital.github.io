@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import {
   GitCommit,
   GitPullRequest,
@@ -12,7 +12,8 @@ import { ContributorCardProps } from "@/types";
 import { getRankStyles } from "@/app/utils";
 import { CONTRIBUTOR_CARD_LABELS } from "@/constants";
 
-export default function ContributorCard({
+/* Memoized to prevent re-renders when parent re-renders but props haven't changed */
+const ContributorCard = memo(function ContributorCard({
   contributor,
   displayRank,
   onViewDetails,
@@ -156,4 +157,9 @@ export default function ContributorCard({
       </div>
     </div>
   );
-}
+});
+
+/* Display name for React DevTools debugging */
+ContributorCard.displayName = "ContributorCard";
+
+export default ContributorCard;
