@@ -3,7 +3,7 @@
 import React from "react";
 import { TopScorersPanelProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
-import { useTopScorersPanel } from "@/hooks/useTopScorePanel";
+import { useTopScorersPanel } from "@/hooks";
 import PanelHeader from "./Panelheader";
 import PanelBody from "./Panelbody";
 

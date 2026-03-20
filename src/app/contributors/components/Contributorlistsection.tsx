@@ -16,10 +16,11 @@ export default function ContributorListSection({
     <div ref={sectionRef} className='mt-12 pb-16 px-6'>
       {/* Section heading + "X of Y" filter count badge */}
       <div className='flex items-center justify-center gap-4 mb-8'>
-        <h2 className='text-3xl font-medium text-gray-800'>
+        <h2 className='text-3xl font-medium text-mf-dark'>
           {CONTRIBUTORS_LIST.heading}
         </h2>
-        <span className='bg-white border border-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-mindfire-text-red shadow-sm'>
+        {/* mindfire-text-red → mf-red, border-gray-200 → border-mf-border-soft */}
+        <span className='bg-white border border-mf-border-soft rounded-full px-4 py-1 text-sm font-semibold text-mf-red shadow-sm'>
           {filteredAndSorted.length} of {totalCount}
         </span>
       </div>
@@ -36,10 +37,7 @@ export default function ContributorListSection({
           ))}
         </div>
       ) : (
-        /*
-         * Empty state — shown when filters/search produce no results.
-         * Reset button clears all filters and search query.
-         */
+        /* Empty state */
         <div className='flex flex-col justify-center items-center h-64 gap-3'>
           <p className='text-xl text-mf-light-grey tracking-wide'>
             {CONTRIBUTORS_LIST.emptyMessage}
