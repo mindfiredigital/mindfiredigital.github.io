@@ -1,0 +1,1 @@
+"use strict";exports.id=4195,exports.ids=[4195],exports.modules={94195:(e,d,t)=>{Object.defineProperty(d,"__esModule",{value:!0}),d.getMachineId=void 0;let i=t(87017);async function getMachineId(){i.diag.debug("could not read machine-id: unsupported platform")}d.getMachineId=getMachineId}};

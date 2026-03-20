@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T03:28:00.551Z",
+  "generated_at": "2026-03-18T06:06:59.514Z",
   "period": "monthly",
   "month_label": "February 2025",
   "month_key": "2025-02",
@@ -19,11 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 137,
       "projectsWorkingOn": 3,
-      "projects": [
-        "Page Builder",
-        "Pivothead",
-        "Document Editor"
-      ],
+      "projects": ["Page Builder", "Pivothead", "Document Editor"],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 1,
@@ -70,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.18,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -119,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.9,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 4,
@@ -168,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.56,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 3,
@@ -217,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.44,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -266,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.6,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -299,7 +285,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 5
     },
     {
       "rank": 7,
@@ -315,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.43,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Document Editor"
-      ],
+      "projects": ["Document Editor"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -364,9 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -413,9 +395,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -446,7 +426,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 15
     },
     {
       "rank": 10,
@@ -462,9 +442,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Document Editor"
-      ],
+      "projects": ["Document Editor"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -511,9 +489,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T03:28:00.440Z",
+  "generated_at": "2026-03-18T06:06:59.333Z",
   "period": "monthly",
   "month_label": "June 2023",
   "month_key": "2023-06",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "NFT Marketplace"
-      ],
+      "projects": ["NFT Marketplace"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
