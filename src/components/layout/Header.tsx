@@ -2,14 +2,14 @@
 
 import React from "react";
 import { Disclosure } from "@headlessui/react";
-import { navigations } from "@/constants";
+import { HEADER, navigations } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import mindfireFossLogo from "../../../public/images/mindfire_foss_logo.png";
 import ExternalRedirectIcon from "../shared/icons/ExternalRedirectIcon";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/app/utils";
 
+/* Header with navigation, dropdowns, and mobile menu */
 const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -33,11 +33,17 @@ const Header = () => {
         <>
           <div className='px-6 py-2 flex justify-between items-center'>
             <Link href='/'>
-              <Image src={mindfireFossLogo} width={140} alt='logo' />
+              <Image
+                src='/images/mindfire_foss_logo.png'
+                width={140}
+                alt='logo'
+                height={150}
+              />
             </Link>
 
+            {/* Mobile menu toggle */}
             <Disclosure.Button className='md:hidden focus:outline-none'>
-              <span className='sr-only'>Open main menu</span>
+              <span className='sr-only'>{HEADER.opneMainMenu}</span>
               <div className='flex flex-col gap-1'>
                 <span
                   className={cn(
@@ -60,6 +66,7 @@ const Header = () => {
               </div>
             </Disclosure.Button>
 
+            {/* Desktop navigation */}
             <div className='hidden md:flex items-center gap-20'>
               <ul className='flex gap-9'>
                 {navigations.map((navigation, index) => (
@@ -76,7 +83,7 @@ const Header = () => {
                           aria-expanded='true'
                           aria-haspopup='true'
                         >
-                          <span>Projects</span>
+                          <span>{HEADER.projects}</span>
                         </Link>
                         <div
                           className='projects-dropdown transition-all invisible absolute py-2 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
@@ -90,7 +97,7 @@ const Header = () => {
                             }
                             className='block w-full text-left px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
                           >
-                            Current Projects
+                            {HEADER.currentProject}
                           </button>
                           <button
                             onClick={() =>
@@ -98,7 +105,7 @@ const Header = () => {
                             }
                             className='block w-full text-left px-4 py-2 hover:bg-mindfire-text-red hover:text-white'
                           >
-                            Upcoming Projects
+                            {HEADER.upcomingProject}
                           </button>
                         </div>
                       </div>
@@ -132,7 +139,7 @@ const Header = () => {
                 href='/join-us'
                 className='text-white bg-mf-red font-medium text-base rounded-full px-5 py-2 text-center tracking-wide'
               >
-                Join Us!
+                {HEADER.joinUs}
               </Link>
             </div>
           </div>
@@ -148,7 +155,7 @@ const Header = () => {
                         href={navigation.path[0]}
                         className='text-mf-red font-semibold'
                       >
-                        Projects
+                        {HEADER.projects}
                       </Link>
                       <ul className='ml-4 mt-2 flex flex-col gap-2'>
                         <li>
@@ -158,7 +165,7 @@ const Header = () => {
                             }
                             className='text-gray-700 hover:text-mf-red text-left'
                           >
-                            Current Projects
+                            {HEADER.currentProject}
                           </button>
                         </li>
                         <li>
@@ -168,7 +175,7 @@ const Header = () => {
                             }
                             className='text-gray-700 hover:text-mf-red text-left'
                           >
-                            Upcoming Projects
+                            {HEADER.upcomingProject}
                           </button>
                         </li>
                       </ul>
@@ -200,7 +207,7 @@ const Header = () => {
               href='/join-us'
               className='mt-6 inline-block text-white bg-mf-red font-medium text-base rounded-full px-5 py-2 text-center tracking-wide'
             >
-              Join Us!
+              {HEADER.joinUs}
             </Link>
           </Disclosure.Panel>
         </>

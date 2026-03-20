@@ -9,7 +9,7 @@ import ContributorListSection from "./components/Contributorlistsection";
 import contributorList from "@/asset/contributors.json";
 import leaderboardData from "@/asset/leaderboard.json";
 import { Contributor, TopScorer } from "@/types";
-import { useContributorFilters } from "@/hooks/Usecontributorfilters";
+import { useContributorFilters } from "@/hooks";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];

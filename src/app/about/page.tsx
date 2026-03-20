@@ -15,12 +15,12 @@ import {
 const About = () => {
   return (
     <>
-      {/* Hero section */}
-      <section className='bg-slate-50'>
+      {/* Hero section — bg-slate-50 replaced with semantic mf-bg-subtle */}
+      <section className='bg-mf-bg-subtle'>
         <div className='flex flex-col lg:flex-row justify-between lg:p-6 lg:px-10'>
           {/* Hero text content */}
           <div className='px-8 lg:basis-2/5 py-16 lg:pl-0'>
-            <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+            <h1 className='text-4xl leading-10 md:text-5xl max-w-lg md:!leading-[3.5rem] tracking-wide text-mf-dark'>
               {ABOUT_HERO.heading}
             </h1>
 
@@ -28,19 +28,16 @@ const About = () => {
               {ABOUT_HERO.subheading}
             </p>
 
-            {/* CTA buttons */}
+            {/* CTA buttons — use canonical btn-mf-primary */}
             <div className='flex flex-wrap items-start gap-6 mt-10'>
-              <Link
-                href='/projects'
-                className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
-              >
+              <Link href='/projects' className='btn-mf-primary tracking-widest'>
                 {ABOUT_HERO.exploreLabel}
               </Link>
 
               <Link
                 target='_blank'
                 href={ABOUT_HERO.contactHref}
-                className='bg-mf-red text-center text-white tracking-widest capitalize rounded-full px-8 py-3'
+                className='btn-mf-primary tracking-widest'
               >
                 {ABOUT_HERO.contactLabel}
               </Link>
@@ -83,7 +80,7 @@ const About = () => {
         <div className='text-center'>
           <Link
             href='/projects#all-projects'
-            className='bg-mf-red tracking-wider text-white rounded-full px-5 py-3'
+            className='btn-mf-primary tracking-wider'
           >
             {ABOUT_CONTRIBUTIONS.exploreLabel}
           </Link>

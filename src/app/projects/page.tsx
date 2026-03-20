@@ -19,8 +19,8 @@ import {
   TopScorer,
   ContributorMap,
 } from "../../types";
-import { useProjectFilters } from "@/hooks/useProjectFilters";
-import { useHashScroll } from "@/hooks/useHashScroll";
+import { useProjectFilters } from "@/hooks";
+import { useHashScroll } from "@/hooks";
 import { PROJECTS_HEROZ } from "@/constants";
 
 export default function ProjectsPage() {

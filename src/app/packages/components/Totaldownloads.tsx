@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { BorderBeam } from "@/components/shared/BorderBeam";
-import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "@/hooks";
 import { TotalDownloadsProps } from "@/types";
 import { PACKAGE_CARD_LABELS } from "@/constants";
 
