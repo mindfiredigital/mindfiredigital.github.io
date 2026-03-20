@@ -5,10 +5,10 @@ export default function Loading() {
       {/* Skeleton header block */}
       <div className='mb-10'>
         {/* Skeleton title bar */}
-        <div className='h-8 w-[38%] rounded bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer mb-3' />
+        <div className='skeleton h-8 w-[38%] mb-3' />
 
         {/* Skeleton subtitle bar */}
-        <div className='h-4 w-[22%] rounded bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer' />
+        <div className='skeleton h-4 w-[22%]' />
       </div>
 
       {/* Skeleton card grid — 6 placeholder cards */}
@@ -17,21 +17,21 @@ export default function Loading() {
           /* Individual skeleton card */
           <div
             key={i}
-            className='border border-gray-100 rounded-lg overflow-hidden'
+            className='border border-mf-border rounded-lg overflow-hidden'
           >
             {/* Skeleton image placeholder */}
-            <div className='h-[180px] bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer' />
+            <div className='skeleton h-[180px]' />
 
             {/* Skeleton text lines */}
             <div className='p-4 flex flex-col gap-2'>
               {/* Wide line */}
-              <div className='h-3.5 w-[90%] rounded bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer' />
+              <div className='skeleton h-3.5 w-[90%]' />
 
               {/* Medium line */}
-              <div className='h-3.5 w-[65%] rounded bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer' />
+              <div className='skeleton h-3.5 w-[65%]' />
 
               {/* Short line */}
-              <div className='h-3.5 w-[40%] rounded bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer' />
+              <div className='skeleton h-3.5 w-[40%]' />
             </div>
           </div>
         ))}
