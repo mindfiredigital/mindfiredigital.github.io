@@ -105,6 +105,7 @@ export default function PanelHeader({
 
         {/* Download button */}
         <button
+          aria-label={PANEL_HEADER.downloadTitle}
           data-action-btn
           onClick={onDownload}
           disabled={isDownloading || isCopying}
@@ -150,6 +151,7 @@ export default function PanelHeader({
 
         {/* Copy button */}
         <button
+          aria-label={PANEL_HEADER.downloadTitle}
           data-action-btn
           onClick={onCopy}
           disabled={isCopying || isDownloading}

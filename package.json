@@ -6,7 +6,7 @@
     "dev": "next dev",
     "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
-    "build:ci": "next build && touch ./build/.nojekyll",
+    "build:ci": "next build && node -e \"require('fs').writeFileSync('./build/.nojekyll', '')\"",
     "test": "npm run test:unit && npm run test:components && npm run test:integration",
     "test:unit": "node --test tests/unit/*.test.mjs",
     "test:unit:watch": "node --test --watch tests/unit/*.test.mjs",
@@ -25,7 +25,12 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "pre-commit": "npm run check-format && npm run check-lint && npm run check-types",
     "update-projects": "node updateScript/updateProject.mjs",
-    "pypi-check": "node pypiTotalStats.mjs"
+    "pypi-check": "node pypiTotalStats.mjs",
+    "lighthouse": "lhci autorun",
+    "lighthouse:local": "lighthouse http://localhost:3000 --preset desktop --output html --output-path ./lighthouse-report.html --view --chrome-flags=\"--no-sandbox\"",
+    "lighthouse:ci": "npm run build:ci && npm run lighthouse",
+    "prelighthouse": "node clean-lh-tmp.mjs",
+    "lighthouse:all": "node clean-lh-tmp.mjs && lighthouse http://localhost:3000/ --preset desktop --output html --output-path ./lighthouse-reports/home.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/about/ --preset desktop --output html --output-path ./lighthouse-reports/about.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/projects/ --preset desktop --output html --output-path ./lighthouse-reports/projects.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/contributors/ --preset desktop --output html --output-path ./lighthouse-reports/contributors.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/packages/ --preset desktop --output html --output-path ./lighthouse-reports/packages.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\""
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",

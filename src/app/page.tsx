@@ -1,6 +1,5 @@
 import React from "react";
 import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper";
-import Image from "next/image";
 import Link from "next/link";
 import { HOME } from "@/constants";
 
@@ -29,13 +28,18 @@ export default function Home() {
       </div>
 
       {/* Right section: Animated illustration */}
-      <Image
-        src='/images/particle_animation_optimised.gif'
-        height='410'
-        width='410'
-        alt='particle_animation'
-        priority
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        width={410}
+        height={410}
+        style={{ width: 410, height: 410 }}
+      >
+        <source src='/images/particle_animation.webm' type='video/webm' />
+        <source src='/images/particle_animation.mp4' type='video/mp4' />
+      </video>
     </div>
   );
 }
