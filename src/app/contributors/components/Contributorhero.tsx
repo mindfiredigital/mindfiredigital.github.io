@@ -15,7 +15,8 @@ export default function ContributorHero({
     <div className='flex flex-col items-center text-center pt-10 px-6'>
       {/* Page heading + animated contributor count badge */}
       <div className='flex items-center justify-center gap-4'>
-        <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mindfire-text-black'>
+        {/* mindfire-text-black → mf-dark */}
+        <h1 className='text-4xl leading-10 md:text-5xl md:!leading-[3.5rem] tracking-wide text-mf-dark'>
           {CONTRIBUTORS_HERO.heading}
         </h1>
         <ContributorCount totalContributors={topScorers.length} />
@@ -23,7 +24,7 @@ export default function ContributorHero({
 
       {/* Top contributors subheading */}
       <div className='mt-6'>
-        <h2 className='text-2xl font-medium text-gray-800 mb-3'>
+        <h2 className='text-2xl font-medium text-mf-dark mb-3'>
           {CONTRIBUTORS_HERO.topContributorsHeading}
         </h2>
         <p className='text-xl text-mf-light-grey tracking-wide'>
