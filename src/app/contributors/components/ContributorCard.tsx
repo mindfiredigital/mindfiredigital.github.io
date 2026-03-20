@@ -31,11 +31,11 @@ const ContributorCard = memo(function ContributorCard({
         bg-white border ${rs.border}
         rounded-2xl overflow-hidden
         transition-all duration-300
-        hover:shadow-xl hover:-translate-y-0.5 ${rs.glow}
-        ${isTopThree ? "shadow-md" : "shadow-sm"}
+        hover:shadow-mf-card-hover hover:-translate-y-0.5 ${rs.glow}
+        ${isTopThree ? "shadow-mf-card" : "shadow-sm"}
       `}
     >
-      {/* Top 3 highlight bar */}
+      {/* Top 3 highlight bar — gradient via rs.scoreGradient (from-mf-red to-orange-500) */}
       {isTopThree && (
         <div className={`h-0.5 w-full bg-gradient-to-r ${rs.scoreGradient}`} />
       )}
@@ -48,7 +48,7 @@ const ContributorCard = memo(function ContributorCard({
               <img
                 src={contributor.avatar_url}
                 alt={contributor.username}
-                className='w-11 h-11 rounded-full ring-2 ring-gray-100 object-cover'
+                className='w-11 h-11 rounded-full ring-2 ring-mf-border object-cover'
               />
             </div>
 
@@ -58,12 +58,12 @@ const ContributorCard = memo(function ContributorCard({
                 href={contributor.html_url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='font-bold text-sm text-gray-900 truncate max-w-[130px] leading-tight block hover:text-mf-red transition-colors duration-150'
+                className='font-bold text-sm text-mf-dark truncate max-w-[130px] leading-tight block hover:text-mf-red transition-colors duration-150'
                 title={`@${contributor.username} on GitHub`}
               >
                 {contributor.username}
               </a>
-              <p className='text-[11px] text-gray-400 mt-0.5'>
+              <p className='text-[11px] text-mf-light-grey mt-0.5'>
                 {contributor.projectsWorkingOn} project
                 {contributor.projectsWorkingOn !== 1 ? "s" : ""}
               </p>
@@ -79,7 +79,7 @@ const ContributorCard = memo(function ContributorCard({
           </div>
         </div>
 
-        {/* Score section */}
+        {/* Score section — gradient text via rs.scoreGradient */}
         <div className='mb-4'>
           <div className='flex items-baseline gap-1.5'>
             <span
@@ -87,11 +87,11 @@ const ContributorCard = memo(function ContributorCard({
             >
               {contributor.total_score.toLocaleString()}
             </span>
-            <span className='text-xs text-gray-400 font-medium'>
+            <span className='text-xs text-mf-light-grey font-medium'>
               {CONTRIBUTOR_CARD_LABELS.scoreSuffix}
             </span>
           </div>
-          <p className='text-[10px] text-gray-400 mt-1 uppercase tracking-wide font-medium'>
+          <p className='text-[10px] text-mf-light-grey mt-1 uppercase tracking-wide font-medium'>
             {CONTRIBUTOR_CARD_LABELS.totalScoreLabel}
           </p>
         </div>
@@ -100,7 +100,7 @@ const ContributorCard = memo(function ContributorCard({
         <div className='flex-1' />
 
         {/* Stats section */}
-        <div className='flex items-center justify-between pt-3.5 border-t border-gray-100 mb-3'>
+        <div className='flex items-center justify-between pt-3.5 border-t border-mf-border mb-3'>
           {[
             {
               icon: <GitCommit className='w-3.5 h-3.5' />,
@@ -128,13 +128,13 @@ const ContributorCard = memo(function ContributorCard({
               className='flex flex-col items-center gap-0.5 group/stat'
               title={stat.title}
             >
-              <span className='text-gray-300 group-hover/stat:text-gray-500 transition-colors'>
+              <span className='text-mf-border-soft group-hover/stat:text-mf-light-grey transition-colors'>
                 {stat.icon}
               </span>
-              <span className='text-xs font-bold text-gray-700 tabular-nums'>
+              <span className='text-xs font-bold text-mf-dark tabular-nums'>
                 {stat.value}
               </span>
-              <span className='text-[9px] text-gray-400 uppercase tracking-wide'>
+              <span className='text-[9px] text-mf-light-grey uppercase tracking-wide'>
                 {stat.title}
               </span>
             </div>
@@ -145,10 +145,10 @@ const ContributorCard = memo(function ContributorCard({
         <button
           onClick={() => onViewDetails(contributor)}
           className='w-full flex items-center justify-center gap-1.5 py-2 rounded-xl
-            bg-gray-50 hover:bg-red-50
-            text-gray-500 hover:text-mf-red
+            bg-mf-bg-subtle hover:bg-mf-red-subtle
+            text-mf-light-grey hover:text-mf-red
             text-xs font-semibold
-            border border-gray-100 hover:border-red-100
+            border border-mf-border hover:border-mf-red-border
             transition-all duration-200 group/btn'
         >
           {CONTRIBUTOR_CARD_LABELS.viewProfileLabel}
