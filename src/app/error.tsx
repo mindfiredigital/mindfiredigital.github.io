@@ -25,18 +25,18 @@ export default function Error({
     <div className='min-h-[60vh] flex items-center justify-center px-4 py-16'>
       {/* Inner card container */}
       <div className='max-w-md w-full text-center'>
-        {/* Error badge label */}
-        <span className='inline-block text-[0.7rem] font-semibold tracking-[0.18em] uppercase text-red-600 bg-red-50 border border-red-200 px-3 py-1 rounded-sm mb-5'>
+        {/* Error badge label — uses brand red token */}
+        <span className='badge-mf-red text-[0.7rem] rounded-sm mb-5 inline-block'>
           {ERROR.error}
         </span>
 
         {/* Main error heading */}
-        <h2 className='text-3xl font-semibold text-gray-900 mb-3 leading-tight'>
+        <h2 className='text-3xl font-semibold text-mf-dark mb-3 leading-tight'>
           {ERROR.somethingWentWrong}
         </h2>
 
         {/* Error description — shows digest ID if available */}
-        <p className='text-gray-500 text-sm leading-relaxed mb-8'>
+        <p className='text-mf-light-grey text-sm leading-relaxed mb-8'>
           {error.digest
             ? `An unexpected error occurred (ID: ${error.digest}).`
             : "An unexpected error occurred. Please try again."}
@@ -47,7 +47,7 @@ export default function Error({
           {/* Primary action — retry the failed render */}
           <button
             onClick={reset}
-            className='bg-gray-900 text-white border border-gray-900 px-6 py-2.5 text-sm font-medium rounded hover:opacity-80 transition-opacity'
+            className='btn-mf-primary rounded text-sm py-2.5'
           >
             {ERROR.tryAgain}
           </button>
@@ -55,7 +55,7 @@ export default function Error({
           {/* Secondary action — navigate back to home */}
           <button
             onClick={() => (window.location.href = "/")}
-            className='bg-transparent text-gray-900 border border-gray-300 px-6 py-2.5 text-sm font-medium rounded hover:bg-gray-50 transition-colors'
+            className='btn-mf-secondary rounded text-sm py-2.5'
           >
             {ERROR.goHome}
           </button>
