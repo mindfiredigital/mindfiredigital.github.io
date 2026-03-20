@@ -1,8 +1,8 @@
 import React from "react";
-import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper"; // Custom component for typing animation effect
-import Image from "next/image"; // Next.js optimized image component
-import Link from "next/link"; // Next.js client-side navigation
-import { HOME } from "@/constants"; // Centralized text/content constants
+import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper";
+import Image from "next/image";
+import Link from "next/link";
+import { HOME } from "@/constants";
 
 export default function Home() {
   return (
@@ -23,10 +23,7 @@ export default function Home() {
         </div>
 
         {/* Call-to-action button linking to projects page */}
-        <Link
-          href='/projects'
-          className='text-white bg-mf-red font-medium text-base rounded-full px-6 py-3 text-center tracking-wide'
-        >
+        <Link href='/projects' className='btn-mf-primary text-base'>
           {HOME.explore_project}
         </Link>
       </div>
@@ -37,7 +34,7 @@ export default function Home() {
         height='410'
         width='410'
         alt='particle_animation'
-        priority // Ensures this hero image loads immediately for better UX
+        priority
       />
     </div>
   );
