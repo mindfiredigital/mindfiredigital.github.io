@@ -75,6 +75,38 @@ async function queuedNpmFetch(url) {
   return npmQueue.add(() => fetchWithRetry(url, 5, 2000));
 }
 
+// NEW - fetches true all-time total by chunking in 18-month windows
+async function getNpmTotalAllTime(packageName) {
+  const start = new Date("2015-01-10");
+  const end = new Date();
+  let total = 0;
+
+  let chunkStart = new Date(start);
+  while (chunkStart < end) {
+    let chunkEnd = new Date(chunkStart);
+    chunkEnd.setMonth(chunkEnd.getMonth() + 18);
+    if (chunkEnd > end) chunkEnd = end;
+
+    const s = chunkStart.toISOString().split("T")[0];
+    const e = chunkEnd.toISOString().split("T")[0];
+
+    const url = `https://api.npmjs.org/downloads/range/${s}:${e}/@mindfiredigital/${packageName}`;
+    try {
+      const data = await queuedNpmFetch(url);
+      if (data?.downloads) {
+        total += data.downloads.reduce((acc, d) => acc + d.downloads, 0);
+      }
+    } catch (error) {
+      logger.warn(`Failed to fetch chunk ${s}:${e} for ${packageName}`);
+    }
+
+    chunkStart = new Date(chunkEnd);
+    chunkStart.setDate(chunkStart.getDate() + 1);
+  }
+
+  return total;
+}
+
 export async function getAllStats(npmPackages, pypiPackages) {
   const statsMap = {};
 
@@ -95,10 +127,8 @@ export async function getAllStats(npmPackages, pypiPackages) {
       const dayStats = await getNpmStats(packageName, "last-day");
       const weekStats = await getNpmStats(packageName, "last-week");
       const yearStats = await getNpmStats(packageName, "last-year");
-      const totalStats = await getNpmStats(
-        packageName,
-        "1000-01-01:3000-01-01"
-      );
+      // FIXED - use chunked all-time instead of capped single range
+      const totalStats = await getNpmTotalAllTime(packageName);
 
       if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
         statsMap[packageName] = {
