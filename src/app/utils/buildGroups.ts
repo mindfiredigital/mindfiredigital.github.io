@@ -1,9 +1,21 @@
 import { Contributor, TopScorer, DisplayContributor } from "@/types";
 
+/*
+  BuildGroups function:
+  - Takes contributors and top scorers data
+  - Returns grouped data for UI display (like leaderboard sections)
+*/
 export function BuildGroups(
   contributors: Contributor[],
   topScorers: TopScorer[]
 ): { label: string; icon: string; items: DisplayContributor[] }[] {
+  /*
+    Active This Week
+    - Filters contributors active in last 7 days
+    - Sorts by most recently active
+    - Takes top 6
+    - Formats data for UI
+  */
   const activeThisWeek = [...contributors]
     .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 7)
     .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))
@@ -20,6 +32,11 @@ export function BuildGroups(
             : `Active ${c.lastActiveDays}d ago`,
     }));
 
+  /*
+     Active This Month
+    - Similar to above but for last 30 days
+    - Used as fallback if no weekly data
+  */
   const activeThisMonth = [...contributors]
     .filter((c) => c.lastActiveDays !== null && c.lastActiveDays <= 30)
     .sort((a, b) => (a.lastActiveDays ?? 99) - (b.lastActiveDays ?? 99))

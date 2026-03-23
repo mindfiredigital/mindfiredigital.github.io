@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 
+/*
+  Page-specific metadata for "Upcoming Projects"
+  - This will be automatically added to the <head> of this route
+  - Helps with SEO and social media previews
+*/
 export const metadata: Metadata = {
   title: meta["Upcoming-Projects"].title,
   description: meta["Upcoming-Projects"].description,
 
+  /*
+    Open Graph metadata
+    - Used by platforms like Facebook, LinkedIn, WhatsApp
+    - Controls preview (title, image, description) when link is shared
+  */
   openGraph: {
     title: meta["Upcoming-Projects"].title,
     description: meta["Upcoming-Projects"].description,

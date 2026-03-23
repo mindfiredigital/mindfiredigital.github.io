@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 
+/*
+  Metadata for "Terms of Use" page
+  - Automatically injected into <head> by Next.js
+  - Helps improve SEO and link previews
+*/
 export const metadata: Metadata = {
   title: meta["Terms-Of-Use"].title,
   description: meta["Terms-Of-Use"].description,
+  /*
+    Open Graph metadata
+    - Used by platforms like Facebook, LinkedIn, WhatsApp
+    - Controls how the page appears when shared
+  */
   openGraph: {
     title: meta["Terms-Of-Use"].title,
     description: meta["Terms-Of-Use"].description,
