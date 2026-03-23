@@ -9,20 +9,17 @@ import ExternalRedirectIcon from "../shared/icons/ExternalRedirectIcon";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/app/utils";
 
-/* Header with navigation, dropdowns, and mobile menu */
 const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
 
   const handleProjectScroll = (sectionId: string) => {
-    // If we're already on the projects page, just scroll
     if (pathname === "/projects") {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      // Navigate to projects page with the hash
       router.push(`/projects#${sectionId}`);
     }
   };
@@ -33,12 +30,16 @@ const Header = () => {
         <>
           <div className='px-6 py-2 flex justify-between items-center'>
             <Link href='/'>
-              <Image
-                src='/images/mindfire_foss_logo.png'
-                width={140}
-                alt='logo'
-                height={150}
-              />
+              <div className='w-[140px] h-[54px] relative flex-shrink-0'>
+                <Image
+                  src='/images/mindfire_foss_logo.png'
+                  fill
+                  sizes='140px'
+                  alt='Mindfire FOSS logo'
+                  priority
+                  className='object-contain'
+                />
+              </div>
             </Link>
 
             {/* Mobile menu toggle */}

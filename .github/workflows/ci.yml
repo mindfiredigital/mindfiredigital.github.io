@@ -6,7 +6,10 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # Runs every night at 12 am UTC
+    - cron: '0 0 * * *'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
@@ -17,21 +20,21 @@ jobs:
       packages: read
     steps:
       - name: 'Checkout repository'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24  
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Install dependencies'
         run: npm install
 
       - name: 'Build application'
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
       - name: 'Restore changes in json'
@@ -72,7 +75,7 @@ jobs:
 
       - name: 'Commit and push to gh-pages if changes exist'
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add . -f
           if git diff --staged --quiet; then
@@ -94,7 +97,7 @@ jobs:
     needs: build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  
 
       - name: Semantic Release
         run: npx semantic-release@22.0.0

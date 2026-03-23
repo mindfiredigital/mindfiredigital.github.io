@@ -2,11 +2,12 @@ import Link from "next/link";
 import React from "react";
 import { privacyPolicyContentData, PRIVACY_POLICY_INTRO } from "@/constants";
 
-/* Privacy Policy page displaying introductory text and policy sections */
+/* Privacy Policy page */
 const PrivacyPolicy = () => {
   return (
     <div className='max-w-4xl mx-auto my-10 px-6'>
-      <p className='tracking-wider text-mindfire-content-p-text-color'>
+      {/* mindfire-content-p-text-color → mf-light-grey */}
+      <p className='tracking-wider text-mf-light-grey'>
         {PRIVACY_POLICY_INTRO.text}{" "}
         <Link
           href={PRIVACY_POLICY_INTRO.linkHref}
@@ -20,12 +21,10 @@ const PrivacyPolicy = () => {
       {privacyPolicyContentData.map(({ title, description }, index) => {
         return (
           <div key={index}>
-            <h3 className='mt-10 mb-2 text-mindfire-content-p-text-color font-semibold text-lg tracking-wider'>
+            <h3 className='mt-10 mb-2 text-mf-light-grey font-semibold text-lg tracking-wider'>
               {title}
             </h3>
-            <p className='tracking-wider text-mindfire-content-p-text-color'>
-              {description}
-            </p>
+            <p className='tracking-wider text-mf-light-grey'>{description}</p>
           </div>
         );
       })}
