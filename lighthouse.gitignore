@@ -1,0 +1,5 @@
+# Lighthouse reports
+lighthouse-reports/
+lighthouse-report.html
+lighthouse-report.json
+.lighthouseci/
