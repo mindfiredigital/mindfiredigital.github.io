@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-03-23T11:42:08.541Z",
+  "generated_at": "2026-03-24T03:31:31.986Z",
   "period": "monthly",
   "window_start": "2026-03-01T00:00:00.000Z",
-  "window_end": "2026-03-23T11:42:08.541Z",
+  "window_end": "2026-03-24T03:31:31.986Z",
   "month_label": "March 2026",
   "month_key": "2026-03",
-  "total_contributors": 14,
+  "total_contributors": 15,
   "leaderboard": [
     {
       "rank": 1,
@@ -13,13 +13,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 86,
+      "totalCommits": 89,
       "totalPRs": 35,
       "totalPRReviewsGiven": 25,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.46,
+      "avgCommitsPerPR": 2.54,
       "projectsWorkingOn": 5,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -34,13 +34,13 @@
         "medium": 5,
         "large": 19
       },
-      "total_score": 569,
-      "code_score": 496,
+      "total_score": 575,
+      "code_score": 502,
       "community_score": 0,
       "quality_score": 73,
       "score_breakdown": {
         "pr_score": 249,
-        "commits_score": 172,
+        "commits_score": 178,
         "pr_reviews_score": 75,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -115,13 +115,13 @@
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
       "html_url": "https://github.com/deepakyadav-01",
-      "totalCommits": 22,
-      "totalPRs": 6,
+      "totalCommits": 24,
+      "totalPRs": 7,
       "totalPRReviewsGiven": 9,
       "totalCodeReviewComments": 5,
       "totalIssuesOpened": 0,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 3.67,
+      "avgCommitsPerPR": 3.43,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -130,15 +130,15 @@
       "prs_by_complexity": {
         "small": 2,
         "medium": 1,
-        "large": 3
+        "large": 4
       },
-      "total_score": 131,
-      "code_score": 118,
+      "total_score": 146,
+      "code_score": 131,
       "community_score": 1,
-      "quality_score": 12,
+      "quality_score": 14,
       "score_breakdown": {
-        "pr_score": 42,
-        "commits_score": 44,
+        "pr_score": 51,
+        "commits_score": 48,
         "pr_reviews_score": 27,
         "code_comments_score": 5,
         "issues_opened_score": 0,
@@ -147,7 +147,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -156,7 +156,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -164,8 +164,8 @@
       "id": 224547702,
       "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
       "html_url": "https://github.com/NikhilMeshram01",
-      "totalCommits": 21,
-      "totalPRs": 7,
+      "totalCommits": 24,
+      "totalPRs": 8,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 3,
@@ -179,15 +179,15 @@
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
-        "large": 7
+        "large": 8
       },
-      "total_score": 119,
-      "code_score": 102,
+      "total_score": 135,
+      "code_score": 116,
       "community_score": 6,
-      "quality_score": 11,
+      "quality_score": 13,
       "score_breakdown": {
-        "pr_score": 60,
-        "commits_score": 42,
+        "pr_score": 68,
+        "commits_score": 48,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 6,
@@ -196,7 +196,7 @@
         "tests_score": 2,
         "docs_score": 3,
         "mentor_score": 0,
-        "zero_revisions_score": 6,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -205,7 +205,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -213,30 +213,30 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 30,
-      "totalPRs": 3,
+      "totalCommits": 38,
+      "totalPRs": 5,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 10,
+      "avgCommitsPerPR": 7.6,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 1,
       "projects": [
         "Ignix UI"
       ],
       "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
+        "small": 1,
+        "medium": 1,
         "large": 3
       },
-      "total_score": 102,
-      "code_score": 86,
+      "total_score": 131,
+      "code_score": 113,
       "community_score": 11,
-      "quality_score": 5,
+      "quality_score": 7,
       "score_breakdown": {
-        "pr_score": 26,
-        "commits_score": 60,
+        "pr_score": 37,
+        "commits_score": 76,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -245,7 +245,7 @@
         "tests_score": 1,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 4,
+        "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -303,7 +303,7 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 7,
@@ -402,7 +402,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -452,7 +452,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 10,
@@ -501,7 +501,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 21
     },
     {
       "rank": 11,
@@ -550,7 +550,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 12,
@@ -599,7 +599,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 13,
@@ -648,7 +648,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 1
     },
     {
       "rank": 14,
@@ -698,6 +698,55 @@
         "issue_comments_total": 0
       },
       "lastActiveDays": null
+    },
+    {
+      "rank": 15,
+      "username": "lakinmindfire",
+      "id": 80667930,
+      "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
+      "html_url": "https://github.com/lakinmindfire",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "Ignix UI"
+      ],
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 2,
+      "code_score": 0,
+      "community_score": 2,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 1
     }
   ]
 }
