@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T06:06:59.599Z",
+  "generated_at": "2026-03-23T15:51:05.226Z",
   "period": "monthly",
   "month_label": "September 2025",
   "month_key": "2025-09",
@@ -50,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 0
     },
     {
       "rank": 2,
@@ -144,7 +144,7 @@
         "issue_comments": 5,
         "issue_comments_total": 5
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 13
     },
     {
       "rank": 4,
@@ -285,7 +285,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 7,
@@ -336,31 +336,78 @@
     },
     {
       "rank": 8,
+      "username": "MohdAasim",
+      "id": 79627135,
+      "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
+      "html_url": "https://github.com/MohdAasim",
+      "totalCommits": 5,
+      "totalPRs": 4,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 4,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1.25,
+      "projectsWorkingOn": 2,
+      "projects": ["Pivothead", "TextIgniter"],
+      "newProjectsThisMonth": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 4
+      },
+      "total_score": 72,
+      "code_score": 44,
+      "community_score": 18,
+      "quality_score": 10,
+      "score_breakdown": {
+        "pr_score": 34,
+        "commits_score": 10,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 8,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 8,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 4,
+        "issues_total": 4,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 9,
       "username": "ParthDhemeliya",
       "id": 217000014,
       "avatar_url": "https://avatars.githubusercontent.com/u/217000014?v=4",
       "html_url": "https://github.com/ParthDhemeliya",
       "totalCommits": 22,
-      "totalPRs": 6,
+      "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 2,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.67,
+      "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "projects": ["TextIgniter"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
-        "small": 3,
-        "medium": 2,
-        "large": 1
+        "small": 0,
+        "medium": 0,
+        "large": 0
       },
-      "total_score": 107,
-      "code_score": 81,
+      "total_score": 58,
+      "code_score": 44,
       "community_score": 14,
-      "quality_score": 12,
+      "quality_score": 0,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 0,
         "commits_score": 44,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -370,59 +417,12 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
       "capped_counts": {
         "issues_opened": 2,
         "issues_total": 2,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 9,
-      "username": "MohdAasim",
-      "id": 79627135,
-      "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
-      "html_url": "https://github.com/MohdAasim",
-      "totalCommits": 5,
-      "totalPRs": 5,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 4,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 1,
-      "projectsWorkingOn": 2,
-      "projects": ["Pivothead", "TextIgniter"],
-      "newProjectsThisMonth": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 5
-      },
-      "total_score": 84,
-      "code_score": 53,
-      "community_score": 18,
-      "quality_score": 13,
-      "score_breakdown": {
-        "pr_score": 43,
-        "commits_score": 10,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 8,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 2,
-        "docs_score": 1,
-        "mentor_score": 0,
-        "zero_revisions_score": 10,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 4,
-        "issues_total": 4,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -661,7 +661,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 20
     },
     {
       "rank": 15,
@@ -990,7 +990,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 5
     }
   ]
 }

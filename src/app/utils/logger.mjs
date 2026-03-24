@@ -1,8 +1,8 @@
-// src/app/utils/logger.js
-// Plain JS mirror of logger.ts — used by .mjs update scripts that run directly
-// under Node without a TypeScript transform (node --import tsx is unreliable
-// with dynamic imports and child processes).
-// Both files export the same winston logger so behaviour is identical.
+/* src/app/utils/logger.js
+Plain JS mirror of logger.ts — used by .mjs update scripts that run directly
+under Node without a TypeScript transform (node --import tsx is unreliable
+with dynamic imports and child processes).
+Both files export the same winston logger so behaviour is identical. */
 
 import winston from "winston";
 

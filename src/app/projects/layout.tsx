@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 
+/*
+  Metadata for "Projects" page
+  - Automatically injected into <head> by Next.js
+  - Helps improve SEO and social media previews
+*/
 export const metadata: Metadata = {
   title: meta["Projects"].title,
   description: meta["Projects"].description,

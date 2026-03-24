@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T06:06:59.589Z",
+  "generated_at": "2026-03-23T15:51:05.181Z",
   "period": "monthly",
   "month_label": "August 2025",
   "month_key": "2025-08",
@@ -50,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 0
     },
     {
       "rank": 2,
@@ -97,7 +97,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 13
     },
     {
       "rank": 3,
@@ -285,7 +285,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 7,
@@ -351,16 +351,16 @@
       "projects": ["Ignix UI"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
-        "small": 0,
-        "medium": 1,
+        "small": 1,
+        "medium": 0,
         "large": 0
       },
-      "total_score": 32,
-      "code_score": 13,
+      "total_score": 30,
+      "code_score": 11,
       "community_score": 17,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 7,
+        "pr_score": 5,
         "commits_score": 6,
         "pr_reviews_score": 0,
         "code_comments_score": 0,

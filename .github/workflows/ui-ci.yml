@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     name: 'Build Mindfire FOSS Website'
@@ -15,12 +18,12 @@ jobs:
       packages: read
     steps:
       - name: 'Checkout repository'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -77,7 +80,7 @@ jobs:
     needs: build
     steps: 
       - name: Checkout code 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Semantic Release
         run: npx semantic-release@22.0.0

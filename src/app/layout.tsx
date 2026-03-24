@@ -6,6 +6,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import meta from "@/metadata/metadata.json";
 
+/*
+  Initialize Roboto font using next/font
+  - Automatically downloaded at build time
+  - Applied globally via className
+  - 'display: swap' ensures no layout shift
+*/
 const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -79,6 +85,12 @@ export const metadata: Metadata = {
   },
 };
 
+/*
+  RootLayout component
+  - Wraps all pages in the app
+  - Defines global structure (HTML + BODY)
+  - Includes shared UI (Header, Footer)
+*/
 export default function RootLayout({
   children,
 }: {
