@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T06:06:59.624Z",
+  "generated_at": "2026-03-23T15:51:05.385Z",
   "period": "monthly",
   "month_label": "December 2025",
   "month_key": "2025-12",
@@ -103,7 +103,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 0
     },
     {
       "rank": 3,
@@ -197,7 +197,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 0
     },
     {
       "rank": 5,
@@ -244,7 +244,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 6,
@@ -291,7 +291,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": null
     },
     {
       "rank": 7,
@@ -338,7 +338,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 5
     },
     {
       "rank": 8,
@@ -346,13 +346,13 @@
       "id": 125389787,
       "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
       "html_url": "https://github.com/biswalom22",
-      "totalCommits": 13,
+      "totalCommits": 15,
       "totalPRs": 9,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.44,
+      "avgCommitsPerPR": 1.67,
       "projectsWorkingOn": 2,
       "projects": ["Canvas Editor", "Document Editor"],
       "newProjectsThisMonth": 0,
@@ -361,13 +361,13 @@
         "medium": 4,
         "large": 0
       },
-      "total_score": 95,
-      "code_score": 77,
+      "total_score": 99,
+      "code_score": 81,
       "community_score": 0,
       "quality_score": 18,
       "score_breakdown": {
         "pr_score": 51,
-        "commits_score": 26,
+        "commits_score": 30,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -385,7 +385,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 3
     },
     {
       "rank": 9,
@@ -620,7 +620,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 14,
@@ -761,7 +761,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     }
   ]
 }

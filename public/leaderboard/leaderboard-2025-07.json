@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T06:06:59.574Z",
+  "generated_at": "2026-03-23T15:51:05.138Z",
   "period": "monthly",
   "month_label": "July 2025",
   "month_key": "2025-07",
@@ -97,7 +97,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 13
     },
     {
       "rank": 3,
@@ -191,7 +191,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 3
     },
     {
       "rank": 5,
@@ -242,53 +242,6 @@
     },
     {
       "rank": 6,
-      "username": "rohitrg96",
-      "id": 190622750,
-      "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
-      "html_url": "https://github.com/rohitrg96",
-      "totalCommits": 3,
-      "totalPRs": 1,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 3,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 3,
-      "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
-      "newProjectsThisMonth": 1,
-      "prs_by_complexity": {
-        "small": 1,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 29,
-      "code_score": 11,
-      "community_score": 16,
-      "quality_score": 2,
-      "score_breakdown": {
-        "pr_score": 5,
-        "commits_score": 6,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 6,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 2,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 3,
-        "issues_total": 3,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 7,
       "username": "ankitsaha-mindfire",
       "id": 235838245,
       "avatar_url": "https://avatars.githubusercontent.com/u/235838245?v=4",
@@ -329,6 +282,53 @@
       "capped_counts": {
         "issues_opened": 0,
         "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 7,
+      "username": "rohitrg96",
+      "id": 190622750,
+      "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
+      "html_url": "https://github.com/rohitrg96",
+      "totalCommits": 3,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 3,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "projects": ["TextIgniter"],
+      "newProjectsThisMonth": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 22,
+      "code_score": 6,
+      "community_score": 16,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 6,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 6,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 3,
+        "issues_total": 3,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -379,7 +379,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 3
     },
     {
       "rank": 9,
@@ -567,7 +567,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 0
     },
     {
       "rank": 13,
@@ -614,7 +614,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 20
     },
     {
       "rank": 14,

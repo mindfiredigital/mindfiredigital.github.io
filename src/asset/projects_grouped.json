@@ -163,6 +163,12 @@
     "isMonoRepo": true,
     "packages": [
       {
+        "name": "pivothead-llm",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-llm",
+        "status": "published"
+      },
+      {
         "name": "pivothead-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-web-component",
@@ -212,6 +218,12 @@
     "isMonoRepo": true,
     "packages": [
       {
+        "name": "angular-canvas-editor",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
+        "status": "published"
+      },
+      {
         "name": "web-component-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/~mindfire",
@@ -221,12 +233,6 @@
         "name": "react-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/react-canvas-editor",
-        "status": "published"
-      },
-      {
-        "name": "angular-canvas-editor",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
         "status": "published"
       }
     ]

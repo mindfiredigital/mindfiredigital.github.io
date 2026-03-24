@@ -268,9 +268,9 @@
     "shortDescription": "A headless table library with built-in filters, sorting, and export.",
     "githubUrl": "https://github.com/mindfiredigital/PivotHead",
     "documentationUrl": "https://mindfiredigital.github.io/PivotHead/",
-    "stars": 29,
+    "stars": 30,
     "tags": ["headless", "pivot-grid", "pivot-tables", "table"],
-    "lastPushedAt": "2026-03-09T13:54:01Z"
+    "lastPushedAt": "2026-03-20T10:06:55Z"
   },
   {
     "id": 21,
@@ -304,7 +304,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/document-editor/",
     "stars": 19,
     "tags": ["angular", "document", "document-editor", "editor", "eslint"],
-    "lastPushedAt": "2025-12-18T08:33:55Z"
+    "lastPushedAt": "2026-03-23T07:29:30Z"
   },
   {
     "id": 23,
@@ -321,7 +321,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/ignix-ui/",
     "stars": 52,
     "tags": ["component", "radix", "radix-ui", "react", "shadcn"],
-    "lastPushedAt": "2026-03-15T15:34:09Z"
+    "lastPushedAt": "2026-03-23T10:38:55Z"
   },
   {
     "id": 24,
@@ -446,7 +446,7 @@
       "endtoendtesting",
       "llm"
     ],
-    "lastPushedAt": "2026-03-16T05:43:52Z"
+    "lastPushedAt": "2026-03-20T13:28:38Z"
   },
   {
     "id": 31,
