@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T03:31:31.577Z",
+  "generated_at": "2026-03-23T15:51:04.088Z",
   "period": "monthly",
   "month_label": "December 2023",
   "month_key": "2023-12",
@@ -54,7 +54,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": null
     },
     {
       "rank": 2,
@@ -70,9 +70,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.27,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 5,
@@ -119,9 +117,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.07,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 2,
@@ -168,9 +164,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -217,9 +211,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -266,9 +258,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FMDAPI Node Weaver"
-      ],
+      "projects": ["FMDAPI Node Weaver"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -315,9 +305,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -364,9 +352,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FireKubeX"
-      ],
+      "projects": ["FireKubeX"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -413,9 +399,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AIHealthCounsellor"
-      ],
+      "projects": ["AIHealthCounsellor"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -462,9 +446,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -511,9 +493,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Extension Methods"
-      ],
+      "projects": ["Extension Methods"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
