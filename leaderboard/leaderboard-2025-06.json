@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T03:33:27.153Z",
+  "generated_at": "2026-03-29T03:46:49.039Z",
   "period": "monthly",
   "month_label": "June 2025",
   "month_key": "2025-06",
@@ -7,33 +7,83 @@
   "leaderboard": [
     {
       "rank": 1,
+      "username": "jyotiprakashmfsi",
+      "id": 194057545,
+      "avatar_url": "https://avatars.githubusercontent.com/u/194057545?v=4",
+      "html_url": "https://github.com/jyotiprakashmfsi",
+      "totalCommits": 25,
+      "totalPRs": 8,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 2,
+      "avgCommitsPerPR": 3.13,
+      "projectsWorkingOn": 2,
+      "projects": [
+        "ESLint Plugin Hub",
+        "Ignix UI"
+      ],
+      "newProjectsThisMonth": 1,
+      "prs_by_complexity": {
+        "small": 2,
+        "medium": 4,
+        "large": 2
+      },
+      "total_score": 136,
+      "code_score": 103,
+      "community_score": 12,
+      "quality_score": 21,
+      "score_breakdown": {
+        "pr_score": 53,
+        "commits_score": 50,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 2,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 4,
+        "mentor_score": 0,
+        "zero_revisions_score": 16,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 2,
+        "issue_comments_total": 2
+      },
+      "lastActiveDays": 19
+    },
+    {
+      "rank": 2,
       "username": "deepakyadav-01",
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
       "html_url": "https://github.com/deepakyadav-01",
       "totalCommits": 32,
-      "totalPRs": 11,
+      "totalPRs": 6,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 18,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.91,
+      "avgCommitsPerPR": 5.33,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix UI"
       ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
-        "small": 6,
+        "small": 2,
         "medium": 4,
-        "large": 1
+        "large": 0
       },
-      "total_score": 171,
-      "code_score": 129,
+      "total_score": 132,
+      "code_score": 100,
       "community_score": 20,
-      "quality_score": 22,
+      "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 65,
+        "pr_score": 36,
         "commits_score": 64,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -43,7 +93,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 22,
+        "zero_revisions_score": 12,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -52,57 +102,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
-    },
-    {
-      "rank": 2,
-      "username": "jyotiprakashmfsi",
-      "id": 194057545,
-      "avatar_url": "https://avatars.githubusercontent.com/u/194057545?v=4",
-      "html_url": "https://github.com/jyotiprakashmfsi",
-      "totalCommits": 25,
-      "totalPRs": 11,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 2,
-      "avgCommitsPerPR": 2.27,
-      "projectsWorkingOn": 2,
-      "projects": [
-        "ESLint Plugin Hub",
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 1,
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 6,
-        "large": 2
-      },
-      "total_score": 162,
-      "code_score": 121,
-      "community_score": 12,
-      "quality_score": 29,
-      "score_breakdown": {
-        "pr_score": 71,
-        "commits_score": 50,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 2,
-        "projects_score": 10,
-        "tests_score": 1,
-        "docs_score": 6,
-        "mentor_score": 0,
-        "zero_revisions_score": 22,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 2,
-        "issue_comments_total": 2
-      },
-      "lastActiveDays": 18
+      "lastActiveDays": 6
     },
     {
       "rank": 3,
@@ -256,55 +256,6 @@
     },
     {
       "rank": 6,
-      "username": "Dibas2421",
-      "id": 157849988,
-      "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
-      "html_url": "https://github.com/Dibas2421",
-      "totalCommits": 5,
-      "totalPRs": 3,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.67,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
-      "newProjectsThisMonth": 1,
-      "prs_by_complexity": {
-        "small": 1,
-        "medium": 0,
-        "large": 2
-      },
-      "total_score": 47,
-      "code_score": 32,
-      "community_score": 10,
-      "quality_score": 5,
-      "score_breakdown": {
-        "pr_score": 22,
-        "commits_score": 10,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 1,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 4,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 7,
       "username": "ankitsaha-mindfire",
       "id": 235838245,
       "avatar_url": "https://avatars.githubusercontent.com/u/235838245?v=4",
@@ -353,7 +304,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 8,
+      "rank": 7,
       "username": "BasudevBharatBhushan",
       "id": 64151314,
       "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
@@ -402,7 +353,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 9,
+      "rank": 8,
       "username": "sanghamitradash021",
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
@@ -449,17 +400,17 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
-      "rank": 10,
+      "rank": 9,
       "username": "Ankit-saha-iiitbbsr",
       "id": 120235923,
       "avatar_url": "https://avatars.githubusercontent.com/u/120235923?v=4",
       "html_url": "https://github.com/Ankit-saha-iiitbbsr",
       "totalCommits": 19,
       "totalPRs": 0,
-      "totalPRReviewsGiven": 1,
+      "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
@@ -474,14 +425,14 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 41,
-      "code_score": 41,
+      "total_score": 38,
+      "code_score": 38,
       "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
         "commits_score": 38,
-        "pr_reviews_score": 3,
+        "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
@@ -490,6 +441,55 @@
         "docs_score": 0,
         "mentor_score": 0,
         "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 10,
+      "username": "Dibas2421",
+      "id": 157849988,
+      "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
+      "html_url": "https://github.com/Dibas2421",
+      "totalCommits": 5,
+      "totalPRs": 1,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 5,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "AUTOTEST"
+      ],
+      "newProjectsThisMonth": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 1
+      },
+      "total_score": 31,
+      "code_score": 19,
+      "community_score": 10,
+      "quality_score": 2,
+      "score_breakdown": {
+        "pr_score": 9,
+        "commits_score": 10,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -547,7 +547,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     },
     {
       "rank": 12,
@@ -645,7 +645,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 25
+      "lastActiveDays": 26
     },
     {
       "rank": 14,
@@ -694,7 +694,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     }
   ]
 }

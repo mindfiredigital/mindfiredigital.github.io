@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T03:33:27.161Z",
+  "generated_at": "2026-03-29T03:46:49.044Z",
   "period": "monthly",
   "month_label": "July 2025",
   "month_key": "2025-07",
@@ -103,7 +103,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 18
+      "lastActiveDays": 19
     },
     {
       "rank": 3,
@@ -112,28 +112,28 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
       "html_url": "https://github.com/Dibas2421",
       "totalCommits": 8,
-      "totalPRs": 4,
+      "totalPRs": 3,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2,
+      "avgCommitsPerPR": 2.67,
       "projectsWorkingOn": 1,
       "projects": [
         "AUTOTEST"
       ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
-        "small": 2,
+        "small": 1,
         "medium": 0,
         "large": 2
       },
-      "total_score": 51,
-      "code_score": 43,
+      "total_score": 44,
+      "code_score": 38,
       "community_score": 0,
-      "quality_score": 8,
+      "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 27,
+        "pr_score": 22,
         "commits_score": 16,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -143,7 +143,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 8,
+        "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -201,7 +201,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 5,
@@ -397,7 +397,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     },
     {
       "rank": 9,
@@ -544,7 +544,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 12,
@@ -593,7 +593,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 13,
@@ -642,7 +642,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 25
+      "lastActiveDays": 26
     },
     {
       "rank": 14,
