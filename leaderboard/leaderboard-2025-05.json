@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T03:46:49.035Z",
+  "generated_at": "2026-03-30T03:49:25.119Z",
   "period": "monthly",
   "month_label": "May 2025",
   "month_key": "2025-05",
@@ -12,28 +12,28 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
       "html_url": "https://github.com/deepakyadav-01",
       "totalCommits": 33,
-      "totalPRs": 10,
+      "totalPRs": 14,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.3,
+      "avgCommitsPerPR": 2.36,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix UI"
       ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
-        "small": 6,
-        "medium": 1,
-        "large": 3
+        "small": 8,
+        "medium": 2,
+        "large": 4
       },
-      "total_score": 159,
-      "code_score": 128,
+      "total_score": 192,
+      "code_score": 153,
       "community_score": 10,
-      "quality_score": 21,
+      "quality_score": 29,
       "score_breakdown": {
-        "pr_score": 62,
+        "pr_score": 87,
         "commits_score": 66,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -43,7 +43,7 @@
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 20,
+        "zero_revisions_score": 28,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -52,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 2,
@@ -102,7 +102,7 @@
         "issue_comments": 8,
         "issue_comments_total": 8
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 3,
@@ -252,7 +252,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 6,
@@ -350,7 +350,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 8,
@@ -448,7 +448,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 19
+      "lastActiveDays": 20
     },
     {
       "rank": 10,
@@ -645,7 +645,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 14,
