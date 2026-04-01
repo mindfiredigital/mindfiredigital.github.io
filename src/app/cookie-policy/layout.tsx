@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
-import { COOKIE_POLICY_METADATA_CONSTANTS } from "@/constants";
+import { METADATA_CONSTANTS } from "@/constants";
 
 /*
   Metadata for "cookie-policy" page
@@ -9,38 +9,35 @@ import { COOKIE_POLICY_METADATA_CONSTANTS } from "@/constants";
   - Helps improve SEO and social media previews
 */
 export const metadata: Metadata = {
-  title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
-  description: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
+  title: meta[METADATA_CONSTANTS.COOKIE_POLICY].title,
+  description: meta[METADATA_CONSTANTS.COOKIE_POLICY].description,
 
   openGraph: {
-    title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
-    description:
-      meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
+    title: meta[METADATA_CONSTANTS.COOKIE_POLICY].title,
+    description: meta[METADATA_CONSTANTS.COOKIE_POLICY].description,
     images: {
-      url: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].openGraph
-        .images,
-      height: COOKIE_POLICY_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
-      width: COOKIE_POLICY_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
+      url: meta[METADATA_CONSTANTS.COOKIE_POLICY].openGraph.images,
+      height: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].openGraph.url,
+    url: meta[METADATA_CONSTANTS.COOKIE_POLICY].openGraph.url,
     type: "website",
-    siteName: COOKIE_POLICY_METADATA_CONSTANTS.SITE_NAME,
-    locale: COOKIE_POLICY_METADATA_CONSTANTS.LOCALE,
+    siteName: METADATA_CONSTANTS.SITE_NAME,
+    locale: METADATA_CONSTANTS.LOCALE,
   },
 
   twitter: {
-    card: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_CARD_TYPE,
-    title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
-    description:
-      meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
-    site: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_SITE,
-    creator: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_CREATOR,
+    card: METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[METADATA_CONSTANTS.COOKIE_POLICY].title,
+    description: meta[METADATA_CONSTANTS.COOKIE_POLICY].description,
+    site: METADATA_CONSTANTS.TWITTER_SITE,
+    creator: METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_NAME,
+      name: METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
-        ipad: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
-        googleplay: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
+        iphone: METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },
