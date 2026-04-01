@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState, useRef } from "react";
 import TopScorersPanel from "./components/TopScorersPanel";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorModal from "./components/ContributorModal";
@@ -9,50 +8,24 @@ import ContributorListSection from "./components/Contributorlistsection";
 import contributorList from "@/asset/contributors.json";
 import leaderboardData from "@/asset/leaderboard.json";
 import { Contributor, TopScorer } from "@/types";
-import { useContributorFilters } from "@/hooks";
+import { useContributorPage } from "@/hooks";
+import { buildFilterSidebarProps } from "@/app/utils";
 
 export default function Contributors() {
   const contributorsArray = Object.values(contributorList) as Contributor[];
   const topScorers = leaderboardData.leaderboard as TopScorer[];
 
+  const pageState = useContributorPage(contributorsArray, topScorers);
   const {
-    filters,
-    searchQuery,
     filteredAndSorted,
-    handleFilterChange,
-    handleSearchChange,
     handleReset,
-  } = useContributorFilters(contributorsArray, topScorers);
+    selectedContributor,
+    setSelectedContributor,
+    contributorsSectionRef,
+    mainPanelRef,
+  } = pageState;
 
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-  const [selectedContributor, setSelectedContributor] =
-    useState<TopScorer | null>(null);
-
-  const contributorsSectionRef = useRef<HTMLDivElement>(null);
-  const mainPanelRef = useRef<HTMLDivElement>(null);
-
-  const scrollToContributors = () => {
-    if (contributorsSectionRef.current && mainPanelRef.current) {
-      const sectionTop = contributorsSectionRef.current.offsetTop;
-      mainPanelRef.current.scrollTo({ top: sectionTop, behavior: "smooth" });
-    }
-  };
-
-  const filterSidebarProps = {
-    filters,
-    onFilterChange: (partial: Parameters<typeof handleFilterChange>[0]) => {
-      handleFilterChange(partial);
-      scrollToContributors();
-    },
-    onReset: handleReset,
-    searchQuery,
-    onSearchChange: (value: string) => {
-      handleSearchChange(value);
-      scrollToContributors();
-    },
-    isMobileOpen: isMobileFilterOpen,
-    onMobileToggle: () => setIsMobileFilterOpen((v) => !v),
-  };
+  const filterSidebarProps = buildFilterSidebarProps(pageState);
 
   return (
     <>
@@ -61,7 +34,6 @@ export default function Contributors() {
           className='flex w-full overflow-hidden'
           style={{ height: "calc(100vh - 4.5rem)", maxWidth: "100vw" }}
         >
-          {/* Desktop left sidebar — filter panel */}
           <aside className='hidden lg:flex flex-col w-64 flex-shrink-0 border-r border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
             <ContributorFilterSidebar {...filterSidebarProps} />
           </aside>
@@ -75,7 +47,6 @@ export default function Contributors() {
               topScorers={topScorers}
             />
 
-            {/* Mobile-only: top scorers panel + filter sidebar */}
             <div className='lg:hidden px-4 mt-6'>
               <TopScorersPanel
                 topScorers={topScorers}
@@ -95,7 +66,6 @@ export default function Contributors() {
             />
           </main>
 
-          {/* Desktop right sidebar — top scorers hall of fame */}
           <div className='hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-l border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
             <TopScorersPanel
               topScorers={topScorers}

@@ -6,3 +6,4 @@ export * from "./useMonthcalendarpicker";
 export * from "./usePackageStats";
 export * from "./useProjectFilters";
 export * from "./useTopScorePanel";
+export * from "./useContributorPage";
