@@ -29,7 +29,7 @@
     "lighthouse": "lhci autorun",
     "lighthouse:local": "lighthouse http://localhost:3000 --preset desktop --output html --output-path ./lighthouse-report.html --view --chrome-flags=\"--no-sandbox\"",
     "lighthouse:ci": "npm run build:ci && npm run lighthouse",
-    "prelighthouse": "node clean-lh-tmp.mjs",
+    "prelighthouse": "node updateScript/clean-lh-tmp.mjs",
     "lighthouse:all": "node clean-lh-tmp.mjs && lighthouse http://localhost:3000/ --preset desktop --output html --output-path ./lighthouse-reports/home.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/about/ --preset desktop --output html --output-path ./lighthouse-reports/about.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/projects/ --preset desktop --output html --output-path ./lighthouse-reports/projects.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/contributors/ --preset desktop --output html --output-path ./lighthouse-reports/contributors.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/packages/ --preset desktop --output html --output-path ./lighthouse-reports/packages.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\""
   },
   "dependencies": {

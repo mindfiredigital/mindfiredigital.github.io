@@ -78,7 +78,7 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
     activeTab === "monthly" ? monthlyData.leaderboard : topScorers;
   const displayLabel =
     activeTab === "monthly"
-      ? monthlyData.month_label ?? formatMonthKey(selectedMonth)
+      ? (monthlyData.month_label ?? formatMonthKey(selectedMonth))
       : PANEL_HEADER.displayLabelAllTime;
   const top10 = scorers.slice(0, 10);
   const podium3 = top10.slice(0, 3);

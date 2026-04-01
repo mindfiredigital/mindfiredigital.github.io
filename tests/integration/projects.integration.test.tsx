@@ -788,8 +788,8 @@ describe("useProjectFilters hook", () => {
       result.current.handleFilterChange({ tags: ["bitcoin"] });
     });
     expect(
-      result.current.sortedCurrentProjects.every(
-        (p) => p.tags?.some((t) => t.toLowerCase() === "bitcoin")
+      result.current.sortedCurrentProjects.every((p) =>
+        p.tags?.some((t) => t.toLowerCase() === "bitcoin")
       )
     ).toBe(true);
   });
@@ -810,8 +810,8 @@ describe("useProjectFilters hook", () => {
       result.current.handleFilterChange({ technologies: ["typescript"] });
     });
     expect(
-      result.current.sortedCurrentProjects.every(
-        (p) => p.tags?.some((t) => t.toLowerCase() === "typescript")
+      result.current.sortedCurrentProjects.every((p) =>
+        p.tags?.some((t) => t.toLowerCase() === "typescript")
       )
     ).toBe(true);
   });
