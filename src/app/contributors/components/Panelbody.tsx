@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { PanelBodyProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
 import { formatMonthKey } from "@/app/utils";

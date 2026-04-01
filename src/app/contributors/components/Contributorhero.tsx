@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import ContributorCount from "./ContributorCount";
 import TopContributors from "./TopContributors";
 import ScoringSystem from "./ScoringSystem";
