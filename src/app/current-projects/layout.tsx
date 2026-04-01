@@ -4,7 +4,7 @@ import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
 
 /*
-  Metadata for "Projects" page
+  Metadata for "Current Projects" page
   - Automatically injected into <head> by Next.js
   - Helps improve SEO and social media previews
 */
