@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
-import { CONTRIBUTORS_METADATA_CONSTANTS } from "@/constants";
+import { METADATA_CONSTANTS } from "@/constants";
 
 /*
   Metadata for "Contributors" page
@@ -9,35 +9,35 @@ import { CONTRIBUTORS_METADATA_CONSTANTS } from "@/constants";
   - Helps improve SEO and social media previews
 */
 export const metadata: Metadata = {
-  title: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].title,
-  description: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].description,
+  title: meta[METADATA_CONSTANTS.CONTRIBUTORS].title,
+  description: meta[METADATA_CONSTANTS.CONTRIBUTORS].description,
 
   openGraph: {
-    title: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].title,
-    description: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].description,
+    title: meta[METADATA_CONSTANTS.CONTRIBUTORS].title,
+    description: meta[METADATA_CONSTANTS.CONTRIBUTORS].description,
     images: {
-      url: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].openGraph.images,
-      height: CONTRIBUTORS_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
-      width: CONTRIBUTORS_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
+      url: meta[METADATA_CONSTANTS.CONTRIBUTORS].openGraph.images,
+      height: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].openGraph.url,
-    type: "website",
-    siteName: CONTRIBUTORS_METADATA_CONSTANTS.SITE_NAME,
-    locale: CONTRIBUTORS_METADATA_CONSTANTS.LOCALE,
+    url: meta[METADATA_CONSTANTS.CONTRIBUTORS].openGraph.url,
+    type: METADATA_CONSTANTS.WEBSITE,
+    siteName: METADATA_CONSTANTS.SITE_NAME,
+    locale: METADATA_CONSTANTS.LOCALE,
   },
 
   twitter: {
-    card: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_CARD_TYPE,
-    title: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].title,
-    description: meta[CONTRIBUTORS_METADATA_CONSTANTS.CONTRIBUTORS].description,
-    site: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_SITE,
-    creator: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_CREATOR,
+    card: METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[METADATA_CONSTANTS.CONTRIBUTORS].title,
+    description: meta[METADATA_CONSTANTS.CONTRIBUTORS].description,
+    site: METADATA_CONSTANTS.TWITTER_SITE,
+    creator: METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_APP_NAME,
+      name: METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
-        ipad: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
-        googleplay: CONTRIBUTORS_METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
+        iphone: METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },
