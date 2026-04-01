@@ -19509,8 +19509,8 @@ SPDX-License-Identifier: Apache-2.0
                 n = e.split(/\[([^\]]+?)\]\((https?:\/\/.*?)\)/g);
               for (; n.length; ) {
                 let [r, i, a] = n.splice(0, 3);
-                (r && t.push({ isLink: !1, text: r }),
-                  i && a && t.push({ isLink: !0, text: i, linkHref: a }));
+                r && t.push({ isLink: !1, text: r }),
+                  i && a && t.push({ isLink: !0, text: i, linkHref: a });
               }
               return t;
             }
@@ -19542,9 +19542,9 @@ SPDX-License-Identifier: Apache-2.0
               else {
                 a = e.pathname;
                 let s = a.split("/").filter((c) => c.length);
-                (n && s.length > n && (a = U + s.slice(-1 * n).join("/")),
+                n && s.length > n && (a = U + s.slice(-1 * n).join("/")),
                   i && (a = `${e.host}/${a.replace(/^\//, "")}`),
-                  r && (a = `${a}${e.search}`));
+                  r && (a = `${a}${e.search}`);
               }
               let l = 64;
               if (
@@ -19614,7 +19614,7 @@ SPDX-License-Identifier: Apache-2.0
                 t.forEach(({ lineNumber: a }) => {
                   let l = a - n,
                     s = a + n;
-                  for (; l < 1; ) (l++, s++);
+                  for (; l < 1; ) l++, s++;
                   i.has(l - r - 1) && (l -= r);
                   for (let c = l; c <= s; c++) {
                     let d = c;
@@ -19627,15 +19627,14 @@ SPDX-License-Identifier: Apache-2.0
             static computeLogNormalScore(e, t) {
               let n = fe(e, t);
               return (
-                n > 0.9 && (n += 0.05 * (n - 0.9)),
-                Math.floor(n * 100) / 100
+                n > 0.9 && (n += 0.05 * (n - 0.9)), Math.floor(n * 100) / 100
               );
             }
           };
         function Ge(o) {
           let e = o.createFragment(),
             t = o.createElement("style");
-          (t.append(`
+          t.append(`
     .lh-3p-filter {
       color: var(--color-gray-600);
       float: right;
@@ -19649,11 +19648,11 @@ SPDX-License-Identifier: Apache-2.0
       text-decoration: line-through;
     }
   `),
-            e.append(t));
+            e.append(t);
           let n = o.createElement("div", "lh-3p-filter"),
             r = o.createElement("label", "lh-3p-filter-label"),
             i = o.createElement("input", "lh-3p-filter-input");
-          (i.setAttribute("type", "checkbox"), i.setAttribute("checked", ""));
+          i.setAttribute("type", "checkbox"), i.setAttribute("checked", "");
           let a = o.createElement("span", "lh-3p-ui-string");
           a.append("Show 3rd party resources");
           let l = o.createElement("span", "lh-3p-filter-count");
@@ -19679,7 +19678,7 @@ SPDX-License-Identifier: Apache-2.0
             c = o.createElement("span", "lh-audit__display-text");
           l.append(" ", s, " ", c, " ");
           let d = o.createElement("div", "lh-chevron-container");
-          (i.append(" ", a, " ", l, " ", d, " "), r.append(" ", i, " "));
+          i.append(" ", a, " ", l, " ", d, " "), r.append(" ", i, " ");
           let h = o.createElement("div", "lh-audit__description"),
             p = o.createElement("div", "lh-audit__stackpacks");
           return (
@@ -19693,10 +19692,9 @@ SPDX-License-Identifier: Apache-2.0
           let e = o.createFragment(),
             t = o.createElement("div", "lh-category-header"),
             n = o.createElement("div", "lh-score__gauge");
-          (n.setAttribute("role", "heading"),
-            n.setAttribute("aria-level", "2"));
+          n.setAttribute("role", "heading"), n.setAttribute("aria-level", "2");
           let r = o.createElement("div", "lh-category-header__description");
-          return (t.append(" ", n, " ", r, " "), e.append(t), e);
+          return t.append(" ", n, " ", r, " "), e.append(t), e;
         }
         function je(o) {
           let e = o.createFragment(),
@@ -19814,7 +19812,7 @@ SPDX-License-Identifier: Apache-2.0
             i = o.createElement("div", "lh-crc__summary-value"),
             a = o.createElement("span", "lh-crc__longest_duration_label"),
             l = o.createElement("b", "lh-crc__longest_duration");
-          (i.append(" ", a, " ", l, " "), r.append(" ", i, " "));
+          i.append(" ", a, " ", l, " "), r.append(" ", i, " ");
           let s = o.createElement("div", "lh-crc"),
             c = o.createElement("div", "lh-crc-initial-nav");
           return (
@@ -19829,7 +19827,7 @@ SPDX-License-Identifier: Apache-2.0
             t = o.createElement("div", "lh-crc-node"),
             n = o.createElement("span", "lh-crc-node__tree-marker"),
             r = o.createElement("span", "lh-crc-node__tree-value");
-          return (t.append(" ", n, " ", r, " "), e.append(t), e);
+          return t.append(" ", n, " ", r, " "), e.append(t), e;
         }
         function Ze(o) {
           let e = o.createFragment(),
@@ -19838,13 +19836,13 @@ SPDX-License-Identifier: Apache-2.0
             r = o.createElement("div", "lh-element-screenshot__image"),
             i = o.createElement("div", "lh-element-screenshot__mask"),
             a = o.createElementNS("http://www.w3.org/2000/svg", "svg");
-          (a.setAttribute("height", "0"), a.setAttribute("width", "0"));
+          a.setAttribute("height", "0"), a.setAttribute("width", "0");
           let l = o.createElementNS("http://www.w3.org/2000/svg", "defs"),
             s = o.createElementNS("http://www.w3.org/2000/svg", "clipPath");
-          (s.setAttribute("clipPathUnits", "objectBoundingBox"),
+          s.setAttribute("clipPathUnits", "objectBoundingBox"),
             l.append(" ", s, " ", " "),
             a.append(" ", l, " "),
-            i.append(" ", a, " "));
+            i.append(" ", a, " ");
           let c = o.createElement(
             "div",
             "lh-element-screenshot__element-marker"
@@ -19925,7 +19923,7 @@ SPDX-License-Identifier: Apache-2.0
         function Ye(o) {
           let e = o.createFragment(),
             t = o.createElement("style");
-          (t.append(`
+          t.append(`
     .lh-footer {
       padding: var(--footer-padding-vertical) calc(var(--default-padding) * 2);
       max-width: var(--report-content-max-width);
@@ -19935,7 +19933,7 @@ SPDX-License-Identifier: Apache-2.0
       text-align: center;
     }
   `),
-            e.append(t));
+            e.append(t);
           let n = o.createElement("footer", "lh-footer"),
             r = o.createElement("ul", "lh-meta__items");
           r.append(" ");
@@ -19964,9 +19962,9 @@ SPDX-License-Identifier: Apache-2.0
             n = o.createElement("div", "lh-fraction__content-wrapper"),
             r = o.createElement("div", "lh-fraction__content"),
             i = o.createElement("div", "lh-fraction__background");
-          (r.append(" ", i, " "), n.append(" ", r, " "));
+          r.append(" ", i, " "), n.append(" ", r, " ");
           let a = o.createElement("div", "lh-fraction__label");
-          return (t.append(" ", n, " ", a, " "), e.append(t), e);
+          return t.append(" ", n, " ", a, " "), e.append(t), e;
         }
         function et(o) {
           let e = o.createFragment(),
@@ -19983,33 +19981,31 @@ SPDX-License-Identifier: Apache-2.0
             "circle",
             "lh-gauge-base"
           );
-          (i.setAttribute("r", "56"),
+          i.setAttribute("r", "56"),
             i.setAttribute("cx", "60"),
             i.setAttribute("cy", "60"),
-            i.setAttribute("stroke-width", "8"));
+            i.setAttribute("stroke-width", "8");
           let a = o.createElementNS(
             "http://www.w3.org/2000/svg",
             "circle",
             "lh-gauge-arc"
           );
-          (a.setAttribute("r", "56"),
+          a.setAttribute("r", "56"),
             a.setAttribute("cx", "60"),
             a.setAttribute("cy", "60"),
             a.setAttribute("stroke-width", "8"),
             r.append(" ", i, " ", a, " "),
-            n.append(" ", r, " "));
+            n.append(" ", r, " ");
           let l = o.createElement("div", "lh-gauge__percentage"),
             s = o.createElement("div", "lh-gauge__label");
           return (
-            t.append(" ", " ", n, " ", l, " ", " ", s, " "),
-            e.append(t),
-            e
+            t.append(" ", " ", n, " ", l, " ", " ", s, " "), e.append(t), e
           );
         }
         function tt(o) {
           let e = o.createFragment(),
             t = o.createElement("style");
-          (t.append(`
+          t.append(`
     /* CSS Fireworks. Originally by Eddie Lin
        https://codepen.io/paulirish/pen/yEVMbP
     */
@@ -20081,10 +20077,10 @@ SPDX-License-Identifier: Apache-2.0
       }
     }
   `),
-            e.append(t));
+            e.append(t);
           let n = o.createElement("div", "lh-header-container"),
             r = o.createElement("div", "lh-scores-wrapper-placeholder");
-          return (n.append(" ", r, " "), e.append(n), e);
+          return n.append(" ", r, " "), e.append(n), e;
         }
         function nt(o) {
           let e = o.createFragment(),
@@ -20128,7 +20124,7 @@ SPDX-License-Identifier: Apache-2.0
         function ot(o) {
           let e = o.createFragment(),
             t = o.createElement("style");
-          (t.append(`
+          t.append(`
     .lh-scores-container {
       display: flex;
       flex-direction: column;
@@ -20192,7 +20188,7 @@ SPDX-License-Identifier: Apache-2.0
       right: 0px;
     }
   `),
-            e.append(t));
+            e.append(t);
           let n = o.createElement("div", "lh-scores-wrapper"),
             r = o.createElement("div", "lh-scores-container"),
             i = o.createElement("div", "lh-pyro"),
@@ -20329,7 +20325,7 @@ SPDX-License-Identifier: Apache-2.0
           let e = o.createFragment(),
             t = o.createElement("div", "lh-snippet__snippet"),
             n = o.createElement("div", "lh-snippet__snippet-inner");
-          return (t.append(" ", n, " "), e.append(t), e);
+          return t.append(" ", n, " "), e.append(t), e;
         }
         function lt(o) {
           let e = o.createFragment(),
@@ -20358,7 +20354,7 @@ SPDX-License-Identifier: Apache-2.0
             n = o.createElement("div", "lh-snippet__line-number"),
             r = o.createElement("div", "lh-snippet__line-icon"),
             i = o.createElement("code");
-          return (t.append(" ", n, " ", r, " ", i, " "), e.append(t), e);
+          return t.append(" ", n, " ", r, " ", i, " "), e.append(t), e;
         }
         function ct(o) {
           let e = o.createFragment(),
@@ -22671,7 +22667,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         function dt(o) {
           let e = o.createFragment(),
             t = o.createElement("style");
-          (t.append(`
+          t.append(`
     .lh-topbar {
       position: sticky;
       top: 0;
@@ -22826,42 +22822,42 @@ details[open] .lh-clump-toggletext--hide { display: block;}
       }
     }
   `),
-            e.append(t));
+            e.append(t);
           let n = o.createElement("div", "lh-topbar"),
             r = o.createElementNS(
               "http://www.w3.org/2000/svg",
               "svg",
               "lh-topbar__logo"
             );
-          (r.setAttribute("role", "img"),
+          r.setAttribute("role", "img"),
             r.setAttribute("title", "Lighthouse logo"),
             r.setAttribute("fill", "none"),
             r.setAttribute("xmlns", "http://www.w3.org/2000/svg"),
-            r.setAttribute("viewBox", "0 0 48 48"));
+            r.setAttribute("viewBox", "0 0 48 48");
           let i = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (i.setAttribute(
+          i.setAttribute(
             "d",
             "m14 7 10-7 10 7v10h5v7h-5l5 24H9l5-24H9v-7h5V7Z"
           ),
-            i.setAttribute("fill", "#F63"));
+            i.setAttribute("fill", "#F63");
           let a = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (a.setAttribute(
+          a.setAttribute(
             "d",
             "M31.561 24H14l-1.689 8.105L31.561 24ZM18.983 48H9l1.022-4.907L35.723 32.27l1.663 7.98L18.983 48Z"
           ),
-            a.setAttribute("fill", "#FFA385"));
+            a.setAttribute("fill", "#FFA385");
           let l = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (l.setAttribute("fill", "#FF3"),
+          l.setAttribute("fill", "#FF3"),
             l.setAttribute("d", "M20.5 10h7v7h-7z"),
-            r.append(" ", i, " ", a, " ", l, " "));
+            r.append(" ", i, " ", a, " ", l, " ");
           let s = o.createElement("a", "lh-topbar__url");
-          (s.setAttribute("href", ""),
+          s.setAttribute("href", ""),
             s.setAttribute("target", "_blank"),
-            s.setAttribute("rel", "noopener"));
+            s.setAttribute("rel", "noopener");
           let c = o.createElement("div", "lh-tools"),
             d = o.createElement("div", "lh-tools-locale lh-hidden"),
             h = o.createElement("button", "lh-button lh-tool-locale__button");
-          (h.setAttribute("id", "lh-button__swap-locales"),
+          h.setAttribute("id", "lh-button__swap-locales"),
             h.setAttribute("title", "Show Language Picker"),
             h.setAttribute("aria-label", "Toggle language picker"),
             h.setAttribute("aria-haspopup", "menu"),
@@ -22869,111 +22865,110 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             h.setAttribute(
               "aria-controls",
               "lh-tools-locale__selector-wrapper"
-            ));
+            );
           let p = o.createElementNS("http://www.w3.org/2000/svg", "svg");
-          (p.setAttribute("width", "20px"),
+          p.setAttribute("width", "20px"),
             p.setAttribute("height", "20px"),
             p.setAttribute("viewBox", "0 0 24 24"),
-            p.setAttribute("fill", "currentColor"));
+            p.setAttribute("fill", "currentColor");
           let g = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (g.setAttribute("d", "M0 0h24v24H0V0z"),
-            g.setAttribute("fill", "none"));
+          g.setAttribute("d", "M0 0h24v24H0V0z"),
+            g.setAttribute("fill", "none");
           let b = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (b.setAttribute(
+          b.setAttribute(
             "d",
             "M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"
           ),
             p.append(g, b),
-            h.append(" ", p, " "));
+            h.append(" ", p, " ");
           let w = o.createElement("div", "lh-tools-locale__selector-wrapper");
-          (w.setAttribute("id", "lh-tools-locale__selector-wrapper"),
+          w.setAttribute("id", "lh-tools-locale__selector-wrapper"),
             w.setAttribute("role", "menu"),
             w.setAttribute("aria-labelledby", "lh-button__swap-locales"),
             w.setAttribute("aria-hidden", "true"),
             w.append(" ", " "),
-            d.append(" ", h, " ", w, " "));
+            d.append(" ", h, " ", w, " ");
           let f = o.createElement("button", "lh-tools__button");
-          (f.setAttribute("id", "lh-tools-button"),
+          f.setAttribute("id", "lh-tools-button"),
             f.setAttribute("title", "Tools menu"),
             f.setAttribute("aria-label", "Toggle report tools menu"),
             f.setAttribute("aria-haspopup", "menu"),
             f.setAttribute("aria-expanded", "false"),
-            f.setAttribute("aria-controls", "lh-tools-dropdown"));
+            f.setAttribute("aria-controls", "lh-tools-dropdown");
           let u = o.createElementNS("http://www.w3.org/2000/svg", "svg");
-          (u.setAttribute("width", "100%"),
+          u.setAttribute("width", "100%"),
             u.setAttribute("height", "100%"),
-            u.setAttribute("viewBox", "0 0 24 24"));
+            u.setAttribute("viewBox", "0 0 24 24");
           let v = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (v.setAttribute("d", "M0 0h24v24H0z"),
-            v.setAttribute("fill", "none"));
+          v.setAttribute("d", "M0 0h24v24H0z"), v.setAttribute("fill", "none");
           let _ = o.createElementNS("http://www.w3.org/2000/svg", "path");
-          (_.setAttribute(
+          _.setAttribute(
             "d",
             "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
           ),
             u.append(" ", v, " ", _, " "),
-            f.append(" ", u, " "));
+            f.append(" ", u, " ");
           let x = o.createElement("div", "lh-tools__dropdown");
-          (x.setAttribute("id", "lh-tools-dropdown"),
+          x.setAttribute("id", "lh-tools-dropdown"),
             x.setAttribute("role", "menu"),
-            x.setAttribute("aria-labelledby", "lh-tools-button"));
+            x.setAttribute("aria-labelledby", "lh-tools-button");
           let S = o.createElement("a", "lh-report-icon lh-report-icon--print");
-          (S.setAttribute("role", "menuitem"),
+          S.setAttribute("role", "menuitem"),
             S.setAttribute("tabindex", "-1"),
             S.setAttribute("href", "#"),
             S.setAttribute("data-i18n", "dropdownPrintSummary"),
-            S.setAttribute("data-action", "print-summary"));
+            S.setAttribute("data-action", "print-summary");
           let A = o.createElement("a", "lh-report-icon lh-report-icon--print");
-          (A.setAttribute("role", "menuitem"),
+          A.setAttribute("role", "menuitem"),
             A.setAttribute("tabindex", "-1"),
             A.setAttribute("href", "#"),
             A.setAttribute("data-i18n", "dropdownPrintExpanded"),
-            A.setAttribute("data-action", "print-expanded"));
+            A.setAttribute("data-action", "print-expanded");
           let z = o.createElement("a", "lh-report-icon lh-report-icon--copy");
-          (z.setAttribute("role", "menuitem"),
+          z.setAttribute("role", "menuitem"),
             z.setAttribute("tabindex", "-1"),
             z.setAttribute("href", "#"),
             z.setAttribute("data-i18n", "dropdownCopyJSON"),
-            z.setAttribute("data-action", "copy"));
+            z.setAttribute("data-action", "copy");
           let M = o.createElement(
             "a",
             "lh-report-icon lh-report-icon--download lh-hidden"
           );
-          (M.setAttribute("role", "menuitem"),
+          M.setAttribute("role", "menuitem"),
             M.setAttribute("tabindex", "-1"),
             M.setAttribute("href", "#"),
             M.setAttribute("data-i18n", "dropdownSaveHTML"),
-            M.setAttribute("data-action", "save-html"));
+            M.setAttribute("data-action", "save-html");
           let $ = o.createElement(
             "a",
             "lh-report-icon lh-report-icon--download"
           );
-          ($.setAttribute("role", "menuitem"),
+          $.setAttribute("role", "menuitem"),
             $.setAttribute("tabindex", "-1"),
             $.setAttribute("href", "#"),
             $.setAttribute("data-i18n", "dropdownSaveJSON"),
-            $.setAttribute("data-action", "save-json"));
+            $.setAttribute("data-action", "save-json");
           let R = o.createElement("a", "lh-report-icon lh-report-icon--open");
-          (R.setAttribute("role", "menuitem"),
+          R.setAttribute("role", "menuitem"),
             R.setAttribute("tabindex", "-1"),
             R.setAttribute("href", "#"),
             R.setAttribute("data-i18n", "dropdownViewer"),
-            R.setAttribute("data-action", "open-viewer"));
+            R.setAttribute("data-action", "open-viewer");
           let N = o.createElement("a", "lh-report-icon lh-report-icon--open");
-          (N.setAttribute("role", "menuitem"),
+          N.setAttribute("role", "menuitem"),
             N.setAttribute("tabindex", "-1"),
             N.setAttribute("href", "#"),
             N.setAttribute("data-i18n", "dropdownSaveGist"),
-            N.setAttribute("data-action", "save-gist"));
+            N.setAttribute("data-action", "save-gist");
           let D = o.createElement(
             "a",
             "lh-report-icon lh-report-icon--open lh-hidden"
           );
-          (D.setAttribute("role", "menuitem"),
+          D.setAttribute("role", "menuitem"),
             D.setAttribute("tabindex", "-1"),
             D.setAttribute("href", "#"),
             D.setAttribute("data-i18n", "dropdownViewUnthrottledTrace"),
-            D.setAttribute("data-action", "view-unthrottled-trace"));
+            D.setAttribute("data-action", "view-unthrottled-trace");
           let I = o.createElement("a", "lh-report-icon lh-report-icon--dark");
           return (
             I.setAttribute("role", "menuitem"),
@@ -23015,7 +23010,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             t = o.createElement("div", "lh-warnings lh-warnings--toplevel"),
             n = o.createElement("p", "lh-warnings__msg"),
             r = o.createElement("ul");
-          return (t.append(" ", n, " ", r, " "), e.append(t), e);
+          return t.append(" ", n, " ", r, " "), e.append(t), e;
         }
         function be(o, e) {
           switch (e) {
@@ -23070,10 +23065,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         }
         var ee = class {
           constructor(e, t) {
-            ((this._document = e),
+            (this._document = e),
               (this._lighthouseChannel = "unknown"),
               (this._componentCache = new Map()),
-              (this.rootEl = t));
+              (this.rootEl = t);
           }
           createElement(e, t) {
             let n = this._document.createElement(e);
@@ -23100,18 +23095,16 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           }
           createChildOf(e, t, n) {
             let r = this.createElement(t, n);
-            return (e.append(r), r);
+            return e.append(r), r;
           }
           createComponent(e) {
             let t = this._componentCache.get(e);
             if (t) {
               let r = t.cloneNode(!0);
-              return (this.findAll("style", r).forEach((i) => i.remove()), r);
+              return this.findAll("style", r).forEach((i) => i.remove()), r;
             }
             return (
-              (t = be(this, e)),
-              this._componentCache.set(e, t),
-              t.cloneNode(!0)
+              (t = be(this, e)), this._componentCache.set(e, t), t.cloneNode(!0)
             );
           }
           clearComponentCache() {
@@ -23137,11 +23130,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 (a.searchParams.set("utm_source", "lighthouse"),
                 a.searchParams.set("utm_medium", this._lighthouseChannel));
               let s = this.createElement("a");
-              ((s.rel = "noopener"),
+              (s.rel = "noopener"),
                 (s.target = "_blank"),
                 s.append(i),
                 this.safelySetHref(s, a.href),
-                n.append(s));
+                n.append(s);
             }
             return n;
           }
@@ -23168,7 +23161,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             for (let n of E.splitMarkdownCodeSpans(e))
               if (n.isCode) {
                 let r = this.createElement("code");
-                ((r.textContent = n.text), t.append(r));
+                (r.textContent = n.text), t.append(r);
               } else t.append(this._document.createTextNode(n.text));
             return t;
           }
@@ -23198,12 +23191,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           }
           saveFile(e, t) {
             let n = this.createElement("a");
-            ((n.download = t),
+            (n.download = t),
               this.safelySetBlobHref(n, e),
               this._document.body.append(n),
               n.click(),
               this._document.body.removeChild(n),
-              setTimeout(() => URL.revokeObjectURL(n.href), 500));
+              setTimeout(() => URL.revokeObjectURL(n.href), 500);
           }
         };
         var _e = 0,
@@ -23212,9 +23205,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             static strings = {};
             static reportJson = null;
             static apply(e) {
-              ((o.strings = { ...we, ...e.providedStrings }),
+              (o.strings = { ...we, ...e.providedStrings }),
                 (o.i18n = e.i18n),
-                (o.reportJson = e.reportJson));
+                (o.reportJson = e.reportJson);
             }
             static getUniqueSuffix() {
               return _e++;
@@ -23225,12 +23218,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           };
         var ye = "data:image/jpeg;base64,";
         function xe(o) {
-          (o.configSettings.locale || (o.configSettings.locale = "en"),
+          o.configSettings.locale || (o.configSettings.locale = "en"),
             o.configSettings.formFactor ||
               (o.configSettings.formFactor =
                 o.configSettings.emulatedFormFactor),
             (o.finalDisplayedUrl = E.getFinalDisplayedUrl(o)),
-            (o.mainDocumentUrl = E.getMainDocumentUrl(o)));
+            (o.mainDocumentUrl = E.getMainDocumentUrl(o));
           for (let n of Object.values(o.audits))
             if (
               ((n.scoreDisplayMode === "not_applicable" ||
@@ -23250,8 +23243,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               if (n.details.type === "table")
                 for (let r of n.details.headings) {
                   let { itemType: i, text: a } = r;
-                  (i !== void 0 && ((r.valueType = i), delete r.itemType),
-                    a !== void 0 && ((r.label = a), delete r.text));
+                  i !== void 0 && ((r.valueType = i), delete r.itemType),
+                    a !== void 0 && ((r.label = a), delete r.text);
                   let l = r.subItemsHeading?.itemType;
                   r.subItemsHeading &&
                     l !== void 0 &&
@@ -23277,8 +23270,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             t = o.categories.performance;
           if (t) {
             if (e < 9) {
-              (o.categoryGroups || (o.categoryGroups = {}),
-                (o.categoryGroups.hidden = { title: "" }));
+              o.categoryGroups || (o.categoryGroups = {}),
+                (o.categoryGroups.hidden = { title: "" });
               for (let n of t.auditRefs)
                 n.group
                   ? n.group === "load-opportunities" &&
@@ -23294,7 +23287,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               if (!(!i || !r.acronym))
                 for (let a of i) {
                   let l = n.get(a) || [];
-                  (l.push(r.acronym), n.set(a, l));
+                  l.push(r.acronym), n.set(a, l);
                 }
             }
             for (let [r, i] of n) {
@@ -23325,13 +23318,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             o.audits["full-page-screenshot"])
           ) {
             let n = o.audits["full-page-screenshot"].details;
-            (n
+            n
               ? (o.fullPageScreenshot = {
                   screenshot: n.screenshot,
                   nodes: n.nodes,
                 })
               : (o.fullPageScreenshot = null),
-              delete o.audits["full-page-screenshot"]);
+              delete o.audits["full-page-screenshot"];
           }
         }
         var O = E.RATINGS,
@@ -23350,7 +23343,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 throw new Error("No categories provided.");
               let n = new Map();
               for (let r of Object.values(t.categories))
-                (r.auditRefs.forEach((i) => {
+                r.auditRefs.forEach((i) => {
                   i.acronym && n.set(i.acronym, i);
                 }),
                   r.auditRefs.forEach((i) => {
@@ -23378,7 +23371,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                           }));
                       });
                     }
-                  }));
+                  });
               return t;
             }
             static getUrlLocatorFn(e) {
@@ -23446,7 +23439,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   break;
                 case "devtools": {
                   let { cpuSlowdownMultiplier: p, requestLatencyMs: g } = i;
-                  ((t = `${a.formatNumber(p)}x slowdown (DevTools)`),
+                  (t = `${a.formatNumber(p)}x slowdown (DevTools)`),
                     (n = `${a.formatMilliseconds(g)} HTTP RTT, ${a.formatKbps(
                       i.downloadThroughputKbps
                     )} down, ${a.formatKbps(
@@ -23457,7 +23450,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                       i.downloadThroughputKbps === 1.6 * 1024 * 0.9 &&
                       i.uploadThroughputKbps === 750 * 0.9
                         ? l.runtimeSlow4g
-                        : l.runtimeCustom));
+                        : l.runtimeCustom);
                   break;
                 }
                 case "simulate": {
@@ -23466,14 +23459,14 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     rttMs: g,
                     throughputKbps: b,
                   } = i;
-                  ((t = `${a.formatNumber(p)}x slowdown (Simulated)`),
+                  (t = `${a.formatNumber(p)}x slowdown (Simulated)`),
                     (n = `${a.formatMilliseconds(g)} TCP RTT, ${a.formatKbps(
                       b
                     )} throughput (Simulated)`),
                     (r =
                       g === 150 && b === 1.6 * 1024
                         ? l.runtimeSlow4g
-                        : l.runtimeCustom));
+                        : l.runtimeCustom);
                   break;
                 }
                 default:
@@ -23544,7 +23537,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     l || ++r;
                     continue;
                   }
-                  (++t, (i += a.weight), l && n++);
+                  ++t, (i += a.weight), l && n++;
                 }
               }
               return {
@@ -23630,7 +23623,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           };
         var G = class {
           constructor(e, t) {
-            ((this.dom = e), (this.detailsRenderer = t));
+            (this.dom = e), (this.detailsRenderer = t);
           }
           get _clumpTitles() {
             return {
@@ -23657,13 +23650,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             );
             for (let p of e.relevantMetrics || []) {
               let g = this.dom.createChildOf(l, "span", "lh-audit__adorn");
-              ((g.title = `Relevant to ${p.result.title}`),
-                (g.textContent = p.acronym || p.id));
+              (g.title = `Relevant to ${p.result.title}`),
+                (g.textContent = p.acronym || p.id);
             }
             if (e.weight === 0) {
               let p = this.dom.createChildOf(l, "span", "lh-audit__adorn");
-              ((p.title = m.strings.unscoredTitle),
-                (p.textContent = m.strings.unscoredLabel));
+              (p.title = m.strings.unscoredTitle),
+                (p.textContent = m.strings.unscoredLabel);
             }
             e.stackPacks &&
               e.stackPacks.forEach((p) => {
@@ -23671,13 +23664,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   "img",
                   "lh-audit__stackpack__img"
                 );
-                ((g.src = p.iconDataURL), (g.alt = p.title));
+                (g.src = p.iconDataURL), (g.alt = p.title);
                 let b = this.dom.convertMarkdownLinkSnippets(p.description, {
                     alwaysAppendUtmSource: !0,
                   }),
                   w = this.dom.createElement("div", "lh-audit__stackpack");
-                (w.append(g, b),
-                  this.dom.find(".lh-audit__stackpacks", r).append(w));
+                w.append(g, b),
+                  this.dom.find(".lh-audit__stackpacks", r).append(w);
               });
             let s = this.dom.find("details", r);
             if (e.result.details) {
@@ -23693,8 +23686,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             ) {
               r.classList.add("lh-audit--error");
               let p = this.dom.find(".lh-audit__display-text", r);
-              ((p.textContent = t.errorLabel),
-                p.classList.add("lh-tooltip-boundary"));
+              (p.textContent = t.errorLabel),
+                p.classList.add("lh-tooltip-boundary");
               let g = this.dom.createChildOf(
                 p,
                 "div",
@@ -23735,7 +23728,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               return null;
             let i = this.dom.createElement("img", "lh-final-ss-image"),
               a = r.details.data;
-            ((i.src = a), (i.alt = r.title));
+            (i.src = a), (i.alt = r.title);
             let l = this.dom.find(".lh-category .lh-category-header", e),
               s = this.dom.createElement("div", "lh-category-headercol"),
               c = this.dom.createElement(
@@ -23743,11 +23736,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 "lh-category-headercol lh-category-headercol--separator"
               ),
               d = this.dom.createElement("div", "lh-category-headercol");
-            (s.append(...l.childNodes),
+            s.append(...l.childNodes),
               s.append(n),
               d.append(i),
               l.append(s, c, d),
-              l.classList.add("lh-category-header__finalscreenshot"));
+              l.classList.add("lh-category-header__finalscreenshot");
           }
           _createChevron() {
             let e = this.dom.createComponent("chevron");
@@ -23774,12 +23767,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           renderAuditGroup(e) {
             let t = this.dom.createElement("div", "lh-audit-group"),
               n = this.dom.createElement("div", "lh-audit-group__header");
-            ((this.dom.createChildOf(
+            (this.dom.createChildOf(
               n,
               "span",
               "lh-audit-group__title"
             ).textContent = e.title),
-              t.append(n));
+              t.append(n);
             let r = null;
             return (
               e.description &&
@@ -23799,7 +23792,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             for (let a of e) {
               let l = a.group || r,
                 s = n.get(l) || [];
-              (s.push(a), n.set(l, s));
+              s.push(a), n.set(l, s);
             }
             let i = [];
             for (let [a, l] of n) {
@@ -23810,15 +23803,14 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               let s = t[a],
                 [c, d] = this.renderAuditGroup(s);
               for (let h of l) c.insertBefore(this.renderAudit(h), d);
-              (c.classList.add(`lh-audit-group--${a}`), i.push(c));
+              c.classList.add(`lh-audit-group--${a}`), i.push(c);
             }
             return i;
           }
           renderUnexpandableClump(e, t) {
             let n = this.dom.createElement("div");
             return (
-              this._renderGroupedAudits(e, t).forEach((i) => n.append(i)),
-              n
+              this._renderGroupedAudits(e, t).forEach((i) => n.append(i)), n
             );
           }
           renderClump(
@@ -23840,11 +23832,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             let h = this.dom.find(".lh-audit-group", i);
             if (n) {
               let p = this.dom.convertMarkdownLinkSnippets(n);
-              (p.classList.add(
+              p.classList.add(
                 "lh-audit-group__description",
                 "lh-audit-group__footer"
               ),
-                h.append(p));
+                h.append(p);
             }
             return (
               (this.dom.find(".lh-clump-toggletext--show", h).textContent =
@@ -23911,7 +23903,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               l = r / i,
               s = this.dom.find(".lh-fraction__content", t),
               c = this.dom.createElement("span");
-            ((c.textContent = `${r}/${i}`), s.append(c));
+            (c.textContent = `${r}/${i}`), s.append(c);
             let d = k.calculateRating(l);
             return (
               a === 0 && (d = "null"),
@@ -23931,9 +23923,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               i = (0.25 * r) / n;
             e.style.transform = `rotate(${-90 + i * 360}deg)`;
             let a = t * n - r / 2;
-            (t === 0 && (e.style.opacity = "0"),
+            t === 0 && (e.style.opacity = "0"),
               t === 1 && (a = n),
-              (e.style.strokeDasharray = `${Math.max(a, 0)} ${n}`));
+              (e.style.strokeDasharray = `${Math.max(a, 0)} ${n}`);
           }
           _auditHasWarning(e) {
             return !!e.result.warnings?.length;
@@ -23950,18 +23942,18 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           }
           render(e, t = {}, n) {
             let r = this.dom.createElement("div", "lh-category");
-            ((r.id = e.id), r.append(this.renderCategoryHeader(e, t, n)));
+            (r.id = e.id), r.append(this.renderCategoryHeader(e, t, n));
             let i = new Map();
-            (i.set("failed", []),
+            i.set("failed", []),
               i.set("warning", []),
               i.set("manual", []),
               i.set("passed", []),
-              i.set("notApplicable", []));
+              i.set("notApplicable", []);
             for (let l of e.auditRefs) {
               if (l.group === "hidden") continue;
               let s = this._getClumpIdForAuditRef(l),
                 c = i.get(s);
-              (c.push(l), i.set(s, c));
+              c.push(l), i.set(s, c);
             }
             for (let l of i.values()) l.sort((s, c) => c.weight - s.weight);
             let a = i.get("failed")?.length;
@@ -23969,7 +23961,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               if (s.length === 0) continue;
               if (l === "failed") {
                 let p = this.renderUnexpandableClump(s, t);
-                (p.classList.add("lh-clump--failed"), r.append(p));
+                p.classList.add("lh-clump--failed"), r.append(p);
                 continue;
               }
               let c = l === "manual" ? e.manualDescription : void 0,
@@ -24015,8 +24007,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   (s = !0),
                   (c = t.node.isLongest));
               let d = e.find(".lh-crc-node", r);
-              (d.setAttribute("title", l),
-                c && d.classList.add("lh-crc-node__longest"));
+              d.setAttribute("title", l),
+                c && d.classList.add("lh-crc-node__longest");
               let h = e.find(".lh-crc-node__tree-marker", r);
               t.treeMarkers.forEach((f) => {
                 let u = f ? "lh-tree-marker lh-vert" : "lh-tree-marker";
@@ -24042,8 +24034,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 let f = e.createElement("span", "lh-crc-node__chain-duration");
                 f.textContent = " - " + m.i18n.formatMilliseconds(i) + ", ";
                 let u = e.createElement("span", "lh-crc-node__chain-size");
-                ((u.textContent = m.i18n.formatBytesToKiB(a, 0.01)),
-                  w.append(f, u));
+                (u.textContent = m.i18n.formatBytesToKiB(a, 0.01)),
+                  w.append(f, u);
               }
               return r;
             }
@@ -24062,12 +24054,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             static render(e, t, n) {
               let r = e.createComponent("crc"),
                 i = e.find(".lh-crc", r);
-              ((e.find(".lh-crc-initial-nav", r).textContent =
+              (e.find(".lh-crc-initial-nav", r).textContent =
                 m.strings.crcInitialNavigation),
                 (e.find(".lh-crc__longest_duration_label", r).textContent =
                   m.strings.crcLongestDurationLabel),
                 (e.find(".lh-crc__longest_duration", r).textContent =
-                  m.i18n.formatMilliseconds(t.longestChain.duration)));
+                  m.i18n.formatMilliseconds(t.longestChain.duration));
               let a = t.chains;
               for (let l of Object.keys(a)) {
                 let s = Q.createSegment(a, l);
@@ -24104,7 +24096,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           static renderClipPathInScreenshot(e, t, n, r, i) {
             let a = e.find("clipPath", t),
               l = `clip-${m.getUniqueSuffix()}`;
-            ((a.id = l), (t.style.clipPath = `url(#${l})`));
+            (a.id = l), (t.style.clipPath = `url(#${l})`);
             let s = n.top / i.height,
               c = s + r.height / i.height,
               d = n.left / i.width,
@@ -24120,7 +24112,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 "http://www.w3.org/2000/svg",
                 "polygon"
               );
-              (b.setAttribute("points", g), a.append(b));
+              b.setAttribute("points", g), a.append(b);
             }
           }
           static installFullPageScreenshot(e, t) {
@@ -24165,7 +24157,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   d.remove();
                   return;
                 }
-                (d.append(g), d.addEventListener("click", () => d.remove()));
+                d.append(g), d.addEventListener("click", () => d.remove());
               }));
           }
           static _computeZoomFactor(e, t) {
@@ -24177,30 +24169,30 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             if (!pt(t, n)) return null;
             let i = e.createComponent("elementScreenshot"),
               a = e.find("div.lh-element-screenshot", i);
-            ((a.dataset.rectWidth = n.width.toString()),
+            (a.dataset.rectWidth = n.width.toString()),
               (a.dataset.rectHeight = n.height.toString()),
               (a.dataset.rectLeft = n.left.toString()),
-              (a.dataset.rectTop = n.top.toString()));
+              (a.dataset.rectTop = n.top.toString());
             let l = this._computeZoomFactor(n, r),
               s = { width: r.width / l, height: r.height / l };
-            ((s.width = Math.min(t.width, s.width)),
-              (s.height = Math.min(t.height, s.height)));
+            (s.width = Math.min(t.width, s.width)),
+              (s.height = Math.min(t.height, s.height));
             let c = { width: s.width * l, height: s.height * l },
               d = o.getScreenshotPositions(n, s, {
                 width: t.width,
                 height: t.height,
               }),
               h = e.find("div.lh-element-screenshot__image", a);
-            ((h.style.width = c.width + "px"),
+            (h.style.width = c.width + "px"),
               (h.style.height = c.height + "px"),
               (h.style.backgroundPositionY = -(d.screenshot.top * l) + "px"),
               (h.style.backgroundPositionX = -(d.screenshot.left * l) + "px"),
-              (h.style.backgroundSize = `${t.width * l}px ${t.height * l}px`));
+              (h.style.backgroundSize = `${t.width * l}px ${t.height * l}px`);
             let p = e.find("div.lh-element-screenshot__element-marker", a);
-            ((p.style.width = n.width * l + "px"),
+            (p.style.width = n.width * l + "px"),
               (p.style.height = n.height * l + "px"),
               (p.style.left = d.clip.left * l + "px"),
-              (p.style.top = d.clip.top * l + "px"));
+              (p.style.top = d.clip.top * l + "px");
             let g = e.find("div.lh-element-screenshot__mask", a);
             return (
               (g.style.width = c.width + "px"),
@@ -24214,9 +24206,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           mt = ["bytes", "numeric", "ms", "timespanMs"],
           X = class {
             constructor(e, t = {}) {
-              ((this._dom = e),
+              (this._dom = e),
                 (this._fullPageScreenshot = t.fullPageScreenshot),
-                (this._entities = t.entities));
+                (this._entities = t.entities);
             }
             render(e) {
               switch (e.type) {
@@ -24243,7 +24235,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             _renderBytes(e) {
               let t = m.i18n.formatBytesToKiB(e.value, e.granularity || 0.1),
                 n = this._renderText(t);
-              return ((n.title = m.i18n.formatBytes(e.value)), n);
+              return (n.title = m.i18n.formatBytes(e.value)), n;
             }
             _renderMilliseconds(e) {
               let t;
@@ -24264,27 +24256,27 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 i;
               try {
                 let l = E.parseURL(t);
-                ((n = l.file === "/" ? l.origin : l.file),
+                (n = l.file === "/" ? l.origin : l.file),
                   (r =
                     l.file === "/" || l.hostname === ""
                       ? ""
                       : `(${l.hostname})`),
-                  (i = t));
+                  (i = t);
               } catch {
                 n = t;
               }
               let a = this._dom.createElement("div", "lh-text__url");
               if ((a.append(this._renderLink({ text: n, url: t })), r)) {
                 let l = this._renderText(r);
-                (l.classList.add("lh-text__url-host"), a.append(l));
+                l.classList.add("lh-text__url-host"), a.append(l);
               }
-              return (i && ((a.title = t), (a.dataset.url = t)), a);
+              return i && ((a.title = t), (a.dataset.url = t)), a;
             }
             _renderLink(e) {
               let t = this._dom.createElement("a");
               if ((this._dom.safelySetHref(t, e.url), !t.href)) {
                 let n = this._renderText(e.text);
-                return (n.classList.add("lh-link"), n);
+                return n.classList.add("lh-link"), n;
               }
               return (
                 (t.rel = "noopener"),
@@ -24296,17 +24288,17 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             }
             _renderText(e) {
               let t = this._dom.createElement("div", "lh-text");
-              return ((t.textContent = e), t);
+              return (t.textContent = e), t;
             }
             _renderNumeric(e) {
               let t = m.i18n.formatNumber(e.value, e.granularity || 0.1),
                 n = this._dom.createElement("div", "lh-numeric");
-              return ((n.textContent = t), n);
+              return (n.textContent = t), n;
             }
             _renderThumbnail(e) {
               let t = this._dom.createElement("img", "lh-thumbnail"),
                 n = e;
-              return ((t.src = n), (t.title = n), (t.alt = ""), t);
+              return (t.src = n), (t.title = n), (t.alt = ""), t;
             }
             _renderUnknown(e, t) {
               console.error(`Unknown details type: ${e}`, t);
@@ -24427,7 +24419,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               if (!r.some(Boolean)) return n;
               for (let i of e.subItems.items) {
                 let a = this._renderTableRow(i, r);
-                (a.classList.add("lh-sub-item-row"), n.append(a));
+                a.classList.add("lh-sub-item-row"), n.append(a);
               }
               return n;
             }
@@ -24439,23 +24431,23 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               let r = this._dom.find("td", e);
               if (n.category) {
                 let i = this._dom.createElement("span");
-                (i.classList.add("lh-audit__adorn"),
+                i.classList.add("lh-audit__adorn"),
                   (i.textContent = n.category),
-                  r.append(" ", i));
+                  r.append(" ", i);
               }
               if (n.isFirstParty) {
                 let i = this._dom.createElement("span");
-                (i.classList.add("lh-audit__adorn", "lh-audit__adorn1p"),
+                i.classList.add("lh-audit__adorn", "lh-audit__adorn1p"),
                   (i.textContent = m.strings.firstPartyChipLabel),
-                  r.append(" ", i));
+                  r.append(" ", i);
               }
               if (n.homepage) {
                 let i = this._dom.createElement("a");
-                ((i.href = n.homepage),
+                (i.href = n.homepage),
                   (i.target = "_blank"),
                   (i.title = m.strings.openInANewTabTooltip),
                   i.classList.add("lh-report-icon--external"),
-                  r.append(" ", i));
+                  r.append(" ", i);
               }
             }
             _renderEntityGroupRow(e, t) {
@@ -24492,7 +24484,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 s.set(h, p);
               }
               let c = [...s.values()];
-              return (r && c.sort(k.getTableItemSortComparator(r)), c);
+              return r && c.sort(k.getTableItemSortComparator(r)), c;
             }
             _renderTable(e) {
               if (!e.items.length) return this._dom.createElement("span");
@@ -24502,8 +24494,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               for (let l of e.headings) {
                 let c = `lh-table-column--${l.valueType || "text"}`,
                   d = this._dom.createElement("div", "lh-text");
-                ((d.textContent = l.label),
-                  this._dom.createChildOf(r, "th", c).append(d));
+                (d.textContent = l.label),
+                  this._dom.createChildOf(r, "th", c).append(d);
               }
               let i = this._getEntityGroupItems(e),
                 a = this._dom.createChildOf(t, "tbody");
@@ -24514,11 +24506,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   for (let h of e.items.filter((p) => p.entity === s))
                     c.append(this._renderTableRowsFromItem(h, e.headings));
                   let d = this._dom.findAll("tr", c);
-                  (s &&
+                  s &&
                     d.length &&
                     (d.forEach((h) => (h.dataset.entity = s)),
                     this._adornEntityGroupRow(d[0])),
-                    a.append(c));
+                    a.append(c);
                 }
               else {
                 let l = !0;
@@ -24531,12 +24523,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                       (h.dataset.entity = s.entity),
                     e.isEntityGrouped && s.entity)
                   )
-                    (h.classList.add("lh-row--group"),
-                      this._adornEntityGroupRow(h));
+                    h.classList.add("lh-row--group"),
+                      this._adornEntityGroupRow(h);
                   else
                     for (let p of d)
                       p.classList.add(l ? "lh-row--even" : "lh-row--odd");
-                  ((l = !l), a.append(c));
+                  (l = !l), a.append(c);
                 }
               }
               return t;
@@ -24554,7 +24546,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 e.items.forEach((n) => {
                   if (n.type === "list-section") {
                     let i = this._dom.createElement("div", "lh-list-section");
-                    (n.title &&
+                    n.title &&
                       this._dom
                         .createChildOf(i, "div", "lh-list-section__title")
                         .append(this._dom.convertMarkdownLinkSnippets(n.title)),
@@ -24567,9 +24559,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                           )
                           .append(
                             this._dom.convertMarkdownLinkSnippets(n.description)
-                          ));
+                          );
                     let a = this._renderListValue(n.value);
-                    (a && i.append(a), t.append(i));
+                    a && i.append(a), t.append(i);
                     return;
                   }
                   let r = this._renderListValue(n);
@@ -24599,13 +24591,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               let t = this._dom.createElement("span", "lh-node");
               if (e.nodeLabel) {
                 let a = this._dom.createElement("div");
-                ((a.textContent = e.nodeLabel), t.append(a));
+                (a.textContent = e.nodeLabel), t.append(a);
               }
               if (e.snippet) {
                 let a = this._dom.createElement("div");
-                (a.classList.add("lh-node__snippet"),
+                a.classList.add("lh-node__snippet"),
                   (a.textContent = e.snippet),
-                  t.append(a));
+                  t.append(a);
               }
               if (
                 (e.selector && (t.title = e.selector),
@@ -24624,7 +24616,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   n,
                   r
                 );
-              return (i && t.prepend(i), t);
+              return i && t.prepend(i), t;
             }
             renderSourceLocation(e) {
               if (!e.url) return null;
@@ -24636,16 +24628,16 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 }:${e.original.column}`);
               let r;
               if (e.urlProvider === "network" && n)
-                ((r = this._renderLink({ url: e.url, text: n })),
-                  (r.title = `maps to generated location ${t}`));
+                (r = this._renderLink({ url: e.url, text: n })),
+                  (r.title = `maps to generated location ${t}`);
               else if (e.urlProvider === "network" && !n)
-                ((r = this.renderTextURL(e.url)),
+                (r = this.renderTextURL(e.url)),
                   (this._dom.find(".lh-link", r).textContent += `:${
                     e.line + 1
-                  }:${e.column}`));
+                  }:${e.column}`);
               else if (e.urlProvider === "comment" && n)
-                ((r = this._renderText(`${n} (from source map)`)),
-                  (r.title = `${t} (from sourceURL)`));
+                (r = this._renderText(`${n} (from source map)`)),
+                  (r.title = `${t} (from sourceURL)`);
               else if (e.urlProvider === "comment" && !n)
                 r = this._renderText(`${t} (from sourceURL)`);
               else return null;
@@ -24670,25 +24662,25 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     "img",
                     "lh-filmstrip__thumbnail"
                   );
-                ((i.src = n.data), (i.alt = "Screenshot"));
+                (i.src = n.data), (i.alt = "Screenshot");
               }
               return t;
             }
             _renderCode(e) {
               let t = this._dom.createElement("pre", "lh-code");
-              return ((t.textContent = e), t);
+              return (t.textContent = e), t;
             }
           };
         var te = class {
           constructor(e) {
-            (e === "en-XA" && (e = "de"),
+            e === "en-XA" && (e = "de"),
               (this._locale = e),
-              (this._cachedNumberFormatters = new Map()));
+              (this._cachedNumberFormatters = new Map());
           }
           _formatNumberWithGranularity(e, t, n = {}) {
             if (t !== void 0) {
               let a = -Math.log10(t);
-              (Number.isInteger(a) ||
+              Number.isInteger(a) ||
                 (console.warn(
                   `granularity of ${t} is invalid. Using 1 instead`
                 ),
@@ -24698,7 +24690,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   (n.minimumFractionDigits = n.maximumFractionDigits =
                     Math.ceil(a))),
                 (e = Math.round(e / t) * t),
-                Object.is(e, -0) && (e = 0));
+                Object.is(e, -0) && (e = 0);
             } else Math.abs(e) < 5e-4 && (e = 0);
             let r,
               i = [
@@ -24788,8 +24780,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             try {
               n = new Intl.DateTimeFormat(this._locale, t);
             } catch {
-              ((t.timeZone = "UTC"),
-                (n = new Intl.DateTimeFormat(this._locale, t)));
+              (t.timeZone = "UTC"),
+                (n = new Intl.DateTimeFormat(this._locale, t));
             }
             return n.format(new Date(e));
           }
@@ -24822,12 +24814,12 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         }
         function Se(o, e, t) {
           let n = o.find("div.lh-exp-gauge__wrapper", e);
-          ((n.className = ""),
+          (n.className = ""),
             n.classList.add(
               "lh-exp-gauge__wrapper",
               `lh-exp-gauge__wrapper--${k.calculateRating(t.score)}`
             ),
-            vt(o, n, t));
+            vt(o, n, t);
         }
         function ft(o, e, t) {
           t = t || o / 32;
@@ -24869,16 +24861,16 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               strokeGap: w,
             } = ft(128, i),
             f = o.find("svg.lh-exp-gauge", e);
-          ((o.find(".lh-exp-gauge__label", f).textContent = t.title),
+          (o.find(".lh-exp-gauge__label", f).textContent = t.title),
             f.setAttribute("viewBox", [-64, -64 / 2, 128, 128 / 2].join(" ")),
             f.style.setProperty("--stroke-width", `${b}px`),
-            f.style.setProperty("--circle-meas", (2 * Math.PI).toFixed(4)));
+            f.style.setProperty("--circle-meas", (2 * Math.PI).toFixed(4));
           let u = o.find("g.lh-exp-gauge__outer", e),
             v = o.find("g.lh-exp-gauge__inner", e),
             _ = o.find("circle.lh-cover", u),
             x = o.find("circle.lh-exp-gauge__arc", v),
             S = o.find("text.lh-exp-gauge__percentage", v);
-          (u.style.setProperty("--scale-initial", String(a / l)),
+          u.style.setProperty("--scale-initial", String(a / l)),
             u.style.setProperty("--radius", `${l}px`),
             _.style.setProperty("--radius", `${0.5 * (a + l)}px`),
             _.setAttribute("stroke-width", String(w)),
@@ -24888,14 +24880,14 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               `${d()} ${(s - d()).toFixed(4)}`
             ),
             x.setAttribute("stroke-dashoffset", String(0.25 * s - p)),
-            (S.textContent = Math.round(i * 100).toString()));
+            (S.textContent = Math.round(i * 100).toString());
           let A = l + b,
             z = l - b,
             M = t.auditRefs.filter((y) => y.group === "metrics" && y.weight),
             $ = M.reduce((y, C) => (y += C.weight), 0),
             R = 0.25 * c - g - 0.5 * w,
             N = -0.5 * Math.PI;
-          (u.querySelectorAll(".metric").forEach((y) => {
+          u.querySelectorAll(".metric").forEach((y) => {
             M.map((F) => `metric--${F.id}`).find((F) =>
               y.classList.contains(F)
             ) || y.remove();
@@ -24923,7 +24915,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 H =
                   o.maybeFind(`.metric--${L} text.metric__value`, u) ||
                   o.createSVGElement("text");
-              (T.classList.add("metric", `metric--${L}`),
+              T.classList.add("metric", `metric--${L}`),
                 B.classList.add(
                   "lh-exp-gauge__arc",
                   "lh-exp-gauge__arc--metric",
@@ -24938,7 +24930,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   "lh-exp-gauge__arc",
                   "lh-exp-gauge__arc--metric",
                   "lh-exp-gauge-hovertarget"
-                ));
+                );
               let j = y.weight / $,
                 de = h(j),
                 he = y.result.score ? y.result.score * j : 0,
@@ -24949,7 +24941,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   y.result.score,
                   y.result.scoreDisplayMode
                 );
-              (T.style.setProperty("--metric-rating", ge),
+              T.style.setProperty("--metric-rating", ge),
                 T.style.setProperty("--metric-color", `var(--color-${ge})`),
                 T.style.setProperty("--metric-offset", `${R}`),
                 T.style.setProperty("--i", C.toString()),
@@ -24959,7 +24951,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 P.classList.add("metric__label"),
                 H.classList.add("metric__value"),
                 (P.textContent = L),
-                (H.textContent = `+${Math.round(he * 100)}`));
+                (H.textContent = `+${Math.round(he * 100)}`);
               let me = N + j * Math.PI,
                 J = Math.cos(me),
                 Z = Math.sin(me);
@@ -24971,8 +24963,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   P.setAttribute("text-anchor", "end");
                   break;
                 case J === 0:
-                  (P.setAttribute("text-anchor", "middle"),
-                    H.setAttribute("text-anchor", "middle"));
+                  P.setAttribute("text-anchor", "middle"),
+                    H.setAttribute("text-anchor", "middle");
                   break;
               }
               switch (!0) {
@@ -24983,11 +24975,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   H.setAttribute("dominant-baseline", "hanging");
                   break;
                 case Z === 0:
-                  (P.setAttribute("dominant-baseline", "middle"),
-                    H.setAttribute("dominant-baseline", "middle"));
+                  P.setAttribute("dominant-baseline", "middle"),
+                    H.setAttribute("dominant-baseline", "middle");
                   break;
               }
-              (P.setAttribute("x", (A * J).toFixed(2)),
+              P.setAttribute("x", (A * J).toFixed(2)),
                 P.setAttribute("y", (A * Z).toFixed(2)),
                 H.setAttribute("x", (z * J).toFixed(2)),
                 H.setAttribute("y", (z * Z).toFixed(2)),
@@ -24999,8 +24991,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   T.appendChild(H),
                   u.appendChild(T)),
                 (R -= Pe),
-                (N += j * 2 * Math.PI));
-            }));
+                (N += j * 2 * Math.PI);
+            });
           let D =
             u.querySelector(".lh-exp-gauge-underhovertarget") ||
             o.createSVGElement("circle");
@@ -25017,16 +25009,16 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             f.dataset.listenersSetup)
           )
             return;
-          ((f.dataset.listenersSetup = !0),
+          (f.dataset.listenersSetup = !0),
             De(f),
             f.addEventListener("pointerover", (y) => {
               if (y.target === f && f.classList.contains("state--expanded")) {
-                (f.classList.remove("state--expanded"),
+                f.classList.remove("state--expanded"),
                   f.classList.contains("state--highlight") &&
                     (f.classList.remove("state--highlight"),
                     o
                       .find(".metric--highlight", f)
-                      .classList.remove("metric--highlight")));
+                      .classList.remove("metric--highlight"));
                 return;
               }
               if (!(y.target instanceof Element)) return;
@@ -25051,8 +25043,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     ),
                     !f.classList.contains("state--highlight"))
                   )
-                    (f.classList.add("state--highlight"),
-                      C.classList.add("metric--highlight"));
+                    f.classList.add("state--highlight"),
+                      C.classList.add("metric--highlight");
                   else {
                     let F = o.find(".metric--highlight", f);
                     C !== F &&
@@ -25063,11 +25055,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               }
             }),
             f.addEventListener("mouseleave", () => {
-              (f.classList.remove("state--highlight"),
+              f.classList.remove("state--highlight"),
                 f
                   .querySelector(".metric--highlight")
-                  ?.classList.remove("metric--highlight"));
-            }));
+                  ?.classList.remove("metric--highlight");
+            });
           async function De(y) {
             if (
               (await new Promise((P) => setTimeout(P, 1e3)),
@@ -25078,22 +25070,22 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               L = `uniq-${Math.random()}`;
             C.setAttribute("id", L);
             let F = o.createSVGElement("use");
-            (F.setAttribute("href", `#${L}`), y.appendChild(F));
+            F.setAttribute("href", `#${L}`), y.appendChild(F);
             let T = 2.5;
-            (y.style.setProperty("--peek-dur", `${T}s`),
-              y.classList.add("state--peek", "state--expanded"));
+            y.style.setProperty("--peek-dur", `${T}s`),
+              y.classList.add("state--peek", "state--expanded");
             let B = () => {
-                (y.classList.remove("state--peek", "state--expanded"),
-                  F.remove());
+                y.classList.remove("state--peek", "state--expanded"),
+                  F.remove();
               },
               K = setTimeout(
                 () => {
-                  (y.removeEventListener("mouseenter", q), B());
+                  y.removeEventListener("mouseenter", q), B();
                 },
                 T * 1e3 * 1.5
               );
             function q() {
-              (clearTimeout(K), B());
+              clearTimeout(K), B();
             }
             y.addEventListener("mouseenter", q, { once: !0 });
           }
@@ -25119,7 +25111,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               ),
               e.result.scoreDisplayMode === "error")
             ) {
-              ((l.textContent = ""), (a.textContent = "Error!"));
+              (l.textContent = ""), (a.textContent = "Error!");
               let s = this.dom.createChildOf(l, "span");
               s.textContent =
                 e.result.errorMessage || "Report error: no metric information";
@@ -25133,9 +25125,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               n = e.find((h) => h.id === "interactive"),
               r = e.find((h) => h.id === "first-cpu-idle"),
               i = e.find((h) => h.id === "first-meaningful-paint");
-            (n && t.push(n),
+            n && t.push(n),
               r && t.push(r),
-              i && typeof i.result.score == "number" && t.push(i));
+              i && typeof i.result.score == "number" && t.push(i);
             let a = (h) => Math.round(h * 100) / 100,
               s = [
                 ...t.map((h) => {
@@ -25159,7 +25151,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               d = new URL(
                 "https://googlechrome.github.io/lighthouse/scorecalc/"
               );
-            return ((d.hash = c.toString()), d.href);
+            return (d.hash = c.toString()), d.href;
           }
           overallImpact(e, t) {
             if (!e.result.metricSavings)
@@ -25185,19 +25177,19 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           render(e, t, n) {
             let r = m.strings,
               i = this.dom.createElement("div", "lh-category");
-            ((i.id = e.id), i.append(this.renderCategoryHeader(e, t, n)));
+            (i.id = e.id), i.append(this.renderCategoryHeader(e, t, n));
             let a = e.auditRefs.filter((p) => p.group === "metrics");
             if (a.length) {
               let [p, g] = this.renderAuditGroup(t.metrics),
                 b = this.dom.createElement("input", "lh-metrics-toggle__input"),
                 w = `lh-metrics-toggle${m.getUniqueSuffix()}`;
-              (b.setAttribute(
+              b.setAttribute(
                 "aria-label",
                 "Toggle the display of metric descriptions"
               ),
                 (b.type = "checkbox"),
                 (b.id = w),
-                p.prepend(b));
+                p.prepend(b);
               let f = this.dom.find(".lh-audit-group__header", p),
                 u = this.dom.createChildOf(
                   f,
@@ -25215,8 +25207,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   "span",
                   "lh-metrics-toggle__labeltext--hide"
                 );
-              ((v.textContent = m.strings.expandView),
-                (_.textContent = m.strings.collapseView));
+              (v.textContent = m.strings.expandView),
+                (_.textContent = m.strings.collapseView);
               let x = this.dom.createElement("div", "lh-metrics-container");
               if (
                 (p.insertBefore(x, g),
@@ -25236,14 +25228,14 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   );
                 A.append(z);
                 let M = this.dom.createChildOf(A, "a", "lh-calclink");
-                ((M.target = "_blank"),
+                (M.target = "_blank"),
                   (M.textContent = r.calculatorLink),
                   this.dom.safelySetHref(
                     M,
                     this._getScoringCalculatorHref(e.auditRefs)
-                  ));
+                  );
               }
-              (p.classList.add("lh-audit-group--metrics"), i.append(p));
+              p.classList.add("lh-audit-group--metrics"), i.append(p);
             }
             let l = this.dom.createChildOf(i, "div", "lh-filmstrip-container"),
               c = e.auditRefs.find(
@@ -25265,8 +25257,8 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               (!n || n?.gatherMode === "navigation") && e.score !== null)
             ) {
               let p = Ee(this.dom);
-              (Se(this.dom, p, e),
-                this.dom.find(".lh-score__gauge", i).replaceWith(p));
+              Se(this.dom, p, e),
+                this.dom.find(".lh-score__gauge", i).replaceWith(p);
             }
             return i;
           }
@@ -25294,7 +25286,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               h = {};
             for (let u of n) {
               let v = this.renderAuditGroup(t[u]);
-              (v[0].classList.add(`lh-audit-group--${u}`), (h[u] = v));
+              v[0].classList.add(`lh-audit-group--${u}`), (h[u] = v);
             }
             function p(u) {
               for (let v of s)
@@ -25337,7 +25329,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 typeof x == "number" && g.add(_);
             }
             let b = r.filter((u) => u.acronym && g.has(u.acronym));
-            (b.length && this.renderMetricAuditFilter(b, i, p), p("All"));
+            b.length && this.renderMetricAuditFilter(b, i, p), p("All");
             for (let u of n)
               if (c.some((v) => a(v.auditRef) === u)) {
                 let v = h[u];
@@ -25350,7 +25342,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 groupDefinitions: t,
               },
               f = this.renderClump("passed", w);
-            return (i.append(f), i);
+            return i.append(f), i;
           }
           renderMetricAuditFilter(e, t, n) {
             let r = this.dom.createElement("div", "lh-metricfilter"),
@@ -25365,13 +25357,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   "input",
                   "lh-metricfilter__radio"
                 );
-              ((d.type = "radio"), (d.name = `metricsfilter-${l}`), (d.id = c));
+              (d.type = "radio"), (d.name = `metricsfilter-${l}`), (d.id = c);
               let h = this.dom.createChildOf(
                 r,
                 "label",
                 "lh-metricfilter__label"
               );
-              ((h.htmlFor = c),
+              (h.htmlFor = c),
                 (h.title = "result" in s ? s.result.title : ""),
                 (h.textContent = s.acronym || s.id),
                 s.acronym === "All" &&
@@ -25386,11 +25378,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                       "lh-metricfilter__label--active",
                       b.htmlFor === c
                     );
-                  (t.classList.toggle(
+                  t.classList.toggle(
                     "lh-category--filtered",
                     s.acronym !== "All"
                   ),
-                    n(s.acronym || "All"));
+                    n(s.acronym || "All");
                   let g = t.querySelectorAll(
                     "div.lh-audit-group, details.lh-audit-group"
                   );
@@ -25400,13 +25392,13 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                       f = !!w.length && w.every((u) => u.hidden);
                     b.hidden = f;
                   }
-                }));
+                });
             }
           }
         };
         var re = class {
           constructor(e) {
-            ((this._dom = e), (this._opts = {}));
+            (this._dom = e), (this._opts = {});
           }
           renderReport(e, t, n) {
             if (!this._dom.rootEl && t) {
@@ -25419,10 +25411,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 : (t.classList.add("lh-root", "lh-vars"),
                   (this._dom.rootEl = t));
             } else this._dom.rootEl && t && (this._dom.rootEl = t);
-            (n && (this._opts = n),
+            n && (this._opts = n),
               this._dom.setLighthouseChannel(
                 e.configSettings.channel || "unknown"
-              ));
+              );
             let r = k.prepareReportResult(e);
             return (
               (this._dom.rootEl.textContent = ""),
@@ -25476,11 +25468,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 `${m.strings.runtimeSettingsBenchmark}: ${l}`,
                 `${m.strings.runtimeSettingsCPUThrottling}: ${n.cpuThrottling}`,
               ];
-            (n.screenEmulation &&
+            n.screenEmulation &&
               c.push(
                 `${m.strings.runtimeSettingsScreenEmulation}: ${n.screenEmulation}`
               ),
-              s && c.push(`${m.strings.runtimeSettingsAxeVersion}: ${s}`));
+              s && c.push(`${m.strings.runtimeSettingsAxeVersion}: ${s}`);
             let d = m.strings.runtimeAnalysisWindow;
             e.gatherMode === "timespan"
               ? (d = m.strings.runtimeAnalysisWindowTimespan)
@@ -25531,9 +25523,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             let r = [];
             for (let i of e.runWarnings) {
               let a = this._dom.createElement("li");
-              (a.append(this._dom.convertMarkdownLinkSnippets(i)), r.push(a));
+              a.append(this._dom.convertMarkdownLinkSnippets(i)), r.push(a);
             }
-            return (this._dom.find("ul", t).append(...r), t);
+            return this._dom.find("ul", t).append(...r), t;
           }
           _renderScoreGauges(e, t, n) {
             let r = [],
@@ -25548,7 +25540,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   "a.lh-gauge__wrapper, a.lh-fraction__wrapper",
                   s
                 );
-              (c &&
+              c &&
                 (this._dom.safelySetHref(c, `#${a.id}`),
                 c.addEventListener("click", (d) => {
                   if (!c.matches('[href^="#"]')) return;
@@ -25556,10 +25548,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     p = this._dom.rootEl;
                   if (!h || !p) return;
                   let g = this._dom.find(h, p);
-                  (d.preventDefault(), g.scrollIntoView());
+                  d.preventDefault(), g.scrollIntoView();
                 }),
                 this._opts.onPageAnchorRendered?.(c)),
-                k.isPluginCategory(a.id) ? i.push(s) : r.push(s));
+                k.isPluginCategory(a.id) ? i.push(s) : r.push(s);
             }
             return [...r, ...i];
           }
@@ -25591,9 +25583,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               s)
             ) {
               let b = this._dom.find(".lh-scores-container", i);
-              (s.append(...this._renderScoreGauges(e, n, r)), b.append(s, d));
+              s.append(...this._renderScoreGauges(e, n, r)), b.append(s, d);
               let w = this._dom.createElement("div", "lh-sticky-header");
-              (w.append(...this._renderScoreGauges(e, n, r)), a.append(w));
+              w.append(...this._renderScoreGauges(e, n, r)), a.append(w);
             }
             let h = this._dom.createElement("div", "lh-categories");
             l.append(h);
@@ -25640,7 +25632,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             if (typeof CompressionStream < "u") {
               let i = new CompressionStream("gzip"),
                 a = i.writable.getWriter();
-              (a.write(t), a.close());
+              a.write(t), a.close();
               let l = await new Response(i.readable).arrayBuffer();
               t = new Uint8Array(l);
             } else t = window.pako.gzip(o);
@@ -25685,9 +25677,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         async function Ae(o, e, t) {
           let n = new URL(e),
             r = !!window.CompressionStream;
-          ((n.hash = await Ce.toBase64(JSON.stringify(o), { gzip: r })),
+          (n.hash = await Ce.toBase64(JSON.stringify(o), { gzip: r })),
             r && n.searchParams.set("gzip", "1"),
-            window.open(n.toString(), t));
+            window.open(n.toString(), t);
         }
         async function Le(o) {
           let e = "viewer-" + ce(o),
@@ -25719,7 +25711,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         }
         var oe = class {
           constructor(e) {
-            ((this._dom = e),
+            (this._dom = e),
               this._toggleEl,
               this._menuEl,
               (this.onDocumentKeyDown = this.onDocumentKeyDown.bind(this)),
@@ -25731,10 +25723,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               (this._getNextSelectableNode =
                 this._getNextSelectableNode.bind(this)),
               (this._getPreviousMenuItem =
-                this._getPreviousMenuItem.bind(this)));
+                this._getPreviousMenuItem.bind(this));
           }
           setup(e) {
-            ((this._toggleEl = this._dom.find(
+            (this._toggleEl = this._dom.find(
               ".lh-topbar button.lh-tools__button",
               this._dom.rootEl
             )),
@@ -25745,20 +25737,20 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 this._dom.rootEl
               )),
               this._menuEl.addEventListener("keydown", this.onMenuKeydown),
-              this._menuEl.addEventListener("click", e));
+              this._menuEl.addEventListener("click", e);
           }
           close() {
-            (this._toggleEl.classList.remove("lh-active"),
+            this._toggleEl.classList.remove("lh-active"),
               this._toggleEl.setAttribute("aria-expanded", "false"),
               this._menuEl.contains(this._dom.document().activeElement) &&
                 this._toggleEl.focus(),
               this._menuEl.removeEventListener("focusout", this.onMenuFocusOut),
               this._dom
                 .document()
-                .removeEventListener("keydown", this.onDocumentKeyDown));
+                .removeEventListener("keydown", this.onDocumentKeyDown);
           }
           open(e) {
-            (this._toggleEl.classList.contains("lh-active")
+            this._toggleEl.classList.contains("lh-active")
               ? e.focus()
               : this._menuEl.addEventListener(
                   "transitionend",
@@ -25772,24 +25764,24 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               this._menuEl.addEventListener("focusout", this.onMenuFocusOut),
               this._dom
                 .document()
-                .addEventListener("keydown", this.onDocumentKeyDown));
+                .addEventListener("keydown", this.onDocumentKeyDown);
           }
           onToggleClick(e) {
-            (e.preventDefault(),
+            e.preventDefault(),
               e.stopImmediatePropagation(),
               this._toggleEl.classList.contains("lh-active")
                 ? this.close()
-                : this.open(this._getNextMenuItem()));
+                : this.open(this._getNextMenuItem());
           }
           onToggleKeydown(e) {
             switch (e.code) {
               case "ArrowUp":
-                (e.preventDefault(), this.open(this._getPreviousMenuItem()));
+                e.preventDefault(), this.open(this._getPreviousMenuItem());
                 break;
               case "ArrowDown":
               case "Enter":
               case " ":
-                (e.preventDefault(), this.open(this._getNextMenuItem()));
+                e.preventDefault(), this.open(this._getNextMenuItem());
                 break;
               default:
             }
@@ -25798,16 +25790,16 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             let t = e.target;
             switch (e.code) {
               case "ArrowUp":
-                (e.preventDefault(), this._getPreviousMenuItem(t).focus());
+                e.preventDefault(), this._getPreviousMenuItem(t).focus();
                 break;
               case "ArrowDown":
-                (e.preventDefault(), this._getNextMenuItem(t).focus());
+                e.preventDefault(), this._getNextMenuItem(t).focus();
                 break;
               case "Home":
-                (e.preventDefault(), this._getNextMenuItem().focus());
+                e.preventDefault(), this._getNextMenuItem().focus();
                 break;
               case "End":
-                (e.preventDefault(), this._getPreviousMenuItem().focus());
+                e.preventDefault(), this._getPreviousMenuItem().focus();
                 break;
               default:
             }
@@ -25830,7 +25822,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     )
                 ),
               r = t ? n.indexOf(t) + 1 : 0;
-            return (r >= n.length && (r = 0), n[r]);
+            return r >= n.length && (r = 0), n[r];
           }
           _getNextMenuItem(e) {
             let t = Array.from(this._menuEl.childNodes);
@@ -25843,7 +25835,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         };
         var ie = class {
           constructor(e, t) {
-            (this.lhr,
+            this.lhr,
               (this._reportUIFeatures = e),
               (this._dom = t),
               (this._dropDownMenu = new oe(this._dom)),
@@ -25855,10 +25847,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               (this.onDropDownMenuClick = this.onDropDownMenuClick.bind(this)),
               (this.onKeyUp = this.onKeyUp.bind(this)),
               (this.onCopy = this.onCopy.bind(this)),
-              (this.collapseAllDetails = this.collapseAllDetails.bind(this)));
+              (this.collapseAllDetails = this.collapseAllDetails.bind(this));
           }
           enable(e) {
-            ((this.lhr = e),
+            (this.lhr = e),
               this._dom.rootEl.addEventListener("keyup", this.onKeyUp),
               this._dom.document().addEventListener("copy", this.onCopy),
               this._dropDownMenu.setup(this.onDropDownMenuClick),
@@ -25866,7 +25858,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               this._dom
                 .find(".lh-topbar__logo", this._dom.rootEl)
                 .addEventListener("click", () => W(this._dom)),
-              this._setupStickyHeader());
+              this._setupStickyHeader();
           }
           onDropDownMenuClick(e) {
             e.preventDefault();
@@ -25877,10 +25869,10 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   this.onCopyButtonClick();
                   break;
                 case "print-summary":
-                  (this.collapseAllDetails(), this._print());
+                  this.collapseAllDetails(), this._print();
                   break;
                 case "print-expanded":
-                  (this.expandAllDetails(), this._print());
+                  this.expandAllDetails(), this._print();
                   break;
                 case "save-json": {
                   let n = JSON.stringify(this.lhr, null, 2);
@@ -25922,7 +25914,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
             }
           }
           onCopy(e) {
-            (this._copyAttempt &&
+            this._copyAttempt &&
               e.clipboardData &&
               (e.preventDefault(),
               e.clipboardData.setData(
@@ -25933,7 +25925,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 cmd: "log",
                 msg: "Report JSON copied to clipboard",
               })),
-              (this._copyAttempt = !1));
+              (this._copyAttempt = !1);
           }
           onCopyButtonClick() {
             this._dom.fireEventOn("lh-analytics", this._dom.document(), {
@@ -25949,11 +25941,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     msg: "Your browser does not support copy to clipboard.",
                   })));
             } catch (e) {
-              ((this._copyAttempt = !1),
+              (this._copyAttempt = !1),
                 this._dom.fireEventOn("lh-log", this._dom.document(), {
                   cmd: "log",
                   msg: e.message,
-                }));
+                });
             }
           }
           onKeyUp(e) {
@@ -25997,10 +25989,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 });
           }
           _setupStickyHeader() {
-            ((this.topbarEl = this._dom.find(
-              "div.lh-topbar",
-              this._dom.rootEl
-            )),
+            (this.topbarEl = this._dom.find("div.lh-topbar", this._dom.rootEl)),
               (this.categoriesEl = this._dom.find(
                 "div.lh-categories",
                 this._dom.rootEl
@@ -26032,7 +26021,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                     this._updateStickyHeader()
                   ).observe(t);
                 })
-              ));
+              );
           }
           _updateStickyHeader() {
             if (!this.stickyHeaderEl) return;
@@ -26052,11 +26041,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               s = l[a],
               c = l[0].getBoundingClientRect().left,
               d = s.getBoundingClientRect().left - c;
-            ((this.highlightEl.style.transform = `translate(${d}px)`),
+            (this.highlightEl.style.transform = `translate(${d}px)`),
               this.stickyHeaderEl.classList.toggle(
                 "lh-sticky-header--visible",
                 n
-              ));
+              );
           }
         };
         function kt(o, e) {
@@ -26082,20 +26071,20 @@ details[open] .lh-clump-toggletext--hide { display: block;}
         }
         var ae = class {
           constructor(e, t = {}) {
-            (this.json,
+            this.json,
               (this._dom = e),
               (this._opts = t),
               (this._topbar = t.omitTopbar ? null : new ie(this, e)),
-              (this.onMediaQueryChange = this.onMediaQueryChange.bind(this)));
+              (this.onMediaQueryChange = this.onMediaQueryChange.bind(this));
           }
           initFeatures(e) {
-            ((this.json = e),
+            (this.json = e),
               (this._fullPageScreenshot = E.getFullPageScreenshot(e)),
               this._topbar &&
                 (this._topbar.enable(e), this._topbar.resetUIState()),
               this._setupMediaQueryListeners(),
               this._setupThirdPartyFilter(),
-              this._setupElementScreenshotOverlay(this._dom.rootEl));
+              this._setupElementScreenshotOverlay(this._dom.rootEl);
             let t =
               this._dom.isDevTools() ||
               this._opts.disableDarkMode ||
@@ -26129,7 +26118,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               );
               s.checked = !0;
             }
-            (this.json.audits["script-treemap-data"] &&
+            this.json.audits["script-treemap-data"] &&
               this.json.audits["script-treemap-data"].details &&
               this.addButton({
                 text: m.strings.viewTreemapLabel,
@@ -26151,7 +26140,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               this._opts.getStandaloneReportHTML &&
                 this._dom
                   .find('a[data-action="save-html"]', this._dom.rootEl)
-                  .classList.remove("lh-hidden"));
+                  .classList.remove("lh-hidden");
             for (let s of this._dom.findAll("[data-i18n]", this._dom.rootEl)) {
               let d = s.getAttribute("data-i18n");
               s.textContent = m.strings[d];
@@ -26178,7 +26167,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           getReportHtml() {
             if (!this._opts.getStandaloneReportHTML)
               throw new Error("`getStandaloneReportHTML` is not set");
-            return (this.resetUIState(), this._opts.getStandaloneReportHTML());
+            return this.resetUIState(), this._opts.getStandaloneReportHTML();
           }
           saveAsGist() {
             throw new Error("Cannot save as gist from base report");
@@ -26190,8 +26179,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           }
           _setupMediaQueryListeners() {
             let e = self.matchMedia("(max-width: 500px)");
-            (e.addListener(this.onMediaQueryChange),
-              this.onMediaQueryChange(e));
+            e.addListener(this.onMediaQueryChange), this.onMediaQueryChange(e);
           }
           _resetUIState() {
             this._topbar && this._topbar.resetUIState();
@@ -26235,11 +26223,11 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   for (; _; ) {
                     let x = u && s.includes(_);
                     do
-                      (_.classList.toggle("lh-row--hidden", x),
+                      _.classList.toggle("lh-row--hidden", x),
                         c &&
                           (_.classList.toggle("lh-row--even", !x && v),
                           _.classList.toggle("lh-row--odd", !x && !v)),
-                        (_ = _.nextElementSibling));
+                        (_ = _.nextElementSibling);
                     while (_ && _.classList.contains("lh-sub-item-row"));
                     x || (v = !v);
                   }
@@ -26247,10 +26235,9 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 let p = s.filter(
                   (f) => !f.classList.contains("lh-row--group")
                 ).length;
-                ((this._dom.find(".lh-3p-filter-count", d).textContent =
-                  `${p}`),
+                (this._dom.find(".lh-3p-filter-count", d).textContent = `${p}`),
                   (this._dom.find(".lh-3p-ui-string", d).textContent =
-                    m.strings.thirdPartyResourcesLabel));
+                    m.strings.thirdPartyResourcesLabel);
                 let g = s.length === l.length,
                   b = !s.length;
                 if (
@@ -26309,9 +26296,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
           t.classList.add("lh-root", "lh-vars");
           let n = new ee(t.ownerDocument, t);
           return (
-            new re(n).renderReport(o, t, e),
-            new ae(n, e).initFeatures(o),
-            t
+            new re(n).renderReport(o, t, e), new ae(n, e).initFeatures(o), t
           );
         }
         var le = class {
@@ -26352,29 +26337,29 @@ details[open] .lh-clump-toggletext--hide { display: block;}
               !this.el.parentNode)
             )
               throw new Error("element needs to be in the DOM");
-            (this.el.parentNode.insertBefore(t, this.el), (this._id = void 0));
+            this.el.parentNode.insertBefore(t, this.el), (this._id = void 0);
           }
           log(e, t = !0) {
-            (this._id && clearTimeout(this._id),
+            this._id && clearTimeout(this._id),
               (this.el.textContent = e),
               this.el.classList.add("lh-show"),
               t &&
                 (this._id = setTimeout(() => {
                   this.el.classList.remove("lh-show");
-                }, 7e3)));
+                }, 7e3));
           }
           warn(e) {
             this.log("Warning: " + e);
           }
           error(e) {
-            (this.log(e),
+            this.log(e),
               setTimeout(() => {
                 throw new Error(e);
-              }, 0));
+              }, 0);
           }
           hide() {
-            (this._id && clearTimeout(this._id),
-              this.el.classList.remove("lh-show"));
+            this._id && clearTimeout(this._id),
+              this.el.classList.remove("lh-show");
           }
         };
         function St() {
@@ -26385,7 +26370,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                 return document.documentElement.outerHTML;
               },
             });
-          (document.body.append(e),
+          document.body.append(e),
             document.addEventListener("lh-analytics", (t) => {
               let n = t;
               "gtag" in window &&
@@ -26410,7 +26395,7 @@ details[open] .lh-clump-toggletext--hide { display: block;}
                   r.hide();
                   break;
               }
-            }));
+            });
         }
         window.__initLighthouseReport__ = St;
       })();

@@ -191,9 +191,9 @@ async function updateProjects() {
               existing?.lastActiveDays !== null &&
               contributor.lastActiveDays !== null
                 ? Math.min(existing.lastActiveDays, contributor.lastActiveDays)
-                : (contributor.lastActiveDays ??
+                : contributor.lastActiveDays ??
                   existing?.lastActiveDays ??
-                  null),
+                  null,
             pullRequestCount:
               (existing?.pullRequestCount || 0) + pullRequestCount,
             issueCount: (existing?.issueCount || 0) + issueCount,
