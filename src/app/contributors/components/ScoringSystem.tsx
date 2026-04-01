@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronDown, ChevronUp, Info } from "lucide-react";
 import {
   CODE_SCORE_ITEMS,

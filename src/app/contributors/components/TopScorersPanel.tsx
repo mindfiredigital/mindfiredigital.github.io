@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { TopScorersPanelProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
 import { useTopScorersPanel } from "@/hooks";
