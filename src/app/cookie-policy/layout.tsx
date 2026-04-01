@@ -1,41 +1,46 @@
 import React from "react";
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
+import { COOKIE_POLICY_METADATA_CONSTANTS } from "@/constants";
 
 /*
-  Metadata for "Projects" page
+  Metadata for "cookie-policy" page
   - Automatically injected into <head> by Next.js
   - Helps improve SEO and social media previews
 */
 export const metadata: Metadata = {
-  title: meta["Cookie-Policy"].title,
-  description: meta["Cookie-Policy"].description,
+  title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
+  description: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
 
   openGraph: {
-    title: meta["Cookie-Policy"].title,
-    description: meta["Cookie-Policy"].description,
+    title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
+    description:
+      meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
     images: {
-      url: meta["Cookie-Policy"].openGraph.images,
-      height: "627",
-      width: "1200",
+      url: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].openGraph
+        .images,
+      height: COOKIE_POLICY_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: COOKIE_POLICY_METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta["Cookie-Policy"].openGraph.url,
+    url: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].openGraph.url,
     type: "website",
-    siteName: "Mindfire Digital LLP",
-    locale: "en_US",
+    siteName: COOKIE_POLICY_METADATA_CONSTANTS.SITE_NAME,
+    locale: COOKIE_POLICY_METADATA_CONSTANTS.LOCALE,
   },
+
   twitter: {
-    card: "app",
-    title: meta["Cookie-Policy"].title,
-    description: meta["Cookie-Policy"].description,
-    site: "@mindfires",
-    creator: "@mindfires",
+    card: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].title,
+    description:
+      meta[COOKIE_POLICY_METADATA_CONSTANTS.COOKIE_POLICY].description,
+    site: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_SITE,
+    creator: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: "twitter_app",
+      name: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
+        iphone: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: COOKIE_POLICY_METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },
