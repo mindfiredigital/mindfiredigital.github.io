@@ -65,3 +65,23 @@ export const WHY_OPEN_SOURCE_SECTION_DATA: SectionData[] = [
       "Sparking creativity and new ideas, pushing boundaries, and evolving through shared knowledge and learning",
   },
 ];
+
+export const ABOUT_METADATA_CONSTANTS = {
+  ABOUT: "About",
+  WEBSITE: "website",
+  OPEN_GRAPH_IMAGE_HEIGHT: "627",
+  OPEN_GRAPH_IMAGE_WIDTH: "1200",
+
+  SITE_NAME: "Mindfire Digital LLP",
+  LOCALE: "en_US",
+
+  TWITTER_CARD_TYPE: "app",
+  TWITTER_SITE: "@mindfires",
+  TWITTER_CREATOR: "@mindfires",
+
+  TWITTER_APP_NAME: "twitter_app",
+
+  TWITTER_APP_ID_IPHONE: "twitter_app://iphone",
+  TWITTER_APP_ID_IPAD: "twitter_app://ipad",
+  TWITTER_APP_ID_GOOGLEPLAY: "twitter_app://googleplay",
+} as const;
