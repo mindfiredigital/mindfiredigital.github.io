@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PackageCount from "./components/PackageCount";
 import TotalDownloads from "./components/TotalDownloads";
 import PackageFilterToggle from "./components/PackageFilterToggle";
