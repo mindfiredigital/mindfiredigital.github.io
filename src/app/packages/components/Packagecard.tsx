@@ -50,6 +50,7 @@ export default function PackageCard({
               alt='downloads'
               loading='lazy'
               quality={75}
+              aria-hidden='true'
             />
             <h6 className='text-mindfire-text-black font-semibold text-lg'>
               {new Intl.NumberFormat("en-US").format(group.totalDownloads)}
@@ -68,6 +69,7 @@ export default function PackageCard({
             className='font-bold px-2 py-1 rounded inline-flex items-center hover:bg-gray-100 transition-colors'
             onClick={onFilterClick}
             title={PACKAGE_CARD_LABELS.filterTitle}
+            aria-label={PACKAGE_CARD_LABELS.filterTitle}
           >
             <Image
               src='/images/social-media/bx-filter-alt.svg'
@@ -76,6 +78,7 @@ export default function PackageCard({
               alt='filter'
               loading='lazy'
               quality={75}
+              aria-hidden='true'
             />
           </button>
         )}
@@ -83,6 +86,7 @@ export default function PackageCard({
           <button
             onClick={onViewAllClick}
             className='flex-1 mr-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'
+            aria-label={`View all packages in ${group.baseTitle}`}
           >
             {PACKAGE_CARD_LABELS.viewAllPackages}
             <svg
