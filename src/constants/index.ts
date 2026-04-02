@@ -1,6 +1,6 @@
 export * from "./contributors.constant";
 export * from "./about.constant";
-export * from "./topscorepanel.constant";
+export * from "./topScorePanel.constant";
 export * from "./cookiePolicy.constant";
 export * from "./privacyPolicy.constant";
 export * from "./termsOfUse.constant";
