@@ -15,3 +15,4 @@ export * from "./header.constant";
 export * from "./notFound.constant";
 export * from "./error.constant";
 export * from "./metadata.constant";
+export * from "./logger.constant";
