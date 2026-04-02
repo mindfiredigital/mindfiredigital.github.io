@@ -3,8 +3,8 @@
 import { PanelBodyProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
 import { formatMonthKey } from "@/app/utils";
-import PodiumSection from "./Podiumsection";
-import RankListSection from "./Ranklistsection";
+import PodiumSection from "./PodiumSection";
+import RankListSection from "./RankListSection";
 
 /* Main panel body handling loading, empty state, and data display */
 export default function PanelBody({

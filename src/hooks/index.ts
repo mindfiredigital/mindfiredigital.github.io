@@ -1,4 +1,4 @@
-export * from "./Usecontributorfilters";
+export * from "./useContributorfilters";
 export * from "./useAnimatedCounter";
 export * from "./useContributorModal";
 export * from "./useHashScroll";

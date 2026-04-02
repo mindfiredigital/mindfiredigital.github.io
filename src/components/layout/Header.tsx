@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { HEADER, navigations } from "@/constants";
 import Image from "next/image";

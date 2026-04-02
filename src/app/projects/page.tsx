@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import FilterSidebar from "./components/FilterSidebar";
 import ProjectsHero from "./components/ProjectsHero";
 import CurrentProjectsSection from "./components/CurrentProjectsSection";

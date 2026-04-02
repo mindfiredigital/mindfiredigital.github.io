@@ -7,8 +7,8 @@
 import TopScorersPanel from "./components/TopScorersPanel";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
 import ContributorModal from "./components/ContributorModal";
-import ContributorHero from "./components/Contributorhero";
-import ContributorListSection from "./components/Contributorlistsection";
+import ContributorHero from "./components/ContributorHero";
+import ContributorListSection from "./components/ContributorListSection";
 
 /*
   Data imports

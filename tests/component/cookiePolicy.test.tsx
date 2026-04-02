@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import CookiePolicyPage from "@/app/cookie-policy/page";
 import { cookieData } from "@/constants";

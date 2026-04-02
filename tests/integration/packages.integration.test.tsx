@@ -304,12 +304,12 @@ const mockFetchFailure = () => {
 // ── Component & hook imports — must come AFTER all jest.mock() calls ────────
 
 import Stats from "../../src/app/packages/page";
-import PackageCard from "../../src/app/packages/components/Packagecard";
-import PackageStatsModal from "../../src/app/packages/components/Packagestatsmodal";
-import MonorepoPackagesModal from "../../src/app/packages/components/Monorepopackagesmodal";
-import PackageFilterToggle from "../../src/app/packages/components/Packagefiltertoggle";
+import PackageCard from "../../src/app/packages/components/PackageCard";
+import PackageStatsModal from "../../src/app/packages/components/PackageStatsModal";
+import MonorepoPackagesModal from "../../src/app/packages/components/MonorepoPackagesModal";
+import PackageFilterToggle from "../../src/app/packages/components/PackageFilterToggle";
 import PackageCount from "../../src/app/packages/components/PackageCount";
-import TotalDownloads from "../../src/app/packages/components/Totaldownloads";
+import TotalDownloads from "../../src/app/packages/components/TotalDownloads";
 import { usePackageStats } from "../../src/hooks/usePackageStats";
 
 import {

@@ -1,5 +1,4 @@
 import { termsData, TERMS_INTRO_PARAGRAPHS } from "@/constants";
-import React from "react";
 
 /* Terms of Use page */
 export default function TermOfUsePage() {

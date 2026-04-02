@@ -1,4 +1,4 @@
-import { PODIUM_SLOTS } from "@/app/contributors/components/Podiumsection";
+import { PODIUM_SLOTS } from "@/app/contributors/components/PodiumSection";
 
 export interface Contributor {
   id: number;

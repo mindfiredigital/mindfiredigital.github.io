@@ -134,6 +134,21 @@ jest.mock("../../src/app/utils", () => ({
     issueCount: 0,
   })),
   BuildGroups: jest.fn(() => []),
+
+  // ✅ Contributors page calls this at render time — must be mocked
+  buildFilterSidebarProps: jest.fn(() => ({
+    filters: {
+      sortBy: "total_score",
+      activityFilter: "all",
+      scoreRange: "all",
+    },
+    searchQuery: "",
+    onFilterChange: jest.fn(),
+    onSearchChange: jest.fn(),
+    onReset: jest.fn(),
+    isMobileOpen: false,
+    onMobileToggle: jest.fn(),
+  })),
 }));
 
 // ── Asset mocks — ALL data inlined inside the factory ───────────────────────
@@ -396,12 +411,12 @@ import Contributors from "../../src/app/contributors/page";
 import ContributorCard from "../../src/app/contributors/components/ContributorCard";
 import ContributorModal from "../../src/app/contributors/components/ContributorModal";
 import ContributorFilterSidebar from "../../src/app/contributors/components/ContributorFilterSidebar";
-import ContributorListSection from "../../src/app/contributors/components/Contributorlistsection";
+import ContributorListSection from "../../src/app/contributors/components/ContributorListSection";
 import ContributorCount from "../../src/app/contributors/components/ContributorCount";
 import ScoringSystem from "../../src/app/contributors/components/ScoringSystem";
 import { FilterSection } from "../../src/app/contributors/components/FilterSection";
 import { RadioGroup } from "../../src/app/contributors/components/RadioGroup";
-import { useContributorFilters } from "../../src/hooks/Usecontributorfilters";
+import { useContributorFilters } from "../../src/hooks/useContributorfilters";
 
 import {
   CONTRIBUTORS_HERO,

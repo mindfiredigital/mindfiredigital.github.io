@@ -1,4 +1,3 @@
-import React from "react";
 import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper";
 import Link from "next/link";
 import { HOME } from "@/constants";

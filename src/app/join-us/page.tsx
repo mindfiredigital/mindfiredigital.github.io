@@ -1,4 +1,3 @@
-import React from "react";
 import {
   JOIN_US_GETTING_STARTED,
   JOIN_US_HERO,
