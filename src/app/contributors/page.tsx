@@ -6,7 +6,6 @@
 */
 import TopScorersPanel from "./components/TopScorersPanel";
 import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
-import ContributorModal from "./components/ContributorModal";
 import ContributorHero from "./components/ContributorHero";
 import ContributorListSection from "./components/ContributorListSection";
 
@@ -24,6 +23,14 @@ import leaderboardData from "@/asset/leaderboard.json";
 import { Contributor, TopScorer } from "@/types";
 import { useContributorPage } from "@/hooks";
 import { buildFilterSidebarProps } from "@/app/utils";
+import dynamic from "next/dynamic";
+
+const ContributorModal = dynamic(
+  () => import("./components/ContributorModal"),
+  {
+    loading: () => <div className='skeleton h-64 w-full' />,
+  }
+);
 
 /*
   Contributors Page

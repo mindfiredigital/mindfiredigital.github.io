@@ -5,7 +5,6 @@ import PackageCount from "./components/PackageCount";
 import TotalDownloads from "./components/TotalDownloads";
 import PackageFilterToggle from "./components/PackageFilterToggle";
 import PackageCard from "./components/PackageCard";
-import PackageStatsModal from "./components/PackageStatsModal";
 import MonorepoPackagesModal from "./components/MonorepoPackagesModal";
 import { usePackageStats } from "@/hooks";
 import { groupPackages } from "@/app/utils";
@@ -13,6 +12,16 @@ import { GroupedPackage, ProjectGroupedData, FilterType } from "@/types";
 import { STATS_HERO } from "@/constants";
 
 import projectsGroupedData from "@/asset/projects_grouped.json";
+import dynamic from "next/dynamic";
+
+// Dynamic import for Package Stats Modal
+const PackageStatsModal = dynamic(
+  () => import("./components/PackageStatsModal"),
+  {
+    loading: () => <div className='skeleton h-48 w-full rounded-lg' />,
+    ssr: false,
+  }
+);
 
 /* Stats page displaying package analytics and download statistics */
 const Stats = () => {
