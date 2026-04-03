@@ -1,140 +1,56 @@
-"use client";
-
 /*
-  Component imports
-  - UI panels and sections used in the Contributors page
+  Contributors Page — Server Component
+  - Exports `revalidate` so Next.js regenerates this page via ISR
+    every 3 600 s (1 hour), matching the cadence at which contributor
+    and leaderboard JSON data is refreshed.
+  - Keeps the page as a Server Component so the HTML is pre-rendered
+    and served from cache — no client-side data fetch waterfall.
+  - All interactive state (filtering, sorting, modal) is delegated to
+    ContributorsClient, a "use client" child component.
 */
-import TopScorersPanel from "./components/TopScorersPanel";
-import ContributorFilterSidebar from "./components/ContributorFilterSidebar";
-import ContributorHero from "./components/ContributorHero";
-import ContributorListSection from "./components/ContributorListSection";
+
+/* ── ISR: regenerate at most once per hour ─────────────────────────────── */
+export const revalidate = 3600;
 
 /*
   Data imports
-  - Static JSON data for contributors and leaderboard
+  - Static JSON assets are resolved at build / revalidation time
+  - No runtime fetch needed; Next.js bundles and caches these
 */
 import contributorList from "@/asset/contributors.json";
 import leaderboardData from "@/asset/leaderboard.json";
 
 /*
-  Types & hooks
-  - Type definitions and custom hook for managing state
+  Type imports
+  - Contributor: shape of each entry in contributors.json
+  - TopScorer:   shape of each entry in leaderboard.json
 */
 import { Contributor, TopScorer } from "@/types";
-import { useContributorPage } from "@/hooks";
-import { buildFilterSidebarProps } from "@/app/utils";
-import dynamic from "next/dynamic";
-
-const ContributorModal = dynamic(
-  () => import("./components/ContributorModal"),
-  {
-    loading: () => <div className='skeleton h-64 w-full' />,
-  }
-);
 
 /*
-  Contributors Page
-  - Displays contributors leaderboard and filters
-  - Handles contributor selection and modal view
-  - Responsive layout with sidebar and panels
+  Client shell import
+  - ContributorsClient owns all useState / useEffect / hooks
+  - Receives pre-parsed arrays as props so it never needs to
+    re-fetch or re-parse the JSON on the client
 */
-export default function Contributors() {
-  /* Convert contributors object into array */
+import ContributorsClient from "./components/ContributorsClient";
+
+export default function ContributorsPage() {
+  /* Convert contributors object map into an iterable array */
   const contributorsArray = Object.values(contributorList) as Contributor[];
 
-  /* Extract leaderboard data */
+  /* Extract the ranked leaderboard array from the JSON wrapper */
   const topScorers = leaderboardData.leaderboard as TopScorer[];
 
   /*
-    Custom hook to manage page state
-    - filtering
-    - sorting
-    - selected contributor
-    - refs for scrolling/layout
+    Render the interactive client shell.
+    Prop-drilling the parsed data avoids a duplicate JSON import
+    inside a "use client" module, which would double-bundle the asset.
   */
-  const pageState = useContributorPage(contributorsArray, topScorers);
-
-  /* Destructure required state and handlers */
-  const {
-    filteredAndSorted,
-    handleReset,
-    selectedContributor,
-    setSelectedContributor,
-    contributorsSectionRef,
-    mainPanelRef,
-  } = pageState;
-
-  /* Build props for filter sidebar from page state */
-  const filterSidebarProps = buildFilterSidebarProps(pageState);
-
   return (
-    <>
-      {/* Main container
-          - Full page layout
-          - Prevents horizontal overflow */}
-      <section className='bg-slate-50 min-h-screen overflow-x-hidden'>
-        <div
-          className='flex w-full overflow-hidden'
-          style={{ height: "calc(100vh - 4.5rem)", maxWidth: "100vw" }}
-        >
-          {/* Left Sidebar (Desktop only)
-              - Contains filter controls
-              - Hidden on smaller screens */}
-          <aside className='hidden lg:flex flex-col w-64 flex-shrink-0 border-r border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
-            <ContributorFilterSidebar {...filterSidebarProps} />
-          </aside>
-
-          {/* Main Content Area */}
-          <main
-            ref={mainPanelRef}
-            className='flex-1 min-w-0 overflow-y-auto overflow-x-hidden'
-          >
-            {/* Hero Section */}
-            <ContributorHero
-              contributorsArray={contributorsArray}
-              topScorers={topScorers}
-            />
-
-            {/* Top Scorers (Mobile View) */}
-            <div className='lg:hidden px-4 mt-6'>
-              <TopScorersPanel
-                topScorers={topScorers}
-                onViewDetails={setSelectedContributor}
-              />
-            </div>
-
-            {/* Filters (Mobile View) */}
-            <div className='lg:hidden'>
-              <ContributorFilterSidebar {...filterSidebarProps} />
-            </div>
-
-            {/* Contributors List Section */}
-            <ContributorListSection
-              filteredAndSorted={filteredAndSorted}
-              totalCount={topScorers.length}
-              onViewDetails={setSelectedContributor}
-              onReset={handleReset}
-              sectionRef={contributorsSectionRef}
-            />
-          </main>
-
-          {/* Right Sidebar (Desktop Top Scorers) */}
-          <div className='hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-l border-gray-100 overflow-y-auto bg-slate-50 p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
-            <TopScorersPanel
-              topScorers={topScorers}
-              onViewDetails={setSelectedContributor}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Contributor Details Modal */}
-      {selectedContributor && (
-        <ContributorModal
-          contributor={selectedContributor}
-          onClose={() => setSelectedContributor(null)}
-        />
-      )}
-    </>
+    <ContributorsClient
+      contributorsArray={contributorsArray}
+      topScorers={topScorers}
+    />
   );
 }

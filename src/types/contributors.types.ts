@@ -191,3 +191,8 @@ export interface RankListSectionProps {
   onMobileToggle: () => void;
   onViewDetails: (scorer: TopScorer) => void;
 }
+
+export interface ContributorsClientProps {
+  contributorsArray: Contributor[];
+  topScorers: TopScorer[];
+}
