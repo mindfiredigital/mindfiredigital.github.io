@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T03:39:54.340Z",
+  "generated_at": "2026-04-03T03:43:42.338Z",
   "period": "monthly",
   "month_label": "November 2025",
   "month_key": "2025-11",
@@ -52,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 2,
@@ -101,7 +101,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -201,7 +201,7 @@
         "issue_comments": 4,
         "issue_comments_total": 4
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 5,
@@ -250,7 +250,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 6,
@@ -300,7 +300,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 7,
@@ -349,7 +349,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": 22
     },
     {
       "rank": 8,
@@ -398,7 +398,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -496,7 +496,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 23
+      "lastActiveDays": 24
     },
     {
       "rank": 11,
@@ -692,7 +692,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 15,
@@ -790,7 +790,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 1
     },
     {
       "rank": 17,
@@ -839,7 +839,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 10
+      "lastActiveDays": 11
     }
   ]
 }
