@@ -1,5 +1,4 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
-import React from "react";
 import { FilterSectionProps } from "@/types";
 
 // Reusable collapsible section used by every filter group in the sidebar

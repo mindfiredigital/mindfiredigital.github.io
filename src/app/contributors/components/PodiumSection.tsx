@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { PodiumSlot, PodiumSectionProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";

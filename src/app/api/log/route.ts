@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import appLogger from "@/app/utils/appLogger";
+import { CLIENT_LOGGER } from "@/constants";
 
 /* Handles POST requests for logging */
 export async function POST(req: NextRequest) {
@@ -8,17 +9,17 @@ export async function POST(req: NextRequest) {
 
   /* Route log based on severity level */
   switch (level) {
-    case "error":
+    case CLIENT_LOGGER.error:
       /* Log error-level message */
       appLogger.error(message, meta);
       break;
 
-    case "warn":
+    case CLIENT_LOGGER.warn:
       /* Log warning-level message */
       appLogger.warn(message, meta);
       break;
 
-    case "debug":
+    case CLIENT_LOGGER.debug:
       /* Log debug-level message */
       appLogger.debug(message, meta);
       break;

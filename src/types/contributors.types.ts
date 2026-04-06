@@ -1,4 +1,4 @@
-import { PODIUM_SLOTS } from "@/app/contributors/components/Podiumsection";
+import { PODIUM_SLOTS } from "@/app/contributors/components/PodiumSection";
 
 export interface Contributor {
   id: number;
@@ -190,4 +190,9 @@ export interface RankListSectionProps {
   mobileRestOpen: boolean;
   onMobileToggle: () => void;
   onViewDetails: (scorer: TopScorer) => void;
+}
+
+export interface ContributorsClientProps {
+  contributorsArray: Contributor[];
+  topScorers: TopScorer[];
 }

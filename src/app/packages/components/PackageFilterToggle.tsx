@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { FilterType } from "@/types";
 import { FILTER_OPTIONS } from "@/constants";
 import { FilterOption, PackageFilterToggleProps } from "@/types";

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { privacyPolicyContentData, PRIVACY_POLICY_INTRO } from "@/constants";
 
 /* Privacy Policy page */

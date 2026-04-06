@@ -15,6 +15,7 @@ import {
 import { ContributorModalProps } from "@/types";
 import { MODAL_SECTION_TITLES, SCORE_BARS } from "@/constants";
 import { useContributorModal } from "@/hooks";
+import Image from "next/image";
 
 // Inner component — only rendered when contributor is guaranteed non-null
 function ContributorModalInner({
@@ -54,10 +55,13 @@ function ContributorModalInner({
               {/* Avatar ring — bg-mf-gradient-tr replaces inline gradient */}
               <div className='p-0.5 rounded-full bg-mf-gradient-tr'>
                 <div className='p-0.5 rounded-full bg-white'>
-                  <img
+                  <Image
                     src={contributor.avatar_url}
                     alt={contributor.username}
                     className='w-16 h-16 rounded-full object-cover'
+                    loading='lazy'
+                    height={20}
+                    width={20}
                   />
                 </div>
               </div>

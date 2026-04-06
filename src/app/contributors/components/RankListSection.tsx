@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { RankListSectionProps } from "@/types";
 import { RANK_ROW_ACCENT, PANEL_HEADER } from "@/constants";
 import { RankRow } from "./RankRow";

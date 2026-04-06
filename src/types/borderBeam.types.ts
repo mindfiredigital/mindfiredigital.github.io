@@ -1,3 +1,4 @@
+import { useContributorPage } from "@/hooks";
 import { Transition } from "motion/react";
 export interface BorderBeamProps {
   /**
@@ -41,3 +42,5 @@ export interface BorderBeamProps {
    */
   initialOffset?: number;
 }
+
+export type PageState = ReturnType<typeof useContributorPage>;

@@ -1,4 +1,5 @@
 import { TopScorer } from "@/types";
+import Image from "next/image";
 
 /* Single row displaying ranked contributor with score and progress */
 export function RankRow({
@@ -29,10 +30,13 @@ export function RankRow({
       </span>
 
       {/* User avatar */}
-      <img
+      <Image
         src={scorer.avatar_url}
         alt={scorer.username}
         className='w-7 h-7 rounded-full object-cover ring-2 ring-mf-border group-hover:ring-mf-red-border transition-all flex-shrink-0'
+        loading='lazy'
+        height={20}
+        width={20}
       />
 
       {/* Username + progress bar */}

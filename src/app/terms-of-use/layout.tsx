@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
+import { METADATA_CONSTANTS } from "@/constants";
 
 /*
   Metadata for "Terms of Use" page
@@ -7,38 +8,34 @@ import meta from "@/metadata/metadata.json";
   - Helps improve SEO and link previews
 */
 export const metadata: Metadata = {
-  title: meta["Terms-Of-Use"].title,
-  description: meta["Terms-Of-Use"].description,
-  /*
-    Open Graph metadata
-    - Used by platforms like Facebook, LinkedIn, WhatsApp
-    - Controls how the page appears when shared
-  */
+  title: meta[METADATA_CONSTANTS.TERMS_OF_USE].title,
+  description: meta[METADATA_CONSTANTS.TERMS_OF_USE].description,
   openGraph: {
-    title: meta["Terms-Of-Use"].title,
-    description: meta["Terms-Of-Use"].description,
+    title: meta[METADATA_CONSTANTS.TERMS_OF_USE].title,
+    description: meta[METADATA_CONSTANTS.TERMS_OF_USE].description,
     images: {
-      url: meta["Terms-Of-Use"].openGraph.images,
-      height: "627",
-      width: "1200",
+      url: meta[METADATA_CONSTANTS.TERMS_OF_USE].openGraph.images,
+      height: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta["Terms-Of-Use"].openGraph.url,
-    type: "website",
-    siteName: "Mindfire Digital LLP",
-    locale: "en_US",
+    url: meta[METADATA_CONSTANTS.TERMS_OF_USE].openGraph.url,
+    type: METADATA_CONSTANTS.WEBSITE,
+    siteName: METADATA_CONSTANTS.SITE_NAME,
+    locale: METADATA_CONSTANTS.LOCALE,
   },
+
   twitter: {
-    card: "app",
-    title: meta["Terms-Of-Use"].title,
-    description: meta["Terms-Of-Use"].description,
-    site: "@mindfires",
-    creator: "@mindfires",
+    card: METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[METADATA_CONSTANTS.TERMS_OF_USE].title,
+    description: meta[METADATA_CONSTANTS.TERMS_OF_USE].description,
+    site: METADATA_CONSTANTS.TWITTER_SITE,
+    creator: METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: "twitter_app",
+      name: METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
+        iphone: METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },

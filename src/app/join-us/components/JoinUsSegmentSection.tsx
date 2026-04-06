@@ -1,5 +1,4 @@
 import { cn } from "@/app/utils";
-import React from "react";
 import { Aboutprops } from "@/types";
 
 export default function JoinUsSegmentSection({

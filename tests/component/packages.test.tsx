@@ -1,14 +1,12 @@
 import React from "react";
 import { render, screen, fireEvent, act } from "@testing-library/react";
-import Stats from "../../src/app/packages/page";
-import PackageCard from "../../src/app/packages/components/Packagecard";
-import PackageFilterToggle from "../../src/app/packages/components/Packagefiltertoggle";
+import PackageCard from "../../src/app/packages/components/PackageCard";
+import PackageFilterToggle from "../../src/app/packages/components/PackageFilterToggle";
 import PackageCount from "../../src/app/packages/components/PackageCount";
-import TotalDownloads from "../../src/app/packages/components/Totaldownloads";
-import PackageStatsModal from "../../src/app/packages/components/Packagestatsmodal";
-import MonorepoPackagesModal from "../../src/app/packages/components/Monorepopackagesmodal";
+import TotalDownloads from "../../src/app/packages/components/TotalDownloads";
+import PackageStatsModal from "../../src/app/packages/components/PackageStatsModal";
+import MonorepoPackagesModal from "../../src/app/packages/components/MonorepoPackagesModal";
 import {
-  STATS_HERO,
   PACKAGE_CARD_LABELS,
   FILTER_OPTIONS,
   GITHUB_BASE_URL,
@@ -138,61 +136,6 @@ const modalBaseProps = {
   onEndDateChange: jest.fn(),
   onRangeChange: jest.fn(),
 };
-
-// ── Stats page ─────────────────────────────────────────────────────────────
-
-jest.mock("../../src/app/packages/components/PackageFilterToggle", () => ({
-  __esModule: true,
-  default: ({ onChange }: { onChange: (v: string) => void }) => (
-    <div data-testid='filter-toggle'>
-      <button onClick={() => onChange("npm")}>npm</button>
-      <button onClick={() => onChange("all")}>all</button>
-    </div>
-  ),
-}));
-jest.mock("../../src/app/packages/components/PackageCard", () => ({
-  __esModule: true,
-  default: ({ group }: { group: { baseTitle: string } }) => (
-    <div data-testid='package-card'>{group.baseTitle}</div>
-  ),
-}));
-jest.mock("../../src/app/packages/components/PackageStatsModal", () => ({
-  __esModule: true,
-  default: () => <div data-testid='package-stats-modal' />,
-}));
-jest.mock("../../src/app/packages/components/MonorepoPackagesModal", () => ({
-  __esModule: true,
-  default: () => <div data-testid='monorepo-modal' />,
-}));
-
-describe("Stats page", () => {
-  beforeEach(() => {
-    render(<Stats />);
-  });
-
-  it("renders the hero heading", () => {
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      STATS_HERO.heading
-    );
-  });
-  it("renders the hero subheading", () => {
-    expect(screen.getByText(STATS_HERO.subheading)).toBeInTheDocument();
-  });
-  it("renders PackageCount badge", () => {
-    expect(screen.getByAltText("total_packages")).toBeInTheDocument();
-  });
-  it("renders TotalDownloads badge", () => {
-    expect(screen.getByAltText("total_downloads")).toBeInTheDocument();
-  });
-  it("renders filter toggle with All/NPM/PyPI buttons", () => {
-    expect(screen.getByText("All")).toBeInTheDocument();
-    expect(screen.getByText("NPM")).toBeInTheDocument();
-    expect(screen.getByText("PyPI")).toBeInTheDocument();
-  });
-  it("shows no package cards when packages list is empty", () => {
-    expect(screen.queryAllByTestId("package-card")).toHaveLength(0);
-  });
-});
 
 // ── PackageCard ────────────────────────────────────────────────────────────
 

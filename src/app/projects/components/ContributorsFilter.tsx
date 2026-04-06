@@ -3,6 +3,7 @@ import { Search, X } from "lucide-react";
 import FilterSection from "./FilterSection";
 import { ContributorsFilterProps } from "@/types";
 import { PROJECT_SIDEBAR } from "@/constants";
+import Image from "next/image";
 
 /* Filter component for selecting contributors with search and multi-select support */
 export default function ContributorsFilter({
@@ -58,10 +59,13 @@ export default function ContributorsFilter({
                   key={login}
                   className='flex items-center gap-1 bg-white px-2 py-1 rounded-md text-[10px] border border-red-300'
                 >
-                  <img
+                  <Image
                     src={contributor.avatar_url}
                     alt={login}
                     className='w-4 h-4 rounded-full'
+                    height={20}
+                    width={20}
+                    loading='lazy'
                   />
                   <span className='text-gray-900 font-medium'>{login}</span>
                   <button
@@ -90,10 +94,13 @@ export default function ContributorsFilter({
               onChange={() => onSelect(contributor.login)}
               className='w-3.5 h-3.5 text-mf-red border-gray-300 rounded focus:ring-mf-red flex-shrink-0'
             />
-            <img
+            <Image
               src={contributor.avatar_url}
               alt={contributor.login}
               className='w-8 h-8 rounded-full flex-shrink-0'
+              height={20}
+              width={20}
+              loading='lazy'
             />
             <div className='flex-1 min-w-0'>
               <p className='text-xs font-medium text-gray-900 truncate'>

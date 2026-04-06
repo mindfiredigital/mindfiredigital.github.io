@@ -1,6 +1,6 @@
 export * from "./contributors.constant";
 export * from "./about.constant";
-export * from "./topscorepanel.constant";
+export * from "./topScorePanel.constant";
 export * from "./cookiePolicy.constant";
 export * from "./privacyPolicy.constant";
 export * from "./termsOfUse.constant";
@@ -14,3 +14,5 @@ export * from "./footer.constant";
 export * from "./header.constant";
 export * from "./notFound.constant";
 export * from "./error.constant";
+export * from "./metadata.constant";
+export * from "./logger.constant";

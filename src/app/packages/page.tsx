@@ -1,18 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PackageCount from "./components/PackageCount";
-import TotalDownloads from "./components/Totaldownloads";
-import PackageFilterToggle from "./components/Packagefiltertoggle";
-import PackageCard from "./components/Packagecard";
-import PackageStatsModal from "./components/Packagestatsmodal";
-import MonorepoPackagesModal from "./components/Monorepopackagesmodal";
+import TotalDownloads from "./components/TotalDownloads";
+import PackageFilterToggle from "./components/PackageFilterToggle";
+import PackageCard from "./components/PackageCard";
+import MonorepoPackagesModal from "./components/MonorepoPackagesModal";
 import { usePackageStats } from "@/hooks";
 import { groupPackages } from "@/app/utils";
 import { GroupedPackage, ProjectGroupedData, FilterType } from "@/types";
 import { STATS_HERO } from "@/constants";
 
 import projectsGroupedData from "@/asset/projects_grouped.json";
+import dynamic from "next/dynamic";
+
+// Dynamic import for Package Stats Modal
+const PackageStatsModal = dynamic(
+  () => import("./components/PackageStatsModal"),
+  {
+    loading: () => <div className='skeleton h-48 w-full rounded-lg' />,
+    ssr: false,
+  }
+);
 
 /* Stats page displaying package analytics and download statistics */
 const Stats = () => {

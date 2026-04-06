@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import dynamic from "next/dynamic";
 import { PanelHeaderProps } from "@/types";
 import { TABS, PANEL_HEADER } from "@/constants";
