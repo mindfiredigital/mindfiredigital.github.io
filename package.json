@@ -26,7 +26,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "update-projects": "node updateScript/updateProject.mjs",
     "pypi-check": "node pypiTotalStats.mjs",
-    "pre-commit": "npm run format",
+    "pre-commit": "npm run format && npm run check-lint && npm run check-types && npm run test",
     "lighthouse": "lhci autorun",
     "lighthouse:local": "lighthouse http://localhost:3000 --preset desktop --output html --output-path ./lighthouse-report.html --view --chrome-flags=\"--no-sandbox\"",
     "lighthouse:ci": "npm run build:ci && npm run lighthouse",
