@@ -72,6 +72,8 @@ jobs:
           shopt -s dotglob
           cp -r /tmp/temp-directory/* .
           shopt -u dotglob
+          # Ensure .next cache is never deployed
+          rm -rf .next
 
       - name: 'Commit and push to gh-pages if changes exist'
         env:
