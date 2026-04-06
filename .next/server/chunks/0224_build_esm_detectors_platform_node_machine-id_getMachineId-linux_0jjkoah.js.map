@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "debugId": "315aabc5-8511-57b4-fc99-ecdb86c89bca",
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["../../../node_modules/%40opentelemetry/resources/src/detectors/platform/node/machine-id/getMachineId-linux.ts"],"sourcesContent":["/*\n * Copyright The OpenTelemetry Authors\n * SPDX-License-Identifier: Apache-2.0\n */\nimport { promises as fs } from 'fs';\nimport { diag } from '@opentelemetry/api';\n\nexport async function getMachineId(): Promise<string | undefined> {\n  const paths = ['/etc/machine-id', '/var/lib/dbus/machine-id'];\n\n  for (const path of paths) {\n    try {\n      const result = await fs.readFile(path, { encoding: 'utf8' });\n      return result.trim();\n    } catch (e) {\n      diag.debug(`error reading machine id: ${e}`);\n    }\n  }\n\n  return undefined;\n}\n"],"names":[],"mappings":"uCAIA,IAAA,EAAoC,CAA7B,CAA6B,CAA3B,AAA2B,CAAA,OAAnB,AACjB,EAA0C,CAAnC,CADc,AACqB,CAAA,AAAjC,CAAiC,AADnB,EAAE,CACZ,EAAE,CAER,EAHwB,GACV,AAET,CAHuB,CAAC,QAGd,IAGpB,IAAK,EALkC,CAAC,CAER,AAGrB,IAFG,AAEC,CAFA,GAEI,KAAK,CAAE,QAFM,CAAE,0BAA0B,CAAC,CAG3D,AAH4D,GAGxD,CAEF,MAAO,CADQ,KACF,CADQ,EAAA,QAAE,CAAC,QAAQ,CAAC,EAAM,CAAE,CAAJ,OAAY,CAAE,MAAM,EAAE,CAAC,CAAC,AAC/C,IAAI,EAAE,CACpB,AAAD,AADsB,MACd,CAAC,CAAE,CACV,EAAA,IAAI,CAAC,KAAK,CAAC,CAAA,0BAAA,EAA6B,CAAC,CAAA,CAAE,CAAC,CAAC,AAC9C,AAIL,CAAC"}}]
+}
