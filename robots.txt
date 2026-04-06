@@ -7,4 +7,5 @@ Disallow: /static/
 User-Agent: GPTBot
 Disallow: /
 
-Sitemap: /sitemap.xml
+Host: https://mindfiredigital.github.io
+Sitemap: https://mindfiredigital.github.io/sitemap.xml
