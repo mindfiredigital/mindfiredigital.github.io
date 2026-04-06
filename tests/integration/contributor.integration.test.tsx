@@ -416,7 +416,7 @@ import ContributorCount from "../../src/app/contributors/components/ContributorC
 import ScoringSystem from "../../src/app/contributors/components/ScoringSystem";
 import { FilterSection } from "../../src/app/contributors/components/FilterSection";
 import { RadioGroup } from "../../src/app/contributors/components/RadioGroup";
-import { useContributorFilters } from "../../src/hooks/useContributorfilters";
+import { useContributorFilters } from "../../src/hooks/useContributorFilters";
 
 import {
   CONTRIBUTORS_HERO,
