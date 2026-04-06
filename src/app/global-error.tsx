@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import clientLogger from "@/app/utils/clientLogger";
 import { ERROR } from "@/constants";
-import * as Sentry from "@sentry/nextjs";
 
 export default function GlobalError({
   error,
@@ -14,11 +13,6 @@ export default function GlobalError({
 }) {
   /* Log the root-level error to the server on every error change */
   useEffect(() => {
-    Sentry.captureException(error, {
-      level: "fatal",
-      extra: { digest: error.digest, location: "global-error.tsx" },
-    });
-
     clientLogger.error("Global root-level error caught", {
       message: error.message,
       digest: error.digest,

@@ -1,5 +1,4 @@
 const { PHASE_PRODUCTION_BUILD } = require("next/constants");
-const { withSentryConfig } = require("@sentry/nextjs");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -19,14 +18,5 @@ let config = (phase, { defaultConfig }) => {
   return { images };
 };
 
-// Wrap with bundle analyzer first, then Sentry
-module.exports = withSentryConfig(withBundleAnalyzer(config), {
-  org: "mindfire-lr",
-  project: "mindfire-digital-foss",
-  silent: !process.env.CI,
-  widenClientFileUpload: true,
-  webpack: {
-    automaticVercelMonitors: true,
-    treeshake: { removeDebugLogging: true },
-  },
-});
+// Export the config wrapped only with bundle analyzer
+module.exports = withBundleAnalyzer(config);
