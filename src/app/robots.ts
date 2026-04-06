@@ -5,7 +5,7 @@
 import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "";
+const BASE_URL = "https://mindfiredigital.github.io";
 
 export default function robots(): MetadataRoute.Robots {
   return {
