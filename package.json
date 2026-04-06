@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "analyze": "next experimental-analyze",
     "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "build:ci": "next build && node -e \"require('fs').writeFileSync('./build/.nojekyll', '')\"",
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@next/bundle-analyzer": "^16.2.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -69,6 +71,7 @@
     "@typescript-eslint/parser": "^6.13.2",
     "autoprefixer": "^10",
     "babel-jest": "^29.7.0",
+    "cross-env": "^10.1.0",
     "eslint": "^8.55.0",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.1.0",
