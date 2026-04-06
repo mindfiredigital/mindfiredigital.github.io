@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 interface Props extends ComponentProps<typeof TypeAnimation> {}

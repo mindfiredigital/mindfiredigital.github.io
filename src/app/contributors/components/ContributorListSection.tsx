@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import ContributorCard from "./ContributorCard";
 import { ContributorListSectionProps } from "@/types";
 import { CONTRIBUTORS_LIST } from "@/constants";

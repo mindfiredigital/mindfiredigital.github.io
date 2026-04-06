@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
+import { METADATA_CONSTANTS } from "@/constants";
 
 /*
   Page-specific metadata for "Upcoming Projects"
@@ -7,39 +8,34 @@ import meta from "@/metadata/metadata.json";
   - Helps with SEO and social media previews
 */
 export const metadata: Metadata = {
-  title: meta["Upcoming-Projects"].title,
-  description: meta["Upcoming-Projects"].description,
-
-  /*
-    Open Graph metadata
-    - Used by platforms like Facebook, LinkedIn, WhatsApp
-    - Controls preview (title, image, description) when link is shared
-  */
+  title: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].title,
+  description: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].description,
   openGraph: {
-    title: meta["Upcoming-Projects"].title,
-    description: meta["Upcoming-Projects"].description,
+    title: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].title,
+    description: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].description,
     images: {
-      url: meta["Upcoming-Projects"].openGraph.images,
-      height: "627",
-      width: "1200",
+      url: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].openGraph.images,
+      height: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta["Upcoming-Projects"].openGraph.url,
-    type: "website",
-    siteName: "Mindfire Digital LLP",
-    locale: "en_US",
+    url: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].openGraph.url,
+    type: METADATA_CONSTANTS.WEBSITE,
+    siteName: METADATA_CONSTANTS.SITE_NAME,
+    locale: METADATA_CONSTANTS.LOCALE,
   },
+
   twitter: {
-    card: "app",
-    title: meta["Upcoming-Projects"].title,
-    description: meta["Upcoming-Projects"].description,
-    site: "@mindfires",
-    creator: "@mindfires",
+    card: METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].title,
+    description: meta[METADATA_CONSTANTS.UPCOMING_PROJECT].description,
+    site: METADATA_CONSTANTS.TWITTER_SITE,
+    creator: METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: "twitter_app",
+      name: METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
+        iphone: METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },

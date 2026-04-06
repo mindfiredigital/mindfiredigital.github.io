@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
 import { TopScorersPanelProps } from "@/types";
 import { PANEL_HEADER } from "@/constants";
 import { useTopScorersPanel } from "@/hooks";
-import PanelHeader from "./Panelheader";
-import PanelBody from "./Panelbody";
+import PanelHeader from "./PanelHeader";
+import PanelBody from "./PanelBody";
 
 /* Main panel combining header, body, and footer for leaderboard */
 export default function TopScorersPanel({

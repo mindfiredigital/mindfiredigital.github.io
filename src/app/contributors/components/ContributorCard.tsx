@@ -1,6 +1,6 @@
 "use client";
 
-import React, { memo } from "react";
+import { memo } from "react";
 import {
   GitCommit,
   GitPullRequest,
@@ -11,6 +11,7 @@ import {
 import { ContributorCardProps } from "@/types";
 import { getRankStyles } from "@/app/utils";
 import { CONTRIBUTOR_CARD_LABELS } from "@/constants";
+import Image from "next/image";
 
 /* Memoized to prevent re-renders when parent re-renders but props haven't changed */
 const ContributorCard = memo(function ContributorCard({
@@ -45,9 +46,12 @@ const ContributorCard = memo(function ContributorCard({
           <div className='flex items-center gap-3'>
             {/* Avatar */}
             <div className='relative flex-shrink-0'>
-              <img
+              <Image
                 src={contributor.avatar_url}
                 alt={contributor.username}
+                height={44}
+                width={44}
+                loading='lazy'
                 className='w-11 h-11 rounded-full ring-2 ring-mf-border object-cover'
               />
             </div>

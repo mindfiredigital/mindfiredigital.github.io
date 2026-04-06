@@ -17,7 +17,11 @@ const TotalDownloads = ({ totalDownloads }: TotalDownloadsProps) => {
   }).format(count);
 
   return (
-    <div className='relative rounded-full'>
+    <div
+      className='relative rounded-full'
+      role='status'
+      aria-label={`Total downloads: ${formatted}`}
+    >
       <div className='relative flex items-center gap-2 bg-white/90 border border-gray-200 backdrop-blur-sm rounded-full shadow-md shadow-orange-200 py-2 px-5 hover:shadow-xl transition-shadow duration-300'>
         <Image
           src='/images/bxs-download.svg'

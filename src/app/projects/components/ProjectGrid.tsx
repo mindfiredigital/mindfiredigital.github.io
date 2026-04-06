@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectCount from "./ProjectCount";
 import { ProjectGridProps } from "@/types";

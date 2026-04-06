@@ -1,4 +1,4 @@
-import { fetchTotalDownloads } from "../pypiTotalStats.mjs";
+import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
 import { fetchData, writeJsonToFile } from "./config.mjs";
 import logger from "../src/app/utils/logger.mjs";
 

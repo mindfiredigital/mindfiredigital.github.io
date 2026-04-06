@@ -1,12 +1,25 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+/*
+  React hooks
+  - useState: manages active carousel index
+  - useEffect: handles lifecycle for interval
+  - useRef: stores pause timestamp without re-render
+  - useCallback: memoizes interval logic
+*/
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TopContributorsProps } from "@/types";
 import { BuildGroups } from "@/app/utils/buildGroups";
 import { INTERVAL_MS, PANEL_HEADER, PAUSE_ON_CLICK_MS } from "@/constants";
 
+/*
+  TopContributors Component
+  - Displays grouped contributors in a sliding carousel
+  - Automatically rotates groups
+  - Pauses rotation when user interacts
+*/
 const TopContributors = ({
   contributors,
   topScorers,
@@ -14,7 +27,6 @@ const TopContributors = ({
   const groups = BuildGroups(contributors, topScorers);
   const [activeIndex, setActiveIndex] = useState(0);
   const pausedUntilRef = useRef<number>(0);
-
   const startTimer = useCallback(() => {
     const timer = setInterval(() => {
       if (Date.now() < pausedUntilRef.current) return;
@@ -23,6 +35,9 @@ const TopContributors = ({
     return timer;
   }, [groups.length]);
 
+  /*
+    Effect to initialize and clean up timer
+  */
   useEffect(() => {
     const timer = startTimer();
     return () => clearInterval(timer);
@@ -34,90 +49,102 @@ const TopContributors = ({
   };
 
   return (
-    <div className='relative w-full px-2 sm:px-4 py-6 flex flex-col items-center overflow-hidden'>
-      <div className='w-full overflow-hidden'>
-        <div
-          className='flex'
-          style={{
-            width: `${groups.length * 100}%`,
-            transform: `translateX(-${(activeIndex * 100) / groups.length}%)`,
-            transition: "transform 600ms cubic-bezier(0.4, 0, 0.2, 1)",
-          }}
-        >
-          {groups.map((group, gi) => (
-            <div
-              key={gi}
-              className='flex flex-col items-center'
-              style={{ width: `${100 / groups.length}%` }}
-            >
-              <p className='text-sm font-semibold text-mindfire-text-red tracking-wide uppercase mb-4 flex items-center gap-1.5'>
-                <span>{group.icon}</span>
-                {group.label}
-              </p>
+    <>
+      {/* Main container */}
+      <div className='relative w-full px-2 sm:px-4 py-6 flex flex-col items-center overflow-hidden'>
+        <div className='w-full overflow-hidden'>
+          <div
+            className='flex'
+            style={{
+              /* Dynamic width based on number of groups */
+              width: `${groups.length * 100}%`,
+              /* Slide animation */
+              transform: `translateX(-${(activeIndex * 100) / groups.length}%)`,
+              transition: "transform 600ms cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
+          >
+            {groups.map((group, gi) => (
+              <div
+                key={gi}
+                className='flex flex-col items-center'
+                style={{ width: `${100 / groups.length}%` }}
+              >
+                {/* Group Header */}
+                <p className='text-sm font-semibold text-mindfire-text-red tracking-wide uppercase mb-4 flex items-center gap-1.5'>
+                  <span>{group.icon}</span>
+                  {group.label}
+                </p>
 
-              <div className='flex justify-center gap-2 sm:gap-5 w-full flex-wrap sm:flex-nowrap pb-4 px-2 sm:px-6'>
-                {group.items.map((contributor) => (
-                  <Link
-                    key={contributor.login}
-                    href={contributor.html_url}
-                    target='_blank'
-                    className='flex-shrink-0 group w-[90px] sm:w-auto'
-                  >
-                    <div className='flex flex-col items-center gap-1 sm:gap-2'>
-                      <div className='p-0.5 sm:p-1 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
-                        <div className='p-0.5 rounded-full bg-white'>
-                          <div className='relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
-                            <Image
-                              src={contributor.avatar_url}
-                              alt={contributor.login}
-                              fill
-                              className='object-cover'
-                              sizes='(max-width: 640px) 56px, 64px'
-                            />
+                {/* Contributors List */}
+                <div className='flex justify-center gap-2 sm:gap-5 w-full flex-wrap sm:flex-nowrap pb-4 px-2 sm:px-6'>
+                  {group.items.map((contributor) => (
+                    <Link
+                      key={contributor.login}
+                      href={contributor.html_url}
+                      target='_blank'
+                      className='flex-shrink-0 group w-[90px] sm:w-auto'
+                    >
+                      <div className='flex flex-col items-center gap-1 sm:gap-2'>
+                        {/* Avatar with gradient border */}
+                        <div className='p-0.5 sm:p-1 rounded-full bg-gradient-to-tr from-mindfire-text-red via-orange-500 to-yellow-500'>
+                          <div className='p-0.5 rounded-full bg-white'>
+                            <div className='relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden group-hover:scale-105 transition-transform'>
+                              <Image
+                                src={contributor.avatar_url}
+                                alt={contributor.login}
+                                fill
+                                className='object-cover'
+                                sizes='(max-width: 640px) 56px, 64px'
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className='text-center w-full'>
-                        <p className='font-medium text-xs sm:text-sm text-gray-800 truncate max-w-[90px] sm:max-w-[100px]'>
-                          {contributor.login}
-                        </p>
-                        <p className='text-xs text-gray-500 truncate max-w-[90px]'>
-                          {contributor.stat}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
 
-                {group.items.length === 0 && (
-                  <p className='text-sm text-gray-400 py-8'>
-                    {PANEL_HEADER.noContributor}
-                  </p>
-                )}
+                        {/* Contributor Info */}
+                        <div className='text-center w-full'>
+                          <p className='font-medium text-xs sm:text-sm text-gray-800 truncate max-w-[90px] sm:max-w-[100px]'>
+                            {contributor.login}
+                          </p>
+                          <p className='text-xs text-gray-500 truncate max-w-[90px]'>
+                            {contributor.stat}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+
+                  {/* Empty State */}
+                  {group.items.length === 0 && (
+                    <p className='text-sm text-gray-400 py-8'>
+                      {PANEL_HEADER.noContributor}
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className='flex gap-1.5 mt-1'>
+          {groups.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => handleDotClick(i)}
+              className='rounded-full transition-all duration-500'
+              style={{
+                width: i === activeIndex ? "16px" : "6px",
+                height: "6px",
+                background:
+                  i === activeIndex
+                    ? "var(--color-mindfire-text-red, #e63b3b)"
+                    : "#d1d5db",
+              }}
+            />
           ))}
         </div>
       </div>
-
-      <div className='flex gap-1.5 mt-1'>
-        {groups.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => handleDotClick(i)}
-            className='rounded-full transition-all duration-500'
-            style={{
-              width: i === activeIndex ? "16px" : "6px",
-              height: "6px",
-              background:
-                i === activeIndex
-                  ? "var(--color-mindfire-text-red, #e63b3b)"
-                  : "#d1d5db",
-            }}
-          />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

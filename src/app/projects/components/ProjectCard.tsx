@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { memo, useState } from "react";
+import { memo, useState } from "react";
 import github from "../../../../public/images/social-media/github.png";
 import docs from "../../../../public/images/social-media/docs.svg";
 import Image from "next/image";

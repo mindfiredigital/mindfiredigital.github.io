@@ -1,5 +1,4 @@
 import { cookieData, COOKIE_POLICY_INTRO } from "@/constants";
-import React from "react";
 
 export default function CookiePolicyPage() {
   return (

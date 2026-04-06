@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import TermOfUsePage from "@/app/terms-of-use/page";
 import { TERMS_INTRO_PARAGRAPHS, termsData } from "@/constants";

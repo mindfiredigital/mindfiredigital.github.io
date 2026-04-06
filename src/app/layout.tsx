@@ -5,13 +5,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import meta from "@/metadata/metadata.json";
+import { METADATA_CONSTANTS } from "@/constants";
 
-/*
-  Initialize Roboto font using next/font
-  - Automatically downloaded at build time
-  - Applied globally via className
-  - 'display: swap' ensures no layout shift
-*/
 const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -19,78 +14,61 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mindfiredigital.github.io/"),
-  title: meta["Home"].title,
-  description: meta["Home"].description,
-  applicationName: "Mindfire FOSS",
-  referrer: "origin-when-cross-origin",
-  keywords: [
-    "Mindfire",
-    "FOSS",
-    "Mindfire FOSS",
-    "React",
-    "JavaScript",
-    "next.js",
-    "Opensource community",
-    "Software Development",
-  ],
-  authors: [
-    { name: "Mindfire" },
-    { name: "Mindfire", url: "https://mindfiredigital.github.io" },
-  ],
-  creator: "Mindfire Digital LLP",
-  publisher: "Mindfire Digital LLP",
+  metadataBase: new URL(METADATA_CONSTANTS.BASE_URL),
+  title: meta[METADATA_CONSTANTS.HOME].title,
+  description: meta[METADATA_CONSTANTS.HOME].description,
+  applicationName: METADATA_CONSTANTS.APPLICATION_NAME,
+  referrer: METADATA_CONSTANTS.REFERRER,
+  keywords: [...METADATA_CONSTANTS.KEYWORDS],
+  authors: [...METADATA_CONSTANTS.AUTHORS],
+  creator: METADATA_CONSTANTS.CREATOR,
+  publisher: METADATA_CONSTANTS.PUBLISHER,
 
   openGraph: {
-    title: meta["Home"].openGraph.title,
-    description: meta["Home"].description,
+    title: meta[METADATA_CONSTANTS.HOME].openGraph.title,
+    description: meta[METADATA_CONSTANTS.HOME].description,
     images: {
-      // url: "https://mindfiredigital.github.io/_next/static/media/mindfire_foss_logo.0c507a60.png",
-      url: meta["Home"].openGraph.images,
-      height: "627",
-      width: "1200",
+      url: meta[METADATA_CONSTANTS.HOME].openGraph.images,
+      height: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_HEIGHT,
+      width: METADATA_CONSTANTS.OPEN_GRAPH_IMAGE_WIDTH,
     },
-    url: meta["Home"].openGraph.url,
-    type: "website",
-    siteName: "Mindfire Digital LLP",
-    locale: "en_US",
+    url: meta[METADATA_CONSTANTS.HOME].openGraph.url,
+    type: METADATA_CONSTANTS.WEBSITE,
+    siteName: METADATA_CONSTANTS.SITE_NAME,
+    locale: METADATA_CONSTANTS.LOCALE,
   },
+
   twitter: {
-    card: "app",
-    title: meta["Home"].twitter.title,
-    description: meta["Home"].description,
-    site: "@mindfires",
-    creator: "@mindfires",
+    card: METADATA_CONSTANTS.TWITTER_CARD_TYPE,
+    title: meta[METADATA_CONSTANTS.HOME].twitter.title,
+    description: meta[METADATA_CONSTANTS.HOME].description,
+    site: METADATA_CONSTANTS.TWITTER_SITE,
+    creator: METADATA_CONSTANTS.TWITTER_CREATOR,
     app: {
-      name: "twitter_app",
+      name: METADATA_CONSTANTS.TWITTER_APP_NAME,
       id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
+        iphone: METADATA_CONSTANTS.TWITTER_APP_ID_IPHONE,
+        ipad: METADATA_CONSTANTS.TWITTER_APP_ID_IPAD,
+        googleplay: METADATA_CONSTANTS.TWITTER_APP_ID_GOOGLEPLAY,
       },
     },
   },
+
   robots: {
-    index: false,
-    follow: true,
-    nocache: true,
+    index: METADATA_CONSTANTS.ROBOTS_INDEX,
+    follow: METADATA_CONSTANTS.ROBOTS_FOLLOW,
+    nocache: METADATA_CONSTANTS.ROBOTS_NOCACHE,
     googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      index: METADATA_CONSTANTS.GOOGLEBOT_INDEX,
+      follow: METADATA_CONSTANTS.GOOGLEBOT_FOLLOW,
+      noimageindex: METADATA_CONSTANTS.GOOGLEBOT_NO_IMAGE_INDEX,
+      "max-video-preview": METADATA_CONSTANTS.GOOGLEBOT_MAX_VIDEO_PREVIEW,
+      "max-image-preview": METADATA_CONSTANTS.GOOGLEBOT_MAX_IMAGE_PREVIEW,
+      "max-snippet": METADATA_CONSTANTS.GOOGLEBOT_MAX_SNIPPET,
     },
   },
 };
 
-/*
-  RootLayout component
-  - Wraps all pages in the app
-  - Defines global structure (HTML + BODY)
-  - Includes shared UI (Header, Footer)
-*/
 export default function RootLayout({
   children,
 }: {

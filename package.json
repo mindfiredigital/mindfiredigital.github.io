@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "analyze": "next experimental-analyze",
     "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "build:ci": "next build && node -e \"require('fs').writeFileSync('./build/.nojekyll', '')\"",
@@ -23,13 +24,13 @@
     "check-format": "npx prettier --check .",
     "format": "npx prettier --write .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
-    "pre-commit": "npm run check-format && npm run check-lint && npm run check-types",
     "update-projects": "node updateScript/updateProject.mjs",
     "pypi-check": "node pypiTotalStats.mjs",
+    "pre-commit": "npm run format && npm run check-lint && npm run check-types && npm run test",
     "lighthouse": "lhci autorun",
     "lighthouse:local": "lighthouse http://localhost:3000 --preset desktop --output html --output-path ./lighthouse-report.html --view --chrome-flags=\"--no-sandbox\"",
     "lighthouse:ci": "npm run build:ci && npm run lighthouse",
-    "prelighthouse": "node clean-lh-tmp.mjs",
+    "prelighthouse": "node updateScript/clean-lh-tmp.mjs",
     "lighthouse:all": "node clean-lh-tmp.mjs && lighthouse http://localhost:3000/ --preset desktop --output html --output-path ./lighthouse-reports/home.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/about/ --preset desktop --output html --output-path ./lighthouse-reports/about.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/projects/ --preset desktop --output html --output-path ./lighthouse-reports/projects.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/contributors/ --preset desktop --output html --output-path ./lighthouse-reports/contributors.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\" && lighthouse http://localhost:3000/packages/ --preset desktop --output html --output-path ./lighthouse-reports/packages.html --chrome-flags=\"--no-sandbox --disable-gpu --headless=new\""
   },
   "dependencies": {
@@ -42,7 +43,7 @@
     "i": "^0.3.7",
     "lucide-react": "^0.563.0",
     "moment": "^2.30.1",
-    "next": "13.5.4",
+    "next": "^16.2.2",
     "npm": "^10.2.0",
     "react": "^18",
     "react-dom": "^18",
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@next/bundle-analyzer": "^16.2.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -69,6 +71,7 @@
     "@typescript-eslint/parser": "^6.13.2",
     "autoprefixer": "^10",
     "babel-jest": "^29.7.0",
+    "cross-env": "^10.1.0",
     "eslint": "^8.55.0",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.1.0",

@@ -58,6 +58,7 @@ export default function MonorepoPackagesModal({
                   <button
                     onClick={onClose}
                     className='text-gray-500 hover:text-gray-700 focus:outline-none'
+                    aria-label='Close modal'
                   >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -130,6 +131,7 @@ export default function MonorepoPackagesModal({
                                 className='font-bold px-2 py-1 rounded inline-flex items-center hover:bg-gray-200 transition-colors'
                                 onClick={() => onPackageFilterClick(pkg)}
                                 title={PACKAGE_CARD_LABELS.filterTitle}
+                                aria-label={`Filter stats for ${pkg.title}`}
                               >
                                 <Image
                                   src='/images/social-media/bx-filter-alt.svg'

@@ -1,5 +1,4 @@
 import { cn } from "@/app/utils";
-import React from "react";
 import { Aboutprops } from "@/types";
 
 /* Reusable section for about page (title, description, optional grid + children) */
