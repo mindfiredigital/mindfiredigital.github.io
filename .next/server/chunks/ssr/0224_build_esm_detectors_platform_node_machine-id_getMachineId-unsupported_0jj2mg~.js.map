@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "debugId": "012c1faf-3fb6-aff6-9469-fc12011025e3",
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["../../../../node_modules/%40opentelemetry/resources/src/detectors/platform/node/machine-id/getMachineId-unsupported.ts"],"sourcesContent":["/*\n * Copyright The OpenTelemetry Authors\n * SPDX-License-Identifier: Apache-2.0\n */\n\nimport { diag } from '@opentelemetry/api';\n\nexport async function getMachineId(): Promise<string | undefined> {\n  diag.debug('could not read machine-id: unsupported platform');\n  return undefined;\n}\n"],"names":[],"mappings":"uCAKA,IAAA,EAA0C,CAAnC,CAAmC,CAAjC,AAAiC,CAAA,GAA7B,EAAE,EAER,IAFc,CAET,UAAU,IACpB,EAAA,GAHuC,CAAC,AAGpC,CAAC,CAD2B,IACtB,CAAC,iDAAiD,CAAC,AAE/D,CAFgE,AAE/D"}}]
-}

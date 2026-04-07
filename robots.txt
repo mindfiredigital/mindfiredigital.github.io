@@ -1,11 +1,2 @@
-User-Agent: *
+User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
-User-Agent: GPTBot
-Disallow: /
-
-Host: https://mindfiredigital.github.io
-Sitemap: https://mindfiredigital.github.io/sitemap.xml
