@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Mindfire Digital Foss Website
+    url: https://github.com/mindfiredigital/mindfiredigital.github.io
+    about: Mindfire FOSS Website is a public Next.js site showcasing Mindfire Digital's open source projects, contributors, and npm/PyPI package stats. Its standout feature is a contributor leaderboard that scores developers based on PRs, commits, reviews, and issues — with monthly archives and detailed breakdowns. All data is pre-fetched at build time via scripts and deployed to GitHub Pages through automated CI/CD workflows.
