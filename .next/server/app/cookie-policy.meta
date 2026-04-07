@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cookie-policy/layout,_N_T_/cookie-policy/page,_N_T_/cookie-policy"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cookie-policy/__PAGE__",
+    "/cookie-policy",
+    "/_index",
+    "/_head"
+  ]
+}
