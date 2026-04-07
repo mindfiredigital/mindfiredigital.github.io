@@ -1,3 +1,0 @@
-module.exports=[10401,a=>{a.v("/_next/static/media/github.0~a14ta-05dap.png"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},99732,a=>{a.v("/_next/static/media/docs.0wai~h-0e6uao.svg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},78593,a=>{a.v("/_next/static/media/project.0ihu.hyfoyc-u.svg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},3900,a=>{a.v(b=>Promise.all(["server/chunks/ssr/node_modules_html-to-image_es_index_0rqkl87.js"].map(b=>a.l(b))).then(()=>b(63460)))}];
-
-//# sourceMappingURL=_0hj6mwx._.js.map
