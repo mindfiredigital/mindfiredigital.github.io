@@ -48,6 +48,6 @@ export default function UpcomingProjectsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={upcomingProjectsJsonLd} />
+  <JsonLd data={upcomingProjectsJsonLd} />;
   return <>{children}</>;
 }
