@@ -50,6 +50,6 @@ export default function JoinUsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={joinUsJsonLd} />
+  <JsonLd data={joinUsJsonLd} />;
   return <>{children}</>;
 }
