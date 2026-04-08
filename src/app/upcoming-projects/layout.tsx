@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
+import JsonLd from "@/components/shared/JsonLd";
+import { upcomingProjectsJsonLd } from "@/lib/jsonld";
 
 /*
   Page-specific metadata for "Upcoming Projects"
@@ -46,5 +48,6 @@ export default function UpcomingProjectsLayout({
 }: {
   children: React.ReactNode;
 }) {
+  <JsonLd data={upcomingProjectsJsonLd} />
   return <>{children}</>;
 }

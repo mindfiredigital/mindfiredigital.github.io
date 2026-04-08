@@ -49,6 +49,6 @@ export default function CurrentProjectsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={currentProjectsJsonLd} />
+  <JsonLd data={currentProjectsJsonLd} />;
   return <>{children}</>;
 }
