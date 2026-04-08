@@ -50,6 +50,6 @@ export default function PackagesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={packagesJsonLd} />
+  <JsonLd data={packagesJsonLd} />;
   return <>{children}</>;
 }
