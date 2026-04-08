@@ -2,6 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
+import JsonLd from "@/components/shared/JsonLd";
+import { cookiePolicyJsonLd } from "@/lib/jsonld";
 
 /*
   Metadata for "cookie-policy" page
@@ -48,5 +50,6 @@ export default function CookiePolicyLayout({
 }: {
   children: React.ReactNode;
 }) {
+  <JsonLd data={cookiePolicyJsonLd} />
   return <>{children}</>;
 }

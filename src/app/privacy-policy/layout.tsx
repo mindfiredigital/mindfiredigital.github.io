@@ -50,6 +50,6 @@ export default function PrivacyPolicyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={privacyPolicyJsonLd} />
+  <JsonLd data={privacyPolicyJsonLd} />;
   return <>{children}</>;
 }
