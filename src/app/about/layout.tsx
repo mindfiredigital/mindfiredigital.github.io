@@ -50,6 +50,6 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={aboutJsonLd} />
+  <JsonLd data={aboutJsonLd} />;
   return <>{children}</>;
 }
