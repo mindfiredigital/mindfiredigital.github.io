@@ -50,6 +50,6 @@ export default function ContributorsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={contributorsJsonLd} />
+  <JsonLd data={contributorsJsonLd} />;
   return <>{children}</>;
 }
