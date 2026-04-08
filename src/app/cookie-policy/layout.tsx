@@ -50,6 +50,6 @@ export default function CookiePolicyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  <JsonLd data={cookiePolicyJsonLd} />
+  <JsonLd data={cookiePolicyJsonLd} />;
   return <>{children}</>;
 }
