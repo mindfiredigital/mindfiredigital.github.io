@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T03:45:53.714Z",
+  "generated_at": "2026-04-09T03:40:38.482Z",
   "period": "monthly",
   "month_label": "March 2026",
   "month_key": "2026-03",
@@ -205,7 +205,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 5,
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     },
     {
       "rank": 6,
@@ -353,7 +353,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 8,
@@ -402,7 +402,7 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 9,
@@ -451,7 +451,7 @@
         "issue_comments": 9,
         "issue_comments_total": 9
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 10,
@@ -500,7 +500,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 11,
@@ -549,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 19
+      "lastActiveDays": 20
     },
     {
       "rank": 12,
@@ -647,7 +647,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 29
+      "lastActiveDays": 30
     },
     {
       "rank": 14,
@@ -696,7 +696,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 27
+      "lastActiveDays": 1
     },
     {
       "rank": 15,
@@ -745,7 +745,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 16,
@@ -794,7 +794,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     }
   ]
 }
