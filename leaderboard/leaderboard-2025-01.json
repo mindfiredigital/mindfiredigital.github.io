@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:04.802Z",
+  "generated_at": "2026-04-09T12:32:20.151Z",
   "period": "monthly",
   "month_label": "January 2025",
   "month_key": "2025-01",
@@ -19,7 +19,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 19.71,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -66,7 +68,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.06,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 5,
@@ -113,7 +117,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.27,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 5,
@@ -160,7 +166,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -207,7 +215,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -254,7 +264,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.8,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -301,7 +313,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.78,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -348,7 +362,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -379,7 +395,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 9
     },
     {
       "rank": 9,
@@ -395,7 +411,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 3,
@@ -426,7 +444,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": null
     },
     {
       "rank": 10,
@@ -442,7 +460,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -489,7 +509,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["QuickLaunchReactNativeKit", "Ignix UI"],
+      "projects": [
+        "QuickLaunchReactNativeKit",
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -520,7 +543,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 17
     },
     {
       "rank": 12,
@@ -536,7 +559,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -583,7 +608,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
