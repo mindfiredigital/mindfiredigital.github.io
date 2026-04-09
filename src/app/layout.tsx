@@ -6,6 +6,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
+import JsonLd from "@/components/shared/JsonLd";
+import { homeJsonLd } from "@/lib/jsonld";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -76,6 +78,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`${roboto.className} !scroll-smooth`}>
+      <head>
+        {/* JSON-LD structured data for the home / root level — crawlers only */}
+        <JsonLd data={homeJsonLd} />
+      </head>
       <body>
         <Header />
         {children}

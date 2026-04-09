@@ -2,6 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
+import JsonLd from "@/components/shared/JsonLd";
+import { aboutJsonLd } from "@/lib/jsonld";
 
 /*
   Metadata for "about" page
@@ -48,5 +50,6 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
+  <JsonLd data={aboutJsonLd} />;
   return <>{children}</>;
 }
