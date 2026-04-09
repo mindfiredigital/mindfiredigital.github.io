@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T03:40:38.323Z",
+  "generated_at": "2026-03-23T15:51:03.900Z",
   "period": "monthly",
   "month_label": "August 2023",
   "month_key": "2023-08",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -68,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -117,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "FMDAPI Node Weaver"
-      ],
+      "projects": ["FMDAPI Node Weaver"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
