@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import meta from "@/metadata/metadata.json";
 import { METADATA_CONSTANTS } from "@/constants";
+import JsonLd from "@/components/shared/JsonLd";
+import { termsOfUseJsonLd } from "@/lib/jsonld";
 
 /*
   Metadata for "Terms of Use" page
@@ -46,5 +48,6 @@ export default function TermsOfUseLayout({
 }: {
   children: React.ReactNode;
 }) {
+  <JsonLd data={termsOfUseJsonLd} />;
   return <>{children}</>;
 }
