@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T04:02:37.092Z",
+  "generated_at": "2026-04-14T03:56:34.228Z",
   "period": "monthly",
   "month_label": "March 2026",
   "month_key": "2026-03",
@@ -65,13 +65,13 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 124,
+      "totalCommits": 131,
       "totalPRs": 17,
       "totalPRReviewsGiven": 30,
       "totalCodeReviewComments": 28,
       "totalIssuesOpened": 1,
       "totalIssueComments": 5,
-      "avgCommitsPerPR": 7.29,
+      "avgCommitsPerPR": 7.71,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix UI"
@@ -82,13 +82,13 @@
         "medium": 5,
         "large": 11
       },
-      "total_score": 524,
-      "code_score": 497,
+      "total_score": 538,
+      "code_score": 511,
       "community_score": 17,
       "quality_score": 10,
       "score_breakdown": {
         "pr_score": 131,
-        "commits_score": 248,
+        "commits_score": 262,
         "pr_reviews_score": 90,
         "code_comments_score": 28,
         "issues_opened_score": 2,
@@ -156,7 +156,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 4,
@@ -205,7 +205,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 5,
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -353,7 +353,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 8,
@@ -402,7 +402,7 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 9,
@@ -451,7 +451,7 @@
         "issue_comments": 9,
         "issue_comments_total": 9
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 1
     },
     {
       "rank": 10,
@@ -500,7 +500,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 11,
@@ -549,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 24
+      "lastActiveDays": 25
     },
     {
       "rank": 12,
@@ -696,7 +696,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 15,
@@ -745,7 +745,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": 22
     },
     {
       "rank": 16,
@@ -794,7 +794,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 18
+      "lastActiveDays": 19
     }
   ]
 }
