@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T03:56:34.228Z",
+  "generated_at": "2026-04-15T03:52:48.874Z",
   "period": "monthly",
   "month_label": "March 2026",
   "month_key": "2026-03",
@@ -156,7 +156,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -205,7 +205,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 5,
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 6,
@@ -402,10 +402,59 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 9,
+      "username": "SandipMF",
+      "id": 113003818,
+      "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
+      "html_url": "https://github.com/SandipMF",
+      "totalCommits": 29,
+      "totalPRs": 2,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 6,
+      "totalIssueComments": 2,
+      "avgCommitsPerPR": 14.5,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Ignix UI"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 2
+      },
+      "total_score": 89,
+      "code_score": 75,
+      "community_score": 14,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 17,
+        "commits_score": 58,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 12,
+        "issue_comments_score": 2,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 6,
+        "issues_total": 6,
+        "issue_comments": 2,
+        "issue_comments_total": 2
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 10,
       "username": "PoonamKPatil",
       "id": 34024639,
       "avatar_url": "https://avatars.githubusercontent.com/u/34024639?v=4",
@@ -454,55 +503,6 @@
       "lastActiveDays": 1
     },
     {
-      "rank": 10,
-      "username": "SandipMF",
-      "id": 113003818,
-      "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
-      "html_url": "https://github.com/SandipMF",
-      "totalCommits": 16,
-      "totalPRs": 2,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 6,
-      "totalIssueComments": 2,
-      "avgCommitsPerPR": 8,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 0,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 2
-      },
-      "total_score": 63,
-      "code_score": 49,
-      "community_score": 14,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 17,
-        "commits_score": 32,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 12,
-        "issue_comments_score": 2,
-        "projects_score": 0,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 6,
-        "issues_total": 6,
-        "issue_comments": 2,
-        "issue_comments_total": 2
-      },
-      "lastActiveDays": 13
-    },
-    {
       "rank": 11,
       "username": "biswalom22",
       "id": 125389787,
@@ -549,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 25
+      "lastActiveDays": 26
     },
     {
       "rank": 12,
@@ -696,7 +696,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 15,
@@ -745,7 +745,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 22
+      "lastActiveDays": 23
     },
     {
       "rank": 16,
@@ -794,7 +794,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 19
+      "lastActiveDays": 20
     }
   ]
 }
