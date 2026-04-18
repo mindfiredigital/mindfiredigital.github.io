@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T03:57:55.687Z",
+  "generated_at": "2026-04-18T03:45:55.153Z",
   "period": "monthly",
   "month_label": "March 2026",
   "month_key": "2026-03",
@@ -156,7 +156,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -164,13 +164,13 @@
       "id": 224547702,
       "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
       "html_url": "https://github.com/NikhilMeshram01",
-      "totalCommits": 54,
+      "totalCommits": 58,
       "totalPRs": 10,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 3,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 5.4,
+      "avgCommitsPerPR": 5.8,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix UI"
@@ -181,13 +181,13 @@
         "medium": 0,
         "large": 10
       },
-      "total_score": 213,
-      "code_score": 193,
+      "total_score": 221,
+      "code_score": 201,
       "community_score": 7,
       "quality_score": 13,
       "score_breakdown": {
         "pr_score": 85,
-        "commits_score": 108,
+        "commits_score": 116,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 6,
@@ -205,7 +205,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 6,
@@ -353,7 +353,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 8,
@@ -402,7 +402,7 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 16
     },
     {
       "rank": 9,
@@ -451,7 +451,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 10,
@@ -549,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 28
+      "lastActiveDays": 29
     },
     {
       "rank": 12,
@@ -696,7 +696,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 15,
@@ -745,7 +745,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 25
+      "lastActiveDays": 26
     },
     {
       "rank": 16,
@@ -794,7 +794,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 22
+      "lastActiveDays": 23
     }
   ]
 }
