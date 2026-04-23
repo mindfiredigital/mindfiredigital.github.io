@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-22T03:55:27.736Z",
+  "generated_at": "2026-04-23T04:00:07.971Z",
   "period": "monthly",
   "window_start": "2026-04-01T00:00:00.000Z",
-  "window_end": "2026-04-22T03:55:27.736Z",
+  "window_end": "2026-04-23T04:00:07.971Z",
   "month_label": "April 2026",
   "month_key": "2026-04",
   "total_contributors": 11,
@@ -68,7 +68,7 @@
       "totalPRs": 8,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 10,
+      "totalIssuesOpened": 11,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 10.5,
       "projectsWorkingOn": 1,
@@ -101,7 +101,7 @@
       },
       "capped_counts": {
         "issues_opened": 10,
-        "issues_total": 10,
+        "issues_total": 11,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -155,7 +155,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -204,7 +204,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 5,
@@ -253,7 +253,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 6,
@@ -401,7 +401,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 9,
@@ -451,7 +451,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 10,
@@ -500,7 +500,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 21
     },
     {
       "rank": 11,
@@ -549,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     }
   ]
 }
