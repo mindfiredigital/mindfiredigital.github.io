@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-24T04:02:32.622Z",
+  "generated_at": "2026-04-25T03:47:25.478Z",
   "period": "monthly",
   "window_start": "2026-04-01T00:00:00.000Z",
-  "window_end": "2026-04-24T04:02:32.622Z",
+  "window_end": "2026-04-25T03:47:25.478Z",
   "month_label": "April 2026",
   "month_key": "2026-04",
   "total_contributors": 12,
@@ -13,13 +13,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 100,
-      "totalPRs": 33,
-      "totalPRReviewsGiven": 32,
+      "totalCommits": 111,
+      "totalPRs": 37,
+      "totalPRReviewsGiven": 36,
       "totalCodeReviewComments": 4,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.03,
+      "avgCommitsPerPR": 3,
       "projectsWorkingOn": 5,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -30,18 +30,18 @@
         "Mindfire Foss Website"
       ],
       "prs_by_complexity": {
-        "small": 14,
+        "small": 16,
         "medium": 4,
-        "large": 15
+        "large": 17
       },
-      "total_score": 591,
-      "code_score": 524,
+      "total_score": 660,
+      "code_score": 585,
       "community_score": 0,
-      "quality_score": 67,
+      "quality_score": 75,
       "score_breakdown": {
-        "pr_score": 224,
-        "commits_score": 200,
-        "pr_reviews_score": 96,
+        "pr_score": 251,
+        "commits_score": 222,
+        "pr_reviews_score": 108,
         "code_comments_score": 4,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
@@ -49,7 +49,7 @@
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 66,
+        "zero_revisions_score": 74,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -66,30 +66,30 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 137,
-      "totalPRs": 13,
+      "totalCommits": 139,
+      "totalPRs": 14,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 11,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 10.54,
+      "avgCommitsPerPR": 9.93,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
       "prs_by_complexity": {
-        "small": 1,
+        "small": 2,
         "medium": 4,
         "large": 8
       },
-      "total_score": 402,
-      "code_score": 373,
+      "total_score": 411,
+      "code_score": 382,
       "community_score": 20,
       "quality_score": 9,
       "score_breakdown": {
-        "pr_score": 99,
-        "commits_score": 274,
+        "pr_score": 104,
+        "commits_score": 278,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 20,
@@ -157,7 +157,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 4,
@@ -165,37 +165,37 @@
       "id": 253189439,
       "avatar_url": "https://avatars.githubusercontent.com/u/253189439?v=4",
       "html_url": "https://github.com/sarthakm-dev",
-      "totalCommits": 28,
-      "totalPRs": 6,
+      "totalCommits": 40,
+      "totalPRs": 9,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 7,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 4.67,
+      "avgCommitsPerPR": 4.44,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 1,
       "projects": [
         "MonoDog"
       ],
       "prs_by_complexity": {
-        "small": 0,
+        "small": 1,
         "medium": 0,
-        "large": 6
+        "large": 8
       },
-      "total_score": 132,
-      "code_score": 107,
+      "total_score": 180,
+      "code_score": 153,
       "community_score": 24,
-      "quality_score": 1,
+      "quality_score": 3,
       "score_breakdown": {
-        "pr_score": 51,
-        "commits_score": 56,
+        "pr_score": 73,
+        "commits_score": 80,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 14,
         "issue_comments_score": 0,
         "projects_score": 10,
-        "tests_score": 1,
-        "docs_score": 0,
+        "tests_score": 2,
+        "docs_score": 1,
         "mentor_score": 0,
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
@@ -304,7 +304,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 7,
@@ -353,7 +353,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 8,
@@ -402,7 +402,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 9,
@@ -452,7 +452,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 10,
@@ -551,7 +551,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 22
+      "lastActiveDays": 23
     },
     {
       "rank": 12,
@@ -600,7 +600,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 10
+      "lastActiveDays": 11
     }
   ]
 }
