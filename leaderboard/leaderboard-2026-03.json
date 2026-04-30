@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T04:33:36.129Z",
+  "generated_at": "2026-04-30T04:35:52.375Z",
   "period": "monthly",
   "month_label": "March 2026",
   "month_key": "2026-03",
@@ -57,7 +57,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 3
     },
     {
       "rank": 2,
@@ -106,7 +106,7 @@
         "issue_comments": 5,
         "issue_comments_total": 5
       },
-      "lastActiveDays": null
+      "lastActiveDays": 2
     },
     {
       "rank": 3,
@@ -156,7 +156,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -205,7 +205,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 5,
@@ -254,7 +254,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 6,
@@ -353,7 +353,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 8,
@@ -402,7 +402,7 @@
         "issue_comments": 7,
         "issue_comments_total": 7
       },
-      "lastActiveDays": 27
+      "lastActiveDays": null
     },
     {
       "rank": 9,
@@ -451,7 +451,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 15
+      "lastActiveDays": null
     },
     {
       "rank": 10,
@@ -500,7 +500,7 @@
         "issue_comments": 9,
         "issue_comments_total": 9
       },
-      "lastActiveDays": 6
+      "lastActiveDays": null
     },
     {
       "rank": 11,
@@ -598,7 +598,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": null
     },
     {
       "rank": 13,
@@ -647,7 +647,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": null
     },
     {
       "rank": 14,
@@ -745,7 +745,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 16,
