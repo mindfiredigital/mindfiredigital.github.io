@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T04:35:19.267Z",
+  "generated_at": "2026-05-05T03:57:23.296Z",
   "period": "monthly",
   "month_label": "April 2026",
   "month_key": "2026-04",
@@ -64,13 +64,13 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 139,
+      "totalCommits": 162,
       "totalPRs": 14,
       "totalPRReviewsGiven": 18,
       "totalCodeReviewComments": 15,
       "totalIssuesOpened": 11,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 9.93,
+      "avgCommitsPerPR": 11.57,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix UI"
@@ -81,13 +81,13 @@
         "medium": 4,
         "large": 8
       },
-      "total_score": 480,
-      "code_score": 451,
+      "total_score": 526,
+      "code_score": 497,
       "community_score": 20,
       "quality_score": 9,
       "score_breakdown": {
         "pr_score": 104,
-        "commits_score": 278,
+        "commits_score": 324,
         "pr_reviews_score": 54,
         "code_comments_score": 15,
         "issues_opened_score": 20,
@@ -155,7 +155,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 4,
@@ -204,7 +204,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -253,7 +253,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 10
+      "lastActiveDays": 11
     },
     {
       "rank": 6,
@@ -261,7 +261,7 @@
       "id": 109733267,
       "avatar_url": "https://avatars.githubusercontent.com/u/109733267?v=4",
       "html_url": "https://github.com/poonam-mindfire",
-      "totalCommits": 36,
+      "totalCommits": 47,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
@@ -278,13 +278,13 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 72,
-      "code_score": 72,
+      "total_score": 94,
+      "code_score": 94,
       "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
-        "commits_score": 72,
+        "commits_score": 94,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -351,7 +351,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 8,
@@ -400,7 +400,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 9,
@@ -449,7 +449,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": 22
     },
     {
       "rank": 10,
@@ -498,7 +498,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 21
     },
     {
       "rank": 11,
@@ -596,7 +596,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 1
     },
     {
       "rank": 13,
@@ -645,7 +645,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 1
     }
   ]
 }
