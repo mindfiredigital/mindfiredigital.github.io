@@ -268,11 +268,7 @@
         "zero_revisions_score": 132,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "ESLint Plugin Hub",
-        "Ignix UI",
-        "TextIgniter"
-      ],
+      "projects": ["ESLint Plugin Hub", "Ignix UI", "TextIgniter"],
       "lastActiveDays": 13
     },
     {
@@ -401,9 +397,7 @@
         "zero_revisions_score": 66,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": 5
     },
     {
@@ -443,9 +437,7 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": 5
     },
     {
@@ -485,10 +477,7 @@
         "zero_revisions_score": 50,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI",
-        "MonoDog"
-      ],
+      "projects": ["Ignix UI", "MonoDog"],
       "lastActiveDays": 0
     },
     {
@@ -528,9 +517,7 @@
         "zero_revisions_score": 50,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": null
     },
     {
@@ -570,9 +557,7 @@
         "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "lastActiveDays": null
     },
     {
@@ -612,10 +597,7 @@
         "zero_revisions_score": 70,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI",
-        "Pivothead"
-      ],
+      "projects": ["Ignix UI", "Pivothead"],
       "lastActiveDays": null
     },
     {
@@ -699,9 +681,7 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "lastActiveDays": null
     },
     {
@@ -741,10 +721,7 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "ESLint Plugin Hub",
-        "Page Builder"
-      ],
+      "projects": ["ESLint Plugin Hub", "Page Builder"],
       "lastActiveDays": null
     },
     {
@@ -784,9 +761,7 @@
         "zero_revisions_score": 52,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "neo-pusher"
-      ],
+      "projects": ["neo-pusher"],
       "lastActiveDays": null
     },
     {
@@ -826,9 +801,7 @@
         "zero_revisions_score": 34,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "lastActiveDays": 20
     },
     {
@@ -868,9 +841,7 @@
         "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "lastActiveDays": null
     },
     {
@@ -910,9 +881,7 @@
         "zero_revisions_score": 22,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MonoDog"
-      ],
+      "projects": ["MonoDog"],
       "lastActiveDays": null
     },
     {
@@ -952,9 +921,7 @@
         "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Extension Methods"
-      ],
+      "projects": ["Extension Methods"],
       "lastActiveDays": null
     },
     {
@@ -994,11 +961,7 @@
         "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Canvas Editor",
-        "Document Editor",
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["Canvas Editor", "Document Editor", "ESLint Plugin Hub"],
       "lastActiveDays": 3
     },
     {
@@ -1038,9 +1001,7 @@
         "zero_revisions_score": 32,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "lastActiveDays": null
     },
     {
@@ -1080,9 +1041,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "NFT Marketplace"
-      ],
+      "projects": ["NFT Marketplace"],
       "lastActiveDays": null
     },
     {
@@ -1122,10 +1081,7 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Angular Canvas Editor",
-        "Document Editor"
-      ],
+      "projects": ["Angular Canvas Editor", "Document Editor"],
       "lastActiveDays": null
     },
     {
@@ -1165,9 +1121,7 @@
         "zero_revisions_score": 40,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "sqlrag"
-      ],
+      "projects": ["sqlrag"],
       "lastActiveDays": null
     },
     {
@@ -1207,9 +1161,7 @@
         "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "lastActiveDays": null
     },
     {
@@ -1249,9 +1201,7 @@
         "zero_revisions_score": 40,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": null
     },
     {
@@ -1291,10 +1241,7 @@
         "zero_revisions_score": 30,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Angular Canvas Editor",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Angular Canvas Editor", "Mindfire Foss Website"],
       "lastActiveDays": null
     },
     {
@@ -1334,10 +1281,7 @@
         "zero_revisions_score": 18,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Pivothead",
-        "TextIgniter"
-      ],
+      "projects": ["Pivothead", "TextIgniter"],
       "lastActiveDays": null
     },
     {
@@ -1377,10 +1321,7 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Mindfire Foss Website",
-        "TextIgniter"
-      ],
+      "projects": ["Mindfire Foss Website", "TextIgniter"],
       "lastActiveDays": null
     },
     {
@@ -1420,9 +1361,7 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "lastActiveDays": null
     },
     {
@@ -1462,10 +1401,7 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "FMDAPI Node Weaver",
-        "FileMaker List View Addon"
-      ],
+      "projects": ["FMDAPI Node Weaver", "FileMaker List View Addon"],
       "lastActiveDays": null
     },
     {
@@ -1505,9 +1441,7 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "lastActiveDays": null
     },
     {
@@ -1547,10 +1481,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MobileQuickLaunchKit-Android",
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android", "MobileQuickLaunchKit-iOS"],
       "lastActiveDays": null
     },
     {
@@ -1590,9 +1521,7 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "lastActiveDays": null
     },
     {
@@ -1632,9 +1561,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "lastActiveDays": null
     },
     {
@@ -1674,9 +1601,7 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "lastActiveDays": null
     },
     {
@@ -1716,9 +1641,7 @@
         "zero_revisions_score": 12,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "lastActiveDays": null
     },
     {
@@ -1758,9 +1681,7 @@
         "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "lastActiveDays": null
     },
     {
@@ -1800,9 +1721,7 @@
         "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "lastActiveDays": null
     },
     {
@@ -1842,9 +1761,7 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": 0
     },
     {
@@ -1884,9 +1801,7 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MobileQuickLaunchKit-Android"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android"],
       "lastActiveDays": null
     },
     {
@@ -1926,9 +1841,7 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Canvas Editor"
-      ],
+      "projects": ["Canvas Editor"],
       "lastActiveDays": null
     },
     {
@@ -1968,9 +1881,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "lastActiveDays": null
     },
     {
@@ -2010,9 +1921,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "lastActiveDays": null
     },
     {
@@ -2052,9 +1961,7 @@
         "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "lastActiveDays": null
     },
     {
@@ -2094,9 +2001,7 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-iOS"],
       "lastActiveDays": null
     },
     {
@@ -2136,9 +2041,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "react-text-igniter"
-      ],
+      "projects": ["react-text-igniter"],
       "lastActiveDays": null
     },
     {
@@ -2178,10 +2081,7 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": [
-        "MobileQuickLaunchKit-Android",
-        "MobileQuickLaunchKit-iOS"
-      ],
+      "projects": ["MobileQuickLaunchKit-Android", "MobileQuickLaunchKit-iOS"],
       "lastActiveDays": null
     }
   ]

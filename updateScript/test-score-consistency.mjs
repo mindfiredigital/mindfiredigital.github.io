@@ -43,14 +43,20 @@ function toMonthKey(dateStr) {
   if (!dateStr) return null;
   const d = new Date(dateStr);
   if (isNaN(d)) return null;
-  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
+    2,
+    "0"
+  )}`;
 }
 
 function applyMonthlyCaps(items, cap, dateField = "created_at") {
   const byMonth = {};
   for (const item of items) {
     const d = new Date(item[dateField]);
-    const mk = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+    const mk = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
+      2,
+      "0"
+    )}`;
     if (!byMonth[mk]) byMonth[mk] = [];
     byMonth[mk].push(item);
   }
@@ -68,18 +74,26 @@ function analyzeUserInProject(username, projectData) {
     issues_opened: [],
     issue_comments_given: [],
     quality_metrics: {
-      has_tests: 0, has_docs: 0, first_time_mentor: 0, zero_revisions: 0, impact_bonuses: [],
+      has_tests: 0,
+      has_docs: 0,
+      first_time_mentor: 0,
+      zero_revisions: 0,
+      impact_bonuses: [],
     },
   };
 
   if (projectData.commits) {
     stats.commits = projectData.commits.filter(
-      (c) => c.author_login === username || c.author_name?.toLowerCase().includes(username.toLowerCase())
+      (c) =>
+        c.author_login === username ||
+        c.author_name?.toLowerCase().includes(username.toLowerCase())
     ).length;
   }
 
   if (projectData.merged_prs) {
-    const userPRs = projectData.merged_prs.filter((pr) => pr.author === username);
+    const userPRs = projectData.merged_prs.filter(
+      (pr) => pr.author === username
+    );
     for (const pr of userPRs) {
       stats.prs.push({
         number: pr.number,
@@ -88,18 +102,28 @@ function analyzeUserInProject(username, projectData) {
         multiplier: pr.complexity_multiplier || 1.0,
         reviews_count: pr.reviews_count || 0,
       });
-      if (pr.title?.toLowerCase().includes("test") || pr.title?.toLowerCase().includes("spec"))
+      if (
+        pr.title?.toLowerCase().includes("test") ||
+        pr.title?.toLowerCase().includes("spec")
+      )
         stats.quality_metrics.has_tests++;
-      if (pr.title?.toLowerCase().includes("doc") || pr.title?.toLowerCase().includes("readme") ||
-          pr.title?.toLowerCase().includes("documentation"))
+      if (
+        pr.title?.toLowerCase().includes("doc") ||
+        pr.title?.toLowerCase().includes("readme") ||
+        pr.title?.toLowerCase().includes("documentation")
+      )
         stats.quality_metrics.has_docs++;
       if (pr.reviews_count === 0) stats.quality_metrics.zero_revisions++;
     }
     for (const pr of projectData.merged_prs) {
       if (pr.reviews)
-        stats.pr_reviews_given += pr.reviews.filter((r) => r.reviewer === username).length;
+        stats.pr_reviews_given += pr.reviews.filter(
+          (r) => r.reviewer === username
+        ).length;
       if (pr.review_comments)
-        stats.code_review_comments += pr.review_comments.filter((c) => c.author === username).length;
+        stats.code_review_comments += pr.review_comments.filter(
+          (c) => c.author === username
+        ).length;
     }
   }
 
@@ -111,8 +135,10 @@ function analyzeUserInProject(username, projectData) {
       ...projectData.issues.others.filter((i) => i.author === username),
     ];
     const allIssues = [
-      ...projectData.issues.bugs, ...projectData.issues.enhancements,
-      ...projectData.issues.documentation, ...projectData.issues.others,
+      ...projectData.issues.bugs,
+      ...projectData.issues.enhancements,
+      ...projectData.issues.documentation,
+      ...projectData.issues.others,
     ];
     for (const issue of allIssues) {
       if (!issue.comment_authors) continue;
@@ -139,15 +165,24 @@ function calculateScore(userStats) {
     userStats.pr_reviews_given * SCORING.PR_REVIEW_GIVEN +
     userStats.code_review_comments * SCORING.CODE_REVIEW_COMMENT;
 
-  const cappedIssues = applyMonthlyCaps(userStats.issues_opened, SCORING.CAPS.ISSUES_PER_MONTH);
-  const cappedIssueComments = applyMonthlyCaps(userStats.issue_comments_given, SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH);
-  const projectDiversityScore = (userStats.projectsWorkingOn || 0) * SCORING.PROJECT_DIVERSITY;
+  const cappedIssues = applyMonthlyCaps(
+    userStats.issues_opened,
+    SCORING.CAPS.ISSUES_PER_MONTH
+  );
+  const cappedIssueComments = applyMonthlyCaps(
+    userStats.issue_comments_given,
+    SCORING.CAPS.ISSUE_COMMENTS_PER_MONTH
+  );
+  const projectDiversityScore =
+    (userStats.projectsWorkingOn || 0) * SCORING.PROJECT_DIVERSITY;
   const communityScore =
     cappedIssues.length * SCORING.ISSUE_OPENED +
     cappedIssueComments.length * SCORING.ISSUE_COMMENT +
     projectDiversityScore;
 
-  const impactBonusTotal = (userStats.quality_metrics.impact_bonuses || []).reduce((s, b) => s + b, 0);
+  const impactBonusTotal = (
+    userStats.quality_metrics.impact_bonuses || []
+  ).reduce((s, b) => s + b, 0);
   const qualityScore =
     impactBonusTotal +
     userStats.quality_metrics.has_tests * SCORING.HAS_TESTS +
@@ -171,7 +206,8 @@ function calculateScore(userStats) {
       projects_score: projectDiversityScore,
       tests_score: userStats.quality_metrics.has_tests * SCORING.HAS_TESTS,
       docs_score: userStats.quality_metrics.has_docs * SCORING.HAS_DOCS,
-      zero_revisions_score: userStats.quality_metrics.zero_revisions * SCORING.ZERO_REVISIONS,
+      zero_revisions_score:
+        userStats.quality_metrics.zero_revisions * SCORING.ZERO_REVISIONS,
     },
   };
 }
@@ -189,8 +225,12 @@ function sliceCachedDataToMonth(cachedData, monthKey) {
   for (const [pid, pd] of Object.entries(cachedData)) {
     sliced[pid] = {
       ...pd,
-      commits: (pd.commits || []).filter((c) => toMonthKey(c.date) === monthKey),
-      merged_prs: (pd.merged_prs || []).filter((pr) => toMonthKey(pr.merged_at) === monthKey),
+      commits: (pd.commits || []).filter(
+        (c) => toMonthKey(c.date) === monthKey
+      ),
+      merged_prs: (pd.merged_prs || []).filter(
+        (pr) => toMonthKey(pr.merged_at) === monthKey
+      ),
       issues: {
         bugs: sliceIssues(pd.issues?.bugs || [], monthKey),
         enhancements: sliceIssues(pd.issues?.enhancements || [], monthKey),
@@ -209,7 +249,10 @@ function buildEarliestContributionMap(cachedData, username, allProjectIds) {
     if (!pd) continue;
     const dates = [];
     for (const c of pd.commits || []) {
-      if (c.author_login === username || c.author_name?.toLowerCase().includes(username.toLowerCase()))
+      if (
+        c.author_login === username ||
+        c.author_name?.toLowerCase().includes(username.toLowerCase())
+      )
         if (c.date) dates.push(c.date);
     }
     for (const pr of pd.merged_prs || []) {
@@ -219,18 +262,21 @@ function buildEarliestContributionMap(cachedData, username, allProjectIds) {
     for (const pr of pd.merged_prs || []) {
       if (pr.reviews) {
         for (const r of pr.reviews) {
-          if (r.reviewer === username && r.submitted_at) dates.push(r.submitted_at);
+          if (r.reviewer === username && r.submitted_at)
+            dates.push(r.submitted_at);
         }
       }
       if (pr.review_comments) {
         for (const rc of pr.review_comments) {
-          if (rc.author === username && rc.created_at) dates.push(rc.created_at);
+          if (rc.author === username && rc.created_at)
+            dates.push(rc.created_at);
         }
       }
     }
     for (const cat of ["bugs", "enhancements", "documentation", "others"]) {
       for (const issue of pd.issues?.[cat] || []) {
-        if (issue.author === username && issue.created_at) dates.push(issue.created_at);
+        if (issue.author === username && issue.created_at)
+          dates.push(issue.created_at);
         // Issue comments by username on other people's issues
         if (issue.comment_authors && issue.author !== username) {
           for (const c of issue.comment_authors) {
@@ -250,10 +296,19 @@ function buildEarliestContributionMap(cachedData, username, allProjectIds) {
 function getAllMonthKeys(cachedData) {
   const keys = new Set();
   for (const pd of Object.values(cachedData)) {
-    for (const c of pd.commits || []) { const k = toMonthKey(c.date); if (k) keys.add(k); }
-    for (const pr of pd.merged_prs || []) { const k = toMonthKey(pr.merged_at); if (k) keys.add(k); }
+    for (const c of pd.commits || []) {
+      const k = toMonthKey(c.date);
+      if (k) keys.add(k);
+    }
+    for (const pr of pd.merged_prs || []) {
+      const k = toMonthKey(pr.merged_at);
+      if (k) keys.add(k);
+    }
     for (const cat of ["bugs", "enhancements", "documentation", "others"]) {
-      for (const i of pd.issues?.[cat] || []) { const k = toMonthKey(i.created_at); if (k) keys.add(k); }
+      for (const i of pd.issues?.[cat] || []) {
+        const k = toMonthKey(i.created_at);
+        if (k) keys.add(k);
+      }
     }
   }
   return Array.from(keys).sort();
@@ -263,16 +318,32 @@ function getAllMonthKeys(cachedData) {
 
 function computeAllTimeScore(username, cachedData, userProjectIds) {
   const userStats = {
-    commits: 0, prs: [], pr_reviews_given: 0, code_review_comments: 0,
-    issues_opened: [], issue_comments_given: [], projectsWorkingOn: 0,
-    quality_metrics: { has_tests: 0, has_docs: 0, first_time_mentor: 0, zero_revisions: 0, impact_bonuses: [] },
+    commits: 0,
+    prs: [],
+    pr_reviews_given: 0,
+    code_review_comments: 0,
+    issues_opened: [],
+    issue_comments_given: [],
+    projectsWorkingOn: 0,
+    quality_metrics: {
+      has_tests: 0,
+      has_docs: 0,
+      first_time_mentor: 0,
+      zero_revisions: 0,
+      impact_bonuses: [],
+    },
   };
   for (const pid of userProjectIds) {
     const pd = cachedData[pid];
     if (!pd) continue;
     const ps = analyzeUserInProject(username, pd);
-    const hasAny = ps.commits > 0 || ps.prs.length > 0 || ps.issues_opened.length > 0 ||
-      ps.pr_reviews_given > 0 || ps.code_review_comments > 0 || ps.issue_comments_given.length > 0;
+    const hasAny =
+      ps.commits > 0 ||
+      ps.prs.length > 0 ||
+      ps.issues_opened.length > 0 ||
+      ps.pr_reviews_given > 0 ||
+      ps.code_review_comments > 0 ||
+      ps.issue_comments_given.length > 0;
     if (!hasAny) continue;
     userStats.commits += ps.commits;
     userStats.prs.push(...ps.prs);
@@ -282,25 +353,53 @@ function computeAllTimeScore(username, cachedData, userProjectIds) {
     userStats.issue_comments_given.push(...ps.issue_comments_given);
     userStats.quality_metrics.has_tests += ps.quality_metrics.has_tests;
     userStats.quality_metrics.has_docs += ps.quality_metrics.has_docs;
-    userStats.quality_metrics.zero_revisions += ps.quality_metrics.zero_revisions;
+    userStats.quality_metrics.zero_revisions +=
+      ps.quality_metrics.zero_revisions;
     userStats.projectsWorkingOn++;
   }
-  return userStats.projectsWorkingOn > 0 ? { score: calculateScore(userStats), numProjects: userStats.projectsWorkingOn } : null;
+  return userStats.projectsWorkingOn > 0
+    ? {
+        score: calculateScore(userStats),
+        numProjects: userStats.projectsWorkingOn,
+      }
+    : null;
 }
 
-function computeMonthlyScore(username, cachedData, userProjectIds, monthKey, earliestMap) {
+function computeMonthlyScore(
+  username,
+  cachedData,
+  userProjectIds,
+  monthKey,
+  earliestMap
+) {
   const monthSlice = sliceCachedDataToMonth(cachedData, monthKey);
   const userStats = {
-    commits: 0, prs: [], pr_reviews_given: 0, code_review_comments: 0,
-    issues_opened: [], issue_comments_given: [], projectsWorkingOn: 0,
-    quality_metrics: { has_tests: 0, has_docs: 0, first_time_mentor: 0, zero_revisions: 0, impact_bonuses: [] },
+    commits: 0,
+    prs: [],
+    pr_reviews_given: 0,
+    code_review_comments: 0,
+    issues_opened: [],
+    issue_comments_given: [],
+    projectsWorkingOn: 0,
+    quality_metrics: {
+      has_tests: 0,
+      has_docs: 0,
+      first_time_mentor: 0,
+      zero_revisions: 0,
+      impact_bonuses: [],
+    },
   };
   for (const pid of userProjectIds) {
     const pd = monthSlice[pid];
     if (!pd) continue;
     const ps = analyzeUserInProject(username, pd);
-    const hasAny = ps.commits > 0 || ps.prs.length > 0 || ps.issues_opened.length > 0 ||
-      ps.pr_reviews_given > 0 || ps.code_review_comments > 0 || ps.issue_comments_given.length > 0;
+    const hasAny =
+      ps.commits > 0 ||
+      ps.prs.length > 0 ||
+      ps.issues_opened.length > 0 ||
+      ps.pr_reviews_given > 0 ||
+      ps.code_review_comments > 0 ||
+      ps.issue_comments_given.length > 0;
     if (!hasAny) continue;
     userStats.commits += ps.commits;
     userStats.prs.push(...ps.prs);
@@ -310,7 +409,8 @@ function computeMonthlyScore(username, cachedData, userProjectIds, monthKey, ear
     userStats.issue_comments_given.push(...ps.issue_comments_given);
     userStats.quality_metrics.has_tests += ps.quality_metrics.has_tests;
     userStats.quality_metrics.has_docs += ps.quality_metrics.has_docs;
-    userStats.quality_metrics.zero_revisions += ps.quality_metrics.zero_revisions;
+    userStats.quality_metrics.zero_revisions +=
+      ps.quality_metrics.zero_revisions;
     const firstMonth = earliestMap.get(pid);
     if (firstMonth === monthKey) userStats.projectsWorkingOn++;
   }
@@ -323,23 +423,36 @@ function computeMonthlyScore(username, cachedData, userProjectIds, monthKey, ear
 function main() {
   const targetUser = process.argv[2] || null;
 
-  const cachedData = JSON.parse(fs.readFileSync(path.resolve(INPUT.cache), "utf8"));
-  const contributors = JSON.parse(fs.readFileSync(path.resolve(INPUT.contributors), "utf8"));
-  const contributorMapping = JSON.parse(fs.readFileSync(path.resolve(INPUT.contributorMapping), "utf8"));
+  const cachedData = JSON.parse(
+    fs.readFileSync(path.resolve(INPUT.cache), "utf8")
+  );
+  const contributors = JSON.parse(
+    fs.readFileSync(path.resolve(INPUT.contributors), "utf8")
+  );
+  const contributorMapping = JSON.parse(
+    fs.readFileSync(path.resolve(INPUT.contributorMapping), "utf8")
+  );
 
   const allMonths = getAllMonthKeys(cachedData);
 
   const allProjectIds = new Set(SPECIAL_PROJECT_IDS);
-  for (const ids of Object.values(contributorMapping)) for (const id of ids) allProjectIds.add(id);
+  for (const ids of Object.values(contributorMapping))
+    for (const id of ids) allProjectIds.add(id);
 
   const usersToCheck = targetUser
     ? contributors.filter((c) => c.login === targetUser)
     : contributors;
 
-  let overcountCount = 0, undercountCount = 0, exactCount = 0;
+  let overcountCount = 0,
+    undercountCount = 0,
+    exactCount = 0;
 
-  console.log(`\nChecking ${usersToCheck.length} contributor(s) across ${allMonths.length} months`);
-  console.log(`Month range: ${allMonths[0]} → ${allMonths[allMonths.length - 1]}`);
+  console.log(
+    `\nChecking ${usersToCheck.length} contributor(s) across ${allMonths.length} months`
+  );
+  console.log(
+    `Month range: ${allMonths[0]} → ${allMonths[allMonths.length - 1]}`
+  );
   console.log("=".repeat(90));
 
   for (const contributor of usersToCheck) {
@@ -348,22 +461,40 @@ function main() {
       new Set([...(contributorMapping[username] || []), ...SPECIAL_PROJECT_IDS])
     );
 
-    const allTimeResult = computeAllTimeScore(username, cachedData, userProjectIds);
+    const allTimeResult = computeAllTimeScore(
+      username,
+      cachedData,
+      userProjectIds
+    );
     if (!allTimeResult) continue;
     const { score: allTime, numProjects: allTimeProjects } = allTimeResult;
 
-    const earliestMap = buildEarliestContributionMap(cachedData, username, userProjectIds);
+    const earliestMap = buildEarliestContributionMap(
+      cachedData,
+      username,
+      userProjectIds
+    );
 
     let monthlySum = 0;
     let monthlyProjectSum = 0;
     const activeMonths = [];
 
     for (const mk of allMonths) {
-      const m = computeMonthlyScore(username, cachedData, userProjectIds, mk, earliestMap);
+      const m = computeMonthlyScore(
+        username,
+        cachedData,
+        userProjectIds,
+        mk,
+        earliestMap
+      );
       if (!m) continue;
       monthlySum += m.total;
       monthlyProjectSum += m.breakdown.projects_score;
-      activeMonths.push({ month: mk, total: m.total, proj: m.breakdown.projects_score });
+      activeMonths.push({
+        month: mk,
+        total: m.total,
+        proj: m.breakdown.projects_score,
+      });
     }
 
     const diff = monthlySum - allTime.total;
@@ -373,8 +504,12 @@ function main() {
       else if (diff < 0) undercountCount++;
 
       console.log(`\n👤  ${username}`);
-      console.log(`    All-time total_score  : ${allTime.total}  (${allTimeProjects} projects, projects_score=${allTime.breakdown.projects_score})`);
-      console.log(`    Monthly sum (all time): ${monthlySum}  (monthly projects_score sum=${monthlyProjectSum})`);
+      console.log(
+        `    All-time total_score  : ${allTime.total}  (${allTimeProjects} projects, projects_score=${allTime.breakdown.projects_score})`
+      );
+      console.log(
+        `    Monthly sum (all time): ${monthlySum}  (monthly projects_score sum=${monthlyProjectSum})`
+      );
       console.log(`    Diff (monthly − all)  : ${diff > 0 ? "+" : ""}${diff}`);
       if (diff !== 0) {
         console.log(`    ── All-time breakdown ──`);
@@ -384,18 +519,28 @@ function main() {
         console.log(`    ── Active months ──`);
         for (const row of activeMonths) {
           if (row.total > 0)
-            console.log(`       ${row.month}: total=${row.total}  proj_bonus=${row.proj}`);
+            console.log(
+              `       ${row.month}: total=${row.total}  proj_bonus=${row.proj}`
+            );
         }
         // Identify likely cause
         const projDiff = allTime.breakdown.projects_score - monthlyProjectSum;
         if (projDiff !== 0) {
-          console.log(`\n    ⚠️  Project-bonus gap: all-time=${allTime.breakdown.projects_score}, monthly-sum=${monthlyProjectSum}, diff=${projDiff}`);
-          console.log(`       Cause: buildEarliestContributionMap missed projects where only`);
-          console.log(`              reviews / code-comments / issue-comments exist (no commit/PR/issue authored).`);
+          console.log(
+            `\n    ⚠️  Project-bonus gap: all-time=${allTime.breakdown.projects_score}, monthly-sum=${monthlyProjectSum}, diff=${projDiff}`
+          );
+          console.log(
+            `       Cause: buildEarliestContributionMap missed projects where only`
+          );
+          console.log(
+            `              reviews / code-comments / issue-comments exist (no commit/PR/issue authored).`
+          );
         }
         const roundingCause = diff > 0 && projDiff === 0;
         if (roundingCause) {
-          console.log(`\n    ⚠️  Rounding bias: per-month Math.round overcounting (check PR multipliers).`);
+          console.log(
+            `\n    ⚠️  Rounding bias: per-month Math.round overcounting (check PR multipliers).`
+          );
         }
       }
     } else {
@@ -406,8 +551,12 @@ function main() {
   console.log("\n" + "=".repeat(90));
   console.log(`\nSummary:`);
   console.log(`  Exact (monthly sum = all-time)  : ${exactCount}`);
-  console.log(`  Overcounting (monthly > all-time): ${overcountCount}  ← rounding bias`);
-  console.log(`  Undercounting (all-time > monthly): ${undercountCount}  ← project-bonus gap`);
+  console.log(
+    `  Overcounting (monthly > all-time): ${overcountCount}  ← rounding bias`
+  );
+  console.log(
+    `  Undercounting (all-time > monthly): ${undercountCount}  ← project-bonus gap`
+  );
 }
 
 main();

@@ -420,13 +420,25 @@ function aggregateMonthlyToAllTime(monthlyRowsByUser, contributors) {
 
     const totalCommits = rows.reduce((s, r) => s + r.totalCommits, 0);
     const totalPRs = rows.reduce((s, r) => s + r.totalPRs, 0);
-    const totalPRReviewsGiven = rows.reduce((s, r) => s + r.totalPRReviewsGiven, 0);
-    const totalCodeReviewComments = rows.reduce((s, r) => s + r.totalCodeReviewComments, 0);
+    const totalPRReviewsGiven = rows.reduce(
+      (s, r) => s + r.totalPRReviewsGiven,
+      0
+    );
+    const totalCodeReviewComments = rows.reduce(
+      (s, r) => s + r.totalCodeReviewComments,
+      0
+    );
     const totalIssuesOpened = rows.reduce((s, r) => s + r.totalIssuesOpened, 0);
-    const totalIssueComments = rows.reduce((s, r) => s + r.totalIssueComments, 0);
+    const totalIssueComments = rows.reduce(
+      (s, r) => s + r.totalIssueComments,
+      0
+    );
 
     // All-time project count = sum of NEW projects per month (each counted once)
-    const projectsWorkingOn = rows.reduce((s, r) => s + r.newProjectsThisMonth, 0);
+    const projectsWorkingOn = rows.reduce(
+      (s, r) => s + r.newProjectsThisMonth,
+      0
+    );
     const projects = [...new Set(rows.flatMap((r) => r.projects || []))].sort();
 
     const prs_by_complexity = {
@@ -443,17 +455,44 @@ function aggregateMonthlyToAllTime(monthlyRowsByUser, contributors) {
 
     const score_breakdown = {
       pr_score: rows.reduce((s, r) => s + r.score_breakdown.pr_score, 0),
-      commits_score: rows.reduce((s, r) => s + r.score_breakdown.commits_score, 0),
-      pr_reviews_score: rows.reduce((s, r) => s + r.score_breakdown.pr_reviews_score, 0),
-      code_comments_score: rows.reduce((s, r) => s + r.score_breakdown.code_comments_score, 0),
-      issues_opened_score: rows.reduce((s, r) => s + r.score_breakdown.issues_opened_score, 0),
-      issue_comments_score: rows.reduce((s, r) => s + r.score_breakdown.issue_comments_score, 0),
-      projects_score: rows.reduce((s, r) => s + r.score_breakdown.projects_score, 0),
+      commits_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.commits_score,
+        0
+      ),
+      pr_reviews_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.pr_reviews_score,
+        0
+      ),
+      code_comments_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.code_comments_score,
+        0
+      ),
+      issues_opened_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.issues_opened_score,
+        0
+      ),
+      issue_comments_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.issue_comments_score,
+        0
+      ),
+      projects_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.projects_score,
+        0
+      ),
       tests_score: rows.reduce((s, r) => s + r.score_breakdown.tests_score, 0),
       docs_score: rows.reduce((s, r) => s + r.score_breakdown.docs_score, 0),
-      mentor_score: rows.reduce((s, r) => s + r.score_breakdown.mentor_score, 0),
-      zero_revisions_score: rows.reduce((s, r) => s + r.score_breakdown.zero_revisions_score, 0),
-      impact_bonus_score: rows.reduce((s, r) => s + r.score_breakdown.impact_bonus_score, 0),
+      mentor_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.mentor_score,
+        0
+      ),
+      zero_revisions_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.zero_revisions_score,
+        0
+      ),
+      impact_bonus_score: rows.reduce(
+        (s, r) => s + r.score_breakdown.impact_bonus_score,
+        0
+      ),
     };
 
     leaderboardData.push({
@@ -749,7 +788,10 @@ function main() {
 
     const summary = {
       total_contributors: leaderboardData.length,
-      total_commits: leaderboardData.reduce((sum, c) => sum + c.totalCommits, 0),
+      total_commits: leaderboardData.reduce(
+        (sum, c) => sum + c.totalCommits,
+        0
+      ),
       total_prs: leaderboardData.reduce((sum, c) => sum + c.totalPRs, 0),
       total_pr_reviews: leaderboardData.reduce(
         (sum, c) => sum + c.totalPRReviewsGiven,
@@ -847,7 +889,10 @@ function generateScoringBundle(contributors, contributorMapping, cachedData) {
   for (const contributor of contributors) {
     const username = contributor.login;
     const userProjectIds = Array.from(
-      new Set([...(contributorMapping[username] || []), ...CONFIG.SPECIAL_PROJECT_IDS])
+      new Set([
+        ...(contributorMapping[username] || []),
+        ...CONFIG.SPECIAL_PROJECT_IDS,
+      ])
     );
     const userEarliestMap = earliestMap.get(username) || new Map();
 
@@ -922,7 +967,14 @@ function generateScoringBundle(contributors, contributorMapping, cachedData) {
           pr.title?.toLowerCase().includes("readme") ||
           pr.title?.toLowerCase().includes("documentation") ||
           false;
-        prs.push({ d: pr.merged_at, pts, c: complexity, zr, t: hasTest, doc: hasDoc });
+        prs.push({
+          d: pr.merged_at,
+          pts,
+          c: complexity,
+          zr,
+          t: hasTest,
+          doc: hasDoc,
+        });
       }
 
       // PR reviews given
@@ -959,8 +1011,13 @@ function generateScoringBundle(contributors, contributorMapping, cachedData) {
     }
 
     if (
-      commits.length + prs.length + reviews.length + codeComments.length +
-      issues.length + issueComments.length === 0
+      commits.length +
+        prs.length +
+        reviews.length +
+        codeComments.length +
+        issues.length +
+        issueComments.length ===
+      0
     )
       continue;
 

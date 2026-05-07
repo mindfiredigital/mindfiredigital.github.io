@@ -390,7 +390,9 @@ export default function PanelHeader({
               className='w-full rounded-xl border border-gray-200 bg-gray-50 px-2.5 py-1.5 text-[11px] font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-mf-red/30 focus:border-mf-red transition-colors'
             />
           </div>
-          <div className='flex-shrink-0 mt-4 text-gray-300 font-bold text-sm'>→</div>
+          <div className='flex-shrink-0 mt-4 text-gray-300 font-bold text-sm'>
+            →
+          </div>
           <div className='flex-1 flex flex-col gap-0.5'>
             <label className='text-[9px] font-bold text-gray-400 uppercase tracking-widest px-0.5'>
               To

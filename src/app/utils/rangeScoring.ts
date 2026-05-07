@@ -105,7 +105,9 @@ export function computeRangeLeaderboard(
     );
     if (totalScore === 0) continue;
 
-    const prsInRange = c.prs.filter((pr) => pr.d.slice(0, 10) >= from && pr.d.slice(0, 10) <= to);
+    const prsInRange = c.prs.filter(
+      (pr) => pr.d.slice(0, 10) >= from && pr.d.slice(0, 10) <= to
+    );
     const commitsInRange = c.commits.filter(
       (d) => d.slice(0, 10) >= from && d.slice(0, 10) <= to
     );
@@ -145,10 +147,13 @@ export function computeRangeLeaderboard(
     const newProjects = c.projectFirsts.filter(
       (pf) => pf.d.slice(0, 10) >= from && pf.d.slice(0, 10) <= to
     );
-    const projectsScore = newProjects.length * scoring_weights.PROJECT_DIVERSITY;
+    const projectsScore =
+      newProjects.length * scoring_weights.PROJECT_DIVERSITY;
 
-    const testsScore = prsInRange.filter((pr) => pr.t).length * scoring_weights.HAS_TESTS;
-    const docsScore = prsInRange.filter((pr) => pr.doc).length * scoring_weights.HAS_DOCS;
+    const testsScore =
+      prsInRange.filter((pr) => pr.t).length * scoring_weights.HAS_TESTS;
+    const docsScore =
+      prsInRange.filter((pr) => pr.doc).length * scoring_weights.HAS_DOCS;
     const zeroRevScore =
       prsInRange.filter((pr) => pr.zr).length * scoring_weights.ZERO_REVISIONS;
 

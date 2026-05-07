@@ -1,6 +1,9 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { TopScorer, TabId, MonthlyPayload, Manifest } from "@/types";
-import { loadScoringBundle, computeRangeLeaderboard } from "@/app/utils/rangeScoring";
+import {
+  loadScoringBundle,
+  computeRangeLeaderboard,
+} from "@/app/utils/rangeScoring";
 import currentMonthRaw from "@/asset/leaderboard-monthly.json";
 import {
   toBase64Url,
