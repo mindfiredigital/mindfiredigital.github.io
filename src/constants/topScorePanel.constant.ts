@@ -62,6 +62,20 @@ export const CALENDAR_PICKER_LABELS = {
   legendSelected: "Selected",
 } as const;
 
+export const QUARTER_PICKER_LABELS = {
+  nowBadge: "Current",
+  legendHasData: "Has data",
+  legendCurrent: "Current quarter",
+  legendSelected: "Selected",
+} as const;
+
+export const QUARTER_NAMES: { id: string; label: string; months: string }[] = [
+  { id: "Q1", label: "Q1", months: "Jan – Mar" },
+  { id: "Q2", label: "Q2", months: "Apr – Jun" },
+  { id: "Q3", label: "Q3", months: "Jul – Sep" },
+  { id: "Q4", label: "Q4", months: "Oct – Dec" },
+];
+
 export const MODAL_SECTION_TITLES = {
   scoreComposition: "Score Composition",
   activity: "Activity",

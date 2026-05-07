@@ -28,6 +28,11 @@ export default function TopScorersPanel({
     selectedMonth,
     setSelectedMonth,
     isLoadingMonth,
+    curQuarter,
+    availableQuarters,
+    selectedQuarter,
+    setSelectedQuarter,
+    isLoadingQuarter,
     displayLabel,
     top10,
     podium3,
@@ -56,12 +61,17 @@ export default function TopScorersPanel({
         isLoadingMonth={isLoadingMonth}
         displayLabel={displayLabel}
         onMonthSelect={setSelectedMonth}
+        availableQuarters={availableQuarters}
+        selectedQuarter={selectedQuarter}
+        curQuarter={curQuarter}
+        isLoadingQuarter={isLoadingQuarter}
+        onQuarterSelect={setSelectedQuarter}
       />
 
       {/* Panel body (podium + rank list) */}
       <PanelBody
         bodyRef={bodyRef}
-        isLoadingMonth={isLoadingMonth}
+        isLoadingMonth={isLoadingMonth || isLoadingQuarter}
         selectedMonth={selectedMonth}
         top10={top10}
         podium3={podium3}

@@ -21,6 +21,19 @@ const MonthCalendarPicker = dynamic(
   }
 );
 
+const QuarterPicker = dynamic(
+  () =>
+    import("./QuarterPicker").then((mod) => ({
+      default: mod.QuarterPicker,
+    })),
+  {
+    loading: () => (
+      <div className='mt-2.5 w-full h-9 rounded-xl bg-gray-100 animate-pulse' />
+    ),
+    ssr: false,
+  }
+);
+
 export default function PanelHeader({
   activeTab,
   top10Length,
@@ -36,6 +49,11 @@ export default function PanelHeader({
   isLoadingMonth,
   displayLabel,
   onMonthSelect,
+  availableQuarters,
+  selectedQuarter,
+  curQuarter,
+  isLoadingQuarter,
+  onQuarterSelect,
 }: PanelHeaderProps) {
   return (
     <div className='relative px-4 pt-4 pb-3 border-b border-gray-100 flex-shrink-0'>
@@ -222,6 +240,18 @@ export default function PanelHeader({
           isLoading={isLoadingMonth}
           displayLabel={displayLabel}
           onSelect={onMonthSelect}
+        />
+      )}
+
+      {/* Quarter picker — dynamically loaded only when quarterly tab is active */}
+      {activeTab === "quarterly" && (
+        <QuarterPicker
+          availableQuarters={availableQuarters}
+          selectedQuarter={selectedQuarter}
+          currentQuarter={curQuarter}
+          isLoading={isLoadingQuarter}
+          displayLabel={displayLabel}
+          onSelect={onQuarterSelect}
         />
       )}
     </div>

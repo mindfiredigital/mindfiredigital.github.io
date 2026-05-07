@@ -3,6 +3,7 @@ import { TabId } from "@/types";
 export const TABS: { id: TabId; label: string }[] = [
   { id: "alltime", label: "All Time" },
   { id: "monthly", label: "Month" },
+  { id: "quarterly", label: "Quarter" },
 ];
 
 export const RANK_ROW_ACCENT = [

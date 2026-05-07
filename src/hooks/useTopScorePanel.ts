@@ -1,7 +1,15 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { TopScorer, TabId, MonthlyPayload, Manifest } from "@/types";
 import currentMonthRaw from "@/asset/leaderboard-monthly.json";
-import { toBase64Url, formatMonthKey, currentMonthKey } from "@/app/utils";
+import {
+  toBase64Url,
+  formatMonthKey,
+  currentMonthKey,
+  currentQuarterKey,
+  quarterMonths,
+  formatQuarterKey,
+  availableQuartersFromMonths,
+} from "@/app/utils";
 import { PANEL_HEADER, COPIED_RESET_MS } from "@/constants";
 
 export function useTopScorersPanel(topScorers: TopScorer[]) {
@@ -26,8 +34,18 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
 
   const monthCache = useRef<Record<string, MonthlyPayload>>({});
 
+  // Quarterly state
+  const curQuarter = currentQuarterKey();
+  const [selectedQuarter, setSelectedQuarter] = useState<string>(curQuarter);
+  const [availableQuarters, setAvailableQuarters] = useState<string[]>([
+    curQuarter,
+  ]);
+  const [quarterlyScorers, setQuarterlyScorers] = useState<TopScorer[]>([]);
+  const [isLoadingQuarter, setIsLoadingQuarter] = useState(false);
+  const quarterCache = useRef<Record<string, TopScorer[]>>({});
+
   useEffect(() => {
-    if (activeTab !== "monthly") return;
+    if (activeTab !== "monthly" && activeTab !== "quarterly") return;
     fetch("/leaderboard/manifest.json")
       .then((r) => {
         if (!r.ok) throw new Error("not found");
@@ -39,9 +57,13 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
             ? m.months
             : [curKey, ...m.months];
           setAvailableMonths(months);
+          setAvailableQuarters(availableQuartersFromMonths(months));
         }
       })
-      .catch(() => setAvailableMonths([curKey]));
+      .catch(() => {
+        setAvailableMonths([curKey]);
+        setAvailableQuarters([curQuarter]);
+      });
   }, [activeTab]);
 
   const loadMonth = useCallback(
@@ -73,13 +95,80 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
     loadMonth(selectedMonth);
   }, [selectedMonth, activeTab, loadMonth]);
 
+  const loadQuarter = useCallback(async (key: string) => {
+    if (quarterCache.current[key]) {
+      setQuarterlyScorers(quarterCache.current[key]);
+      return;
+    }
+    setIsLoadingQuarter(true);
+    try {
+      const months = quarterMonths(key);
+      const results = await Promise.allSettled(
+        months.map((m) =>
+          fetch(`/leaderboard/leaderboard-${m}.json`).then((r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json() as Promise<MonthlyPayload>;
+          })
+        )
+      );
+
+      const scoreMap = new Map<string, TopScorer>();
+      for (const result of results) {
+        if (result.status !== "fulfilled") continue;
+        for (const scorer of result.value.leaderboard) {
+          const existing = scoreMap.get(scorer.username);
+          if (existing) {
+            existing.total_score += scorer.total_score;
+            existing.code_score += scorer.code_score;
+            existing.quality_score += scorer.quality_score;
+            existing.community_score += scorer.community_score;
+            existing.totalCommits += scorer.totalCommits;
+            existing.totalPRs += scorer.totalPRs;
+            existing.totalPRReviewsGiven += scorer.totalPRReviewsGiven;
+            existing.totalCodeReviewComments += scorer.totalCodeReviewComments;
+            existing.totalIssuesOpened += scorer.totalIssuesOpened;
+            existing.totalIssueComments += scorer.totalIssueComments;
+            existing.projectsWorkingOn = Math.max(
+              existing.projectsWorkingOn,
+              scorer.projectsWorkingOn
+            );
+          } else {
+            scoreMap.set(scorer.username, { ...scorer });
+          }
+        }
+      }
+
+      const aggregated = Array.from(scoreMap.values())
+        .sort((a, b) => b.total_score - a.total_score)
+        .map((s, i) => ({ ...s, rank: i + 1 }));
+
+      quarterCache.current[key] = aggregated;
+      setQuarterlyScorers(aggregated);
+    } catch {
+      setQuarterlyScorers([]);
+    } finally {
+      setIsLoadingQuarter(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (activeTab !== "quarterly") return;
+    loadQuarter(selectedQuarter);
+  }, [selectedQuarter, activeTab, loadQuarter]);
+
   // Derived values
   const scorers: TopScorer[] =
-    activeTab === "monthly" ? monthlyData.leaderboard : topScorers;
+    activeTab === "monthly"
+      ? monthlyData.leaderboard
+      : activeTab === "quarterly"
+        ? quarterlyScorers
+        : topScorers;
   const displayLabel =
     activeTab === "monthly"
       ? monthlyData.month_label ?? formatMonthKey(selectedMonth)
-      : PANEL_HEADER.displayLabelAllTime;
+      : activeTab === "quarterly"
+        ? formatQuarterKey(selectedQuarter)
+        : PANEL_HEADER.displayLabelAllTime;
   const top10 = scorers.slice(0, 10);
   const podium3 = top10.slice(0, 3);
   const rest = top10.slice(3);
@@ -229,6 +318,12 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
     selectedMonth,
     setSelectedMonth,
     isLoadingMonth,
+    // quarterly
+    curQuarter,
+    availableQuarters,
+    selectedQuarter,
+    setSelectedQuarter,
+    isLoadingQuarter,
     // derived
     displayLabel,
     top10,

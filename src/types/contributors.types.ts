@@ -119,7 +119,7 @@ export interface TopScorersPanelProps {
   onViewDetails: (contributor: TopScorer) => void;
 }
 
-export type TabId = "alltime" | "monthly";
+export type TabId = "alltime" | "monthly" | "quarterly";
 
 export interface MonthlyPayload {
   month_label: string;
@@ -130,6 +130,15 @@ export interface MonthlyPayload {
 export interface Manifest {
   months: string[];
   updated_at?: string;
+}
+
+export interface QuarterPickerProps {
+  availableQuarters: string[];
+  selectedQuarter: string;
+  currentQuarter: string;
+  isLoading: boolean;
+  displayLabel: string;
+  onSelect: (key: string) => void;
 }
 
 export interface ContributorListSectionProps {
@@ -175,6 +184,12 @@ export interface PanelHeaderProps {
   isLoadingMonth: boolean;
   displayLabel: string;
   onMonthSelect: (key: string) => void;
+  // quarterly picker props
+  availableQuarters: string[];
+  selectedQuarter: string;
+  curQuarter: string;
+  isLoadingQuarter: boolean;
+  onQuarterSelect: (key: string) => void;
 }
 
 export type PodiumSlot = (typeof PODIUM_SLOTS)[number];

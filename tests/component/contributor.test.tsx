@@ -234,6 +234,11 @@ const mockPanelHeaderProps = {
   isLoadingMonth: false,
   displayLabel: "January 2024",
   onMonthSelect: jest.fn(),
+  availableQuarters: ["2024-Q1"],
+  selectedQuarter: "2024-Q1",
+  curQuarter: "2024-Q1",
+  isLoadingQuarter: false,
+  onQuarterSelect: jest.fn(),
 };
 
 // ── TopScorersPanel ────────────────────────────────────────────────────────
