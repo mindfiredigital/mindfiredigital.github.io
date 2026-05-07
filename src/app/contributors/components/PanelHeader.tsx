@@ -32,6 +32,19 @@ const QuarterPicker = dynamic(
   }
 );
 
+const DateRangePicker = dynamic(
+  () =>
+    import("./DateRangePicker").then((mod) => ({
+      default: mod.DateRangePicker,
+    })),
+  {
+    loading: () => (
+      <div className='mt-2.5 w-full h-9 rounded-xl bg-gray-100 animate-pulse' />
+    ),
+    ssr: false,
+  }
+);
+
 /* Small popover with Portrait / Wide options */
 function LayoutPopover({
   onSelect,
@@ -377,59 +390,13 @@ export default function PanelHeader({
       )}
 
       {activeTab === "custom" && (
-        <div className='mt-2.5 flex items-center gap-2'>
-          <div className='flex-1 flex flex-col gap-0.5'>
-            <label className='text-[9px] font-bold text-gray-400 uppercase tracking-widest px-0.5'>
-              From
-            </label>
-            <input
-              type='date'
-              value={customFrom}
-              max={customTo}
-              onChange={(e) => onCustomFromChange(e.target.value)}
-              className='w-full rounded-xl border border-gray-200 bg-gray-50 px-2.5 py-1.5 text-[11px] font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-mf-red/30 focus:border-mf-red transition-colors'
-            />
-          </div>
-          <div className='flex-shrink-0 mt-4 text-gray-300 font-bold text-sm'>
-            →
-          </div>
-          <div className='flex-1 flex flex-col gap-0.5'>
-            <label className='text-[9px] font-bold text-gray-400 uppercase tracking-widest px-0.5'>
-              To
-            </label>
-            <input
-              type='date'
-              value={customTo}
-              min={customFrom}
-              max={new Date().toISOString().slice(0, 10)}
-              onChange={(e) => onCustomToChange(e.target.value)}
-              className='w-full rounded-xl border border-gray-200 bg-gray-50 px-2.5 py-1.5 text-[11px] font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-mf-red/30 focus:border-mf-red transition-colors'
-            />
-          </div>
-          {isLoadingCustom && (
-            <div className='flex-shrink-0 mt-4'>
-              <svg
-                className='animate-spin w-4 h-4 text-mf-red'
-                fill='none'
-                viewBox='0 0 24 24'
-              >
-                <circle
-                  className='opacity-25'
-                  cx='12'
-                  cy='12'
-                  r='10'
-                  stroke='currentColor'
-                  strokeWidth='4'
-                />
-                <path
-                  className='opacity-75'
-                  fill='currentColor'
-                  d='M4 12a8 8 0 018-8v8z'
-                />
-              </svg>
-            </div>
-          )}
-        </div>
+        <DateRangePicker
+          fromDate={customFrom}
+          toDate={customTo}
+          isLoading={isLoadingCustom}
+          onFromChange={onCustomFromChange}
+          onToChange={onCustomToChange}
+        />
       )}
     </div>
   );
