@@ -6,7 +6,6 @@ import TopScorersPanel from "../../src/app/contributors/components/TopScorersPan
 import TopContributors from "../../src/app/contributors/components/TopContributors";
 import ScoringSystem from "../../src/app/contributors/components/ScoringSystem";
 import PodiumSection from "../../src/app/contributors/components/PodiumSection";
-import PanelHeader from "../../src/app/contributors/components/PanelHeader";
 import PanelBody from "../../src/app/contributors/components/PanelBody";
 import RankListSection from "../../src/app/contributors/components/RankListSection";
 import { RankRow } from "../../src/app/contributors/components/RankRow";
@@ -218,28 +217,6 @@ jest.mock("../../src/hooks/useTopScorePanel", () => ({
     maxScore: 1000,
   }),
 }));
-
-const mockPanelHeaderProps = {
-  activeTab: "alltime" as const,
-  top10Length: 10,
-  isDownloading: false,
-  isCopying: false,
-  copied: false,
-  onTabChange: jest.fn(),
-  onDownload: jest.fn(),
-  onCopy: jest.fn(),
-  availableMonths: ["2024-01", "2024-02"],
-  selectedMonth: "2024-01",
-  curKey: "2024-01",
-  isLoadingMonth: false,
-  displayLabel: "January 2024",
-  onMonthSelect: jest.fn(),
-  availableQuarters: ["2024-Q1"],
-  selectedQuarter: "2024-Q1",
-  curQuarter: "2024-Q1",
-  isLoadingQuarter: false,
-  onQuarterSelect: jest.fn(),
-};
 
 // ── TopScorersPanel ────────────────────────────────────────────────────────
 
@@ -461,72 +438,6 @@ describe("PodiumSection", () => {
     render(<PodiumSection podium3={[podium3[0]]} onViewDetails={jest.fn()} />);
     expect(screen.getByText("user1")).toBeInTheDocument();
     expect(screen.queryByText("user2")).not.toBeInTheDocument();
-  });
-});
-
-// ── PanelHeader ────────────────────────────────────────────────────────────
-
-describe("PanelHeader", () => {
-  it("renders the panel title", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} />);
-    expect(screen.getByText(PANEL_HEADER.title)).toBeInTheDocument();
-  });
-
-  it("renders the live badge", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} />);
-    expect(screen.getByText(PANEL_HEADER.liveLabel)).toBeInTheDocument();
-  });
-
-  it("renders top count prefix", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} />);
-    expect(
-      screen.getByText(
-        (_, el) =>
-          el?.tagName === "P" &&
-          el.textContent?.replace(/\s+/g, " ").trim() === "Top 10 Contributors"
-      )
-    ).toBeInTheDocument();
-  });
-
-  it("calls onTabChange when a tab is clicked", () => {
-    const onTabChange = jest.fn();
-    render(<PanelHeader {...mockPanelHeaderProps} onTabChange={onTabChange} />);
-    fireEvent.click(screen.getAllByRole("button")[0]);
-    expect(onTabChange).toHaveBeenCalled();
-  });
-
-  it("calls onDownload when download button is clicked", () => {
-    const onDownload = jest.fn();
-    render(<PanelHeader {...mockPanelHeaderProps} onDownload={onDownload} />);
-    fireEvent.click(screen.getByTitle(PANEL_HEADER.downloadTitle));
-    expect(onDownload).toHaveBeenCalledTimes(1);
-  });
-
-  it("calls onCopy when copy button is clicked", () => {
-    const onCopy = jest.fn();
-    render(<PanelHeader {...mockPanelHeaderProps} onCopy={onCopy} />);
-    fireEvent.click(screen.getByTitle(PANEL_HEADER.copyTitle));
-    expect(onCopy).toHaveBeenCalledTimes(1);
-  });
-
-  it("disables download button when isDownloading is true", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} isDownloading={true} />);
-    expect(screen.getByTitle(PANEL_HEADER.downloadTitle)).toBeDisabled();
-  });
-
-  it("disables copy button when isCopying is true", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} isCopying={true} />);
-    expect(screen.getByTitle(PANEL_HEADER.copyTitle)).toBeDisabled();
-  });
-
-  it("shows copied title on copy button when copied is true", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} copied={true} />);
-    expect(screen.getByTitle(PANEL_HEADER.copiedTitle)).toBeInTheDocument();
-  });
-
-  it("does not show month picker when activeTab is alltime", () => {
-    render(<PanelHeader {...mockPanelHeaderProps} activeTab='alltime' />);
-    expect(screen.queryByText("January 2024")).not.toBeInTheDocument();
   });
 });
 

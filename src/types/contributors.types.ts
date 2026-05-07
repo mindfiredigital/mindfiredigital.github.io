@@ -1,4 +1,5 @@
 import { PODIUM_SLOTS } from "@/app/contributors/components/PodiumSection";
+import { CaptureLayout } from "@/hooks";
 
 export interface Contributor {
   id: number;
@@ -175,8 +176,9 @@ export interface PanelHeaderProps {
   isCopying: boolean;
   copied: boolean;
   onTabChange: (tab: TabId) => void;
-  onDownload: () => void;
-  onCopy: () => void;
+  // These now receive the layout choice directly from the popover
+  onDownload: (layout: CaptureLayout) => void;
+  onCopy: (layout: CaptureLayout) => void;
   // monthly calendar picker props
   availableMonths: string[];
   selectedMonth: string;
@@ -190,6 +192,9 @@ export interface PanelHeaderProps {
   curQuarter: string;
   isLoadingQuarter: boolean;
   onQuarterSelect: (key: string) => void;
+  // popover control
+  actionPopover: "download" | "copy" | null;
+  onActionPopover: (v: "download" | "copy" | null) => void;
 }
 
 export type PodiumSlot = (typeof PODIUM_SLOTS)[number];
