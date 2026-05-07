@@ -34,6 +34,11 @@ export default function TopScorersPanel({
     selectedQuarter,
     setSelectedQuarter,
     isLoadingQuarter,
+    customFrom,
+    customTo,
+    isLoadingCustom,
+    setCustomFrom,
+    setCustomTo,
     displayLabel,
     top10,
     podium3,
@@ -68,13 +73,18 @@ export default function TopScorersPanel({
         curQuarter={curQuarter}
         isLoadingQuarter={isLoadingQuarter}
         onQuarterSelect={setSelectedQuarter}
+        customFrom={customFrom}
+        customTo={customTo}
+        isLoadingCustom={isLoadingCustom}
+        onCustomFromChange={setCustomFrom}
+        onCustomToChange={setCustomTo}
         actionPopover={actionPopover}
         onActionPopover={setActionPopover}
       />
 
       <PanelBody
         bodyRef={bodyRef}
-        isLoadingMonth={isLoadingMonth || isLoadingQuarter}
+        isLoadingMonth={isLoadingMonth || isLoadingQuarter || isLoadingCustom}
         selectedMonth={selectedMonth}
         top10={top10}
         podium3={podium3}

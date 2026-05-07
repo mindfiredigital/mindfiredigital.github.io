@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:05.487Z",
+  "generated_at": "2026-05-07T11:00:06.966Z",
   "period": "monthly",
   "month_label": "February 2026",
   "month_key": "2026-02",
@@ -31,12 +31,12 @@
         "medium": 2,
         "large": 9
       },
-      "total_score": 346,
-      "code_score": 286,
+      "total_score": 351,
+      "code_score": 291,
       "community_score": 20,
       "quality_score": 40,
       "score_breakdown": {
-        "pr_score": 135,
+        "pr_score": 140,
         "commits_score": 96,
         "pr_reviews_score": 36,
         "code_comments_score": 19,
@@ -71,19 +71,22 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.6,
       "projectsWorkingOn": 2,
-      "projects": ["Next.js Fortress", "Mindfire Foss Website"],
+      "projects": [
+        "Next.js Fortress",
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 3,
         "medium": 2,
         "large": 5
       },
-      "total_score": 220,
-      "code_score": 183,
+      "total_score": 223,
+      "code_score": 186,
       "community_score": 20,
       "quality_score": 17,
       "score_breakdown": {
-        "pr_score": 71,
+        "pr_score": 74,
         "commits_score": 112,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -118,19 +121,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.78,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 9
       },
-      "total_score": 214,
-      "code_score": 185,
+      "total_score": 218,
+      "code_score": 189,
       "community_score": 12,
       "quality_score": 17,
       "score_breakdown": {
-        "pr_score": 77,
+        "pr_score": 81,
         "commits_score": 104,
         "pr_reviews_score": 3,
         "code_comments_score": 1,
@@ -165,19 +170,21 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 3.18,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 11
       },
-      "total_score": 204,
-      "code_score": 164,
+      "total_score": 209,
+      "code_score": 169,
       "community_score": 17,
       "quality_score": 23,
       "score_breakdown": {
-        "pr_score": 94,
+        "pr_score": 99,
         "commits_score": 70,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -212,19 +219,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.83,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 6
       },
-      "total_score": 129,
-      "code_score": 113,
+      "total_score": 132,
+      "code_score": 116,
       "community_score": 4,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 51,
+        "pr_score": 54,
         "commits_score": 58,
         "pr_reviews_score": 3,
         "code_comments_score": 1,
@@ -259,19 +268,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.57,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
         "medium": 1,
         "large": 4
       },
-      "total_score": 129,
-      "code_score": 115,
+      "total_score": 131,
+      "code_score": 117,
       "community_score": 0,
       "quality_score": 14,
       "score_breakdown": {
-        "pr_score": 51,
+        "pr_score": 53,
         "commits_score": 64,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -306,19 +317,21 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 11,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 3
       },
-      "total_score": 115,
-      "code_score": 92,
+      "total_score": 116,
+      "code_score": 93,
       "community_score": 15,
       "quality_score": 8,
       "score_breakdown": {
-        "pr_score": 26,
+        "pr_score": 27,
         "commits_score": 66,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -365,12 +378,12 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 98,
-      "code_score": 56,
+      "total_score": 99,
+      "code_score": 57,
       "community_score": 34,
       "quality_score": 8,
       "score_breakdown": {
-        "pr_score": 29,
+        "pr_score": 30,
         "commits_score": 24,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
@@ -405,19 +418,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
         "medium": 0,
         "large": 2
       },
-      "total_score": 69,
-      "code_score": 46,
+      "total_score": 70,
+      "code_score": 47,
       "community_score": 16,
       "quality_score": 7,
       "score_breakdown": {
-        "pr_score": 22,
+        "pr_score": 23,
         "commits_score": 24,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -452,19 +467,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
         "large": 3
       },
-      "total_score": 63,
-      "code_score": 57,
+      "total_score": 65,
+      "code_score": 59,
       "community_score": 0,
       "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 39,
         "commits_score": 20,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -499,19 +516,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
-      "projects": ["MonoDog"],
+      "projects": [
+        "MonoDog"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 2
       },
-      "total_score": 43,
-      "code_score": 41,
+      "total_score": 44,
+      "code_score": 42,
       "community_score": 0,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 17,
+        "pr_score": 18,
         "commits_score": 24,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -546,7 +565,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["ADAC (Architecture Diagram as Code)"],
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -593,7 +614,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["ADAC (Architecture Diagram as Code)"],
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,

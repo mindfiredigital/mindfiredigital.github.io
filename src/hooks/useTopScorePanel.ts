@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { TopScorer, TabId, MonthlyPayload, Manifest } from "@/types";
+import { loadScoringBundle, computeRangeLeaderboard } from "@/app/utils/rangeScoring";
 import currentMonthRaw from "@/asset/leaderboard-monthly.json";
 import {
   toBase64Url,
@@ -391,19 +392,51 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
     loadQuarter(selectedQuarter);
   }, [selectedQuarter, activeTab, loadQuarter]);
 
+  // ── Custom date-range ───────────────────────────────────────────────────────
+  const today = new Date().toISOString().slice(0, 10);
+  const defaultFrom = `${today.slice(0, 4)}-01-01`; // Jan 1 of current year
+  const [customFrom, setCustomFrom] = useState<string>(defaultFrom);
+  const [customTo, setCustomTo] = useState<string>(today);
+  const [customScorers, setCustomScorers] = useState<TopScorer[]>([]);
+  const [isLoadingCustom, setIsLoadingCustom] = useState(false);
+
+  const computeCustomRange = useCallback(async (from: string, to: string) => {
+    if (!from || !to || from > to) return;
+    setIsLoadingCustom(true);
+    try {
+      const bundle = await loadScoringBundle();
+      const results = computeRangeLeaderboard(bundle, from, to);
+      setCustomScorers(results);
+    } catch {
+      setCustomScorers([]);
+    } finally {
+      setIsLoadingCustom(false);
+    }
+  }, []);
+
+  // Trigger computation when the custom tab is active and dates change
+  useEffect(() => {
+    if (activeTab !== "custom") return;
+    computeCustomRange(customFrom, customTo);
+  }, [activeTab, customFrom, customTo, computeCustomRange]);
+
   // Derived
   const scorers: TopScorer[] =
     activeTab === "monthly"
       ? monthlyData.leaderboard
       : activeTab === "quarterly"
         ? quarterlyScorers
-        : topScorers;
+        : activeTab === "custom"
+          ? customScorers
+          : topScorers;
   const displayLabel =
     activeTab === "monthly"
       ? monthlyData.month_label ?? formatMonthKey(selectedMonth)
       : activeTab === "quarterly"
         ? formatQuarterKey(selectedQuarter)
-        : PANEL_HEADER.displayLabelAllTime;
+        : activeTab === "custom"
+          ? `${customFrom} → ${customTo}`
+          : PANEL_HEADER.displayLabelAllTime;
   const top10 = scorers.slice(0, 10);
   const podium3 = top10.slice(0, 3);
   const rest = top10.slice(3);
@@ -618,6 +651,12 @@ export function useTopScorersPanel(topScorers: TopScorer[]) {
     selectedQuarter,
     setSelectedQuarter,
     isLoadingQuarter,
+    // custom range
+    customFrom,
+    customTo,
+    isLoadingCustom,
+    setCustomFrom,
+    setCustomTo,
     // derived
     displayLabel,
     top10,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:03.900Z",
+  "generated_at": "2026-05-07T11:00:06.417Z",
   "period": "monthly",
   "month_label": "August 2023",
   "month_key": "2023-08",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.5,
       "projectsWorkingOn": 1,
-      "projects": ["Canvas Editor"],
+      "projects": [
+        "Canvas Editor"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
         "large": 2
       },
-      "total_score": 65,
-      "code_score": 63,
+      "total_score": 66,
+      "code_score": 64,
       "community_score": 0,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 27,
+        "pr_score": 28,
         "commits_score": 20,
         "pr_reviews_score": 12,
         "code_comments_score": 4,
@@ -66,7 +68,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Canvas Editor"],
+      "projects": [
+        "Canvas Editor"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -113,7 +117,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["FMDAPI Node Weaver"],
+      "projects": [
+        "FMDAPI Node Weaver"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,

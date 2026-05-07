@@ -4,6 +4,7 @@ export const TABS: { id: TabId; label: string }[] = [
   { id: "alltime", label: "All Time" },
   { id: "monthly", label: "Month" },
   { id: "quarterly", label: "Quarter" },
+  { id: "custom", label: "Custom" },
 ];
 
 export const RANK_ROW_ACCENT = [

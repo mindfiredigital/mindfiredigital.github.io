@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:04.920Z",
+  "generated_at": "2026-05-07T11:00:06.770Z",
   "period": "monthly",
   "month_label": "March 2025",
   "month_key": "2025-03",
@@ -71,7 +71,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -118,7 +120,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 13,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -165,7 +169,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 12,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -212,19 +218,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 1
       },
-      "total_score": 34,
-      "code_score": 19,
+      "total_score": 35,
+      "code_score": 20,
       "community_score": 10,
       "quality_score": 5,
       "score_breakdown": {
-        "pr_score": 15,
+        "pr_score": 16,
         "commits_score": 4,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -259,7 +267,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 12,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -306,7 +316,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -353,7 +365,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -400,7 +414,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Document Editor"],
+      "projects": [
+        "Document Editor"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

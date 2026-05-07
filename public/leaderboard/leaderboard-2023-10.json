@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:03.996Z",
+  "generated_at": "2026-05-07T11:00:06.451Z",
   "period": "monthly",
   "month_label": "October 2023",
   "month_key": "2023-10",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 8.4,
       "projectsWorkingOn": 1,
-      "projects": ["Canvas Editor"],
+      "projects": [
+        "Canvas Editor"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
         "large": 3
       },
-      "total_score": 144,
-      "code_score": 120,
+      "total_score": 145,
+      "code_score": 121,
       "community_score": 12,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 36,
+        "pr_score": 37,
         "commits_score": 84,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -66,19 +68,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.2,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
         "large": 3
       },
-      "total_score": 80,
-      "code_score": 68,
+      "total_score": 81,
+      "code_score": 69,
       "community_score": 10,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 36,
+        "pr_score": 37,
         "commits_score": 32,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -113,7 +117,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["Canvas Editor", "Mindfire Foss Website"],
+      "projects": [
+        "Canvas Editor",
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -160,7 +167,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["NFT Marketplace"],
+      "projects": [
+        "NFT Marketplace"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -207,7 +216,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -254,7 +265,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["NFT Marketplace"],
+      "projects": [
+        "NFT Marketplace"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

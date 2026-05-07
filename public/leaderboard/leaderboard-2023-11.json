@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:04.040Z",
+  "generated_at": "2026-05-07T11:00:06.471Z",
   "period": "monthly",
   "month_label": "November 2023",
   "month_key": "2023-11",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.75,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
         "large": 2
       },
-      "total_score": 52,
-      "code_score": 41,
+      "total_score": 53,
+      "code_score": 42,
       "community_score": 10,
       "quality_score": 1,
       "score_breakdown": {
-        "pr_score": 27,
+        "pr_score": 28,
         "commits_score": 14,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -66,7 +68,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["FMDAPI Node Weaver", "Mindfire Foss Website"],
+      "projects": [
+        "FMDAPI Node Weaver",
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -113,7 +118,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["FMDAPI Node Weaver"],
+      "projects": [
+        "FMDAPI Node Weaver"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -160,7 +167,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -207,7 +216,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Canvas Editor"],
+      "projects": [
+        "Canvas Editor"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
