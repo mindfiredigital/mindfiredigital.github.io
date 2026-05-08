@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:04.243Z",
+  "generated_at": "2026-05-08T11:58:56.202Z",
   "period": "monthly",
   "month_label": "April 2024",
   "month_key": "2024-04",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.75,
       "projectsWorkingOn": 1,
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 9,
         "medium": 5,
         "large": 6
       },
-      "total_score": 330,
-      "code_score": 279,
+      "total_score": 335,
+      "code_score": 284,
       "community_score": 0,
       "quality_score": 51,
       "score_breakdown": {
-        "pr_score": 129,
+        "pr_score": 134,
         "commits_score": 150,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -54,6 +56,55 @@
     },
     {
       "rank": 2,
+      "username": "iabhishekkumarms",
+      "id": 87860388,
+      "avatar_url": "https://avatars.githubusercontent.com/u/87860388?v=4",
+      "html_url": "https://github.com/iabhishekkumarms",
+      "totalCommits": 7,
+      "totalPRs": 2,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.5,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "MobileQuickLaunchKit-Android"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 2
+      },
+      "total_score": 32,
+      "code_score": 32,
+      "community_score": 0,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 18,
+        "commits_score": 14,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 3,
       "username": "BasudevBharatBhushan",
       "id": 64151314,
       "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
@@ -66,7 +117,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": ["FMDAPI Node Weaver"],
+      "projects": [
+        "FMDAPI Node Weaver"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -100,53 +153,6 @@
       "lastActiveDays": null
     },
     {
-      "rank": 3,
-      "username": "iabhishekkumarms",
-      "id": 87860388,
-      "avatar_url": "https://avatars.githubusercontent.com/u/87860388?v=4",
-      "html_url": "https://github.com/iabhishekkumarms",
-      "totalCommits": 7,
-      "totalPRs": 2,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.5,
-      "projectsWorkingOn": 1,
-      "projects": ["MobileQuickLaunchKit-Android"],
-      "newProjectsThisMonth": 0,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 2
-      },
-      "total_score": 31,
-      "code_score": 31,
-      "community_score": 0,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 17,
-        "commits_score": 14,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
       "rank": 4,
       "username": "konark-mindfire",
       "id": 160819069,
@@ -160,19 +166,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["MobileQuickLaunchKit-Android"],
+      "projects": [
+        "MobileQuickLaunchKit-Android"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 2
       },
-      "total_score": 25,
-      "code_score": 21,
+      "total_score": 26,
+      "code_score": 22,
       "community_score": 0,
       "quality_score": 4,
       "score_breakdown": {
-        "pr_score": 17,
+        "pr_score": 18,
         "commits_score": 4,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -207,7 +215,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
-      "projects": ["MobileQuickLaunchKit-iOS"],
+      "projects": [
+        "MobileQuickLaunchKit-iOS"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -254,7 +264,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -285,7 +297,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 2
     },
     {
       "rank": 7,
@@ -301,7 +313,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -332,7 +346,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 11
     },
     {
       "rank": 8,
@@ -348,7 +362,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["MobileQuickLaunchKit-iOS", "MobileQuickLaunchKit-Android"],
+      "projects": [
+        "MobileQuickLaunchKit-iOS",
+        "MobileQuickLaunchKit-Android"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

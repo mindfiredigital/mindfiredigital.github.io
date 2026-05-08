@@ -3,6 +3,7 @@ export * from "./useAnimatedCounter";
 export * from "./useContributorModal";
 export * from "./useHashScroll";
 export * from "./useMonthCalendarPicker";
+export * from "./useDateRangePicker";
 export * from "./usePackageStats";
 export * from "./useProjectFilters";
 export * from "./useTopScorePanel";

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:05.043Z",
+  "generated_at": "2026-05-08T11:58:56.325Z",
   "period": "monthly",
   "month_label": "May 2025",
   "month_key": "2025-05",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.36,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 8,
         "medium": 2,
         "large": 4
       },
-      "total_score": 192,
-      "code_score": 153,
+      "total_score": 195,
+      "code_score": 156,
       "community_score": 10,
       "quality_score": 29,
       "score_breakdown": {
-        "pr_score": 87,
+        "pr_score": 90,
         "commits_score": 66,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -50,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 25
     },
     {
       "rank": 2,
@@ -66,19 +68,22 @@
       "totalIssueComments": 8,
       "avgCommitsPerPR": 3.33,
       "projectsWorkingOn": 2,
-      "projects": ["ESLint Plugin Hub", "Document Editor"],
+      "projects": [
+        "ESLint Plugin Hub",
+        "Document Editor"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
         "large": 1
       },
-      "total_score": 64,
-      "code_score": 40,
+      "total_score": 65,
+      "code_score": 41,
       "community_score": 18,
       "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 20,
+        "pr_score": 21,
         "commits_score": 20,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -97,7 +102,7 @@
         "issue_comments": 8,
         "issue_comments_total": 8
       },
-      "lastActiveDays": 3
+      "lastActiveDays": null
     },
     {
       "rank": 3,
@@ -165,19 +170,21 @@
       "totalIssueComments": 4,
       "avgCommitsPerPR": 1.67,
       "projectsWorkingOn": 1,
-      "projects": ["ESLint Plugin Hub"],
+      "projects": [
+        "ESLint Plugin Hub"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 2
       },
-      "total_score": 56,
-      "code_score": 34,
+      "total_score": 57,
+      "code_score": 35,
       "community_score": 16,
       "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 24,
+        "pr_score": 25,
         "commits_score": 10,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -196,7 +203,7 @@
         "issue_comments": 4,
         "issue_comments_total": 4
       },
-      "lastActiveDays": null
+      "lastActiveDays": 0
     },
     {
       "rank": 5,
@@ -212,19 +219,21 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 2.33,
       "projectsWorkingOn": 1,
-      "projects": ["ESLint Plugin Hub"],
+      "projects": [
+        "ESLint Plugin Hub"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
         "medium": 2,
         "large": 0
       },
-      "total_score": 50,
-      "code_score": 32,
+      "total_score": 51,
+      "code_score": 33,
       "community_score": 11,
       "quality_score": 7,
       "score_breakdown": {
-        "pr_score": 18,
+        "pr_score": 19,
         "commits_score": 14,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -243,7 +252,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 6,
@@ -259,7 +268,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -306,19 +317,21 @@
       "totalIssueComments": 2,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": ["ESLint Plugin Hub"],
+      "projects": [
+        "ESLint Plugin Hub"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 1
       },
-      "total_score": 45,
-      "code_score": 29,
+      "total_score": 46,
+      "code_score": 30,
       "community_score": 12,
       "quality_score": 4,
       "score_breakdown": {
-        "pr_score": 15,
+        "pr_score": 16,
         "commits_score": 14,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -353,19 +366,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.33,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
         "medium": 0,
         "large": 2
       },
-      "total_score": 42,
-      "code_score": 24,
+      "total_score": 43,
+      "code_score": 25,
       "community_score": 10,
       "quality_score": 8,
       "score_breakdown": {
-        "pr_score": 22,
+        "pr_score": 23,
         "commits_score": 2,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -400,19 +415,21 @@
       "totalIssueComments": 2,
       "avgCommitsPerPR": 1.5,
       "projectsWorkingOn": 1,
-      "projects": ["ESLint Plugin Hub"],
+      "projects": [
+        "ESLint Plugin Hub"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
         "large": 0
       },
-      "total_score": 36,
-      "code_score": 19,
+      "total_score": 37,
+      "code_score": 20,
       "community_score": 12,
       "quality_score": 5,
       "score_breakdown": {
-        "pr_score": 13,
+        "pr_score": 14,
         "commits_score": 6,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -431,7 +448,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 13
+      "lastActiveDays": null
     },
     {
       "rank": 10,
@@ -447,7 +464,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -494,19 +513,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
         "large": 0
       },
-      "total_score": 32,
-      "code_score": 17,
+      "total_score": 33,
+      "code_score": 18,
       "community_score": 10,
       "quality_score": 5,
       "score_breakdown": {
-        "pr_score": 13,
+        "pr_score": 14,
         "commits_score": 4,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -541,7 +562,9 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -588,7 +611,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["Ignix UI", "AUTOTEST"],
+      "projects": [
+        "Ignix UI",
+        "AUTOTEST"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -619,7 +645,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 11
     },
     {
       "rank": 14,
@@ -635,7 +661,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -682,7 +710,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,

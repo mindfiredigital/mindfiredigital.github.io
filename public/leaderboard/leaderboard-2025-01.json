@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T15:51:04.802Z",
+  "generated_at": "2026-05-08T11:58:56.289Z",
   "period": "monthly",
   "month_label": "January 2025",
   "month_key": "2025-01",
@@ -19,19 +19,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 19.71,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 7,
         "large": 0
       },
-      "total_score": 336,
-      "code_score": 322,
+      "total_score": 339,
+      "code_score": 325,
       "community_score": 0,
       "quality_score": 14,
       "score_breakdown": {
-        "pr_score": 46,
+        "pr_score": 49,
         "commits_score": 276,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -66,19 +68,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.06,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 5,
         "medium": 7,
         "large": 6
       },
-      "total_score": 208,
-      "code_score": 160,
+      "total_score": 214,
+      "code_score": 166,
       "community_score": 20,
       "quality_score": 28,
       "score_breakdown": {
-        "pr_score": 122,
+        "pr_score": 128,
         "commits_score": 38,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -113,19 +117,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.27,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 5,
         "medium": 1,
         "large": 5
       },
-      "total_score": 184,
-      "code_score": 146,
+      "total_score": 187,
+      "code_score": 149,
       "community_score": 18,
       "quality_score": 20,
       "score_breakdown": {
-        "pr_score": 74,
+        "pr_score": 77,
         "commits_score": 72,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -160,19 +166,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 3,
         "large": 5
       },
-      "total_score": 128,
-      "code_score": 110,
+      "total_score": 132,
+      "code_score": 114,
       "community_score": 2,
       "quality_score": 16,
       "score_breakdown": {
-        "pr_score": 62,
+        "pr_score": 66,
         "commits_score": 48,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -207,19 +215,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
         "medium": 5,
         "large": 2
       },
-      "total_score": 115,
-      "code_score": 87,
+      "total_score": 118,
+      "code_score": 90,
       "community_score": 12,
       "quality_score": 16,
       "score_breakdown": {
-        "pr_score": 55,
+        "pr_score": 58,
         "commits_score": 32,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -254,19 +264,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.8,
       "projectsWorkingOn": 1,
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
         "large": 3
       },
-      "total_score": 115,
-      "code_score": 93,
+      "total_score": 117,
+      "code_score": 95,
       "community_score": 12,
       "quality_score": 10,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 39,
         "commits_score": 38,
         "pr_reviews_score": 18,
         "code_comments_score": 0,
@@ -301,19 +313,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.78,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 8
       },
-      "total_score": 109,
-      "code_score": 89,
+      "total_score": 113,
+      "code_score": 93,
       "community_score": 2,
       "quality_score": 18,
       "score_breakdown": {
-        "pr_score": 75,
+        "pr_score": 79,
         "commits_score": 14,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -348,19 +362,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
         "large": 4
       },
-      "total_score": 100,
-      "code_score": 88,
+      "total_score": 102,
+      "code_score": 90,
       "community_score": 0,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 46,
+        "pr_score": 48,
         "commits_score": 42,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -379,7 +395,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 25
     },
     {
       "rank": 9,
@@ -395,19 +411,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 3,
         "medium": 2,
         "large": 1
       },
-      "total_score": 83,
-      "code_score": 61,
+      "total_score": 84,
+      "code_score": 62,
       "community_score": 10,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 38,
         "commits_score": 24,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -426,7 +444,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 4
     },
     {
       "rank": 10,
@@ -442,7 +460,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -489,7 +509,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": ["QuickLaunchReactNativeKit", "Ignix UI"],
+      "projects": [
+        "QuickLaunchReactNativeKit",
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -520,7 +543,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 11
     },
     {
       "rank": 12,
@@ -536,7 +559,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -583,7 +608,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
