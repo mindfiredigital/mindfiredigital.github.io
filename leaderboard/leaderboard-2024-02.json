@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T04:27:44.021Z",
+  "generated_at": "2026-05-08T11:58:56.187Z",
   "period": "monthly",
   "month_label": "February 2024",
   "month_key": "2024-02",
@@ -30,12 +30,12 @@
         "medium": 3,
         "large": 2
       },
-      "total_score": 175,
-      "code_score": 137,
+      "total_score": 177,
+      "code_score": 139,
       "community_score": 26,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 47,
+        "pr_score": 49,
         "commits_score": 84,
         "pr_reviews_score": 6,
         "code_comments_score": 0,
@@ -80,12 +80,12 @@
         "medium": 1,
         "large": 3
       },
-      "total_score": 81,
-      "code_score": 60,
+      "total_score": 83,
+      "code_score": 62,
       "community_score": 20,
       "quality_score": 1,
       "score_breakdown": {
-        "pr_score": 32,
+        "pr_score": 34,
         "commits_score": 28,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -130,12 +130,12 @@
         "medium": 2,
         "large": 0
       },
-      "total_score": 79,
-      "code_score": 59,
+      "total_score": 80,
+      "code_score": 60,
       "community_score": 10,
       "quality_score": 10,
       "score_breakdown": {
-        "pr_score": 28,
+        "pr_score": 29,
         "commits_score": 28,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
@@ -278,12 +278,12 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 62,
-      "code_score": 46,
+      "total_score": 63,
+      "code_score": 47,
       "community_score": 10,
       "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 24,
+        "pr_score": 25,
         "commits_score": 22,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -327,12 +327,12 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 50,
-      "code_score": 37,
+      "total_score": 51,
+      "code_score": 38,
       "community_score": 10,
       "quality_score": 3,
       "score_breakdown": {
-        "pr_score": 24,
+        "pr_score": 25,
         "commits_score": 10,
         "pr_reviews_score": 3,
         "code_comments_score": 0,

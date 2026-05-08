@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T04:27:44.038Z",
+  "generated_at": "2026-05-08T11:58:56.209Z",
   "period": "monthly",
   "month_label": "May 2024",
   "month_key": "2024-05",
@@ -28,12 +28,12 @@
         "medium": 0,
         "large": 2
       },
-      "total_score": 85,
-      "code_score": 63,
+      "total_score": 86,
+      "code_score": 64,
       "community_score": 10,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 38,
         "commits_score": 26,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -77,12 +77,12 @@
         "medium": 0,
         "large": 2
       },
-      "total_score": 75,
-      "code_score": 63,
+      "total_score": 76,
+      "code_score": 64,
       "community_score": 0,
       "quality_score": 12,
       "score_breakdown": {
-        "pr_score": 37,
+        "pr_score": 38,
         "commits_score": 26,
         "pr_reviews_score": 0,
         "code_comments_score": 0,

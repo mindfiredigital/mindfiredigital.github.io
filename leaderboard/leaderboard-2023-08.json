@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T04:27:43.983Z",
+  "generated_at": "2026-05-08T11:58:56.139Z",
   "period": "monthly",
   "month_label": "August 2023",
   "month_key": "2023-08",
@@ -28,12 +28,12 @@
         "medium": 0,
         "large": 2
       },
-      "total_score": 65,
-      "code_score": 63,
+      "total_score": 66,
+      "code_score": 64,
       "community_score": 0,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 27,
+        "pr_score": 28,
         "commits_score": 20,
         "pr_reviews_score": 12,
         "code_comments_score": 4,

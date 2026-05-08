@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T04:27:44.092Z",
+  "generated_at": "2026-05-08T11:58:56.302Z",
   "period": "monthly",
   "month_label": "February 2025",
   "month_key": "2025-02",
@@ -79,12 +79,12 @@
         "medium": 4,
         "large": 5
       },
-      "total_score": 247,
-      "code_score": 215,
+      "total_score": 251,
+      "code_score": 219,
       "community_score": 10,
       "quality_score": 22,
       "score_breakdown": {
-        "pr_score": 79,
+        "pr_score": 83,
         "commits_score": 136,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -128,12 +128,12 @@
         "medium": 3,
         "large": 3
       },
-      "total_score": 135,
-      "code_score": 103,
+      "total_score": 138,
+      "code_score": 106,
       "community_score": 12,
       "quality_score": 20,
       "score_breakdown": {
-        "pr_score": 65,
+        "pr_score": 68,
         "commits_score": 38,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -177,12 +177,12 @@
         "medium": 5,
         "large": 1
       },
-      "total_score": 132,
-      "code_score": 102,
+      "total_score": 135,
+      "code_score": 105,
       "community_score": 12,
       "quality_score": 18,
       "score_breakdown": {
-        "pr_score": 56,
+        "pr_score": 59,
         "commits_score": 46,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -226,12 +226,12 @@
         "medium": 2,
         "large": 6
       },
-      "total_score": 116,
-      "code_score": 95,
+      "total_score": 120,
+      "code_score": 99,
       "community_score": 0,
       "quality_score": 21,
       "score_breakdown": {
-        "pr_score": 69,
+        "pr_score": 73,
         "commits_score": 26,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -275,12 +275,12 @@
         "medium": 0,
         "large": 3
       },
-      "total_score": 102,
-      "code_score": 92,
+      "total_score": 103,
+      "code_score": 93,
       "community_score": 0,
       "quality_score": 10,
       "score_breakdown": {
-        "pr_score": 36,
+        "pr_score": 37,
         "commits_score": 56,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -324,12 +324,12 @@
         "medium": 1,
         "large": 5
       },
-      "total_score": 84,
-      "code_score": 74,
+      "total_score": 87,
+      "code_score": 77,
       "community_score": 10,
       "quality_score": 0,
       "score_breakdown": {
-        "pr_score": 54,
+        "pr_score": 57,
         "commits_score": 20,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -373,12 +373,12 @@
         "medium": 2,
         "large": 0
       },
-      "total_score": 25,
-      "code_score": 17,
+      "total_score": 26,
+      "code_score": 18,
       "community_score": 4,
       "quality_score": 4,
       "score_breakdown": {
-        "pr_score": 13,
+        "pr_score": 14,
         "commits_score": 4,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
