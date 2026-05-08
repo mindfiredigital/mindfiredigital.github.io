@@ -88,3 +88,37 @@ export function currentMonthKey(): string {
     "0"
   )}`;
 }
+
+/* Returns the three YYYY-MM keys for a quarter key like "2026-Q1" */
+export function quarterMonths(quarterKey: string): string[] {
+  const [year, q] = quarterKey.split("-");
+  const qNum = Number(q.replace("Q", ""));
+  const startMonth = (qNum - 1) * 3 + 1;
+  return [0, 1, 2].map(
+    (i) => `${year}-${String(startMonth + i).padStart(2, "0")}`
+  );
+}
+
+/* Formats a quarter key (e.g. "2026-Q1") into a readable label like "Q1 2026" */
+export function formatQuarterKey(quarterKey: string): string {
+  const [year, q] = quarterKey.split("-");
+  return `${q} ${year}`;
+}
+
+/* Returns the current quarter in "YYYY-Qn" format using UTC time */
+export function currentQuarterKey(): string {
+  const now = new Date();
+  const q = Math.ceil((now.getUTCMonth() + 1) / 3);
+  return `${now.getUTCFullYear()}-Q${q}`;
+}
+
+/* Derives the set of available quarter keys from a list of available month keys */
+export function availableQuartersFromMonths(months: string[]): string[] {
+  const quarters = new Set<string>();
+  for (const month of months) {
+    const [year, m] = month.split("-");
+    const q = Math.ceil(Number(m) / 3);
+    quarters.add(`${year}-Q${q}`);
+  }
+  return Array.from(quarters).sort();
+}

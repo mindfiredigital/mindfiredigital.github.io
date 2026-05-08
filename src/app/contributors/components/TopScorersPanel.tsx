@@ -6,7 +6,6 @@ import { useTopScorersPanel } from "@/hooks";
 import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
 
-/* Main panel combining header, body, and footer for leaderboard */
 export default function TopScorersPanel({
   topScorers,
   onViewDetails,
@@ -21,13 +20,25 @@ export default function TopScorersPanel({
     isDownloading,
     isCopying,
     copied,
-    handleDownload,
-    handleCopy,
+    actionPopover,
+    setActionPopover,
+    handleDownloadLayout,
+    handleCopyLayout,
     curKey,
     availableMonths,
     selectedMonth,
     setSelectedMonth,
     isLoadingMonth,
+    curQuarter,
+    availableQuarters,
+    selectedQuarter,
+    setSelectedQuarter,
+    isLoadingQuarter,
+    customFrom,
+    customTo,
+    isLoadingCustom,
+    setCustomFrom,
+    setCustomTo,
     displayLabel,
     top10,
     podium3,
@@ -40,7 +51,6 @@ export default function TopScorersPanel({
       ref={containerRef}
       className='flex flex-col rounded-2xl border border-gray-100 shadow-lg bg-white overflow-hidden lg:h-full'
     >
-      {/* Panel header (tabs, actions, filters) */}
       <PanelHeader
         activeTab={activeTab}
         top10Length={top10.length}
@@ -48,20 +58,33 @@ export default function TopScorersPanel({
         isCopying={isCopying}
         copied={copied}
         onTabChange={setActiveTab}
-        onDownload={handleDownload}
-        onCopy={handleCopy}
+        // download button: opens popover; popover calls handleDownloadLayout(layout)
+        onDownload={handleDownloadLayout}
+        // copy button: opens popover; popover calls handleCopyLayout(layout)
+        onCopy={handleCopyLayout}
         availableMonths={availableMonths}
         selectedMonth={selectedMonth}
         curKey={curKey}
         isLoadingMonth={isLoadingMonth}
         displayLabel={displayLabel}
         onMonthSelect={setSelectedMonth}
+        availableQuarters={availableQuarters}
+        selectedQuarter={selectedQuarter}
+        curQuarter={curQuarter}
+        isLoadingQuarter={isLoadingQuarter}
+        onQuarterSelect={setSelectedQuarter}
+        customFrom={customFrom}
+        customTo={customTo}
+        isLoadingCustom={isLoadingCustom}
+        onCustomFromChange={setCustomFrom}
+        onCustomToChange={setCustomTo}
+        actionPopover={actionPopover}
+        onActionPopover={setActionPopover}
       />
 
-      {/* Panel body (podium + rank list) */}
       <PanelBody
         bodyRef={bodyRef}
-        isLoadingMonth={isLoadingMonth}
+        isLoadingMonth={isLoadingMonth || isLoadingQuarter || isLoadingCustom}
         selectedMonth={selectedMonth}
         top10={top10}
         podium3={podium3}
@@ -73,14 +96,12 @@ export default function TopScorersPanel({
         onViewDetails={onViewDetails}
       />
 
-      {/* Footer hint */}
       <div className='px-5 py-2.5 border-t border-gray-100 bg-gray-50/60 flex-shrink-0'>
         <p className='text-[10px] text-center text-gray-400 font-medium uppercase tracking-wider'>
           {PANEL_HEADER.footerHint}
         </p>
       </div>
 
-      {/* Local animation for podium crowns */}
       <style>{`
         @keyframes trophyFloat {
           0%, 100% { transform: translateY(0px); }

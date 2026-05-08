@@ -123,6 +123,28 @@ jest.mock("../../src/app/utils", () => ({
   toBase64Url: jest.fn(async (src: string) => src),
   formatMonthKey: jest.fn((key: string) => key),
   currentMonthKey: jest.fn(() => "2026-03"),
+  currentQuarterKey: jest.fn(() => "2026-Q1"),
+  quarterMonths: jest.fn((key: string) => {
+    const [year, q] = key.split("-");
+    const qNum = Number(q.replace("Q", ""));
+    const startMonth = (qNum - 1) * 3 + 1;
+    return [0, 1, 2].map(
+      (i) => `${year}-${String(startMonth + i).padStart(2, "0")}`
+    );
+  }),
+  formatQuarterKey: jest.fn((key: string) => {
+    const [year, q] = key.split("-");
+    return `${q} ${year}`;
+  }),
+  availableQuartersFromMonths: jest.fn((months: string[]) => {
+    const quarters = new Set<string>();
+    for (const month of months) {
+      const [year, m] = month.split("-");
+      const q = Math.ceil(Number(m) / 3);
+      quarters.add(`${year}-Q${q}`);
+    }
+    return Array.from(quarters).sort();
+  }),
   getContributorByLogin: jest.fn((login: string) => ({
     login,
     id: 0,
