@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T04:59:57.460Z",
+  "generated_at": "2026-05-19T04:52:28.142Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -1153,6 +1153,7 @@
         "2025-10-21T10:02:18Z",
         "2025-10-13T08:21:14Z",
         "2025-10-13T08:19:05Z",
+        "2026-04-07T17:29:24Z",
         "2026-02-27T05:50:32Z",
         "2026-02-27T05:48:52Z",
         "2026-02-27T05:47:51Z",
@@ -5942,7 +5943,7 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "lastActiveDays": 3,
+      "lastActiveDays": 4,
       "commits": [
         "2025-06-27T07:51:24Z",
         "2025-06-27T07:47:28Z",
@@ -8175,6 +8176,8 @@
         "2026-04-13T13:22:57Z"
       ],
       "issueComments": [
+        "2026-05-18T05:56:01Z",
+        "2026-05-18T05:55:12Z",
         "2026-03-30T08:02:22Z",
         "2026-03-24T11:59:53Z",
         "2026-03-17T08:28:10Z",
@@ -8198,7 +8201,7 @@
       "id": 116242186,
       "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
       "html_url": "https://github.com/ashutosh-jena-mindfire",
-      "lastActiveDays": 3,
+      "lastActiveDays": 4,
       "commits": [
         "2025-12-16T14:33:44Z",
         "2025-12-10T15:00:38Z",
@@ -8541,7 +8544,7 @@
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
-      "lastActiveDays": 6,
+      "lastActiveDays": 7,
       "commits": [
         "2024-01-25T08:25:05Z",
         "2023-10-19T17:51:38Z",
@@ -11242,7 +11245,7 @@
       "id": 113003818,
       "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
       "html_url": "https://github.com/SandipMF",
-      "lastActiveDays": 3,
+      "lastActiveDays": 1,
       "commits": [
         "2026-04-01T06:49:59Z",
         "2026-03-26T14:59:21Z",
@@ -11685,6 +11688,9 @@
       ],
       "issueComments": [
         "2025-11-03T08:52:26Z",
+        "2026-05-18T05:40:42Z",
+        "2026-05-18T05:41:45Z",
+        "2026-05-18T05:46:03Z",
         "2026-03-27T06:35:25Z",
         "2026-03-11T12:17:24Z",
         "2025-11-05T14:30:41Z",
@@ -11704,7 +11710,7 @@
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
       "html_url": "https://github.com/sanghamitradash021",
-      "lastActiveDays": 3,
+      "lastActiveDays": 1,
       "commits": [
         "2025-06-24T08:23:20Z",
         "2025-06-24T08:21:03Z",
@@ -12875,7 +12881,7 @@
       "id": 217167363,
       "avatar_url": "https://avatars.githubusercontent.com/u/217167363?v=4",
       "html_url": "https://github.com/subhranshus-mindfire",
-      "lastActiveDays": 12,
+      "lastActiveDays": 13,
       "commits": [
         "2025-11-10T08:09:11Z",
         "2025-11-10T07:50:21Z",
@@ -13301,7 +13307,7 @@
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
       "html_url": "https://github.com/saradab-mindfire",
-      "lastActiveDays": 6,
+      "lastActiveDays": 1,
       "commits": [
         "2026-05-12T14:55:11Z",
         "2026-05-12T14:51:40Z",
@@ -17202,6 +17208,80 @@
         }
       ]
     },
+    "101yogeshsharma": {
+      "id": 35485702,
+      "avatar_url": "https://avatars.githubusercontent.com/u/35485702?v=4",
+      "html_url": "https://github.com/101yogeshsharma",
+      "lastActiveDays": null,
+      "commits": [
+        "2026-05-18T04:39:14Z",
+        "2026-05-15T05:40:31Z",
+        "2026-05-15T05:34:49Z",
+        "2026-05-15T05:32:56Z",
+        "2026-05-13T07:52:35Z",
+        "2026-05-13T05:54:44Z",
+        "2026-05-12T05:48:10Z",
+        "2026-05-12T05:34:37Z",
+        "2026-05-12T04:48:04Z",
+        "2026-05-12T04:46:30Z",
+        "2026-04-28T06:59:28Z",
+        "2026-04-28T06:53:01Z",
+        "2026-04-22T06:57:44Z",
+        "2026-04-17T07:55:37Z",
+        "2026-04-17T07:30:15Z",
+        "2026-04-17T05:19:12Z",
+        "2026-04-17T05:06:37Z",
+        "2026-04-17T04:48:25Z",
+        "2026-04-15T11:10:34Z",
+        "2026-04-15T11:08:16Z",
+        "2026-04-15T11:06:17Z",
+        "2026-04-15T10:27:43Z",
+        "2026-04-15T10:18:54Z",
+        "2026-04-15T10:16:24Z",
+        "2026-04-15T09:03:05Z",
+        "2026-04-15T08:49:45Z",
+        "2026-04-15T08:44:06Z",
+        "2026-04-14T16:11:33Z",
+        "2026-04-14T16:07:36Z",
+        "2026-04-14T09:37:49Z",
+        "2026-04-14T03:32:12Z",
+        "2026-04-13T07:03:23Z",
+        "2026-04-13T06:58:57Z",
+        "2026-04-13T05:33:44Z",
+        "2026-04-10T08:22:44Z",
+        "2026-04-10T06:22:10Z",
+        "2026-04-10T05:22:35Z",
+        "2026-04-03T01:42:01Z",
+        "2026-03-26T16:45:10Z",
+        "2026-03-26T09:24:04Z",
+        "2026-03-16T07:47:55Z",
+        "2026-03-13T03:13:43Z",
+        "2026-03-11T09:37:08Z",
+        "2026-03-09T05:06:50Z",
+        "2026-03-03T03:55:04Z",
+        "2026-02-26T05:03:06Z",
+        "2026-02-24T15:09:38Z",
+        "2026-02-24T05:16:08Z",
+        "2026-02-20T05:16:55Z",
+        "2026-02-19T04:38:22Z",
+        "2026-02-13T09:41:37Z",
+        "2026-02-13T08:36:46Z",
+        "2026-02-11T10:31:50Z",
+        "2026-02-10T12:02:03Z"
+      ],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-02-10T12:02:03Z",
+          "title": "ADAC (Architecture Diagram as Code)",
+          "firstMonthKey": "2026-02"
+        }
+      ]
+    },
     "jagdish-mindfire": {
       "id": 180177757,
       "avatar_url": "https://avatars.githubusercontent.com/u/180177757?v=4",
@@ -17478,7 +17558,7 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "lastActiveDays": 6,
+      "lastActiveDays": 1,
       "commits": [
         "2026-05-12T13:16:27Z",
         "2026-05-12T13:11:46Z",
@@ -18028,7 +18108,7 @@
       "id": 253189439,
       "avatar_url": "https://avatars.githubusercontent.com/u/253189439?v=4",
       "html_url": "https://github.com/sarthakm-dev",
-      "lastActiveDays": 24,
+      "lastActiveDays": 25,
       "commits": [
         "2026-04-23T10:13:32Z",
         "2026-04-23T10:09:36Z",
@@ -19037,6 +19117,68 @@
         }
       ]
     },
+    "uzerjamal-mfsi": {
+      "id": 220164293,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+      "html_url": "https://github.com/uzerjamal-mfsi",
+      "lastActiveDays": 1,
+      "commits": [
+        "2026-05-18T06:58:40Z",
+        "2026-05-18T06:44:52Z",
+        "2026-05-18T05:33:19Z",
+        "2026-05-18T04:58:23Z",
+        "2026-05-18T04:11:23Z",
+        "2026-05-14T04:30:50Z",
+        "2026-05-13T04:56:36Z",
+        "2026-05-10T13:55:21Z",
+        "2026-05-10T13:50:50Z",
+        "2026-05-04T04:26:47Z",
+        "2026-04-28T04:36:06Z",
+        "2026-04-21T04:35:07Z",
+        "2026-04-15T04:24:17Z",
+        "2026-04-14T10:57:42Z",
+        "2026-04-14T04:48:11Z",
+        "2026-04-13T17:29:20Z",
+        "2026-04-08T19:18:22Z",
+        "2026-04-08T18:58:27Z",
+        "2026-03-29T04:37:23Z",
+        "2026-03-26T13:34:59Z",
+        "2026-03-24T07:42:40Z",
+        "2026-03-23T18:41:44Z",
+        "2026-03-18T04:59:10Z",
+        "2026-03-15T15:14:54Z",
+        "2026-03-12T15:55:24Z",
+        "2026-03-11T04:33:46Z",
+        "2026-03-09T04:39:53Z",
+        "2026-02-25T17:49:54Z"
+      ],
+      "prs": [
+        {
+          "d": "2026-05-10T13:55:21Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        }
+      ],
+      "reviews": [
+        "2026-05-18T04:58:15Z",
+        "2026-03-23T16:38:28Z"
+      ],
+      "codeComments": [
+        "2026-03-23T16:38:28Z"
+      ],
+      "issues": [],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-02-25T17:49:54Z",
+          "title": "ADAC (Architecture Diagram as Code)",
+          "firstMonthKey": "2026-02"
+        }
+      ]
+    },
     "hitesh-mindfire": {
       "id": 172278187,
       "avatar_url": "https://avatars.githubusercontent.com/u/172278187?v=4",
@@ -19415,6 +19557,69 @@
         }
       ]
     },
+    "Prarthanaxdev": {
+      "id": 78857337,
+      "avatar_url": "https://avatars.githubusercontent.com/u/78857337?v=4",
+      "html_url": "https://github.com/Prarthanaxdev",
+      "lastActiveDays": 5,
+      "commits": [
+        "2026-05-13T10:01:26Z",
+        "2026-05-08T16:14:56Z",
+        "2026-05-13T05:04:59Z",
+        "2026-05-11T16:16:17Z",
+        "2026-05-11T12:15:00Z",
+        "2026-05-11T10:26:28Z",
+        "2026-05-11T10:07:46Z",
+        "2026-05-11T10:04:28Z",
+        "2026-05-11T09:27:14Z",
+        "2026-05-11T09:24:07Z",
+        "2026-05-08T16:14:56Z",
+        "2026-04-08T17:26:03Z",
+        "2026-04-08T17:09:49Z",
+        "2026-04-08T17:06:40Z",
+        "2026-04-08T16:14:57Z",
+        "2026-04-08T14:34:18Z",
+        "2026-04-08T13:52:55Z",
+        "2026-03-13T16:10:12Z"
+      ],
+      "prs": [
+        {
+          "d": "2026-05-14T04:30:50Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-08T19:18:22Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-03-23T18:41:44Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        }
+      ],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-03-13T16:10:12Z",
+          "title": "ADAC (Architecture Diagram as Code)",
+          "firstMonthKey": "2026-03"
+        }
+      ]
+    },
     "ankitmindfiretraining-99": {
       "id": 224015823,
       "avatar_url": "https://avatars.githubusercontent.com/u/224015823?v=4",
@@ -19629,7 +19834,7 @@
       "id": 118360815,
       "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
       "html_url": "https://github.com/asishmindfire",
-      "lastActiveDays": 3,
+      "lastActiveDays": 4,
       "commits": [
         "2023-09-04T10:45:48Z",
         "2023-08-24T11:05:39Z",
@@ -20692,35 +20897,6 @@
         }
       ]
     },
-    "101yogeshsharma": {
-      "id": 35485702,
-      "avatar_url": "https://avatars.githubusercontent.com/u/35485702?v=4",
-      "html_url": "https://github.com/101yogeshsharma",
-      "lastActiveDays": null,
-      "commits": [
-        "2026-02-26T05:03:06Z",
-        "2026-02-24T15:09:38Z",
-        "2026-02-24T05:16:08Z",
-        "2026-02-20T05:16:55Z",
-        "2026-02-19T04:38:22Z",
-        "2026-02-13T09:41:37Z",
-        "2026-02-13T08:36:46Z",
-        "2026-02-11T10:31:50Z",
-        "2026-02-10T12:02:03Z"
-      ],
-      "prs": [],
-      "reviews": [],
-      "codeComments": [],
-      "issues": [],
-      "issueComments": [],
-      "projectFirsts": [
-        {
-          "d": "2026-02-10T12:02:03Z",
-          "title": "ADAC (Architecture Diagram as Code)",
-          "firstMonthKey": "2026-02"
-        }
-      ]
-    },
     "JKAryan2003": {
       "id": 138751636,
       "avatar_url": "https://avatars.githubusercontent.com/u/138751636?v=4",
@@ -21607,6 +21783,48 @@
         }
       ]
     },
+    "mfsiayanc-debug": {
+      "id": 248435757,
+      "avatar_url": "https://avatars.githubusercontent.com/u/248435757?v=4",
+      "html_url": "https://github.com/mfsiayanc-debug",
+      "lastActiveDays": null,
+      "commits": [
+        "2026-04-01T01:02:00Z",
+        "2026-03-31T07:41:32Z",
+        "2026-03-23T16:34:48Z",
+        "2026-03-23T16:30:49Z",
+        "2026-03-23T16:23:52Z"
+      ],
+      "prs": [
+        {
+          "d": "2026-04-08T18:58:27Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-27T05:46:00Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": false
+        }
+      ],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-02-27T05:46:00Z",
+          "title": "ADAC (Architecture Diagram as Code)",
+          "firstMonthKey": "2026-02"
+        }
+      ]
+    },
     "narayan-mindfire": {
       "id": 194910262,
       "avatar_url": "https://avatars.githubusercontent.com/u/194910262?v=4",
@@ -21733,22 +21951,251 @@
         }
       ]
     },
-    "uzerjamal-mfsi": {
-      "id": 220164293,
-      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-      "html_url": "https://github.com/uzerjamal-mfsi",
-      "lastActiveDays": 4,
+    "yogeshsmindfire": {
+      "id": 235709046,
+      "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
+      "html_url": "https://github.com/yogeshsmindfire",
+      "lastActiveDays": 1,
       "commits": [
-        "2026-02-25T17:49:54Z"
+        "2026-03-24T06:20:17Z"
       ],
-      "prs": [],
-      "reviews": [],
-      "codeComments": [],
-      "issues": [],
+      "prs": [
+        {
+          "d": "2026-05-18T04:58:24Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-05-18T04:11:24Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-05-13T04:56:36Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-05-04T04:26:48Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-28T04:36:06Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-21T04:35:07Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-04-15T04:24:17Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-14T10:57:42Z",
+          "pts": 5,
+          "c": "small",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-14T04:48:12Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-04-13T17:29:21Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-04-07T17:29:24Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-03-29T04:37:23Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-03-24T07:42:40Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-03-18T04:59:11Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-03-15T15:14:54Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-03-12T15:55:24Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-03-11T04:33:46Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-03-09T04:39:53Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-27T05:48:52Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-02-25T17:49:54Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-24T07:35:57Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": true,
+          "doc": true
+        },
+        {
+          "d": "2026-02-18T07:12:03Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-21T14:02:13Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": false,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-19T10:26:49Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-02-13T05:53:28Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": true,
+          "doc": false
+        },
+        {
+          "d": "2026-02-11T07:39:34Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": false
+        }
+      ],
+      "reviews": [
+        "2026-04-01T16:19:15Z",
+        "2026-03-24T06:16:33Z"
+      ],
+      "codeComments": [
+        "2026-03-24T06:16:33Z"
+      ],
+      "issues": [
+        "2026-02-17T02:44:43Z",
+        "2026-02-17T02:44:42Z",
+        "2026-02-17T02:44:40Z",
+        "2026-02-17T02:44:39Z",
+        "2026-02-17T02:44:37Z",
+        "2026-02-17T02:44:36Z",
+        "2026-02-17T02:44:34Z",
+        "2026-02-17T02:44:32Z",
+        "2026-02-17T02:44:31Z",
+        "2026-02-17T02:44:29Z",
+        "2026-02-17T02:44:27Z",
+        "2026-02-17T02:44:26Z",
+        "2026-02-17T02:44:24Z",
+        "2026-02-17T02:44:23Z"
+      ],
       "issueComments": [],
       "projectFirsts": [
         {
-          "d": "2026-02-25T17:49:54Z",
+          "d": "2026-02-11T07:39:34Z",
           "title": "ADAC (Architecture Diagram as Code)",
           "firstMonthKey": "2026-02"
         }
@@ -22105,7 +22552,7 @@
       "id": 34024639,
       "avatar_url": "https://avatars.githubusercontent.com/u/34024639?v=4",
       "html_url": "https://github.com/PoonamKPatil",
-      "lastActiveDays": 14,
+      "lastActiveDays": 15,
       "commits": [
         "2026-04-02T08:24:27Z",
         "2026-03-31T07:51:41Z"

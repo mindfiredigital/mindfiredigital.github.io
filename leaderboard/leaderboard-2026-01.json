@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T04:59:57.322Z",
+  "generated_at": "2026-05-19T04:52:28.008Z",
   "period": "monthly",
   "month_label": "January 2026",
   "month_key": "2026-01",
@@ -53,7 +53,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 2,
@@ -204,7 +204,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -302,7 +302,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 7,
@@ -499,7 +499,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     }
   ]
 }
