@@ -1,14 +1,64 @@
 {
-  "generated_at": "2026-05-19T04:52:28.425Z",
+  "generated_at": "2026-05-20T04:53:36.850Z",
   "period": "monthly",
   "window_start": "2026-05-01T00:00:00.000Z",
-  "window_end": "2026-05-19T04:52:28.425Z",
+  "window_end": "2026-05-20T04:53:36.850Z",
   "month_label": "May 2026",
   "month_key": "2026-05",
   "total_contributors": 8,
   "leaderboard": [
     {
       "rank": 1,
+      "username": "ipsitam-07",
+      "id": 253717200,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
+      "html_url": "https://github.com/ipsitam-07",
+      "totalCommits": 61,
+      "totalPRs": 17,
+      "totalPRReviewsGiven": 2,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 5,
+      "totalIssueComments": 2,
+      "avgCommitsPerPR": 3.59,
+      "projectsWorkingOn": 2,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "Ignix UI",
+        "Ignix-lite"
+      ],
+      "prs_by_complexity": {
+        "small": 3,
+        "medium": 4,
+        "large": 10
+      },
+      "total_score": 275,
+      "code_score": 254,
+      "community_score": 12,
+      "quality_score": 9,
+      "score_breakdown": {
+        "pr_score": 126,
+        "commits_score": 122,
+        "pr_reviews_score": 6,
+        "code_comments_score": 0,
+        "issues_opened_score": 10,
+        "issue_comments_score": 2,
+        "projects_score": 0,
+        "tests_score": 1,
+        "docs_score": 6,
+        "mentor_score": 0,
+        "zero_revisions_score": 2,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 5,
+        "issues_total": 5,
+        "issue_comments": 2,
+        "issue_comments_total": 2
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 2,
       "username": "Rituparna158",
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
@@ -57,57 +107,57 @@
       "lastActiveDays": null
     },
     {
-      "rank": 2,
-      "username": "ipsitam-07",
-      "id": 253717200,
-      "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
-      "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 39,
-      "totalPRs": 15,
-      "totalPRReviewsGiven": 2,
+      "rank": 3,
+      "username": "anandmindfire",
+      "id": 155735575,
+      "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
+      "html_url": "https://github.com/anandmindfire",
+      "totalCommits": 24,
+      "totalPRs": 8,
+      "totalPRReviewsGiven": 12,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 5,
-      "totalIssueComments": 2,
-      "avgCommitsPerPR": 2.6,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI",
-        "Ignix-lite"
+        "Mindfire Foss Website"
       ],
       "prs_by_complexity": {
         "small": 3,
-        "medium": 3,
-        "large": 9
+        "medium": 0,
+        "large": 5
       },
-      "total_score": 216,
-      "code_score": 195,
-      "community_score": 12,
-      "quality_score": 9,
+      "total_score": 160,
+      "code_score": 142,
+      "community_score": 0,
+      "quality_score": 18,
       "score_breakdown": {
-        "pr_score": 111,
-        "commits_score": 78,
-        "pr_reviews_score": 6,
+        "pr_score": 58,
+        "commits_score": 48,
+        "pr_reviews_score": 36,
         "code_comments_score": 0,
-        "issues_opened_score": 10,
-        "issue_comments_score": 2,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
         "projects_score": 0,
-        "tests_score": 1,
-        "docs_score": 6,
+        "tests_score": 0,
+        "docs_score": 2,
         "mentor_score": 0,
-        "zero_revisions_score": 2,
+        "zero_revisions_score": 16,
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 5,
-        "issues_total": 5,
-        "issue_comments": 2,
-        "issue_comments_total": 2
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
       },
       "lastActiveDays": null
     },
     {
-      "rank": 3,
+      "rank": 4,
       "username": "sobhan-s",
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
@@ -153,57 +203,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
-    },
-    {
-      "rank": 4,
-      "username": "anandmindfire",
-      "id": 155735575,
-      "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
-      "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 21,
-      "totalPRs": 7,
-      "totalPRReviewsGiven": 10,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 3,
-      "projectsWorkingOn": 2,
-      "newProjectsThisMonth": 0,
-      "projects": [
-        "Ignix UI",
-        "Mindfire Foss Website"
-      ],
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 0,
-        "large": 4
-      },
-      "total_score": 137,
-      "code_score": 121,
-      "community_score": 0,
-      "quality_score": 16,
-      "score_breakdown": {
-        "pr_score": 49,
-        "commits_score": 42,
-        "pr_reviews_score": 30,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 0,
-        "docs_score": 2,
-        "mentor_score": 0,
-        "zero_revisions_score": 14,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
+      "lastActiveDays": 2
     },
     {
       "rank": 5,
@@ -252,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 6,
@@ -301,7 +301,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 7,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 16
     },
     {
       "rank": 8,
@@ -362,27 +362,29 @@
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
+      "totalIssuesOpened": 1,
       "totalIssueComments": 3,
       "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 0,
+      "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [],
+      "projects": [
+        "Ignix UI"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 0
       },
-      "total_score": 3,
+      "total_score": 5,
       "code_score": 0,
-      "community_score": 3,
+      "community_score": 5,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
         "commits_score": 0,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 0,
+        "issues_opened_score": 2,
         "issue_comments_score": 3,
         "projects_score": 0,
         "tests_score": 0,
@@ -392,8 +394,8 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
+        "issues_opened": 1,
+        "issues_total": 1,
         "issue_comments": 3,
         "issue_comments_total": 3
       },
