@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T04:53:36.286Z",
+  "generated_at": "2026-05-21T05:05:01.844Z",
   "period": "monthly",
   "month_label": "March 2024",
   "month_key": "2024-03",
@@ -102,7 +102,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 3,
@@ -347,7 +347,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     },
     {
       "rank": 8,

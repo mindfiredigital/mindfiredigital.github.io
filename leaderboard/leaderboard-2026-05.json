@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-20T04:53:36.850Z",
+  "generated_at": "2026-05-21T05:05:02.355Z",
   "period": "monthly",
   "window_start": "2026-05-01T00:00:00.000Z",
-  "window_end": "2026-05-20T04:53:36.850Z",
+  "window_end": "2026-05-21T05:05:02.355Z",
   "month_label": "May 2026",
   "month_key": "2026-05",
   "total_contributors": 8,
@@ -112,13 +112,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 24,
+      "totalCommits": 25,
       "totalPRs": 8,
       "totalPRReviewsGiven": 12,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3,
+      "avgCommitsPerPR": 3.13,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -130,13 +130,13 @@
         "medium": 0,
         "large": 5
       },
-      "total_score": 160,
-      "code_score": 142,
+      "total_score": 162,
+      "code_score": 144,
       "community_score": 0,
       "quality_score": 18,
       "score_breakdown": {
         "pr_score": 58,
-        "commits_score": 48,
+        "commits_score": 50,
         "pr_reviews_score": 36,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -166,7 +166,7 @@
       "totalPRs": 11,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
+      "totalIssuesOpened": 1,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.27,
       "projectsWorkingOn": 1,
@@ -179,16 +179,16 @@
         "medium": 1,
         "large": 10
       },
-      "total_score": 144,
+      "total_score": 146,
       "code_score": 120,
-      "community_score": 0,
+      "community_score": 2,
       "quality_score": 24,
       "score_breakdown": {
         "pr_score": 92,
         "commits_score": 28,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 0,
+        "issues_opened_score": 2,
         "issue_comments_score": 0,
         "projects_score": 0,
         "tests_score": 2,
@@ -198,12 +198,12 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
+        "issues_opened": 1,
+        "issues_total": 1,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -252,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -301,7 +301,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 7,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 8,
