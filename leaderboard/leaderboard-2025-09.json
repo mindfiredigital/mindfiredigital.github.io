@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T04:35:21.999Z",
+  "generated_at": "2026-05-24T04:56:27.842Z",
   "period": "monthly",
   "month_label": "September 2025",
   "month_key": "2025-09",
@@ -101,7 +101,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 3,
@@ -201,7 +201,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 5,
@@ -300,7 +300,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 7,
@@ -693,7 +693,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 15,
@@ -889,7 +889,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 19,
@@ -1036,7 +1036,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     }
   ]
 }
