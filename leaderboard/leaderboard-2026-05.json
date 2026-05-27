@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-26T04:56:13.403Z",
+  "generated_at": "2026-05-27T05:09:26.395Z",
   "period": "monthly",
   "window_start": "2026-05-01T00:00:00.000Z",
-  "window_end": "2026-05-26T04:56:13.403Z",
+  "window_end": "2026-05-27T05:09:26.395Z",
   "month_label": "May 2026",
   "month_key": "2026-05",
   "total_contributors": 14,
@@ -59,6 +59,55 @@
     },
     {
       "rank": 2,
+      "username": "sobhan-s",
+      "id": 253181559,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+      "html_url": "https://github.com/sobhan-s",
+      "totalCommits": 27,
+      "totalPRs": 18,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1.5,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "TextIgniter"
+      ],
+      "prs_by_complexity": {
+        "small": 4,
+        "medium": 2,
+        "large": 12
+      },
+      "total_score": 229,
+      "code_score": 189,
+      "community_score": 2,
+      "quality_score": 38,
+      "score_breakdown": {
+        "pr_score": 135,
+        "commits_score": 54,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 2,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 36,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 3,
       "username": "Rituparna158",
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
@@ -107,67 +156,18 @@
       "lastActiveDays": 1
     },
     {
-      "rank": 3,
-      "username": "sobhan-s",
-      "id": 253181559,
-      "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-      "html_url": "https://github.com/sobhan-s",
-      "totalCommits": 26,
-      "totalPRs": 17,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 1,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.53,
-      "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
-      "projects": [
-        "TextIgniter"
-      ],
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 2,
-        "large": 12
-      },
-      "total_score": 220,
-      "code_score": 182,
-      "community_score": 2,
-      "quality_score": 36,
-      "score_breakdown": {
-        "pr_score": 130,
-        "commits_score": 52,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 2,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 2,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 34,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 1,
-        "issues_total": 1,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": 1
-    },
-    {
       "rank": 4,
       "username": "saradab-mindfire",
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
       "html_url": "https://github.com/saradab-mindfire",
-      "totalCommits": 43,
-      "totalPRs": 12,
+      "totalCommits": 46,
+      "totalPRs": 13,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.58,
+      "avgCommitsPerPR": 3.54,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -175,16 +175,16 @@
       ],
       "prs_by_complexity": {
         "small": 9,
-        "medium": 0,
+        "medium": 1,
         "large": 3
       },
-      "total_score": 181,
-      "code_score": 157,
+      "total_score": 195,
+      "code_score": 169,
       "community_score": 0,
-      "quality_score": 24,
+      "quality_score": 26,
       "score_breakdown": {
-        "pr_score": 71,
-        "commits_score": 86,
+        "pr_score": 77,
+        "commits_score": 92,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -193,7 +193,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 24,
+        "zero_revisions_score": 26,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -252,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 6,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 8,
@@ -399,7 +399,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 9,
@@ -448,7 +448,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 10,
@@ -595,7 +595,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 15
     },
     {
       "rank": 13,
@@ -644,7 +644,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 22
+      "lastActiveDays": 23
     },
     {
       "rank": 14,
@@ -693,7 +693,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     }
   ]
 }
