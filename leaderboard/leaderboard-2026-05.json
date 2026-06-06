@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T05:05:52.506Z",
+  "generated_at": "2026-06-06T04:49:52.079Z",
   "period": "monthly",
   "month_label": "May 2026",
   "month_key": "2026-05",
@@ -11,13 +11,13 @@
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
       "html_url": "https://github.com/Rituparna158",
-      "totalCommits": 109,
+      "totalCommits": 111,
       "totalPRs": 17,
       "totalPRReviewsGiven": 17,
       "totalCodeReviewComments": 3,
       "totalIssuesOpened": 11,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 6.41,
+      "avgCommitsPerPR": 6.53,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix-lite"
@@ -28,13 +28,13 @@
         "medium": 3,
         "large": 11
       },
-      "total_score": 456,
-      "code_score": 407,
+      "total_score": 460,
+      "code_score": 411,
       "community_score": 20,
       "quality_score": 29,
       "score_breakdown": {
         "pr_score": 135,
-        "commits_score": 218,
+        "commits_score": 222,
         "pr_reviews_score": 51,
         "code_comments_score": 3,
         "issues_opened_score": 20,
@@ -102,7 +102,7 @@
         "issue_comments": 6,
         "issue_comments_total": 6
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -151,7 +151,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 4,
@@ -202,7 +202,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 5,
@@ -251,7 +251,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 6,
@@ -301,7 +301,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 7,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 8,
@@ -399,7 +399,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 9,
@@ -497,7 +497,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 11,
@@ -546,7 +546,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 12,
@@ -595,7 +595,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": 1
     },
     {
       "rank": 13,
@@ -693,7 +693,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     }
   ]
 }
