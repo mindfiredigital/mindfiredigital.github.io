@@ -30,13 +30,7 @@
     "githubUrl": "https://github.com/mindfiredigital/nft-marketplace",
     "documentationUrl": "https://github.com/mindfiredigital/nft-marketplace",
     "stars": 10,
-    "tags": [
-      "bitcoin",
-      "blockchain",
-      "cryptocurrency",
-      "ecommerce",
-      "etherum"
-    ],
+    "tags": ["bitcoin", "blockchain", "cryptocurrency", "ecommerce", "etherum"],
     "lastPushedAt": "2023-11-22T10:09:56Z"
   },
   {
@@ -70,11 +64,7 @@
     "githubUrl": "https://github.com/mindfiredigital/extension-methods",
     "documentationUrl": "https://github.com/mindfiredigital/extension-methods/blob/master/README.md",
     "stars": 25,
-    "tags": [
-      "csharp",
-      "csharp-library",
-      "extension-methods"
-    ],
+    "tags": ["csharp", "csharp-library", "extension-methods"],
     "lastPushedAt": "2025-11-03T19:07:10Z"
   },
   {
@@ -91,13 +81,7 @@
     "githubUrl": "https://github.com/mindfiredigital/FireKubeX",
     "documentationUrl": "https://github.com/mindfiredigital/FireKubeX",
     "stars": 11,
-    "tags": [
-      "automation",
-      "bash-script",
-      "docker",
-      "k3s",
-      "kubernetes"
-    ],
+    "tags": ["automation", "bash-script", "docker", "k3s", "kubernetes"],
     "lastPushedAt": "2024-04-05T11:49:34Z"
   },
   {
@@ -131,13 +115,7 @@
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-iOS",
     "stars": 14,
-    "tags": [
-      "coding",
-      "developers",
-      "foss",
-      "ios",
-      "mindfire"
-    ],
+    "tags": ["coding", "developers", "foss", "ios", "mindfire"],
     "lastPushedAt": "2024-04-12T11:31:28Z"
   },
   {
@@ -154,13 +132,7 @@
     "githubUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
     "documentationUrl": "https://github.com/mindfiredigital/MobileQuickLaunchKit-Android",
     "stars": 10,
-    "tags": [
-      "andr",
-      "ios",
-      "kotlin",
-      "mobile",
-      "swift"
-    ],
+    "tags": ["andr", "ios", "kotlin", "mobile", "swift"],
     "lastPushedAt": "2024-04-12T12:18:52Z"
   },
   {
@@ -223,13 +195,7 @@
     "githubUrl": "https://github.com/mindfiredigital/react-text-igniter",
     "documentationUrl": "https://github.com/mindfiredigital/react-text-igniter",
     "stars": 23,
-    "tags": [
-      "editor",
-      "html",
-      "htmleditor",
-      "javascript",
-      "npm"
-    ],
+    "tags": ["editor", "html", "htmleditor", "javascript", "npm"],
     "lastPushedAt": "2024-10-29T09:40:41Z"
   },
   {
@@ -246,13 +212,7 @@
     "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
     "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/blob/main/README.md",
     "stars": 18,
-    "tags": [
-      "agent",
-      "ai",
-      "huggingface",
-      "javascript",
-      "langchain"
-    ],
+    "tags": ["agent", "ai", "huggingface", "javascript", "langchain"],
     "lastPushedAt": "2024-10-03T09:14:36Z"
   },
   {
@@ -309,12 +269,7 @@
     "githubUrl": "https://github.com/mindfiredigital/PivotHead",
     "documentationUrl": "https://mindfiredigital.github.io/PivotHead/",
     "stars": 29,
-    "tags": [
-      "headless",
-      "pivot-grid",
-      "pivot-tables",
-      "table"
-    ],
+    "tags": ["headless", "pivot-grid", "pivot-tables", "table"],
     "lastPushedAt": "2026-04-23T07:17:08Z"
   },
   {
@@ -331,13 +286,7 @@
     "githubUrl": "https://github.com/mindfiredigital/OpenRecap",
     "documentationUrl": "https://github.com/mindfiredigital/OpenRecap",
     "stars": 13,
-    "tags": [
-      "ai",
-      "datascience",
-      "langchain",
-      "llamma",
-      "ml"
-    ],
+    "tags": ["ai", "datascience", "langchain", "llamma", "ml"],
     "lastPushedAt": "2025-04-09T15:24:07Z"
   },
   {
@@ -354,13 +303,7 @@
     "githubUrl": "https://github.com/mindfiredigital/document-editor",
     "documentationUrl": "https://mindfiredigital.github.io/document-editor/",
     "stars": 18,
-    "tags": [
-      "angular",
-      "document",
-      "document-editor",
-      "editor",
-      "eslint"
-    ],
+    "tags": ["angular", "document", "document-editor", "editor", "eslint"],
     "lastPushedAt": "2026-04-23T07:31:20Z"
   },
   {
@@ -377,13 +320,7 @@
     "githubUrl": "https://github.com/mindfiredigital/ignix-ui/",
     "documentationUrl": "https://mindfiredigital.github.io/ignix-ui/",
     "stars": 53,
-    "tags": [
-      "component",
-      "radix",
-      "radix-ui",
-      "react",
-      "shadcn"
-    ],
+    "tags": ["component", "radix", "radix-ui", "react", "shadcn"],
     "lastPushedAt": "2026-05-06T15:38:28Z"
   },
   {
@@ -417,13 +354,7 @@
     "githubUrl": "https://github.com/mindfiredigital/DeepScanBot",
     "documentationUrl": "https://github.com/mindfiredigital/DeepScanBot",
     "stars": 10,
-    "tags": [
-      "bot",
-      "crawl",
-      "crawler",
-      "go",
-      "golang"
-    ],
+    "tags": ["bot", "crawl", "crawler", "go", "golang"],
     "lastPushedAt": "2024-08-30T06:22:00Z"
   },
   {
@@ -440,10 +371,7 @@
     "githubUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
     "documentationUrl": "https://github.com/mindfiredigital/AIHealthCounsellor",
     "stars": 8,
-    "tags": [
-      "ai",
-      "ml"
-    ],
+    "tags": ["ai", "ml"],
     "lastPushedAt": "2024-02-23T14:56:54Z"
   },
   {
@@ -460,13 +388,7 @@
     "githubUrl": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
     "documentationUrl": "https://github.com/mindfiredigital/js-serverless-monorepo-boilerplate",
     "stars": 10,
-    "tags": [
-      "aws",
-      "azure",
-      "boilerplate",
-      "boilerplate-template",
-      "cloud"
-    ],
+    "tags": ["aws", "azure", "boilerplate", "boilerplate-template", "cloud"],
     "lastPushedAt": "2026-02-10T05:51:06Z"
   },
   {
@@ -540,13 +462,7 @@
     "githubUrl": "https://github.com/mindfiredigital/nextjs-fortress",
     "documentationUrl": "https://mindfiredigital.github.io/nextjs-fortress/",
     "stars": 58,
-    "tags": [
-      "framework",
-      "middleware",
-      "nextjs",
-      "security",
-      "validation"
-    ],
+    "tags": ["framework", "middleware", "nextjs", "security", "validation"],
     "lastPushedAt": "2026-02-06T12:18:54Z"
   },
   {
