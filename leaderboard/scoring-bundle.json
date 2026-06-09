@@ -3323,9 +3323,7 @@
         "2026-02-04T06:20:58Z",
         "2025-10-10T06:09:43Z"
       ],
-      "issueComments": [
-        "2025-10-08T07:50:02Z"
-      ],
+      "issueComments": ["2025-10-08T07:50:02Z"],
       "projectFirsts": [
         {
           "d": "2024-05-09T06:13:46Z",
@@ -9108,9 +9106,7 @@
         "2023-12-01T09:01:00Z",
         "2023-11-23T04:03:26Z"
       ],
-      "issueComments": [
-        "2024-09-09T08:25:17Z"
-      ],
+      "issueComments": ["2024-09-09T08:25:17Z"],
       "projectFirsts": [
         {
           "d": "2023-09-29T07:58:46Z",
@@ -10864,14 +10860,8 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2026-04-01T07:18:17Z",
-        "2026-02-25T12:23:33Z"
-      ],
-      "codeComments": [
-        "2026-04-01T07:18:17Z",
-        "2026-02-25T12:23:33Z"
-      ],
+      "reviews": ["2026-04-01T07:18:17Z", "2026-02-25T12:23:33Z"],
+      "codeComments": ["2026-04-01T07:18:17Z", "2026-02-25T12:23:33Z"],
       "issues": [
         "2026-03-27T09:17:19Z",
         "2026-03-27T09:14:45Z",
@@ -13160,9 +13150,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2025-01-14T06:56:14Z"
-      ],
+      "issues": ["2025-01-14T06:56:14Z"],
       "issueComments": [],
       "projectFirsts": [
         {
@@ -13582,17 +13570,10 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2019-09-19T02:15:05Z"
-      ],
+      "reviews": ["2019-09-19T02:15:05Z"],
       "codeComments": [],
-      "issues": [
-        "2019-09-23T14:22:47Z",
-        "2019-09-19T13:23:03Z"
-      ],
-      "issueComments": [
-        "2025-11-03T18:46:44Z"
-      ],
+      "issues": ["2019-09-23T14:22:47Z", "2019-09-19T13:23:03Z"],
+      "issueComments": ["2025-11-03T18:46:44Z"],
       "projectFirsts": [
         {
           "d": "2019-09-10T09:57:28Z",
@@ -15083,9 +15064,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2024-01-12T07:13:21Z"
-      ],
+      "issues": ["2024-01-12T07:13:21Z"],
       "issueComments": [],
       "projectFirsts": [
         {
@@ -15325,10 +15304,7 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2025-10-31T08:31:20Z",
-        "2025-10-31T08:46:32Z"
-      ],
+      "reviews": ["2025-10-31T08:31:20Z", "2025-10-31T08:46:32Z"],
       "codeComments": [],
       "issues": [],
       "issueComments": [],
@@ -16041,9 +16017,7 @@
         "2025-01-03T11:48:32Z",
         "2024-12-24T06:12:42Z"
       ],
-      "issueComments": [
-        "2025-02-19T04:07:44Z"
-      ],
+      "issueComments": ["2025-02-19T04:07:44Z"],
       "projectFirsts": [
         {
           "d": "2024-12-20T12:31:10Z",
@@ -17301,10 +17275,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2026-03-06T10:01:39Z",
-        "2026-03-06T09:59:35Z"
-      ],
+      "issues": ["2026-03-06T10:01:39Z", "2026-03-06T09:59:35Z"],
       "issueComments": [
         "2025-06-20T10:29:17Z",
         "2025-06-05T12:36:45Z",
@@ -17408,9 +17379,7 @@
           "doc": true
         }
       ],
-      "reviews": [
-        "2025-06-20T07:09:05Z"
-      ],
+      "reviews": ["2025-06-20T07:09:05Z"],
       "codeComments": [],
       "issues": [],
       "issueComments": [],
@@ -18316,10 +18285,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2025-09-16T13:06:22Z",
-        "2025-09-08T13:52:10Z"
-      ],
+      "issues": ["2025-09-16T13:06:22Z", "2025-09-08T13:52:10Z"],
       "issueComments": [
         "2025-09-18T13:57:26Z",
         "2025-09-18T14:02:21Z",
@@ -18701,9 +18667,7 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2024-02-22T06:08:11Z"
-      ],
+      "reviews": ["2024-02-22T06:08:11Z"],
       "codeComments": [],
       "issues": [],
       "issueComments": [],
@@ -19005,9 +18969,7 @@
         "2025-10-09T05:16:47Z",
         "2025-10-03T13:27:05Z"
       ],
-      "issueComments": [
-        "2025-07-24T16:11:17Z"
-      ],
+      "issueComments": ["2025-07-24T16:11:17Z"],
       "projectFirsts": [
         {
           "d": "2025-07-30T12:54:00Z",
@@ -19132,9 +19094,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134675427?v=4",
       "html_url": "https://github.com/VershalaT",
       "lastActiveDays": null,
-      "commits": [
-        "2023-12-05T13:13:44Z"
-      ],
+      "commits": ["2023-12-05T13:13:44Z"],
       "prs": [
         {
           "d": "2023-12-08T11:44:31Z",
@@ -19738,12 +19698,8 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2025-06-06T10:06:41Z"
-      ],
-      "issueComments": [
-        "2025-05-27T06:07:43Z"
-      ],
+      "issues": ["2025-06-06T10:06:41Z"],
+      "issueComments": ["2025-05-27T06:07:43Z"],
       "projectFirsts": [
         {
           "d": "2025-05-18T18:41:34Z",
@@ -20395,10 +20351,7 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2023-12-04T11:09:16Z",
-        "2023-11-28T05:32:38Z"
-      ],
+      "reviews": ["2023-12-04T11:09:16Z", "2023-11-28T05:32:38Z"],
       "codeComments": [],
       "issues": [],
       "issueComments": [],
@@ -20535,9 +20488,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2025-01-14T05:36:01Z"
-      ],
+      "issues": ["2025-01-14T05:36:01Z"],
       "issueComments": [],
       "projectFirsts": [
         {
@@ -20629,10 +20580,7 @@
       "reviews": [],
       "codeComments": [],
       "issues": [],
-      "issueComments": [
-        "2025-09-01T05:37:08Z",
-        "2025-09-05T06:00:08Z"
-      ],
+      "issueComments": ["2025-09-01T05:37:08Z", "2025-09-05T06:00:08Z"],
       "projectFirsts": [
         {
           "d": "2025-08-28T05:30:24Z",
@@ -20727,9 +20675,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
       "html_url": "https://github.com/uzerjamal-mfsi",
       "lastActiveDays": 4,
-      "commits": [
-        "2026-02-25T17:49:54Z"
-      ],
+      "commits": ["2026-02-25T17:49:54Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -20917,10 +20863,7 @@
           "doc": false
         }
       ],
-      "reviews": [
-        "2024-02-22T06:21:39Z",
-        "2024-02-22T06:22:00Z"
-      ],
+      "reviews": ["2024-02-22T06:21:39Z", "2024-02-22T06:22:00Z"],
       "codeComments": [],
       "issues": [],
       "issueComments": [],
@@ -21020,10 +20963,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/55407033?v=4",
       "html_url": "https://github.com/SiriMuramulla268",
       "lastActiveDays": 29,
-      "commits": [
-        "2025-12-08T11:15:50Z",
-        "2025-11-26T10:44:22Z"
-      ],
+      "commits": ["2025-12-08T11:15:50Z", "2025-11-26T10:44:22Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21042,10 +20982,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/225856934?v=4",
       "html_url": "https://github.com/alokrajmindfire",
       "lastActiveDays": null,
-      "commits": [
-        "2025-12-04T11:01:59Z",
-        "2025-12-04T10:57:30Z"
-      ],
+      "commits": ["2025-12-04T11:01:59Z", "2025-12-04T10:57:30Z"],
       "prs": [
         {
           "d": "2025-12-04T11:15:15Z",
@@ -21073,10 +21010,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/87357401?v=4",
       "html_url": "https://github.com/jagannathmfs",
       "lastActiveDays": null,
-      "commits": [
-        "2023-12-06T13:17:19Z",
-        "2023-12-06T13:15:47Z"
-      ],
+      "commits": ["2023-12-06T13:17:19Z", "2023-12-06T13:15:47Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21095,10 +21029,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/34024639?v=4",
       "html_url": "https://github.com/PoonamKPatil",
       "lastActiveDays": 4,
-      "commits": [
-        "2026-04-02T08:24:27Z",
-        "2026-03-31T07:51:41Z"
-      ],
+      "commits": ["2026-04-02T08:24:27Z", "2026-03-31T07:51:41Z"],
       "prs": [
         {
           "d": "2026-05-04T11:10:06Z",
@@ -21321,10 +21252,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/68806094?v=4",
       "html_url": "https://github.com/adityagantayat",
       "lastActiveDays": null,
-      "commits": [
-        "2025-05-29T07:48:06Z",
-        "2025-05-16T11:18:26Z"
-      ],
+      "commits": ["2025-05-29T07:48:06Z", "2025-05-16T11:18:26Z"],
       "prs": [
         {
           "d": "2025-05-29T07:50:58Z",
@@ -21360,10 +21288,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/53989958?v=4",
       "html_url": "https://github.com/vamsivallepu",
       "lastActiveDays": null,
-      "commits": [
-        "2025-09-26T11:26:27Z",
-        "2025-09-26T11:24:07Z"
-      ],
+      "commits": ["2025-09-26T11:26:27Z", "2025-09-26T11:24:07Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21382,10 +21307,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/52132401?v=4",
       "html_url": "https://github.com/VenkataSaiChandrakanthReddyVemireddy",
       "lastActiveDays": null,
-      "commits": [
-        "2025-09-26T09:22:34Z",
-        "2025-09-26T08:32:58Z"
-      ],
+      "commits": ["2025-09-26T09:22:34Z", "2025-09-26T08:32:58Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21404,10 +21326,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/57040284?v=4",
       "html_url": "https://github.com/Abhiadi12",
       "lastActiveDays": null,
-      "commits": [
-        "2025-03-26T15:29:04Z",
-        "2025-03-25T09:34:31Z"
-      ],
+      "commits": ["2025-03-26T15:29:04Z", "2025-03-25T09:34:31Z"],
       "prs": [
         {
           "d": "2025-03-27T05:43:05Z",
@@ -21443,10 +21362,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/110468423?v=4",
       "html_url": "https://github.com/geekychandan",
       "lastActiveDays": null,
-      "commits": [
-        "2024-10-05T14:52:25Z",
-        "2024-10-05T12:30:55Z"
-      ],
+      "commits": ["2024-10-05T14:52:25Z", "2024-10-05T12:30:55Z"],
       "prs": [
         {
           "d": "2024-10-28T10:23:14Z",
@@ -21467,10 +21383,7 @@
       ],
       "reviews": [],
       "codeComments": [],
-      "issues": [
-        "2024-10-03T07:21:46Z",
-        "2024-10-03T07:06:04Z"
-      ],
+      "issues": ["2024-10-03T07:21:46Z", "2024-10-03T07:06:04Z"],
       "issueComments": [],
       "projectFirsts": [
         {
@@ -21485,9 +21398,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/24500659?v=4",
       "html_url": "https://github.com/rsumit123",
       "lastActiveDays": null,
-      "commits": [
-        "2023-12-07T16:27:37Z"
-      ],
+      "commits": ["2023-12-07T16:27:37Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21506,9 +21417,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/20682504?v=4",
       "html_url": "https://github.com/divyarbehera",
       "lastActiveDays": null,
-      "commits": [
-        "2019-09-26T11:00:35Z"
-      ],
+      "commits": ["2019-09-26T11:00:35Z"],
       "prs": [
         {
           "d": "2019-09-26T11:06:55Z",
@@ -21536,9 +21445,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/34021994?v=4",
       "html_url": "https://github.com/preetiganagi",
       "lastActiveDays": null,
-      "commits": [
-        "2025-05-21T07:30:00Z"
-      ],
+      "commits": ["2025-05-21T07:30:00Z"],
       "prs": [
         {
           "d": "2025-05-29T09:06:25Z",
@@ -21582,9 +21489,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/205750247?v=4",
       "html_url": "https://github.com/nowoptics-deepak",
       "lastActiveDays": null,
-      "commits": [
-        "2025-05-12T07:04:25Z"
-      ],
+      "commits": ["2025-05-12T07:04:25Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21603,9 +21508,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/190595003?v=4",
       "html_url": "https://github.com/sumanb-mindfire",
       "lastActiveDays": null,
-      "commits": [
-        "2025-04-09T15:23:51Z"
-      ],
+      "commits": ["2025-04-09T15:23:51Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
@@ -21624,9 +21527,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/5079169?v=4",
       "html_url": "https://github.com/mfsi-waseema",
       "lastActiveDays": null,
-      "commits": [
-        "2024-02-13T06:58:38Z"
-      ],
+      "commits": ["2024-02-13T06:58:38Z"],
       "prs": [],
       "reviews": [],
       "codeComments": [],
