@@ -37,6 +37,24 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
+      - name: 'Debug - Inspect generated contributor data'
+        run: |
+          echo "===== contributors.json ====="
+          echo "Total contributors: $(jq 'length' src/asset/contributors.json)"
+          echo ""
+          echo "--- All contributor logins ---"
+          jq -r '.[].login' src/asset/contributors.json
+          echo ""
+          echo "===== contributor-mapping.json ====="
+          echo "Total mapped logins: $(jq 'keys | length' src/asset/contributor-mapping.json)"
+          echo ""
+          echo "--- All mapped logins ---"
+          jq -r 'keys[]' src/asset/contributor-mapping.json
+          echo ""
+          echo "===== GitHub API rate limit status ====="
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit | jq '.rate'
+
       - name: 'Restore changes in json'
         run: |
           git restore src/asset/*.json
