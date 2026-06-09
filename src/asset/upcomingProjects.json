@@ -30,13 +30,7 @@
     "githubUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter",
     "documentationUrl": "https://github.com/mindfiredigital/Agentic-Web-Starter/blob/main/LICENSE",
     "stars": 16,
-    "tags": [
-      "agent",
-      "ai",
-      "ai-agents",
-      "aiagent",
-      "fastapi"
-    ],
+    "tags": ["agent", "ai", "ai-agents", "aiagent", "fastapi"],
     "lastPushedAt": "2026-04-17T09:27:39Z"
   },
   {
