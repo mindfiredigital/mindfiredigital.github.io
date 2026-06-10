@@ -132,9 +132,15 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "page-builder-web-component",
+        "name": "page-builder-angular",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
+      },
+      {
+        "name": "page-builder-core",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
         "status": "published"
       },
       {
@@ -144,16 +150,10 @@
         "status": "published"
       },
       {
-        "name": "page-builder-core",
+        "name": "page-builder-web-component",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-web-component",
         "status": "published"
-      },
-      {
-        "name": "page-builder-angular",
-        "type": "npm",
-        "url": "https://www.npmjs.com/~mindfire",
-        "status": "draft"
       }
     ]
   },
@@ -169,27 +169,9 @@
         "status": "published"
       },
       {
-        "name": "pivothead-web-component",
+        "name": "pivothead-analytics",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-web-component",
-        "status": "published"
-      },
-      {
-        "name": "pivothead-vue",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-vue",
-        "status": "published"
-      },
-      {
-        "name": "pivothead-react",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-react",
-        "status": "published"
-      },
-      {
-        "name": "pivothead",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-analytics",
         "status": "published"
       },
       {
@@ -199,9 +181,27 @@
         "status": "published"
       },
       {
-        "name": "pivothead-analytics",
+        "name": "pivothead",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-analytics",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead",
+        "status": "published"
+      },
+      {
+        "name": "pivothead-react",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-react",
+        "status": "published"
+      },
+      {
+        "name": "pivothead-vue",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-vue",
+        "status": "published"
+      },
+      {
+        "name": "pivothead-web-component",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/pivothead-web-component",
         "status": "published"
       }
     ]
@@ -218,12 +218,6 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "angular-canvas-editor",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
-        "status": "published"
-      },
-      {
         "name": "web-component-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/~mindfire",
@@ -233,6 +227,12 @@
         "name": "react-canvas-editor",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/react-canvas-editor",
+        "status": "published"
+      },
+      {
+        "name": "angular-canvas-editor",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
         "status": "published"
       }
     ]
@@ -351,15 +351,9 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "textigniter-web-component",
+        "name": "textigniter-angular",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
-        "status": "published"
-      },
-      {
-        "name": "textigniter-react",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-react",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
         "status": "published"
       },
       {
@@ -369,11 +363,67 @@
         "status": "published"
       },
       {
-        "name": "textigniter-angular",
+        "name": "textigniter-react",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-react",
+        "status": "published"
+      },
+      {
+        "name": "textigniter-web-component",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
         "status": "published"
       }
     ]
+  },
+  {
+    "id": "34",
+    "title": "ADAC (Architecture Diagram as Code)",
+    "isMonoRepo": true,
+    "packages": [
+      {
+        "name": "https://www.npmjs.com/package/@mindfiredigital/adac-core",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/adac-core",
+        "status": "published"
+      },
+      {
+        "name": "adac-diagram",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/adac-diagram",
+        "status": "published"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "title": "Agentic Web Starter",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "36",
+    "title": "Ignix-lite",
+    "isMonoRepo": true,
+    "packages": [
+      {
+        "name": "ignix-lite",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite",
+        "status": "published"
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "title": "markdown-reader — Native Desktop Markdown Reader",
+    "isMonoRepo": false,
+    "packages": []
+  },
+  {
+    "id": "38",
+    "title": "gpx",
+    "isMonoRepo": false,
+    "packages": []
   }
 ]
