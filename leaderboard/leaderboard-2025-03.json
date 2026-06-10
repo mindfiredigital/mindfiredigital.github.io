@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T05:04:02.884Z",
+  "generated_at": "2026-05-08T11:58:56.309Z",
   "period": "monthly",
   "month_label": "March 2025",
   "month_key": "2025-03",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.13,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 7,
@@ -52,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 25
     },
     {
       "rank": 2,
@@ -104,7 +102,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": null
     },
     {
       "rank": 3,
@@ -120,9 +118,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.63,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -162,28 +158,26 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/183806487?v=4",
       "html_url": "https://github.com/vickysmf",
       "totalCommits": 12,
-      "totalPRs": 5,
+      "totalPRs": 4,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.4,
+      "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
-        "medium": 2,
+        "medium": 1,
         "large": 3
       },
-      "total_score": 75,
-      "code_score": 65,
+      "total_score": 66,
+      "code_score": 58,
       "community_score": 0,
-      "quality_score": 10,
+      "quality_score": 8,
       "score_breakdown": {
-        "pr_score": 41,
+        "pr_score": 34,
         "commits_score": 24,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -193,7 +187,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 10,
+        "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -218,9 +212,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 12,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -267,9 +259,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -316,9 +306,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -349,7 +337,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 29
+      "lastActiveDays": 11
     },
     {
       "rank": 8,
@@ -365,9 +353,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -398,7 +384,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -414,9 +400,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Document Editor"
-      ],
+      "projects": ["Document Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
