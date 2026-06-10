@@ -26,6 +26,10 @@ export const navigations: Navigation[] = [
     path: ["/packages"],
   },
   {
+    name: "Issues",
+    path: ["/issues"],
+  },
+  {
     name: "GitHub",
     path: ["https://github.com/mindfiredigital"],
     target: "_blank",

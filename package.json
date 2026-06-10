@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "analyze": "next experimental-analyze",
-    "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs",
+    "update-all": "node --import tsx updateScript/updateProject.mjs && node --import tsx updateScript/updateContributors.mjs && node --import tsx updateScript/updatePackages.mjs && node --import tsx updateScript/make-cache.mjs && node --import tsx updateScript/make-leaderboard.mjs && node --import tsx updateScript/make-periodic-table.mjs && node --import tsx updateScript/updateIssues.mjs",
+    "update-issues": "node --import tsx updateScript/updateIssues.mjs",
     "build": "npm run update-all && next build && touch ./build/.nojekyll",
     "build:ci": "next build && node -e \"require('fs').writeFileSync('./build/.nojekyll', '')\"",
     "test": "npm run test:unit && npm run test:components && npm run test:integration",
