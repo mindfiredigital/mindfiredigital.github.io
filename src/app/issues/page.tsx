@@ -10,6 +10,7 @@ import {
 import staticIssuesData from "@/asset/issues.json";
 import IssueCard, { classifyIssue } from "./components/IssueCard";
 import IssueFilterSidebar from "./components/IssueFilterSidebar";
+import IssueCount from "./components/IssueCount";
 
 const GITHUB_ORG = "mindfiredigital";
 
@@ -139,9 +140,7 @@ export default function IssuesPage() {
               Open Issues
             </h1>
             {ALL_ISSUES.length > 0 && (
-              <span className="bg-gradient-to-r from-mf-red to-orange-500 text-white text-sm font-semibold px-3 py-1 rounded-full self-center">
-                {ALL_ISSUES.length}
-              </span>
+              <IssueCount totalIssues={ALL_ISSUES.length} />
             )}
           </div>
           <p className="text-lg text-mf-light-grey max-w-xl">
