@@ -32,26 +32,89 @@ jobs:
       - name: 'Install dependencies'
         run: npm install
 
+      - name: 'Debug [1/4] - Baseline state before build'
+        run: |
+          echo "=========================================="
+          echo "BASELINE: files as checked out from git"
+          echo "=========================================="
+          echo ""
+          echo "--- contributor-mapping.json (git state) ---"
+          echo "Total mapped logins: $(jq 'keys | length' src/asset/contributor-mapping.json)"
+          jq -r 'keys[]' src/asset/contributor-mapping.json
+          echo ""
+          echo "--- leaderboard-cache.json (git state) ---"
+          if [ -f src/asset/leaderboard-cache.json ]; then
+            echo "Projects in cache: $(jq 'keys | length' src/asset/leaderboard-cache.json)"
+            echo "Project keys: $(jq -r 'keys[]' src/asset/leaderboard-cache.json)"
+          else
+            echo "FILE DOES NOT EXIST"
+          fi
+          echo ""
+          echo "--- GitHub API rate limit at start ---"
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit | jq '.rate'
+
       - name: 'Build application'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
-      - name: 'Debug - Inspect generated contributor data'
+      - name: 'Debug [2/4] - contributors.json and contributor-mapping.json after build'
         run: |
-          echo "===== contributors.json ====="
-          echo "Total contributors: $(jq 'length' src/asset/contributors.json)"
+          echo "=========================================="
+          echo "AFTER BUILD: contributors + mapping"
+          echo "=========================================="
           echo ""
-          echo "--- All contributor logins ---"
+          echo "--- contributors.json ---"
+          echo "Total: $(jq 'length' src/asset/contributors.json)"
           jq -r '.[].login' src/asset/contributors.json
           echo ""
-          echo "===== contributor-mapping.json ====="
+          echo "--- contributor-mapping.json ---"
           echo "Total mapped logins: $(jq 'keys | length' src/asset/contributor-mapping.json)"
-          echo ""
-          echo "--- All mapped logins ---"
           jq -r 'keys[]' src/asset/contributor-mapping.json
+
+      - name: 'Debug [3/4] - leaderboard-cache.json and leaderboard.json after build'
+        run: |
+          echo "=========================================="
+          echo "AFTER BUILD: cache + leaderboard"
+          echo "=========================================="
           echo ""
-          echo "===== GitHub API rate limit status ====="
+          echo "--- leaderboard-cache.json ---"
+          if [ -f src/asset/leaderboard-cache.json ]; then
+            echo "Projects in cache: $(jq 'keys | length' src/asset/leaderboard-cache.json)"
+            echo ""
+            echo "Commits per project:"
+            jq -r 'to_entries[] | "\(.key): \(.value.commits | length) commits, \(.value.merged_prs | length) PRs"' src/asset/leaderboard-cache.json
+            echo ""
+            echo "--- special-website contributors in cache ---"
+            if jq -e '.["special-website"]' src/asset/leaderboard-cache.json > /dev/null 2>&1; then
+              echo "Unique commit authors on special-website:"
+              jq -r '.["special-website"].commits[].author_login // "null"' src/asset/leaderboard-cache.json | sort -u
+              echo ""
+              echo "PR authors on special-website:"
+              jq -r '.["special-website"].merged_prs[].author // "null"' src/asset/leaderboard-cache.json | sort -u
+            else
+              echo "special-website key NOT FOUND in cache"
+            fi
+          else
+            echo "FILE DOES NOT EXIST"
+          fi
+          echo ""
+          echo "--- leaderboard.json ---"
+          if [ -f src/asset/leaderboard.json ]; then
+            echo "Total in leaderboard: $(jq '.leaderboard | length' src/asset/leaderboard.json)"
+            echo ""
+            echo "All usernames in leaderboard (ranked):"
+            jq -r '.leaderboard[] | "\(.rank). \(.username) — score: \(.total_score)"' src/asset/leaderboard.json
+          else
+            echo "FILE DOES NOT EXIST"
+          fi
+
+      - name: 'Debug [4/4] - GitHub API rate limit after build'
+        run: |
+          echo "=========================================="
+          echo "GITHUB API RATE LIMIT AFTER BUILD"
+          echo "=========================================="
           curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/rate_limit | jq '.rate'
 
@@ -60,23 +123,28 @@ jobs:
           git restore src/asset/*.json
 
       - name: 'Fetch branches'
+        if: github.ref == 'refs/heads/main'
         run: git fetch origin
 
       - name: 'Set Git user name and email'
+        if: github.ref == 'refs/heads/main'
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
 
       - name: 'Copy leaderboard data to temp before branch switch'
+        if: github.ref == 'refs/heads/main'
         run: |
           mkdir -p /tmp/leaderboard-data
           cp -r public/leaderboard/* /tmp/leaderboard-data/
 
       - name: 'Restore generated leaderboard files to allow branch switch'
+        if: github.ref == 'refs/heads/main'
         run: |
           git restore public/leaderboard/
 
       - name: 'Copy build artifacts to gh-pages branch'
+        if: github.ref == 'refs/heads/main'
         run: |
           mkdir /tmp/temp-directory
           shopt -s dotglob
@@ -94,6 +162,7 @@ jobs:
           rm -rf .next
 
       - name: 'Commit and push to gh-pages if changes exist'
+        if: github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -106,12 +175,14 @@ jobs:
           fi
 
       - name: 'Switch back to main branch'
+        if: github.ref == 'refs/heads/main'
         run: |
           git checkout main
 
   create-github-release:
     name: Create Github release document
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
     needs: build

@@ -8,3 +8,4 @@ export * from "./navigation.types";
 export * from "./section.types";
 export * from "./logger.types";
 export * from "./error.types";
+export * from "./issues.types";
