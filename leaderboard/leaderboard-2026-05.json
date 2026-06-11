@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T11:09:17.087Z",
+  "generated_at": "2026-06-11T05:18:43.396Z",
   "period": "monthly",
   "month_label": "May 2026",
   "month_key": "2026-05",
@@ -101,7 +101,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -151,7 +151,7 @@
         "issue_comments": 6,
         "issue_comments_total": 6
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -200,7 +200,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 15
     },
     {
       "rank": 5,
@@ -251,7 +251,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -300,7 +300,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 7,
@@ -313,7 +313,7 @@
       "totalPRReviewsGiven": 20,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
+      "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "projects": [
@@ -325,9 +325,9 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 110,
+      "total_score": 111,
       "code_score": 110,
-      "community_score": 0,
+      "community_score": 1,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -335,7 +335,7 @@
         "pr_reviews_score": 60,
         "code_comments_score": 0,
         "issues_opened_score": 0,
-        "issue_comments_score": 0,
+        "issue_comments_score": 1,
         "projects_score": 0,
         "tests_score": 0,
         "docs_score": 0,
@@ -346,10 +346,10 @@
       "capped_counts": {
         "issues_opened": 0,
         "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
+        "issue_comments": 1,
+        "issue_comments_total": 1
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 8,
@@ -398,7 +398,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 9,
@@ -448,7 +448,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     },
     {
       "rank": 10,
@@ -497,7 +497,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 11,
@@ -546,7 +546,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 12,
@@ -645,7 +645,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 14,
@@ -694,7 +694,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 15,
@@ -743,7 +743,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 16,
@@ -841,7 +841,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 18,
@@ -890,7 +890,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 29
+      "lastActiveDays": 30
     }
   ]
 }
