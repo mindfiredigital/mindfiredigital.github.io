@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-14T05:25:35.809Z",
+  "generated_at": "2026-06-15T05:51:48.692Z",
   "period": "monthly",
   "window_start": "2026-06-01T00:00:00.000Z",
-  "window_end": "2026-06-14T05:25:35.809Z",
+  "window_end": "2026-06-15T05:51:48.692Z",
   "month_label": "June 2026",
   "month_key": "2026-06",
   "total_contributors": 10,
@@ -15,7 +15,7 @@
       "html_url": "https://github.com/Rituparna158",
       "totalCommits": 46,
       "totalPRs": 10,
-      "totalPRReviewsGiven": 7,
+      "totalPRReviewsGiven": 10,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 8,
       "totalIssueComments": 0,
@@ -30,14 +30,14 @@
         "medium": 0,
         "large": 5
       },
-      "total_score": 219,
-      "code_score": 181,
+      "total_score": 228,
+      "code_score": 190,
       "community_score": 16,
       "quality_score": 22,
       "score_breakdown": {
         "pr_score": 68,
         "commits_score": 92,
-        "pr_reviews_score": 21,
+        "pr_reviews_score": 30,
         "code_comments_score": 0,
         "issues_opened_score": 16,
         "issue_comments_score": 0,
@@ -54,7 +54,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 2,
@@ -111,13 +111,13 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 26,
-      "totalPRs": 7,
+      "totalCommits": 36,
+      "totalPRs": 10,
       "totalPRReviewsGiven": 1,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 1,
       "totalIssueComments": 3,
-      "avgCommitsPerPR": 3.71,
+      "avgCommitsPerPR": 3.6,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -125,17 +125,17 @@
         "Ignix-lite"
       ],
       "prs_by_complexity": {
-        "small": 3,
-        "medium": 0,
-        "large": 4
+        "small": 4,
+        "medium": 1,
+        "large": 5
       },
-      "total_score": 109,
-      "code_score": 104,
+      "total_score": 149,
+      "code_score": 144,
       "community_score": 5,
       "quality_score": 0,
       "score_breakdown": {
-        "pr_score": 49,
-        "commits_score": 52,
+        "pr_score": 69,
+        "commits_score": 72,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
         "issues_opened_score": 2,
@@ -153,7 +153,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -203,7 +203,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 5,
@@ -252,10 +252,59 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 6,
+      "username": "ansumanmindfire",
+      "id": 253200638,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+      "html_url": "https://github.com/ansumanmindfire",
+      "totalCommits": 1,
+      "totalPRs": 1,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 7,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "gpx"
+      ],
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 1
+      },
+      "total_score": 25,
+      "code_score": 11,
+      "community_score": 14,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 9,
+        "commits_score": 2,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 14,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 7,
+        "issues_total": 7,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 0
+    },
+    {
+      "rank": 7,
       "username": "mind-murtaza",
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
@@ -301,10 +350,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
-      "rank": 7,
+      "rank": 8,
       "username": "sanghamitradash021",
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
@@ -350,56 +399,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
-    },
-    {
-      "rank": 8,
-      "username": "ansumanmindfire",
-      "id": 253200638,
-      "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-      "html_url": "https://github.com/ansumanmindfire",
-      "totalCommits": 0,
-      "totalPRs": 0,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 6,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
-      "projects": [
-        "gpx"
-      ],
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 12,
-      "code_score": 0,
-      "community_score": 12,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 0,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 12,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 6,
-        "issues_total": 6,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": 2
+      "lastActiveDays": 13
     },
     {
       "rank": 9,
@@ -448,7 +448,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 10,
@@ -497,7 +497,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     }
   ]
 }
