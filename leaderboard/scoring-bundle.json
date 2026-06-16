@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T05:51:48.418Z",
+  "generated_at": "2026-06-16T05:35:36.768Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -21,7 +21,7 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "lastActiveDays": 5,
+      "lastActiveDays": 6,
       "commits": [
         "2024-08-21T09:32:02Z",
         "2024-08-21T06:22:58Z",
@@ -6457,6 +6457,10 @@
         "2026-03-17T08:07:58Z",
         "2026-03-17T08:07:09Z",
         "2026-03-16T11:28:28Z",
+        "2026-06-15T07:40:36Z",
+        "2026-06-15T07:36:34Z",
+        "2026-06-15T07:32:11Z",
+        "2026-06-15T06:53:08Z",
         "2026-06-14T17:41:05Z",
         "2026-06-14T17:31:59Z",
         "2026-06-14T17:29:16Z",
@@ -6902,6 +6906,14 @@
           "doc": false
         },
         {
+          "d": "2026-06-15T07:36:35Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": false,
+          "t": false,
+          "doc": false
+        },
+        {
           "d": "2026-06-14T17:41:06Z",
           "pts": 7,
           "c": "medium",
@@ -7284,7 +7296,7 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "lastActiveDays": 5,
+      "lastActiveDays": 6,
       "commits": [
         "2025-06-27T07:51:24Z",
         "2025-06-27T07:47:28Z",
@@ -8558,7 +8570,7 @@
       "id": 116242186,
       "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
       "html_url": "https://github.com/ashutosh-jena-mindfire",
-      "lastActiveDays": 18,
+      "lastActiveDays": 19,
       "commits": [
         "2026-05-28T07:07:40Z",
         "2026-05-04T08:30:06Z",
@@ -8934,6 +8946,8 @@
       "html_url": "https://github.com/Rituparna158",
       "lastActiveDays": 1,
       "commits": [
+        "2026-06-15T06:58:21Z",
+        "2026-06-15T06:12:59Z",
         "2026-06-12T09:26:38Z",
         "2026-06-12T09:22:31Z",
         "2026-06-12T08:53:25Z",
@@ -9271,6 +9285,14 @@
         "2026-04-15T11:22:00Z"
       ],
       "prs": [
+        {
+          "d": "2026-06-15T07:32:12Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
         {
           "d": "2026-06-12T09:40:30Z",
           "pts": 5,
@@ -9697,6 +9719,7 @@
         }
       ],
       "reviews": [
+        "2026-06-15T07:35:37Z",
         "2026-06-14T17:40:12Z",
         "2026-06-14T17:04:51Z",
         "2026-06-14T17:00:43Z",
@@ -11410,7 +11433,7 @@
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
       "html_url": "https://github.com/sanghamitradash021",
-      "lastActiveDays": 13,
+      "lastActiveDays": 14,
       "commits": [
         "2026-05-27T08:04:30Z",
         "2026-05-27T07:20:30Z",
@@ -13387,7 +13410,7 @@
       "id": 113003818,
       "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
       "html_url": "https://github.com/SandipMF",
-      "lastActiveDays": 14,
+      "lastActiveDays": 15,
       "commits": [
         "2026-04-01T06:49:59Z",
         "2026-03-26T14:59:21Z",
@@ -13878,7 +13901,7 @@
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
       "html_url": "https://github.com/saradab-mindfire",
-      "lastActiveDays": 3,
+      "lastActiveDays": 4,
       "commits": [
         "2026-06-01T15:15:38Z",
         "2026-06-01T15:11:15Z",
@@ -18510,7 +18533,7 @@
       "id": 253200638,
       "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
       "html_url": "https://github.com/ansumanmindfire",
-      "lastActiveDays": 0,
+      "lastActiveDays": 1,
       "commits": [
         "2026-06-15T04:34:40Z",
         "2026-05-18T09:10:13Z",
@@ -19679,7 +19702,7 @@
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
-      "lastActiveDays": 5,
+      "lastActiveDays": 6,
       "commits": [
         "2026-06-08T18:34:11Z",
         "2026-06-08T18:27:33Z",
@@ -20470,7 +20493,7 @@
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
       "html_url": "https://github.com/uzerjamal-mfsi",
-      "lastActiveDays": 7,
+      "lastActiveDays": 8,
       "commits": [
         "2026-05-19T13:25:28Z",
         "2026-05-19T12:21:33Z",
@@ -21537,7 +21560,7 @@
       "id": 78857337,
       "avatar_url": "https://avatars.githubusercontent.com/u/78857337?v=4",
       "html_url": "https://github.com/Prarthanaxdev",
-      "lastActiveDays": 11,
+      "lastActiveDays": 12,
       "commits": [
         "2026-05-13T10:01:26Z",
         "2026-05-08T16:14:56Z",
@@ -22288,7 +22311,7 @@
       "id": 124277891,
       "avatar_url": "https://avatars.githubusercontent.com/u/124277891?v=4",
       "html_url": "https://github.com/ansumain",
-      "lastActiveDays": 26,
+      "lastActiveDays": 27,
       "commits": [
         "2026-04-20T13:15:49Z",
         "2026-04-20T13:13:31Z",
@@ -23796,7 +23819,7 @@
       "id": 248435757,
       "avatar_url": "https://avatars.githubusercontent.com/u/248435757?v=4",
       "html_url": "https://github.com/mfsiayanc-debug",
-      "lastActiveDays": 19,
+      "lastActiveDays": 20,
       "commits": [
         "2026-04-01T01:02:00Z",
         "2026-03-31T07:41:32Z",
@@ -23989,7 +24012,7 @@
       "id": 235709046,
       "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
       "html_url": "https://github.com/yogeshsmindfire",
-      "lastActiveDays": 0,
+      "lastActiveDays": 1,
       "commits": [
         "2026-03-24T06:20:17Z"
       ],
