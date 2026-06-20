@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-19T05:48:04.120Z",
+  "generated_at": "2026-06-20T05:01:59.259Z",
   "period": "monthly",
   "window_start": "2026-06-01T00:00:00.000Z",
-  "window_end": "2026-06-19T05:48:04.120Z",
+  "window_end": "2026-06-20T05:01:59.259Z",
   "month_label": "June 2026",
   "month_key": "2026-06",
   "total_contributors": 10,
@@ -13,13 +13,13 @@
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
       "html_url": "https://github.com/Rituparna158",
-      "totalCommits": 55,
-      "totalPRs": 16,
-      "totalPRReviewsGiven": 17,
+      "totalCommits": 57,
+      "totalPRs": 17,
+      "totalPRReviewsGiven": 18,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 8,
+      "totalIssuesOpened": 10,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.44,
+      "avgCommitsPerPR": 3.35,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -28,29 +28,29 @@
       "prs_by_complexity": {
         "small": 8,
         "medium": 3,
-        "large": 5
+        "large": 6
       },
-      "total_score": 305,
-      "code_score": 263,
-      "community_score": 16,
-      "quality_score": 26,
+      "total_score": 327,
+      "code_score": 279,
+      "community_score": 20,
+      "quality_score": 28,
       "score_breakdown": {
-        "pr_score": 102,
-        "commits_score": 110,
-        "pr_reviews_score": 51,
+        "pr_score": 111,
+        "commits_score": 114,
+        "pr_reviews_score": 54,
         "code_comments_score": 0,
-        "issues_opened_score": 16,
+        "issues_opened_score": 20,
         "issue_comments_score": 0,
         "projects_score": 0,
         "tests_score": 0,
         "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 22,
+        "zero_revisions_score": 24,
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 8,
-        "issues_total": 8,
+        "issues_opened": 10,
+        "issues_total": 10,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -62,13 +62,13 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 81,
-      "totalPRs": 18,
+      "totalCommits": 84,
+      "totalPRs": 19,
       "totalPRReviewsGiven": 5,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 1,
       "totalIssueComments": 3,
-      "avgCommitsPerPR": 4.5,
+      "avgCommitsPerPR": 4.42,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -77,16 +77,16 @@
       ],
       "prs_by_complexity": {
         "small": 8,
-        "medium": 3,
+        "medium": 4,
         "large": 7
       },
-      "total_score": 303,
-      "code_score": 296,
+      "total_score": 316,
+      "code_score": 309,
       "community_score": 5,
       "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 119,
-        "commits_score": 162,
+        "pr_score": 126,
+        "commits_score": 168,
         "pr_reviews_score": 15,
         "code_comments_score": 0,
         "issues_opened_score": 2,
@@ -104,7 +104,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -116,7 +116,7 @@
       "totalPRs": 6,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 7,
+      "totalIssuesOpened": 8,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 9.83,
       "projectsWorkingOn": 1,
@@ -129,16 +129,16 @@
         "medium": 0,
         "large": 6
       },
-      "total_score": 189,
+      "total_score": 191,
       "code_score": 169,
-      "community_score": 14,
+      "community_score": 16,
       "quality_score": 6,
       "score_breakdown": {
         "pr_score": 51,
         "commits_score": 118,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 14,
+        "issues_opened_score": 16,
         "issue_comments_score": 0,
         "projects_score": 0,
         "tests_score": 0,
@@ -148,8 +148,8 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 7,
-        "issues_total": 7,
+        "issues_opened": 8,
+        "issues_total": 8,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -203,7 +203,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 5,
@@ -252,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -301,7 +301,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 7,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 8,
@@ -362,7 +362,7 @@
       "totalPRs": 2,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
+      "totalIssuesOpened": 2,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.5,
       "projectsWorkingOn": 1,
@@ -375,16 +375,16 @@
         "medium": 2,
         "large": 0
       },
-      "total_score": 15,
+      "total_score": 19,
       "code_score": 15,
-      "community_score": 0,
+      "community_score": 4,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 13,
         "commits_score": 2,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 0,
+        "issues_opened_score": 4,
         "issue_comments_score": 0,
         "projects_score": 0,
         "tests_score": 0,
@@ -394,12 +394,12 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
+        "issues_opened": 2,
+        "issues_total": 2,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 1
     },
     {
       "rank": 9,
@@ -448,7 +448,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 10,
@@ -497,7 +497,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 18
+      "lastActiveDays": 19
     }
   ]
 }
