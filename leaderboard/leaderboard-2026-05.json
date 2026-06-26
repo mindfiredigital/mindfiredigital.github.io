@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T04:58:05.053Z",
+  "generated_at": "2026-06-26T04:50:03.605Z",
   "period": "monthly",
   "month_label": "May 2026",
   "month_key": "2026-05",
@@ -151,7 +151,7 @@
         "issue_comments": 6,
         "issue_comments_total": 6
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 4,
@@ -159,35 +159,36 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "totalCommits": 27,
+      "totalCommits": 29,
       "totalPRs": 18,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 1,
+      "totalIssuesOpened": 3,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.5,
-      "projectsWorkingOn": 1,
+      "avgCommitsPerPR": 1.61,
+      "projectsWorkingOn": 2,
       "projects": [
-        "TextIgniter"
+        "TextIgniter",
+        "mdslide"
       ],
-      "newProjectsThisMonth": 0,
+      "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 4,
         "medium": 2,
         "large": 12
       },
-      "total_score": 236,
-      "code_score": 196,
-      "community_score": 2,
+      "total_score": 254,
+      "code_score": 200,
+      "community_score": 16,
       "quality_score": 38,
       "score_breakdown": {
         "pr_score": 142,
-        "commits_score": 54,
+        "commits_score": 58,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 2,
+        "issues_opened_score": 6,
         "issue_comments_score": 0,
-        "projects_score": 0,
+        "projects_score": 10,
         "tests_score": 2,
         "docs_score": 0,
         "mentor_score": 0,
@@ -195,8 +196,8 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 1,
-        "issues_total": 1,
+        "issues_opened": 3,
+        "issues_total": 3,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -251,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -300,7 +301,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 7,
@@ -398,7 +399,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -448,7 +449,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 10,
@@ -497,7 +498,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 11,
@@ -546,7 +547,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 1
     },
     {
       "rank": 12,
@@ -645,7 +646,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 10
     },
     {
       "rank": 14,
@@ -694,7 +695,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 24
+      "lastActiveDays": 25
     },
     {
       "rank": 15,
@@ -743,7 +744,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 1
     },
     {
       "rank": 16,
@@ -841,7 +842,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 28
+      "lastActiveDays": 29
     },
     {
       "rank": 18,
