@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T04:46:36.979Z",
+  "generated_at": "2026-07-03T04:27:41.854Z",
   "period": "monthly",
   "month_label": "June 2026",
   "month_key": "2026-06",
@@ -60,13 +60,13 @@
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
       "html_url": "https://github.com/Rituparna158",
-      "totalCommits": 142,
+      "totalCommits": 147,
       "totalPRs": 21,
       "totalPRReviewsGiven": 20,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 11,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 6.76,
+      "avgCommitsPerPR": 7,
       "projectsWorkingOn": 1,
       "projects": [
         "Ignix-lite"
@@ -77,13 +77,13 @@
         "medium": 4,
         "large": 9
       },
-      "total_score": 549,
-      "code_score": 493,
+      "total_score": 559,
+      "code_score": 503,
       "community_score": 20,
       "quality_score": 36,
       "score_breakdown": {
         "pr_score": 149,
-        "commits_score": 284,
+        "commits_score": 294,
         "pr_reviews_score": 60,
         "code_comments_score": 0,
         "issues_opened_score": 20,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 8,
@@ -399,7 +399,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 9,
@@ -448,7 +448,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 10,
@@ -546,7 +546,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 12,
@@ -595,7 +595,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 21
     },
     {
       "rank": 13,
