@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-07T04:36:07.473Z",
+  "generated_at": "2026-07-08T03:51:39.608Z",
   "period": "monthly",
   "window_start": "2026-07-01T00:00:00.000Z",
-  "window_end": "2026-07-07T04:36:07.473Z",
+  "window_end": "2026-07-08T03:51:39.608Z",
   "month_label": "July 2026",
   "month_key": "2026-07",
-  "total_contributors": 10,
+  "total_contributors": 11,
   "leaderboard": [
     {
       "rank": 1,
@@ -66,12 +66,13 @@
       "totalPRs": 7,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 1,
+      "totalIssuesOpened": 3,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.86,
-      "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
+      "projectsWorkingOn": 2,
+      "newProjectsThisMonth": 1,
       "projects": [
+        "Ignix UI",
         "Ignix-lite"
       ],
       "prs_by_complexity": {
@@ -79,18 +80,18 @@
         "medium": 4,
         "large": 2
       },
-      "total_score": 91,
+      "total_score": 105,
       "code_score": 74,
-      "community_score": 2,
+      "community_score": 16,
       "quality_score": 15,
       "score_breakdown": {
         "pr_score": 48,
         "commits_score": 26,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 2,
+        "issues_opened_score": 6,
         "issue_comments_score": 0,
-        "projects_score": 0,
+        "projects_score": 10,
         "tests_score": 1,
         "docs_score": 0,
         "mentor_score": 0,
@@ -98,8 +99,8 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 1,
-        "issues_total": 1,
+        "issues_opened": 3,
+        "issues_total": 3,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -152,7 +153,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 4,
@@ -201,7 +202,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 5,
@@ -250,7 +251,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 6,
@@ -299,7 +300,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 7,
@@ -352,6 +353,55 @@
     },
     {
       "rank": 8,
+      "username": "uzerjamal-mfsi",
+      "id": 220164293,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+      "html_url": "https://github.com/uzerjamal-mfsi",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 3,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 6,
+      "code_score": 0,
+      "community_score": 6,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 6,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 3,
+        "issues_total": 3,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 9,
       "username": "anandmindfire",
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
@@ -397,10 +447,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
-      "rank": 9,
+      "rank": 10,
       "username": "Ashminita28",
       "id": 253201048,
       "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
@@ -449,7 +499,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 10,
+      "rank": 11,
       "username": "SobhanSah00",
       "id": 145108187,
       "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
