@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T04:32:15.353Z",
+  "generated_at": "2026-07-11T03:47:48.572Z",
   "period": "monthly",
   "month_label": "October 2023",
   "month_key": "2023-10",
@@ -298,7 +298,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 1
     }
   ]
 }
