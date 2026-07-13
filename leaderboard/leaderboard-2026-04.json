@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T03:56:06.282Z",
+  "generated_at": "2026-07-13T03:57:41.918Z",
   "period": "monthly",
   "month_label": "April 2026",
   "month_key": "2026-04",
@@ -53,7 +53,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 2,
@@ -107,7 +107,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 3,
@@ -156,7 +156,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -255,7 +255,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 6,
@@ -451,7 +451,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 10
+      "lastActiveDays": 11
     },
     {
       "rank": 10,
@@ -598,7 +598,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 13,
@@ -749,7 +749,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 26
+      "lastActiveDays": 27
     },
     {
       "rank": 16,
@@ -1043,7 +1043,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 22,
@@ -1093,7 +1093,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 23,
@@ -1142,7 +1142,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 30
+      "lastActiveDays": null
     },
     {
       "rank": 24,
@@ -1240,7 +1240,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 26,
