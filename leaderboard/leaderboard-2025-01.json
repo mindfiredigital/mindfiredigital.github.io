@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-14T03:38:34.826Z",
+  "generated_at": "2026-05-08T11:58:56.289Z",
   "period": "monthly",
   "month_label": "January 2025",
   "month_key": "2025-01",
-  "total_contributors": 10,
+  "total_contributors": 13,
   "leaderboard": [
     {
       "rank": 1,
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 19.71,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -52,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": null
     },
     {
       "rank": 2,
@@ -68,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.06,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 5,
@@ -105,6 +101,53 @@
     },
     {
       "rank": 3,
+      "username": "akashdeep-singh-multani",
+      "id": 184540593,
+      "avatar_url": "https://avatars.githubusercontent.com/u/184540593?v=4",
+      "html_url": "https://github.com/akashdeep-singh-multani",
+      "totalCommits": 36,
+      "totalPRs": 11,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 9,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.27,
+      "projectsWorkingOn": 1,
+      "projects": ["Pivothead"],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 5,
+        "medium": 1,
+        "large": 5
+      },
+      "total_score": 187,
+      "code_score": 149,
+      "community_score": 18,
+      "quality_score": 20,
+      "score_breakdown": {
+        "pr_score": 77,
+        "commits_score": 72,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 18,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 20,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 9,
+        "issues_total": 9,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 4,
       "username": "ayusmanmindfire",
       "id": 182596903,
       "avatar_url": "https://avatars.githubusercontent.com/u/182596903?v=4",
@@ -117,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -153,7 +194,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 4,
+      "rank": 5,
       "username": "vickysmf",
       "id": 183806487,
       "avatar_url": "https://avatars.githubusercontent.com/u/183806487?v=4",
@@ -166,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -202,7 +241,101 @@
       "lastActiveDays": null
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "username": "patisubhakanta",
+      "id": 59618850,
+      "avatar_url": "https://avatars.githubusercontent.com/u/59618850?v=4",
+      "html_url": "https://github.com/patisubhakanta",
+      "totalCommits": 19,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 6,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 6,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.8,
+      "projectsWorkingOn": 1,
+      "projects": ["Pivothead"],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 1,
+        "large": 3
+      },
+      "total_score": 117,
+      "code_score": 95,
+      "community_score": 12,
+      "quality_score": 10,
+      "score_breakdown": {
+        "pr_score": 39,
+        "commits_score": 38,
+        "pr_reviews_score": 18,
+        "code_comments_score": 0,
+        "issues_opened_score": 12,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 10,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 6,
+        "issues_total": 6,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 7,
+      "username": "SubhenduS1999",
+      "id": 169184262,
+      "avatar_url": "https://avatars.githubusercontent.com/u/169184262?v=4",
+      "html_url": "https://github.com/SubhenduS1999",
+      "totalCommits": 7,
+      "totalPRs": 9,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0.78,
+      "projectsWorkingOn": 1,
+      "projects": ["Page Builder"],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 8
+      },
+      "total_score": 113,
+      "code_score": 93,
+      "community_score": 2,
+      "quality_score": 18,
+      "score_breakdown": {
+        "pr_score": 79,
+        "commits_score": 14,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 18,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 8,
       "username": "deepakyadav-01",
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
@@ -215,9 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -248,10 +379,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 25
     },
     {
-      "rank": 6,
+      "rank": 9,
       "username": "saradab-mindfire",
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
@@ -264,9 +395,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 3,
@@ -297,10 +426,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 4
     },
     {
-      "rank": 7,
+      "rank": 10,
       "username": "jagdish-mindfire",
       "id": 180177757,
       "avatar_url": "https://avatars.githubusercontent.com/u/180177757?v=4",
@@ -313,9 +442,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -349,7 +476,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 8,
+      "rank": 11,
       "username": "lakinmindfire",
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
@@ -362,10 +489,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "QuickLaunchReactNativeKit",
-        "Ignix UI"
-      ],
+      "projects": ["QuickLaunchReactNativeKit", "Ignix UI"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -396,10 +520,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 11
     },
     {
-      "rank": 9,
+      "rank": 12,
       "username": "madhav-nasit",
       "id": 121153274,
       "avatar_url": "https://avatars.githubusercontent.com/u/121153274?v=4",
@@ -412,9 +536,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "QuickLaunchReactNativeKit"
-      ],
+      "projects": ["QuickLaunchReactNativeKit"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -448,7 +570,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 10,
+      "rank": 13,
       "username": "swain1467",
       "id": 56427833,
       "avatar_url": "https://avatars.githubusercontent.com/u/56427833?v=4",
@@ -461,9 +583,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

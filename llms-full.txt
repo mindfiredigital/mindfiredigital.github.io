@@ -1,0 +1,82 @@
+# Mindfire Digital Open Source
+
+> Mindfire Digital's open-source projects hub — showcasing contributions, projects, packages, and community engagement in the global open-source ecosystem.
+
+Mindfire Digital LLP is a leading provider of Software & IT services dedicated to enhancing business growth through the development and delivery of complex projects. With over two decades of experience, Mindfire has forged partnerships with global companies across diverse industries. Their highly skilled team of 650+ passionate technologists excels at connecting the dots between people, technology, products, and business.
+
+This website serves as the central hub for all of Mindfire Digital's open-source initiatives, including project showcases, contributor recognition, published packages, available issues for contribution, and community involvement.
+
+## Pages
+
+- [Home](https://mindfiredigital.github.io/): Landing page with hero section and overview of open-source mission
+- [About](https://mindfiredigital.github.io/about): Information about Mindfire Digital and the open-source team
+- [Projects](https://mindfiredigital.github.io/projects): Complete list of open-source projects
+- [Current Projects](https://mindfiredigital.github.io/current-projects): Active projects under development
+- [Upcoming Projects](https://mindfiredigital.github.io/upcoming-projects): Planned future open-source projects
+- [Packages](https://mindfiredigital.github.io/packages): Published npm/PyPI packages
+- [Contributors](https://mindfiredigital.github.io/contributors): Recognition of community contributors with leaderboard
+- [Issues](https://mindfiredigital.github.io/issues): Open issues available for contribution
+- [Join Us](https://mindfiredigital.github.io/join-us): How to get involved and contribute
+
+## About Mindfire Digital
+
+### Mission
+
+Our mission is to collaborate with the open source community, ignite creativity, share knowledge, and develop solutions that drive positive global change.
+
+### Core Values
+
+- Collaborative Creativity: Fostering a culture of collaboration and creativity where diverse minds come together to innovate.
+- Knowledge Sharing: Sharing knowledge openly and freely, enabling continuous learning and growth within our community.
+- Positive Global Impact: Building open source solutions that address real-world challenges and bring about positive change on a global scale.
+
+### Why Open Source
+
+Open source fuels collaboration, transparency, and perpetual advancement, inspiring innovation and fostering a culture of shared knowledge and growth.
+
+- Collaboration: Embracing the power of collective effort to drive progress and create better solutions.
+- Transparency: Promoting openness and clarity, ensuring trust and shared understanding in our work.
+- Innovation: Sparking creativity and new ideas, pushing boundaries, and evolving through shared knowledge and learning.
+
+## Technical Details
+
+- Tech Stack: Next.js 14, TypeScript, Tailwind CSS
+- Deployment: Static export (next export) hosted on GitHub Pages
+- Build Output: Static HTML/CSS/JS in `build/` directory
+- Package Manager: npm
+- Testing: Jest (component + integration), Node.js built-in test runner (unit)
+- Linting: ESLint + Prettier
+- CI/CD: GitHub Actions
+
+## API
+
+The site includes an internal API route structure at `/api` used during build time for data fetching. The production site is fully static with no server-side runtime.
+
+## Key Information
+
+- Organization: Mindfire Digital LLP
+- Official Website: https://www.mindfiresolutions.com
+- GitHub Organization: https://github.com/mindfiredigital
+- Contact: https://www.mindfiresolutions.com/contact-us/
+
+## Policies
+
+- [Privacy Policy](https://mindfiredigital.github.io/privacy-policy)
+- [Cookie Policy](https://mindfiredigital.github.io/cookie-policy)
+- [Terms of Use](https://mindfiredigital.github.io/terms-of-use)
+
+## Social
+
+- [LinkedIn](https://www.linkedin.com/company/mindfire-solutions/)
+- [Twitter](https://twitter.com/mindfires)
+- [Instagram](https://www.instagram.com/mindfiresolutions/)
+- [Facebook](https://www.facebook.com/MindfireSolutions)
+
+## Contributing
+
+Contributions are welcome! The project follows standard GitHub flow.
+
+- Source Code: https://github.com/mindfiredigital/mindfiredigital.github.io
+- Contribution Guide: https://github.com/mindfiredigital/mindfiredigital.github.io/blob/dev/CONTRIBUTING.md
+- Code of Conduct: https://github.com/mindfiredigital/mindfiredigital.github.io/blob/dev/CODE_OF_CONDUCT.md
+- License: https://github.com/mindfiredigital/mindfiredigital.github.io/blob/dev/LICENSE.md
