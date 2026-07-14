@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T03:57:41.885Z",
+  "generated_at": "2026-07-14T03:38:34.913Z",
   "period": "monthly",
   "month_label": "December 2025",
   "month_key": "2025-12",
@@ -56,7 +56,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 1
     },
     {
       "rank": 2,
@@ -252,7 +252,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 18
+      "lastActiveDays": 19
     },
     {
       "rank": 6,
@@ -350,7 +350,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 18
+      "lastActiveDays": 19
     },
     {
       "rank": 8,
@@ -547,7 +547,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 12,
@@ -649,10 +649,10 @@
     },
     {
       "rank": 14,
-      "username": "SsagarikaR",
-      "id": 193941133,
-      "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
-      "html_url": "https://github.com/SsagarikaR",
+      "username": "Ankit-saha-iiitbbsr",
+      "id": 120235923,
+      "avatar_url": "https://avatars.githubusercontent.com/u/120235923?v=4",
+      "html_url": "https://github.com/Ankit-saha-iiitbbsr",
       "totalCommits": 2,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
@@ -662,7 +662,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "projects": [
-        "Page Builder"
+        "AUTOTEST"
       ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
@@ -698,10 +698,10 @@
     },
     {
       "rank": 15,
-      "username": "Ankit-saha-iiitbbsr",
-      "id": 120235923,
-      "avatar_url": "https://avatars.githubusercontent.com/u/120235923?v=4",
-      "html_url": "https://github.com/Ankit-saha-iiitbbsr",
+      "username": "SsagarikaR",
+      "id": 193941133,
+      "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
+      "html_url": "https://github.com/SsagarikaR",
       "totalCommits": 2,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
@@ -711,7 +711,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "projects": [
-        "AUTOTEST"
+        "Page Builder"
       ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
