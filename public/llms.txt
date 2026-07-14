@@ -1,0 +1,44 @@
+# Mindfire Digital Open Source
+
+> Mindfire Digital's open-source projects hub — showcasing contributions, projects, packages, and community engagement in the global open-source ecosystem.
+
+Mindfire Digital LLP is a leading provider of Software & IT services with 650+ passionate technologists. This site serves as the central hub for all open-source initiatives, project showcases, contributor recognition, and community involvement.
+
+## Pages
+
+- [Home](https://mindfiredigital.github.io/): Landing page with hero section and overview of open-source mission
+- [About](https://mindfiredigital.github.io/about): Information about Mindfire Digital and the open-source team
+- [Projects](https://mindfiredigital.github.io/projects): Complete list of open-source projects
+- [Current Projects](https://mindfiredigital.github.io/current-projects): Active projects under development
+- [Upcoming Projects](https://mindfiredigital.github.io/upcoming-projects): Planned future open-source projects
+- [Packages](https://mindfiredigital.github.io/packages): Published npm/PyPI packages
+- [Contributors](https://mindfiredigital.github.io/contributors): Recognition of community contributors
+- [Issues](https://mindfiredigital.github.io/issues): Open issues available for contribution
+- [Join Us](https://mindfiredigital.github.io/join-us): How to get involved and contribute
+
+## Key Information
+
+- Organization: Mindfire Digital LLP
+- Website: https://www.mindfiresolutions.com
+- GitHub: https://github.com/mindfiredigital
+- Tech Stack: Next.js, TypeScript, Tailwind CSS
+- Deployment: Static export hosted on GitHub Pages
+
+## Policies
+
+- [Privacy Policy](https://mindfiredigital.github.io/privacy-policy)
+- [Cookie Policy](https://mindfiredigital.github.io/cookie-policy)
+- [Terms of Use](https://mindfiredigital.github.io/terms-of-use)
+
+## Social
+
+- [LinkedIn](https://www.linkedin.com/company/mindfire-solutions/)
+- [Twitter](https://twitter.com/mindfires)
+- [Instagram](https://www.instagram.com/mindfiresolutions/)
+- [Facebook](https://www.facebook.com/MindfireSolutions)
+
+## Contributing
+
+- Source Code: https://github.com/mindfiredigital/mindfiredigital.github.io
+- Contribution Guide: https://github.com/mindfiredigital/mindfiredigital.github.io/blob/dev/CONTRIBUTING.md
+- Code of Conduct: https://github.com/mindfiredigital/mindfiredigital.github.io/blob/dev/CODE_OF_CONDUCT.md
