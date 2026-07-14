@@ -1,41 +1,20 @@
+/* Skeleton for the home page hero — mirrors src/app/page.tsx layout */
 export default function Loading() {
   return (
-    /* Page wrapper with max width and centered layout */
-    <div className='px-8 py-8 max-w-[1100px] mx-auto'>
-      {/* Skeleton header block */}
-      <div className='mb-10'>
-        {/* Skeleton title bar */}
-        <div className='skeleton h-8 w-[38%] mb-3' />
+    <main className='hero-section flex flex-col-reverse items-center lg:flex-row justify-between px-6 pr-12 py-12 min-h-[500px] lg:min-h-[600px]'>
+      {/* Left: heading, subheading, CTA button */}
+      <div className='max-w-2xl mt-7 w-full'>
+        <div className='skeleton h-9 w-[90%] mb-3' />
+        <div className='skeleton h-9 w-[60%] mb-6' />
 
-        {/* Skeleton subtitle bar */}
-        <div className='skeleton h-4 w-[22%]' />
+        <div className='skeleton h-4 w-full mb-2' />
+        <div className='skeleton h-4 w-[85%] mb-10' />
+
+        <div className='skeleton h-12 w-44 rounded-full' />
       </div>
 
-      {/* Skeleton card grid — 6 placeholder cards */}
-      <div className='grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5'>
-        {Array.from({ length: 6 }).map((_, i) => (
-          /* Individual skeleton card */
-          <div
-            key={i}
-            className='border border-mf-border rounded-lg overflow-hidden'
-          >
-            {/* Skeleton image placeholder */}
-            <div className='skeleton h-[180px]' />
-
-            {/* Skeleton text lines */}
-            <div className='p-4 flex flex-col gap-2'>
-              {/* Wide line */}
-              <div className='skeleton h-3.5 w-[90%]' />
-
-              {/* Medium line */}
-              <div className='skeleton h-3.5 w-[65%]' />
-
-              {/* Short line */}
-              <div className='skeleton h-3.5 w-[40%]' />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+      {/* Right: hero video placeholder */}
+      <div className='skeleton relative flex-shrink-0 w-[410px] h-[410px] max-w-full rounded-full' />
+    </main>
   );
 }
