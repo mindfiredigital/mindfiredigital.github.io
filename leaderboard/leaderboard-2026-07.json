@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-20T04:23:53.431Z",
+  "generated_at": "2026-07-21T03:51:24.608Z",
   "period": "monthly",
   "window_start": "2026-07-01T00:00:00.000Z",
-  "window_end": "2026-07-20T04:23:53.431Z",
+  "window_end": "2026-07-21T03:51:24.608Z",
   "month_label": "July 2026",
   "month_key": "2026-07",
   "total_contributors": 14,
@@ -106,7 +106,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 3,
@@ -217,13 +217,14 @@
       "totalPRs": 8,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 12,
+      "totalIssuesOpened": 13,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
-      "projectsWorkingOn": 1,
+      "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
-        "MonoDog"
+        "MonoDog",
+        "gpx"
       ],
       "prs_by_complexity": {
         "small": 0,
@@ -250,11 +251,11 @@
       },
       "capped_counts": {
         "issues_opened": 10,
-        "issues_total": 12,
+        "issues_total": 13,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": null
     },
     {
       "rank": 6,
@@ -303,7 +304,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 7,
@@ -352,7 +353,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 17
+      "lastActiveDays": 18
     },
     {
       "rank": 8,
@@ -401,7 +402,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 15
     },
     {
       "rank": 9,
@@ -499,7 +500,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 11,
@@ -548,7 +549,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 12,
@@ -597,7 +598,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 13,
@@ -693,7 +694,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     }
   ]
 }
