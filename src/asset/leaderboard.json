@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T11:58:56.443Z",
+  "generated_at": "2026-07-21T09:04:03.838Z",
   "scoring_formula": {
     "description": "Total_Score = Code_Score + Community_Score + Quality_Score",
     "code_formula": "(ΣPR × 5 × complexity) + (ΣCommits × 2) + (ΣReviews × 3) + (ΣComments × 1)",
@@ -36,12 +36,12 @@
     }
   },
   "summary": {
-    "total_contributors": 85,
-    "total_commits": 6485,
-    "total_prs": 1480,
-    "total_pr_reviews": 294,
-    "total_issues": 586,
-    "avg_score": 356
+    "total_contributors": 106,
+    "total_commits": 8717,
+    "total_prs": 1903,
+    "total_pr_reviews": 460,
+    "total_issues": 999,
+    "avg_score": 379
   },
   "leaderboard": [
     {
@@ -50,39 +50,40 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 1302,
-      "totalPRs": 225,
-      "totalPRReviewsGiven": 115,
-      "totalCodeReviewComments": 23,
+      "totalCommits": 1366,
+      "totalPRs": 245,
+      "totalPRReviewsGiven": 157,
+      "totalCodeReviewComments": 31,
       "totalIssuesOpened": 51,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 5.79,
-      "projectsWorkingOn": 10,
+      "avgCommitsPerPR": 5.58,
+      "projectsWorkingOn": 11,
       "prs_by_complexity": {
-        "small": 85,
-        "medium": 40,
-        "large": 100
+        "small": 89,
+        "medium": 41,
+        "large": 115
       },
-      "total_score": 5211,
-      "code_score": 4577,
-      "community_score": 175,
-      "quality_score": 459,
+      "total_score": 5683,
+      "code_score": 5001,
+      "community_score": 185,
+      "quality_score": 497,
       "score_breakdown": {
-        "pr_score": 1605,
-        "commits_score": 2604,
-        "pr_reviews_score": 345,
-        "code_comments_score": 23,
+        "pr_score": 1767,
+        "commits_score": 2732,
+        "pr_reviews_score": 471,
+        "code_comments_score": 31,
         "issues_opened_score": 74,
         "issue_comments_score": 1,
-        "projects_score": 100,
+        "projects_score": 110,
         "tests_score": 1,
         "docs_score": 8,
         "mentor_score": 0,
-        "zero_revisions_score": 450,
+        "zero_revisions_score": 488,
         "impact_bonus_score": 0
       },
       "projects": [
         "ADAC (Architecture Diagram as Code)",
+        "DeepScanBot",
         "Document Editor",
         "ESLint Plugin Hub",
         "Ignix UI",
@@ -93,7 +94,7 @@
         "Pivothead",
         "react-text-igniter"
       ],
-      "lastActiveDays": null
+      "lastActiveDays": 5
     },
     {
       "rank": 2,
@@ -138,34 +139,120 @@
         "TextIgniter",
         "react-text-igniter"
       ],
-      "lastActiveDays": 25
+      "lastActiveDays": null
     },
     {
       "rank": 3,
+      "username": "ipsitam-07",
+      "id": 253717200,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
+      "html_url": "https://github.com/ipsitam-07",
+      "totalCommits": 606,
+      "totalPRs": 81,
+      "totalPRReviewsGiven": 71,
+      "totalCodeReviewComments": 56,
+      "totalIssuesOpened": 36,
+      "totalIssueComments": 14,
+      "avgCommitsPerPR": 7.48,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 16,
+        "medium": 18,
+        "large": 47
+      },
+      "total_score": 2242,
+      "code_score": 2110,
+      "community_score": 86,
+      "quality_score": 46,
+      "score_breakdown": {
+        "pr_score": 629,
+        "commits_score": 1212,
+        "pr_reviews_score": 213,
+        "code_comments_score": 56,
+        "issues_opened_score": 52,
+        "issue_comments_score": 14,
+        "projects_score": 20,
+        "tests_score": 3,
+        "docs_score": 11,
+        "mentor_score": 0,
+        "zero_revisions_score": 32,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Ignix UI",
+        "Ignix-lite"
+      ],
+      "lastActiveDays": 6
+    },
+    {
+      "rank": 4,
+      "username": "Rituparna158",
+      "id": 253198538,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+      "html_url": "https://github.com/Rituparna158",
+      "totalCommits": 479,
+      "totalPRs": 74,
+      "totalPRReviewsGiven": 39,
+      "totalCodeReviewComments": 5,
+      "totalIssuesOpened": 53,
+      "totalIssueComments": 14,
+      "avgCommitsPerPR": 6.47,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 12,
+        "medium": 22,
+        "large": 40
+      },
+      "total_score": 1892,
+      "code_score": 1654,
+      "community_score": 112,
+      "quality_score": 126,
+      "score_breakdown": {
+        "pr_score": 574,
+        "commits_score": 958,
+        "pr_reviews_score": 117,
+        "code_comments_score": 5,
+        "issues_opened_score": 78,
+        "issue_comments_score": 14,
+        "projects_score": 20,
+        "tests_score": 3,
+        "docs_score": 9,
+        "mentor_score": 0,
+        "zero_revisions_score": 114,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Ignix UI",
+        "Ignix-lite"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 5,
       "username": "ParasMindfire",
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "totalCommits": 463,
-      "totalPRs": 80,
+      "totalCommits": 477,
+      "totalPRs": 86,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 80,
       "totalIssueComments": 5,
-      "avgCommitsPerPR": 5.79,
+      "avgCommitsPerPR": 5.55,
       "projectsWorkingOn": 5,
       "prs_by_complexity": {
-        "small": 29,
-        "medium": 13,
-        "large": 38
+        "small": 30,
+        "medium": 14,
+        "large": 42
       },
-      "total_score": 1796,
-      "code_score": 1504,
+      "total_score": 1872,
+      "code_score": 1580,
       "community_score": 157,
       "quality_score": 135,
       "score_breakdown": {
-        "pr_score": 578,
-        "commits_score": 926,
+        "pr_score": 626,
+        "commits_score": 954,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 102,
@@ -184,79 +271,124 @@
         "Page Builder",
         "TextIgniter"
       ],
-      "lastActiveDays": 0
+      "lastActiveDays": 7
     },
     {
-      "rank": 4,
-      "username": "ipsitam-07",
-      "id": 253717200,
-      "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
-      "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 375,
-      "totalPRs": 40,
-      "totalPRReviewsGiven": 51,
-      "totalCodeReviewComments": 45,
-      "totalIssuesOpened": 22,
+      "rank": 6,
+      "username": "sobhan-s",
+      "id": 253181559,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+      "html_url": "https://github.com/sobhan-s",
+      "totalCommits": 344,
+      "totalPRs": 84,
+      "totalPRReviewsGiven": 2,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 39,
       "totalIssueComments": 5,
-      "avgCommitsPerPR": 9.38,
+      "avgCommitsPerPR": 4.1,
       "projectsWorkingOn": 2,
       "prs_by_complexity": {
-        "small": 5,
-        "medium": 10,
-        "large": 25
+        "small": 8,
+        "medium": 12,
+        "large": 64
       },
-      "total_score": 1345,
-      "code_score": 1268,
-      "community_score": 49,
-      "quality_score": 28,
+      "total_score": 1618,
+      "code_score": 1394,
+      "community_score": 67,
+      "quality_score": 157,
       "score_breakdown": {
-        "pr_score": 320,
-        "commits_score": 750,
-        "pr_reviews_score": 153,
-        "code_comments_score": 45,
-        "issues_opened_score": 24,
+        "pr_score": 700,
+        "commits_score": 688,
+        "pr_reviews_score": 6,
+        "code_comments_score": 0,
+        "issues_opened_score": 42,
         "issue_comments_score": 5,
         "projects_score": 20,
-        "tests_score": 3,
-        "docs_score": 7,
+        "tests_score": 6,
+        "docs_score": 5,
         "mentor_score": 0,
-        "zero_revisions_score": 18,
+        "zero_revisions_score": 146,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI", "Ignix-lite"],
+      "projects": [
+        "TextIgniter",
+        "mdslide"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 5,
+      "rank": 7,
+      "username": "Ashminita28",
+      "id": 253201048,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
+      "html_url": "https://github.com/Ashminita28",
+      "totalCommits": 426,
+      "totalPRs": 51,
+      "totalPRReviewsGiven": 10,
+      "totalCodeReviewComments": 2,
+      "totalIssuesOpened": 70,
+      "totalIssueComments": 1,
+      "avgCommitsPerPR": 8.35,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 6,
+        "medium": 13,
+        "large": 32
+      },
+      "total_score": 1421,
+      "code_score": 1293,
+      "community_score": 75,
+      "quality_score": 53,
+      "score_breakdown": {
+        "pr_score": 409,
+        "commits_score": 852,
+        "pr_reviews_score": 30,
+        "code_comments_score": 2,
+        "issues_opened_score": 64,
+        "issue_comments_score": 1,
+        "projects_score": 10,
+        "tests_score": 1,
+        "docs_score": 8,
+        "mentor_score": 0,
+        "zero_revisions_score": 44,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "markdown-reader — Native Desktop Markdown Reader"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 8,
       "username": "lakinmindfire",
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
       "html_url": "https://github.com/lakinmindfire",
-      "totalCommits": 235,
+      "totalCommits": 239,
       "totalPRs": 57,
       "totalPRReviewsGiven": 20,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 34,
+      "totalIssuesOpened": 40,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 4.12,
-      "projectsWorkingOn": 21,
+      "avgCommitsPerPR": 4.19,
+      "projectsWorkingOn": 26,
       "prs_by_complexity": {
         "small": 24,
         "medium": 16,
         "large": 17
       },
-      "total_score": 1309,
-      "code_score": 915,
-      "community_score": 279,
+      "total_score": 1379,
+      "code_score": 923,
+      "community_score": 341,
       "quality_score": 115,
       "score_breakdown": {
         "pr_score": 385,
-        "commits_score": 470,
+        "commits_score": 478,
         "pr_reviews_score": 60,
         "code_comments_score": 0,
-        "issues_opened_score": 68,
+        "issues_opened_score": 80,
         "issue_comments_score": 1,
-        "projects_score": 210,
+        "projects_score": 260,
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
@@ -277,19 +409,24 @@
         "Mindfire Foss Website",
         "MobileQuickLaunchKit-Android",
         "MobileQuickLaunchKit-iOS",
+        "MonoDog",
+        "Multi Cloud Monorepo Boilerplate",
         "Next.js Fortress",
         "OpenRecap",
         "Page Builder",
         "Pivothead",
         "QuickLaunchReactNativeKit",
+        "gpx",
+        "markdown-reader — Native Desktop Markdown Reader",
+        "mdslide",
         "neo-pusher",
         "react-text-igniter",
         "sqlrag"
       ],
-      "lastActiveDays": 11
+      "lastActiveDays": null
     },
     {
-      "rank": 6,
+      "rank": 9,
       "username": "jyotiprakashmfsi",
       "id": 194057545,
       "avatar_url": "https://avatars.githubusercontent.com/u/194057545?v=4",
@@ -325,56 +462,104 @@
         "zero_revisions_score": 138,
         "impact_bonus_score": 0
       },
-      "projects": ["ESLint Plugin Hub", "Ignix UI", "TextIgniter"],
+      "projects": [
+        "ESLint Plugin Hub",
+        "Ignix UI",
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 7,
+      "rank": 10,
       "username": "sanghamitradash021",
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
       "html_url": "https://github.com/sanghamitradash021",
-      "totalCommits": 168,
-      "totalPRs": 56,
+      "totalCommits": 195,
+      "totalPRs": 61,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 14,
+      "totalIssuesOpened": 19,
       "totalIssueComments": 3,
-      "avgCommitsPerPR": 3,
-      "projectsWorkingOn": 4,
+      "avgCommitsPerPR": 3.2,
+      "projectsWorkingOn": 5,
       "prs_by_complexity": {
         "small": 9,
-        "medium": 8,
-        "large": 39
+        "medium": 10,
+        "large": 42
       },
-      "total_score": 958,
-      "code_score": 788,
-      "community_score": 71,
-      "quality_score": 99,
+      "total_score": 1077,
+      "code_score": 883,
+      "community_score": 91,
+      "quality_score": 103,
       "score_breakdown": {
-        "pr_score": 452,
-        "commits_score": 336,
+        "pr_score": 493,
+        "commits_score": 390,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 28,
+        "issues_opened_score": 38,
         "issue_comments_score": 3,
-        "projects_score": 40,
+        "projects_score": 50,
         "tests_score": 2,
         "docs_score": 9,
         "mentor_score": 0,
-        "zero_revisions_score": 88,
+        "zero_revisions_score": 92,
         "impact_bonus_score": 0
       },
       "projects": [
+        "Canvas Editor",
         "Document Editor",
         "ESLint Plugin Hub",
         "Ignix UI",
         "Pivothead"
       ],
-      "lastActiveDays": 4
+      "lastActiveDays": 26
     },
     {
-      "rank": 8,
+      "rank": 11,
+      "username": "anujmindfire",
+      "id": 182347241,
+      "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
+      "html_url": "https://github.com/anujmindfire",
+      "totalCommits": 156,
+      "totalPRs": 57,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 52,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 2.74,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 14,
+        "medium": 18,
+        "large": 25
+      },
+      "total_score": 900,
+      "code_score": 733,
+      "community_score": 66,
+      "quality_score": 101,
+      "score_breakdown": {
+        "pr_score": 421,
+        "commits_score": 312,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 46,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 5,
+        "docs_score": 4,
+        "mentor_score": 0,
+        "zero_revisions_score": 92,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "DeepScanBot",
+        "Ignix UI"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 12,
       "username": "ayusmanmindfire",
       "id": 182596903,
       "avatar_url": "https://avatars.githubusercontent.com/u/182596903?v=4",
@@ -418,7 +603,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 9,
+      "rank": 13,
       "username": "sanobery",
       "id": 117646878,
       "avatar_url": "https://avatars.githubusercontent.com/u/117646878?v=4",
@@ -454,11 +639,55 @@
         "zero_revisions_score": 68,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 10,
+      "rank": 14,
+      "username": "saradab-mindfire",
+      "id": 115465143,
+      "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
+      "html_url": "https://github.com/saradab-mindfire",
+      "totalCommits": 168,
+      "totalPRs": 50,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 3.36,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 28,
+        "medium": 6,
+        "large": 16
+      },
+      "total_score": 775,
+      "code_score": 662,
+      "community_score": 10,
+      "quality_score": 103,
+      "score_breakdown": {
+        "pr_score": 326,
+        "commits_score": 336,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 100,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "TextIgniter"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 15,
       "username": "NikhilMeshram01",
       "id": 224547702,
       "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
@@ -494,39 +723,42 @@
         "zero_revisions_score": 52,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI", "MonoDog"],
-      "lastActiveDays": 21
+      "projects": [
+        "Ignix UI",
+        "MonoDog"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 11,
+      "rank": 16,
       "username": "SandipMF",
       "id": 113003818,
       "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
       "html_url": "https://github.com/SandipMF",
       "totalCommits": 179,
-      "totalPRs": 27,
+      "totalPRs": 30,
       "totalPRReviewsGiven": 2,
       "totalCodeReviewComments": 2,
-      "totalIssuesOpened": 31,
-      "totalIssueComments": 7,
-      "avgCommitsPerPR": 6.63,
+      "totalIssuesOpened": 33,
+      "totalIssueComments": 10,
+      "avgCommitsPerPR": 5.97,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
-        "large": 25
+        "large": 28
       },
-      "total_score": 725,
-      "code_score": 603,
-      "community_score": 75,
+      "total_score": 759,
+      "code_score": 630,
+      "community_score": 82,
       "quality_score": 47,
       "score_breakdown": {
-        "pr_score": 237,
+        "pr_score": 264,
         "commits_score": 358,
         "pr_reviews_score": 6,
         "code_comments_score": 2,
-        "issues_opened_score": 58,
-        "issue_comments_score": 7,
+        "issues_opened_score": 62,
+        "issue_comments_score": 10,
         "projects_score": 10,
         "tests_score": 0,
         "docs_score": 1,
@@ -534,11 +766,58 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
-      "lastActiveDays": 24
+      "projects": [
+        "Ignix UI"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 12,
+      "rank": 17,
+      "username": "ashutosh-jena-mindfire",
+      "id": 116242186,
+      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
+      "html_url": "https://github.com/ashutosh-jena-mindfire",
+      "totalCommits": 142,
+      "totalPRs": 24,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 32,
+      "totalIssueComments": 4,
+      "avgCommitsPerPR": 5.92,
+      "projectsWorkingOn": 4,
+      "prs_by_complexity": {
+        "small": 6,
+        "medium": 4,
+        "large": 14
+      },
+      "total_score": 613,
+      "code_score": 480,
+      "community_score": 84,
+      "quality_score": 49,
+      "score_breakdown": {
+        "pr_score": 184,
+        "commits_score": 284,
+        "pr_reviews_score": 12,
+        "code_comments_score": 0,
+        "issues_opened_score": 40,
+        "issue_comments_score": 4,
+        "projects_score": 40,
+        "tests_score": 0,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 46,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Angular Canvas Editor",
+        "Canvas Editor",
+        "Ignix UI",
+        "Mindfire Foss Website"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 18,
       "username": "subhranshus-mindfire",
       "id": 217167363,
       "avatar_url": "https://avatars.githubusercontent.com/u/217167363?v=4",
@@ -574,11 +853,56 @@
         "zero_revisions_score": 50,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
-      "lastActiveDays": 2
+      "projects": [
+        "Ignix UI"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 13,
+      "rank": 19,
+      "username": "ansumanmindfire",
+      "id": 253200638,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+      "html_url": "https://github.com/ansumanmindfire",
+      "totalCommits": 166,
+      "totalPRs": 18,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 65,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 9.22,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 0,
+        "large": 17
+      },
+      "total_score": 597,
+      "code_score": 490,
+      "community_score": 100,
+      "quality_score": 7,
+      "score_breakdown": {
+        "pr_score": 158,
+        "commits_score": 332,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 80,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 6,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "MonoDog",
+        "gpx"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 20,
       "username": "madhav-nasit",
       "id": 121153274,
       "avatar_url": "https://avatars.githubusercontent.com/u/121153274?v=4",
@@ -614,51 +938,13 @@
         "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 14,
-      "username": "saradab-mindfire",
-      "id": 115465143,
-      "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
-      "html_url": "https://github.com/saradab-mindfire",
-      "totalCommits": 110,
-      "totalPRs": 36,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.06,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 18,
-        "medium": 5,
-        "large": 13
-      },
-      "total_score": 547,
-      "code_score": 462,
-      "community_score": 10,
-      "quality_score": 75,
-      "score_breakdown": {
-        "pr_score": 242,
-        "commits_score": 220,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 0,
-        "docs_score": 3,
-        "mentor_score": 0,
-        "zero_revisions_score": 72,
-        "impact_bonus_score": 0
-      },
-      "projects": ["TextIgniter"],
-      "lastActiveDays": 4
-    },
-    {
-      "rank": 15,
+      "rank": 21,
       "username": "mfsisudhanshuk",
       "id": 187290740,
       "avatar_url": "https://avatars.githubusercontent.com/u/187290740?v=4",
@@ -694,78 +980,37 @@
         "zero_revisions_score": 70,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI", "Pivothead"],
+      "projects": [
+        "Ignix UI",
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 16,
-      "username": "ashutosh-jena-mindfire",
-      "id": 116242186,
-      "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
-      "html_url": "https://github.com/ashutosh-jena-mindfire",
-      "totalCommits": 135,
-      "totalPRs": 20,
-      "totalPRReviewsGiven": 4,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 6,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 6.75,
-      "projectsWorkingOn": 3,
-      "prs_by_complexity": {
-        "small": 4,
-        "medium": 4,
-        "large": 12
-      },
-      "total_score": 521,
-      "code_score": 438,
-      "community_score": 42,
-      "quality_score": 41,
-      "score_breakdown": {
-        "pr_score": 156,
-        "commits_score": 270,
-        "pr_reviews_score": 12,
-        "code_comments_score": 0,
-        "issues_opened_score": 12,
-        "issue_comments_score": 0,
-        "projects_score": 30,
-        "tests_score": 0,
-        "docs_score": 3,
-        "mentor_score": 0,
-        "zero_revisions_score": 38,
-        "impact_bonus_score": 0
-      },
-      "projects": [
-        "Angular Canvas Editor",
-        "Canvas Editor",
-        "Mindfire Foss Website"
-      ],
-      "lastActiveDays": 2
-    },
-    {
-      "rank": 17,
+      "rank": 22,
       "username": "vickysmf",
       "id": 183806487,
       "avatar_url": "https://avatars.githubusercontent.com/u/183806487?v=4",
       "html_url": "https://github.com/vickysmf",
       "totalCommits": 79,
-      "totalPRs": 36,
+      "totalPRs": 37,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 13,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 2.19,
+      "avgCommitsPerPR": 2.14,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 12,
-        "medium": 13,
+        "medium": 14,
         "large": 11
       },
-      "total_score": 520,
-      "code_score": 408,
+      "total_score": 529,
+      "code_score": 415,
       "community_score": 37,
-      "quality_score": 75,
+      "quality_score": 77,
       "score_breakdown": {
-        "pr_score": 250,
+        "pr_score": 257,
         "commits_score": 158,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -775,14 +1020,16 @@
         "tests_score": 0,
         "docs_score": 3,
         "mentor_score": 0,
-        "zero_revisions_score": 72,
+        "zero_revisions_score": 74,
         "impact_bonus_score": 0
       },
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 18,
+      "rank": 23,
       "username": "akashdeep-singh-multani",
       "id": 184540593,
       "avatar_url": "https://avatars.githubusercontent.com/u/184540593?v=4",
@@ -818,11 +1065,13 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 19,
+      "rank": 24,
       "username": "SsagarikaR",
       "id": 193941133,
       "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
@@ -858,11 +1107,14 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": ["ESLint Plugin Hub", "Page Builder"],
+      "projects": [
+        "ESLint Plugin Hub",
+        "Page Builder"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 20,
+      "rank": 25,
       "username": "Siddharth-1698",
       "id": 66638045,
       "avatar_url": "https://avatars.githubusercontent.com/u/66638045?v=4",
@@ -898,11 +1150,56 @@
         "zero_revisions_score": 52,
         "impact_bonus_score": 0
       },
-      "projects": ["neo-pusher"],
+      "projects": [
+        "neo-pusher"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 21,
+      "rank": 26,
+      "username": "yogeshsmindfire",
+      "id": 235709046,
+      "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
+      "html_url": "https://github.com/yogeshsmindfire",
+      "totalCommits": 1,
+      "totalPRs": 30,
+      "totalPRReviewsGiven": 5,
+      "totalCodeReviewComments": 1,
+      "totalIssuesOpened": 21,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0.03,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 4,
+        "large": 25
+      },
+      "total_score": 377,
+      "code_score": 276,
+      "community_score": 54,
+      "quality_score": 47,
+      "score_breakdown": {
+        "pr_score": 258,
+        "commits_score": 2,
+        "pr_reviews_score": 15,
+        "code_comments_score": 1,
+        "issues_opened_score": 34,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 6,
+        "docs_score": 3,
+        "mentor_score": 0,
+        "zero_revisions_score": 38,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "ADAC (Architecture Diagram as Code)",
+        "gpx"
+      ],
+      "lastActiveDays": 0
+    },
+    {
+      "rank": 27,
       "username": "manojkmfsi",
       "id": 134362545,
       "avatar_url": "https://avatars.githubusercontent.com/u/134362545?v=4",
@@ -938,11 +1235,13 @@
         "zero_revisions_score": 22,
         "impact_bonus_score": 0
       },
-      "projects": ["MonoDog"],
-      "lastActiveDays": 30
+      "projects": [
+        "MonoDog"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 22,
+      "rank": 28,
       "username": "jagdish-mindfire",
       "id": 180177757,
       "avatar_url": "https://avatars.githubusercontent.com/u/180177757?v=4",
@@ -978,11 +1277,13 @@
         "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 23,
+      "rank": 29,
       "username": "ssswagatss",
       "id": 7521181,
       "avatar_url": "https://avatars.githubusercontent.com/u/7521181?v=4",
@@ -1018,11 +1319,56 @@
         "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
-      "projects": ["Extension Methods"],
+      "projects": [
+        "Extension Methods"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 24,
+      "rank": 30,
+      "username": "mind-murtaza",
+      "id": 111574378,
+      "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
+      "html_url": "https://github.com/mind-murtaza",
+      "totalCommits": 71,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 37,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 1,
+      "avgCommitsPerPR": 14.2,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 1,
+        "medium": 2,
+        "large": 2
+      },
+      "total_score": 322,
+      "code_score": 290,
+      "community_score": 21,
+      "quality_score": 11,
+      "score_breakdown": {
+        "pr_score": 37,
+        "commits_score": 142,
+        "pr_reviews_score": 111,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 1,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 1,
+        "mentor_score": 0,
+        "zero_revisions_score": 10,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "markdown-reader — Native Desktop Markdown Reader",
+        "mdslide"
+      ],
+      "lastActiveDays": 15
+    },
+    {
+      "rank": 31,
       "username": "biswalom22",
       "id": 125389787,
       "avatar_url": "https://avatars.githubusercontent.com/u/125389787?v=4",
@@ -1031,38 +1377,43 @@
       "totalPRs": 21,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 2,
+      "totalIssuesOpened": 4,
       "totalIssueComments": 9,
       "avgCommitsPerPR": 1.86,
-      "projectsWorkingOn": 3,
+      "projectsWorkingOn": 4,
       "prs_by_complexity": {
         "small": 9,
         "medium": 6,
         "large": 6
       },
-      "total_score": 301,
+      "total_score": 315,
       "code_score": 219,
-      "community_score": 43,
+      "community_score": 57,
       "quality_score": 39,
       "score_breakdown": {
         "pr_score": 141,
         "commits_score": 78,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 4,
+        "issues_opened_score": 8,
         "issue_comments_score": 9,
-        "projects_score": 30,
+        "projects_score": 40,
         "tests_score": 1,
         "docs_score": 0,
         "mentor_score": 0,
         "zero_revisions_score": 38,
         "impact_bonus_score": 0
       },
-      "projects": ["Canvas Editor", "Document Editor", "ESLint Plugin Hub"],
+      "projects": [
+        "Canvas Editor",
+        "Document Editor",
+        "ESLint Plugin Hub",
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 25,
+      "rank": 32,
       "username": "PoonamKPatil",
       "id": 34024639,
       "avatar_url": "https://avatars.githubusercontent.com/u/34024639?v=4",
@@ -1098,11 +1449,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
-      "lastActiveDays": 4
+      "projects": [
+        "Ignix UI"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 26,
+      "rank": 33,
       "username": "Bhupesh-MS",
       "id": 120394376,
       "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
@@ -1138,11 +1491,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["NFT Marketplace"],
-      "lastActiveDays": null
+      "projects": [
+        "NFT Marketplace"
+      ],
+      "lastActiveDays": 6
     },
     {
-      "rank": 27,
+      "rank": 34,
       "username": "anilkumarswain140",
       "id": 142868838,
       "avatar_url": "https://avatars.githubusercontent.com/u/142868838?v=4",
@@ -1178,11 +1533,14 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": ["Angular Canvas Editor", "Document Editor"],
+      "projects": [
+        "Angular Canvas Editor",
+        "Document Editor"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 28,
+      "rank": 35,
       "username": "abdulla-mindfire",
       "id": 105473459,
       "avatar_url": "https://avatars.githubusercontent.com/u/105473459?v=4",
@@ -1218,11 +1576,13 @@
         "zero_revisions_score": 40,
         "impact_bonus_score": 0
       },
-      "projects": ["sqlrag"],
+      "projects": [
+        "sqlrag"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 29,
+      "rank": 36,
       "username": "MohdAasim",
       "id": 79627135,
       "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
@@ -1258,11 +1618,14 @@
         "zero_revisions_score": 26,
         "impact_bonus_score": 0
       },
-      "projects": ["Pivothead", "TextIgniter"],
+      "projects": [
+        "Pivothead",
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 30,
+      "rank": 37,
       "username": "rohitrg96",
       "id": 190622750,
       "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
@@ -1298,11 +1661,14 @@
         "zero_revisions_score": 18,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website", "TextIgniter"],
+      "projects": [
+        "Mindfire Foss Website",
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 31,
+      "rank": 38,
       "username": "poonam-mindfire",
       "id": 109733267,
       "avatar_url": "https://avatars.githubusercontent.com/u/109733267?v=4",
@@ -1338,11 +1704,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 32,
+      "rank": 39,
       "username": "patisubhakanta",
       "id": 59618850,
       "avatar_url": "https://avatars.githubusercontent.com/u/59618850?v=4",
@@ -1378,11 +1746,13 @@
         "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 33,
+      "rank": 40,
       "username": "ankitsingh252225",
       "id": 227138911,
       "avatar_url": "https://avatars.githubusercontent.com/u/227138911?v=4",
@@ -1418,11 +1788,13 @@
         "zero_revisions_score": 40,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 34,
+      "rank": 41,
       "username": "praliptarajoo",
       "id": 42381761,
       "avatar_url": "https://avatars.githubusercontent.com/u/42381761?v=4",
@@ -1458,11 +1830,14 @@
         "zero_revisions_score": 30,
         "impact_bonus_score": 0
       },
-      "projects": ["Angular Canvas Editor", "Mindfire Foss Website"],
+      "projects": [
+        "Angular Canvas Editor",
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 35,
+      "rank": 42,
       "username": "sarthakm-dev",
       "id": 253189439,
       "avatar_url": "https://avatars.githubusercontent.com/u/253189439?v=4",
@@ -1498,11 +1873,56 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["MonoDog"],
-      "lastActiveDays": 14
+      "projects": [
+        "MonoDog"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 36,
+      "rank": 43,
+      "username": "Prarthanaxdev",
+      "id": 78857337,
+      "avatar_url": "https://avatars.githubusercontent.com/u/78857337?v=4",
+      "html_url": "https://github.com/Prarthanaxdev",
+      "totalCommits": 53,
+      "totalPRs": 3,
+      "totalPRReviewsGiven": 4,
+      "totalCodeReviewComments": 2,
+      "totalIssuesOpened": 2,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 17.67,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 3
+      },
+      "total_score": 178,
+      "code_score": 147,
+      "community_score": 24,
+      "quality_score": 7,
+      "score_breakdown": {
+        "pr_score": 27,
+        "commits_score": 106,
+        "pr_reviews_score": 12,
+        "code_comments_score": 2,
+        "issues_opened_score": 4,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 1,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 6,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "ADAC (Architecture Diagram as Code)",
+        "mdslide"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 44,
       "username": "ArnabKMindfire",
       "id": 103591425,
       "avatar_url": "https://avatars.githubusercontent.com/u/103591425?v=4",
@@ -1538,11 +1958,13 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 37,
+      "rank": 45,
       "username": "BasudevBharatBhushan",
       "id": 64151314,
       "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
@@ -1578,11 +2000,14 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": ["FMDAPI Node Weaver", "FileMaker List View Addon"],
+      "projects": [
+        "FMDAPI Node Weaver",
+        "FileMaker List View Addon"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 38,
+      "rank": 46,
       "username": "VershalaT",
       "id": 134675427,
       "avatar_url": "https://avatars.githubusercontent.com/u/134675427?v=4",
@@ -1618,11 +2043,56 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 39,
+      "rank": 47,
+      "username": "101yogeshsharma",
+      "id": 35485702,
+      "avatar_url": "https://avatars.githubusercontent.com/u/35485702?v=4",
+      "html_url": "https://github.com/101yogeshsharma",
+      "totalCommits": 63,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 2,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 146,
+      "code_score": 126,
+      "community_score": 20,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 126,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 20,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "ADAC (Architecture Diagram as Code)",
+        "gpx"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 48,
       "username": "hemant-sudhanshu",
       "id": 85334692,
       "avatar_url": "https://avatars.githubusercontent.com/u/85334692?v=4",
@@ -1658,11 +2128,14 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["MobileQuickLaunchKit-Android", "MobileQuickLaunchKit-iOS"],
+      "projects": [
+        "MobileQuickLaunchKit-Android",
+        "MobileQuickLaunchKit-iOS"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 40,
+      "rank": 49,
       "username": "SubhenduS1999",
       "id": 169184262,
       "avatar_url": "https://avatars.githubusercontent.com/u/169184262?v=4",
@@ -1698,11 +2171,55 @@
         "zero_revisions_score": 20,
         "impact_bonus_score": 0
       },
-      "projects": ["Page Builder"],
+      "projects": [
+        "Page Builder"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 41,
+      "rank": 50,
+      "username": "Rushik06",
+      "id": 253198458,
+      "avatar_url": "https://avatars.githubusercontent.com/u/253198458?v=4",
+      "html_url": "https://github.com/Rushik06",
+      "totalCommits": 25,
+      "totalPRs": 4,
+      "totalPRReviewsGiven": 2,
+      "totalCodeReviewComments": 2,
+      "totalIssuesOpened": 11,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 6.25,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 4
+      },
+      "total_score": 130,
+      "code_score": 94,
+      "community_score": 30,
+      "quality_score": 6,
+      "score_breakdown": {
+        "pr_score": 36,
+        "commits_score": 50,
+        "pr_reviews_score": 6,
+        "code_comments_score": 2,
+        "issues_opened_score": 20,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 6,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "mdslide"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 51,
       "username": "ankitsaha-mindfire",
       "id": 235838245,
       "avatar_url": "https://avatars.githubusercontent.com/u/235838245?v=4",
@@ -1738,11 +2255,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 42,
+      "rank": 52,
       "username": "aryanxorian",
       "id": 29296038,
       "avatar_url": "https://avatars.githubusercontent.com/u/29296038?v=4",
@@ -1778,11 +2297,13 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 43,
+      "rank": 53,
       "username": "konark-mindfire",
       "id": 160819069,
       "avatar_url": "https://avatars.githubusercontent.com/u/160819069?v=4",
@@ -1818,11 +2339,13 @@
         "zero_revisions_score": 12,
         "impact_bonus_score": 0
       },
-      "projects": ["MobileQuickLaunchKit-Android"],
+      "projects": [
+        "MobileQuickLaunchKit-Android"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 44,
+      "rank": 54,
       "username": "Ankit-saha-iiitbbsr",
       "id": 120235923,
       "avatar_url": "https://avatars.githubusercontent.com/u/120235923?v=4",
@@ -1858,11 +2381,55 @@
         "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 45,
+      "rank": 55,
+      "username": "uzerjamal-mfsi",
+      "id": 220164293,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+      "html_url": "https://github.com/uzerjamal-mfsi",
+      "totalCommits": 36,
+      "totalPRs": 1,
+      "totalPRReviewsGiven": 5,
+      "totalCodeReviewComments": 1,
+      "totalIssuesOpened": 4,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 36,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "total_score": 115,
+      "code_score": 95,
+      "community_score": 18,
+      "quality_score": 2,
+      "score_breakdown": {
+        "pr_score": 7,
+        "commits_score": 72,
+        "pr_reviews_score": 15,
+        "code_comments_score": 1,
+        "issues_opened_score": 8,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 2,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
+      "lastActiveDays": 6
+    },
+    {
+      "rank": 56,
       "username": "ParthDhemeliya",
       "id": 217000014,
       "avatar_url": "https://avatars.githubusercontent.com/u/217000014?v=4",
@@ -1898,11 +2465,13 @@
         "zero_revisions_score": 12,
         "impact_bonus_score": 0
       },
-      "projects": ["TextIgniter"],
+      "projects": [
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 46,
+      "rank": 57,
       "username": "Dibas2421",
       "id": 157849988,
       "avatar_url": "https://avatars.githubusercontent.com/u/157849988?v=4",
@@ -1938,11 +2507,13 @@
         "zero_revisions_score": 14,
         "impact_bonus_score": 0
       },
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 47,
+      "rank": 58,
       "username": "iabhishekkumarms",
       "id": 87860388,
       "avatar_url": "https://avatars.githubusercontent.com/u/87860388?v=4",
@@ -1978,11 +2549,13 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["MobileQuickLaunchKit-Android"],
+      "projects": [
+        "MobileQuickLaunchKit-Android"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 48,
+      "rank": 59,
       "username": "asishmindfire",
       "id": 118360815,
       "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
@@ -2018,11 +2591,55 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": ["Canvas Editor"],
-      "lastActiveDays": 18
+      "projects": [
+        "Canvas Editor"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 49,
+      "rank": 60,
+      "username": "soumya0809mindfiresolutions",
+      "id": 220684530,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+      "html_url": "https://github.com/soumya0809mindfiresolutions",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 49,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 88,
+      "code_score": 0,
+      "community_score": 88,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 78,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Ignix UI"
+      ],
+      "lastActiveDays": 24
+    },
+    {
+      "rank": 61,
       "username": "prashant-mindfire",
       "id": 148045555,
       "avatar_url": "https://avatars.githubusercontent.com/u/148045555?v=4",
@@ -2058,11 +2675,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 50,
+      "rank": 62,
       "username": "pratul-mindfire",
       "id": 104986454,
       "avatar_url": "https://avatars.githubusercontent.com/u/104986454?v=4",
@@ -2098,11 +2717,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 51,
+      "rank": 63,
       "username": "100xmanas",
       "id": 147431910,
       "avatar_url": "https://avatars.githubusercontent.com/u/147431910?v=4",
@@ -2138,51 +2759,13 @@
         "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 52,
-      "username": "Rituparna158",
-      "id": 253198538,
-      "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
-      "html_url": "https://github.com/Rituparna158",
-      "totalCommits": 11,
-      "totalPRs": 1,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 26,
-      "totalIssueComments": 3,
-      "avgCommitsPerPR": 11,
-      "projectsWorkingOn": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 1
-      },
-      "total_score": 74,
-      "code_score": 31,
-      "community_score": 41,
-      "quality_score": 2,
-      "score_breakdown": {
-        "pr_score": 9,
-        "commits_score": 22,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 28,
-        "issue_comments_score": 3,
-        "projects_score": 10,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 2,
-        "impact_bonus_score": 0
-      },
-      "projects": ["Ignix-lite"],
-      "lastActiveDays": null
-    },
-    {
-      "rank": 53,
+      "rank": 64,
       "username": "Satyam-Mindfire",
       "id": 138189810,
       "avatar_url": "https://avatars.githubusercontent.com/u/138189810?v=4",
@@ -2218,11 +2801,13 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": ["MobileQuickLaunchKit-iOS"],
+      "projects": [
+        "MobileQuickLaunchKit-iOS"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 54,
+      "rank": 65,
       "username": "Shubh2694",
       "id": 108745749,
       "avatar_url": "https://avatars.githubusercontent.com/u/108745749?v=4",
@@ -2258,11 +2843,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["react-text-igniter"],
+      "projects": [
+        "react-text-igniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 55,
+      "rank": 66,
       "username": "chaudharyvivek",
       "id": 10649999,
       "avatar_url": "https://avatars.githubusercontent.com/u/10649999?v=4",
@@ -2298,11 +2885,14 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["MobileQuickLaunchKit-Android", "MobileQuickLaunchKit-iOS"],
+      "projects": [
+        "MobileQuickLaunchKit-Android",
+        "MobileQuickLaunchKit-iOS"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 56,
+      "rank": 67,
       "username": "Harshita-mindfire",
       "id": 84971366,
       "avatar_url": "https://avatars.githubusercontent.com/u/84971366?v=4",
@@ -2338,11 +2928,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Canvas Editor"],
+      "projects": [
+        "Canvas Editor"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 57,
+      "rank": 68,
       "username": "VershalaTandon",
       "id": 63102290,
       "avatar_url": "https://avatars.githubusercontent.com/u/63102290?v=4",
@@ -2378,11 +2970,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 58,
+      "rank": 69,
       "username": "thiga-mindfire",
       "id": 258754198,
       "avatar_url": "https://avatars.githubusercontent.com/u/258754198?v=4",
@@ -2418,11 +3012,13 @@
         "zero_revisions_score": 8,
         "impact_bonus_score": 0
       },
-      "projects": ["Agentic Web Starter"],
-      "lastActiveDays": 21
+      "projects": [
+        "Agentic Web Starter"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 59,
+      "rank": 70,
       "username": "swain1467",
       "id": 56427833,
       "avatar_url": "https://avatars.githubusercontent.com/u/56427833?v=4",
@@ -2458,11 +3054,14 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Page Builder", "TextIgniter"],
+      "projects": [
+        "Page Builder",
+        "TextIgniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 60,
+      "rank": 71,
       "username": "hitesh-mindfire",
       "id": 172278187,
       "avatar_url": "https://avatars.githubusercontent.com/u/172278187?v=4",
@@ -2498,11 +3097,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["DeepScanBot"],
+      "projects": [
+        "DeepScanBot"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 61,
+      "rank": 72,
       "username": "ankitmindfiretraining-99",
       "id": 224015823,
       "avatar_url": "https://avatars.githubusercontent.com/u/224015823?v=4",
@@ -2538,11 +3139,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 62,
+      "rank": 73,
       "username": "narayan-mindfire",
       "id": 194910262,
       "avatar_url": "https://avatars.githubusercontent.com/u/194910262?v=4",
@@ -2578,11 +3181,13 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 63,
+      "rank": 74,
       "username": "preetiganagi",
       "id": 34021994,
       "avatar_url": "https://avatars.githubusercontent.com/u/34021994?v=4",
@@ -2618,11 +3223,13 @@
         "zero_revisions_score": 6,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 64,
+      "rank": 75,
       "username": "JKAryan2003",
       "id": 138751636,
       "avatar_url": "https://avatars.githubusercontent.com/u/138751636?v=4",
@@ -2658,11 +3265,55 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 65,
+      "rank": 76,
+      "username": "mfsiayanc-debug",
+      "id": 248435757,
+      "avatar_url": "https://avatars.githubusercontent.com/u/248435757?v=4",
+      "html_url": "https://github.com/mfsiayanc-debug",
+      "totalCommits": 5,
+      "totalPRs": 2,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 2.5,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 2
+      },
+      "total_score": 40,
+      "code_score": 28,
+      "community_score": 10,
+      "quality_score": 2,
+      "score_breakdown": {
+        "pr_score": 18,
+        "commits_score": 10,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 2,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 77,
       "username": "avishekthapamindfire0822",
       "id": 123073226,
       "avatar_url": "https://avatars.githubusercontent.com/u/123073226?v=4",
@@ -2698,11 +3349,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 66,
+      "rank": 78,
       "username": "vcs-anandkr",
       "id": 215844540,
       "avatar_url": "https://avatars.githubusercontent.com/u/215844540?v=4",
@@ -2738,11 +3391,57 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["ESLint Plugin Hub", "Page Builder", "Pivothead"],
+      "projects": [
+        "ESLint Plugin Hub",
+        "Page Builder",
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 67,
+      "rank": 79,
+      "username": "ansumain",
+      "id": 124277891,
+      "avatar_url": "https://avatars.githubusercontent.com/u/124277891?v=4",
+      "html_url": "https://github.com/ansumain",
+      "totalCommits": 13,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 36,
+      "code_score": 26,
+      "community_score": 10,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 26,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "gpx"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 80,
       "username": "Abhiadi12",
       "id": 57040284,
       "avatar_url": "https://avatars.githubusercontent.com/u/57040284?v=4",
@@ -2778,11 +3477,13 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": ["Pivothead"],
+      "projects": [
+        "Pivothead"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 68,
+      "rank": 81,
       "username": "adityagantayat",
       "id": 68806094,
       "avatar_url": "https://avatars.githubusercontent.com/u/68806094?v=4",
@@ -2818,11 +3519,13 @@
         "zero_revisions_score": 4,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 69,
+      "rank": 82,
       "username": "geekychandan",
       "id": 110468423,
       "avatar_url": "https://avatars.githubusercontent.com/u/110468423?v=4",
@@ -2858,11 +3561,55 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["react-text-igniter"],
+      "projects": [
+        "react-text-igniter"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 70,
+      "rank": 83,
+      "username": "SobhanSah00",
+      "id": 145108187,
+      "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
+      "html_url": "https://github.com/SobhanSah00",
+      "totalCommits": 2,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 8,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 30,
+      "code_score": 4,
+      "community_score": 26,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 4,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 16,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "mdslide"
+      ],
+      "lastActiveDays": 13
+    },
+    {
+      "rank": 84,
       "username": "taditdash",
       "id": 11786875,
       "avatar_url": "https://avatars.githubusercontent.com/u/11786875?v=4",
@@ -2898,51 +3645,55 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["Extension Methods"],
+      "projects": [
+        "Extension Methods"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 71,
-      "username": "101yogeshsharma",
-      "id": 35485702,
-      "avatar_url": "https://avatars.githubusercontent.com/u/35485702?v=4",
-      "html_url": "https://github.com/101yogeshsharma",
-      "totalCommits": 9,
-      "totalPRs": 0,
+      "rank": 85,
+      "username": "prakhartripath0001",
+      "id": 110407222,
+      "avatar_url": "https://avatars.githubusercontent.com/u/110407222?v=4",
+      "html_url": "https://github.com/prakhartripath0001",
+      "totalCommits": 3,
+      "totalPRs": 1,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
+      "totalIssueComments": 1,
+      "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
-        "large": 0
+        "large": 1
       },
       "total_score": 28,
-      "code_score": 18,
-      "community_score": 10,
-      "quality_score": 0,
+      "code_score": 15,
+      "community_score": 11,
+      "quality_score": 2,
       "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 18,
+        "pr_score": 9,
+        "commits_score": 6,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
-        "issue_comments_score": 0,
+        "issue_comments_score": 1,
         "projects_score": 10,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 0,
+        "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["ADAC (Architecture Diagram as Code)"],
-      "lastActiveDays": null
+      "projects": [
+        "Ignix-lite"
+      ],
+      "lastActiveDays": 18
     },
     {
-      "rank": 72,
+      "rank": 86,
       "username": "jyotiprakashh",
       "id": 96424607,
       "avatar_url": "https://avatars.githubusercontent.com/u/96424607?v=4",
@@ -2978,11 +3729,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 73,
+      "rank": 87,
       "username": "Bhupesh-mfsi",
       "id": 137804674,
       "avatar_url": "https://avatars.githubusercontent.com/u/137804674?v=4",
@@ -3018,11 +3771,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["NFT Marketplace"],
+      "projects": [
+        "NFT Marketplace"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 74,
+      "rank": 88,
       "username": "divyarbehera",
       "id": 20682504,
       "avatar_url": "https://avatars.githubusercontent.com/u/20682504?v=4",
@@ -3058,11 +3813,13 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["Extension Methods"],
+      "projects": [
+        "Extension Methods"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 75,
+      "rank": 89,
       "username": "alokrajmindfire",
       "id": 225856934,
       "avatar_url": "https://avatars.githubusercontent.com/u/225856934?v=4",
@@ -3098,11 +3855,55 @@
         "zero_revisions_score": 2,
         "impact_bonus_score": 0
       },
-      "projects": ["AUTOTEST"],
+      "projects": [
+        "AUTOTEST"
+      ],
+      "lastActiveDays": 13
+    },
+    {
+      "rank": 90,
+      "username": "thompeng",
+      "id": 4131926,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4131926?v=4",
+      "html_url": "https://github.com/thompeng",
+      "totalCommits": 5,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 20,
+      "code_score": 10,
+      "community_score": 10,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 10,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "gpx"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 76,
+      "rank": 91,
       "username": "dipika-mindfire",
       "id": 236581176,
       "avatar_url": "https://avatars.githubusercontent.com/u/236581176?v=4",
@@ -3138,11 +3939,55 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Smart-CodeGen-ML-Agent"],
+      "projects": [
+        "Smart-CodeGen-ML-Agent"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 77,
+      "rank": 92,
+      "username": "RituparnaRath",
+      "id": 208746386,
+      "avatar_url": "https://avatars.githubusercontent.com/u/208746386?v=4",
+      "html_url": "https://github.com/RituparnaRath",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 3,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 16,
+      "code_score": 0,
+      "community_score": 16,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 6,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Ignix-lite"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 93,
       "username": "jagannathmfs",
       "id": 87357401,
       "avatar_url": "https://avatars.githubusercontent.com/u/87357401?v=4",
@@ -3178,11 +4023,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["FireKubeX"],
+      "projects": [
+        "FireKubeX"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 78,
+      "rank": 94,
       "username": "vamsivallepu",
       "id": 53989958,
       "avatar_url": "https://avatars.githubusercontent.com/u/53989958?v=4",
@@ -3218,11 +4065,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Multi-Agent Knowledge Graph Chatbot"],
+      "projects": [
+        "Multi-Agent Knowledge Graph Chatbot"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 79,
+      "rank": 95,
       "username": "VenkataSaiChandrakanthReddyVemireddy",
       "id": 52132401,
       "avatar_url": "https://avatars.githubusercontent.com/u/52132401?v=4",
@@ -3258,11 +4107,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Multi-Agent Knowledge Graph Chatbot"],
+      "projects": [
+        "Multi-Agent Knowledge Graph Chatbot"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 80,
+      "rank": 96,
       "username": "SiriMuramulla268",
       "id": 55407033,
       "avatar_url": "https://avatars.githubusercontent.com/u/55407033?v=4",
@@ -3298,11 +4149,55 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["AUTOTEST"],
-      "lastActiveDays": 29
+      "projects": [
+        "AUTOTEST"
+      ],
+      "lastActiveDays": null
     },
     {
-      "rank": 81,
+      "rank": 97,
+      "username": "MNikks01",
+      "id": 66000593,
+      "avatar_url": "https://avatars.githubusercontent.com/u/66000593?v=4",
+      "html_url": "https://github.com/MNikks01",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 2,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 14,
+      "code_score": 0,
+      "community_score": 14,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 4,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Ignix UI"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 98,
       "username": "rsumit123",
       "id": 24500659,
       "avatar_url": "https://avatars.githubusercontent.com/u/24500659?v=4",
@@ -3338,11 +4233,55 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["AIHealthCounsellor"],
+      "projects": [
+        "AIHealthCounsellor"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 82,
+      "rank": 99,
+      "username": "Rakesh-sahoo07",
+      "id": 104811762,
+      "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
+      "html_url": "https://github.com/Rakesh-sahoo07",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 12,
+      "code_score": 0,
+      "community_score": 12,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "NFT Marketplace"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 100,
       "username": "mfsi-waseema",
       "id": 5079169,
       "avatar_url": "https://avatars.githubusercontent.com/u/5079169?v=4",
@@ -3378,11 +4317,55 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["QuickLaunchReactNativeKit"],
+      "projects": [
+        "QuickLaunchReactNativeKit"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 83,
+      "rank": 101,
+      "username": "Asima-Das",
+      "id": 172012787,
+      "avatar_url": "https://avatars.githubusercontent.com/u/172012787?v=4",
+      "html_url": "https://github.com/Asima-Das",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 12,
+      "code_score": 0,
+      "community_score": 12,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "react-text-igniter"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 102,
       "username": "sumanb-mindfire",
       "id": 190595003,
       "avatar_url": "https://avatars.githubusercontent.com/u/190595003?v=4",
@@ -3418,11 +4401,13 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["OpenRecap"],
+      "projects": [
+        "OpenRecap"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 84,
+      "rank": 103,
       "username": "nowoptics-deepak",
       "id": 205750247,
       "avatar_url": "https://avatars.githubusercontent.com/u/205750247?v=4",
@@ -3458,20 +4443,22 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "lastActiveDays": null
     },
     {
-      "rank": 85,
-      "username": "uzerjamal-mfsi",
-      "id": 220164293,
-      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-      "html_url": "https://github.com/uzerjamal-mfsi",
-      "totalCommits": 1,
+      "rank": 104,
+      "username": "Aadil0403",
+      "id": 122606242,
+      "avatar_url": "https://avatars.githubusercontent.com/u/122606242?v=4",
+      "html_url": "https://github.com/Aadil0403",
+      "totalCommits": 0,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
+      "totalIssuesOpened": 1,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
@@ -3481,15 +4468,15 @@
         "large": 0
       },
       "total_score": 12,
-      "code_score": 2,
-      "community_score": 10,
+      "code_score": 0,
+      "community_score": 12,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
-        "commits_score": 2,
+        "commits_score": 0,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 0,
+        "issues_opened_score": 2,
         "issue_comments_score": 0,
         "projects_score": 10,
         "tests_score": 0,
@@ -3498,8 +4485,94 @@
         "zero_revisions_score": 0,
         "impact_bonus_score": 0
       },
-      "projects": ["ADAC (Architecture Diagram as Code)"],
-      "lastActiveDays": 4
+      "projects": [
+        "ESLint Plugin Hub"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 105,
+      "username": "mjmicro",
+      "id": 11767389,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11767389?v=4",
+      "html_url": "https://github.com/mjmicro",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 12,
+      "code_score": 0,
+      "community_score": 12,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "Mindfire Foss Website"
+      ],
+      "lastActiveDays": null
+    },
+    {
+      "rank": 106,
+      "username": "its-me-ar",
+      "id": 152961826,
+      "avatar_url": "https://avatars.githubusercontent.com/u/152961826?v=4",
+      "html_url": "https://github.com/its-me-ar",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 12,
+      "code_score": 0,
+      "community_score": 12,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "projects": [
+        "markdown-reader — Native Desktop Markdown Reader"
+      ],
+      "lastActiveDays": null
     }
   ]
 }
