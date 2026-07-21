@@ -44,10 +44,10 @@ async function fetchPullRequestCount(owner, repo, author, token) {
   return total;
 }
 
-async function fetchIssueCount(owner, repo, author, token) {
+async function fetchAllIssueAuthors(owner, repo, token) {
   let page = 1;
-  let perPage = 100;
-  let total = 0;
+  const perPage = 100;
+  const authors = new Map();
   let more = true;
 
   while (more) {
@@ -55,13 +55,27 @@ async function fetchIssueCount(owner, repo, author, token) {
     const issues = await fetchData(url, {
       headers: { Authorization: `token ${token}` },
     });
-    total += issues.filter(
-      (issue) => !issue.pull_request && issue.user?.login === author
-    ).length;
+    for (const issue of issues) {
+      if (issue.pull_request || !issue.user?.login) continue;
+      const login = issue.user.login;
+      const existing = authors.get(login);
+      if (existing) {
+        existing.issueCount++;
+      } else {
+        authors.set(login, {
+          login,
+          avatar_url: issue.user.avatar_url,
+          html_url: issue.user.html_url,
+          id: issue.user.id,
+          type: issue.user.type,
+          issueCount: 1,
+        });
+      }
+    }
     more = issues.length === perPage;
     page++;
   }
-  return total;
+  return authors;
 }
 
 async function fetchAllCommits(owner, repo, branch = undefined, token) {
@@ -241,7 +255,11 @@ export async function getCollaboratorsWithDefault(owner, repo, token) {
       token
     );
 
-  return Promise.all(
+  // Issue authors are tracked even when they have no commits/PRs, so raising
+  // an issue counts as a contribution on its own.
+  const issueAuthors = await fetchAllIssueAuthors(owner, repo, token);
+
+  const codeContributors = await Promise.all(
     defaultBranchContributors.map(async (collab) => {
       const pullRequestCount = await fetchPullRequestCount(
         owner,
@@ -249,15 +267,30 @@ export async function getCollaboratorsWithDefault(owner, repo, token) {
         collab.login,
         token
       );
-      const issueCount = await fetchIssueCount(
-        owner,
-        repo,
-        collab.login,
-        token
-      );
-      return { ...collab, pullRequestCount, issueCount };
+      const issueAuthor = issueAuthors.get(collab.login);
+      issueAuthors.delete(collab.login);
+      return {
+        ...collab,
+        pullRequestCount,
+        issueCount: issueAuthor?.issueCount ?? 0,
+      };
     })
   );
+
+  const issueOnlyContributors = Array.from(issueAuthors.values()).map(
+    (author) => ({
+      login: author.login,
+      avatar_url: author.avatar_url,
+      html_url: author.html_url,
+      id: author.id,
+      type: author.type,
+      contributions: 0,
+      pullRequestCount: 0,
+      issueCount: author.issueCount,
+    })
+  );
+
+  return [...codeContributors, ...issueOnlyContributors];
 }
 
 export async function getContributorData(contributor) {
@@ -294,14 +327,21 @@ async function generateMapping() {
 
     const [, owner, repo] = match;
     try {
-      const res = await axios.get(
-        `https://api.github.com/repos/${owner}/${repo}/contributors`,
-        { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
-      );
-      res.data.forEach((contributor) => {
-        if (!mapping[contributor.login]) mapping[contributor.login] = [];
-        if (!mapping[contributor.login].includes(project.id)) {
-          mapping[contributor.login].push(project.id);
+      const [res, issueAuthors] = await Promise.all([
+        axios.get(
+          `https://api.github.com/repos/${owner}/${repo}/contributors`,
+          { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} }
+        ),
+        fetchAllIssueAuthors(owner, repo, TOKEN),
+      ]);
+
+      const logins = new Set(res.data.map((contributor) => contributor.login));
+      issueAuthors.forEach((_, login) => logins.add(login));
+
+      logins.forEach((login) => {
+        if (!mapping[login]) mapping[login] = [];
+        if (!mapping[login].includes(project.id)) {
+          mapping[login].push(project.id);
         }
       });
       logger.info(
