@@ -218,10 +218,10 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "web-component-canvas-editor",
+        "name": "angular-canvas-editor",
         "type": "npm",
-        "url": "https://www.npmjs.com/~mindfire",
-        "status": "draft"
+        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
+        "status": "published"
       },
       {
         "name": "react-canvas-editor",
@@ -230,10 +230,10 @@
         "status": "published"
       },
       {
-        "name": "angular-canvas-editor",
+        "name": "web-component-canvas-editor",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
-        "status": "published"
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
       }
     ]
   },
@@ -243,15 +243,15 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "ignix-ui",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-ui",
-        "status": "published"
-      },
-      {
         "name": "ignix-cli",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
+        "status": "published"
+      },
+      {
+        "name": "ignix-ui",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-ui",
         "status": "published"
       }
     ]
@@ -411,6 +411,24 @@
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite",
         "status": "published"
+      },
+      {
+        "name": "ignix-lite-engine",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-engine",
+        "status": "published"
+      },
+      {
+        "name": "ignix-lite-mcp",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-cli",
+        "status": "published"
+      },
+      {
+        "name": "ignix-lite-cli",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-mcp",
+        "status": "published"
       }
     ]
   },
@@ -425,5 +443,36 @@
     "title": "gpx",
     "isMonoRepo": false,
     "packages": []
+  },
+  {
+    "id": "39",
+    "title": "mdslide",
+    "isMonoRepo": true,
+    "packages": [
+      {
+        "name": "mdslide-cli",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-cli",
+        "status": "published"
+      },
+      {
+        "name": "mdslide-core",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-core",
+        "status": "published"
+      },
+      {
+        "name": "mdslide-parser",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
+        "status": "published"
+      },
+      {
+        "name": "mdslide-shared",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
+        "status": "published"
+      }
+    ]
   }
 ]

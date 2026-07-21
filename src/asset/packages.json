@@ -144,12 +144,12 @@
     "status": "published"
   },
   {
-    "name": "web-component-canvas-editor",
-    "title": "web-component-canvas-editor",
+    "name": "angular-canvas-editor",
+    "title": "angular-canvas-editor",
     "type": "npm",
-    "url": "https://www.npmjs.com/~mindfire",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
     "projectTitle": "Document Editor",
-    "status": "draft"
+    "status": "published"
   },
   {
     "name": "react-canvas-editor",
@@ -160,11 +160,19 @@
     "status": "published"
   },
   {
-    "name": "angular-canvas-editor",
-    "title": "angular-canvas-editor",
+    "name": "web-component-canvas-editor",
+    "title": "web-component-canvas-editor",
     "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/angular-canvas-editor",
+    "url": "https://www.npmjs.com/~mindfire",
     "projectTitle": "Document Editor",
+    "status": "draft"
+  },
+  {
+    "name": "ignix-cli",
+    "title": "ignix-cli",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
+    "projectTitle": "Ignix UI",
     "status": "published"
   },
   {
@@ -172,14 +180,6 @@
     "title": "ignix-ui",
     "type": "npm",
     "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-ui",
-    "projectTitle": "Ignix UI",
-    "status": "published"
-  },
-  {
-    "name": "ignix-cli",
-    "title": "ignix-cli",
-    "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-cli",
     "projectTitle": "Ignix UI",
     "status": "published"
   },
@@ -277,6 +277,62 @@
     "type": "npm",
     "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite",
     "projectTitle": "Ignix-lite",
+    "status": "published"
+  },
+  {
+    "name": "ignix-lite-engine",
+    "title": "ignix-lite-engine",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-engine",
+    "projectTitle": "Ignix-lite",
+    "status": "published"
+  },
+  {
+    "name": "ignix-lite-mcp",
+    "title": "ignix-lite-mcp",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-cli",
+    "projectTitle": "Ignix-lite",
+    "status": "published"
+  },
+  {
+    "name": "ignix-lite-cli",
+    "title": "ignix-lite-cli",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/ignix-lite-mcp",
+    "projectTitle": "Ignix-lite",
+    "status": "published"
+  },
+  {
+    "name": "mdslide-cli",
+    "title": "mdslide-cli",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-cli",
+    "projectTitle": "mdslide",
+    "status": "published"
+  },
+  {
+    "name": "mdslide-core",
+    "title": "mdslide-core",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-core",
+    "projectTitle": "mdslide",
+    "status": "published"
+  },
+  {
+    "name": "mdslide-parser",
+    "title": "mdslide-parser",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
+    "projectTitle": "mdslide",
+    "status": "published"
+  },
+  {
+    "name": "mdslide-shared",
+    "title": "mdslide-shared",
+    "type": "npm",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
+    "projectTitle": "mdslide",
     "status": "published"
   }
 ]
