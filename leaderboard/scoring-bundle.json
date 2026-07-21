@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T03:51:24.323Z",
+  "generated_at": "2026-07-21T09:04:04.160Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -3607,6 +3607,11 @@
           "firstMonthKey": "2024-05"
         },
         {
+          "d": "2025-08-25T06:09:10Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2025-08"
+        },
+        {
           "d": "2024-09-04T10:34:24Z",
           "title": "ESLint Plugin Hub",
           "firstMonthKey": "2024-09"
@@ -3620,11 +3625,6 @@
           "d": "2025-02-05T12:20:28Z",
           "title": "Document Editor",
           "firstMonthKey": "2025-02"
-        },
-        {
-          "d": "2025-08-25T06:09:10Z",
-          "title": "Ignix UI",
-          "firstMonthKey": "2025-08"
         },
         {
           "d": "2024-08-21T06:22:58Z",
@@ -3642,6 +3642,11 @@
           "firstMonthKey": "2025-12"
         },
         {
+          "d": "2025-10-10T06:09:43Z",
+          "title": "MonoDog",
+          "firstMonthKey": "2025-10"
+        },
+        {
           "d": "2026-02-18T07:12:03Z",
           "title": "ADAC (Architecture Diagram as Code)",
           "firstMonthKey": "2026-02"
@@ -3650,11 +3655,6 @@
           "d": "2026-07-01T05:24:49Z",
           "title": "DeepScanBot",
           "firstMonthKey": "2026-07"
-        },
-        {
-          "d": "2025-10-10T06:09:43Z",
-          "title": "MonoDog",
-          "firstMonthKey": "2025-10"
         }
       ]
     },
@@ -11409,6 +11409,14 @@
           "doc": false
         },
         {
+          "d": "2026-03-25T05:19:52Z",
+          "pts": 5,
+          "c": "small",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
           "d": "2024-05-07T09:41:27Z",
           "pts": 9,
           "c": "large",
@@ -11462,9 +11470,40 @@
         "2024-02-07T09:01:43Z",
         "2024-02-01T07:34:44Z",
         "2024-02-01T06:59:53Z",
-        "2023-11-20T10:07:34Z"
+        "2023-11-20T10:07:34Z",
+        "2026-04-20T12:30:09Z",
+        "2026-04-20T12:07:26Z",
+        "2026-04-20T11:53:37Z",
+        "2026-04-02T07:45:25Z",
+        "2026-03-27T06:06:11Z",
+        "2026-03-20T06:23:46Z",
+        "2026-03-17T08:20:27Z",
+        "2026-03-17T08:18:25Z",
+        "2026-03-17T08:15:41Z",
+        "2026-03-17T08:13:18Z",
+        "2026-03-17T08:11:58Z",
+        "2026-03-17T08:10:11Z",
+        "2026-03-17T08:08:23Z",
+        "2026-03-17T08:06:50Z",
+        "2026-03-17T08:05:04Z",
+        "2026-03-17T08:03:40Z",
+        "2026-03-16T09:00:54Z",
+        "2026-03-10T09:46:24Z",
+        "2026-03-05T08:35:00Z",
+        "2026-03-05T08:26:55Z",
+        "2026-03-05T08:19:46Z",
+        "2026-03-05T08:13:24Z",
+        "2026-03-02T08:30:58Z",
+        "2026-03-02T08:21:58Z",
+        "2026-03-02T08:04:09Z",
+        "2026-03-02T07:31:36Z"
       ],
-      "issueComments": [],
+      "issueComments": [
+        "2026-04-15T08:20:28Z",
+        "2026-04-15T10:30:33Z",
+        "2026-04-15T08:20:40Z",
+        "2026-03-27T06:09:00Z"
+      ],
       "projectFirsts": [
         {
           "d": "2024-02-20T12:08:35Z",
@@ -13320,7 +13359,10 @@
         "2025-09-22T11:12:14Z",
         "2025-08-24T17:13:26Z",
         "2025-10-30T11:26:38Z",
+        "2025-08-20T12:09:33Z",
         "2025-12-17T12:24:05Z",
+        "2025-10-08T07:30:17Z",
+        "2025-10-08T07:09:51Z",
         "2026-02-05T07:53:10Z",
         "2026-02-05T07:47:02Z",
         "2026-02-05T07:35:50Z",
@@ -13365,6 +13407,11 @@
           "firstMonthKey": "2024-03"
         },
         {
+          "d": "2025-01-30T07:26:02Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2025-01"
+        },
+        {
           "d": "2024-11-28T12:26:38Z",
           "title": "Pivothead",
           "firstMonthKey": "2024-11"
@@ -13373,11 +13420,6 @@
           "d": "2025-02-05T08:20:50Z",
           "title": "Document Editor",
           "firstMonthKey": "2025-02"
-        },
-        {
-          "d": "2025-01-30T07:26:02Z",
-          "title": "Ignix UI",
-          "firstMonthKey": "2025-01"
         },
         {
           "d": "2023-11-23T04:02:25Z",
@@ -13430,6 +13472,11 @@
           "firstMonthKey": "2025-04"
         },
         {
+          "d": "2025-08-20T12:09:33Z",
+          "title": "Multi Cloud Monorepo Boilerplate",
+          "firstMonthKey": "2025-08"
+        },
+        {
           "d": "2025-05-13T10:20:23Z",
           "title": "AUTOTEST",
           "firstMonthKey": "2025-05"
@@ -13438,6 +13485,11 @@
           "d": "2025-12-17T12:24:05Z",
           "title": "Next.js Fortress",
           "firstMonthKey": "2025-12"
+        },
+        {
+          "d": "2025-10-08T07:09:51Z",
+          "title": "MonoDog",
+          "firstMonthKey": "2025-10"
         },
         {
           "d": "2026-02-04T11:38:51Z",
@@ -13468,16 +13520,6 @@
           "d": "2026-04-13T13:05:28Z",
           "title": "mdslide",
           "firstMonthKey": "2026-04"
-        },
-        {
-          "d": "2025-10-08T07:09:51Z",
-          "title": "MonoDog",
-          "firstMonthKey": "2025-10"
-        },
-        {
-          "d": "2025-08-20T12:09:33Z",
-          "title": "Multi Cloud Monorepo Boilerplate",
-          "firstMonthKey": "2025-08"
         }
       ]
     },
@@ -14208,6 +14250,11 @@
           "firstMonthKey": "2026-04"
         },
         {
+          "d": "2025-08-29T09:46:48Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2025-08"
+        },
+        {
           "d": "2025-05-28T05:14:36Z",
           "title": "ESLint Plugin Hub",
           "firstMonthKey": "2025-05"
@@ -14221,11 +14268,6 @@
           "d": "2026-03-20T07:34:21Z",
           "title": "Document Editor",
           "firstMonthKey": "2026-03"
-        },
-        {
-          "d": "2025-08-29T09:46:48Z",
-          "title": "Ignix UI",
-          "firstMonthKey": "2025-08"
         }
       ]
     },
@@ -15069,14 +15111,14 @@
       ],
       "projectFirsts": [
         {
-          "d": "2025-05-28T10:36:10Z",
-          "title": "ESLint Plugin Hub",
-          "firstMonthKey": "2025-05"
-        },
-        {
           "d": "2025-06-12T11:05:59Z",
           "title": "Ignix UI",
           "firstMonthKey": "2025-06"
+        },
+        {
+          "d": "2025-05-28T10:36:10Z",
+          "title": "ESLint Plugin Hub",
+          "firstMonthKey": "2025-05"
         },
         {
           "d": "2026-02-16T06:45:00Z",
@@ -16931,14 +16973,14 @@
       "issueComments": [],
       "projectFirsts": [
         {
-          "d": "2026-04-15T09:28:07Z",
-          "title": "gpx",
-          "firstMonthKey": "2026-04"
-        },
-        {
           "d": "2026-06-02T12:34:45Z",
           "title": "MonoDog",
           "firstMonthKey": "2026-06"
+        },
+        {
+          "d": "2026-04-15T09:28:07Z",
+          "title": "gpx",
+          "firstMonthKey": "2026-04"
         }
       ]
     },
@@ -17566,6 +17608,9 @@
       "reviews": [],
       "codeComments": [],
       "issues": [
+        "2025-07-23T05:44:23Z",
+        "2025-07-23T05:40:48Z",
+        "2025-07-23T05:35:23Z",
         "2026-07-09T07:41:11Z",
         "2026-07-09T07:40:57Z",
         "2026-07-09T07:40:42Z",
@@ -23303,7 +23348,9 @@
       "codeComments": [],
       "issues": [
         "2026-03-06T10:01:39Z",
-        "2026-03-06T09:59:35Z"
+        "2026-03-06T09:59:35Z",
+        "2026-03-12T15:41:41Z",
+        "2026-03-12T15:37:28Z"
       ],
       "issueComments": [
         "2025-06-20T10:29:17Z",
@@ -23323,6 +23370,11 @@
           "firstMonthKey": "2025-04"
         },
         {
+          "d": "2026-03-12T15:37:28Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2026-03"
+        },
+        {
           "d": "2025-05-28T10:28:47Z",
           "title": "ESLint Plugin Hub",
           "firstMonthKey": "2025-05"
@@ -23331,11 +23383,6 @@
           "d": "2025-04-18T09:02:03Z",
           "title": "Document Editor",
           "firstMonthKey": "2025-04"
-        },
-        {
-          "d": "2026-03-12T15:37:28Z",
-          "title": "Ignix UI",
-          "firstMonthKey": "2026-03"
         }
       ]
     },
@@ -23917,14 +23964,14 @@
       ],
       "projectFirsts": [
         {
-          "d": "2024-11-29T10:46:47Z",
-          "title": "Pivothead",
-          "firstMonthKey": "2024-11"
-        },
-        {
           "d": "2025-08-21T12:32:37Z",
           "title": "Ignix UI",
           "firstMonthKey": "2025-08"
+        },
+        {
+          "d": "2024-11-29T10:46:47Z",
+          "title": "Pivothead",
+          "firstMonthKey": "2024-11"
         }
       ]
     },
@@ -26900,7 +26947,7 @@
       "id": 235709046,
       "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
       "html_url": "https://github.com/yogeshsmindfire",
-      "lastActiveDays": 1,
+      "lastActiveDays": 0,
       "commits": [
         "2026-03-24T06:20:17Z"
       ],
@@ -27136,11 +27183,22 @@
           "zr": false,
           "t": false,
           "doc": false
+        },
+        {
+          "d": "2026-05-12T15:00:01Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
         }
       ],
       "reviews": [
         "2026-04-01T16:19:15Z",
-        "2026-03-24T06:16:33Z"
+        "2026-03-24T06:16:33Z",
+        "2026-06-15T04:34:17Z",
+        "2026-05-19T09:55:36Z",
+        "2026-05-19T09:24:11Z"
       ],
       "codeComments": [
         "2026-03-24T06:16:33Z"
@@ -27159,7 +27217,14 @@
         "2026-02-17T02:44:27Z",
         "2026-02-17T02:44:26Z",
         "2026-02-17T02:44:24Z",
-        "2026-02-17T02:44:23Z"
+        "2026-02-17T02:44:23Z",
+        "2026-04-15T05:15:15Z",
+        "2026-04-15T05:15:13Z",
+        "2026-04-15T05:15:11Z",
+        "2026-04-15T05:14:56Z",
+        "2026-04-15T05:14:54Z",
+        "2026-04-15T05:14:39Z",
+        "2026-04-15T05:15:09Z"
       ],
       "issueComments": [],
       "projectFirsts": [
@@ -28134,6 +28199,225 @@
           "d": "2024-02-13T06:58:38Z",
           "title": "QuickLaunchReactNativeKit",
           "firstMonthKey": "2024-02"
+        }
+      ]
+    },
+    "Aadil0403": {
+      "id": 122606242,
+      "avatar_url": "https://avatars.githubusercontent.com/u/122606242?v=4",
+      "html_url": "https://github.com/Aadil0403",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2025-12-19T14:23:58Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2025-12-19T14:23:58Z",
+          "title": "ESLint Plugin Hub",
+          "firstMonthKey": "2025-12"
+        }
+      ]
+    },
+    "RituparnaRath": {
+      "id": 208746386,
+      "avatar_url": "https://avatars.githubusercontent.com/u/208746386?v=4",
+      "html_url": "https://github.com/RituparnaRath",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2026-05-08T14:28:57Z",
+        "2026-04-27T03:49:27Z",
+        "2026-04-23T14:21:44Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-04-23T14:21:44Z",
+          "title": "Ignix-lite",
+          "firstMonthKey": "2026-04"
+        }
+      ]
+    },
+    "soumya0809mindfiresolutions": {
+      "id": 220684530,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+      "html_url": "https://github.com/soumya0809mindfiresolutions",
+      "lastActiveDays": 24,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2025-09-12T09:16:56Z",
+        "2025-09-12T09:07:07Z",
+        "2025-09-05T09:41:35Z",
+        "2025-09-05T09:38:47Z",
+        "2025-09-05T09:35:59Z",
+        "2025-09-05T09:19:48Z",
+        "2025-09-05T09:11:09Z",
+        "2025-09-05T09:07:36Z",
+        "2025-09-05T09:02:37Z",
+        "2025-09-05T08:56:48Z",
+        "2025-09-05T08:39:53Z",
+        "2025-09-05T08:34:46Z",
+        "2026-06-27T14:58:06Z",
+        "2026-06-07T11:56:10Z",
+        "2026-06-07T11:47:43Z",
+        "2026-06-07T11:41:59Z",
+        "2026-06-07T11:34:38Z",
+        "2026-06-07T10:58:13Z",
+        "2026-05-31T12:18:55Z",
+        "2026-05-31T12:16:00Z",
+        "2026-05-31T12:11:25Z",
+        "2026-05-31T10:39:56Z",
+        "2026-05-31T10:35:35Z",
+        "2026-05-31T10:21:42Z",
+        "2026-05-31T10:19:20Z",
+        "2026-05-24T16:22:27Z",
+        "2026-05-24T15:46:56Z",
+        "2026-05-24T15:42:46Z",
+        "2026-05-24T15:39:02Z",
+        "2026-05-17T12:54:58Z",
+        "2026-05-17T12:40:08Z",
+        "2026-05-17T12:30:43Z",
+        "2026-05-17T12:18:47Z",
+        "2026-05-17T12:15:34Z",
+        "2026-03-04T08:06:55Z",
+        "2026-03-04T08:00:29Z",
+        "2026-03-04T07:54:19Z",
+        "2026-03-04T07:46:06Z",
+        "2025-09-29T13:45:12Z",
+        "2025-09-29T13:21:02Z",
+        "2025-08-17T18:25:16Z",
+        "2025-08-17T18:04:16Z",
+        "2025-08-17T17:49:02Z",
+        "2025-08-17T16:40:12Z",
+        "2025-07-27T18:11:39Z",
+        "2025-07-27T18:05:49Z",
+        "2025-07-27T18:00:44Z",
+        "2025-07-27T17:54:35Z",
+        "2025-07-27T15:56:09Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2025-07-27T15:56:09Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2025-07"
+        }
+      ]
+    },
+    "MNikks01": {
+      "id": 66000593,
+      "avatar_url": "https://avatars.githubusercontent.com/u/66000593?v=4",
+      "html_url": "https://github.com/MNikks01",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2026-02-16T05:24:14Z",
+        "2025-11-24T11:17:25Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2025-11-24T11:17:25Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2025-11"
+        }
+      ]
+    },
+    "its-me-ar": {
+      "id": 152961826,
+      "avatar_url": "https://avatars.githubusercontent.com/u/152961826?v=4",
+      "html_url": "https://github.com/its-me-ar",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2026-05-20T12:03:27Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-05-20T12:03:27Z",
+          "title": "markdown-reader — Native Desktop Markdown Reader",
+          "firstMonthKey": "2026-05"
+        }
+      ]
+    },
+    "mjmicro": {
+      "id": 11767389,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11767389?v=4",
+      "html_url": "https://github.com/mjmicro",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2026-04-14T16:14:41Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-04-14T16:14:41Z",
+          "title": "Mindfire Foss Website",
+          "firstMonthKey": "2026-04"
+        }
+      ]
+    },
+    "Rakesh-sahoo07": {
+      "id": 104811762,
+      "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
+      "html_url": "https://github.com/Rakesh-sahoo07",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2023-12-26T10:21:54Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2023-12-26T10:21:54Z",
+          "title": "NFT Marketplace",
+          "firstMonthKey": "2023-12"
+        }
+      ]
+    },
+    "Asima-Das": {
+      "id": 172012787,
+      "avatar_url": "https://avatars.githubusercontent.com/u/172012787?v=4",
+      "html_url": "https://github.com/Asima-Das",
+      "lastActiveDays": null,
+      "commits": [],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2024-09-09T08:22:18Z"
+      ],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2024-09-09T08:22:18Z",
+          "title": "react-text-igniter",
+          "firstMonthKey": "2024-09"
         }
       ]
     }
