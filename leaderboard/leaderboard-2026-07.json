@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-27T04:08:23.692Z",
+  "generated_at": "2026-07-28T03:24:42.005Z",
   "period": "monthly",
   "window_start": "2026-07-01T00:00:00.000Z",
-  "window_end": "2026-07-27T04:08:23.692Z",
+  "window_end": "2026-07-28T03:24:42.005Z",
   "month_label": "July 2026",
   "month_key": "2026-07",
-  "total_contributors": 15,
+  "total_contributors": 16,
   "leaderboard": [
     {
       "rank": 1,
@@ -13,13 +13,13 @@
       "id": 253200638,
       "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
       "html_url": "https://github.com/ansumanmindfire",
-      "totalCommits": 193,
-      "totalPRs": 34,
+      "totalCommits": 230,
+      "totalPRs": 36,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 18,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 5.68,
+      "avgCommitsPerPR": 6.39,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -29,21 +29,21 @@
       "prs_by_complexity": {
         "small": 5,
         "medium": 2,
-        "large": 27
+        "large": 29
       },
-      "total_score": 692,
-      "code_score": 654,
+      "total_score": 784,
+      "code_score": 745,
       "community_score": 20,
-      "quality_score": 18,
+      "quality_score": 19,
       "score_breakdown": {
-        "pr_score": 268,
-        "commits_score": 386,
+        "pr_score": 285,
+        "commits_score": 460,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 20,
         "issue_comments_score": 0,
         "projects_score": 0,
-        "tests_score": 0,
+        "tests_score": 1,
         "docs_score": 2,
         "mentor_score": 0,
         "zero_revisions_score": 16,
@@ -63,13 +63,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 72,
-      "totalPRs": 23,
-      "totalPRReviewsGiven": 43,
+      "totalCommits": 76,
+      "totalPRs": 24,
+      "totalPRReviewsGiven": 45,
       "totalCodeReviewComments": 6,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.13,
+      "avgCommitsPerPR": 3.17,
       "projectsWorkingOn": 5,
       "newProjectsThisMonth": 1,
       "projects": [
@@ -82,16 +82,16 @@
       "prs_by_complexity": {
         "small": 4,
         "medium": 1,
-        "large": 18
+        "large": 19
       },
-      "total_score": 513,
-      "code_score": 459,
+      "total_score": 537,
+      "code_score": 481,
       "community_score": 10,
-      "quality_score": 44,
+      "quality_score": 46,
       "score_breakdown": {
-        "pr_score": 180,
-        "commits_score": 144,
-        "pr_reviews_score": 129,
+        "pr_score": 188,
+        "commits_score": 152,
+        "pr_reviews_score": 135,
         "code_comments_score": 6,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
@@ -99,7 +99,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 44,
+        "zero_revisions_score": 46,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -116,30 +116,30 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "totalCommits": 129,
-      "totalPRs": 16,
+      "totalCommits": 130,
+      "totalPRs": 17,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 4,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 8.06,
+      "avgCommitsPerPR": 7.65,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
         "mdslide"
       ],
       "prs_by_complexity": {
-        "small": 3,
+        "small": 4,
         "medium": 3,
         "large": 10
       },
-      "total_score": 419,
-      "code_score": 378,
+      "total_score": 428,
+      "code_score": 385,
       "community_score": 8,
-      "quality_score": 33,
+      "quality_score": 35,
       "score_breakdown": {
-        "pr_score": 120,
-        "commits_score": 258,
+        "pr_score": 125,
+        "commits_score": 260,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 8,
@@ -148,7 +148,7 @@
         "tests_score": 3,
         "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 26,
+        "zero_revisions_score": 28,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -264,30 +264,30 @@
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
-      "totalCommits": 17,
-      "totalPRs": 5,
+      "totalCommits": 19,
+      "totalPRs": 6,
       "totalPRReviewsGiven": 4,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.4,
+      "avgCommitsPerPR": 3.17,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
         "mdslide"
       ],
       "prs_by_complexity": {
-        "small": 3,
+        "small": 4,
         "medium": 0,
         "large": 2
       },
-      "total_score": 93,
-      "code_score": 78,
+      "total_score": 104,
+      "code_score": 87,
       "community_score": 0,
-      "quality_score": 15,
+      "quality_score": 17,
       "score_breakdown": {
-        "pr_score": 32,
-        "commits_score": 34,
+        "pr_score": 37,
+        "commits_score": 38,
         "pr_reviews_score": 12,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -296,7 +296,7 @@
         "tests_score": 0,
         "docs_score": 5,
         "mentor_score": 0,
-        "zero_revisions_score": 10,
+        "zero_revisions_score": 12,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -305,7 +305,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 7,
@@ -354,7 +354,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 8,
@@ -403,7 +403,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 9,
@@ -452,7 +452,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 24
+      "lastActiveDays": 25
     },
     {
       "rank": 10,
@@ -509,7 +509,7 @@
       "id": 145108187,
       "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
       "html_url": "https://github.com/SobhanSah00",
-      "totalCommits": 1,
+      "totalCommits": 4,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
@@ -526,13 +526,13 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 18,
-      "code_score": 2,
+      "total_score": 24,
+      "code_score": 8,
       "community_score": 16,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
-        "commits_score": 2,
+        "commits_score": 8,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 16,
@@ -550,7 +550,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 19
+      "lastActiveDays": 20
     },
     {
       "rank": 12,
@@ -603,6 +603,55 @@
     },
     {
       "rank": 13,
+      "username": "Leny1337",
+      "id": 8152038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8152038?v=4",
+      "html_url": "https://github.com/Leny1337",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 1,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 1,
+      "projects": [
+        "gpx"
+      ],
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 12,
+      "code_score": 0,
+      "community_score": 12,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 2,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 1,
+        "issues_total": 1,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 1
+    },
+    {
+      "rank": 14,
       "username": "uzerjamal-mfsi",
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
@@ -648,10 +697,10 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
-      "rank": 14,
+      "rank": 15,
       "username": "Ashminita28",
       "id": 253201048,
       "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
@@ -700,7 +749,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 15,
+      "rank": 16,
       "username": "Bhupesh-MS",
       "id": 120394376,
       "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
@@ -744,7 +793,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     }
   ]
 }
