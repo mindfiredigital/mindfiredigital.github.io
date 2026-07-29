@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-28T03:24:42.005Z",
+  "generated_at": "2026-07-29T03:43:47.134Z",
   "period": "monthly",
   "window_start": "2026-07-01T00:00:00.000Z",
-  "window_end": "2026-07-28T03:24:42.005Z",
+  "window_end": "2026-07-29T03:43:47.134Z",
   "month_label": "July 2026",
   "month_key": "2026-07",
   "total_contributors": 16,
@@ -13,13 +13,13 @@
       "id": 253200638,
       "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
       "html_url": "https://github.com/ansumanmindfire",
-      "totalCommits": 230,
-      "totalPRs": 36,
+      "totalCommits": 233,
+      "totalPRs": 38,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 18,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 6.39,
+      "avgCommitsPerPR": 6.13,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -28,16 +28,16 @@
       ],
       "prs_by_complexity": {
         "small": 5,
-        "medium": 2,
-        "large": 29
+        "medium": 3,
+        "large": 30
       },
-      "total_score": 784,
-      "code_score": 745,
+      "total_score": 805,
+      "code_score": 766,
       "community_score": 20,
       "quality_score": 19,
       "score_breakdown": {
-        "pr_score": 285,
-        "commits_score": 460,
+        "pr_score": 300,
+        "commits_score": 466,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 20,
@@ -63,13 +63,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 76,
-      "totalPRs": 24,
-      "totalPRReviewsGiven": 45,
+      "totalCommits": 82,
+      "totalPRs": 26,
+      "totalPRReviewsGiven": 47,
       "totalCodeReviewComments": 6,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.17,
+      "avgCommitsPerPR": 3.15,
       "projectsWorkingOn": 5,
       "newProjectsThisMonth": 1,
       "projects": [
@@ -80,18 +80,18 @@
         "Mindfire Foss Website"
       ],
       "prs_by_complexity": {
-        "small": 4,
+        "small": 5,
         "medium": 1,
-        "large": 19
+        "large": 20
       },
-      "total_score": 537,
-      "code_score": 481,
+      "total_score": 573,
+      "code_score": 513,
       "community_score": 10,
-      "quality_score": 46,
+      "quality_score": 50,
       "score_breakdown": {
-        "pr_score": 188,
-        "commits_score": 152,
-        "pr_reviews_score": 135,
+        "pr_score": 202,
+        "commits_score": 164,
+        "pr_reviews_score": 141,
         "code_comments_score": 6,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
@@ -99,7 +99,7 @@
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
-        "zero_revisions_score": 46,
+        "zero_revisions_score": 50,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -305,7 +305,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 7,
@@ -354,7 +354,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 8,
@@ -403,7 +403,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 9,
@@ -452,7 +452,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 25
+      "lastActiveDays": 26
     },
     {
       "rank": 10,
@@ -550,7 +550,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 20
+      "lastActiveDays": 21
     },
     {
       "rank": 12,
@@ -648,7 +648,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 14,
@@ -697,7 +697,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     },
     {
       "rank": 15,
@@ -793,7 +793,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 14
     }
   ]
 }
