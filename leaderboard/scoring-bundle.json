@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T03:51:19.242Z",
+  "generated_at": "2026-08-04T03:59:35.261Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -6446,7 +6446,7 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 19,
+      "lastActiveDays": 20,
       "commits": [
         "2026-05-25T10:35:51Z",
         "2026-05-25T10:02:51Z",
@@ -8894,6 +8894,11 @@
       "reviews": [],
       "codeComments": [],
       "issues": [
+        "2026-08-03T07:07:46Z",
+        "2026-08-03T07:03:30Z",
+        "2026-08-03T07:02:04Z",
+        "2026-08-03T07:01:10Z",
+        "2026-08-03T06:59:58Z",
         "2026-07-29T12:04:57Z",
         "2026-07-29T12:02:38Z",
         "2026-07-29T12:00:46Z",
@@ -10204,7 +10209,7 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "lastActiveDays": 13,
+      "lastActiveDays": 1,
       "commits": [
         "2025-06-27T07:51:24Z",
         "2025-06-27T07:47:28Z",
@@ -11506,7 +11511,7 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "lastActiveDays": 7,
+      "lastActiveDays": null,
       "commits": [
         "2026-05-25T13:03:36Z",
         "2026-05-22T15:11:16Z",
@@ -13653,6 +13658,8 @@
         "2026-06-17T07:30:21Z"
       ],
       "issues": [
+        "2026-08-03T17:11:42Z",
+        "2026-08-03T17:05:45Z",
         "2026-06-23T07:19:17Z",
         "2026-06-23T05:49:52Z",
         "2026-06-23T05:43:04Z",
@@ -13728,6 +13735,11 @@
         "2026-05-20T12:35:31Z"
       ],
       "projectFirsts": [
+        {
+          "d": "2026-08-03T17:05:45Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2026-08"
+        },
         {
           "d": "2026-04-14T09:24:10Z",
           "title": "markdown-reader — Native Desktop Markdown Reader",
@@ -20871,7 +20883,7 @@
       "id": 120394376,
       "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
       "html_url": "https://github.com/Bhupesh-MS",
-      "lastActiveDays": 5,
+      "lastActiveDays": 6,
       "commits": [
         "2023-10-30T09:55:21Z",
         "2023-10-30T08:09:26Z",
@@ -22191,7 +22203,7 @@
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
-      "lastActiveDays": 7,
+      "lastActiveDays": 8,
       "commits": [
         "2026-06-24T19:08:43Z",
         "2026-06-24T18:51:58Z",
@@ -24638,7 +24650,7 @@
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
       "html_url": "https://github.com/uzerjamal-mfsi",
-      "lastActiveDays": 5,
+      "lastActiveDays": 6,
       "commits": [
         "2026-05-19T13:25:28Z",
         "2026-05-19T12:21:33Z",
@@ -25371,7 +25383,7 @@
       "id": 124277891,
       "avatar_url": "https://avatars.githubusercontent.com/u/124277891?v=4",
       "html_url": "https://github.com/ansumain",
-      "lastActiveDays": 9,
+      "lastActiveDays": 10,
       "commits": [
         "2026-04-20T13:15:49Z",
         "2026-04-20T13:13:31Z",
@@ -28132,7 +28144,7 @@
       "id": 145108187,
       "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
       "html_url": "https://github.com/SobhanSah00",
-      "lastActiveDays": 26,
+      "lastActiveDays": 27,
       "commits": [
         "2026-07-27T07:39:41Z",
         "2026-07-27T07:38:23Z",
@@ -28247,7 +28259,7 @@
       "id": 235709046,
       "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
       "html_url": "https://github.com/yogeshsmindfire",
-      "lastActiveDays": 12,
+      "lastActiveDays": 13,
       "commits": [
         "2026-03-24T06:20:17Z"
       ],
@@ -28899,7 +28911,7 @@
       "id": 225856934,
       "avatar_url": "https://avatars.githubusercontent.com/u/225856934?v=4",
       "html_url": "https://github.com/alokrajmindfire",
-      "lastActiveDays": 26,
+      "lastActiveDays": 27,
       "commits": [
         "2025-12-04T11:01:59Z",
         "2025-12-04T10:57:30Z"
@@ -29523,7 +29535,7 @@
       "id": 8152038,
       "avatar_url": "https://avatars.githubusercontent.com/u/8152038?v=4",
       "html_url": "https://github.com/Leny1337",
-      "lastActiveDays": 7,
+      "lastActiveDays": 8,
       "commits": [],
       "prs": [],
       "reviews": [],
