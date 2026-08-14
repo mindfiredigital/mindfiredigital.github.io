@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-13T03:26:25.036Z",
+  "generated_at": "2026-08-14T03:24:33.748Z",
   "period": "monthly",
   "window_start": "2026-08-01T00:00:00.000Z",
-  "window_end": "2026-08-13T03:26:25.036Z",
+  "window_end": "2026-08-14T03:24:33.748Z",
   "month_label": "August 2026",
   "month_key": "2026-08",
   "total_contributors": 5,
@@ -13,13 +13,13 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "totalCommits": 29,
+      "totalCommits": 30,
       "totalPRs": 11,
       "totalPRReviewsGiven": 12,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.64,
+      "avgCommitsPerPR": 2.73,
       "projectsWorkingOn": 3,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -32,13 +32,13 @@
         "medium": 3,
         "large": 5
       },
-      "total_score": 194,
-      "code_score": 171,
+      "total_score": 196,
+      "code_score": 173,
       "community_score": 0,
       "quality_score": 23,
       "score_breakdown": {
         "pr_score": 77,
-        "commits_score": 58,
+        "commits_score": 60,
         "pr_reviews_score": 36,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -105,7 +105,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 1
     },
     {
       "rank": 3,
@@ -154,7 +154,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 4,
