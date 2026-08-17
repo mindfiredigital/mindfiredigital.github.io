@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T02:44:39.884Z",
+  "generated_at": "2026-08-17T06:00:36.291Z",
   "period": "monthly",
   "month_label": "September 2025",
   "month_key": "2025-09",
@@ -565,15 +565,15 @@
       "projects": [
         "Ignix UI"
       ],
-      "newProjectsThisMonth": 1,
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
         "large": 0
       },
-      "total_score": 30,
+      "total_score": 20,
       "code_score": 0,
-      "community_score": 30,
+      "community_score": 20,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -582,7 +582,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 20,
         "issue_comments_score": 0,
-        "projects_score": 10,
+        "projects_score": 0,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
