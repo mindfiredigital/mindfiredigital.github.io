@@ -4,6 +4,19 @@ import logger from "../src/app/utils/logger.mjs";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// Helper to extract package name from URL
+function extractPackageNameFromUrl(url) {
+  if (!url) return null;
+  const npmMatch = url.match(/\/package\/@mindfiredigital\/(.+?)(?:\/|$)/);
+  if (npmMatch) return npmMatch[1];
+  const pypiMatch = url.match(/\/project\/(.+?)(?:\/|$)/);
+  if (pypiMatch) return pypiMatch[1];
+  const nugetMatch = url.match(/nuget\.org\/packages\/(.+?)(?:\/|$)/);
+  if (nugetMatch) return nugetMatch[1];
+  return null;
+}
+
+
 class RequestQueue {
   constructor(concurrency = 1, delayBetweenRequests = 1000) {
     this.concurrency = concurrency;
@@ -118,19 +131,21 @@ export async function getAllStats(npmPackages, pypiPackages) {
   );
 
   let completed = 0;
-  for (const packageName of npmPackages) {
+  for (const pkg of npmPackages) {
     try {
+      const packageName = pkg.name;
+      const cleanName = extractPackageNameFromUrl(pkg.url) || packageName;
       logger.info(
-        `[${completed + 1}/${npmPackages.length}] Processing ${packageName}...`
+        `[${completed + 1}/${npmPackages.length}] Processing ${packageName} (clean name: ${cleanName})...`
       );
 
-      const dayStats = await getNpmStats(packageName, "last-day");
-      const weekStats = await getNpmStats(packageName, "last-week");
-      const yearStats = await getNpmStats(packageName, "last-year");
+      const dayStats = await getNpmStats(cleanName, "last-day");
+      const weekStats = await getNpmStats(cleanName, "last-week");
+      const yearStats = await getNpmStats(cleanName, "last-year");
       // FIXED - use chunked all-time instead of capped single range
-      const totalStats = await getNpmTotalAllTime(packageName);
+      const totalStats = await getNpmTotalAllTime(cleanName);
 
-      if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0) {
+      if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0 || totalStats !== 0) {
         statsMap[packageName] = {
           name: packageName,
           type: "npm",
@@ -147,17 +162,19 @@ export async function getAllStats(npmPackages, pypiPackages) {
       }
       completed++;
     } catch (error) {
-      logger.error(`Error fetching stats for ${packageName}: ${error.message}`);
+      logger.error(`Error fetching stats for ${pkg.name}: ${error.message}`);
       completed++;
     }
   }
 
   logger.info(`Fetching PyPI stats...`);
   await Promise.all(
-    pypiPackages.map(async (packageName) => {
+    pypiPackages.map(async (pkg) => {
       try {
-        const stats = await fetchPyPIDownloadStats(packageName);
-        const totalDownloads = await fetchTotalDownloads(packageName);
+        const packageName = pkg.name;
+        const cleanName = extractPackageNameFromUrl(pkg.url) || packageName;
+        const stats = await fetchPyPIDownloadStats(cleanName);
+        const totalDownloads = await fetchTotalDownloads(cleanName);
         if (stats) {
           statsMap[packageName] = {
             name: packageName,
@@ -174,7 +191,7 @@ export async function getAllStats(npmPackages, pypiPackages) {
         }
       } catch (error) {
         logger.error(
-          `Error fetching stats for ${packageName} (PyPI): ${error.message}`
+          `Error fetching stats for ${pkg.name} (PyPI): ${error.message}`
         );
       }
     })
@@ -231,7 +248,7 @@ function calculateAverageDownloads(stats) {
   );
 }
 
-async function updatePackages() {
+export async function updatePackages() {
   const query = `
     query getCurrentProjects {
       foss_projects(filter: { _and: [{ project_type: { _eq: "current" }}, { status: { _eq: "published" }}]}) {
@@ -294,4 +311,8 @@ async function updatePackages() {
   }
 }
 
-updatePackages();
+import { fileURLToPath } from "url";
+const isMain = process.argv[1] && (process.argv[1] === fileURLToPath(import.meta.url) || process.argv[1].endsWith("updatePackages.mjs"));
+if (isMain) {
+  updatePackages();
+}

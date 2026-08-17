@@ -266,7 +266,14 @@
     "id": "25",
     "title": "DeepScanBot",
     "isMonoRepo": false,
-    "packages": []
+    "packages": [
+      {
+        "name": "deepscanbot",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/deepscanbot",
+        "status": "published"
+      }
+    ]
   },
   {
     "id": "26",
@@ -351,12 +358,6 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "textigniter-angular",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
-        "status": "published"
-      },
-      {
         "name": "textigniter",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniterjs",
@@ -372,6 +373,12 @@
         "name": "textigniter-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
+        "status": "published"
+      },
+      {
+        "name": "textigniter-angular",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
         "status": "published"
       }
     ]
@@ -442,7 +449,14 @@
     "id": "38",
     "title": "gpx",
     "isMonoRepo": false,
-    "packages": []
+    "packages": [
+      {
+        "name": "gpx",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/gpx",
+        "status": "published"
+      }
+    ]
   },
   {
     "id": "39",

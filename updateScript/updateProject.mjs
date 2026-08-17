@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { getAllStats } from "./updatePackages.mjs";
+import fs from "fs";
+import { getAllStats, updatePackages } from "./updatePackages.mjs";
 import {
   getContributorData,
   getCollaboratorsWithDefault,
@@ -73,6 +74,9 @@ async function fetchAllGithubRepos(username, token) {
 async function updateProjects() {
   try {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
+    // Fetch and update packages list first to avoid stale data/race conditions
+    await updatePackages();
 
     const [currentProjectsData, upcomingProjectsData, repositories] =
       await Promise.all([
@@ -210,15 +214,19 @@ async function updateProjects() {
       `Contributors list updated successfully. Total: ${sortedContributions.length}`
     );
 
-    getAllStats(
-      npmPackages.map((p) => p.name),
-      pypiPackages.map((p) => p.name)
-    )
+    // Read the freshly updated packages.json to calculate stats
+    const freshPackagesData = JSON.parse(
+      fs.readFileSync(new URL("../src/asset/packages.json", import.meta.url), "utf8")
+    );
+    const freshNpmPackages = freshPackagesData.filter((pkg) => pkg.type === "npm");
+    const freshPypiPackages = freshPackagesData.filter((pkg) => pkg.type.toLowerCase() === "pypi");
+
+    getAllStats(freshNpmPackages, freshPypiPackages)
       .then((statsMap) => {
         const statsWithTitles = Object.values(statsMap)
           .map((value) => {
-            const npmPackage = npmPackages.find((p) => p.name === value.name);
-            const pypiPackage = pypiPackages.find((p) => p.name === value.name);
+            const npmPackage = freshNpmPackages.find((p) => p.name === value.name);
+            const pypiPackage = freshPypiPackages.find((p) => p.name === value.name);
             const title = npmPackage?.title || pypiPackage?.title || value.name;
             return { ...value, title };
           })
