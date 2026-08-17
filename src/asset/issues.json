@@ -1,193 +1,283 @@
 {
-  "total_count": 433,
-  "fetched_count": 433,
-  "fetched_at": "2026-07-21T09:08:58.417Z",
+  "total_count": 404,
+  "fetched_count": 404,
+  "fetched_at": "2026-08-17T06:03:43.413Z",
   "issues": [
     {
-      "id": 4926572817,
-      "number": 96,
-      "title": "[BUG] : False version bumping",
-      "html_url": "https://github.com/mindfiredigital/gpx/issues/96",
-      "created_at": "2026-07-20T07:01:41Z",
-      "updated_at": "2026-07-20T07:01:41Z",
+      "id": 5158115559,
+      "number": 921,
+      "title": "[BUG]: after uplaoding file there is alignment issue in 1file and selected file text",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/921",
+      "created_at": "2026-08-15T06:50:36Z",
+      "updated_at": "2026-08-15T06:50:36Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "soumya0809mindfiresolutions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+        "html_url": "https://github.com/soumya0809mindfiresolutions"
+      }
+    },
+    {
+      "id": 5158052786,
+      "number": 920,
+      "title": "[BUG]: 3 delete and clear options available to delete uploaded file(not sure if its a bug or not)",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/920",
+      "created_at": "2026-08-15T06:33:04Z",
+      "updated_at": "2026-08-15T06:33:32Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "soumya0809mindfiresolutions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+        "html_url": "https://github.com/soumya0809mindfiresolutions"
+      }
+    },
+    {
+      "id": 5158042144,
+      "number": 919,
+      "title": "[BUG]: causing alignment issue while we upload long file name",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/919",
+      "created_at": "2026-08-15T06:30:02Z",
+      "updated_at": "2026-08-15T06:30:02Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "soumya0809mindfiresolutions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+        "html_url": "https://github.com/soumya0809mindfiresolutions"
+      }
+    },
+    {
+      "id": 5158032905,
+      "number": 918,
+      "title": "[BUG]: its allowing file name more than 50 characters",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/918",
+      "created_at": "2026-08-15T06:27:06Z",
+      "updated_at": "2026-08-15T06:27:06Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "soumya0809mindfiresolutions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+        "html_url": "https://github.com/soumya0809mindfiresolutions"
+      }
+    },
+    {
+      "id": 5157923205,
+      "number": 917,
+      "title": "[BUG]: when I select size as icon texts are going outside the box",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/917",
+      "created_at": "2026-08-15T05:54:56Z",
+      "updated_at": "2026-08-15T05:54:56Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "soumya0809mindfiresolutions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
+        "html_url": "https://github.com/soumya0809mindfiresolutions"
+      }
+    },
+    {
+      "id": 5060501759,
+      "number": 902,
+      "title": "[BUG]: `Input` and `Textarea` components lack standard HTML attributes, `forwardRef`, and crash without strict props",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/902",
+      "created_at": "2026-08-04T12:34:36Z",
+      "updated_at": "2026-08-07T10:09:38Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "Ashminita28",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
+        "html_url": "https://github.com/Ashminita28"
+      }
+    },
+    {
+      "id": 5052371021,
+      "number": 898,
+      "title": "[BUG]: Table columns fail to expand and fill available width on large screens",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/898",
+      "created_at": "2026-08-03T17:11:42Z",
+      "updated_at": "2026-08-04T12:44:20Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "Ashminita28",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
+        "html_url": "https://github.com/Ashminita28"
+      }
+    },
+    {
+      "id": 5052322194,
+      "number": 897,
+      "title": "[BUG]: Framer Motion warning in Table component due to AnimatePresence mode",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/897",
+      "created_at": "2026-08-03T17:05:45Z",
+      "updated_at": "2026-08-04T12:45:12Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
+      "labels": [],
+      "user": {
+        "login": "Ashminita28",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
+        "html_url": "https://github.com/Ashminita28"
+      }
+    },
+    {
+      "id": 5047242443,
+      "number": 153,
+      "title": "[BUG]: Null score arithmetic errors and optional alert timestamps",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/153",
+      "created_at": "2026-08-03T07:07:46Z",
+      "updated_at": "2026-08-03T07:09:39Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "ansumanmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+        "html_url": "https://github.com/ansumanmindfire"
+      }
+    },
+    {
+      "id": 5047212687,
+      "number": 152,
+      "title": "[BUG]: Bound NPM registry version checks with concurrency queue and 10min TTL cache",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/152",
+      "created_at": "2026-08-03T07:03:30Z",
+      "updated_at": "2026-08-03T07:09:33Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "ansumanmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+        "html_url": "https://github.com/ansumanmindfire"
+      }
+    },
+    {
+      "id": 5047203237,
+      "number": 151,
+      "title": "[BUG]: unify duplicate packageOverallScore property into overallScore",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/151",
+      "created_at": "2026-08-03T07:02:04Z",
+      "updated_at": "2026-08-03T07:09:28Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "ansumanmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+        "html_url": "https://github.com/ansumanmindfire"
+      }
+    },
+    {
+      "id": 5047197402,
+      "number": 150,
+      "title": "[BUG]: Represent unscanned packages with null score and \"Not Audited\" status",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/150",
+      "created_at": "2026-08-03T07:01:10Z",
+      "updated_at": "2026-08-03T07:09:21Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "ansumanmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+        "html_url": "https://github.com/ansumanmindfire"
+      }
+    },
+    {
+      "id": 5047189857,
+      "number": 149,
+      "title": "[BUG]: Update dashboard header logo and browser tab favicon to Mindfire flame",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/149",
+      "created_at": "2026-08-03T06:59:58Z",
+      "updated_at": "2026-08-03T07:09:15Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "ansumanmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
+        "html_url": "https://github.com/ansumanmindfire"
+      }
+    },
+    {
+      "id": 4991944613,
+      "number": 106,
+      "title": "[FEAT] Signing format (GPG/SSH), interactive menu, optional ssh-config",
+      "html_url": "https://github.com/mindfiredigital/gpx/issues/106",
+      "created_at": "2026-07-27T20:14:40Z",
+      "updated_at": "2026-07-27T20:14:40Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/gpx",
       "repoName": "gpx",
       "labels": [
         {
-          "id": 10681449657,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 10681449693,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
         }
       ],
       "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
+        "login": "Leny1337",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8152038?v=4",
+        "html_url": "https://github.com/Leny1337"
       }
     },
     {
-      "id": 4911259587,
-      "number": 97,
-      "title": "[docs] : Update docusaurus + api documentation",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/97",
-      "created_at": "2026-07-17T12:22:51Z",
-      "updated_at": "2026-07-17T12:22:51Z",
+      "id": 4956540581,
+      "number": 895,
+      "title": "[Feature]:Transform Ignix CLI into a Standalone Agentic CLI",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/895",
+      "created_at": "2026-07-23T07:32:59Z",
+      "updated_at": "2026-07-23T07:32:59Z",
       "state": "open",
       "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
+      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
+      "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911226239,
-      "number": 96,
-      "title": "[BUG]: Consolidate imports and implement configurable coverage paths",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/96",
-      "created_at": "2026-07-17T12:18:16Z",
-      "updated_at": "2026-07-17T12:18:16Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911208033,
-      "number": 95,
-      "title": "[BUG]: Implement secure token encryption and GitHub retry logic",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/95",
-      "created_at": "2026-07-17T12:15:46Z",
-      "updated_at": "2026-07-17T12:15:46Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911184648,
-      "number": 94,
-      "title": "[refactor] : Standardize UI loading states and remove redundant code",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/94",
-      "created_at": "2026-07-17T12:12:42Z",
-      "updated_at": "2026-07-17T12:12:48Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911156035,
-      "number": 93,
-      "title": "[BUG]: Unify CI and Release Pipeline dashboards",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/93",
-      "created_at": "2026-07-17T12:08:51Z",
-      "updated_at": "2026-07-17T12:12:12Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911138560,
-      "number": 92,
-      "title": "[Feature]: Implement automated release scheduling and cancellation",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/92",
-      "created_at": "2026-07-17T12:06:16Z",
-      "updated_at": "2026-07-17T12:12:06Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911127895,
-      "number": 91,
-      "title": "[BUG]: Add in-memory caching and stale data cleanup",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/91",
-      "created_at": "2026-07-17T12:04:44Z",
-      "updated_at": "2026-07-17T12:12:00Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911114821,
-      "number": 90,
-      "title": "[BUG]: Implement manual CI workflow triggers from the dashboard",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/90",
-      "created_at": "2026-07-17T12:02:49Z",
-      "updated_at": "2026-07-17T12:11:42Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4911106292,
-      "number": 89,
-      "title": "[BUG]: Fix rendering - package commit arrays",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/89",
-      "created_at": "2026-07-17T12:01:33Z",
-      "updated_at": "2026-07-17T12:11:26Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
@@ -216,258 +306,6 @@
       }
     },
     {
-      "id": 4882889303,
-      "number": 887,
-      "title": "style(docs): standardize column widths for component properties tables",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/887",
-      "created_at": "2026-07-14T12:08:50Z",
-      "updated_at": "2026-07-14T12:08:50Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "Rituparna158",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
-        "html_url": "https://github.com/Rituparna158"
-      }
-    },
-    {
-      "id": 4872861358,
-      "number": 885,
-      "title": "[BUG]: DatePicker calendar popup gets cut off and is not fully visible near screen edges",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/885",
-      "created_at": "2026-07-13T10:46:54Z",
-      "updated_at": "2026-07-13T10:46:54Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "Rituparna158",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
-        "html_url": "https://github.com/Rituparna158"
-      }
-    },
-    {
-      "id": 4844235549,
-      "number": 78,
-      "title": "Make DeepScanBot CLI agent-friendly and automation-ready",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/78",
-      "created_at": "2026-07-09T07:36:46Z",
-      "updated_at": "2026-07-09T07:36:46Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844230919,
-      "number": 77,
-      "title": "Automate CLI release and distribution pipeline",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/77",
-      "created_at": "2026-07-09T07:36:06Z",
-      "updated_at": "2026-07-09T07:36:06Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844223365,
-      "number": 76,
-      "title": "Document all supported installation methods",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/76",
-      "created_at": "2026-07-09T07:35:00Z",
-      "updated_at": "2026-07-09T07:35:00Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844217818,
-      "number": 75,
-      "title": "Create Windows PowerShell installer",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/75",
-      "created_at": "2026-07-09T07:34:14Z",
-      "updated_at": "2026-07-09T07:34:14Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844214386,
-      "number": 74,
-      "title": "Create Linux/macOS installation script (curl | sh)",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/74",
-      "created_at": "2026-07-09T07:33:45Z",
-      "updated_at": "2026-07-09T07:33:45Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844209304,
-      "number": 73,
-      "title": "Add Homebrew support",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/73",
-      "created_at": "2026-07-09T07:33:05Z",
-      "updated_at": "2026-07-09T07:33:05Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844199038,
-      "number": 126,
-      "title": "[FEATURE[: Implement `mdslide ai-rules` Command",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/126",
-      "created_at": "2026-07-09T07:31:35Z",
-      "updated_at": "2026-07-09T07:31:35Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 4844197584,
-      "number": 72,
-      "title": "Publish CLI as an npm package",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/72",
-      "created_at": "2026-07-09T07:31:21Z",
-      "updated_at": "2026-07-09T07:31:21Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844195251,
-      "number": 125,
-      "title": "[FEATURE]: Scaffold AI Rules in `mdslide init`",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/125",
-      "created_at": "2026-07-09T07:31:01Z",
-      "updated_at": "2026-07-09T07:31:01Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 4844190941,
-      "number": 71,
-      "title": "Support installation using Go (go install)",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/71",
-      "created_at": "2026-07-09T07:30:24Z",
-      "updated_at": "2026-07-09T07:30:24Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844185013,
-      "number": 70,
-      "title": "Support installation via GitHub Releases",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/70",
-      "created_at": "2026-07-09T07:29:31Z",
-      "updated_at": "2026-07-09T07:29:31Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
-      "id": 4844166581,
-      "number": 69,
-      "title": "CLI Distribution & Installation Improvements",
-      "html_url": "https://github.com/mindfiredigital/DeepScanBot/issues/69",
-      "created_at": "2026-07-09T07:26:49Z",
-      "updated_at": "2026-07-09T07:26:49Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/DeepScanBot",
-      "repoName": "DeepScanBot",
-      "labels": [],
-      "user": {
-        "login": "anujmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-        "html_url": "https://github.com/anujmindfire"
-      }
-    },
-    {
       "id": 4837611727,
       "number": 124,
       "title": "[FEATURE]: Setup Homebrew Tap and Auto-Update GitHub Workflow",
@@ -483,150 +321,6 @@
         "login": "SobhanSah00",
         "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
         "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837607507,
-      "number": 123,
-      "title": "[FEATURE] : Create macOS/Linux `.sh` and Windows `.ps1` installers",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/123",
-      "created_at": "2026-07-08T12:52:21Z",
-      "updated_at": "2026-07-08T12:52:21Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837603503,
-      "number": 122,
-      "title": "[FEATURE]: Auto-disable spinners/progress bars on non-terminal streams",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/122",
-      "created_at": "2026-07-08T12:51:50Z",
-      "updated_at": "2026-07-08T12:51:50Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837598226,
-      "number": 121,
-      "title": "[FEATURE]: Expose CLI command tree schema via `schema` command",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/121",
-      "created_at": "2026-07-08T12:51:14Z",
-      "updated_at": "2026-07-08T12:51:14Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837594726,
-      "number": 120,
-      "title": "[FEATURE]: Disable interactive prompts on non-TTY streams and add `--no-input`",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/120",
-      "created_at": "2026-07-08T12:50:48Z",
-      "updated_at": "2026-07-08T12:50:48Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837531086,
-      "number": 119,
-      "title": "[FEATURE]: Implement structured exit codes and error-with-fix format",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/119",
-      "created_at": "2026-07-08T12:42:57Z",
-      "updated_at": "2026-07-08T12:42:57Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837527120,
-      "number": 118,
-      "title": "[FEATURE]: Redirect all diagnostic, progress, and error output to `stderr` in JSON mode",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/118",
-      "created_at": "2026-07-08T12:42:28Z",
-      "updated_at": "2026-07-08T12:42:28Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4837519652,
-      "number": 117,
-      "title": "[FEATURE]: Support `--json` flag and standardize JSON output format across all commands",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/117",
-      "created_at": "2026-07-08T12:41:31Z",
-      "updated_at": "2026-07-08T12:41:31Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "SobhanSah00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-        "html_url": "https://github.com/SobhanSah00"
-      }
-    },
-    {
-      "id": 4836371991,
-      "number": 116,
-      "title": "[Issue] : ci: automate version bumping / changeset generation in CI",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/116",
-      "created_at": "2026-07-08T09:58:35Z",
-      "updated_at": "2026-07-08T09:58:35Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
       }
     },
     {
@@ -716,183 +410,14 @@
       }
     },
     {
-      "id": 4793070338,
-      "number": 83,
-      "title": "[FEATURE] : Add deterministic layout setup - Dependency Graph",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/83",
-      "created_at": "2026-07-02T09:24:48Z",
-      "updated_at": "2026-07-17T12:11:14Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4792182064,
-      "number": 82,
-      "title": "[BUG]: Fix blank package health status",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/82",
-      "created_at": "2026-07-02T07:21:02Z",
-      "updated_at": "2026-07-02T07:22:46Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4785276289,
-      "number": 80,
-      "title": "[FEATURE]: Add Schedule Release Component- Publish Control dashboard",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/80",
-      "created_at": "2026-07-01T11:55:34Z",
-      "updated_at": "2026-07-02T07:13:42Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4776267490,
-      "number": 78,
-      "title": "[FEATURE]: Independent Changelog Route + Search",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/78",
-      "created_at": "2026-06-30T11:21:17Z",
-      "updated_at": "2026-06-30T11:21:39Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4767377779,
-      "number": 94,
-      "title": "[BUG] : Autogenerate changeset is not configured",
-      "html_url": "https://github.com/mindfiredigital/gpx/issues/94",
-      "created_at": "2026-06-29T10:45:06Z",
-      "updated_at": "2026-06-29T16:38:36Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/gpx",
-      "repoName": "gpx",
-      "labels": [
-        {
-          "id": 10681449657,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
-        }
-      ],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4765737403,
-      "number": 72,
-      "title": "[FEATURE]: CI Pipeline Management Controls and Dynamic Stats",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/72",
-      "created_at": "2026-06-29T06:50:51Z",
-      "updated_at": "2026-06-29T16:40:39Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4765689973,
-      "number": 71,
-      "title": "[BUG]: Enhance Publish Control UI and integrate Package Commit Counts",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/71",
-      "created_at": "2026-06-29T06:42:31Z",
-      "updated_at": "2026-06-29T16:40:29Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4765638009,
-      "number": 70,
-      "title": "[BUG]: Missing ScheduledRelease schema and mock release data",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/70",
-      "created_at": "2026-06-29T06:32:26Z",
-      "updated_at": "2026-06-29T16:40:12Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4765608159,
-      "number": 69,
-      "title": "[FEATURE]: Implement UI Skeleton Loaders to replace text loading states",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/69",
-      "created_at": "2026-06-29T06:26:30Z",
-      "updated_at": "2026-06-29T16:40:04Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
       "id": 4761551899,
       "number": 877,
       "title": "[Feature]: Add Dot Matrix & Animated Loader Collection",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/877",
       "created_at": "2026-06-28T08:08:39Z",
-      "updated_at": "2026-06-28T08:08:39Z",
+      "updated_at": "2026-08-15T19:54:18Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -926,9 +451,9 @@
       "title": "[Feature]: Add Animated & 3D Background Components",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/875",
       "created_at": "2026-06-28T06:59:42Z",
-      "updated_at": "2026-06-28T06:59:42Z",
+      "updated_at": "2026-08-15T19:54:01Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -944,9 +469,9 @@
       "title": "[Feature]: Add Cursor Effects Collection (Crosshair & Interactive Cursors)",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/874",
       "created_at": "2026-06-28T06:54:36Z",
-      "updated_at": "2026-06-28T06:54:36Z",
+      "updated_at": "2026-08-15T19:53:48Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -962,9 +487,9 @@
       "title": "[Feature]: Add Timer & Countdown Components",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/873",
       "created_at": "2026-06-28T06:53:15Z",
-      "updated_at": "2026-06-28T06:53:15Z",
+      "updated_at": "2026-08-15T19:53:27Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -980,7 +505,7 @@
       "title": "[Feature]: Add Tour & Product Onboarding Components",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/872",
       "created_at": "2026-06-28T06:51:25Z",
-      "updated_at": "2026-06-28T06:52:59Z",
+      "updated_at": "2026-08-15T19:53:05Z",
       "state": "open",
       "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
@@ -998,9 +523,9 @@
       "title": "[Feature]:  Add Marquee Component with Advanced Variants",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/871",
       "created_at": "2026-06-28T06:49:12Z",
-      "updated_at": "2026-06-28T06:49:12Z",
+      "updated_at": "2026-08-15T19:52:42Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -1016,9 +541,9 @@
       "title": "[Feature]: Animated Charts and Graphs",
       "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/870",
       "created_at": "2026-06-28T06:47:09Z",
-      "updated_at": "2026-06-28T06:47:21Z",
+      "updated_at": "2026-08-15T19:52:26Z",
       "state": "open",
-      "comments": 0,
+      "comments": 2,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -1044,42 +569,6 @@
         "login": "soumya0809mindfiresolutions",
         "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
         "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4716844478,
-      "number": 68,
-      "title": "[BUG]: Integrate Real GitHub Actions API",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/68",
-      "created_at": "2026-06-22T13:01:42Z",
-      "updated_at": "2026-06-29T16:39:58Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
-      }
-    },
-    {
-      "id": 4716831458,
-      "number": 67,
-      "title": "[BUG]: Remove mocked ci-status frontend service layer",
-      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/67",
-      "created_at": "2026-06-22T13:00:06Z",
-      "updated_at": "2026-06-29T16:39:52Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
-      "repoName": "MonoDog",
-      "labels": [],
-      "user": {
-        "login": "ansumanmindfire",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
-        "html_url": "https://github.com/ansumanmindfire"
       }
     },
     {
@@ -1863,24 +1352,6 @@
       }
     },
     {
-      "id": 4266837297,
-      "number": 3,
-      "title": "mdslide — GitHub Issue & PR Templates",
-      "html_url": "https://github.com/mindfiredigital/mdslide/issues/3",
-      "created_at": "2026-04-15T06:48:25Z",
-      "updated_at": "2026-04-15T06:48:25Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
-      "repoName": "mdslide",
-      "labels": [],
-      "user": {
-        "login": "Prarthanaxdev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/78857337?v=4",
-        "html_url": "https://github.com/Prarthanaxdev"
-      }
-    },
-    {
       "id": 4266429409,
       "number": 8,
       "title": "gpx - Security Model & File Permissions",
@@ -2353,7 +1824,7 @@
       "title": "Software Requirements Specification (SRS)",
       "html_url": "https://github.com/mindfiredigital/mdslide/issues/1",
       "created_at": "2026-04-13T13:06:38Z",
-      "updated_at": "2026-04-28T11:06:21Z",
+      "updated_at": "2026-07-23T13:59:48Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/mdslide",
