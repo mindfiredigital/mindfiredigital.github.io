@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-19T02:37:39.409Z",
+  "generated_at": "2026-08-20T02:36:35.185Z",
   "period": "monthly",
   "window_start": "2026-08-01T00:00:00.000Z",
-  "window_end": "2026-08-19T02:37:39.409Z",
+  "window_end": "2026-08-20T02:36:35.185Z",
   "month_label": "August 2026",
   "month_key": "2026-08",
   "total_contributors": 8,
@@ -69,7 +69,7 @@
       "totalPRs": 9,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 4,
+      "totalIssuesOpened": 5,
       "totalIssueComments": 3,
       "avgCommitsPerPR": 3.33,
       "projectsWorkingOn": 2,
@@ -83,16 +83,16 @@
         "medium": 1,
         "large": 6
       },
-      "total_score": 158,
+      "total_score": 160,
       "code_score": 128,
-      "community_score": 21,
+      "community_score": 23,
       "quality_score": 9,
       "score_breakdown": {
         "pr_score": 68,
         "commits_score": 60,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
-        "issues_opened_score": 8,
+        "issues_opened_score": 10,
         "issue_comments_score": 3,
         "projects_score": 10,
         "tests_score": 0,
@@ -102,8 +102,8 @@
         "impact_bonus_score": 0
       },
       "capped_counts": {
-        "issues_opened": 4,
-        "issues_total": 4,
+        "issues_opened": 5,
+        "issues_total": 5,
         "issue_comments": 3,
         "issue_comments_total": 3
       },
@@ -156,7 +156,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 4,
@@ -352,7 +352,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 4
+      "lastActiveDays": 5
     },
     {
       "rank": 8,
@@ -401,7 +401,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     }
   ]
 }
