@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T05:42:42.505Z",
+  "generated_at": "2026-09-01T05:24:11.395Z",
   "period": "monthly",
   "month_label": "July 2026",
   "month_key": "2026-07",
@@ -106,7 +106,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 15
     },
     {
       "rank": 3,
@@ -155,7 +155,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 27
+      "lastActiveDays": 28
     },
     {
       "rank": 4,
@@ -212,13 +212,13 @@
       "id": 253198538,
       "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
       "html_url": "https://github.com/Rituparna158",
-      "totalCommits": 61,
+      "totalCommits": 73,
       "totalPRs": 10,
       "totalPRReviewsGiven": 1,
       "totalCodeReviewComments": 1,
       "totalIssuesOpened": 15,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 6.1,
+      "avgCommitsPerPR": 7.3,
       "projectsWorkingOn": 2,
       "projects": [
         "Ignix UI",
@@ -230,13 +230,13 @@
         "medium": 5,
         "large": 4
       },
-      "total_score": 249,
-      "code_score": 202,
+      "total_score": 273,
+      "code_score": 226,
       "community_score": 30,
       "quality_score": 17,
       "score_breakdown": {
         "pr_score": 76,
-        "commits_score": 122,
+        "commits_score": 146,
         "pr_reviews_score": 3,
         "code_comments_score": 1,
         "issues_opened_score": 20,
@@ -254,7 +254,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 6,
@@ -352,7 +352,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 8,
@@ -360,15 +360,16 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "totalCommits": 2,
+      "totalCommits": 4,
       "totalPRs": 3,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 0.67,
-      "projectsWorkingOn": 1,
+      "avgCommitsPerPR": 1.33,
+      "projectsWorkingOn": 2,
       "projects": [
+        "Page Builder",
         "Mindfire Foss Website"
       ],
       "newProjectsThisMonth": 0,
@@ -377,13 +378,13 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 29,
-      "code_score": 29,
+      "total_score": 33,
+      "code_score": 33,
       "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 25,
-        "commits_score": 4,
+        "commits_score": 8,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -401,7 +402,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 1
     },
     {
       "rank": 9,
@@ -646,7 +647,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 14,
