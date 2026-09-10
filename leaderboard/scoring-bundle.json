@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T04:58:15.327Z",
+  "generated_at": "2026-09-10T04:55:44.769Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -21,7 +21,7 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "lastActiveDays": 23,
+      "lastActiveDays": 24,
       "commits": [
         "2024-08-21T09:32:02Z",
         "2024-08-21T06:22:58Z",
@@ -6609,8 +6609,11 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 2,
+      "lastActiveDays": 1,
       "commits": [
+        "2026-09-09T07:17:03Z",
+        "2026-09-09T07:09:20Z",
+        "2026-09-09T07:06:42Z",
         "2026-09-08T15:59:08Z",
         "2026-09-07T07:23:49Z",
         "2026-09-07T07:23:06Z",
@@ -7261,6 +7264,14 @@
         "2026-04-15T12:49:10Z"
       ],
       "prs": [
+        {
+          "d": "2026-09-09T07:09:21Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
         {
           "d": "2026-09-07T07:23:49Z",
           "pts": 9,
@@ -9691,7 +9702,7 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "lastActiveDays": 9,
+      "lastActiveDays": 10,
       "commits": [
         "2025-06-27T07:51:24Z",
         "2025-06-27T07:47:28Z",
@@ -11134,7 +11145,7 @@
       "id": 253200638,
       "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
       "html_url": "https://github.com/ansumanmindfire",
-      "lastActiveDays": 6,
+      "lastActiveDays": 7,
       "commits": [
         "2026-08-03T06:58:05Z",
         "2026-08-03T06:53:48Z",
@@ -12233,7 +12244,7 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "lastActiveDays": 6,
+      "lastActiveDays": 7,
       "commits": [
         "2026-05-25T13:03:36Z",
         "2026-05-22T15:11:16Z",
@@ -13546,7 +13557,7 @@
       "id": 253201048,
       "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
       "html_url": "https://github.com/Ashminita28",
-      "lastActiveDays": 27,
+      "lastActiveDays": 28,
       "commits": [
         "2026-06-24T18:28:54Z",
         "2026-06-24T18:16:12Z",
@@ -21728,7 +21739,7 @@
       "id": 120394376,
       "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
       "html_url": "https://github.com/Bhupesh-MS",
-      "lastActiveDays": 26,
+      "lastActiveDays": 27,
       "commits": [
         "2023-10-30T09:55:21Z",
         "2023-10-30T08:09:26Z",
@@ -23048,7 +23059,7 @@
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
-      "lastActiveDays": 6,
+      "lastActiveDays": 7,
       "commits": [
         "2026-06-24T19:08:43Z",
         "2026-06-24T18:51:58Z",
@@ -25508,7 +25519,7 @@
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
       "html_url": "https://github.com/uzerjamal-mfsi",
-      "lastActiveDays": 14,
+      "lastActiveDays": 15,
       "commits": [
         "2026-05-19T13:25:28Z",
         "2026-05-19T12:21:33Z",
@@ -25581,6 +25592,188 @@
           "d": "2026-02-25T17:49:54Z",
           "title": "ADAC (Architecture Diagram as Code)",
           "firstMonthKey": "2026-02"
+        }
+      ]
+    },
+    "bighneswar-mindfire": {
+      "id": 248417800,
+      "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
+      "html_url": "https://github.com/bighneswar-mindfire",
+      "lastActiveDays": 1,
+      "commits": [
+        "2026-09-09T06:40:54Z",
+        "2026-09-08T07:05:41Z",
+        "2026-09-07T11:44:39Z",
+        "2026-09-07T11:31:14Z",
+        "2026-09-07T10:55:28Z",
+        "2026-09-06T18:13:40Z",
+        "2026-09-04T13:49:32Z",
+        "2026-09-02T12:13:45Z",
+        "2026-09-02T07:07:52Z",
+        "2026-09-02T06:18:06Z",
+        "2026-09-01T18:16:38Z",
+        "2026-09-01T17:35:44Z",
+        "2026-09-01T16:44:26Z",
+        "2026-09-01T08:36:26Z",
+        "2026-09-01T07:48:06Z",
+        "2026-09-01T07:05:06Z",
+        "2026-09-01T06:50:34Z",
+        "2026-09-01T06:31:07Z",
+        "2026-08-31T13:57:13Z",
+        "2026-08-31T07:05:52Z",
+        "2026-08-31T06:24:00Z",
+        "2026-08-31T05:53:23Z",
+        "2026-08-28T10:11:28Z",
+        "2026-08-28T09:40:40Z",
+        "2026-08-28T07:23:30Z",
+        "2026-08-28T05:26:43Z",
+        "2026-08-26T11:03:10Z",
+        "2026-08-26T10:18:49Z",
+        "2026-08-26T05:58:35Z",
+        "2026-08-25T08:01:34Z",
+        "2026-08-20T11:21:36Z",
+        "2026-08-20T08:52:55Z",
+        "2026-08-20T07:41:59Z",
+        "2026-08-20T05:59:54Z",
+        "2026-08-19T11:48:47Z",
+        "2026-08-19T08:02:54Z",
+        "2026-08-18T11:52:49Z"
+      ],
+      "prs": [
+        {
+          "d": "2026-09-09T07:06:42Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-09-07T07:23:06Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-09-07T07:13:36Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-09-02T17:25:16Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-09-01T09:51:36Z",
+          "pts": 9,
+          "c": "large",
+          "zr": true,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-08-31T17:54:03Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-08-31T10:22:30Z",
+          "pts": 9,
+          "c": "large",
+          "zr": false,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-08-25T15:49:57Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-08-20T15:24:16Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-08-20T15:13:08Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-08-20T15:12:19Z",
+          "pts": 5,
+          "c": "small",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-08-20T07:35:08Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": true
+        },
+        {
+          "d": "2026-08-19T16:18:17Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        },
+        {
+          "d": "2026-08-19T16:17:56Z",
+          "pts": 7,
+          "c": "medium",
+          "zr": true,
+          "t": false,
+          "doc": false
+        }
+      ],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [
+        "2026-08-31T14:31:03Z"
+      ],
+      "issueComments": [
+        "2026-09-07T11:35:22Z",
+        "2026-09-02T09:37:53Z",
+        "2026-08-25T09:02:50Z",
+        "2026-08-20T06:44:27Z",
+        "2026-08-19T06:51:14Z",
+        "2026-08-20T10:01:51Z",
+        "2026-08-20T07:58:35Z",
+        "2026-08-19T08:29:59Z",
+        "2026-08-19T06:50:31Z"
+      ],
+      "projectFirsts": [
+        {
+          "d": "2026-08-18T11:52:49Z",
+          "title": "Ignix UI",
+          "firstMonthKey": "2026-08"
         }
       ]
     },
@@ -26146,175 +26339,6 @@
           "d": "2024-02-20T07:36:12Z",
           "title": "QuickLaunchReactNativeKit",
           "firstMonthKey": "2024-02"
-        }
-      ]
-    },
-    "bighneswar-mindfire": {
-      "id": 248417800,
-      "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
-      "html_url": "https://github.com/bighneswar-mindfire",
-      "lastActiveDays": 1,
-      "commits": [
-        "2026-09-06T18:13:40Z",
-        "2026-09-04T13:49:32Z",
-        "2026-09-02T12:13:45Z",
-        "2026-09-02T07:07:52Z",
-        "2026-09-02T06:18:06Z",
-        "2026-09-01T18:16:38Z",
-        "2026-09-01T17:35:44Z",
-        "2026-09-01T16:44:26Z",
-        "2026-09-01T08:36:26Z",
-        "2026-09-01T07:48:06Z",
-        "2026-09-01T07:05:06Z",
-        "2026-09-01T06:50:34Z",
-        "2026-09-01T06:31:07Z",
-        "2026-08-31T13:57:13Z",
-        "2026-08-31T07:05:52Z",
-        "2026-08-31T06:24:00Z",
-        "2026-08-31T05:53:23Z",
-        "2026-08-28T10:11:28Z",
-        "2026-08-28T09:40:40Z",
-        "2026-08-28T07:23:30Z",
-        "2026-08-28T05:26:43Z",
-        "2026-08-26T11:03:10Z",
-        "2026-08-26T10:18:49Z",
-        "2026-08-26T05:58:35Z",
-        "2026-08-25T08:01:34Z",
-        "2026-08-20T11:21:36Z",
-        "2026-08-20T08:52:55Z",
-        "2026-08-20T07:41:59Z",
-        "2026-08-20T05:59:54Z",
-        "2026-08-19T11:48:47Z",
-        "2026-08-19T08:02:54Z",
-        "2026-08-18T11:52:49Z"
-      ],
-      "prs": [
-        {
-          "d": "2026-09-07T07:23:06Z",
-          "pts": 9,
-          "c": "large",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-09-07T07:13:36Z",
-          "pts": 9,
-          "c": "large",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-09-02T17:25:16Z",
-          "pts": 9,
-          "c": "large",
-          "zr": true,
-          "t": false,
-          "doc": true
-        },
-        {
-          "d": "2026-09-01T09:51:36Z",
-          "pts": 9,
-          "c": "large",
-          "zr": true,
-          "t": false,
-          "doc": true
-        },
-        {
-          "d": "2026-08-31T17:54:03Z",
-          "pts": 9,
-          "c": "large",
-          "zr": false,
-          "t": false,
-          "doc": true
-        },
-        {
-          "d": "2026-08-31T10:22:30Z",
-          "pts": 9,
-          "c": "large",
-          "zr": false,
-          "t": false,
-          "doc": true
-        },
-        {
-          "d": "2026-08-25T15:49:57Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-08-20T15:24:16Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-08-20T15:13:08Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-08-20T15:12:19Z",
-          "pts": 5,
-          "c": "small",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-08-20T07:35:08Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": true
-        },
-        {
-          "d": "2026-08-19T16:18:17Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
-          "d": "2026-08-19T16:17:56Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        }
-      ],
-      "reviews": [],
-      "codeComments": [],
-      "issues": [
-        "2026-08-31T14:31:03Z"
-      ],
-      "issueComments": [
-        "2026-09-07T11:35:22Z",
-        "2026-09-02T09:37:53Z",
-        "2026-08-25T09:02:50Z",
-        "2026-08-20T06:44:27Z",
-        "2026-08-19T06:51:14Z",
-        "2026-08-20T10:01:51Z",
-        "2026-08-20T07:58:35Z",
-        "2026-08-19T08:29:59Z",
-        "2026-08-19T06:50:31Z"
-      ],
-      "projectFirsts": [
-        {
-          "d": "2026-08-18T11:52:49Z",
-          "title": "Ignix UI",
-          "firstMonthKey": "2026-08"
         }
       ]
     },
@@ -26893,7 +26917,7 @@
       "id": 118360815,
       "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
       "html_url": "https://github.com/asishmindfire",
-      "lastActiveDays": 2,
+      "lastActiveDays": 3,
       "commits": [
         "2023-09-04T10:45:48Z",
         "2023-08-24T11:05:39Z",
@@ -29805,7 +29829,7 @@
       "id": 215844540,
       "avatar_url": "https://avatars.githubusercontent.com/u/215844540?v=4",
       "html_url": "https://github.com/vcs-anandkr",
-      "lastActiveDays": 23,
+      "lastActiveDays": 24,
       "commits": [
         "2025-07-19T03:14:22Z",
         "2025-04-25T08:08:54Z",
@@ -30627,7 +30651,7 @@
       "id": 220684530,
       "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
       "html_url": "https://github.com/soumya0809mindfiresolutions",
-      "lastActiveDays": 25,
+      "lastActiveDays": 26,
       "commits": [],
       "prs": [],
       "reviews": [],
