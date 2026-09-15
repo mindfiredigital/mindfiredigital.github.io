@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-14T05:11:39.687Z",
+  "generated_at": "2026-09-15T05:10:38.840Z",
   "period": "monthly",
   "window_start": "2026-09-01T00:00:00.000Z",
-  "window_end": "2026-09-14T05:11:39.687Z",
+  "window_end": "2026-09-15T05:10:38.840Z",
   "month_label": "September 2026",
   "month_key": "2026-09",
   "total_contributors": 5,
@@ -54,7 +54,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 2,
@@ -111,13 +111,13 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "totalCommits": 16,
+      "totalCommits": 18,
       "totalPRs": 3,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 5.33,
+      "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
       "projects": [
@@ -128,13 +128,13 @@
         "medium": 2,
         "large": 1
       },
-      "total_score": 60,
-      "code_score": 54,
+      "total_score": 64,
+      "code_score": 58,
       "community_score": 0,
       "quality_score": 6,
       "score_breakdown": {
         "pr_score": 22,
-        "commits_score": 32,
+        "commits_score": 36,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -152,7 +152,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -201,7 +201,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 5,
@@ -250,7 +250,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     }
   ]
 }
