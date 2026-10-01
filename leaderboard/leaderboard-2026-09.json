@@ -1,8 +1,6 @@
 {
-  "generated_at": "2026-09-30T05:57:02.560Z",
+  "generated_at": "2026-10-01T06:09:05.786Z",
   "period": "monthly",
-  "window_start": "2026-09-01T00:00:00.000Z",
-  "window_end": "2026-09-30T05:57:02.560Z",
   "month_label": "September 2026",
   "month_key": "2026-09",
   "total_contributors": 5,
@@ -21,21 +19,21 @@
       "totalIssueComments": 2,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
         "large": 4
       },
-      "total_score": 105,
-      "code_score": 89,
+      "total_score": 108,
+      "code_score": 92,
       "community_score": 2,
       "quality_score": 14,
       "score_breakdown": {
-        "pr_score": 47,
+        "pr_score": 50,
         "commits_score": 42,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -54,7 +52,7 @@
         "issue_comments": 2,
         "issue_comments_total": 2
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 2,
@@ -70,21 +68,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1.8,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 4
       },
-      "total_score": 81,
-      "code_score": 59,
+      "total_score": 83,
+      "code_score": 61,
       "community_score": 12,
       "quality_score": 10,
       "score_breakdown": {
-        "pr_score": 41,
+        "pr_score": 43,
         "commits_score": 18,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -119,21 +117,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
         "large": 1
       },
-      "total_score": 64,
-      "code_score": 58,
+      "total_score": 65,
+      "code_score": 59,
       "community_score": 0,
       "quality_score": 6,
       "score_breakdown": {
-        "pr_score": 22,
+        "pr_score": 23,
         "commits_score": 36,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -152,7 +150,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 15
+      "lastActiveDays": 16
     },
     {
       "rank": 4,
@@ -168,21 +166,21 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.5,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "mdslide"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
         "large": 1
       },
-      "total_score": 25,
-      "code_score": 25,
+      "total_score": 26,
+      "code_score": 26,
       "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
-        "pr_score": 15,
+        "pr_score": 16,
         "commits_score": 10,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
@@ -201,7 +199,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 27
+      "lastActiveDays": 28
     },
     {
       "rank": 5,
@@ -217,10 +215,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "mdslide"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -250,7 +248,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 27
+      "lastActiveDays": 28
     }
   ]
 }
