@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-01T06:09:05.579Z",
+  "generated_at": "2026-10-02T05:52:55.099Z",
   "period": "monthly",
   "month_label": "December 2023",
   "month_key": "2023-12",
-  "total_contributors": 8,
+  "total_contributors": 12,
   "leaderboard": [
     {
       "rank": 1,
@@ -58,6 +58,55 @@
     },
     {
       "rank": 2,
+      "username": "ArnabKMindfire",
+      "id": 103591425,
+      "avatar_url": "https://avatars.githubusercontent.com/u/103591425?v=4",
+      "html_url": "https://github.com/ArnabKMindfire",
+      "totalCommits": 25,
+      "totalPRs": 11,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 2.27,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Mindfire Foss Website"
+      ],
+      "newProjectsThisMonth": 1,
+      "prs_by_complexity": {
+        "small": 5,
+        "medium": 1,
+        "large": 5
+      },
+      "total_score": 161,
+      "code_score": 127,
+      "community_score": 10,
+      "quality_score": 24,
+      "score_breakdown": {
+        "pr_score": 77,
+        "commits_score": 50,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 10,
+        "tests_score": 0,
+        "docs_score": 4,
+        "mentor_score": 0,
+        "zero_revisions_score": 20,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 3,
       "username": "VershalaT",
       "id": 134675427,
       "avatar_url": "https://avatars.githubusercontent.com/u/134675427?v=4",
@@ -106,7 +155,56 @@
       "lastActiveDays": null
     },
     {
-      "rank": 3,
+      "rank": 4,
+      "username": "aryanxorian",
+      "id": 29296038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/29296038?v=4",
+      "html_url": "https://github.com/aryanxorian",
+      "totalCommits": 6,
+      "totalPRs": 5,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1.2,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Mindfire Foss Website"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 1,
+        "large": 4
+      },
+      "total_score": 65,
+      "code_score": 55,
+      "community_score": 0,
+      "quality_score": 10,
+      "score_breakdown": {
+        "pr_score": 43,
+        "commits_score": 12,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 2,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 8,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 5,
       "username": "VershalaTandon",
       "id": 63102290,
       "avatar_url": "https://avatars.githubusercontent.com/u/63102290?v=4",
@@ -155,7 +253,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 4,
+      "rank": 6,
       "username": "BasudevBharatBhushan",
       "id": 64151314,
       "avatar_url": "https://avatars.githubusercontent.com/u/64151314?v=4",
@@ -204,7 +302,56 @@
       "lastActiveDays": null
     },
     {
-      "rank": 5,
+      "rank": 7,
+      "username": "avishekthapamindfire0822",
+      "id": 123073226,
+      "avatar_url": "https://avatars.githubusercontent.com/u/123073226?v=4",
+      "html_url": "https://github.com/avishekthapamindfire0822",
+      "totalCommits": 1,
+      "totalPRs": 1,
+      "totalPRReviewsGiven": 1,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 1,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Mindfire Foss Website"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 1
+      },
+      "total_score": 14,
+      "code_score": 14,
+      "community_score": 0,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 9,
+        "commits_score": 2,
+        "pr_reviews_score": 3,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 8,
       "username": "jagannathmfs",
       "id": 87357401,
       "avatar_url": "https://avatars.githubusercontent.com/u/87357401?v=4",
@@ -253,7 +400,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 6,
+      "rank": 9,
       "username": "rsumit123",
       "id": 24500659,
       "avatar_url": "https://avatars.githubusercontent.com/u/24500659?v=4",
@@ -302,7 +449,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 7,
+      "rank": 10,
       "username": "Rakesh-sahoo07",
       "id": 104811762,
       "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
@@ -351,7 +498,56 @@
       "lastActiveDays": null
     },
     {
-      "rank": 8,
+      "rank": 11,
+      "username": "prashant-mindfire",
+      "id": 148045555,
+      "avatar_url": "https://avatars.githubusercontent.com/u/148045555?v=4",
+      "html_url": "https://github.com/prashant-mindfire",
+      "totalCommits": 2,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 0,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "projects": [
+        "Mindfire Foss Website"
+      ],
+      "newProjectsThisMonth": 0,
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 4,
+      "code_score": 4,
+      "community_score": 0,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 4,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 0,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 0,
+        "issues_total": 0,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": null
+    },
+    {
+      "rank": 12,
       "username": "ssswagatss",
       "id": 7521181,
       "avatar_url": "https://avatars.githubusercontent.com/u/7521181?v=4",
