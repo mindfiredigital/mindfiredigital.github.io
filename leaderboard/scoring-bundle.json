@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T05:58:01.961Z",
+  "generated_at": "2026-10-06T06:43:44.781Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -21,7 +21,7 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "lastActiveDays": 6,
+      "lastActiveDays": 7,
       "commits": [
         "2024-08-21T09:32:02Z",
         "2024-08-21T06:22:58Z",
@@ -6609,7 +6609,7 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 20,
+      "lastActiveDays": 21,
       "commits": [
         "2026-09-14T06:29:16Z",
         "2026-09-14T06:15:50Z",
@@ -14902,7 +14902,6 @@
       ],
       "issueComments": [
         "2026-04-15T08:20:28Z",
-        "2026-04-15T10:30:33Z",
         "2026-04-15T08:20:40Z",
         "2026-03-27T06:09:00Z"
       ],
@@ -23071,7 +23070,7 @@
       "id": 111574378,
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
-      "lastActiveDays": 32,
+      "lastActiveDays": null,
       "commits": [
         "2026-06-24T19:08:43Z",
         "2026-06-24T18:51:58Z",
@@ -25132,7 +25131,7 @@
       "id": 248417800,
       "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
       "html_url": "https://github.com/bighneswar-mindfire",
-      "lastActiveDays": 21,
+      "lastActiveDays": 22,
       "commits": [
         "2026-09-11T06:43:08Z",
         "2026-09-10T12:44:57Z",
@@ -26940,7 +26939,7 @@
       "id": 118360815,
       "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
       "html_url": "https://github.com/asishmindfire",
-      "lastActiveDays": 28,
+      "lastActiveDays": 29,
       "commits": [
         "2023-09-04T10:45:48Z",
         "2023-08-24T11:05:39Z",
