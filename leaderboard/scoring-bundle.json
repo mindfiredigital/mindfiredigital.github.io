@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T04:55:17.147Z",
+  "generated_at": "2026-10-17T04:43:59.871Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -21,7 +21,7 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "lastActiveDays": 17,
+      "lastActiveDays": 18,
       "commits": [
         "2024-08-21T09:32:02Z",
         "2024-08-21T06:22:58Z",
@@ -6609,7 +6609,7 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 1,
+      "lastActiveDays": 2,
       "commits": [
         "2026-10-15T09:45:41Z",
         "2026-10-15T06:40:51Z",
