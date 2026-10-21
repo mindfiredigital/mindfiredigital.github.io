@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T05:01:23.941Z",
+  "generated_at": "2026-10-21T05:06:49.135Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -21,7 +21,7 @@
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
       "html_url": "https://github.com/anandmindfire",
-      "lastActiveDays": 20,
+      "lastActiveDays": 22,
       "commits": [
         "2024-08-21T09:32:02Z",
         "2024-08-21T06:22:58Z",
@@ -6609,7 +6609,7 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 4,
+      "lastActiveDays": 6,
       "commits": [
         "2026-10-15T09:45:41Z",
         "2026-10-15T06:40:51Z",
@@ -24861,7 +24861,7 @@
       "id": 248417800,
       "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
       "html_url": "https://github.com/bighneswar-mindfire",
-      "lastActiveDays": 1,
+      "lastActiveDays": 3,
       "commits": [
         "2026-09-16T06:01:01Z",
         "2026-09-15T18:33:44Z",
@@ -30363,6 +30363,33 @@
           "d": "2025-05-16T11:18:26Z",
           "title": "Ignix UI",
           "firstMonthKey": "2025-05"
+        }
+      ]
+    },
+    "ParasMindfireOfficial": {
+      "id": 344743046,
+      "avatar_url": "https://avatars.githubusercontent.com/u/344743046?v=4",
+      "html_url": "https://github.com/ParasMindfireOfficial",
+      "lastActiveDays": null,
+      "commits": [
+        "2026-08-03T04:46:18Z",
+        "2026-08-17T06:13:25Z"
+      ],
+      "prs": [],
+      "reviews": [],
+      "codeComments": [],
+      "issues": [],
+      "issueComments": [],
+      "projectFirsts": [
+        {
+          "d": "2026-08-17T06:13:25Z",
+          "title": "Mindfire Foss Website",
+          "firstMonthKey": "2026-08"
+        },
+        {
+          "d": "2026-08-03T04:46:18Z",
+          "title": "Page Builder",
+          "firstMonthKey": "2026-08"
         }
       ]
     },
