@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T05:06:48.717Z",
+  "generated_at": "2026-10-22T05:05:17.717Z",
   "period": "monthly",
   "month_label": "December 2023",
   "month_key": "2023-12",
@@ -450,10 +450,10 @@
     },
     {
       "rank": 10,
-      "username": "Rakesh-sahoo07",
-      "id": 104811762,
-      "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
-      "html_url": "https://github.com/Rakesh-sahoo07",
+      "username": "ghost",
+      "id": 10137,
+      "avatar_url": "https://avatars.githubusercontent.com/u/10137?v=4",
+      "html_url": "https://github.com/ghost",
       "totalCommits": 0,
       "totalPRs": 0,
       "totalPRReviewsGiven": 0,
