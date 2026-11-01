@@ -1,8 +1,6 @@
 {
-  "generated_at": "2026-10-31T05:54:26.953Z",
+  "generated_at": "2026-11-01T06:13:47.526Z",
   "period": "monthly",
-  "window_start": "2026-10-01T00:00:00.000Z",
-  "window_end": "2026-10-31T05:54:26.953Z",
   "month_label": "October 2026",
   "month_key": "2026-10",
   "total_contributors": 2,
@@ -21,10 +19,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -54,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 16
+      "lastActiveDays": 17
     },
     {
       "rank": 2,
@@ -70,10 +68,10 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 0,
       "projects": [
         "Ignix UI"
       ],
+      "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -103,7 +101,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 9
     }
   ]
 }
