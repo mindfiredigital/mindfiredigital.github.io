@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-05T06:43:34.639Z",
+  "generated_at": "2026-11-06T06:56:18.144Z",
   "period": "monthly",
   "window_start": "2026-11-01T00:00:00.000Z",
-  "window_end": "2026-11-05T06:43:34.639Z",
+  "window_end": "2026-11-06T06:56:18.144Z",
   "month_label": "November 2026",
   "month_key": "2026-11",
   "total_contributors": 1,
@@ -54,7 +54,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     }
   ]
 }

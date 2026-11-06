@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T06:43:34.205Z",
+  "generated_at": "2026-11-06T06:56:17.527Z",
   "period": "monthly",
   "month_label": "September 2024",
   "month_key": "2024-09",
@@ -12,12 +12,12 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
       "html_url": "https://github.com/deepakyadav-01",
       "totalCommits": 91,
-      "totalPRs": 39,
+      "totalPRs": 38,
       "totalPRReviewsGiven": 1,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 7,
       "totalIssueComments": 1,
-      "avgCommitsPerPR": 2.33,
+      "avgCommitsPerPR": 2.39,
       "projectsWorkingOn": 3,
       "projects": [
         "react-text-igniter",
@@ -27,15 +27,15 @@
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 17,
-        "medium": 17,
+        "medium": 16,
         "large": 5
       },
-      "total_score": 538,
-      "code_score": 434,
+      "total_score": 529,
+      "code_score": 427,
       "community_score": 25,
-      "quality_score": 79,
+      "quality_score": 77,
       "score_breakdown": {
-        "pr_score": 249,
+        "pr_score": 242,
         "commits_score": 182,
         "pr_reviews_score": 3,
         "code_comments_score": 0,
@@ -45,7 +45,7 @@
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
-        "zero_revisions_score": 78,
+        "zero_revisions_score": 76,
         "impact_bonus_score": 0
       },
       "capped_counts": {

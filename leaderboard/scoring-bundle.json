@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T06:43:34.447Z",
+  "generated_at": "2026-11-06T06:56:17.881Z",
   "scoring_weights": {
     "COMMIT": 2,
     "PR_REVIEW_GIVEN": 3,
@@ -4061,7 +4061,7 @@
       "id": 253181559,
       "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
       "html_url": "https://github.com/sobhan-s",
-      "lastActiveDays": 1,
+      "lastActiveDays": 2,
       "commits": [
         "2026-05-25T13:03:36Z",
         "2026-05-22T15:11:16Z",
@@ -7636,14 +7636,6 @@
           "doc": false
         },
         {
-          "d": "2024-09-06T14:18:09Z",
-          "pts": 7,
-          "c": "medium",
-          "zr": true,
-          "t": false,
-          "doc": false
-        },
-        {
           "d": "2024-09-06T14:05:59Z",
           "pts": 5,
           "c": "small",
@@ -9468,7 +9460,7 @@
       "id": 253717200,
       "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
       "html_url": "https://github.com/ipsitam-07",
-      "lastActiveDays": 21,
+      "lastActiveDays": 22,
       "commits": [
         "2026-10-15T09:45:41Z",
         "2026-10-15T06:40:51Z",
@@ -11061,7 +11053,7 @@
       "id": 253201048,
       "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
       "html_url": "https://github.com/Ashminita28",
-      "lastActiveDays": 1,
+      "lastActiveDays": 2,
       "commits": [
         "2026-06-24T18:28:54Z",
         "2026-06-24T18:16:12Z",
@@ -15872,7 +15864,7 @@
       "id": 182347241,
       "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
       "html_url": "https://github.com/anujmindfire",
-      "lastActiveDays": null,
+      "lastActiveDays": 1,
       "commits": [
         "2026-08-14T11:26:01Z",
         "2026-08-14T11:06:39Z",
@@ -24861,7 +24853,7 @@
       "id": 248417800,
       "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
       "html_url": "https://github.com/bighneswar-mindfire",
-      "lastActiveDays": 2,
+      "lastActiveDays": 3,
       "commits": [
         "2026-09-16T06:01:01Z",
         "2026-09-15T18:33:44Z",
@@ -25770,7 +25762,7 @@
       "id": 220164293,
       "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
       "html_url": "https://github.com/uzerjamal-mfsi",
-      "lastActiveDays": 1,
+      "lastActiveDays": 2,
       "commits": [
         "2026-05-19T13:25:28Z",
         "2026-05-19T12:21:33Z",
