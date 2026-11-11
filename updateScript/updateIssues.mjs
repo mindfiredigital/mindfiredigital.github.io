@@ -107,9 +107,7 @@ async function updateIssues() {
 
   for (let i = 0; i < repos.length; i++) {
     const repo = repos[i];
-    process.stdout.write(
-      `  [${i + 1}/${repos.length}] ${repo} ... `
-    );
+    process.stdout.write(`  [${i + 1}/${repos.length}] ${repo} ... `);
     const issues = await fetchRepoIssues(gitOwner, repo, headers);
     process.stdout.write(`${issues.length} issues\n`);
     allIssues.push(...issues);
@@ -120,9 +118,7 @@ async function updateIssues() {
   }
 
   // Sort newest first (consistent default for the UI)
-  allIssues.sort(
-    (a, b) => new Date(b.created_at) - new Date(a.created_at)
-  );
+  allIssues.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
   const output = {
     total_count: allIssues.length,

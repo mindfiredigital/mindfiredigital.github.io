@@ -26,7 +26,10 @@ export default function Loading() {
 
           <div className='mt-12 px-8 grid gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3'>
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className='border-2 p-6 bg-slate-50/70 h-52 flex flex-col gap-3'>
+              <div
+                key={i}
+                className='border-2 p-6 bg-slate-50/70 h-52 flex flex-col gap-3'
+              >
                 <div className='flex justify-between items-start'>
                   <div className='skeleton h-5 w-2/3' />
                   <div className='skeleton h-6 w-12 rounded-full' />

@@ -24,7 +24,12 @@ export default function Loading() {
 
       {/* Mission + Why open source sections */}
       {[0, 1].map((i) => (
-        <section key={i} className={`mt-[6rem] max-w-7xl mx-auto px-6 ${i === 1 ? "mt-28" : ""}`}>
+        <section
+          key={i}
+          className={`mt-[6rem] max-w-7xl mx-auto px-6 ${
+            i === 1 ? "mt-28" : ""
+          }`}
+        >
           <div className='skeleton h-8 w-72 mx-auto mb-4' />
           <div className='skeleton h-4 w-full max-w-4xl mx-auto mb-2' />
           <div className='skeleton h-4 w-[60%] max-w-4xl mx-auto' />

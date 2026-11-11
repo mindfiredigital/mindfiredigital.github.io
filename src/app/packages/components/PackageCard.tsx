@@ -3,7 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PackageCardProps } from "@/types";
-import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL, isGolangType } from "@/constants";
+import {
+  PACKAGE_CARD_LABELS,
+  GITHUB_BASE_URL,
+  isGolangType,
+} from "@/constants";
 
 /**
  * PackageCard Component

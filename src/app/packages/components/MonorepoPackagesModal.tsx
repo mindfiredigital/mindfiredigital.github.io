@@ -5,7 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { MonorepoPackagesModalProps } from "@/types";
-import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL, isGolangType } from "@/constants";
+import {
+  PACKAGE_CARD_LABELS,
+  GITHUB_BASE_URL,
+  isGolangType,
+} from "@/constants";
 import { getFrameworkName } from "@/app/utils";
 
 /**

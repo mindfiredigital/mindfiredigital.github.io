@@ -22,7 +22,6 @@ function extractPackageNameFromUrl(url) {
   return null;
 }
 
-
 class RequestQueue {
   constructor(concurrency = 1, delayBetweenRequests = 1000) {
     this.concurrency = concurrency;
@@ -76,7 +75,8 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
         const jitter = Math.random() * 1000;
         const waitTime = baseWait + jitter;
         logger.info(
-          `Rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1
+          `Rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${
+            attempt + 1
           }/${maxRetries - 1}`
         );
         await delay(waitTime);
@@ -145,7 +145,9 @@ export async function getAllStats(
       const packageName = pkg.name;
       const cleanName = extractPackageNameFromUrl(pkg.url) || packageName;
       logger.info(
-        `[${completed + 1}/${npmPackages.length}] Processing ${packageName} (clean name: ${cleanName})...`
+        `[${completed + 1}/${
+          npmPackages.length
+        }] Processing ${packageName} (clean name: ${cleanName})...`
       );
 
       const dayStats = await getNpmStats(cleanName, "last-day");
@@ -154,7 +156,12 @@ export async function getAllStats(
       // FIXED - use chunked all-time instead of capped single range
       const totalStats = await getNpmTotalAllTime(cleanName);
 
-      if (dayStats !== 0 || weekStats !== 0 || yearStats !== 0 || totalStats !== 0) {
+      if (
+        dayStats !== 0 ||
+        weekStats !== 0 ||
+        yearStats !== 0 ||
+        totalStats !== 0
+      ) {
         statsMap[packageName] = {
           name: packageName,
           type: "npm",
@@ -373,7 +380,8 @@ async function fetchGolangStats(pkg) {
         const defaultVer = depsData.versions.find((v) => v.isDefault);
         latestVersion =
           defaultVer?.versionKey?.version ||
-          depsData.versions[depsData.versions.length - 1]?.versionKey?.version ||
+          depsData.versions[depsData.versions.length - 1]?.versionKey
+            ?.version ||
           "";
       }
     }
@@ -504,7 +512,10 @@ export async function updatePackages() {
 }
 
 import { fileURLToPath } from "url";
-const isMain = process.argv[1] && (process.argv[1] === fileURLToPath(import.meta.url) || process.argv[1].endsWith("updatePackages.mjs"));
+const isMain =
+  process.argv[1] &&
+  (process.argv[1] === fileURLToPath(import.meta.url) ||
+    process.argv[1].endsWith("updatePackages.mjs"));
 if (isMain) {
   updatePackages();
 }

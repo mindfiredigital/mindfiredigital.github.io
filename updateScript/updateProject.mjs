@@ -217,10 +217,17 @@ async function updateProjects() {
 
     // Read the freshly updated packages.json to calculate stats
     const freshPackagesData = JSON.parse(
-      fs.readFileSync(new URL("../src/asset/packages.json", import.meta.url), "utf8")
+      fs.readFileSync(
+        new URL("../src/asset/packages.json", import.meta.url),
+        "utf8"
+      )
     );
-    const freshNpmPackages = freshPackagesData.filter((pkg) => pkg.type === "npm");
-    const freshPypiPackages = freshPackagesData.filter((pkg) => pkg.type.toLowerCase() === "pypi");
+    const freshNpmPackages = freshPackagesData.filter(
+      (pkg) => pkg.type === "npm"
+    );
+    const freshPypiPackages = freshPackagesData.filter(
+      (pkg) => pkg.type.toLowerCase() === "pypi"
+    );
     const freshGolangPackages = freshPackagesData.filter((pkg) =>
       isGolangType(pkg.type)
     );
@@ -229,9 +236,15 @@ async function updateProjects() {
       .then((statsMap) => {
         const statsWithTitles = Object.values(statsMap)
           .map((value) => {
-            const npmPackage = freshNpmPackages.find((p) => p.name === value.name);
-            const pypiPackage = freshPypiPackages.find((p) => p.name === value.name);
-            const golangPackage = freshGolangPackages.find((p) => p.name === value.name);
+            const npmPackage = freshNpmPackages.find(
+              (p) => p.name === value.name
+            );
+            const pypiPackage = freshPypiPackages.find(
+              (p) => p.name === value.name
+            );
+            const golangPackage = freshGolangPackages.find(
+              (p) => p.name === value.name
+            );
             const title =
               npmPackage?.title ||
               pypiPackage?.title ||
