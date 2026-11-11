@@ -110,7 +110,7 @@ jest.mock("../../src/hooks/useContributorModal", () => ({
   }),
 }));
 
-jest.mock("../../src/hooks/Usecontributorfilters", () => ({
+jest.mock("../../src/hooks/useContributorFilters", () => ({
   useContributorFilters: () => ({
     filters: {
       sortBy: "total_score",
@@ -125,7 +125,7 @@ jest.mock("../../src/hooks/Usecontributorfilters", () => ({
   }),
 }));
 
-jest.mock("../../src/hooks/useMonthcalendarpicker", () => ({
+jest.mock("../../src/hooks/useMonthCalendarPicker", () => ({
   useMonthCalendarPicker: () => ({
     open: false,
     setOpen: jest.fn(),

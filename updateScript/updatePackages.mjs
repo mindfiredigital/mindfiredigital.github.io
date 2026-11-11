@@ -1,3 +1,4 @@
+import { load as cheerioLoad } from "cheerio";
 import { fetchTotalDownloads } from "./pypiTotalStats.mjs";
 import { fetchData, writeJsonToFile } from "./config.mjs";
 import logger from "../src/app/utils/logger.mjs";
@@ -13,6 +14,11 @@ function extractPackageNameFromUrl(url) {
   if (pypiMatch) return pypiMatch[1];
   const nugetMatch = url.match(/nuget\.org\/packages\/(.+?)(?:\/|$)/);
   if (nugetMatch) return nugetMatch[1];
+  const goMatch = url.match(/pkg\.go\.dev\/(.+?)(?:\/|$)/);
+  if (goMatch) {
+    const parts = goMatch[1].split("/");
+    return parts[parts.length - 1];
+  }
   return null;
 }
 
@@ -70,8 +76,7 @@ async function fetchWithRetry(url, maxRetries = 5, initialDelay = 2000) {
         const jitter = Math.random() * 1000;
         const waitTime = baseWait + jitter;
         logger.info(
-          `Rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${
-            attempt + 1
+          `Rate limited. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1
           }/${maxRetries - 1}`
         );
         await delay(waitTime);
@@ -120,11 +125,15 @@ async function getNpmTotalAllTime(packageName) {
   return total;
 }
 
-export async function getAllStats(npmPackages, pypiPackages) {
+export async function getAllStats(
+  npmPackages,
+  pypiPackages,
+  golangPackages = []
+) {
   const statsMap = {};
 
   logger.info(
-    `Fetching stats for ${npmPackages.length} npm packages and ${pypiPackages.length} PyPI packages...`
+    `Fetching stats for ${npmPackages.length} npm packages, ${pypiPackages.length} PyPI packages, and ${golangPackages.length} Golang packages...`
   );
   logger.info(
     `Using queue with concurrency=1 and 1000ms delay between requests`
@@ -197,6 +206,35 @@ export async function getAllStats(npmPackages, pypiPackages) {
     })
   );
 
+  logger.info(`Fetching Golang stats...`);
+  await Promise.all(
+    golangPackages.map(async (pkg) => {
+      try {
+        const packageName = pkg.name;
+        const stats = await fetchGolangStats(pkg);
+        statsMap[`Golang:${packageName}`] = {
+          name: packageName,
+          type: pkg.type || "golang",
+          url: pkg.url,
+          day: 0,
+          week: 0,
+          month: 0,
+          year: 0,
+          total: stats.importCount || 0,
+          version: stats.latestVersion || "",
+          versionsCount: stats.versionsCount || 0,
+        };
+        logger.info(
+          `${packageName} (${pkg.type}): import count=${stats.importCount}, latestVersion=${stats.latestVersion}, versionsCount=${stats.versionsCount}`
+        );
+      } catch (error) {
+        logger.error(
+          `Error fetching stats for ${pkg.name} (Golang): ${error.message}`
+        );
+      }
+    })
+  );
+
   logger.info(
     `Completed! Retrieved stats for ${Object.keys(statsMap).length} packages.`
   );
@@ -214,6 +252,160 @@ async function fetchPyPIDownloadStats(packageName) {
     );
     return null;
   }
+}
+
+async function fetchPkgGoDevHtml(url) {
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (compatible; MindfireFOSS/1.0; +https://mindfiredigital.github.io)",
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} from ${url}`);
+  }
+  return response.text();
+}
+
+function parseImportedByCount($) {
+  const el = $('[data-test-id="UnitHeader-importedby"]');
+  if (el.length === 0) return null;
+  const text = el.text().trim();
+  const num = parseInt(text.replace(/[^0-9]/g, ""), 10);
+  return Number.isNaN(num) ? 0 : num;
+}
+
+async function fetchGolangStats(pkg) {
+  const url = pkg.url || "";
+  let modulePath = null;
+  let owner = "mindfiredigital";
+  let repo = pkg.name;
+
+  const goDevMatch = url.match(
+    /pkg\.go\.dev\/(github\.com\/([^/]+)\/([^/]+))/i
+  );
+  if (goDevMatch) {
+    modulePath = goDevMatch[1];
+    owner = goDevMatch[2];
+    repo = goDevMatch[3];
+  } else if (url.includes("github.com")) {
+    const ghMatch = url.match(/github\.com\/([^/]+)\/([^/]+)/i);
+    if (ghMatch) {
+      owner = ghMatch[1];
+      repo = ghMatch[2].replace(/\.git$/, "");
+      modulePath = `github.com/${owner}/${repo}`;
+    }
+  } else if (url && !url.includes("pkg.go.dev")) {
+    // Non-package URL (e.g. documentation link like github.io)
+    return { importCount: 0, latestVersion: "", versionsCount: 0 };
+  } else {
+    modulePath = `github.com/${owner}/${pkg.name}`;
+  }
+
+  let importCount = 0;
+  let latestVersion = "";
+  let versionsCount = 0;
+
+  // 1. Fetch import count directly from pkg.go.dev
+  const pkgGoDevUrl = url.includes("pkg.go.dev")
+    ? url
+    : `https://pkg.go.dev/${modulePath}`;
+  try {
+    const html = await fetchPkgGoDevHtml(pkgGoDevUrl);
+    const $ = cheerioLoad(html);
+
+    // Extract latest version if present in header
+    const versionText = $('[data-test-id="UnitHeader-version"] a')
+      .first()
+      .text()
+      .replace(/Version:\s*/i, "")
+      .trim();
+    if (versionText) {
+      latestVersion = versionText;
+    }
+
+    const directCount = parseImportedByCount($);
+    if (directCount !== null) {
+      importCount = directCount;
+    } else {
+      // Module root page without a root package: check exported subpackages
+      const subLinks = [];
+      $(
+        '[data-test-id="UnitDirectories-table"] tr:not(.UnitDirectories-internal) a'
+      ).each((_, a) => {
+        const href = $(a).attr("href");
+        if (href && !href.includes("/internal")) {
+          const cleanHref = href.replace(/@[^/]+/, "");
+          subLinks.push(`https://pkg.go.dev${cleanHref}`);
+        }
+      });
+
+      for (const subUrl of subLinks) {
+        try {
+          const subHtml = await fetchPkgGoDevHtml(subUrl);
+          const $sub = cheerioLoad(subHtml);
+          const subCount = parseImportedByCount($sub);
+          if (subCount !== null) {
+            importCount += subCount;
+          }
+        } catch (subErr) {
+          logger.warn(
+            `Could not fetch pkg.go.dev subpackage ${subUrl}: ${subErr.message}`
+          );
+        }
+      }
+    }
+  } catch (err) {
+    logger.warn(
+      `Could not fetch import count from ${pkgGoDevUrl}: ${err.message}`
+    );
+  }
+
+  // 2. Fetch versions info from deps.dev
+  try {
+    const depsUrl = `https://api.deps.dev/v3/systems/go/packages/${encodeURIComponent(
+      modulePath
+    )}`;
+    const depsData = await fetchData(depsUrl).catch(() => null);
+    if (depsData && Array.isArray(depsData.versions)) {
+      versionsCount = depsData.versions.length;
+      if (!latestVersion) {
+        const defaultVer = depsData.versions.find((v) => v.isDefault);
+        latestVersion =
+          defaultVer?.versionKey?.version ||
+          depsData.versions[depsData.versions.length - 1]?.versionKey?.version ||
+          "";
+      }
+    }
+  } catch (err) {
+    logger.warn(
+      `Could not fetch deps.dev info for ${modulePath}: ${err.message}`
+    );
+  }
+
+  // 3. Fallback to proxy.golang.org if latestVersion not resolved
+  if (!latestVersion && modulePath) {
+    try {
+      const encodedModule = modulePath
+        .split("/")
+        .map((part) => part.replace(/[A-Z]/g, (c) => "!" + c.toLowerCase()))
+        .join("/");
+      const proxyData = await fetchData(
+        `https://proxy.golang.org/${encodedModule}/@latest`
+      ).catch(() => null);
+      if (proxyData?.Version) {
+        latestVersion = proxyData.Version;
+      }
+    } catch {
+      // Ignore fallback
+    }
+  }
+
+  return {
+    importCount,
+    latestVersion,
+    versionsCount,
+  };
 }
 
 async function getNpmStats(packageName, period) {

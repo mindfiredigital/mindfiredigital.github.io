@@ -291,9 +291,9 @@
     "shortDescription": "An npm package for building responsive web pages with a drag-and-drop UI",
     "githubUrl": "https://github.com/mindfiredigital/page-builder",
     "documentationUrl": "https://github.com/mindfiredigital/page-builder",
-    "stars": 42,
+    "stars": 41,
     "tags": [],
-    "lastPushedAt": "2026-05-15T06:11:17Z"
+    "lastPushedAt": "2026-10-26T02:48:01Z"
   },
   {
     "id": 20,
@@ -384,7 +384,7 @@
       "react",
       "shadcn"
     ],
-    "lastPushedAt": "2026-08-13T08:06:58Z"
+    "lastPushedAt": "2026-10-15T09:48:33Z"
   },
   {
     "id": 24,
@@ -416,7 +416,7 @@
     "shortDescription": "DeepScanBot allows you to crawl websites with various configurations, including crawl depth, timeout settings, proxy support, and output options.",
     "githubUrl": "https://github.com/mindfiredigital/DeepScanBot",
     "documentationUrl": "https://github.com/mindfiredigital/DeepScanBot",
-    "stars": 11,
+    "stars": 12,
     "tags": [
       "bot",
       "crawl",
@@ -424,7 +424,7 @@
       "go",
       "golang"
     ],
-    "lastPushedAt": "2026-08-14T11:26:07Z"
+    "lastPushedAt": "2026-08-17T08:25:00Z"
   },
   {
     "id": 26,
@@ -516,7 +516,7 @@
     "shortDescription": "A new GenAI-powered test automation command-line tool that analyzes live web pages, automatically derives test cases, and generates production-ready Python Selenium scripts—designed to reduce manual QA effort and speed up test coverage. The team has now started working on a web-based product.",
     "githubUrl": "https://github.com/mindfiredigital/AUTOTEST",
     "documentationUrl": "https://github.com/mindfiredigital/AUTOTEST",
-    "stars": 40,
+    "stars": 42,
     "tags": [
       "automation-testing",
       "chromium",
@@ -598,7 +598,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/adac-tools/",
     "stars": 15,
     "tags": [],
-    "lastPushedAt": "2026-08-14T08:45:14Z"
+    "lastPushedAt": "2026-08-26T05:19:28Z"
   },
   {
     "id": 35,
@@ -653,7 +653,7 @@
     "shortDescription": "markdown-reader is the \"Instant Reader\" for Markdown files. It is a lightweight tool that makes reading documentation easy. Instead of opening a big code editor, you can just double-click any .md file to see a clean version of it instantly. It includes a helpful sidebar to help you jump between sections, works completely offline, and automatically updates the view if the file is changed by someone else. It’s built for anyone who wants a quick, distraction-free way to read notes and documentation.",
     "githubUrl": "https://github.com/mindfiredigital/markdown-reader",
     "documentationUrl": "https://mindfiredigital.github.io/markdown-reader/",
-    "stars": 7,
+    "stars": 8,
     "tags": [],
     "lastPushedAt": "2026-08-13T07:13:39Z"
   },
@@ -687,8 +687,53 @@
     "shortDescription": "A modular, high-performance monorepo compiler and presentation tool that converts Markdown documents into gorgeous interactive slide decks in HTML, PDF, or editable/screenshot PPTX formats.",
     "githubUrl": "https://github.com/mindfiredigital/mdslide",
     "documentationUrl": "https://github.com/mindfiredigital/mdslide#readme",
+    "stars": 2,
+    "tags": [
+      "javascript",
+      "markdown",
+      "mdx",
+      "ppt-generator",
+      "pptx"
+    ],
+    "lastPushedAt": "2026-09-03T11:39:51Z"
+  },
+  {
+    "id": 41,
+    "title": "Agentic Headless CMS",
+    "short_description": "Agentic Headless CMS combines a drag-and-drop visual page builder for content teams with a developer-first headless backend. Powered by PostgreSQL and dynamic JSONB models, it lets creators design pages visually while delivering structured content to apps and AI agents through clean REST/GraphQL APIs and official client SDKs.",
+    "github_repository_link": "https://github.com/mindfiredigital/agentic-headless-cms",
+    "documentation_link": "https://github.com/mindfiredigital/agentic-headless-cms/blob/main/README.md",
+    "project_type": "current",
+    "date_created": "2026-11-06T06:37:04.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "Agentic Headless CMS combines a drag-and-drop visual page builder for content teams with a developer-first headless backend. Powered by PostgreSQL and dynamic JSONB models, it lets creators design pages visually while delivering structured content to apps and AI agents through clean REST/GraphQL APIs and official client SDKs.",
+    "githubUrl": "https://github.com/mindfiredigital/agentic-headless-cms",
+    "documentationUrl": "https://github.com/mindfiredigital/agentic-headless-cms/blob/main/README.md",
     "stars": 1,
     "tags": [],
-    "lastPushedAt": "2026-07-27T13:59:35Z"
+    "lastPushedAt": "2026-11-11T07:59:34Z"
+  },
+  {
+    "id": 42,
+    "title": "d-cron",
+    "short_description": "A zero-dependency, embeddable distributed cron library for Go that coordinates scheduled job execution across horizontally-scaled replicas using existing PostgreSQL infrastructure",
+    "github_repository_link": "https://github.com/mindfiredigital/d-cron",
+    "documentation_link": "https://github.com/mindfiredigital/d-cron#readme",
+    "project_type": "current",
+    "date_created": "2026-11-11T10:11:25.000Z",
+    "date_updated": null,
+    "status": "published",
+    "shortDescription": "A zero-dependency, embeddable distributed cron library for Go that coordinates scheduled job execution across horizontally-scaled replicas using existing PostgreSQL infrastructure",
+    "githubUrl": "https://github.com/mindfiredigital/d-cron",
+    "documentationUrl": "https://github.com/mindfiredigital/d-cron#readme",
+    "stars": 0,
+    "tags": [
+      "cron",
+      "cron-jobs",
+      "postgresql",
+      "scheduler"
+    ],
+    "lastPushedAt": "2026-11-11T11:21:25Z"
   }
 ]

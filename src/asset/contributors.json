@@ -1,13 +1,33 @@
 [
   {
     "id": 155735575,
-    "contributions": 1454,
+    "contributions": 1458,
     "html_url": "https://github.com/anandmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
     "login": "anandmindfire",
     "lastActiveDays": null,
-    "pullRequestCount": 241,
+    "pullRequestCount": 243,
     "issueCount": 51
+  },
+  {
+    "id": 253181559,
+    "contributions": 1024,
+    "html_url": "https://github.com/sobhan-s",
+    "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+    "login": "sobhan-s",
+    "lastActiveDays": 1,
+    "pullRequestCount": 0,
+    "issueCount": 78
+  },
+  {
+    "id": 253198538,
+    "contributions": 768,
+    "html_url": "https://github.com/Rituparna158",
+    "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+    "login": "Rituparna158",
+    "lastActiveDays": null,
+    "pullRequestCount": 8,
+    "issueCount": 116
   },
   {
     "id": 155735643,
@@ -21,63 +41,53 @@
   },
   {
     "id": 253717200,
-    "contributions": 606,
+    "contributions": 661,
     "html_url": "https://github.com/ipsitam-07",
     "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
     "login": "ipsitam-07",
-    "lastActiveDays": null,
-    "pullRequestCount": 40,
-    "issueCount": 36
+    "lastActiveDays": 27,
+    "pullRequestCount": 49,
+    "issueCount": 37
+  },
+  {
+    "id": 253201048,
+    "contributions": 651,
+    "html_url": "https://github.com/Ashminita28",
+    "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
+    "login": "Ashminita28",
+    "lastActiveDays": 7,
+    "pullRequestCount": 8,
+    "issueCount": 128
+  },
+  {
+    "id": 193932396,
+    "contributions": 579,
+    "html_url": "https://github.com/ParasMindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
+    "login": "ParasMindfire",
+    "lastActiveDays": 5,
+    "pullRequestCount": 30,
+    "issueCount": 81
   },
   {
     "id": 253200638,
-    "contributions": 514,
+    "contributions": 519,
     "html_url": "https://github.com/ansumanmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/253200638?v=4",
     "login": "ansumanmindfire",
     "lastActiveDays": null,
     "pullRequestCount": 4,
-    "issueCount": 78
+    "issueCount": 102
   },
   {
-    "id": 253198538,
-    "contributions": 491,
-    "html_url": "https://github.com/Rituparna158",
-    "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
-    "login": "Rituparna158",
-    "lastActiveDays": 2,
-    "pullRequestCount": 8,
-    "issueCount": 59
-  },
-  {
-    "id": 193932396,
-    "contributions": 478,
-    "html_url": "https://github.com/ParasMindfire",
-    "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
-    "login": "ParasMindfire",
-    "lastActiveDays": 14,
-    "pullRequestCount": 30,
-    "issueCount": 80
-  },
-  {
-    "id": 253181559,
-    "contributions": 440,
-    "html_url": "https://github.com/sobhan-s",
-    "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-    "login": "sobhan-s",
-    "lastActiveDays": 13,
-    "pullRequestCount": 0,
-    "issueCount": 39
-  },
-  {
-    "id": 253201048,
-    "contributions": 426,
-    "html_url": "https://github.com/Ashminita28",
-    "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
-    "login": "Ashminita28",
-    "lastActiveDays": null,
-    "pullRequestCount": 8,
-    "issueCount": 74
+    "id": 182347241,
+    "contributions": 399,
+    "html_url": "https://github.com/anujmindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
+    "login": "anujmindfire",
+    "lastActiveDays": 0,
+    "pullRequestCount": 5,
+    "issueCount": 62
   },
   {
     "id": 116242186,
@@ -91,23 +101,13 @@
   },
   {
     "id": 80667930,
-    "contributions": 288,
+    "contributions": 294,
     "html_url": "https://github.com/lakinmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
     "login": "lakinmindfire",
     "lastActiveDays": null,
     "pullRequestCount": 58,
-    "issueCount": 41
-  },
-  {
-    "id": 182347241,
-    "contributions": 216,
-    "html_url": "https://github.com/anujmindfire",
-    "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
-    "login": "anujmindfire",
-    "lastActiveDays": 3,
-    "pullRequestCount": 4,
-    "issueCount": 53
+    "issueCount": 44
   },
   {
     "id": 193920163,
@@ -215,7 +215,7 @@
     "html_url": "https://github.com/Bhupesh-MS",
     "avatar_url": "https://avatars.githubusercontent.com/u/120394376?v=4",
     "login": "Bhupesh-MS",
-    "lastActiveDays": 3,
+    "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 0
   },
@@ -228,6 +228,16 @@
     "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 0
+  },
+  {
+    "id": 292895195,
+    "contributions": 115,
+    "html_url": "https://github.com/jitender-joshi-mindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/292895195?v=4",
+    "login": "jitender-joshi-mindfire",
+    "lastActiveDays": 5,
+    "pullRequestCount": 2,
+    "issueCount": 2
   },
   {
     "id": 184540593,
@@ -271,12 +281,12 @@
   },
   {
     "id": 111574378,
-    "contributions": 85,
+    "contributions": 88,
     "html_url": "https://github.com/mind-murtaza",
     "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
     "login": "mind-murtaza",
-    "lastActiveDays": 21,
-    "pullRequestCount": 7,
+    "lastActiveDays": null,
+    "pullRequestCount": 8,
     "issueCount": 0
   },
   {
@@ -360,6 +370,16 @@
     "issueCount": 19
   },
   {
+    "id": 248417800,
+    "contributions": 44,
+    "html_url": "https://github.com/bighneswar-mindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
+    "login": "bighneswar-mindfire",
+    "lastActiveDays": 8,
+    "pullRequestCount": 0,
+    "issueCount": 1
+  },
+  {
     "id": 190622750,
     "contributions": 42,
     "html_url": "https://github.com/rohitrg96",
@@ -405,9 +425,9 @@
     "html_url": "https://github.com/uzerjamal-mfsi",
     "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
     "login": "uzerjamal-mfsi",
-    "lastActiveDays": 3,
+    "lastActiveDays": 7,
     "pullRequestCount": 0,
-    "issueCount": 4
+    "issueCount": 10
   },
   {
     "id": 120235923,
@@ -495,7 +515,7 @@
     "html_url": "https://github.com/ansumain",
     "avatar_url": "https://avatars.githubusercontent.com/u/124277891?v=4",
     "login": "ansumain",
-    "lastActiveDays": 23,
+    "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 0
   },
@@ -550,6 +570,16 @@
     "issueCount": 0
   },
   {
+    "id": 118360815,
+    "contributions": 19,
+    "html_url": "https://github.com/asishmindfire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
+    "login": "asishmindfire",
+    "lastActiveDays": null,
+    "pullRequestCount": 1,
+    "issueCount": 0
+  },
+  {
     "id": 224015823,
     "contributions": 18,
     "html_url": "https://github.com/ankitmindfiretraining-99",
@@ -570,6 +600,16 @@
     "issueCount": 0
   },
   {
+    "id": 145108187,
+    "contributions": 16,
+    "html_url": "https://github.com/SobhanSah00",
+    "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
+    "login": "SobhanSah00",
+    "lastActiveDays": null,
+    "pullRequestCount": 0,
+    "issueCount": 8
+  },
+  {
     "id": 160819069,
     "contributions": 16,
     "html_url": "https://github.com/konark-mindfire",
@@ -577,16 +617,6 @@
     "login": "konark-mindfire",
     "lastActiveDays": null,
     "pullRequestCount": 1,
-    "issueCount": 0
-  },
-  {
-    "id": 118360815,
-    "contributions": 15,
-    "html_url": "https://github.com/asishmindfire",
-    "avatar_url": "https://avatars.githubusercontent.com/u/118360815?v=4",
-    "login": "asishmindfire",
-    "lastActiveDays": null,
-    "pullRequestCount": 0,
     "issueCount": 0
   },
   {
@@ -670,6 +700,16 @@
     "issueCount": 0
   },
   {
+    "id": 49699333,
+    "contributions": 11,
+    "html_url": "https://github.com/apps/dependabot",
+    "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+    "login": "dependabot[bot]",
+    "lastActiveDays": null,
+    "pullRequestCount": 11,
+    "issueCount": 0
+  },
+  {
     "id": 147431910,
     "contributions": 11,
     "html_url": "https://github.com/100xmanas",
@@ -708,16 +748,6 @@
     "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 1
-  },
-  {
-    "id": 49699333,
-    "contributions": 8,
-    "html_url": "https://github.com/apps/dependabot",
-    "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
-    "login": "dependabot[bot]",
-    "lastActiveDays": null,
-    "pullRequestCount": 8,
-    "issueCount": 0
   },
   {
     "id": 84971366,
@@ -810,16 +840,6 @@
     "issueCount": 0
   },
   {
-    "id": 145108187,
-    "contributions": 5,
-    "html_url": "https://github.com/SobhanSah00",
-    "avatar_url": "https://avatars.githubusercontent.com/u/145108187?v=4",
-    "login": "SobhanSah00",
-    "lastActiveDays": null,
-    "pullRequestCount": 0,
-    "issueCount": 8
-  },
-  {
     "id": 136622811,
     "contributions": 4,
     "html_url": "https://github.com/apps/coderabbitai",
@@ -855,7 +875,7 @@
     "html_url": "https://github.com/yogeshsmindfire",
     "avatar_url": "https://avatars.githubusercontent.com/u/235709046?v=4",
     "login": "yogeshsmindfire",
-    "lastActiveDays": 26,
+    "lastActiveDays": null,
     "pullRequestCount": 8,
     "issueCount": 21
   },
@@ -958,6 +978,16 @@
     "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 0
+  },
+  {
+    "id": 344743046,
+    "contributions": 2,
+    "html_url": "https://github.com/ParasMindfireOfficial",
+    "avatar_url": "https://avatars.githubusercontent.com/u/344743046?v=4",
+    "login": "ParasMindfireOfficial",
+    "lastActiveDays": 5,
+    "pullRequestCount": 0,
+    "issueCount": 1
   },
   {
     "id": 53989958,
@@ -1135,7 +1165,7 @@
     "html_url": "https://github.com/Leny1337",
     "avatar_url": "https://avatars.githubusercontent.com/u/8152038?v=4",
     "login": "Leny1337",
-    "lastActiveDays": 21,
+    "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 1
   },
@@ -1155,7 +1185,7 @@
     "html_url": "https://github.com/soumya0809mindfiresolutions",
     "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
     "login": "soumya0809mindfiresolutions",
-    "lastActiveDays": 2,
+    "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 54
   },
@@ -1190,11 +1220,11 @@
     "issueCount": 1
   },
   {
-    "id": 104811762,
+    "id": 10137,
     "contributions": 0,
-    "html_url": "https://github.com/Rakesh-sahoo07",
-    "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
-    "login": "Rakesh-sahoo07",
+    "html_url": "https://github.com/ghost",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10137?v=4",
+    "login": "ghost",
     "lastActiveDays": null,
     "pullRequestCount": 0,
     "issueCount": 1

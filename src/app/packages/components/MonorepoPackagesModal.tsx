@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { MonorepoPackagesModalProps } from "@/types";
-import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL } from "@/constants";
+import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL, isGolangType } from "@/constants";
 import { getFrameworkName } from "@/app/utils";
 
 /**
@@ -153,9 +153,11 @@ export default function MonorepoPackagesModal({
                                 >
                                   <Image
                                     src={
-                                      pkg.type === "pypi"
+                                      pkg.type?.toLowerCase() === "pypi"
                                         ? "/images/social-media/pypi-svg.svg"
-                                        : "/images/social-media/npm-svgrepo-com.svg"
+                                        : isGolangType(pkg.type)
+                                          ? "/images/social-media/golang-svg.svg"
+                                          : "/images/social-media/npm-svgrepo-com.svg"
                                     }
                                     height={35}
                                     width={35}

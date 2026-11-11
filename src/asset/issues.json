@@ -1,150 +1,763 @@
 {
-  "total_count": 404,
-  "fetched_count": 404,
-  "fetched_at": "2026-08-17T06:03:43.413Z",
+  "total_count": 410,
+  "fetched_count": 410,
+  "fetched_at": "2026-11-11T13:58:29.184Z",
   "issues": [
     {
-      "id": 5158115559,
-      "number": 921,
-      "title": "[BUG]: after uplaoding file there is alignment issue in 1file and selected file text",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/921",
-      "created_at": "2026-08-15T06:50:36Z",
-      "updated_at": "2026-08-15T06:50:36Z",
+      "id": 6328433905,
+      "number": 279,
+      "title": "[BUG]: Server Actions leak React 19/Next.js 16 $ACTION_* FormData keys and deleteEntryAction crashes on 204 No Content",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/279",
+      "created_at": "2026-11-11T12:28:18Z",
+      "updated_at": "2026-11-11T12:28:18Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067334,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 6328404714,
+      "number": 278,
+      "title": "[BUG]: API tokens inherit creator's user permissions instead of enforcing the token's assigned role permissions",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/278",
+      "created_at": "2026-11-11T12:26:36Z",
+      "updated_at": "2026-11-11T12:26:36Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067334,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 6327626481,
+      "number": 277,
+      "title": "[BUG]: GraphQL collection and entry queries return unpublished drafts without defaultStatus or draft authorization",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/277",
+      "created_at": "2026-11-11T11:39:19Z",
+      "updated_at": "2026-11-11T11:39:19Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067334,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 6327594358,
+      "number": 276,
+      "title": "[Bug]: getContentList(..., { draft: true }) does not pass status=all so Next.js Draft Mode omits unpublished drafts",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/276",
+      "created_at": "2026-11-11T11:37:16Z",
+      "updated_at": "2026-11-11T11:37:16Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067334,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 6327304883,
+      "number": 275,
+      "title": "[BUG]: type mismatches, URL normalization, metadata, static params, and Next.js 16 issues in published 0.1.0 SDK packages",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/275",
+      "created_at": "2026-11-11T11:18:50Z",
+      "updated_at": "2026-11-11T11:18:50Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067334,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 6309462138,
+      "number": 266,
+      "title": "[QA / Testing]: Establish Comprehensive End-to-End Non-Tech-First Headless CMS Manual Test Plan",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/266",
+      "created_at": "2026-11-10T14:59:24Z",
+      "updated_at": "2026-11-10T14:59:24Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309460868,
+      "number": 265,
+      "title": "[Shared UI / Design System]: Unify Design System Color Tokens and Accessible Dialog Micro-Interactions",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/265",
+      "created_at": "2026-11-10T14:59:20Z",
+      "updated_at": "2026-11-10T14:59:20Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309453556,
+      "number": 264,
+      "title": "[Security / Access]: Decouple Personal Authenticator MFA from Administrative Platform Security",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/264",
+      "created_at": "2026-11-10T14:58:59Z",
+      "updated_at": "2026-11-10T14:58:59Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309452342,
+      "number": 263,
+      "title": "[Media / Backend & UI]: Implement Media Asset Usage Tracking and Resilient Storage Error Handling",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/263",
+      "created_at": "2026-11-10T14:58:55Z",
+      "updated_at": "2026-11-10T14:58:55Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309446988,
+      "number": 262,
+      "title": "[CMS UI / Visual Editor]: Overhaul Visual Page Builder with Custom Blocks, Template Importer, and Rich Text Drawer",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/262",
+      "created_at": "2026-11-10T14:58:38Z",
+      "updated_at": "2026-11-10T14:58:38Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309446166,
+      "number": 261,
+      "title": "[CMS UI / Navigation & Settings]: Implement Visual Navigation Menu Builder and Hierarchical Pages Management",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/261",
+      "created_at": "2026-11-10T14:58:35Z",
+      "updated_at": "2026-11-10T14:58:35Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309441729,
+      "number": 260,
+      "title": "[CMS UI / Blog]: Implement Dedicated Blog Studio and Markdown Import Workflow",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/260",
+      "created_at": "2026-11-10T14:58:21Z",
+      "updated_at": "2026-11-10T14:58:21Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309440658,
+      "number": 259,
+      "title": "[CMS UI / Renderer]: Implement Live Website Rendering Engine, Editor Preview, and Static Exporter",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/259",
+      "created_at": "2026-11-10T14:58:17Z",
+      "updated_at": "2026-11-10T14:58:17Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309435840,
+      "number": 258,
+      "title": "[Content / Query]: Add Content Kind Partitioning and Unique Slug Validation",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/258",
+      "created_at": "2026-11-10T14:58:03Z",
+      "updated_at": "2026-11-10T14:58:03Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309434975,
+      "number": 257,
+      "title": "[Content / Delivery]: Implement Public Delivery API and Visitor Submissions Engine with Anti-Spam Protection",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/257",
+      "created_at": "2026-11-10T14:58:00Z",
+      "updated_at": "2026-11-10T14:58:00Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309429086,
+      "number": 256,
+      "title": "[Auth / RBAC]: Implement Granular Capability-Based Permissions and Site-Scoped Authorization",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/256",
+      "created_at": "2026-11-10T14:57:42Z",
+      "updated_at": "2026-11-10T14:57:42Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6309425132,
+      "number": 255,
+      "title": "[CMS UI / Workspace]: Implement Multi-Site Workspace Architecture and Tiered Navigation",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/255",
+      "created_at": "2026-11-10T14:57:30Z",
+      "updated_at": "2026-11-10T14:57:30Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6238766092,
+      "number": 314,
+      "title": "[Feature]: Add Go modules support to the packages page",
+      "html_url": "https://github.com/mindfiredigital/mindfiredigital.github.io/issues/314",
+      "created_at": "2026-11-06T07:38:37Z",
+      "updated_at": "2026-11-06T07:38:37Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/mindfiredigital.github.io",
+      "repoName": "mindfiredigital.github.io",
+      "labels": [
+        {
+          "id": 6021990065,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "ParasMindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
+        "html_url": "https://github.com/ParasMindfire"
+      }
+    },
+    {
+      "id": 6198361228,
+      "number": 91,
+      "title": "[ENHANCEMENT] Add trialled default values for declarative layout",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/91",
+      "created_at": "2026-11-04T07:24:39Z",
+      "updated_at": "2026-11-04T07:24:39Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [
+        {
+          "id": 10133328511,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 6198266808,
+      "number": 90,
+      "title": "[BUG] ELK legend overlaps container boundaries and nearby content",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/90",
+      "created_at": "2026-11-04T07:17:44Z",
+      "updated_at": "2026-11-04T07:17:44Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [
+        {
+          "id": 10133328494,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 6198239906,
+      "number": 89,
+      "title": "[BUG] CLI never prints validation or deprecation warnings",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/89",
+      "created_at": "2026-11-04T07:16:01Z",
+      "updated_at": "2026-11-04T07:16:01Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [
+        {
+          "id": 10133328494,
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 5383631271,
+      "number": 979,
+      "title": "[BUG]: Missing base semantic color tokens (--success, --warning) in ignix.css causes unstyled/transparent components",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/979",
+      "created_at": "2026-09-08T07:30:08Z",
+      "updated_at": "2026-09-08T07:30:08Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 5158052786,
-      "number": 920,
-      "title": "[BUG]: 3 delete and clear options available to delete uploaded file(not sure if its a bug or not)",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/920",
-      "created_at": "2026-08-15T06:33:04Z",
-      "updated_at": "2026-08-15T06:33:32Z",
+      "id": 5371517092,
+      "number": 977,
+      "title": "[BUG]: DatePicker calendar popup does not flip upwards and gets truncated at the bottom of viewport",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/977",
+      "created_at": "2026-09-07T07:33:27Z",
+      "updated_at": "2026-09-07T07:33:27Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 5158042144,
-      "number": 919,
-      "title": "[BUG]: causing alignment issue while we upload long file name",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/919",
-      "created_at": "2026-08-15T06:30:02Z",
-      "updated_at": "2026-08-15T06:30:02Z",
+      "id": 5320935469,
+      "number": 970,
+      "title": "[BUG]: Documented 'maintenance-page' template is missing from remote registry.json",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/970",
+      "created_at": "2026-09-02T07:12:04Z",
+      "updated_at": "2026-09-02T07:12:04Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 5158032905,
-      "number": 918,
-      "title": "[BUG]: its allowing file name more than 50 characters",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/918",
-      "created_at": "2026-08-15T06:27:06Z",
-      "updated_at": "2026-08-15T06:27:06Z",
+      "id": 5308826268,
+      "number": 963,
+      "title": "[Bug]: Manual installation snippets contain relative monorepo imports that fail in standalone projects",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/963",
+      "created_at": "2026-09-01T07:03:23Z",
+      "updated_at": "2026-09-01T07:03:52Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 5157923205,
-      "number": 917,
-      "title": "[BUG]: when I select size as icon texts are going outside the box",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/917",
-      "created_at": "2026-08-15T05:54:56Z",
-      "updated_at": "2026-08-15T05:54:56Z",
+      "id": 5301347603,
+      "number": 960,
+      "title": "[BUG]: Infinite Canvas layout tile is missing from All Layouts",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/960",
+      "created_at": "2026-08-31T14:31:03Z",
+      "updated_at": "2026-08-31T14:31:03Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
+        "login": "bighneswar-mindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
+        "html_url": "https://github.com/bighneswar-mindfire"
       }
     },
     {
-      "id": 5060501759,
-      "number": 902,
-      "title": "[BUG]: `Input` and `Textarea` components lack standard HTML attributes, `forwardRef`, and crash without strict props",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/902",
-      "created_at": "2026-08-04T12:34:36Z",
-      "updated_at": "2026-08-07T10:09:38Z",
+      "id": 5299646842,
+      "number": 958,
+      "title": "[BUG]: the \"Pulse\" animation variant is not visible in Skeleton Component",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/958",
+      "created_at": "2026-08-31T11:33:24Z",
+      "updated_at": "2026-08-31T11:33:24Z",
       "state": "open",
-      "comments": 1,
+      "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "Ashminita28",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
-        "html_url": "https://github.com/Ashminita28"
+        "login": "ipsitam-07",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253717200?v=4",
+        "html_url": "https://github.com/ipsitam-07"
       }
     },
     {
-      "id": 5052371021,
-      "number": 898,
-      "title": "[BUG]: Table columns fail to expand and fill available width on large screens",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/898",
-      "created_at": "2026-08-03T17:11:42Z",
-      "updated_at": "2026-08-04T12:44:20Z",
+      "id": 5254034840,
+      "number": 87,
+      "title": "[adac-diagram] Support PNG output for diagram generation",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/87",
+      "created_at": "2026-08-26T06:30:12Z",
+      "updated_at": "2026-08-26T06:30:12Z",
       "state": "open",
-      "comments": 1,
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [
+        {
+          "id": 10133328511,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 5254026119,
+      "number": 86,
+      "title": "[adac-diagram] Declarative Layout & Styling Properties for Architecture Diagrams",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/86",
+      "created_at": "2026-08-26T06:28:52Z",
+      "updated_at": "2026-08-26T06:28:52Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [
+        {
+          "id": 10133328511,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 5245845289,
+      "number": 950,
+      "title": "[BUG]: TypeScript compilation errors in imported components under strict type-checking settings",
+      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/950",
+      "created_at": "2026-08-25T12:30:19Z",
+      "updated_at": "2026-08-25T12:30:19Z",
+      "state": "open",
+      "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
       "user": {
-        "login": "Ashminita28",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
-        "html_url": "https://github.com/Ashminita28"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 5052322194,
-      "number": 897,
-      "title": "[BUG]: Framer Motion warning in Table component due to AnimatePresence mode",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/897",
-      "created_at": "2026-08-03T17:05:45Z",
-      "updated_at": "2026-08-04T12:45:12Z",
+      "id": 5234678984,
+      "number": 149,
+      "title": "[Feature] Implement animated loading skeletons for initial UI loading states",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/149",
+      "created_at": "2026-08-24T12:25:47Z",
+      "updated_at": "2026-08-24T12:25:47Z",
       "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
       "labels": [],
       "user": {
-        "login": "Ashminita28",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253201048?v=4",
-        "html_url": "https://github.com/Ashminita28"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 5169765900,
+      "number": 160,
+      "title": "[ENHANCEMENT]: Add per-stage visibility of checks in package health observability",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/160",
+      "created_at": "2026-08-17T08:15:56Z",
+      "updated_at": "2026-08-17T08:15:56Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 5169689891,
+      "number": 159,
+      "title": "[BUG]: Test coverage fails to detect files from root coverage folder",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/159",
+      "created_at": "2026-08-17T08:06:46Z",
+      "updated_at": "2026-08-17T08:06:46Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 5169677364,
+      "number": 158,
+      "title": "[BUG]: Slow loading response when retrieving package details",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/158",
+      "created_at": "2026-08-17T08:05:06Z",
+      "updated_at": "2026-08-17T08:05:06Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 5169605091,
+      "number": 157,
+      "title": "[BUG]: Publish control last publish column displays current time instead of actual release date",
+      "html_url": "https://github.com/mindfiredigital/MonoDog/issues/157",
+      "created_at": "2026-08-17T07:55:46Z",
+      "updated_at": "2026-08-17T07:55:46Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/MonoDog",
+      "repoName": "MonoDog",
+      "labels": [],
+      "user": {
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
+      }
+    },
+    {
+      "id": 5139937374,
+      "number": 2,
+      "title": "SDS doc",
+      "html_url": "https://github.com/mindfiredigital/d-cron/issues/2",
+      "created_at": "2026-08-13T09:36:45Z",
+      "updated_at": "2026-08-13T09:36:56Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/d-cron",
+      "repoName": "d-cron",
+      "labels": [
+        {
+          "id": 11820163273,
+          "name": "documentation",
+          "color": "0075ca",
+          "description": "Improvements or additions to documentation"
+        }
+      ],
+      "user": {
+        "login": "lakinmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
+        "html_url": "https://github.com/lakinmindfire"
+      }
+    },
+    {
+      "id": 5139926895,
+      "number": 1,
+      "title": "Software Requirements Specification",
+      "html_url": "https://github.com/mindfiredigital/d-cron/issues/1",
+      "created_at": "2026-08-13T09:35:32Z",
+      "updated_at": "2026-08-13T09:35:46Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/d-cron",
+      "repoName": "d-cron",
+      "labels": [
+        {
+          "id": 11820163273,
+          "name": "documentation",
+          "color": "0075ca",
+          "description": "Improvements or additions to documentation"
+        }
+      ],
+      "user": {
+        "login": "lakinmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
+        "html_url": "https://github.com/lakinmindfire"
       }
     },
     {
@@ -281,31 +894,6 @@
       }
     },
     {
-      "id": 4889619232,
-      "number": 83,
-      "title": "[adac-diagram] Add constraint-based / Topology-Shape-Metrics (orthogonal) layout as a new opt-in engine",
-      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/83",
-      "created_at": "2026-07-15T05:34:15Z",
-      "updated_at": "2026-07-15T05:34:15Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
-      "repoName": "adac-tools",
-      "labels": [
-        {
-          "id": 10133328511,
-          "name": "enhancement",
-          "color": "a2eeef",
-          "description": "New feature or request"
-        }
-      ],
-      "user": {
-        "login": "uzerjamal-mfsi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-        "html_url": "https://github.com/uzerjamal-mfsi"
-      }
-    },
-    {
       "id": 4837611727,
       "number": 124,
       "title": "[FEATURE]: Setup Homebrew Tap and Auto-Update GitHub Workflow",
@@ -324,64 +912,28 @@
       }
     },
     {
-      "id": 4826317382,
-      "number": 80,
-      "title": "[BUG] Custom layout algorithm produces poor node placement (excessive spacing / misconnected edges)",
-      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/80",
-      "created_at": "2026-07-07T07:34:56Z",
-      "updated_at": "2026-07-07T07:34:56Z",
+      "id": 4837373530,
+      "number": 1,
+      "title": "Software Requirements Specification (SRS)",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/1",
+      "created_at": "2026-07-08T12:22:31Z",
+      "updated_at": "2026-07-08T12:22:43Z",
       "state": "open",
       "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
-      "repoName": "adac-tools",
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
       "labels": [
         {
-          "id": 10133328494,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 11457067346,
+          "name": "documentation",
+          "color": "0075ca",
+          "description": "Improvements or additions to documentation"
         }
       ],
       "user": {
-        "login": "uzerjamal-mfsi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-        "html_url": "https://github.com/uzerjamal-mfsi"
-      }
-    },
-    {
-      "id": 4826220149,
-      "number": 79,
-      "title": "[refactor] Isolate adac-core to validation-only dependencies; make other packages independently",
-      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/79",
-      "created_at": "2026-07-07T07:20:47Z",
-      "updated_at": "2026-07-15T05:44:45Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
-      "repoName": "adac-tools",
-      "labels": [],
-      "user": {
-        "login": "uzerjamal-mfsi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-        "html_url": "https://github.com/uzerjamal-mfsi"
-      }
-    },
-    {
-      "id": 4826194811,
-      "number": 78,
-      "title": "[adac-web] Make adac-web generate diagrams entirely in the browser (no backend dependency)",
-      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/78",
-      "created_at": "2026-07-07T07:17:20Z",
-      "updated_at": "2026-07-07T07:46:03Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
-      "repoName": "adac-tools",
-      "labels": [],
-      "user": {
-        "login": "uzerjamal-mfsi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-        "html_url": "https://github.com/uzerjamal-mfsi"
+        "login": "lakinmindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
+        "html_url": "https://github.com/lakinmindfire"
       }
     },
     {
@@ -554,24 +1106,6 @@
       }
     },
     {
-      "id": 4758779045,
-      "number": 869,
-      "title": "[BUG]: when I am selecting background transparent for dropdown its not getting applied",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/869",
-      "created_at": "2026-06-27T14:58:06Z",
-      "updated_at": "2026-07-09T09:55:36Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
       "id": 4698781913,
       "number": 176,
       "title": "[Feature]: Token-Efficient Encoded UI Protocol for Ignix-Lite (A2UI Integration)",
@@ -658,78 +1192,6 @@
       }
     },
     {
-      "id": 4607223969,
-      "number": 868,
-      "title": "[BUG]: in date picker in few areas texts above placeholder are little hidden",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/868",
-      "created_at": "2026-06-07T11:56:10Z",
-      "updated_at": "2026-07-09T10:40:15Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4607199173,
-      "number": 867,
-      "title": "[BUG]: in validation example placeholder texts are overlapping",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/867",
-      "created_at": "2026-06-07T11:47:43Z",
-      "updated_at": "2026-07-09T12:10:25Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4607160097,
-      "number": 865,
-      "title": "[BUG]: range date picker showing wrong data in selected days if we select endday previous to start date",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/865",
-      "created_at": "2026-06-07T11:34:38Z",
-      "updated_at": "2026-07-10T09:15:49Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4607053128,
-      "number": 864,
-      "title": "[BUG]: Background black color is not getting applied in open menu",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/864",
-      "created_at": "2026-06-07T10:58:13Z",
-      "updated_at": "2026-07-10T11:06:43Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
       "id": 4564499154,
       "number": 863,
       "title": "RFC: Add Skills Package",
@@ -802,24 +1264,6 @@
       }
     },
     {
-      "id": 4557506445,
-      "number": 859,
-      "title": "[BUG]: calendar not closing after selecting dates in date picker",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/859",
-      "created_at": "2026-05-31T12:11:25Z",
-      "updated_at": "2026-07-09T09:47:19Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
       "id": 4557285756,
       "number": 858,
       "title": "[BUG]: when I am switching to dark mode text are not visible present in the frame",
@@ -828,60 +1272,6 @@
       "updated_at": "2026-05-31T10:39:56Z",
       "state": "open",
       "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4557276210,
-      "number": 857,
-      "title": "[BUG]: not able to add year as its already picking year as 1900",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/857",
-      "created_at": "2026-05-31T10:35:35Z",
-      "updated_at": "2026-07-09T11:38:25Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4557248709,
-      "number": 856,
-      "title": "[BUG]: dates outline overlapping in date picker calendar",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/856",
-      "created_at": "2026-05-31T10:21:42Z",
-      "updated_at": "2026-07-09T07:10:31Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4557244091,
-      "number": 855,
-      "title": "[BUG]: in date picker a black color button with no text appear",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/855",
-      "created_at": "2026-05-31T10:19:20Z",
-      "updated_at": "2026-07-09T09:27:05Z",
-      "state": "open",
-      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
       "repoName": "ignix-ui",
       "labels": [],
@@ -914,78 +1304,6 @@
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
         "html_url": "https://github.com/apps/github-actions"
-      }
-    },
-    {
-      "id": 4512218832,
-      "number": 851,
-      "title": "[BUG]: in checkbox components preview glass variant checkbox missing",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/851",
-      "created_at": "2026-05-24T16:22:27Z",
-      "updated_at": "2026-05-25T09:33:01Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4512114594,
-      "number": 850,
-      "title": "[BUG]: when I click on label on left button label box appearing on right instead of left (Box component preview section)",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/850",
-      "created_at": "2026-05-24T15:46:56Z",
-      "updated_at": "2026-05-25T09:55:25Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4512100004,
-      "number": 849,
-      "title": "[BUG]: under checkbox component primary and subtle checkbox tick mark not visibe when I clicked them",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/849",
-      "created_at": "2026-05-24T15:42:46Z",
-      "updated_at": "2026-05-25T09:32:48Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4512088740,
-      "number": 848,
-      "title": "[BUG]: unable to click outline under preview of checkbox component",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/848",
-      "created_at": "2026-05-24T15:39:02Z",
-      "updated_at": "2026-05-25T09:32:41Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
       }
     },
     {
@@ -1022,96 +1340,6 @@
         "login": "SandipMF",
         "avatar_url": "https://avatars.githubusercontent.com/u/113003818?v=4",
         "html_url": "https://github.com/SandipMF"
-      }
-    },
-    {
-      "id": 4463534780,
-      "number": 839,
-      "title": "[BUG]: preview for wrap is missig for button group",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/839",
-      "created_at": "2026-05-17T12:54:58Z",
-      "updated_at": "2026-05-18T05:40:42Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4463494870,
-      "number": 838,
-      "title": "[BUG]: for both left and right icon postion icon remains constant",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/838",
-      "created_at": "2026-05-17T12:40:08Z",
-      "updated_at": "2026-05-18T05:41:45Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4463466997,
-      "number": 837,
-      "title": "[BUG]: in buttons right side bar not navigation when we click them",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/837",
-      "created_at": "2026-05-17T12:30:43Z",
-      "updated_at": "2026-05-18T05:46:03Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4463434936,
-      "number": 836,
-      "title": "[BUG]: dot bounce in button components coming on left side of the text",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/836",
-      "created_at": "2026-05-17T12:18:47Z",
-      "updated_at": "2026-05-18T05:56:01Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
-      }
-    },
-    {
-      "id": 4463427058,
-      "number": 835,
-      "title": "[BUG]: in button variant dot bounce not visible(for primary and secondary variant)",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/835",
-      "created_at": "2026-05-17T12:15:34Z",
-      "updated_at": "2026-05-18T05:55:12Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
       }
     },
     {
@@ -2789,24 +3017,6 @@
         "login": "ashutosh-jena-mindfire",
         "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
         "html_url": "https://github.com/ashutosh-jena-mindfire"
-      }
-    },
-    {
-      "id": 4020670573,
-      "number": 633,
-      "title": "[BUG]: Placeholder text overlaps input border in “bounce” variant",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/633",
-      "created_at": "2026-03-04T08:06:55Z",
-      "updated_at": "2026-03-09T11:08:44Z",
-      "state": "open",
-      "comments": 1,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [],
-      "user": {
-        "login": "soumya0809mindfiresolutions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-        "html_url": "https://github.com/soumya0809mindfiresolutions"
       }
     },
     {
@@ -7409,31 +7619,6 @@
       }
     },
     {
-      "id": 3116810170,
-      "number": 55,
-      "title": "[Feature]:Documentation for textarea",
-      "html_url": "https://github.com/mindfiredigital/ignix-ui/issues/55",
-      "created_at": "2025-06-04T07:31:31Z",
-      "updated_at": "2025-06-04T07:31:31Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/ignix-ui",
-      "repoName": "ignix-ui",
-      "labels": [
-        {
-          "id": 8075364871,
-          "name": "documentation",
-          "color": "0075ca",
-          "description": "Improvements or additions to documentation"
-        }
-      ],
-      "user": {
-        "login": "deepakyadav-01",
-        "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
-        "html_url": "https://github.com/deepakyadav-01"
-      }
-    },
-    {
       "id": 3116776486,
       "number": 41,
       "title": "[Feature]:add feature for theme setup and usage in component",
@@ -8187,9 +8372,9 @@
       "repoName": "nft-marketplace",
       "labels": [],
       "user": {
-        "login": "Rakesh-sahoo07",
-        "avatar_url": "https://avatars.githubusercontent.com/u/104811762?v=4",
-        "html_url": "https://github.com/Rakesh-sahoo07"
+        "login": "ghost",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10137?v=4",
+        "html_url": "https://github.com/ghost"
       }
     },
     {

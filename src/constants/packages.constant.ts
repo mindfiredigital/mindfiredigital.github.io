@@ -20,7 +20,11 @@ export const FILTER_OPTIONS = [
   { label: "All", value: "all" },
   { label: "NPM", value: "npm" },
   { label: "PyPI", value: "pypi" },
+  { label: "Golang", value: "golang" },
 ] as const;
+
+export const isGolangType = (type?: string): boolean =>
+  ["golang", "go"].includes((type || "").toLowerCase());
 
 export const NPM_RANGE_OPTIONS = [
   { label: "Total", value: "total" },

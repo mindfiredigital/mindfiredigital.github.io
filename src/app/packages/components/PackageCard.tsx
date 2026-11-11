@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PackageCardProps } from "@/types";
-import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL } from "@/constants";
+import { PACKAGE_CARD_LABELS, GITHUB_BASE_URL, isGolangType } from "@/constants";
 
 /**
  * PackageCard Component
@@ -112,9 +112,11 @@ export default function PackageCard({
                 src={
                   group.packages[0].type?.toLowerCase() === "pypi"
                     ? "/images/social-media/pypi-svg.svg"
-                    : group.packages[0].type === "Nuget"
+                    : group.packages[0].type?.toLowerCase() === "nuget"
                       ? "/images/social-media/nuget-svgrepo-com.png"
-                      : "/images/social-media/npm-svgrepo-com.svg"
+                      : isGolangType(group.packages[0].type)
+                        ? "/images/social-media/golang-svg.svg"
+                        : "/images/social-media/npm-svgrepo-com.svg"
                 }
                 height={35}
                 width={35}
