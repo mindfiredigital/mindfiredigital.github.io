@@ -56,10 +56,10 @@
     "status": "published"
   },
   {
-    "name": "page-builder-react",
-    "title": "page-builder-react",
+    "name": "page-builder-core",
+    "title": "page-builder-core",
     "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
     "projectTitle": "Page Builder",
     "status": "published"
   },
@@ -72,10 +72,10 @@
     "status": "draft"
   },
   {
-    "name": "page-builder-core",
-    "title": "page-builder-core",
+    "name": "page-builder-react",
+    "title": "page-builder-react",
     "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
     "projectTitle": "Page Builder",
     "status": "published"
   },
@@ -320,10 +320,10 @@
     "status": "published"
   },
   {
-    "name": "mdslide-shared",
-    "title": "mdslide-shared",
+    "name": "mdslide-parser",
+    "title": "mdslide-parser",
     "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
     "projectTitle": "mdslide",
     "status": "published"
   },
@@ -344,10 +344,10 @@
     "status": "published"
   },
   {
-    "name": "mdslide-parser",
-    "title": "mdslide-parser",
+    "name": "mdslide-shared",
+    "title": "mdslide-shared",
     "type": "npm",
-    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
+    "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
     "projectTitle": "mdslide",
     "status": "published"
   },
@@ -420,14 +420,6 @@
     "title": "otel",
     "type": "golang",
     "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/otel",
-    "projectTitle": "d-cron",
-    "status": "published"
-  },
-  {
-    "name": "apps/docs",
-    "title": "apps/docs",
-    "type": "golang",
-    "url": "https://mindfiredigital.github.io/d-cron",
     "projectTitle": "d-cron",
     "status": "published"
   }

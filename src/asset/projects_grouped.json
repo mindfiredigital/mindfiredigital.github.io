@@ -132,9 +132,9 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "page-builder-react",
+        "name": "page-builder-core",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
         "status": "published"
       },
       {
@@ -144,9 +144,9 @@
         "status": "draft"
       },
       {
-        "name": "page-builder-core",
+        "name": "page-builder-react",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-react",
         "status": "published"
       },
       {
@@ -464,9 +464,9 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "mdslide-shared",
+        "name": "mdslide-parser",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
         "status": "published"
       },
       {
@@ -482,9 +482,9 @@
         "status": "published"
       },
       {
-        "name": "mdslide-parser",
+        "name": "mdslide-shared",
         "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
         "status": "published"
       }
     ]
@@ -553,12 +553,6 @@
         "name": "otel",
         "type": "golang",
         "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/otel",
-        "status": "published"
-      },
-      {
-        "name": "apps/docs",
-        "type": "golang",
-        "url": "https://mindfiredigital.github.io/d-cron",
         "status": "published"
       }
     ]

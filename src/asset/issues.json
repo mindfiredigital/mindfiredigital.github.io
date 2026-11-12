@@ -1,15 +1,15 @@
 {
-  "total_count": 410,
-  "fetched_count": 410,
-  "fetched_at": "2026-11-11T13:58:29.184Z",
+  "total_count": 409,
+  "fetched_count": 409,
+  "fetched_at": "2026-11-12T13:23:24.752Z",
   "issues": [
     {
-      "id": 6328433905,
-      "number": 279,
-      "title": "[BUG]: Server Actions leak React 19/Next.js 16 $ACTION_* FormData keys and deleteEntryAction crashes on 204 No Content",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/279",
-      "created_at": "2026-11-11T12:28:18Z",
-      "updated_at": "2026-11-11T12:28:18Z",
+      "id": 6349736626,
+      "number": 288,
+      "title": "[Bug]: preserve admin wildcard (*) permission in Roles UI and keep session cookie under 4 KB",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/288",
+      "created_at": "2026-11-12T12:24:55Z",
+      "updated_at": "2026-11-12T12:24:55Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
@@ -29,12 +29,12 @@
       }
     },
     {
-      "id": 6328404714,
-      "number": 278,
-      "title": "[BUG]: API tokens inherit creator's user permissions instead of enforcing the token's assigned role permissions",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/278",
-      "created_at": "2026-11-11T12:26:36Z",
-      "updated_at": "2026-11-11T12:26:36Z",
+      "id": 6349727301,
+      "number": 287,
+      "title": "[Bug]: return 400/404 instead of 500 with stack trace on invalid entry UUID",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/287",
+      "created_at": "2026-11-12T12:24:21Z",
+      "updated_at": "2026-11-12T12:24:21Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
@@ -54,12 +54,12 @@
       }
     },
     {
-      "id": 6327626481,
-      "number": 277,
-      "title": "[BUG]: GraphQL collection and entry queries return unpublished drafts without defaultStatus or draft authorization",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/277",
-      "created_at": "2026-11-11T11:39:19Z",
-      "updated_at": "2026-11-11T11:39:19Z",
+      "id": 6349715448,
+      "number": 286,
+      "title": "[BUG]: support x-mfa-code in AdminModule token operations and add listTokens()",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/286",
+      "created_at": "2026-11-12T12:23:37Z",
+      "updated_at": "2026-11-12T12:23:37Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
@@ -79,37 +79,12 @@
       }
     },
     {
-      "id": 6327594358,
-      "number": 276,
-      "title": "[Bug]: getContentList(..., { draft: true }) does not pass status=all so Next.js Draft Mode omits unpublished drafts",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/276",
-      "created_at": "2026-11-11T11:37:16Z",
-      "updated_at": "2026-11-11T11:37:16Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
-      "repoName": "agentic-headless-cms",
-      "labels": [
-        {
-          "id": 11457067334,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
-        }
-      ],
-      "user": {
-        "login": "Rituparna158",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
-        "html_url": "https://github.com/Rituparna158"
-      }
-    },
-    {
-      "id": 6327304883,
-      "number": 275,
-      "title": "[BUG]: type mismatches, URL normalization, metadata, static params, and Next.js 16 issues in published 0.1.0 SDK packages",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/275",
-      "created_at": "2026-11-11T11:18:50Z",
-      "updated_at": "2026-11-11T11:18:50Z",
+      "id": 6349704242,
+      "number": 285,
+      "title": "[BUG]: extract backend error messages, normalize baseUrl, preserve uploadFromPath MIME type, and type ContentModule inputs",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/285",
+      "created_at": "2026-11-12T12:22:55Z",
+      "updated_at": "2026-11-12T12:22:55Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",

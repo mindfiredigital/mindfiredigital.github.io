@@ -11,8 +11,8 @@
   {
     "name": "neo-pusher",
     "type": "pypi",
-    "day": 1,
-    "week": 3,
+    "day": 0,
+    "week": 2,
     "month": 45,
     "year": 0,
     "total": 24000,
@@ -21,8 +21,8 @@
   {
     "name": "sqlrag",
     "type": "pypi",
-    "day": 3,
-    "week": 10,
+    "day": 2,
+    "week": 9,
     "month": 15,
     "year": 0,
     "total": 9000,
@@ -34,16 +34,16 @@
     "day": 4,
     "week": 16,
     "year": 4964,
-    "total": 6553,
+    "total": 6554,
     "title": "pivothead"
   },
   {
     "name": "ignix-cli",
     "type": "npm",
-    "day": 1,
-    "week": 23,
-    "year": 5625,
-    "total": 5799,
+    "day": 5,
+    "week": 14,
+    "year": 5545,
+    "total": 5804,
     "title": "ignix-cli"
   },
   {
@@ -67,10 +67,10 @@
   {
     "name": "react-canvas-editor",
     "type": "npm",
-    "day": 28,
-    "week": 122,
+    "day": 1,
+    "week": 110,
     "year": 2343,
-    "total": 4962,
+    "total": 4963,
     "title": "react-canvas-editor"
   },
   {
@@ -88,14 +88,14 @@
     "day": 2,
     "week": 35,
     "year": 1844,
-    "total": 3588,
+    "total": 3592,
     "title": "page-builder-web-component"
   },
   {
     "name": "textigniter",
     "type": "npm",
-    "day": 23,
-    "week": 51,
+    "day": 0,
+    "week": 50,
     "year": 981,
     "total": 3330,
     "title": "textigniter"
@@ -104,7 +104,7 @@
     "name": "ignix-ui",
     "type": "npm",
     "day": 0,
-    "week": 23,
+    "week": 9,
     "year": 2727,
     "total": 3199,
     "title": "ignix-ui"
@@ -112,16 +112,16 @@
   {
     "name": "ignix-lite-cli",
     "type": "npm",
-    "day": 11,
-    "week": 24,
-    "year": 3079,
-    "total": 3079,
+    "day": 2,
+    "week": 26,
+    "year": 3081,
+    "total": 3081,
     "title": "ignix-lite-cli"
   },
   {
     "name": "ignix-lite-mcp",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 7,
     "year": 2725,
     "total": 2725,
@@ -139,8 +139,8 @@
   {
     "name": "pivothead-web-component",
     "type": "npm",
-    "day": 1,
-    "week": 16,
+    "day": 0,
+    "week": 10,
     "year": 2646,
     "total": 2646,
     "title": "pivothead-web-component"
@@ -157,10 +157,10 @@
   {
     "name": "monodog",
     "type": "npm",
-    "day": 0,
-    "week": 39,
-    "year": 2575,
-    "total": 2575,
+    "day": 1,
+    "week": 36,
+    "year": 2576,
+    "total": 2576,
     "title": "monodog"
   },
   {
@@ -175,8 +175,8 @@
   {
     "name": "pivothead-vue",
     "type": "npm",
-    "day": 2,
-    "week": 8,
+    "day": 0,
+    "week": 6,
     "year": 2107,
     "total": 2107,
     "title": "pivothead-vue"
@@ -193,8 +193,8 @@
   {
     "name": "nextjs-fortress",
     "type": "npm",
-    "day": 1,
-    "week": 26,
+    "day": 0,
+    "week": 23,
     "year": 1638,
     "total": 1638,
     "title": "nextjs-fortress"
@@ -202,16 +202,16 @@
   {
     "name": "deepscanbot",
     "type": "npm",
-    "day": 0,
-    "week": 11,
-    "year": 1618,
-    "total": 1618,
+    "day": 1,
+    "week": 12,
+    "year": 1619,
+    "total": 1619,
     "title": "deepscanbot"
   },
   {
     "name": "ignix-lite",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 2,
     "year": 1499,
     "total": 1499,
@@ -221,7 +221,7 @@
     "name": "textigniter-web-component",
     "type": "npm",
     "day": 0,
-    "week": 4,
+    "week": 2,
     "year": 1360,
     "total": 1462,
     "title": "textigniter-web-component"
@@ -247,17 +247,17 @@
   {
     "name": "textigniter-angular",
     "type": "npm",
-    "day": 0,
+    "day": 1,
     "week": 7,
-    "year": 881,
-    "total": 1133,
+    "year": 882,
+    "total": 1134,
     "title": "textigniter-angular"
   },
   {
     "name": "textigniter-react",
     "type": "npm",
     "day": 0,
-    "week": 2,
+    "week": 1,
     "year": 841,
     "total": 937,
     "title": "textigniter-react"
@@ -268,31 +268,31 @@
     "day": 0,
     "week": 17,
     "year": 768,
-    "total": 768,
+    "total": 769,
     "title": "pivothead-llm"
   },
   {
     "name": "mdslide-cli",
     "type": "npm",
-    "day": 0,
-    "week": 1,
-    "year": 590,
-    "total": 590,
+    "day": 3,
+    "week": 4,
+    "year": 593,
+    "total": 593,
     "title": "mdslide-cli"
   },
   {
     "name": "mdslide-core",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 2,
-    "year": 573,
+    "year": 0,
     "total": 573,
     "title": "mdslide-core"
   },
   {
     "name": "mdslide-shared",
     "type": "npm",
-    "day": 1,
+    "day": 0,
     "week": 3,
     "year": 421,
     "total": 421,
@@ -311,7 +311,7 @@
     "name": "gpx",
     "type": "npm",
     "day": 0,
-    "week": 10,
+    "week": 9,
     "year": 385,
     "total": 385,
     "title": "gpx"
@@ -320,45 +320,45 @@
     "name": "sdk-core",
     "type": "npm",
     "day": 4,
-    "week": 68,
-    "year": 263,
-    "total": 263,
+    "week": 53,
+    "year": 267,
+    "total": 267,
     "title": "sdk-core"
   },
   {
     "name": "sdk-nextjs",
     "type": "npm",
-    "day": 4,
-    "week": 72,
-    "year": 260,
-    "total": 260,
+    "day": 6,
+    "week": 62,
+    "year": 266,
+    "total": 266,
     "title": "sdk-nextjs"
   },
   {
     "name": "sdk-node",
     "type": "npm",
     "day": 5,
-    "week": 68,
-    "year": 254,
-    "total": 254,
+    "week": 55,
+    "year": 259,
+    "total": 259,
     "title": "sdk-node"
   },
   {
     "name": "sdk-react",
     "type": "npm",
-    "day": 3,
-    "week": 71,
-    "year": 249,
-    "total": 249,
+    "day": 5,
+    "week": 60,
+    "year": 254,
+    "total": 254,
     "title": "sdk-react"
   },
   {
     "name": "sdk-codegen",
     "type": "npm",
-    "day": 3,
-    "week": 60,
-    "year": 233,
-    "total": 233,
+    "day": 6,
+    "week": 50,
+    "year": 239,
+    "total": 239,
     "title": "sdk-codegen"
   },
   {
@@ -373,33 +373,20 @@
   {
     "name": "adac-diagram",
     "type": "npm",
-    "day": 0,
-    "week": 1,
-    "year": 174,
-    "total": 174,
+    "day": 1,
+    "week": 2,
+    "year": 175,
+    "total": 175,
     "title": "adac-diagram"
   },
   {
     "name": "https://www.npmjs.com/package/@mindfiredigital/adac-core",
     "type": "npm",
-    "day": 0,
-    "week": 2,
-    "year": 169,
-    "total": 169,
+    "day": 1,
+    "week": 3,
+    "year": 170,
+    "total": 170,
     "title": "https://www.npmjs.com/package/@mindfiredigital/adac-core"
-  },
-  {
-    "name": "apps/docs",
-    "type": "golang",
-    "url": "https://mindfiredigital.github.io/d-cron",
-    "day": 0,
-    "week": 0,
-    "month": 0,
-    "year": 0,
-    "total": 0,
-    "version": "",
-    "versionsCount": 0,
-    "title": "apps/docs"
   },
   {
     "name": "ui",

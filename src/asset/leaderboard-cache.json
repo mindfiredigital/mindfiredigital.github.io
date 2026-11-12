@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:40:23.840Z",
+    "fetched_at": "2026-11-12T11:57:01.998Z",
     "commits": [
       {
         "sha": "6e799f87924a193a64406980d1623850274d3883",
@@ -5975,7 +5975,7 @@
         "author_login": "Hufe921",
         "author_name": "黄云飞",
         "date": "2021-11-17T09:42:13Z",
-        "message": "feat:字体变大���小"
+        "message": "feat:字体变大变小"
       },
       {
         "sha": "765dc9da19e71d9b0bae153c4d09623f1fcdafe6",
@@ -6753,7 +6753,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:40:27.526Z",
+    "fetched_at": "2026-11-12T11:57:05.068Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7934,7 +7934,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:40:45.752Z",
+    "fetched_at": "2026-11-12T11:57:22.897Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -8430,7 +8430,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-11-11T12:41:04.491Z",
+    "fetched_at": "2026-11-12T11:57:39.065Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9765,7 +9765,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-11-11T12:41:06.950Z",
+    "fetched_at": "2026-11-12T11:57:41.135Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9803,7 +9803,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:41:28.870Z",
+    "fetched_at": "2026-11-12T11:58:02.516Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10660,7 +10660,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:41:48.325Z",
+    "fetched_at": "2026-11-12T11:58:22.891Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -11174,7 +11174,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:42:16.492Z",
+    "fetched_at": "2026-11-12T11:58:47.629Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11759,7 +11759,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:42:56.605Z",
+    "fetched_at": "2026-11-12T11:59:26.692Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -14120,7 +14120,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-11-11T12:43:43.748Z",
+    "fetched_at": "2026-11-12T12:00:14.120Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15782,7 +15782,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-11-11T12:44:46.364Z",
+    "fetched_at": "2026-11-12T12:01:17.592Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17624,7 +17624,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:45:23.003Z",
+    "fetched_at": "2026-11-12T12:01:54.450Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -18310,7 +18310,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-11-11T12:46:30.739Z",
+    "fetched_at": "2026-11-12T12:03:03.942Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -20680,7 +20680,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:49:57.181Z",
+    "fetched_at": "2026-11-12T12:06:35.435Z",
     "commits": [
       {
         "sha": "c26f9602fa5a496aa1233a9c85b33c177eabb0d2",
@@ -27958,7 +27958,7 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:55:06.128Z",
+    "fetched_at": "2026-11-12T12:11:42.259Z",
     "commits": [
       {
         "sha": "b930aa46a396759c7035a6d1df98edbeb518be44",
@@ -36973,7 +36973,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:55:08.584Z",
+    "fetched_at": "2026-11-12T12:11:44.887Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -37011,7 +37011,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T12:56:11.360Z",
+    "fetched_at": "2026-11-12T12:12:46.124Z",
     "commits": [
       {
         "sha": "172686eb5af1bb2c55d4bd5ab5ec30119d0c8c37",
@@ -38747,7 +38747,7 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:15:08.319Z",
+    "fetched_at": "2026-11-12T12:31:45.648Z",
     "commits": [
       {
         "sha": "d1a96d49d9332419b87578918b670cc2e32f54bb",
@@ -48286,7 +48286,7 @@
       {
         "sha": "70660856ce655a3c519113b30c2fb2194d5daa2f",
         "author_login": null,
-        "author_name": "“sanobery��",
+        "author_name": "“sanobery”",
         "date": "2026-01-12T06:21:20Z",
         "message": "fix(component): input & forgot password"
       },
@@ -48825,7 +48825,7 @@
       {
         "sha": "ec7bf0f277ec579de0c69b9d6a10f42510054801",
         "author_login": null,
-        "author_name": "“sanobery���",
+        "author_name": "“sanobery”",
         "date": "2025-12-24T09:43:36Z",
         "message": "feat(docs): pricing grid added"
       },
@@ -69796,7 +69796,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:15:13.027Z",
+    "fetched_at": "2026-11-12T12:31:48.216Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -69939,7 +69939,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:18:31.164Z",
+    "fetched_at": "2026-11-12T12:34:44.832Z",
     "commits": [
       {
         "sha": "068683f926b3c99c8e94e92fc2026c704671e623",
@@ -74250,7 +74250,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-11-11T13:18:33.222Z",
+    "fetched_at": "2026-11-12T12:34:46.776Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -74288,7 +74288,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:18:42.747Z",
+    "fetched_at": "2026-11-12T12:34:55.474Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -74520,7 +74520,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:18:45.204Z",
+    "fetched_at": "2026-11-12T12:34:57.626Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -74572,7 +74572,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:18:47.661Z",
+    "fetched_at": "2026-11-12T12:35:00.286Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -74624,7 +74624,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:19:14.801Z",
+    "fetched_at": "2026-11-12T12:35:26.186Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -75655,7 +75655,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:20:23.419Z",
+    "fetched_at": "2026-11-12T12:36:31.840Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -78107,7 +78107,7 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:23:48.006Z",
+    "fetched_at": "2026-11-12T12:39:34.562Z",
     "commits": [
       {
         "sha": "7352ccc477de487bcb203f6568930637eb0a818a",
@@ -84864,7 +84864,7 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:30:11.398Z",
+    "fetched_at": "2026-11-12T12:53:06.008Z",
     "commits": [
       {
         "sha": "f2deead2aa87cee417045ee4e7fe2aacf722856e",
@@ -93238,7 +93238,7 @@
     "project_title": "ADAC (Architecture Diagram as Code)",
     "repo_name": "adac-tools",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:31:34.748Z",
+    "fetched_at": "2026-11-12T12:54:32.647Z",
     "commits": [
       {
         "sha": "8eda37674b1fc7defce728f238839b8c39c9b091",
@@ -95309,7 +95309,7 @@
     "project_title": "Agentic Web Starter",
     "repo_name": "Agentic-Web-Starter",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:31:43.664Z",
+    "fetched_at": "2026-11-12T12:54:42.887Z",
     "commits": [
       {
         "sha": "6f7513e684f69d3befa311785c9174daf0c2c828",
@@ -95903,7 +95903,7 @@
     "project_title": "Ignix-lite",
     "repo_name": "ignix-lite",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:35:33.862Z",
+    "fetched_at": "2026-11-12T12:58:38.986Z",
     "commits": [
       {
         "sha": "c53884c32b9097dd9484cc20af7a0b8cc37e52ff",
@@ -103414,7 +103414,7 @@
     "project_title": "markdown-reader — Native Desktop Markdown Reader",
     "repo_name": "markdown-reader",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:37:31.102Z",
+    "fetched_at": "2026-11-12T13:00:37.750Z",
     "commits": [
       {
         "sha": "b87a242450a50ab34ed232a2b1c1bd1de78d483b",
@@ -108631,7 +108631,7 @@
     "project_title": "gpx",
     "repo_name": "gpx",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:38:45.947Z",
+    "fetched_at": "2026-11-12T13:02:11.657Z",
     "commits": [
       {
         "sha": "91e21ef8a1562886a0e84407ef2aac6d7b43ddb8",
@@ -111866,7 +111866,7 @@
     "project_title": "mdslide",
     "repo_name": "mdslide",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:41:27.329Z",
+    "fetched_at": "2026-11-12T13:05:09.671Z",
     "commits": [
       {
         "sha": "a822a883fe1846ab4d4cde9e828927f0413523f2",
@@ -117498,7 +117498,7 @@
     "project_title": "Meiosis",
     "repo_name": "meiosis",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:47:34.667Z",
+    "fetched_at": "2026-11-12T13:11:34.902Z",
     "commits": [],
     "merged_prs": [],
     "issues": {
@@ -117521,7 +117521,7 @@
     "project_title": "Agentic Headless CMS",
     "repo_name": "agentic-headless-cms",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:45:49.467Z",
+    "fetched_at": "2026-11-12T13:09:42.549Z",
     "commits": [
       {
         "sha": "bd0df51b8fe6317b2c1cb08ec92819803452c799",
@@ -127640,44 +127640,101 @@
     "issues": {
       "bugs": [
         {
+          "number": 288,
+          "author": "Rituparna158",
+          "title": "[Bug]: preserve admin wildcard (*) permission in Roles UI and keep session cookie under 4 KB",
+          "created_at": "2026-11-12T12:24:55Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 287,
+          "author": "Rituparna158",
+          "title": "[Bug]: return 400/404 instead of 500 with stack trace on invalid entry UUID",
+          "created_at": "2026-11-12T12:24:21Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 286,
+          "author": "Rituparna158",
+          "title": "[BUG]: support x-mfa-code in AdminModule token operations and add listTokens()",
+          "created_at": "2026-11-12T12:23:37Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 285,
+          "author": "Rituparna158",
+          "title": "[BUG]: extract backend error messages, normalize baseUrl, preserve uploadFromPath MIME type, and type ContentModule inputs",
+          "created_at": "2026-11-12T12:22:55Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
           "number": 279,
           "author": "Rituparna158",
           "title": "[BUG]: Server Actions leak React 19/Next.js 16 $ACTION_* FormData keys and deleteEntryAction crashes on 204 No Content",
           "created_at": "2026-11-11T12:28:18Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-12T07:51:03Z"
+            }
+          ]
         },
         {
           "number": 278,
           "author": "Rituparna158",
           "title": "[BUG]: API tokens inherit creator's user permissions instead of enforcing the token's assigned role permissions",
           "created_at": "2026-11-11T12:26:36Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-12T06:37:08Z"
+            }
+          ]
         },
         {
           "number": 277,
           "author": "Rituparna158",
           "title": "[BUG]: GraphQL collection and entry queries return unpublished drafts without defaultStatus or draft authorization",
           "created_at": "2026-11-11T11:39:19Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-12T07:08:12Z"
+            }
+          ]
         },
         {
           "number": 276,
           "author": "Rituparna158",
           "title": "[Bug]: getContentList(..., { draft: true }) does not pass status=all so Next.js Draft Mode omits unpublished drafts",
           "created_at": "2026-11-11T11:37:16Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-12T10:06:48Z"
+            }
+          ]
         },
         {
           "number": 275,
           "author": "Rituparna158",
           "title": "[BUG]: type mismatches, URL normalization, metadata, static params, and Next.js 16 issues in published 0.1.0 SDK packages",
           "created_at": "2026-11-11T11:18:50Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-12T10:22:11Z"
+            }
+          ]
         },
         {
           "number": 270,
@@ -129003,7 +129060,7 @@
     "stats": {
       "total_commits": 1117,
       "total_merged_prs": 126,
-      "total_bugs": 18,
+      "total_bugs": 22,
       "total_enhancements": 48,
       "total_documentation": 1,
       "total_others": 74
@@ -129014,7 +129071,7 @@
     "project_title": "d-cron",
     "repo_name": "d-cron",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:47:32.887Z",
+    "fetched_at": "2026-11-12T13:11:33.245Z",
     "commits": [
       {
         "sha": "fb55098e9f15d674529054d4f1018d60d53ed64c",
@@ -131699,7 +131756,7 @@
     "project_title": "Mindfire Foss Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-11-11T13:55:31.815Z",
+    "fetched_at": "2026-11-12T13:20:01.781Z",
     "commits": [
       {
         "sha": "03dc93c076a0d1bfb832b6de443634b870df6455",

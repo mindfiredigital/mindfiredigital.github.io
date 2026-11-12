@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T13:55:32.808Z",
+  "generated_at": "2026-11-12T13:20:02.744Z",
   "period": "monthly",
   "month_label": "October 2026",
   "month_key": "2026-10",
@@ -19,7 +19,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 11,
       "projectsWorkingOn": 1,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -50,7 +52,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 2,
@@ -66,7 +68,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.58,
       "projectsWorkingOn": 1,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -113,7 +117,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.89,
       "projectsWorkingOn": 1,
-      "projects": ["d-cron"],
+      "projects": [
+        "d-cron"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -144,7 +150,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 4,
@@ -160,7 +166,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -191,7 +199,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 5,
@@ -207,7 +215,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -238,7 +248,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 27
+      "lastActiveDays": 28
     },
     {
       "rank": 6,
@@ -254,7 +264,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -285,7 +297,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 7,
@@ -301,7 +313,9 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": ["Ignix UI"],
+      "projects": [
+        "Ignix UI"
+      ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -332,7 +346,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 8
+      "lastActiveDays": 0
     }
   ]
 }

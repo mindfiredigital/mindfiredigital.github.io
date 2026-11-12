@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T13:55:33.170Z",
+  "generated_at": "2026-11-12T13:20:03.101Z",
   "period": "monthly",
   "window_start": "2026-11-01T00:00:00.000Z",
-  "window_end": "2026-11-11T13:55:33.170Z",
+  "window_end": "2026-11-12T13:20:03.101Z",
   "month_label": "November 2026",
   "month_key": "2026-11",
   "total_contributors": 8,
@@ -22,7 +22,9 @@
       "avgCommitsPerPR": 3.8,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["d-cron"],
+      "projects": [
+        "d-cron"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
@@ -52,7 +54,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 2,
@@ -64,12 +66,14 @@
       "totalPRs": 4,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 17,
+      "totalIssuesOpened": 21,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
@@ -95,7 +99,7 @@
       },
       "capped_counts": {
         "issues_opened": 10,
-        "issues_total": 17,
+        "issues_total": 21,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -116,7 +120,9 @@
       "avgCommitsPerPR": 0.67,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
@@ -146,7 +152,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 4,
@@ -163,7 +169,9 @@
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
@@ -193,7 +201,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 5,
@@ -210,7 +218,9 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["ADAC (Architecture Diagram as Code)"],
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -240,7 +250,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 7
+      "lastActiveDays": 8
     },
     {
       "rank": 6,
@@ -257,7 +267,9 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Agentic Headless CMS"],
+      "projects": [
+        "Agentic Headless CMS"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -304,7 +316,9 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -334,7 +348,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     },
     {
       "rank": 8,
@@ -351,7 +365,9 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": ["Mindfire Foss Website"],
+      "projects": [
+        "Mindfire Foss Website"
+      ],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -381,7 +397,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 5
+      "lastActiveDays": 6
     }
   ]
 }
