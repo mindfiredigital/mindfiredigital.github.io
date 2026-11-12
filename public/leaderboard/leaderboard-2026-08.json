@@ -19,10 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 17.44,
       "projectsWorkingOn": 2,
-      "projects": [
-        "mdslide",
-        "Agentic Headless CMS"
-      ],
+      "projects": ["mdslide", "Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -69,10 +66,7 @@
       "totalIssueComments": 22,
       "avgCommitsPerPR": 4.34,
       "projectsWorkingOn": 2,
-      "projects": [
-        "DeepScanBot",
-        "d-cron"
-      ],
+      "projects": ["DeepScanBot", "d-cron"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 9,
@@ -119,10 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 7.06,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Ignix UI",
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Ignix UI", "Agentic Headless CMS"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -169,11 +160,7 @@
       "totalIssueComments": 6,
       "avgCommitsPerPR": 3.64,
       "projectsWorkingOn": 3,
-      "projects": [
-        "Ignix UI",
-        "MonoDog",
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Ignix UI", "MonoDog", "Agentic Headless CMS"],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 4,
@@ -272,9 +259,7 @@
       "totalIssueComments": 7,
       "avgCommitsPerPR": 2.11,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -321,9 +306,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -370,10 +353,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 2,
-      "projects": [
-        "MonoDog",
-        "d-cron"
-      ],
+      "projects": ["MonoDog", "d-cron"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -420,9 +400,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 16,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -469,10 +447,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.33,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Page Builder",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Page Builder", "Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -519,9 +494,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -568,10 +541,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Page Builder",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Page Builder", "Mindfire Foss Website"],
       "newProjectsThisMonth": 2,
       "prs_by_complexity": {
         "small": 0,
@@ -618,9 +588,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "d-cron"
-      ],
+      "projects": ["d-cron"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -667,9 +635,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -716,9 +682,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -765,9 +729,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ADAC (Architecture Diagram as Code)"
-      ],
+      "projects": ["ADAC (Architecture Diagram as Code)"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -814,9 +776,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
