@@ -4,7 +4,10 @@ function FilterSidebarSkeleton() {
     <div className='flex flex-col gap-4'>
       <div className='skeleton h-9 w-full rounded-md' />
       {Array.from({ length: 3 }).map((_, i) => (
-        <div key={i} className='flex flex-col gap-2 pb-4 border-b border-gray-100'>
+        <div
+          key={i}
+          className='flex flex-col gap-2 pb-4 border-b border-gray-100'
+        >
           <div className='skeleton h-4 w-24' />
           <div className='skeleton h-3 w-full' />
           <div className='skeleton h-3 w-[75%]' />
@@ -39,7 +42,10 @@ function TopScorersPanelSkeleton() {
 export default function Loading() {
   return (
     <section className='bg-slate-50 min-h-screen overflow-x-hidden'>
-      <div className='flex w-full' style={{ minHeight: "calc(100vh - 4.5rem)" }}>
+      <div
+        className='flex w-full'
+        style={{ minHeight: "calc(100vh - 4.5rem)" }}
+      >
         {/* Left sidebar (desktop) */}
         <aside className='hidden lg:flex flex-col w-64 flex-shrink-0 border-r border-gray-100 p-4'>
           <FilterSidebarSkeleton />
@@ -62,7 +68,10 @@ export default function Loading() {
             {/* Top contributors carousel row */}
             <div className='mt-8 w-full flex justify-center gap-4 overflow-hidden'>
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className='flex flex-col items-center gap-2 flex-shrink-0'>
+                <div
+                  key={i}
+                  className='flex flex-col items-center gap-2 flex-shrink-0'
+                >
                   <div className='skeleton h-16 w-16 rounded-full' />
                   <div className='skeleton h-3 w-16' />
                 </div>
@@ -92,7 +101,10 @@ export default function Loading() {
 
             <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className='bg-white border border-mf-border-soft rounded-2xl p-5 flex flex-col gap-4'>
+                <div
+                  key={i}
+                  className='bg-white border border-mf-border-soft rounded-2xl p-5 flex flex-col gap-4'
+                >
                   <div className='flex items-center gap-3'>
                     <div className='skeleton h-11 w-11 rounded-full flex-shrink-0' />
                     <div className='flex-1 flex flex-col gap-1.5'>

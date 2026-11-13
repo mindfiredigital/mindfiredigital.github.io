@@ -13,6 +13,11 @@ function extractPackageNameFromUrl(url: string): string | null {
   if (pypiMatch) return pypiMatch[1];
   const nugetMatch = url.match(/nuget\.org\/packages\/(.+?)(?:\/|$)/);
   if (nugetMatch) return nugetMatch[1];
+  const goMatch = url.match(/pkg\.go\.dev\/(.+?)(?:\/|$)/);
+  if (goMatch) {
+    const parts = goMatch[1].split("/");
+    return parts[parts.length - 1];
+  }
   return null;
 }
 
@@ -146,9 +151,11 @@ export function usePackageStats() {
         setCount(count);
       });
     }
-    // Update this block to include nuget
+    // Update this block to include nuget and golang/go
     else if (
-      ["pypi", "pypi", "nuget"].includes(selectedPackage.type.toLowerCase())
+      ["pypi", "nuget", "golang", "go"].includes(
+        selectedPackage.type.toLowerCase()
+      )
     ) {
       setCount(Number(event.target.value) || 0);
     }

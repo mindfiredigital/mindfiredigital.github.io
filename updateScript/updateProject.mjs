@@ -11,6 +11,7 @@ import {
   fetchData,
   npmPackages,
   pypiPackages,
+  isGolangType,
 } from "./config.mjs";
 import logger from "../src/app/utils/logger.mjs";
 
@@ -216,18 +217,39 @@ async function updateProjects() {
 
     // Read the freshly updated packages.json to calculate stats
     const freshPackagesData = JSON.parse(
-      fs.readFileSync(new URL("../src/asset/packages.json", import.meta.url), "utf8")
+      fs.readFileSync(
+        new URL("../src/asset/packages.json", import.meta.url),
+        "utf8"
+      )
     );
-    const freshNpmPackages = freshPackagesData.filter((pkg) => pkg.type === "npm");
-    const freshPypiPackages = freshPackagesData.filter((pkg) => pkg.type.toLowerCase() === "pypi");
+    const freshNpmPackages = freshPackagesData.filter(
+      (pkg) => pkg.type === "npm"
+    );
+    const freshPypiPackages = freshPackagesData.filter(
+      (pkg) => pkg.type.toLowerCase() === "pypi"
+    );
+    const freshGolangPackages = freshPackagesData.filter((pkg) =>
+      isGolangType(pkg.type)
+    );
 
-    getAllStats(freshNpmPackages, freshPypiPackages)
+    getAllStats(freshNpmPackages, freshPypiPackages, freshGolangPackages)
       .then((statsMap) => {
         const statsWithTitles = Object.values(statsMap)
           .map((value) => {
-            const npmPackage = freshNpmPackages.find((p) => p.name === value.name);
-            const pypiPackage = freshPypiPackages.find((p) => p.name === value.name);
-            const title = npmPackage?.title || pypiPackage?.title || value.name;
+            const npmPackage = freshNpmPackages.find(
+              (p) => p.name === value.name
+            );
+            const pypiPackage = freshPypiPackages.find(
+              (p) => p.name === value.name
+            );
+            const golangPackage = freshGolangPackages.find(
+              (p) => p.name === value.name
+            );
+            const title =
+              npmPackage?.title ||
+              pypiPackage?.title ||
+              golangPackage?.title ||
+              value.name;
             return { ...value, title };
           })
           .sort((a, b) => b.total - a.total);

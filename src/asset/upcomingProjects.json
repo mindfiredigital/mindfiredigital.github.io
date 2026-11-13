@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": 40,
+    "title": "Meiosis",
+    "short_description": "Meiosis is an Agentic SCM that provides a zero-trust runtime containment layer for AI coding agents. It actively intercepts file edits in real time to enforce strict scope boundaries, cryptographically audit every agent-generated change, and require verified test evidence before code is accepted.",
+    "github_repository_link": "https://github.com/mindfire-test/meiosis",
+    "documentation_link": "https://github.com/mindfire-test/meiosis/blob/main/README.md",
+    "project_type": "upcoming",
+    "date_created": "2026-09-03T10:54:13.000Z",
+    "date_updated": null,
+    "status": "draft",
+    "shortDescription": "Meiosis is an Agentic SCM that provides a zero-trust runtime containment layer for AI coding agents. It actively intercepts file edits in real time to enforce strict scope boundaries, cryptographically audit every agent-generated change, and require verified test evidence before code is accepted.",
+    "githubUrl": "https://github.com/mindfire-test/meiosis",
+    "documentationUrl": "https://github.com/mindfire-test/meiosis/blob/main/README.md",
+    "stars": 1,
+    "tags": [],
+    "lastPushedAt": "2026-11-12T08:01:31Z"
+  }
+]

@@ -2,10 +2,21 @@ export interface PackageCountProps {
   totalPackages: number;
 }
 
+export type PackageType =
+  | "npm"
+  | "pypi"
+  | "PyPi"
+  | "Nuget"
+  | "nuget"
+  | "golang"
+  | "Golang"
+  | "go"
+  | "Go";
+
 export type Package = {
   name: string;
   title: string;
-  type: "npm" | "pypi" | "Nuget";
+  type: PackageType;
   day?: number;
   week?: number;
   year?: number;
@@ -15,7 +26,7 @@ export type Package = {
   last_week?: number;
   last_month?: number;
   url: string;
-  status: string;
+  status?: string;
 };
 
 export type NpmStats = {
@@ -29,7 +40,7 @@ export type GroupedPackage = {
   githubRepo: string;
   packages: Package[];
   totalDownloads: number;
-  type: "npm" | "pypi" | "Nuget";
+  type: PackageType;
 };
 
 // NEW: Type for projects_grouped.json structure
@@ -47,7 +58,7 @@ export type ProjectGroupedData = {
   }[];
 };
 
-export type FilterType = "all" | "npm" | "pypi";
+export type FilterType = "all" | "npm" | "pypi" | "golang";
 
 export interface TotalDownloadsProps {
   totalDownloads: number;

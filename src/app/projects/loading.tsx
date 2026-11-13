@@ -1,7 +1,11 @@
 /* Skeleton for the Projects page — mirrors src/app/projects/page.tsx layout */
 function ProjectCardSkeleton({ short }: { short?: boolean }) {
   return (
-    <div className={`border-2 p-6 bg-slate-50/70 flex flex-col gap-3 ${short ? "h-52" : "h-80"}`}>
+    <div
+      className={`border-2 p-6 bg-slate-50/70 flex flex-col gap-3 ${
+        short ? "h-52" : "h-80"
+      }`}
+    >
       <div className='flex justify-between items-start'>
         <div className='skeleton h-5 w-2/3' />
         <div className='skeleton h-6 w-12 rounded-full' />

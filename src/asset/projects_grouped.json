@@ -132,16 +132,16 @@
     "isMonoRepo": true,
     "packages": [
       {
-        "name": "page-builder-angular",
-        "type": "npm",
-        "url": "https://www.npmjs.com/~mindfire",
-        "status": "draft"
-      },
-      {
         "name": "page-builder-core",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/page-builder-core",
         "status": "published"
+      },
+      {
+        "name": "page-builder-angular",
+        "type": "npm",
+        "url": "https://www.npmjs.com/~mindfire",
+        "status": "draft"
       },
       {
         "name": "page-builder-react",
@@ -358,6 +358,12 @@
     "isMonoRepo": true,
     "packages": [
       {
+        "name": "textigniter-angular",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
+        "status": "published"
+      },
+      {
         "name": "textigniter",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniterjs",
@@ -373,12 +379,6 @@
         "name": "textigniter-web-component",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-web-component",
-        "status": "published"
-      },
-      {
-        "name": "textigniter-angular",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/textigniter-angular",
         "status": "published"
       }
     ]
@@ -464,6 +464,12 @@
     "isMonoRepo": true,
     "packages": [
       {
+        "name": "mdslide-parser",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
+        "status": "published"
+      },
+      {
         "name": "mdslide-cli",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-cli",
@@ -476,15 +482,77 @@
         "status": "published"
       },
       {
-        "name": "mdslide-parser",
-        "type": "npm",
-        "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-parser",
-        "status": "published"
-      },
-      {
         "name": "mdslide-shared",
         "type": "npm",
         "url": "https://www.npmjs.com/package/@mindfiredigital/mdslide-shared",
+        "status": "published"
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "title": "Agentic Headless CMS",
+    "isMonoRepo": true,
+    "packages": [
+      {
+        "name": "sdk-core",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/sdk-core",
+        "status": "published"
+      },
+      {
+        "name": "sdk-nextjs",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/sdk-nextjs",
+        "status": "published"
+      },
+      {
+        "name": "sdk-react",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/sdk-react",
+        "status": "published"
+      },
+      {
+        "name": "sdk-node",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/sdk-node",
+        "status": "published"
+      },
+      {
+        "name": "sdk-codegen",
+        "type": "npm",
+        "url": "https://www.npmjs.com/package/@mindfiredigital/sdk-codegen",
+        "status": "published"
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "title": "d-cron",
+    "isMonoRepo": true,
+    "packages": [
+      {
+        "name": "dcron",
+        "type": "golang",
+        "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/dcron",
+        "status": "published"
+      },
+      {
+        "name": "metrics",
+        "type": "golang",
+        "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/metrics",
+        "status": "published"
+      },
+      {
+        "name": "ui",
+        "type": "golang",
+        "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/ui",
+        "status": "published"
+      },
+      {
+        "name": "otel",
+        "type": "golang",
+        "url": "https://pkg.go.dev/github.com/mindfiredigital/d-cron/otel",
         "status": "published"
       }
     ]

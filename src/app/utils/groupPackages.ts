@@ -91,6 +91,17 @@ function extractPackageNameFromUrl(url: string): string | null {
   const pypiMatch = url.match(/\/project\/(.+?)(?:\/|$)/);
   if (pypiMatch) return pypiMatch[1];
 
+  // NuGet: https://www.nuget.org/packages/Extension.Methods
+  const nugetMatch = url.match(/nuget\.org\/packages\/(.+?)(?:\/|$)/);
+  if (nugetMatch) return nugetMatch[1];
+
+  // Go: https://pkg.go.dev/github.com/mindfiredigital/DeepScanBot
+  const goMatch = url.match(/pkg\.go\.dev\/(.+?)(?:\/|$)/);
+  if (goMatch) {
+    const parts = goMatch[1].split("/");
+    return parts[parts.length - 1];
+  }
+
   return null;
 }
 

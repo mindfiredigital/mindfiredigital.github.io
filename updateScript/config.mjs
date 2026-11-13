@@ -12,8 +12,14 @@ export const gitBaseUrl = "https://api.github.com/repos";
 export const pathForJson = "../src/asset";
 export const gitOwner = "mindfiredigital";
 
+export const isGolangType = (type) =>
+  ["golang", "go"].includes((type || "").toLowerCase());
+
 export const npmPackages = packagesData.filter((pkg) => pkg.type === "npm");
 export const pypiPackages = packagesData.filter((pkg) => pkg.type === "PyPi");
+export const golangPackages = packagesData.filter((pkg) =>
+  isGolangType(pkg.type)
+);
 
 export function writeJsonToFile(relativePath, data) {
   const fullPath = path.join(__dirname, relativePath);
