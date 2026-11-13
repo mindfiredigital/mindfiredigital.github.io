@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T06:00:36.478Z",
+  "generated_at": "2026-11-12T13:20:02.708Z",
   "period": "monthly",
   "month_label": "June 2026",
   "month_key": "2026-06",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.85,
       "projectsWorkingOn": 1,
-      "projects": [
-        "mdslide"
-      ],
+      "projects": ["mdslide"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -52,7 +50,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 13
+      "lastActiveDays": 2
     },
     {
       "rank": 2,
@@ -68,10 +66,7 @@
       "totalIssueComments": 13,
       "avgCommitsPerPR": 7,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Ignix UI",
-        "Ignix-lite"
-      ],
+      "projects": ["Ignix UI", "Ignix-lite"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 8,
@@ -102,7 +97,7 @@
         "issue_comments": 13,
         "issue_comments_total": 13
       },
-      "lastActiveDays": 2
+      "lastActiveDays": null
     },
     {
       "rank": 3,
@@ -118,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 11.53,
       "projectsWorkingOn": 1,
-      "projects": [
-        "markdown-reader — Native Desktop Markdown Reader"
-      ],
+      "projects": ["markdown-reader — Native Desktop Markdown Reader"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -151,7 +144,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": null
+      "lastActiveDays": 8
     },
     {
       "rank": 4,
@@ -167,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.6,
       "projectsWorkingOn": 1,
-      "projects": [
-        "DeepScanBot"
-      ],
+      "projects": ["DeepScanBot"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 11,
@@ -200,7 +191,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 1
     },
     {
       "rank": 5,
@@ -216,10 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 13.09,
       "projectsWorkingOn": 2,
-      "projects": [
-        "MonoDog",
-        "gpx"
-      ],
+      "projects": ["MonoDog", "gpx"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -266,10 +254,7 @@
       "totalIssueComments": 3,
       "avgCommitsPerPR": 4.18,
       "projectsWorkingOn": 2,
-      "projects": [
-        "Ignix UI",
-        "Ignix-lite"
-      ],
+      "projects": ["Ignix UI", "Ignix-lite"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 8,
@@ -300,7 +285,7 @@
         "issue_comments": 3,
         "issue_comments_total": 3
       },
-      "lastActiveDays": null
+      "lastActiveDays": 28
     },
     {
       "rank": 7,
@@ -350,7 +335,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": null
     },
     {
       "rank": 8,
@@ -418,9 +403,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "mdslide"
-      ],
+      "projects": ["mdslide"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -459,30 +442,28 @@
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
       "html_url": "https://github.com/ParasMindfire",
-      "totalCommits": 7,
+      "totalCommits": 14,
       "totalPRs": 3,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 2.33,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "avgCommitsPerPR": 4.67,
+      "projectsWorkingOn": 2,
+      "projects": ["Page Builder", "Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
         "medium": 0,
         "large": 2
       },
-      "total_score": 37,
-      "code_score": 37,
+      "total_score": 51,
+      "code_score": 51,
       "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 23,
-        "commits_score": 14,
+        "commits_score": 28,
         "pr_reviews_score": 0,
         "code_comments_score": 0,
         "issues_opened_score": 0,
@@ -500,7 +481,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 14
+      "lastActiveDays": 6
     },
     {
       "rank": 11,
@@ -516,9 +497,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Document Editor"
-      ],
+      "projects": ["Document Editor"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -565,9 +544,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "mdslide"
-      ],
+      "projects": ["mdslide"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -614,9 +591,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -647,7 +622,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": null
     },
     {
       "rank": 14,
@@ -663,9 +638,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -712,9 +685,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "gpx"
-      ],
+      "projects": ["gpx"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -745,7 +716,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 26
+      "lastActiveDays": null
     },
     {
       "rank": 16,
@@ -761,9 +732,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

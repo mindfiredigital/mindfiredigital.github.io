@@ -9,7 +9,7 @@ import MonorepoPackagesModal from "./components/MonorepoPackagesModal";
 import { usePackageStats } from "@/hooks";
 import { groupPackages } from "@/app/utils";
 import { GroupedPackage, ProjectGroupedData, FilterType } from "@/types";
-import { STATS_HERO } from "@/constants";
+import { STATS_HERO, isGolangType } from "@/constants";
 
 import projectsGroupedData from "@/asset/projects_grouped.json";
 import dynamic from "next/dynamic";
@@ -63,9 +63,12 @@ const Stats = () => {
   /* Filter grouped packages based on the selected filter type */
   const filteredPackages = groupedPackages.filter((group) => {
     if (activeFilter === "all") return true;
-    return group.packages.some(
-      (pkg) => pkg.type?.toLowerCase() === activeFilter
-    );
+    return group.packages.some((pkg) => {
+      if (activeFilter === "golang") {
+        return isGolangType(pkg.type);
+      }
+      return pkg.type?.toLowerCase() === activeFilter;
+    });
   });
 
   /* Calculate total downloads across all filtered package groups */

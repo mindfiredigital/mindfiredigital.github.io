@@ -19,7 +19,10 @@ export default function Loading() {
             <div className='border border-mf-border rounded-lg p-4 flex flex-col gap-4 bg-white'>
               <div className='skeleton h-9 w-full rounded-md' />
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className='flex flex-col gap-2 pb-4 border-b border-gray-100'>
+                <div
+                  key={i}
+                  className='flex flex-col gap-2 pb-4 border-b border-gray-100'
+                >
                   <div className='skeleton h-4 w-24' />
                   <div className='skeleton h-3 w-full' />
                   <div className='skeleton h-3 w-[75%]' />
