@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:16:11.514Z",
+  "generated_at": "2026-11-12T13:20:02.744Z",
   "period": "monthly",
   "month_label": "October 2026",
   "month_key": "2026-10",
@@ -19,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 11,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -68,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.58,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -117,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4.89,
       "projectsWorkingOn": 1,
-      "projects": [
-        "dcron"
-      ],
+      "projects": ["d-cron"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -166,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -215,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 4,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -264,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -313,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -346,7 +332,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 9
+      "lastActiveDays": 0
     }
   ]
 }
