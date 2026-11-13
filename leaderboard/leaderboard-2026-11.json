@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-13T09:31:10.964Z",
+  "generated_at": "2026-11-13T13:11:03.918Z",
   "period": "monthly",
   "window_start": "2026-11-01T00:00:00.000Z",
-  "window_end": "2026-11-13T09:31:10.964Z",
+  "window_end": "2026-11-13T13:11:03.918Z",
   "month_label": "November 2026",
   "month_key": "2026-11",
   "total_contributors": 9,
@@ -21,7 +21,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.83,
       "projectsWorkingOn": 2,
-      "newProjectsThisMonth": 2,
+      "newProjectsThisMonth": 1,
       "projects": [
         "d-cron",
         "Mindfire Foss Website"
@@ -31,9 +31,9 @@
         "medium": 2,
         "large": 4
       },
-      "total_score": 126,
+      "total_score": 116,
       "code_score": 93,
-      "community_score": 20,
+      "community_score": 10,
       "quality_score": 13,
       "score_breakdown": {
         "pr_score": 47,
@@ -42,7 +42,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "projects_score": 20,
+        "projects_score": 10,
         "tests_score": 0,
         "docs_score": 1,
         "mentor_score": 0,
@@ -71,7 +71,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 1,
+      "newProjectsThisMonth": 0,
       "projects": [
         "Agentic Headless CMS"
       ],
@@ -80,9 +80,9 @@
         "medium": 1,
         "large": 2
       },
-      "total_score": 94,
+      "total_score": 84,
       "code_score": 53,
-      "community_score": 30,
+      "community_score": 20,
       "quality_score": 11,
       "score_breakdown": {
         "pr_score": 29,
@@ -91,7 +91,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 20,
         "issue_comments_score": 0,
-        "projects_score": 10,
+        "projects_score": 0,
         "tests_score": 0,
         "docs_score": 3,
         "mentor_score": 0,
@@ -120,7 +120,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0.67,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 1,
+      "newProjectsThisMonth": 0,
       "projects": [
         "Agentic Headless CMS"
       ],
@@ -129,9 +129,9 @@
         "medium": 0,
         "large": 1
       },
-      "total_score": 61,
+      "total_score": 51,
       "code_score": 23,
-      "community_score": 30,
+      "community_score": 20,
       "quality_score": 8,
       "score_breakdown": {
         "pr_score": 19,
@@ -140,7 +140,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 20,
         "issue_comments_score": 0,
-        "projects_score": 10,
+        "projects_score": 0,
         "tests_score": 0,
         "docs_score": 2,
         "mentor_score": 0,
@@ -169,7 +169,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 1,
+      "newProjectsThisMonth": 0,
       "projects": [
         "Agentic Headless CMS"
       ],
@@ -178,9 +178,9 @@
         "medium": 1,
         "large": 1
       },
-      "total_score": 43,
+      "total_score": 33,
       "code_score": 29,
-      "community_score": 10,
+      "community_score": 0,
       "quality_score": 4,
       "score_breakdown": {
         "pr_score": 15,
@@ -189,7 +189,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "projects_score": 10,
+        "projects_score": 0,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
@@ -206,55 +206,6 @@
     },
     {
       "rank": 5,
-      "username": "uzerjamal-mfsi",
-      "id": 220164293,
-      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
-      "html_url": "https://github.com/uzerjamal-mfsi",
-      "totalCommits": 0,
-      "totalPRs": 0,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 4,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 1,
-      "projects": [
-        "ADAC (Architecture Diagram as Code)"
-      ],
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 18,
-      "code_score": 0,
-      "community_score": 18,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 0,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 8,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 4,
-        "issues_total": 4,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": 9
-    },
-    {
-      "rank": 6,
       "username": "ParasMindfire",
       "id": 193932396,
       "avatar_url": "https://avatars.githubusercontent.com/u/193932396?v=4",
@@ -303,6 +254,55 @@
       "lastActiveDays": 0
     },
     {
+      "rank": 6,
+      "username": "uzerjamal-mfsi",
+      "id": 220164293,
+      "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+      "html_url": "https://github.com/uzerjamal-mfsi",
+      "totalCommits": 0,
+      "totalPRs": 0,
+      "totalPRReviewsGiven": 0,
+      "totalCodeReviewComments": 0,
+      "totalIssuesOpened": 4,
+      "totalIssueComments": 0,
+      "avgCommitsPerPR": 0,
+      "projectsWorkingOn": 1,
+      "newProjectsThisMonth": 0,
+      "projects": [
+        "ADAC (Architecture Diagram as Code)"
+      ],
+      "prs_by_complexity": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "total_score": 8,
+      "code_score": 0,
+      "community_score": 8,
+      "quality_score": 0,
+      "score_breakdown": {
+        "pr_score": 0,
+        "commits_score": 0,
+        "pr_reviews_score": 0,
+        "code_comments_score": 0,
+        "issues_opened_score": 8,
+        "issue_comments_score": 0,
+        "projects_score": 0,
+        "tests_score": 0,
+        "docs_score": 0,
+        "mentor_score": 0,
+        "zero_revisions_score": 0,
+        "impact_bonus_score": 0
+      },
+      "capped_counts": {
+        "issues_opened": 4,
+        "issues_total": 4,
+        "issue_comments": 0,
+        "issue_comments_total": 0
+      },
+      "lastActiveDays": 9
+    },
+    {
       "rank": 7,
       "username": "lakinmindfire",
       "id": 80667930,
@@ -316,7 +316,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "newProjectsThisMonth": 1,
+      "newProjectsThisMonth": 0,
       "projects": [
         "Agentic Headless CMS"
       ],
@@ -325,9 +325,9 @@
         "medium": 0,
         "large": 0
       },
-      "total_score": 14,
+      "total_score": 4,
       "code_score": 4,
-      "community_score": 10,
+      "community_score": 0,
       "quality_score": 0,
       "score_breakdown": {
         "pr_score": 0,
@@ -336,7 +336,7 @@
         "code_comments_score": 0,
         "issues_opened_score": 0,
         "issue_comments_score": 0,
-        "projects_score": 10,
+        "projects_score": 0,
         "tests_score": 0,
         "docs_score": 0,
         "mentor_score": 0,
