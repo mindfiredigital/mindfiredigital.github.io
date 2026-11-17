@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:23:24.598Z",
+  "generated_at": "2026-11-17T09:02:24.039Z",
   "period": "monthly",
   "month_label": "July 2026",
   "month_key": "2026-07",
@@ -106,7 +106,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 3,
@@ -156,7 +156,7 @@
         "issue_comments": 1,
         "issue_comments_total": 1
       },
-      "lastActiveDays": 6
+      "lastActiveDays": 7
     },
     {
       "rank": 4,
@@ -205,7 +205,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 5,
@@ -255,7 +255,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     },
     {
       "rank": 6,
@@ -304,7 +304,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 7,
@@ -363,28 +363,28 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/111574378?v=4",
       "html_url": "https://github.com/mind-murtaza",
       "totalCommits": 19,
-      "totalPRs": 6,
+      "totalPRs": 5,
       "totalPRReviewsGiven": 4,
       "totalCodeReviewComments": 0,
       "totalIssuesOpened": 0,
       "totalIssueComments": 0,
-      "avgCommitsPerPR": 3.17,
+      "avgCommitsPerPR": 3.8,
       "projectsWorkingOn": 1,
       "projects": [
         "mdslide"
       ],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
-        "small": 4,
+        "small": 3,
         "medium": 0,
         "large": 2
       },
-      "total_score": 105,
-      "code_score": 88,
+      "total_score": 97,
+      "code_score": 83,
       "community_score": 0,
-      "quality_score": 17,
+      "quality_score": 14,
       "score_breakdown": {
-        "pr_score": 38,
+        "pr_score": 33,
         "commits_score": 38,
         "pr_reviews_score": 12,
         "code_comments_score": 0,
@@ -392,9 +392,9 @@
         "issue_comments_score": 0,
         "projects_score": 0,
         "tests_score": 0,
-        "docs_score": 5,
+        "docs_score": 4,
         "mentor_score": 0,
-        "zero_revisions_score": 12,
+        "zero_revisions_score": 10,
         "impact_bonus_score": 0
       },
       "capped_counts": {
@@ -452,7 +452,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 32
+      "lastActiveDays": null
     },
     {
       "rank": 10,
@@ -502,7 +502,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 0
+      "lastActiveDays": 1
     },
     {
       "rank": 11,
@@ -796,7 +796,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 12
+      "lastActiveDays": 13
     }
   ]
 }
