@@ -1,61 +1,12 @@
 {
-  "generated_at": "2026-11-25T09:33:40.782Z",
+  "generated_at": "2026-11-25T13:59:23.368Z",
   "period": "monthly",
   "month_label": "October 2025",
   "month_key": "2025-10",
-  "total_contributors": 16,
+  "total_contributors": 13,
   "leaderboard": [
     {
       "rank": 1,
-      "username": "subhranshus-mindfire",
-      "id": 217167363,
-      "avatar_url": "https://avatars.githubusercontent.com/u/217167363?v=4",
-      "html_url": "https://github.com/subhranshus-mindfire",
-      "totalCommits": 68,
-      "totalPRs": 13,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 20,
-      "totalIssueComments": 2,
-      "avgCommitsPerPR": 5.23,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 0,
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 2,
-        "large": 8
-      },
-      "total_score": 287,
-      "code_score": 237,
-      "community_score": 22,
-      "quality_score": 28,
-      "score_breakdown": {
-        "pr_score": 101,
-        "commits_score": 136,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 20,
-        "issue_comments_score": 2,
-        "projects_score": 0,
-        "tests_score": 1,
-        "docs_score": 1,
-        "mentor_score": 0,
-        "zero_revisions_score": 26,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 10,
-        "issues_total": 20,
-        "issue_comments": 2,
-        "issue_comments_total": 2
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 2,
       "username": "deepakyadav-01",
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
@@ -68,9 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.14,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -104,7 +53,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 3,
+      "rank": 2,
       "username": "anandmindfire",
       "id": 155735575,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735575?v=4",
@@ -117,12 +66,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 2.88,
       "projectsWorkingOn": 4,
-      "projects": [
-        "Page Builder",
-        "Pivothead",
-        "Ignix UI",
-        "MonoDog"
-      ],
+      "projects": ["Page Builder", "Pivothead", "Ignix UI", "MonoDog"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -156,7 +100,7 @@
       "lastActiveDays": 12
     },
     {
-      "rank": 4,
+      "rank": 3,
       "username": "jyotiprakashmfsi",
       "id": 194057545,
       "avatar_url": "https://avatars.githubusercontent.com/u/194057545?v=4",
@@ -169,9 +113,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 3.43,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 3,
@@ -205,7 +147,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 5,
+      "rank": 4,
       "username": "SsagarikaR",
       "id": 193941133,
       "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
@@ -218,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.43,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Page Builder"
-      ],
+      "projects": ["Page Builder"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -254,7 +194,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 6,
+      "rank": 5,
       "username": "manojkmfsi",
       "id": 134362545,
       "avatar_url": "https://avatars.githubusercontent.com/u/134362545?v=4",
@@ -267,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MonoDog"
-      ],
+      "projects": ["MonoDog"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -303,7 +241,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 7,
+      "rank": 6,
       "username": "rohitrg96",
       "id": 190622750,
       "avatar_url": "https://avatars.githubusercontent.com/u/190622750?v=4",
@@ -316,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.33,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -352,7 +288,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 8,
+      "rank": 7,
       "username": "NikhilMeshram01",
       "id": 224547702,
       "avatar_url": "https://avatars.githubusercontent.com/u/224547702?v=4",
@@ -365,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 6.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "MonoDog"
-      ],
+      "projects": ["MonoDog"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -401,105 +335,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 9,
-      "username": "ankitsingh252225",
-      "id": 227138911,
-      "avatar_url": "https://avatars.githubusercontent.com/u/227138911?v=4",
-      "html_url": "https://github.com/ankitsingh252225",
-      "totalCommits": 3,
-      "totalPRs": 5,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0.6,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 0,
-      "prs_by_complexity": {
-        "small": 1,
-        "medium": 4,
-        "large": 0
-      },
-      "total_score": 52,
-      "code_score": 39,
-      "community_score": 0,
-      "quality_score": 13,
-      "score_breakdown": {
-        "pr_score": 33,
-        "commits_score": 6,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 3,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 10,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 10,
-      "username": "100xmanas",
-      "id": 147431910,
-      "avatar_url": "https://avatars.githubusercontent.com/u/147431910?v=4",
-      "html_url": "https://github.com/100xmanas",
-      "totalCommits": 7,
-      "totalPRs": 4,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 0,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 1.75,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 0,
-      "prs_by_complexity": {
-        "small": 3,
-        "medium": 1,
-        "large": 0
-      },
-      "total_score": 45,
-      "code_score": 36,
-      "community_score": 0,
-      "quality_score": 9,
-      "score_breakdown": {
-        "pr_score": 22,
-        "commits_score": 14,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 0,
-        "issue_comments_score": 0,
-        "projects_score": 0,
-        "tests_score": 1,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 8,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 0,
-        "issues_total": 0,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 11,
+      "rank": 8,
       "username": "sanghamitradash021",
       "id": 193920163,
       "avatar_url": "https://avatars.githubusercontent.com/u/193920163?v=4",
@@ -512,9 +348,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 1.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -548,7 +382,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 12,
+      "rank": 9,
       "username": "MohdAasim",
       "id": 79627135,
       "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
@@ -561,9 +395,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -597,7 +429,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 13,
+      "rank": 10,
       "username": "lakinmindfire",
       "id": 80667930,
       "avatar_url": "https://avatars.githubusercontent.com/u/80667930?v=4",
@@ -610,11 +442,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 3,
-      "projects": [
-        "Pivothead",
-        "Ignix UI",
-        "MonoDog"
-      ],
+      "projects": ["Pivothead", "Ignix UI", "MonoDog"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -648,7 +476,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 14,
+      "rank": 11,
       "username": "dipika-mindfire",
       "id": 236581176,
       "avatar_url": "https://avatars.githubusercontent.com/u/236581176?v=4",
@@ -661,9 +489,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Smart-CodeGen-ML-Agent"
-      ],
+      "projects": ["Smart-CodeGen-ML-Agent"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -697,7 +523,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 15,
+      "rank": 12,
       "username": "saradab-mindfire",
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
@@ -710,9 +536,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -746,7 +570,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 16,
+      "rank": 13,
       "username": "ashutosh-jena-mindfire",
       "id": 116242186,
       "avatar_url": "https://avatars.githubusercontent.com/u/116242186?v=4",
@@ -759,9 +583,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-25T09:33:41.410Z",
+  "generated_at": "2026-11-25T13:59:24.034Z",
   "period": "monthly",
   "window_start": "2026-11-01T00:00:00.000Z",
-  "window_end": "2026-11-25T09:33:41.410Z",
+  "window_end": "2026-11-25T13:59:24.034Z",
   "month_label": "November 2026",
   "month_key": "2026-11",
   "total_contributors": 9,
@@ -22,10 +22,7 @@
       "avgCommitsPerPR": 3.83,
       "projectsWorkingOn": 2,
       "newProjectsThisMonth": 1,
-      "projects": [
-        "d-cron",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["d-cron", "Mindfire Foss Website"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 2,
@@ -72,9 +69,7 @@
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "prs_by_complexity": {
         "small": 1,
         "medium": 1,
@@ -121,9 +116,7 @@
       "avgCommitsPerPR": 0.67,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "prs_by_complexity": {
         "small": 2,
         "medium": 0,
@@ -170,9 +163,7 @@
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 1,
@@ -219,9 +210,7 @@
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -268,9 +257,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "ADAC (Architecture Diagram as Code)"
-      ],
+      "projects": ["ADAC (Architecture Diagram as Code)"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -317,9 +304,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Agentic Headless CMS"
-      ],
+      "projects": ["Agentic Headless CMS"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -366,9 +351,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,
@@ -415,9 +398,7 @@
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
       "newProjectsThisMonth": 0,
-      "projects": [
-        "Mindfire Foss Website"
-      ],
+      "projects": ["Mindfire Foss Website"],
       "prs_by_complexity": {
         "small": 0,
         "medium": 0,

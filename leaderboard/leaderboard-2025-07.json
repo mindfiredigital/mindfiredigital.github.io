@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-25T09:33:40.755Z",
+  "generated_at": "2026-11-25T13:59:23.333Z",
   "period": "monthly",
   "month_label": "July 2025",
   "month_key": "2025-07",
-  "total_contributors": 16,
+  "total_contributors": 15,
   "leaderboard": [
     {
       "rank": 1,
@@ -19,11 +19,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2.71,
       "projectsWorkingOn": 3,
-      "projects": [
-        "ESLint Plugin Hub",
-        "Pivothead",
-        "Mindfire Foss Website"
-      ],
+      "projects": ["ESLint Plugin Hub", "Pivothead", "Mindfire Foss Website"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -70,9 +66,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 5.75,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -119,9 +113,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 2,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 2,
@@ -168,9 +160,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3.5,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -217,9 +207,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 11,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -266,9 +254,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 1,
@@ -315,9 +301,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "AUTOTEST"
-      ],
+      "projects": ["AUTOTEST"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -364,9 +348,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["ESLint Plugin Hub"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 1,
@@ -401,55 +383,6 @@
     },
     {
       "rank": 9,
-      "username": "soumya0809mindfiresolutions",
-      "id": 220684530,
-      "avatar_url": "https://avatars.githubusercontent.com/u/220684530?v=4",
-      "html_url": "https://github.com/soumya0809mindfiresolutions",
-      "totalCommits": 0,
-      "totalPRs": 0,
-      "totalPRReviewsGiven": 0,
-      "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 5,
-      "totalIssueComments": 0,
-      "avgCommitsPerPR": 0,
-      "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
-      "newProjectsThisMonth": 1,
-      "prs_by_complexity": {
-        "small": 0,
-        "medium": 0,
-        "large": 0
-      },
-      "total_score": 20,
-      "code_score": 0,
-      "community_score": 20,
-      "quality_score": 0,
-      "score_breakdown": {
-        "pr_score": 0,
-        "commits_score": 0,
-        "pr_reviews_score": 0,
-        "code_comments_score": 0,
-        "issues_opened_score": 10,
-        "issue_comments_score": 0,
-        "projects_score": 10,
-        "tests_score": 0,
-        "docs_score": 0,
-        "mentor_score": 0,
-        "zero_revisions_score": 0,
-        "impact_bonus_score": 0
-      },
-      "capped_counts": {
-        "issues_opened": 5,
-        "issues_total": 5,
-        "issue_comments": 0,
-        "issue_comments_total": 0
-      },
-      "lastActiveDays": null
-    },
-    {
-      "rank": 10,
       "username": "anujmindfire",
       "id": 182347241,
       "avatar_url": "https://avatars.githubusercontent.com/u/182347241?v=4",
@@ -462,9 +395,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -498,7 +429,7 @@
       "lastActiveDays": 12
     },
     {
-      "rank": 11,
+      "rank": 10,
       "username": "MohdAasim",
       "id": 79627135,
       "avatar_url": "https://avatars.githubusercontent.com/u/79627135?v=4",
@@ -511,9 +442,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Pivothead"
-      ],
+      "projects": ["Pivothead"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -547,7 +476,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 12,
+      "rank": 11,
       "username": "vcs-anandkr",
       "id": 215844540,
       "avatar_url": "https://avatars.githubusercontent.com/u/215844540?v=4",
@@ -560,9 +489,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["ESLint Plugin Hub"],
       "newProjectsThisMonth": 1,
       "prs_by_complexity": {
         "small": 0,
@@ -596,7 +523,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 13,
+      "rank": 12,
       "username": "SsagarikaR",
       "id": 193941133,
       "avatar_url": "https://avatars.githubusercontent.com/u/193941133?v=4",
@@ -609,9 +536,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 1,
       "projectsWorkingOn": 1,
-      "projects": [
-        "ESLint Plugin Hub"
-      ],
+      "projects": ["ESLint Plugin Hub"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -645,7 +570,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 14,
+      "rank": 13,
       "username": "deepakyadav-01",
       "id": 155735643,
       "avatar_url": "https://avatars.githubusercontent.com/u/155735643?v=4",
@@ -658,9 +583,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "Ignix UI"
-      ],
+      "projects": ["Ignix UI"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -694,7 +617,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 15,
+      "rank": 14,
       "username": "saradab-mindfire",
       "id": 115465143,
       "avatar_url": "https://avatars.githubusercontent.com/u/115465143?v=4",
@@ -707,9 +630,7 @@
       "totalIssueComments": 0,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
@@ -743,7 +664,7 @@
       "lastActiveDays": null
     },
     {
-      "rank": 16,
+      "rank": 15,
       "username": "ParthDhemeliya",
       "id": 217000014,
       "avatar_url": "https://avatars.githubusercontent.com/u/217000014?v=4",
@@ -756,9 +677,7 @@
       "totalIssueComments": 1,
       "avgCommitsPerPR": 0,
       "projectsWorkingOn": 1,
-      "projects": [
-        "TextIgniter"
-      ],
+      "projects": ["TextIgniter"],
       "newProjectsThisMonth": 0,
       "prs_by_complexity": {
         "small": 0,
