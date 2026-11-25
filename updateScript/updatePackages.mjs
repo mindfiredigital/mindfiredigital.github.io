@@ -274,55 +274,85 @@ async function fetchPkgGoDevHtml(url) {
   return response.text();
 }
 
-function parseImportedByCount($) {
-  const el = $('[data-test-id="UnitHeader-importedby"]');
-  if (el.length === 0) return null;
-  const text = el.text().trim();
-  const num = parseInt(text.replace(/[^0-9]/g, ""), 10);
-  return Number.isNaN(num) ? 0 : num;
+function extractImportCountFromHtml(html) {
+  const $ = cheerioLoad(html);
+
+  // 1. Direct header badge if > 0 (e.g. "Imported by: 5")
+  const badge = $('[data-test-id="UnitHeader-importedby"]');
+  if (badge.length > 0) {
+    const n = parseInt(badge.text().replace(/[^0-9]/g, ""), 10);
+    if (!Number.isNaN(n) && n > 0) return n;
+  }
+
+  // 2. Count actual items in the ImportedBy list (<ul class="ImportedBy-list"><li><a ...></a></li></ul>)
+  const listItems = $("ul.ImportedBy-list li a");
+  if (listItems.length > 0) {
+    return listItems.length;
+  }
+
+  // 3. Count from summary text: e.g. "displaying 1 package"
+  const text = $("article, main, body").text() || "";
+  const displayingMatch = text.match(/displaying\s+(\d+)\s+package/i);
+  if (displayingMatch) {
+    const n = parseInt(displayingMatch[1], 10);
+    if (!Number.isNaN(n) && n > 0) return n;
+  }
+  const knownMatch = text.match(/Known importing packages:\s*(\d+)/i);
+  if (knownMatch) {
+    const n = parseInt(knownMatch[1], 10);
+    if (!Number.isNaN(n) && n > 0) return n;
+  }
+
+  return 0;
 }
 
 async function fetchGolangStats(pkg) {
-  const url = pkg.url || "";
+  const cleanUrl = (pkg.url || "")
+    .replace(/\?tab=[^&]+/, "")
+    .replace(/\/+$/, "");
+  let fullPath = null;
   let modulePath = null;
-  let owner = "mindfiredigital";
-  let repo = pkg.name;
 
-  const goDevMatch = url.match(
-    /pkg\.go\.dev\/(github\.com\/([^/]+)\/([^/]+))/i
-  );
-  if (goDevMatch) {
-    modulePath = goDevMatch[1];
-    owner = goDevMatch[2];
-    repo = goDevMatch[3];
-  } else if (url.includes("github.com")) {
-    const ghMatch = url.match(/github\.com\/([^/]+)\/([^/]+)/i);
+  const pkgMatch = cleanUrl.match(/pkg\.go\.dev\/([^?#]+)/i);
+  if (pkgMatch) {
+    fullPath = pkgMatch[1];
+    const parts = fullPath.split("/");
+    modulePath = parts.length >= 3 ? parts.slice(0, 3).join("/") : fullPath;
+  } else if (cleanUrl.includes("github.com")) {
+    const ghMatch = cleanUrl.match(/github\.com\/([^/]+)\/([^/]+)(?:\/(.*))?/i);
     if (ghMatch) {
-      owner = ghMatch[1];
-      repo = ghMatch[2].replace(/\.git$/, "");
-      modulePath = `github.com/${owner}/${repo}`;
+      modulePath = `github.com/${ghMatch[1]}/${ghMatch[2].replace(
+        /\.git$/,
+        ""
+      )}`;
+      fullPath = ghMatch[3] ? `${modulePath}/${ghMatch[3]}` : modulePath;
     }
-  } else if (url && !url.includes("pkg.go.dev")) {
+  } else if (cleanUrl && !cleanUrl.includes("pkg.go.dev")) {
     // Non-package URL (e.g. documentation link like github.io)
     return { importCount: 0, latestVersion: "", versionsCount: 0 };
   } else {
-    modulePath = `github.com/${owner}/${pkg.name}`;
+    modulePath = `github.com/mindfiredigital/${pkg.name}`;
+    fullPath = modulePath;
   }
 
   let importCount = 0;
   let latestVersion = "";
   let versionsCount = 0;
 
-  // 1. Fetch import count directly from pkg.go.dev
-  const pkgGoDevUrl = url.includes("pkg.go.dev")
-    ? url
-    : `https://pkg.go.dev/${modulePath}`;
-  try {
-    const html = await fetchPkgGoDevHtml(pkgGoDevUrl);
-    const $ = cheerioLoad(html);
+  const targetPath = fullPath || modulePath;
+  const baseUrl = cleanUrl.includes("pkg.go.dev")
+    ? cleanUrl
+    : `https://pkg.go.dev/${targetPath}`;
+  const importedByUrl = `${baseUrl}?tab=importedby`;
 
-    // Extract latest version if present in header
-    const versionText = $('[data-test-id="UnitHeader-version"] a')
+  // 1. Fetch import count directly from pkg.go.dev
+  try {
+    // Try ?tab=importedby first, as it contains the live list of imported packages
+    const tabHtml = await fetchPkgGoDevHtml(importedByUrl);
+    importCount = extractImportCountFromHtml(tabHtml);
+
+    const $tab = cheerioLoad(tabHtml);
+    const versionText = $tab('[data-test-id="UnitHeader-version"] a')
       .first()
       .text()
       .replace(/Version:\s*/i, "")
@@ -330,42 +360,73 @@ async function fetchGolangStats(pkg) {
     if (versionText) {
       latestVersion = versionText;
     }
+  } catch (tabErr) {
+    // Fallback to base URL
+    try {
+      const html = await fetchPkgGoDevHtml(baseUrl);
+      importCount = extractImportCountFromHtml(html);
 
-    const directCount = parseImportedByCount($);
-    if (directCount !== null) {
-      importCount = directCount;
-    } else {
-      // Module root page without a root package: check exported subpackages
+      const $ = cheerioLoad(html);
+      const versionText = $('[data-test-id="UnitHeader-version"] a')
+        .first()
+        .text()
+        .replace(/Version:\s*/i, "")
+        .trim();
+      if (versionText) {
+        latestVersion = versionText;
+      }
+    } catch (baseErr) {
+      logger.warn(`Could not fetch stats from ${baseUrl}: ${baseErr.message}`);
+    }
+  }
+
+  // If importCount is still 0 (e.g. root module overview without direct package), inspect subpackages
+  if (importCount === 0) {
+    try {
+      const mainHtml = await fetchPkgGoDevHtml(baseUrl);
+      const $main = cheerioLoad(mainHtml);
       const subLinks = [];
-      $(
+      $main(
         '[data-test-id="UnitDirectories-table"] tr:not(.UnitDirectories-internal) a'
       ).each((_, a) => {
-        const href = $(a).attr("href");
+        const href = $main(a).attr("href");
         if (href && !href.includes("/internal")) {
           const cleanHref = href.replace(/@[^/]+/, "");
           subLinks.push(`https://pkg.go.dev${cleanHref}`);
         }
       });
 
-      for (const subUrl of subLinks) {
-        try {
-          const subHtml = await fetchPkgGoDevHtml(subUrl);
-          const $sub = cheerioLoad(subHtml);
-          const subCount = parseImportedByCount($sub);
-          if (subCount !== null) {
-            importCount += subCount;
+      if (subLinks.length > 0) {
+        const uniqueImporters = new Set();
+        for (const subUrl of subLinks) {
+          try {
+            const subTabHtml = await fetchPkgGoDevHtml(
+              `${subUrl}?tab=importedby`
+            );
+            const $sub = cheerioLoad(subTabHtml);
+            $sub("ul.ImportedBy-list li a").each((_, a) => {
+              const impHref = $sub(a).attr("href");
+              if (impHref) {
+                uniqueImporters.add(impHref.replace(/^\//, ""));
+              }
+            });
+            const subCount = extractImportCountFromHtml(subTabHtml);
+            if (subCount > 0 && uniqueImporters.size === 0) {
+              importCount += subCount;
+            }
+          } catch (subErr) {
+            logger.warn(
+              `Could not fetch subpackage ${subUrl}: ${subErr.message}`
+            );
           }
-        } catch (subErr) {
-          logger.warn(
-            `Could not fetch pkg.go.dev subpackage ${subUrl}: ${subErr.message}`
-          );
+        }
+        if (uniqueImporters.size > 0) {
+          importCount = uniqueImporters.size;
         }
       }
+    } catch {
+      // Ignore root subpackage check error
     }
-  } catch (err) {
-    logger.warn(
-      `Could not fetch import count from ${pkgGoDevUrl}: ${err.message}`
-    );
   }
 
   // 2. Fetch versions info from deps.dev

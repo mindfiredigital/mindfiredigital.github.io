@@ -211,7 +211,7 @@
     "shortDescription": "It allows users to query databases using natural language and receive results as SQL code and beautiful visualizations.",
     "githubUrl": "https://github.com/mindfiredigital/SQLRAG/",
     "documentationUrl": "https://github.com/mindfiredigital/SQLRAG/blob/main/README.md",
-    "stars": 18,
+    "stars": 19,
     "tags": ["agent", "ai", "huggingface", "javascript", "langchain"],
     "lastPushedAt": "2024-10-03T09:14:36Z"
   },
@@ -251,7 +251,7 @@
     "shortDescription": "An npm package for building responsive web pages with a drag-and-drop UI",
     "githubUrl": "https://github.com/mindfiredigital/page-builder",
     "documentationUrl": "https://github.com/mindfiredigital/page-builder",
-    "stars": 41,
+    "stars": 40,
     "tags": [],
     "lastPushedAt": "2026-10-26T02:48:01Z"
   },
@@ -438,7 +438,7 @@
     "shortDescription": "A new GenAI-powered test automation command-line tool that analyzes live web pages, automatically derives test cases, and generates production-ready Python Selenium scripts—designed to reduce manual QA effort and speed up test coverage. The team has now started working on a web-based product.",
     "githubUrl": "https://github.com/mindfiredigital/AUTOTEST",
     "documentationUrl": "https://github.com/mindfiredigital/AUTOTEST",
-    "stars": 42,
+    "stars": 43,
     "tags": [
       "automation-testing",
       "chromium",
@@ -514,7 +514,7 @@
     "documentationUrl": "https://mindfiredigital.github.io/adac-tools/",
     "stars": 15,
     "tags": [],
-    "lastPushedAt": "2026-08-26T05:19:28Z"
+    "lastPushedAt": "2026-11-24T10:49:36Z"
   },
   {
     "id": 35,
@@ -616,7 +616,7 @@
     "documentationUrl": "https://github.com/mindfiredigital/agentic-headless-cms/blob/main/README.md",
     "stars": 1,
     "tags": [],
-    "lastPushedAt": "2026-11-12T07:56:14Z"
+    "lastPushedAt": "2026-11-25T10:48:08Z"
   },
   {
     "id": 42,
@@ -631,8 +631,8 @@
     "shortDescription": "A zero-dependency, embeddable distributed cron library for Go that coordinates scheduled job execution across horizontally-scaled replicas using existing PostgreSQL infrastructure",
     "githubUrl": "https://github.com/mindfiredigital/d-cron",
     "documentationUrl": "https://mindfiredigital.github.io/d-cron/",
-    "stars": 0,
+    "stars": 1,
     "tags": ["cron", "cron-jobs", "postgresql", "scheduler"],
-    "lastPushedAt": "2026-11-11T11:21:25Z"
+    "lastPushedAt": "2026-11-23T14:28:58Z"
   }
 ]
