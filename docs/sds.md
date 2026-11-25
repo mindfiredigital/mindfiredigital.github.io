@@ -20,7 +20,7 @@ This document describes the technical architecture, data flow, module design, CI
 | Language | TypeScript + JavaScript (ESM `.mjs` for scripts) |
 | Styling | Tailwind CSS |
 | CMS | Directus (self-hosted, GraphQL API) |
-| Package registry APIs | api.npmjs.org, pypistats.org |
+| Package registry APIs | api.npmjs.org, pypistats.org, pkg.go.dev (scraped), deps.dev API, proxy.golang.org |
 | Source control / CI | GitHub Actions |
 | Deployment | GitHub Pages (`gh-pages` branch) |
 | Logging | Winston |
@@ -37,7 +37,7 @@ There are two separate GitHub Actions workflows, each serving a different purpos
 
 ### 3.1 Workflow 1 — Full Build (`ci.yml`)
 
-**Purpose:** Fetches all fresh data (GitHub, CMS, npm, PyPI) and rebuilds the entire site.
+**Purpose:** Fetches all fresh data (GitHub, CMS, npm, PyPI, Golang) and rebuilds the entire site.
 
 **Triggers:**
 - Push to `main`
@@ -57,7 +57,7 @@ There are two separate GitHub Actions workflows, each serving a different purpos
 4.  npm run build
       └── npm run update-all
             ├── node updateScript/updateProject.mjs    → writes projects.json, contributors.json, stats.json
-            ├── node updateScript/updatePackages.mjs   → writes packages.json (and stats via getAllStats)
+            ├── node updateScript/updatePackages.mjs   → writes packages.json (and stats via getAllStats for npm, PyPI, Golang)
             ├── node updateScript/make-cache.mjs       → writes leaderboard-cache.json
             ├── node updateScript/make-leaderboard.mjs → writes leaderboard.json, top-scorers.json, public/leaderboard/*.json
             └── node updateScript/make-periodic-table.mjs → writes periodic-table data
@@ -159,6 +159,7 @@ Central configuration and shared utilities for all update scripts.
 - `pathForJson` — `../src/asset` (relative to `updateScript/`)
 - `npmPackages` — filtered from `packages.json` where `type === "npm"`
 - `pypiPackages` — filtered from `packages.json` where `type === "PyPi"`
+- `golangPackages` — filtered from `packages.json` where type is `"golang"` or `"go"` (case-insensitive)
 - `writeJsonToFile(relativePath, data)` — resolves path from `__dirname`, writes JSON with 2-space indent
 - `fetchData(url, options, retries=3, timeoutMs=10000)` — fetch wrapper with 3 retries, 10s abort timeout, exponential backoff (1s × attempt number)
 
@@ -191,7 +192,7 @@ Merge contributions across repos into contributionsMap:
   - lastActiveDays = minimum across repos (most recent activity wins)
   Sort by contributions desc → writeJsonToFile → contributors.json
   ↓
-await getAllStats(npmPackages, pypiPackages)
+await getAllStats(npmPackages, pypiPackages, golangPackages)
   → enrich with titles → sort by total desc
   → writeJsonToFile → stats.json
 ```
@@ -219,7 +220,7 @@ concurrency = 1, delayBetweenRequests = 1000ms
 
 Up to 5 retries with exponential backoff + random jitter. Detects rate limiting via HTTP 429, "too many requests", "rate limit", or "cloudflare" in error messages.
 
-**getAllStats(npmPackages, pypiPackages):**
+**getAllStats(npmPackages, pypiPackages, golangPackages):**
 
 For each npm package:
 1. Fetches `last-day`, `last-week`, `last-year` via `https://api.npmjs.org/downloads/range/{period}/@mindfiredigital/{name}`
@@ -229,6 +230,10 @@ For each npm package:
 For each PyPI package:
 1. Fetches recent stats from `https://pypistats.org/api/packages/{name}/recent`
 2. Fetches all-time total via `fetchTotalDownloads()` from `pypiTotalStats.mjs`
+
+For each Golang package:
+1. Scrapes import count directly from `https://pkg.go.dev/{modulePath}` (crawling subpackages via `UnitDirectories-table` if the root module has no direct package)
+2. Fetches latest release version and versions count from deps.dev API and `proxy.golang.org/@latest` fallback
 
 **4.3.1 npm All-Time Total — Chunked Approach**
 
@@ -342,6 +347,7 @@ Joins package metadata with download stats. Each entry gets a short symbol (deri
 | GitHub REST | Serial queue (concurrency=1, 500ms delay), exponential backoff on 403/429, respects `retry-after` and `x-ratelimit-reset` headers |
 | npm downloads | Serial queue (concurrency=1, 1000ms delay), exponential backoff + jitter on 429/cloudflare, 5 max retries |
 | PyPI stats | 3 retries, 1000ms initial delay |
+| pkg.go.dev / deps.dev | Standard HTTP headers, custom User-Agent, retry via `fetchData` / `fetchWithRetry` |
 | Directus CMS | 3 retries via `fetchData()`, 10s abort timeout |
 
 ---
@@ -415,10 +421,10 @@ Covers component and integration tests. Unit test coverage is tracked separately
 ## 7. Data Flow Summary
 
 ```
-┌─────────────────────────────────────────────┐
-│              External APIs                  │
-│  Directus CMS │ GitHub │ npm │ PyPI         │
-└──────────────┬──────────────────────────────┘
+┌────────────────────────────────────────────────────────┐
+│                     External APIs                      │
+│  Directus CMS │ GitHub │ npm │ PyPI │ pkg.go.dev/deps  │
+└──────────────────────────┬─────────────────────────────┘
                │  (at build time, CI only)
                ▼
 ┌──────────────────────────────────────────────┐

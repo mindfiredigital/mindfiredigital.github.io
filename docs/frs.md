@@ -141,21 +141,21 @@ A collapsible `ScoringSystem` section on the page explains how scores are calcul
 
 ### 3.5 Packages Page
 
-Displays download statistics for all npm and PyPI packages owned by the organization.
+Displays download statistics and package metrics for all npm, PyPI, and Golang packages owned by the organization.
 
 **Package Cards**
 
 Each package shows:
 
-- Package name and type badge (npm / PyPI)
+- Package name and type badge (npm / PyPI / Golang)
 - Associated project title
-- Daily, weekly, yearly download counts
-- All-time total downloads
-- Link to the package registry page
+- Daily, weekly, yearly download counts (npm / PyPI) or total import counts and version details (Golang)
+- All-time total downloads or total imports
+- Link to the package registry / documentation page
 
 **Sorting**
 
-Packages are sorted by total downloads in descending order.
+Packages are sorted by total downloads / imports in descending order.
 
 ---
 
@@ -218,7 +218,7 @@ A `JoinUs` component appears on relevant pages encouraging developers to contrib
 All data is pre-generated at build time via update scripts. The pipeline runs in this order:
 
 1. `updateProject.mjs` — Fetches projects, contributors, and download stats
-2. `updatePackages.mjs` — Fetches npm and PyPI download stats
+2. `updatePackages.mjs` — Fetches npm, PyPI, and Golang package stats
 3. `make-cache.mjs` — Fetches raw GitHub activity (commits, PRs, issues) and caches it
 4. `make-leaderboard.mjs` — Computes leaderboard scores and monthly breakdowns
 5. `make-periodic-table.mjs` — Generates the periodic table JSON
@@ -264,7 +264,7 @@ These cover the core logic of all update scripts:
 
 - `config.test.mjs` — fetchData utility, writeJsonToFile, retry and timeout behavior
 - `updateProject.test.mjs` — project data mapping, contributor aggregation
-- `updatePackages.test.mjs` — npm and PyPI stat fetching, download sum calculation
+- `updatePackages.test.mjs` — npm, PyPI, and Golang stat fetching, download sum calculation
 - `updateContributors.test.mjs` — bot filtering, contribution aggregation across repos, `lastActiveDays` calculation
 - `make-cache.test.mjs` — PR complexity classification, default branch filtering, issue categorization
 - `make-leaderboard.test.mjs` — full `calculateScore` logic (all scoring rules + monthly caps), `applyMonthlyCaps`, monthly breakdown generation
@@ -312,6 +312,7 @@ npm run test:coverage     # with coverage report
 | Contributors | GitHub Collaborators + Commits API |
 | npm downloads | api.npmjs.org |
 | PyPI downloads | pypistats.org API |
+| Golang imports & versions | pkg.go.dev (scraped), deps.dev API, proxy.golang.org |
 | Commits, PRs, Issues | GitHub REST API (cached at build time) |
 
 ---
