@@ -4,7 +4,7 @@
     "project_title": "Canvas Editor",
     "repo_name": "canvas-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:57:01.998Z",
+    "fetched_at": "2026-11-25T12:34:56.906Z",
     "commits": [
       {
         "sha": "6e799f87924a193a64406980d1623850274d3883",
@@ -6753,7 +6753,7 @@
     "project_title": "NFT Marketplace",
     "repo_name": "nft-marketplace",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:57:05.068Z",
+    "fetched_at": "2026-11-25T12:35:01.486Z",
     "commits": [
       {
         "sha": "7ca55de0e582386e4e9dc94d3d24245acf67f511",
@@ -7934,7 +7934,7 @@
     "project_title": "FMDAPI Node Weaver",
     "repo_name": "fmdapi-node-weaver",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:57:22.897Z",
+    "fetched_at": "2026-11-25T12:35:18.382Z",
     "commits": [
       {
         "sha": "9cd41e0f66affe1dfa7ab7ca3dd4d7356e89879c",
@@ -8430,7 +8430,7 @@
     "project_title": "Extension Methods",
     "repo_name": "extension-methods",
     "default_branch": "master",
-    "fetched_at": "2026-11-12T11:57:39.065Z",
+    "fetched_at": "2026-11-25T12:35:36.814Z",
     "commits": [
       {
         "sha": "72db65482a531ccf0abbca2c324699ea95a9036a",
@@ -9765,7 +9765,7 @@
     "project_title": "FireKubeX",
     "repo_name": "FireKubeX",
     "default_branch": "dev",
-    "fetched_at": "2026-11-12T11:57:41.135Z",
+    "fetched_at": "2026-11-25T12:35:39.067Z",
     "commits": [
       {
         "sha": "58d2386c72add5e187efb0d18d69b68991eee5ad",
@@ -9803,7 +9803,7 @@
     "project_title": "Angular Canvas Editor",
     "repo_name": "angular-canvas-document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:58:02.516Z",
+    "fetched_at": "2026-11-25T12:36:01.086Z",
     "commits": [
       {
         "sha": "f918dc8e39b60a07ace8415f983b19ff5ab5e896",
@@ -10660,7 +10660,7 @@
     "project_title": "MobileQuickLaunchKit-iOS",
     "repo_name": "MobileQuickLaunchKit-iOS",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:58:22.891Z",
+    "fetched_at": "2026-11-25T12:36:19.926Z",
     "commits": [
       {
         "sha": "460e7f7ab08980502273ae2578424638663017fc",
@@ -11174,7 +11174,7 @@
     "project_title": "MobileQuickLaunchKit-Android",
     "repo_name": "MobileQuickLaunchKit-Android",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:58:47.629Z",
+    "fetched_at": "2026-11-25T12:36:47.883Z",
     "commits": [
       {
         "sha": "20fbd940784d3fd7759e31189bcec308326418c9",
@@ -11759,7 +11759,7 @@
     "project_title": "QuickLaunchReactNativeKit",
     "repo_name": "QuickLaunchReactNativeKit",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T11:59:26.692Z",
+    "fetched_at": "2026-11-25T12:37:25.669Z",
     "commits": [
       {
         "sha": "d6a825d6abdfa931fb5afb453f300daaa69c21fc",
@@ -14120,7 +14120,7 @@
     "project_title": "neo-pusher",
     "repo_name": "neo-pusher",
     "default_branch": "dev",
-    "fetched_at": "2026-11-12T12:00:14.120Z",
+    "fetched_at": "2026-11-25T12:38:09.904Z",
     "commits": [
       {
         "sha": "bc45ef5442575086e755fd25ddd256a2df98e515",
@@ -15782,7 +15782,7 @@
     "project_title": "react-text-igniter",
     "repo_name": "react-text-igniter",
     "default_branch": "master",
-    "fetched_at": "2026-11-12T12:01:17.592Z",
+    "fetched_at": "2026-11-25T12:39:07.965Z",
     "commits": [
       {
         "sha": "5ee2e0b5f90cb4decf1977e05289632ce0a026fa",
@@ -17624,7 +17624,7 @@
     "project_title": "sqlrag",
     "repo_name": "SQLRAG",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:01:54.450Z",
+    "fetched_at": "2026-11-25T12:39:40.056Z",
     "commits": [
       {
         "sha": "a15b75626c1cb9d2676aa4bd15d9639a6d4afdd3",
@@ -18310,7 +18310,7 @@
     "project_title": "ESLint Plugin Hub",
     "repo_name": "eslint-plugin-hub",
     "default_branch": "master",
-    "fetched_at": "2026-11-12T12:03:03.942Z",
+    "fetched_at": "2026-11-25T12:40:44.939Z",
     "commits": [
       {
         "sha": "b590691b5540bd33589a14ba626e4f1d78b47194",
@@ -20680,7 +20680,7 @@
     "project_title": "Page Builder",
     "repo_name": "page-builder",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:06:35.435Z",
+    "fetched_at": "2026-11-25T12:44:10.343Z",
     "commits": [
       {
         "sha": "c26f9602fa5a496aa1233a9c85b33c177eabb0d2",
@@ -27958,7 +27958,7 @@
     "project_title": "Pivothead",
     "repo_name": "PivotHead",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:11:42.259Z",
+    "fetched_at": "2026-11-25T12:49:12.235Z",
     "commits": [
       {
         "sha": "b930aa46a396759c7035a6d1df98edbeb518be44",
@@ -36973,7 +36973,7 @@
     "project_title": "OpenRecap",
     "repo_name": "OpenRecap",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:11:44.887Z",
+    "fetched_at": "2026-11-25T12:49:14.358Z",
     "commits": [
       {
         "sha": "dff45baa80db6705ee634916f3135549080a4b22",
@@ -37011,7 +37011,7 @@
     "project_title": "Document Editor",
     "repo_name": "document-editor",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:12:46.124Z",
+    "fetched_at": "2026-11-25T12:50:15.262Z",
     "commits": [
       {
         "sha": "172686eb5af1bb2c55d4bd5ab5ec30119d0c8c37",
@@ -38747,7 +38747,7 @@
     "project_title": "Ignix UI",
     "repo_name": "ignix-ui",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:31:45.648Z",
+    "fetched_at": "2026-11-25T13:08:38.872Z",
     "commits": [
       {
         "sha": "d1a96d49d9332419b87578918b670cc2e32f54bb",
@@ -68183,7 +68183,7 @@
         {
           "number": 633,
           "author": "soumya0809mindfiresolutions",
-          "title": "[BUG]: Placeholder text overlaps input border in “bounce” variant",
+          "title": "[BUG]: Placeholder text overlaps input border in “bounce��� variant",
           "created_at": "2026-03-04T08:06:55Z",
           "comments": 1,
           "comment_authors": [
@@ -69796,7 +69796,7 @@
     "project_title": "FileMaker List View Addon",
     "repo_name": "filemaker-listview-addon",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:31:48.216Z",
+    "fetched_at": "2026-11-25T13:08:43.678Z",
     "commits": [
       {
         "sha": "fe86e4d98cd08d315eb3a8b18dd55c8e6b1a7baa",
@@ -69939,7 +69939,7 @@
     "project_title": "DeepScanBot",
     "repo_name": "DeepScanBot",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:34:44.832Z",
+    "fetched_at": "2026-11-25T13:12:11.282Z",
     "commits": [
       {
         "sha": "068683f926b3c99c8e94e92fc2026c704671e623",
@@ -74250,7 +74250,7 @@
     "project_title": "AIHealthCounsellor",
     "repo_name": "AIHealthCounsellor",
     "default_branch": "master",
-    "fetched_at": "2026-11-12T12:34:46.776Z",
+    "fetched_at": "2026-11-25T13:12:13.432Z",
     "commits": [
       {
         "sha": "eb581ecb9d1670c90226f0796b1ec573a4e174e2",
@@ -74288,7 +74288,7 @@
     "project_title": "Multi Cloud Monorepo Boilerplate",
     "repo_name": "js-serverless-monorepo-boilerplate",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:34:55.474Z",
+    "fetched_at": "2026-11-25T13:12:24.185Z",
     "commits": [
       {
         "sha": "22cfaebc7cd05cc7a914499f32295fe1478def46",
@@ -74520,7 +74520,7 @@
     "project_title": "Multi-Agent Knowledge Graph Chatbot",
     "repo_name": "Multi-Agent-Knowledge-Graph-Chatbot",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:34:57.626Z",
+    "fetched_at": "2026-11-25T13:12:26.319Z",
     "commits": [
       {
         "sha": "40ce917a043f6493ae8358a7d98033316e9666f5",
@@ -74572,7 +74572,7 @@
     "project_title": "Smart-CodeGen-ML-Agent",
     "repo_name": "Smart-CodeGen-ML-Agent",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:35:00.286Z",
+    "fetched_at": "2026-11-25T13:12:29.511Z",
     "commits": [
       {
         "sha": "643c6faf28da53d53c01e600fefc9132fe873bbb",
@@ -74624,7 +74624,7 @@
     "project_title": "AUTOTEST",
     "repo_name": "AUTOTEST",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:35:26.186Z",
+    "fetched_at": "2026-11-25T13:12:58.043Z",
     "commits": [
       {
         "sha": "9f7dc3d4f630a73bdfb75ec96a33b7810c22038c",
@@ -75655,7 +75655,7 @@
     "project_title": "Next.js Fortress",
     "repo_name": "nextjs-fortress",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:36:31.840Z",
+    "fetched_at": "2026-11-25T13:14:02.711Z",
     "commits": [
       {
         "sha": "680200abcab75eeb6fbbce05a76694058bb688fe",
@@ -78107,7 +78107,7 @@
     "project_title": "MonoDog",
     "repo_name": "MonoDog",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:39:34.562Z",
+    "fetched_at": "2026-11-25T13:17:25.656Z",
     "commits": [
       {
         "sha": "7352ccc477de487bcb203f6568930637eb0a818a",
@@ -84864,7 +84864,7 @@
     "project_title": "TextIgniter",
     "repo_name": "TextIgniterJS",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:53:06.008Z",
+    "fetched_at": "2026-11-25T13:23:54.528Z",
     "commits": [
       {
         "sha": "f2deead2aa87cee417045ee4e7fe2aacf722856e",
@@ -93238,7 +93238,7 @@
     "project_title": "ADAC (Architecture Diagram as Code)",
     "repo_name": "adac-tools",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:54:32.647Z",
+    "fetched_at": "2026-11-25T13:25:21.207Z",
     "commits": [
       {
         "sha": "8eda37674b1fc7defce728f238839b8c39c9b091",
@@ -95188,6 +95188,22 @@
       ],
       "others": [
         {
+          "number": 98,
+          "author": "bighneswar-mindfire",
+          "title": "Remove picomatch advisory ignore when picomatch 4.0.8 is released",
+          "created_at": "2026-11-25T12:52:39Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 96,
+          "author": "uzerjamal-mfsi",
+          "title": "[RELEASE] adac-validator 0.1.0, adac-icons-aws 0.1.0, adac-core 0.2.0 and adac-diagram 0.2.0 to npm",
+          "created_at": "2026-11-24T09:36:59Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
           "number": 92,
           "author": "uzerjamal-mfsi",
           "title": "[CHORE] Enforce Quality Gaps",
@@ -95301,7 +95317,7 @@
       "total_bugs": 3,
       "total_enhancements": 4,
       "total_documentation": 12,
-      "total_others": 12
+      "total_others": 14
     }
   },
   "35": {
@@ -95309,7 +95325,7 @@
     "project_title": "Agentic Web Starter",
     "repo_name": "Agentic-Web-Starter",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:54:42.887Z",
+    "fetched_at": "2026-11-25T13:25:30.935Z",
     "commits": [
       {
         "sha": "6f7513e684f69d3befa311785c9174daf0c2c828",
@@ -95903,7 +95919,7 @@
     "project_title": "Ignix-lite",
     "repo_name": "ignix-lite",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T12:58:38.986Z",
+    "fetched_at": "2026-11-25T13:29:33.319Z",
     "commits": [
       {
         "sha": "c53884c32b9097dd9484cc20af7a0b8cc37e52ff",
@@ -103414,7 +103430,7 @@
     "project_title": "markdown-reader — Native Desktop Markdown Reader",
     "repo_name": "markdown-reader",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:00:37.750Z",
+    "fetched_at": "2026-11-25T13:31:30.154Z",
     "commits": [
       {
         "sha": "b87a242450a50ab34ed232a2b1c1bd1de78d483b",
@@ -108631,7 +108647,7 @@
     "project_title": "gpx",
     "repo_name": "gpx",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:02:11.657Z",
+    "fetched_at": "2026-11-25T13:32:42.372Z",
     "commits": [
       {
         "sha": "91e21ef8a1562886a0e84407ef2aac6d7b43ddb8",
@@ -111866,7 +111882,7 @@
     "project_title": "mdslide",
     "repo_name": "mdslide",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:05:09.671Z",
+    "fetched_at": "2026-11-25T13:35:28.954Z",
     "commits": [
       {
         "sha": "a822a883fe1846ab4d4cde9e828927f0413523f2",
@@ -117498,7 +117514,7 @@
     "project_title": "Meiosis",
     "repo_name": "meiosis",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:11:34.902Z",
+    "fetched_at": "2026-11-25T13:41:43.842Z",
     "commits": [],
     "merged_prs": [],
     "issues": {
@@ -117521,7 +117537,7 @@
     "project_title": "Agentic Headless CMS",
     "repo_name": "agentic-headless-cms",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:09:42.549Z",
+    "fetched_at": "2026-11-25T13:39:56.015Z",
     "commits": [
       {
         "sha": "bd0df51b8fe6317b2c1cb08ec92819803452c799",
@@ -127644,32 +127660,52 @@
           "author": "Rituparna158",
           "title": "[Bug]: preserve admin wildcard (*) permission in Roles UI and keep session cookie under 4 KB",
           "created_at": "2026-11-12T12:24:55Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-13T07:09:50Z"
+            }
+          ]
         },
         {
           "number": 287,
           "author": "Rituparna158",
           "title": "[Bug]: return 400/404 instead of 500 with stack trace on invalid entry UUID",
           "created_at": "2026-11-12T12:24:21Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-13T07:10:03Z"
+            }
+          ]
         },
         {
           "number": 286,
           "author": "Rituparna158",
           "title": "[BUG]: support x-mfa-code in AdminModule token operations and add listTokens()",
           "created_at": "2026-11-12T12:23:37Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-13T07:10:11Z"
+            }
+          ]
         },
         {
           "number": 285,
           "author": "Rituparna158",
           "title": "[BUG]: extract backend error messages, normalize baseUrl, preserve uploadFromPath MIME type, and type ContentModule inputs",
           "created_at": "2026-11-12T12:22:55Z",
-          "comments": 0,
-          "comment_authors": []
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-13T07:09:40Z"
+            }
+          ]
         },
         {
           "number": 279,
@@ -127872,6 +127908,162 @@
         }
       ],
       "enhancements": [
+        {
+          "number": 326,
+          "author": "Rituparna158",
+          "title": "[Feature]: centralized approvals dashboard for cross-content review and 1-click approvals",
+          "created_at": "2026-11-24T05:04:54Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-25T11:37:17Z"
+            }
+          ]
+        },
+        {
+          "number": 325,
+          "author": "Rituparna158",
+          "title": "[Feature]: make workflow review optional per entry with direct publish support",
+          "created_at": "2026-11-24T05:00:59Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-24T05:35:12Z"
+            }
+          ]
+        },
+        {
+          "number": 322,
+          "author": "sobhan-s",
+          "title": "[Feature]: Wire real-time CSS variable injection into live site preview",
+          "created_at": "2026-11-23T06:02:05Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 321,
+          "author": "sobhan-s",
+          "title": "[Feature]: Build Theme Settings panel with color pickers, typography, and preset controls",
+          "created_at": "2026-11-23T06:01:07Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 320,
+          "author": "sobhan-s",
+          "title": "[Feature]: Define theme token schema, state store, and preset switching logic",
+          "created_at": "2026-11-23T05:59:38Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 318,
+          "author": "Rituparna158",
+          "title": "[Feature]: implement centralized approvals queue for pending editorial reviews",
+          "created_at": "2026-11-23T05:00:45Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-25T11:37:37Z"
+            }
+          ]
+        },
+        {
+          "number": 317,
+          "author": "Rituparna158",
+          "title": "[Feature]: add payload field filtering and lightweight payload templates",
+          "created_at": "2026-11-23T05:00:01Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 316,
+          "author": "Rituparna158",
+          "title": "[Feature]: add 1-click manual replay button in webhook deliveries drawer",
+          "created_at": "2026-11-23T04:59:11Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-24T05:34:42Z"
+            }
+          ]
+        },
+        {
+          "number": 315,
+          "author": "Rituparna158",
+          "title": "[Feature]: implement exponential backoff retries and dead letter queue for failed deliveries",
+          "created_at": "2026-11-23T04:58:09Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-23T06:20:06Z"
+            }
+          ]
+        },
+        {
+          "number": 313,
+          "author": "Rituparna158",
+          "title": "[Feature]:  production hardening for editorial workflows, security guards, and review alerts",
+          "created_at": "2026-11-19T05:19:35Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-19T07:02:55Z"
+            }
+          ]
+        },
+        {
+          "number": 296,
+          "author": "Rituparna158",
+          "title": "[FEATURE]: workflow event notifications, sdk client methods, and e2e testing",
+          "created_at": "2026-11-16T05:11:26Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 295,
+          "author": "Rituparna158",
+          "title": "[FEATURE]: admin settings workflow builder and content editor transition controls",
+          "created_at": "2026-11-16T05:10:51Z",
+          "comments": 0,
+          "comment_authors": []
+        },
+        {
+          "number": 294,
+          "author": "Rituparna158",
+          "title": "[FEATURE]: state transition engine, rbac authorization, and audit logging",
+          "created_at": "2026-11-16T05:10:13Z",
+          "comments": 2,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-16T11:22:53Z"
+            },
+            {
+              "author": "AuthByExample",
+              "created_at": "2026-11-24T11:28:21Z"
+            }
+          ]
+        },
+        {
+          "number": 293,
+          "author": "Rituparna158",
+          "title": "[FEATURE]: workflow schema models, configuration apis, and content schema association",
+          "created_at": "2026-11-16T05:09:33Z",
+          "comments": 1,
+          "comment_authors": [
+            {
+              "author": "Rituparna158",
+              "created_at": "2026-11-16T06:11:32Z"
+            }
+          ]
+        },
         {
           "number": 268,
           "author": "Rituparna158",
@@ -129061,7 +129253,7 @@
       "total_commits": 1117,
       "total_merged_prs": 126,
       "total_bugs": 22,
-      "total_enhancements": 48,
+      "total_enhancements": 62,
       "total_documentation": 1,
       "total_others": 74
     }
@@ -129071,7 +129263,7 @@
     "project_title": "d-cron",
     "repo_name": "d-cron",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:11:33.245Z",
+    "fetched_at": "2026-11-25T13:41:42.066Z",
     "commits": [
       {
         "sha": "fb55098e9f15d674529054d4f1018d60d53ed64c",
@@ -131756,8 +131948,50 @@
     "project_title": "Mindfire Foss Website",
     "repo_name": "mindfiredigital.github.io",
     "default_branch": "main",
-    "fetched_at": "2026-11-12T13:20:01.781Z",
+    "fetched_at": "2026-11-25T13:59:22.152Z",
     "commits": [
+      {
+        "sha": "9fae93127cd095f47ebda34e78a13d9c6065007b",
+        "author_login": "anandmindfire",
+        "author_name": "Anand kumar",
+        "date": "2026-11-13T05:30:24Z",
+        "message": "feat: Merge pull request #316 from mindfiredigital/dev"
+      },
+      {
+        "sha": "dbf722a7e95a57f2f617706b654dfa4ef30cfd36",
+        "author_login": "ParasMindfire",
+        "author_name": "ParasMindfire",
+        "date": "2026-11-13T05:16:09Z",
+        "message": "Merge pull request #315 from anujmindfire/feat/golang-support"
+      },
+      {
+        "sha": "13f0a9de3c880af3e3f7f66265749e3ac80f7363",
+        "author_login": "anujmindfire",
+        "author_name": "Anuj Singh",
+        "date": "2026-11-12T14:37:09Z",
+        "message": "feat: update name and docs url"
+      },
+      {
+        "sha": "22dcbe138127d6fa79412f4416b9eed55283a732",
+        "author_login": "anujmindfire",
+        "author_name": "Anuj Singh",
+        "date": "2026-11-12T14:30:48Z",
+        "message": "feat: update name and docs url"
+      },
+      {
+        "sha": "504474cbb4ad72dfb3f2cee75cc2db882f2fadef",
+        "author_login": "anujmindfire",
+        "author_name": "Anuj Singh",
+        "date": "2026-11-11T14:39:34Z",
+        "message": "feat: added golang support, filter update, api added, testing packages counts and build"
+      },
+      {
+        "sha": "321e3261f5c3d5708bb3da3102c8401f6463c575",
+        "author_login": "anujmindfire",
+        "author_name": "Anuj Singh",
+        "date": "2026-11-11T14:39:10Z",
+        "message": "feat: added golang support, filter update, api added, testing packages counts and build"
+      },
       {
         "sha": "03dc93c076a0d1bfb832b6de443634b870df6455",
         "author_login": "anandmindfire",
@@ -137571,6 +137805,42 @@
     ],
     "merged_prs": [
       {
+        "number": 316,
+        "author": "ParasMindfire",
+        "title": "Release from Dev",
+        "merged_at": "2026-11-13T05:30:25Z",
+        "created_at": "2026-11-13T05:18:04Z",
+        "base_ref": "main",
+        "merge_commit_sha": "9fae93127cd095f47ebda34e78a13d9c6065007b",
+        "changed_files": 100,
+        "additions": 63803,
+        "deletions": 41121,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
+        "number": 315,
+        "author": "anujmindfire",
+        "title": "feat: add golang support project listing and filters",
+        "merged_at": "2026-11-13T05:16:09Z",
+        "created_at": "2026-11-11T14:42:53Z",
+        "base_ref": "dev",
+        "merge_commit_sha": "dbf722a7e95a57f2f617706b654dfa4ef30cfd36",
+        "changed_files": 100,
+        "additions": 63803,
+        "deletions": 41121,
+        "complexity": "large",
+        "complexity_multiplier": 1.7,
+        "reviews_count": 0,
+        "review_comments_count": 0,
+        "reviews": [],
+        "review_comments": []
+      },
+      {
         "number": 312,
         "author": "anandmindfire",
         "title": "Release from Dev",
@@ -142975,8 +143245,8 @@
       ]
     },
     "stats": {
-      "total_commits": 830,
-      "total_merged_prs": 261,
+      "total_commits": 836,
+      "total_merged_prs": 263,
       "total_bugs": 0,
       "total_enhancements": 5,
       "total_documentation": 1,

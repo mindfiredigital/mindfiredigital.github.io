@@ -1,25 +1,61 @@
 {
-  "total_count": 409,
-  "fetched_count": 409,
-  "fetched_at": "2026-11-12T13:23:24.752Z",
+  "total_count": 410,
+  "fetched_count": 410,
+  "fetched_at": "2026-11-25T14:03:12.138Z",
   "issues": [
     {
-      "id": 6349736626,
-      "number": 288,
-      "title": "[Bug]: preserve admin wildcard (*) permission in Roles UI and keep session cookie under 4 KB",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/288",
-      "created_at": "2026-11-12T12:24:55Z",
-      "updated_at": "2026-11-12T12:24:55Z",
+      "id": 6604913199,
+      "number": 98,
+      "title": "Remove picomatch advisory ignore when picomatch 4.0.8 is released",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/98",
+      "created_at": "2026-11-25T12:52:39Z",
+      "updated_at": "2026-11-25T12:52:39Z",
       "state": "open",
       "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [],
+      "user": {
+        "login": "bighneswar-mindfire",
+        "avatar_url": "https://avatars.githubusercontent.com/u/248417800?v=4",
+        "html_url": "https://github.com/bighneswar-mindfire"
+      }
+    },
+    {
+      "id": 6578848529,
+      "number": 96,
+      "title": "[RELEASE] adac-validator 0.1.0, adac-icons-aws 0.1.0, adac-core 0.2.0 and adac-diagram 0.2.0 to npm",
+      "html_url": "https://github.com/mindfiredigital/adac-tools/issues/96",
+      "created_at": "2026-11-24T09:36:59Z",
+      "updated_at": "2026-11-24T09:36:59Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/adac-tools",
+      "repoName": "adac-tools",
+      "labels": [],
+      "user": {
+        "login": "uzerjamal-mfsi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/220164293?v=4",
+        "html_url": "https://github.com/uzerjamal-mfsi"
+      }
+    },
+    {
+      "id": 6575042312,
+      "number": 326,
+      "title": "[Feature]: centralized approvals dashboard for cross-content review and 1-click approvals",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/326",
+      "created_at": "2026-11-24T05:04:54Z",
+      "updated_at": "2026-11-25T11:37:18Z",
+      "state": "open",
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
       "labels": [
         {
-          "id": 11457067334,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
         }
       ],
       "user": {
@@ -29,22 +65,22 @@
       }
     },
     {
-      "id": 6349727301,
-      "number": 287,
-      "title": "[Bug]: return 400/404 instead of 500 with stack trace on invalid entry UUID",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/287",
-      "created_at": "2026-11-12T12:24:21Z",
-      "updated_at": "2026-11-12T12:24:21Z",
+      "id": 6574990725,
+      "number": 325,
+      "title": "[Feature]: make workflow review optional per entry with direct publish support",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/325",
+      "created_at": "2026-11-24T05:00:59Z",
+      "updated_at": "2026-11-24T05:35:12Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
       "labels": [
         {
-          "id": 11457067334,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
         }
       ],
       "user": {
@@ -54,22 +90,97 @@
       }
     },
     {
-      "id": 6349715448,
-      "number": 286,
-      "title": "[BUG]: support x-mfa-code in AdminModule token operations and add listTokens()",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/286",
-      "created_at": "2026-11-12T12:23:37Z",
-      "updated_at": "2026-11-12T12:23:37Z",
+      "id": 6553328961,
+      "number": 322,
+      "title": "[Feature]: Wire real-time CSS variable injection into live site preview",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/322",
+      "created_at": "2026-11-23T06:02:05Z",
+      "updated_at": "2026-11-23T06:02:05Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
       "labels": [
         {
-          "id": 11457067334,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6553317078,
+      "number": 321,
+      "title": "[Feature]: Build Theme Settings panel with color pickers, typography, and preset controls",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/321",
+      "created_at": "2026-11-23T06:01:07Z",
+      "updated_at": "2026-11-23T06:01:07Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6553298491,
+      "number": 320,
+      "title": "[Feature]: Define theme token schema, state store, and preset switching logic",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/320",
+      "created_at": "2026-11-23T05:59:38Z",
+      "updated_at": "2026-11-23T05:59:38Z",
+      "state": "open",
+      "comments": 0,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
+      "user": {
+        "login": "sobhan-s",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
+        "html_url": "https://github.com/sobhan-s"
+      }
+    },
+    {
+      "id": 6552621038,
+      "number": 318,
+      "title": "[Feature]: implement centralized approvals queue for pending editorial reviews",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/318",
+      "created_at": "2026-11-23T05:00:45Z",
+      "updated_at": "2026-11-25T11:37:37Z",
+      "state": "open",
+      "comments": 1,
+      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
+      "repoName": "agentic-headless-cms",
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
         }
       ],
       "user": {
@@ -79,22 +190,22 @@
       }
     },
     {
-      "id": 6349704242,
-      "number": 285,
-      "title": "[BUG]: extract backend error messages, normalize baseUrl, preserve uploadFromPath MIME type, and type ContentModule inputs",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/285",
-      "created_at": "2026-11-12T12:22:55Z",
-      "updated_at": "2026-11-12T12:22:55Z",
+      "id": 6552613748,
+      "number": 317,
+      "title": "[Feature]: add payload field filtering and lightweight payload templates",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/317",
+      "created_at": "2026-11-23T05:00:01Z",
+      "updated_at": "2026-11-23T05:00:01Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
       "labels": [
         {
-          "id": 11457067334,
-          "name": "bug",
-          "color": "d73a4a",
-          "description": "Something isn't working"
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
         }
       ],
       "user": {
@@ -104,183 +215,178 @@
       }
     },
     {
-      "id": 6309462138,
-      "number": 266,
-      "title": "[QA / Testing]: Establish Comprehensive End-to-End Non-Tech-First Headless CMS Manual Test Plan",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/266",
-      "created_at": "2026-11-10T14:59:24Z",
-      "updated_at": "2026-11-10T14:59:24Z",
+      "id": 6552605548,
+      "number": 316,
+      "title": "[Feature]: add 1-click manual replay button in webhook deliveries drawer",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/316",
+      "created_at": "2026-11-23T04:59:11Z",
+      "updated_at": "2026-11-24T05:34:42Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309460868,
-      "number": 265,
-      "title": "[Shared UI / Design System]: Unify Design System Color Tokens and Accessible Dialog Micro-Interactions",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/265",
-      "created_at": "2026-11-10T14:59:20Z",
-      "updated_at": "2026-11-10T14:59:20Z",
+      "id": 6552593438,
+      "number": 315,
+      "title": "[Feature]: implement exponential backoff retries and dead letter queue for failed deliveries",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/315",
+      "created_at": "2026-11-23T04:58:09Z",
+      "updated_at": "2026-11-23T06:20:06Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309453556,
-      "number": 264,
-      "title": "[Security / Access]: Decouple Personal Authenticator MFA from Administrative Platform Security",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/264",
-      "created_at": "2026-11-10T14:58:59Z",
-      "updated_at": "2026-11-10T14:58:59Z",
+      "id": 6482973105,
+      "number": 313,
+      "title": "[Feature]:  production hardening for editorial workflows, security guards, and review alerts",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/313",
+      "created_at": "2026-11-19T05:19:35Z",
+      "updated_at": "2026-11-19T07:02:55Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309452342,
-      "number": 263,
-      "title": "[Media / Backend & UI]: Implement Media Asset Usage Tracking and Resilient Storage Error Handling",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/263",
-      "created_at": "2026-11-10T14:58:55Z",
-      "updated_at": "2026-11-10T14:58:55Z",
+      "id": 6414652174,
+      "number": 296,
+      "title": "[FEATURE]: workflow event notifications, sdk client methods, and e2e testing",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/296",
+      "created_at": "2026-11-16T05:11:26Z",
+      "updated_at": "2026-11-16T05:11:26Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309446988,
-      "number": 262,
-      "title": "[CMS UI / Visual Editor]: Overhaul Visual Page Builder with Custom Blocks, Template Importer, and Rich Text Drawer",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/262",
-      "created_at": "2026-11-10T14:58:38Z",
-      "updated_at": "2026-11-10T14:58:38Z",
+      "id": 6414645201,
+      "number": 295,
+      "title": "[FEATURE]: admin settings workflow builder and content editor transition controls",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/295",
+      "created_at": "2026-11-16T05:10:51Z",
+      "updated_at": "2026-11-16T05:10:51Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309446166,
-      "number": 261,
-      "title": "[CMS UI / Navigation & Settings]: Implement Visual Navigation Menu Builder and Hierarchical Pages Management",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/261",
-      "created_at": "2026-11-10T14:58:35Z",
-      "updated_at": "2026-11-10T14:58:35Z",
+      "id": 6414638479,
+      "number": 294,
+      "title": "[FEATURE]: state transition engine, rbac authorization, and audit logging",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/294",
+      "created_at": "2026-11-16T05:10:13Z",
+      "updated_at": "2026-11-24T11:28:21Z",
       "state": "open",
-      "comments": 0,
+      "comments": 2,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
-      "id": 6309441729,
-      "number": 260,
-      "title": "[CMS UI / Blog]: Implement Dedicated Blog Studio and Markdown Import Workflow",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/260",
-      "created_at": "2026-11-10T14:58:21Z",
-      "updated_at": "2026-11-10T14:58:21Z",
+      "id": 6414630410,
+      "number": 293,
+      "title": "[FEATURE]: workflow schema models, configuration apis, and content schema association",
+      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/293",
+      "created_at": "2026-11-16T05:09:33Z",
+      "updated_at": "2026-11-16T06:11:42Z",
       "state": "open",
-      "comments": 0,
+      "comments": 1,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
       "repoName": "agentic-headless-cms",
-      "labels": [],
+      "labels": [
+        {
+          "id": 11457067371,
+          "name": "enhancement",
+          "color": "a2eeef",
+          "description": "New feature or request"
+        }
+      ],
       "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 6309440658,
-      "number": 259,
-      "title": "[CMS UI / Renderer]: Implement Live Website Rendering Engine, Editor Preview, and Static Exporter",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/259",
-      "created_at": "2026-11-10T14:58:17Z",
-      "updated_at": "2026-11-10T14:58:17Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
-      "repoName": "agentic-headless-cms",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 6309435840,
-      "number": 258,
-      "title": "[Content / Query]: Add Content Kind Partitioning and Unique Slug Validation",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/258",
-      "created_at": "2026-11-10T14:58:03Z",
-      "updated_at": "2026-11-10T14:58:03Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
-      "repoName": "agentic-headless-cms",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 6309434975,
-      "number": 257,
-      "title": "[Content / Delivery]: Implement Public Delivery API and Visitor Submissions Engine with Anti-Spam Protection",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/257",
-      "created_at": "2026-11-10T14:58:00Z",
-      "updated_at": "2026-11-10T14:58:00Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
-      "repoName": "agentic-headless-cms",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
+        "login": "Rituparna158",
+        "avatar_url": "https://avatars.githubusercontent.com/u/253198538?v=4",
+        "html_url": "https://github.com/Rituparna158"
       }
     },
     {
@@ -290,24 +396,6 @@
       "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/256",
       "created_at": "2026-11-10T14:57:42Z",
       "updated_at": "2026-11-10T14:57:42Z",
-      "state": "open",
-      "comments": 0,
-      "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
-      "repoName": "agentic-headless-cms",
-      "labels": [],
-      "user": {
-        "login": "sobhan-s",
-        "avatar_url": "https://avatars.githubusercontent.com/u/253181559?v=4",
-        "html_url": "https://github.com/sobhan-s"
-      }
-    },
-    {
-      "id": 6309425132,
-      "number": 255,
-      "title": "[CMS UI / Workspace]: Implement Multi-Site Workspace Architecture and Tiered Navigation",
-      "html_url": "https://github.com/mindfiredigital/agentic-headless-cms/issues/255",
-      "created_at": "2026-11-10T14:57:30Z",
-      "updated_at": "2026-11-10T14:57:30Z",
       "state": "open",
       "comments": 0,
       "repository_url": "https://api.github.com/repos/mindfiredigital/agentic-headless-cms",
