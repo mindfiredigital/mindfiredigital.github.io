@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-27T09:17:56.857Z",
+  "generated_at": "2026-11-28T08:49:45.764Z",
   "period": "monthly",
   "window_start": "2026-11-01T00:00:00.000Z",
-  "window_end": "2026-11-27T09:17:56.857Z",
+  "window_end": "2026-11-28T08:49:45.764Z",
   "month_label": "November 2026",
   "month_key": "2026-11",
   "total_contributors": 10,
@@ -55,7 +55,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 2,
@@ -67,7 +67,7 @@
       "totalPRs": 4,
       "totalPRReviewsGiven": 0,
       "totalCodeReviewComments": 0,
-      "totalIssuesOpened": 32,
+      "totalIssuesOpened": 37,
       "totalIssueComments": 0,
       "avgCommitsPerPR": 3,
       "projectsWorkingOn": 1,
@@ -100,7 +100,7 @@
       },
       "capped_counts": {
         "issues_opened": 10,
-        "issues_total": 32,
+        "issues_total": 37,
         "issue_comments": 0,
         "issue_comments_total": 0
       },
@@ -153,7 +153,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 1
+      "lastActiveDays": 2
     },
     {
       "rank": 4,
@@ -251,7 +251,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 2
+      "lastActiveDays": 3
     },
     {
       "rank": 6,
@@ -300,7 +300,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 11
+      "lastActiveDays": 12
     },
     {
       "rank": 7,
@@ -398,7 +398,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 3
+      "lastActiveDays": 4
     },
     {
       "rank": 9,
@@ -496,7 +496,7 @@
         "issue_comments": 0,
         "issue_comments_total": 0
       },
-      "lastActiveDays": 21
+      "lastActiveDays": 22
     }
   ]
 }
